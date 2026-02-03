@@ -1,0 +1,9 @@
+description: 'List QRC techfile name. eg: 17M1Xa1Xb1Xc1Xd1Ya1Yb4Y2Yy2Yx2R_SHDMIM_UT/fs_v1d0p1a'
+requirements:
+  value: N/A
+  pattern_items: []
+input_files:
+- ${CHECKLIST_ROOT}\IP_project_folder\logs\2.0\do_qrcrcbest_CCbest_125c.log
+waivers:
+  value: N/A
+  waive_items: []

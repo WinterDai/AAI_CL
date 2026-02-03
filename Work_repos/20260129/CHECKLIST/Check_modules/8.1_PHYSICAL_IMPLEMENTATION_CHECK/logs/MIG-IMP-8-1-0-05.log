@@ -1,0 +1,5 @@
+FAIL:MIG-IMP-8-1-0-05:Confirm place the cells from delayElement0 to DL of each delay line closely and don't touch the net/cell on these paths.
+MIG-IMP-8-1-0-05-ERROR01: Configuration error:
+  Severity: Fail Occurrence: 1
+  - input_files is empty in YAML configuration
+

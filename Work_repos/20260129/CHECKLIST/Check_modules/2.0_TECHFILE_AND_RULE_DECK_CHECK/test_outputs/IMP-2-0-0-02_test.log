@@ -1,0 +1,100 @@
+Test Log: IMP-2-0-0-02
+================================================================================
+
+[Test 1/6] Type 1 (requirements.value=N/A, waivers.value=N/A)
+--------------------------------------------------------------------------------
+Test ID: type1_na
+Status: PASS
+
+Checker Log Output:
+PASS:IMP-2-0-0-02:Confirm latest DRC rule deck(s) was used? List DRC rule deck name in Comments. eg: PLN3ELO_17M_1Xa1Xb1Xc1Xd1Ya1Yb4Y2Yy2Yx2R_014.11_2a.encrypt PLN3ELO_17M_1Xa1Xb1Xc1Xd1Ya1Yb4Y2Yy2Yx2R_054_PATCH.11_2a.encrypt
+IMP-2-0-0-02-INFO01: DRC rule deck document and version information found in rule deck file:
+  Severity: Info Occurrence: 1
+  - C:\Users\chenweif\Checker_dev\CHECKLIST\CHECKLIST\IP_project_folder\ruledeck\2.0\PLN5LO_16M_1X1Xb1Xe1Ya1Yb6Y2Yy2R_014.13_1a.encrypt.phy (T-N05-CL-DR-014-N1, 1.3_1a)
+
+
+================================================================================
+
+[Test 2/6] Type 1 (requirements.value=N/A, waivers.value=0)
+--------------------------------------------------------------------------------
+Test ID: type1_0
+Status: PASS
+
+Checker Log Output:
+PASS:IMP-2-0-0-02:Confirm latest DRC rule deck(s) was used? List DRC rule deck name in Comments. eg: PLN3ELO_17M_1Xa1Xb1Xc1Xd1Ya1Yb4Y2Yy2Yx2R_014.11_2a.encrypt PLN3ELO_17M_1Xa1Xb1Xc1Xd1Ya1Yb4Y2Yy2Yx2R_054_PATCH.11_2a.encrypt
+IMP-2-0-0-02-INFO01: [WAIVED_INFO]: Waived information:
+  Severity: Info Occurrence: 1
+  - Explanation: This check is informational only - rule deck version tracking for reference
+IMP-2-0-0-02-INFO02: DRC rule deck document and version information found in rule deck file:
+  Severity: Info Occurrence: 1
+  - C:\Users\chenweif\Checker_dev\CHECKLIST\CHECKLIST\IP_project_folder\ruledeck\2.0\PLN5LO_16M_1X1Xb1Xe1Ya1Yb6Y2Yy2R_014.13_1a.encrypt.phy (T-N05-CL-DR-014-N1, 1.3_1a)
+
+
+================================================================================
+
+[Test 3/6] Type 2 (requirements.value>0, waivers.value=N/A)
+--------------------------------------------------------------------------------
+Test ID: type2_na
+Status: ERROR
+
+Checker Log Output:
+FAIL:IMP-2-0-0-02:Confirm latest DRC rule deck(s) was used? List DRC rule deck name in Comments. eg: PLN3ELO_17M_1Xa1Xb1Xc1Xd1Ya1Yb4Y2Yy2Yx2R_014.11_2a.encrypt PLN3ELO_17M_1Xa1Xb1Xc1Xd1Ya1Yb4Y2Yy2Yx2R_054_PATCH.11_2a.encrypt
+IMP-2-0-0-02-ERROR01: DRC rule deck document or version does not match expected values:
+  Severity: Fail Occurrence: 1
+  - C:\Users\chenweif\Checker_dev\CHECKLIST\CHECKLIST\IP_project_folder\ruledeck\2.0\PLN5LO_16M_1X1Xb1Xe1Ya1Yb6Y2Yy2R_014.13_1a.encrypt.phy (T-N05-CL-DR-014-N1, 1.3_1a), Expect (T-N05-CL-DR-014-N1, 014.11_2a)
+
+
+================================================================================
+
+[Test 4/6] Type 2 (requirements.value>0, waivers.value=0)
+--------------------------------------------------------------------------------
+Test ID: type2_0
+Status: PASS
+
+Checker Log Output:
+PASS:IMP-2-0-0-02:Confirm latest DRC rule deck(s) was used? List DRC rule deck name in Comments. eg: PLN3ELO_17M_1Xa1Xb1Xc1Xd1Ya1Yb4Y2Yy2Yx2R_014.11_2a.encrypt PLN3ELO_17M_1Xa1Xb1Xc1Xd1Ya1Yb4Y2Yy2Yx2R_054_PATCH.11_2a.encrypt
+IMP-2-0-0-02-INFO01: [WAIVED_INFO]: Waived information:
+  Severity: Info Occurrence: 1
+  - Explanation: Rule deck version check is informational - tracking for audit purposes only
+IMP-2-0-0-02-INFO02: [WAIVED_AS_INFO]: DRC rule deck document or version does not match expected values:
+  Severity: Info Occurrence: 1
+  - C:\Users\chenweif\Checker_dev\CHECKLIST\CHECKLIST\IP_project_folder\ruledeck\2.0\PLN5LO_16M_1X1Xb1Xe1Ya1Yb6Y2Yy2R_014.13_1a.encrypt.phy (T-N05-CL-DR-014-N1, 1.3_1a), Expect (T-N05-CL-DR-014-N1, 014.11_2a)
+
+
+================================================================================
+
+[Test 5/6] Type 3
+--------------------------------------------------------------------------------
+Test ID: type3
+Status: PASS
+
+Checker Log Output:
+PASS:IMP-2-0-0-02:Confirm latest DRC rule deck(s) was used? List DRC rule deck name in Comments. eg: PLN3ELO_17M_1Xa1Xb1Xc1Xd1Ya1Yb4Y2Yy2Yx2R_014.11_2a.encrypt PLN3ELO_17M_1Xa1Xb1Xc1Xd1Ya1Yb4Y2Yy2Yx2R_054_PATCH.11_2a.encrypt
+IMP-2-0-0-02-WARN01: Unused waivers:
+  Severity: Warn Occurrence: 1
+  - PLN3ELO_17M_1Xa1Xb1Xc1Xd1Ya1Yb4Y2Yy2Yx2R_014.10_1a.encrypt
+IMP-2-0-0-02-INFO01: DRC rule deck version mismatch waived per project approval:
+  Severity: Info Occurrence: 1
+  - C:\Users\chenweif\Checker_dev\CHECKLIST\CHECKLIST\IP_project_folder\ruledeck\2.0\PLN5LO_16M_1X1Xb1Xe1Ya1Yb6Y2Yy2R_014.13_1a.encrypt.phy (T-N05-CL-DR-014-N1, 1.3_1a), Expect (T-N05-CL-DR-014-N1, 014.11_2a)
+
+
+================================================================================
+
+[Test 6/6] Type 4
+--------------------------------------------------------------------------------
+Test ID: type4
+Status: PASS
+
+Checker Log Output:
+PASS:IMP-2-0-0-02:Confirm latest DRC rule deck(s) was used? List DRC rule deck name in Comments. eg: PLN3ELO_17M_1Xa1Xb1Xc1Xd1Ya1Yb4Y2Yy2Yx2R_014.11_2a.encrypt PLN3ELO_17M_1Xa1Xb1Xc1Xd1Ya1Yb4Y2Yy2Yx2R_054_PATCH.11_2a.encrypt
+IMP-2-0-0-02-WARN01: Unused waivers:
+  Severity: Warn Occurrence: 2
+  - PLN3ELO_17M_1Xa1Xb1Xc1Xd1Ya1Yb4Y2Yy2Yx2R_014.10_1a.encrypt
+  - PLN5LO_16M_1X1Xb1Xe1Ya1Yb6Y2Yy2R_014.13_1a.encrypt
+IMP-2-0-0-02-INFO01: DRC rule deck document and version information found in rule deck file:
+  Severity: Info Occurrence: 1
+  - C:\Users\chenweif\Checker_dev\CHECKLIST\CHECKLIST\IP_project_folder\ruledeck\2.0\PLN5LO_16M_1X1Xb1Xe1Ya1Yb6Y2Yy2R_014.13_1a.encrypt.phy (T-N05-CL-DR-014-N1, 1.3_1a)
+
+
+================================================================================
+

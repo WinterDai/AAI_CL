@@ -1,0 +1,8 @@
+PASS:IMP-11-0-0-10:Confirm static power analysis results matches the requirement.
+Warn Occurrence: 2
+1: Warn: Static_IR_Drop: Waiver not matched - no corresponding power violation found: Waived - IR drop acceptable for low-power mode operation per design review[WAIVER]
+2: Warn: VDD_Power_EM: Waiver not matched - no corresponding power violation found: Waived - EM margin acceptable for target lifetime per reliability analysis[WAIVER]
+Info Occurrence: 3
+1: Info: Static_IR_Drop: 2.40%. In line 22, C:\Users\zhihan\projects\check_development\CHECKLIST\CHECKLIST\IP_project_folder\reports\11.0\VDD_VSS_div.iv: Static IR Drop and Power EM data extracted successfully
+2: Info: VDD_Power_EM: 0.8907. In line 179, C:\Users\zhihan\projects\check_development\CHECKLIST\CHECKLIST\IP_project_folder\reports\11.0\results_VDD: Static IR Drop and Power EM data extracted successfully
+3: Info: VSS_Power_EM: 1.5485. In line 163, C:\Users\zhihan\projects\check_development\CHECKLIST\CHECKLIST\IP_project_folder\reports\11.0\results_VSS: Static IR Drop and Power EM data extracted successfully

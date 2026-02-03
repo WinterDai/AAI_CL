@@ -1,0 +1,38 @@
+{
+  "check_target": "Verification that the netlist and SPEF files use the correct version specification",
+  "involved_formats": [
+    {
+      "name": "SPEF",
+      "role": "Target file containing parasitic data with version header",
+      "expected_sections": [
+        "*SPEF",
+        "*DESIGN",
+        "*DATE",
+        "*VENDOR",
+        "*PROGRAM",
+        "*VERSION"
+      ],
+      "criticality": "required",
+      "data_role": "direct_source"
+    },
+    {
+      "name": "Netlist_Verilog",
+      "role": "Target file containing synthesized netlist with version comment",
+      "expected_sections": [
+        "// Version:",
+        "module",
+        "endmodule"
+      ],
+      "criticality": "required",
+      "data_role": "direct_source"
+    }
+  ],
+  "data_flow": "Parse SPEF *VERSION field → verify format compliance; Parse Netlist version comment → verify format compliance",
+  "extraction_chain": "SPEF → locate *VERSION header → extract version string → validate against IEEE 1481 standard; Netlist_Verilog → locate version comment → extract version identifier → validate against tool specification",
+  "success_criteria": "SPEF *VERSION field matches expected IEEE 1481 version format (e.g., \"IEEE 1481-1999\") AND Netlist version comment matches expected tool version pattern",
+  "failure_criteria": "SPEF *VERSION field is missing, malformed, or incorrect version number OR Netlist version comment is missing, malformed, or incorrect version identifier",
+  "format_hints": {
+    "SPEF": "IEEE 1481 standard format; *VERSION appears in header section before *DESIGN",
+    "Netlist_Verilog": "Tool-generated Verilog; version typically in header comment block"
+  }
+}

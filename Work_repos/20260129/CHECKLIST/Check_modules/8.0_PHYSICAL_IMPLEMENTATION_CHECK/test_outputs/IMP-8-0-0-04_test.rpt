@@ -1,0 +1,73 @@
+Test Report: IMP-8-0-0-04
+================================================================================
+
+[Test 1/6] Type 1 (requirements.value=N/A, waivers.value=N/A)
+--------------------------------------------------------------------------------
+Test ID: type1_na
+Status: PASS
+
+Checker Report Output:
+PASS:IMP-8-0-0-04:Confirm buffers are attached for all ports and are set as fixed.
+
+================================================================================
+
+[Test 2/6] Type 1 (requirements.value=N/A, waivers.value=0)
+--------------------------------------------------------------------------------
+Test ID: type1_0
+Status: PASS
+
+Checker Report Output:
+PASS:IMP-8-0-0-04:Confirm buffers are attached for all ports and are set as fixed.
+Info Occurrence: 1
+1: Info: Explanation: Port buffer violations are informational only during early design stages: Explanation: Port buffer violations are informational only during early design stages[WAIVED_INFO]
+
+================================================================================
+
+[Test 3/6] Type 2 (requirements.value>0, waivers.value=N/A)
+--------------------------------------------------------------------------------
+Test ID: type2_na
+Status: PASS
+
+Checker Report Output:
+PASS:IMP-8-0-0-04:Confirm buffers are attached for all ports and are set as fixed.
+
+================================================================================
+
+[Test 4/6] Type 2 (requirements.value>0, waivers.value=0)
+--------------------------------------------------------------------------------
+Test ID: type2_0
+Status: PASS
+
+Checker Report Output:
+PASS:IMP-8-0-0-04:Confirm buffers are attached for all ports and are set as fixed.
+Info Occurrence: 1
+1: Info: Explanation: Port buffer check is informational during floorplan stage: Explanation: Port buffer check is informational during floorplan stage[WAIVED_INFO]
+
+================================================================================
+
+[Test 5/6] Type 3 (requirements.value>0, waivers.value>0)
+--------------------------------------------------------------------------------
+Test ID: type3
+Status: PASS
+
+Checker Report Output:
+PASS:IMP-8-0-0-04:Confirm buffers are attached for all ports and are set as fixed.
+Warn Occurrence: 2
+1: Warn: debug_clk: Waiver entry not matched - no corresponding port buffer violation found: Debug clock buffer intentionally unfixed for placement optimization - approved for non-critical path[WAIVER]
+2: Warn: test_port: Waiver entry not matched - no corresponding port buffer violation found: Test port uses custom IO cell per design specification - approved by design team[WAIVER]
+
+================================================================================
+
+[Test 6/6] Type 4 (requirements.value=N/A, waivers.value>0)
+--------------------------------------------------------------------------------
+Test ID: type4
+Status: PASS
+
+Checker Report Output:
+PASS:IMP-8-0-0-04:Confirm buffers are attached for all ports and are set as fixed.
+Warn Occurrence: 2
+1: Warn: debug_clk: Waiver entry not matched - no corresponding port buffer violation found: Debug clock buffer intentionally unfixed for placement optimization - approved for non-critical path[WAIVER]
+2: Warn: test_port: Waiver entry not matched - no corresponding port buffer violation found: Test port uses custom IO cell per design specification - approved by design team[WAIVER]
+
+================================================================================
+

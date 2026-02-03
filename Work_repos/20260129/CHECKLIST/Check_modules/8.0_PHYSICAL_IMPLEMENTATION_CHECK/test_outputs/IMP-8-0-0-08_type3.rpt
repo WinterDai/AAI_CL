@@ -1,0 +1,6 @@
+PASS:IMP-8-0-0-08:Confirm max routing layer is correct. Provide max routing layer value in comment field.
+Warn Occurrence: 2
+1: Warn: PGNetLayerList_M14: Waiver entry not matched - no corresponding routing layer violation found: Power grid requires M14 for top-level routing - approved by design team[WAIVER]
+2: Warn: SignalNetLayerList_M14: Waiver entry not matched - no corresponding routing layer violation found: Critical signal paths require M14 - timing closure exception[WAIVER]
+Info Occurrence: 1
+1: Info: M13. In line 1, C:\Users\chyao\Desktop\checklist_dev\CHECKLIST\CHECKLIST\IP_project_folder\reports\8.0\IMP-8-0-0-08\IMP-8-0-0-08.rpt: Required max routing layer matched and validated against configuration hierarchy

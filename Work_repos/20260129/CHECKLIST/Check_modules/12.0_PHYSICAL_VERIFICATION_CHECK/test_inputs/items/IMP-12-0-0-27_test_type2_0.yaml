@@ -1,0 +1,15 @@
+description: 'TODO: Confirm Package to Chip comparison passes (bump excel vs bump
+  location in gds/oas)?'
+input_files:
+- ${CHECKLIST_ROOT}/IP_project_folder/reports/tv_chip_gds_bump.csv
+requirements:
+  pattern_items:
+  - 'VSS: 1234.5678 2345.6789'
+  - 'VDD: 2345.6789 3456.7890'
+  - 'PAD_0: 5678.1234 6789.2345'
+  value: 3
+waivers:
+  value: 0
+  waive_items:
+  - 'Explanation: Bump location verification is informational only for this design
+    phase'

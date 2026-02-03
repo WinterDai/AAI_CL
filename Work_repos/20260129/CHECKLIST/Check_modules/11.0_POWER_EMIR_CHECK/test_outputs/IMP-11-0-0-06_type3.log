@@ -1,0 +1,18 @@
+PASS:IMP-11-0-0-06:Confirm use the proper spice model and spice netlist to generate the PGV views.(check the Note)
+IMP-11-0-0-06-WARN01: Unused waivers:
+  Severity: Warn Occurrence: 2
+  - ffgnp_0p825v_125c_cbest_CCbest_T
+  - rcss_0p675v_m40c_cworst_CCworst_T
+IMP-11-0-0-06-INFO01: SPICE configuration extracted for verification:
+  Severity: Info Occurrence: 10
+  - /process/tsmcN5/data/g/PDK/tsmc5g.a.13/models/spectre_v1d2_2p5/ir_em.scs
+  - /process/tsmcN5/data/g/PEGASUS/LVS/current/source.added
+  - /process/tsmcN5/data/stdcell/n5/TSMC/tcbn05_bwph210l6p51cnod_lvl_elvt_120c/lpe_spice/tcbn05_bwph210l6p51cnod_lvl_elvt_lpe_cworst_CCworst_T_125c.spi
+  - /process/tsmcN5/data/stdcell/n5/TSMC/tcbn05_bwph210l6p51cnod_lvl_lvt_120c/lpe_spice/tcbn05_bwph210l6p51cnod_lvl_lvt_lpe_cworst_CCworst_T_125c.spi
+  - /process/tsmcN5/data/stdcell/n5/TSMC/tcbn05_bwph210l6p51cnod_lvl_lvtll_120c/lpe_spice/tcbn05_bwph210l6p51cnod_lvl_lvtll_lpe_cworst_CCworst_T_125c.spi
+  - /process/tsmcN5/data/stdcell/n5/TSMC/tcbn05_bwph210l6p51cnod_lvl_svt_120c/lpe_spice/tcbn05_bwph210l6p51cnod_lvl_svt_lpe_cworst_CCworst_T_125c.spi
+  - /process/tsmcN5/data/stdcell/n5/TSMC/tcbn05_bwph210l6p51cnod_lvl_ulvt_120c/lpe_spice/tcbn05_bwph210l6p51cnod_lvl_ulvt_lpe_cworst_CCworst_T_125c.spi
+  - /process/tsmcN5/data/stdcell/n5/TSMC/tcbn05_bwph210l6p51cnod_lvl_ulvtll_120c/lpe_spice/tcbn05_bwph210l6p51cnod_lvl_ulvtll_lpe_cworst_CCworst_T_125c.spi
+  - /process/tsmcN5/data/stdcell/n5/TSMC/tphn05_12gpio_120b/lpe_spice/tphn05_12gpio_lpe_cworst_CCworst_T.spi
+  - /projects/TC70_LPDDR6_N5P/libs/libGen/lijing/scripts/sram/ts1n05mblvta16384x39m16qwbzhodcp.spi
+

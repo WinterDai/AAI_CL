@@ -1,0 +1,9 @@
+description: Confirm all listed black boxes are intended?
+requirements:
+  value: N/A
+  pattern_items: []
+input_files:
+- ${CHECKLIST_ROOT}/IP_project_folder/reports/post_lec/black_box.rpt
+waivers:
+  value: N/A
+  waive_items: []

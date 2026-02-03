@@ -1,0 +1,83 @@
+Test Report: IMP-2-0-0-15
+================================================================================
+
+[Test 1/6] Type 1 (requirements.value=N/A, waivers.value=N/A)
+--------------------------------------------------------------------------------
+Test ID: type1_na
+Status: PASS
+
+Checker Report Output:
+PASS:IMP-2-0-0-15:List QRC techfile name. eg: 17M1Xa1Xb1Xc1Xd1Ya1Yb4Y2Yy2Yx2R_SHDMIM_UT/fs_v1d0p1a
+Info Occurrence: 1
+1: Info: 16M1X1Xb1Xe1Ya1Yb6Y2Yy2R_SHDMIM_UT/fs_v1d2p4a. In line 404, C:\Users\chenweif\Checker_dev\CHECKLIST\CHECKLIST\IP_project_folder\logs\2.0\do_qrcrcbest_CCbest_125c.log: QRC technology file path successfully extracted from process_technology option
+
+================================================================================
+
+[Test 2/6] Type 1 (requirements.value=N/A, waivers.value=0)
+--------------------------------------------------------------------------------
+Test ID: type1_0
+Status: PASS
+
+Checker Report Output:
+PASS:IMP-2-0-0-15:List QRC techfile name. eg: 17M1Xa1Xb1Xc1Xd1Ya1Yb4Y2Yy2Yx2R_SHDMIM_UT/fs_v1d0p1a
+Info Occurrence: 2
+1: Info: Explanation: This check is informational only - QRC techfile extraction is for reference purposes: Explanation: This check is informational only - QRC techfile extraction is for reference purposes[WAIVED_INFO]
+2: Info: 16M1X1Xb1Xe1Ya1Yb6Y2Yy2R_SHDMIM_UT/fs_v1d2p4a. In line 404, C:\Users\chenweif\Checker_dev\CHECKLIST\CHECKLIST\IP_project_folder\logs\2.0\do_qrcrcbest_CCbest_125c.log: QRC technology file path successfully extracted from process_technology option
+
+================================================================================
+
+[Test 3/6] Type 2 (requirements.value>0, waivers.value=N/A)
+--------------------------------------------------------------------------------
+Test ID: type2_na
+Status: PASS
+
+Checker Report Output:
+PASS:IMP-2-0-0-15:List QRC techfile name. eg: 17M1Xa1Xb1Xc1Xd1Ya1Yb4Y2Yy2Yx2R_SHDMIM_UT/fs_v1d0p1a
+Info Occurrence: 1
+1: Info: 16M1X1Xb1Xe1Ya1Yb6Y2Yy2R_SHDMIM_UT/fs_v1d2p4a. In line 404, C:\Users\chenweif\Checker_dev\CHECKLIST\CHECKLIST\IP_project_folder\logs\2.0\do_qrcrcbest_CCbest_125c.log: QRC techfile version matched and validated against golden reference
+
+================================================================================
+
+[Test 4/6] Type 2 (requirements.value>0, waivers.value=0)
+--------------------------------------------------------------------------------
+Test ID: type2_0
+Status: PASS
+
+Checker Report Output:
+PASS:IMP-2-0-0-15:List QRC techfile name. eg: 17M1Xa1Xb1Xc1Xd1Ya1Yb4Y2Yy2Yx2R_SHDMIM_UT/fs_v1d0p1a
+Info Occurrence: 2
+1: Info: Explanation: QRC techfile version check is informational - multiple valid versions exist: Explanation: QRC techfile version check is informational - multiple valid versions exist[WAIVED_INFO]
+2: Info: 16M1X1Xb1Xe1Ya1Yb6Y2Yy2R_SHDMIM_UT/fs_v1d2p4a. In line 404, C:\Users\chenweif\Checker_dev\CHECKLIST\CHECKLIST\IP_project_folder\logs\2.0\do_qrcrcbest_CCbest_125c.log: QRC techfile version matched and validated against golden reference
+
+================================================================================
+
+[Test 5/6] Type 3
+--------------------------------------------------------------------------------
+Test ID: type3
+Status: PASS
+
+Checker Report Output:
+PASS:IMP-2-0-0-15:List QRC techfile name. eg: 17M1Xa1Xb1Xc1Xd1Ya1Yb4Y2Yy2Yx2R_SHDMIM_UT/fs_v1d0p1a
+Warn Occurrence: 2
+1: Warn: 16M1X1Xb1Xe1Ya1Yb6Y2Yy2R_SHDMIM_UT/fs_v1d1p0a: Waiver entry not matched - no corresponding techfile mismatch found: Waived - intermediate techfile version used for early design exploration[WAIVER]
+2: Warn: 17M1Xa1Xb1Xc1Xd1Ya1Yb4Y2Yy2Yx2R_SHDMIM_UT/fs_v1d0p1a: Waiver entry not matched - no corresponding techfile mismatch found: Waived - legacy QRC techfile version approved for this design per foundry compatibility[WAIVER]
+Info Occurrence: 1
+1: Info: 16M1X1Xb1Xe1Ya1Yb6Y2Yy2R_SHDMIM_UT/fs_v1d2p4a. In line 404, C:\Users\chenweif\Checker_dev\CHECKLIST\CHECKLIST\IP_project_folder\logs\2.0\do_qrcrcbest_CCbest_125c.log: QRC techfile version matched and validated against golden reference
+
+================================================================================
+
+[Test 6/6] Type 4
+--------------------------------------------------------------------------------
+Test ID: type4
+Status: PASS
+
+Checker Report Output:
+PASS:IMP-2-0-0-15:List QRC techfile name. eg: 17M1Xa1Xb1Xc1Xd1Ya1Yb4Y2Yy2Yx2R_SHDMIM_UT/fs_v1d0p1a
+Warn Occurrence: 2
+1: Warn: 16M1X1Xb1Xe1Ya1Yb6Y2Yy2R_SHDMIM_UT/fs_v1d1p0a: Waiver entry not matched - no corresponding techfile mismatch found: Waived - intermediate techfile version used for early design exploration[WAIVER]
+2: Warn: 17M1Xa1Xb1Xc1Xd1Ya1Yb4Y2Yy2Yx2R_SHDMIM_UT/fs_v1d0p1a: Waiver entry not matched - no corresponding techfile mismatch found: Waived - legacy QRC techfile version approved for this design per foundry compatibility[WAIVER]
+Info Occurrence: 1
+1: Info: 16M1X1Xb1Xe1Ya1Yb6Y2Yy2R_SHDMIM_UT/fs_v1d2p4a. In line 404, C:\Users\chenweif\Checker_dev\CHECKLIST\CHECKLIST\IP_project_folder\logs\2.0\do_qrcrcbest_CCbest_125c.log: QRC technology file path successfully extracted from process_technology option
+
+================================================================================
+

@@ -1,0 +1,4539 @@
+metadata:
+  schema_version: 5.3-complete-with-placeholders
+  total_sections: 30
+  total_items: 346
+  implemented_items: 48
+  placeholder_items: 298
+  generated: '2025-12-15T10:57:04.267711'
+  description: Complete template with C:\Users\yuyin\Desktop\CHECKLIST placeholders
+    and unimplemented checker placeholders
+  structure: sections → items → {description, requirements, input_files, waivers}
+  design_philosophy:
+  - Extreme simplicity - only essential fields
+  - 'Input files: relative paths with C:\Users\yuyin\Desktop\CHECKLIST prefix'
+  - 'Waivers value: N/A (no waiver) | path (waiver file provided)'
+  - Placeholders for unimplemented checkers
+  - Multi-user development friendly
+  - High readability, maintainability, and extensibility
+  usage_notes:
+  - 'Placeholders marked with _status: placeholder'
+  - When implementing a checker, replace placeholder with actual configuration
+  - Use sync command to merge updates from multiple developers
+  - Template uses C:\Users\yuyin\Desktop\CHECKLIST for cross-platform compatibility
+sections:
+  1.0_LIBRARY_CHECK:
+    IMP-1-0-0-00:
+      description: Confirm the version of all the libraries used for this project
+        are correct and match to addendum.
+      requirements:
+        value: N/A
+        pattern_items: []
+      input_files:
+      - C:\Users\yuyin\Desktop\CHECKLIST\IP_project_folder\reports\qor.rpt
+      waivers:
+        value: N/A
+        waive_items: []
+    IMP-1-0-0-01:
+      description: List standard cell libraries used for implementation and signoff.
+      requirements:
+        value: N/A
+        pattern_items: []
+      input_files:
+      - C:\Users\yuyin\Desktop\CHECKLIST\IP_project_folder\reports\qor.rpt
+      waivers:
+        value: N/A
+        waive_items: []
+    IMP-1-0-0-02:
+      description: 'TODO: List any forbidden cells (special request from foundry or
+        customers).'
+      requirements:
+        value: N/A
+        pattern_items: []
+      input_files: []
+      waivers:
+        value: N/A
+        waive_items: []
+      _status: placeholder
+      _note: This is a placeholder. Replace with actual checker configuration when
+        implemented.
+    IMP-1-0-0-03:
+      description: 'List all other libraries used for implementation and signoff (eg:
+        IO/PLL/DCC/BUMP/PLL/NoiseGen/ProcessMoniter/etc).'
+      requirements:
+        value: N/A
+        pattern_items: []
+      input_files:
+      - C:\Users\yuyin\Desktop\CHECKLIST\IP_project_folder\logs\genus.syn_generic.log
+      waivers:
+        value: N/A
+        waive_items: []
+    IMP-1-0-0-04:
+      description: Confirm the versions of analog cells/macros are correct with AMS/Analog
+        team.
+      requirements:
+        value: N/A
+        pattern_items: []
+      input_files:
+      - C:\Users\yuyin\Desktop\CHECKLIST\IP_project_folder\logs\genus.syn_generic.log
+      waivers:
+        value: N/A
+        waive_items: []
+  2.0_TECHFILE_AND_RULE_DECK_CHECK:
+    IMP-2-0-0-00:
+      description: 'TODO: List Innovus Tech Lef name. eg:N16_Encounter_11M_2Xa1Xd3Xe2Y2R_UTRDL_9T_PODE_1.2a.tlef'
+      requirements:
+        value: N/A
+        pattern_items: []
+      input_files: []
+      waivers:
+        value: N/A
+        waive_items: []
+      _status: placeholder
+      _note: This is a placeholder. Replace with actual checker configuration when
+        implemented.
+    IMP-2-0-0-01:
+      description: 'TODO: List Innovus gdsout map name. eg: PRTF_Innovus_N3P_gdsout_17M_1Xa_h_1Xb_v_1Xc_h_1Xd_v_1Ya_h_1Yb_v_4Y_hvhv_2Yy2Yx2R_SHDMIM.10c.map'
+      requirements:
+        value: N/A
+        pattern_items: []
+      input_files: []
+      waivers:
+        value: N/A
+        waive_items: []
+      _status: placeholder
+      _note: This is a placeholder. Replace with actual checker configuration when
+        implemented.
+    IMP-2-0-0-02:
+      description: 'TODO: Confirm latest DRC rule deck(s) was used? List DRC rule
+        deck name in Comments. eg: PLN3ELO_17M_1Xa1Xb1Xc1Xd1Ya1Yb4Y2Yy2Yx2R_014.11_2a.encrypt
+        PLN3ELO_17M_1Xa1Xb1Xc1Xd1Ya1Yb4Y2Yy2Yx2R_054_PATCH.11_2a.encrypt'
+      requirements:
+        value: N/A
+        pattern_items: []
+      input_files: []
+      waivers:
+        value: N/A
+        waive_items: []
+      _status: placeholder
+      _note: This is a placeholder. Replace with actual checker configuration when
+        implemented.
+    IMP-2-0-0-03:
+      description: 'TODO: Confirm DRC rule deck was not modified? If it was, explain
+        in comments field.'
+      requirements:
+        value: N/A
+        pattern_items: []
+      input_files: []
+      waivers:
+        value: N/A
+        waive_items: []
+      _status: placeholder
+      _note: This is a placeholder. Replace with actual checker configuration when
+        implemented.
+    IMP-2-0-0-04:
+      description: 'TODO: Confirm latest Antenna rule deck(s) was used? List DRC rule
+        deck name in Comments. eg: PLN3ELO_17M_1Xa1Xb1Xc1Xd1Ya1Yb4Y2Yy2Yx2R_014_ANT.11_2a.encrypt
+        PLN3ELO_17M_1Xa1Xb1Xc1Xd1Ya1Yb4Y2Yy2Yx2R_014_SHDMIM_ANT.11_2a.encrypt'
+      requirements:
+        value: N/A
+        pattern_items: []
+      input_files: []
+      waivers:
+        value: N/A
+        waive_items: []
+      _status: placeholder
+      _note: This is a placeholder. Replace with actual checker configuration when
+        implemented.
+    IMP-2-0-0-05:
+      description: 'TODO: Confirm ANT rule deck was not modified? If it was, explain
+        in comments field.'
+      requirements:
+        value: N/A
+        pattern_items: []
+      input_files: []
+      waivers:
+        value: N/A
+        waive_items: []
+      _status: placeholder
+      _note: This is a placeholder. Replace with actual checker configuration when
+        implemented.
+    IMP-2-0-0-06:
+      description: 'TODO: Confirm latest LVS rule deck(s) was used? List LVS rule
+        deck name in Comments. eg: DFM_LVS_RC_PEGASUS_N3P_1p17M_1Xa1Xb1Xc1Xd1Ya1Yb4Y2Yy2Yx2R_ALRDL.1.0a'
+      requirements:
+        value: N/A
+        pattern_items: []
+      input_files: []
+      waivers:
+        value: N/A
+        waive_items: []
+      _status: placeholder
+      _note: This is a placeholder. Replace with actual checker configuration when
+        implemented.
+    IMP-2-0-0-07:
+      description: 'TODO: Confirm LVS rule deck was not modified? If it was, explain
+        in comments field.'
+      requirements:
+        value: N/A
+        pattern_items: []
+      input_files: []
+      waivers:
+        value: N/A
+        waive_items: []
+      _status: placeholder
+      _note: This is a placeholder. Replace with actual checker configuration when
+        implemented.
+    IMP-2-0-0-08:
+      description: 'TODO: Confirm latest BUMP rule deck(s) was used? List BUMP rule
+        deck name in Comments. eg: PN3_CU_ROUND_BUMP_ON_PAD_17M_1Xa1Xb1Xc1Xd1Ya1Yb4Y2Yy2Yx2R_003.10a'
+      requirements:
+        value: N/A
+        pattern_items: []
+      input_files: []
+      waivers:
+        value: N/A
+        waive_items: []
+      _status: placeholder
+      _note: This is a placeholder. Replace with actual checker configuration when
+        implemented.
+    IMP-2-0-0-09:
+      description: 'TODO: Confirm BUMP rule deck was not modified? If it was, explain
+        in comments field.'
+      requirements:
+        value: N/A
+        pattern_items: []
+      input_files: []
+      waivers:
+        value: N/A
+        waive_items: []
+      _status: placeholder
+      _note: This is a placeholder. Replace with actual checker configuration when
+        implemented.
+    IMP-2-0-0-10:
+      description: 'TODO: List FEOL dummy rule deck name. eg: Dummy_FEOL_Pegasus_3nm_E_17M_1Xa1Xb1Xc1Xd1Ya1Yb4Y2Yy2Yx2R_014.11_1a'
+      requirements:
+        value: N/A
+        pattern_items: []
+      input_files: []
+      waivers:
+        value: N/A
+        waive_items: []
+      _status: placeholder
+      _note: This is a placeholder. Replace with actual checker configuration when
+        implemented.
+    IMP-2-0-0-11:
+      description: 'TODO: List BEOL dummy rule deck name. eg: Dummy_BEOL_Pegasus_3nm_E_17M_1Xa1Xb1Xc1Xd1Ya1Yb4Y2Yy2Yx2R_014.11_1a'
+      requirements:
+        value: N/A
+        pattern_items: []
+      input_files: []
+      waivers:
+        value: N/A
+        waive_items: []
+      _status: placeholder
+      _note: This is a placeholder. Replace with actual checker configuration when
+        implemented.
+    IMP-2-0-0-12:
+      description: 'TODO: List COD dummy rule deck name (fill N/A if no COD). eg:
+        PLN16FFP_FINcut_AutoGen.11b.encrypt'
+      requirements:
+        value: N/A
+        pattern_items: []
+      input_files: []
+      waivers:
+        value: N/A
+        waive_items: []
+      _status: placeholder
+      _note: This is a placeholder. Replace with actual checker configuration when
+        implemented.
+    IMP-2-0-0-13:
+      description: 'TODO: List Spice Model used for PGV generation. eg: tsmc3gp.a.4/models/spectre_v1d0_2p6/ir_em.scs'
+      requirements:
+        value: N/A
+        pattern_items: []
+      input_files: []
+      waivers:
+        value: N/A
+        waive_items: []
+      _status: placeholder
+      _note: This is a placeholder. Replace with actual checker configuration when
+        implemented.
+    IMP-2-0-0-14:
+      description: 'TODO: List EM irxc rule deck name. eg: ICT_EM_v1d0p1a/cln3p_1p17m+ut-alrdl_1xa1xb1xc1xd1ya1yb4y2yy2yx2r_shdmim.ictem'
+      requirements:
+        value: N/A
+        pattern_items: []
+      input_files: []
+      waivers:
+        value: N/A
+        waive_items: []
+      _status: placeholder
+      _note: This is a placeholder. Replace with actual checker configuration when
+        implemented.
+    IMP-2-0-0-15:
+      description: 'TODO: List QRC techfile name. eg: 17M1Xa1Xb1Xc1Xd1Ya1Yb4Y2Yy2Yx2R_SHDMIM_UT/fs_v1d0p1a'
+      requirements:
+        value: N/A
+        pattern_items: []
+      input_files: []
+      waivers:
+        value: N/A
+        waive_items: []
+      _status: placeholder
+      _note: This is a placeholder. Replace with actual checker configuration when
+        implemented.
+  3.0_TOOL_VERSION:
+    IMP-3-0-0-00:
+      description: 'TODO: List Innovus implementation tool version (eg. innovus/221/22.11-s119_1)'
+      requirements:
+        value: N/A
+        pattern_items: []
+      input_files: []
+      waivers:
+        value: N/A
+        waive_items: []
+      _status: placeholder
+      _note: This is a placeholder. Replace with actual checker configuration when
+        implemented.
+    IMP-3-0-0-01:
+      description: 'TODO: List Quantus RC extration tool version (eg. quantus/231/23.11.000)'
+      requirements:
+        value: N/A
+        pattern_items: []
+      input_files: []
+      waivers:
+        value: N/A
+        waive_items: []
+      _status: placeholder
+      _note: This is a placeholder. Replace with actual checker configuration when
+        implemented.
+    IMP-3-0-0-02:
+      description: 'TODO: List Conformal LEC tool version (eg. confrml/241/24.10.100)'
+      requirements:
+        value: N/A
+        pattern_items: []
+      input_files: []
+      waivers:
+        value: N/A
+        waive_items: []
+      _status: placeholder
+      _note: This is a placeholder. Replace with actual checker configuration when
+        implemented.
+    IMP-3-0-0-03:
+      description: 'TODO: List Tempus timing signoff tool version (eg. ssv/231/23.12-s092_1)'
+      requirements:
+        value: N/A
+        pattern_items: []
+      input_files: []
+      waivers:
+        value: N/A
+        waive_items: []
+      _status: placeholder
+      _note: This is a placeholder. Replace with actual checker configuration when
+        implemented.
+    IMP-3-0-0-04:
+      description: 'TODO: List Voltus power and EMIR signoff tool version (eg. quantus/231/23.11.000)'
+      requirements:
+        value: N/A
+        pattern_items: []
+      input_files: []
+      waivers:
+        value: N/A
+        waive_items: []
+      _status: placeholder
+      _note: This is a placeholder. Replace with actual checker configuration when
+        implemented.
+    IMP-3-0-0-05:
+      description: 'TODO: List Pegasus physical signoff tool version (eg. pegasus/232/23.25.000)'
+      requirements:
+        value: N/A
+        pattern_items: []
+      input_files: []
+      waivers:
+        value: N/A
+        waive_items: []
+      _status: placeholder
+      _note: This is a placeholder. Replace with actual checker configuration when
+        implemented.
+  4.0_CONSTRAINT_CHECK:
+    IMP-4-0-0-00:
+      description: 'TODO: Confirm clock constraints in the SDC match or exceed the
+        specified requirements?'
+      requirements:
+        value: N/A
+        pattern_items: []
+      input_files: []
+      waivers:
+        value: N/A
+        waive_items: []
+      _status: placeholder
+      _note: This is a placeholder. Replace with actual checker configuration when
+        implemented.
+    IMP-4-0-0-01:
+      description: 'TODO: Confirm clock duty cycle constraints were reviewed for each
+        clock and match or exceed specified requirements?'
+      requirements:
+        value: N/A
+        pattern_items: []
+      input_files: []
+      waivers:
+        value: N/A
+        waive_items: []
+      _status: placeholder
+      _note: This is a placeholder. Replace with actual checker configuration when
+        implemented.
+    IMP-4-0-0-02:
+      description: 'TODO: Confirm clock uncertainty constraints account for cycle-to-cycle
+        jitter for all clocks?'
+      requirements:
+        value: N/A
+        pattern_items: []
+      input_files: []
+      waivers:
+        value: N/A
+        waive_items: []
+      _status: placeholder
+      _note: This is a placeholder. Replace with actual checker configuration when
+        implemented.
+    IMP-4-0-0-03:
+      description: 'TODO: Confirm clock uncertainty constraints account for duty cycle
+        distortion and duty cycle jitter for all clocks?'
+      requirements:
+        value: N/A
+        pattern_items: []
+      input_files: []
+      waivers:
+        value: N/A
+        waive_items: []
+      _status: placeholder
+      _note: This is a placeholder. Replace with actual checker configuration when
+        implemented.
+    IMP-4-0-0-04:
+      description: 'TODO: Confirm minimum uncertainty guidelines from foundry were
+        followed and included in constraints?'
+      requirements:
+        value: N/A
+        pattern_items: []
+      input_files: []
+      waivers:
+        value: N/A
+        waive_items: []
+      _status: placeholder
+      _note: This is a placeholder. Replace with actual checker configuration when
+        implemented.
+    IMP-4-0-0-05:
+      description: 'TODO: Confirm clock uncertainties were reviewed for test modes
+        (scan clocks coming from a different source, supported tester specs, etc.)?'
+      requirements:
+        value: N/A
+        pattern_items: []
+      input_files: []
+      waivers:
+        value: N/A
+        waive_items: []
+      _status: placeholder
+      _note: This is a placeholder. Replace with actual checker configuration when
+        implemented.
+    IMP-4-0-0-06:
+      description: 'TODO: Confirm all I/O constraints meet specified requirements?'
+      requirements:
+        value: N/A
+        pattern_items: []
+      input_files: []
+      waivers:
+        value: N/A
+        waive_items: []
+      _status: placeholder
+      _note: This is a placeholder. Replace with actual checker configuration when
+        implemented.
+    IMP-4-0-0-07:
+      description: 'TODO: Confirm all unconstrained paths and IOs have been peer reviewed
+        and approved?'
+      requirements:
+        value: N/A
+        pattern_items: []
+      input_files: []
+      waivers:
+        value: N/A
+        waive_items: []
+      _status: placeholder
+      _note: This is a placeholder. Replace with actual checker configuration when
+        implemented.
+    IMP-4-0-0-08:
+      description: 'TODO: Confirm all path exceptions (false paths, multicycle, max
+        delay) have been peer reviewed and approved?'
+      requirements:
+        value: N/A
+        pattern_items: []
+      input_files: []
+      waivers:
+        value: N/A
+        waive_items: []
+      _status: placeholder
+      _note: This is a placeholder. Replace with actual checker configuration when
+        implemented.
+    IMP-4-0-0-09:
+      description: 'TODO: Confirm SDC contains all necessary Functional, DFT and power
+        modes (including voltage scaling mode/reduced voltage and/or performance)?'
+      requirements:
+        value: N/A
+        pattern_items: []
+      input_files: []
+      waivers:
+        value: N/A
+        waive_items: []
+      _status: placeholder
+      _note: This is a placeholder. Replace with actual checker configuration when
+        implemented.
+    IMP-4-0-0-10:
+      description: 'TODO: Confrim proper clock and data transition limit values were
+        set?'
+      requirements:
+        value: N/A
+        pattern_items: []
+      input_files: []
+      waivers:
+        value: N/A
+        waive_items: []
+      _status: placeholder
+      _note: This is a placeholder. Replace with actual checker configuration when
+        implemented.
+  5.0_SYNTHESIS_CHECK:
+    IMP-5-0-0-00:
+      description: Confirm synthesis is using lib models for timing?
+      requirements:
+        value: N/A
+        pattern_items: []
+      input_files:
+      - C:\Users\yuyin\Desktop\CHECKLIST\IP_project_folder\reports\qor.rpt
+      waivers:
+        value: N/A
+        waive_items: []
+    IMP-5-0-0-01:
+      description: Confirm synthesis is using lef data for PLE optimization?
+      requirements:
+        value: N/A
+        pattern_items: []
+      input_files:
+      - C:\Users\yuyin\Desktop\CHECKLIST\IP_project_folder\logs\genus.syn_generic.log
+      - C:\Users\yuyin\Desktop\CHECKLIST\IP_project_folder\reports\check.rpt
+      waivers:
+        value: N/A
+        waive_items: []
+    IMP-5-0-0-02:
+      description: Confirm synthesis is using qrc tech file for RC data?
+      requirements:
+        value: N/A
+        pattern_items: []
+      input_files:
+      - C:\Users\yuyin\Desktop\CHECKLIST\IP_project_folder\logs\genus.syn_generic.log
+      - C:\Users\yuyin\Desktop\CHECKLIST\IP_project_folder\reports\qor.rpt
+      waivers:
+        value: N/A
+        waive_items: []
+    IMP-5-0-0-03:
+      description: Confirm target standard cell library corners are correct?
+      requirements:
+        value: N/A
+        pattern_items: []
+      input_files:
+      - C:\Users\yuyin\Desktop\CHECKLIST\IP_project_folder\reports\qor.rpt
+      waivers:
+        value: N/A
+        waive_items: []
+    IMP-5-0-0-04:
+      description: 'TODO: Confirm Jasper RTL Lint Summary report has no Error?'
+      requirements:
+        value: N/A
+        pattern_items: []
+      input_files: []
+      waivers:
+        value: N/A
+        waive_items: []
+      _status: placeholder
+      _note: This is a placeholder. Replace with actual checker configuration when
+        implemented.
+    IMP-5-0-0-05:
+      description: Confirm Unresolved References are none?
+      requirements:
+        value: N/A
+        pattern_items: []
+      input_files:
+      - C:\Users\yuyin\Desktop\CHECKLIST\IP_project_folder\logs\genus.syn_generic.log
+      waivers:
+        value: N/A
+        waive_items: []
+    IMP-5-0-0-06:
+      description: Confirm Empty Modules are none or explained?
+      requirements:
+        value: N/A
+        pattern_items: []
+      input_files:
+      - C:\Users\yuyin\Desktop\CHECKLIST\IP_project_folder\logs\genus.syn_generic.log
+      waivers:
+        value: N/A
+        waive_items: []
+    IMP-5-0-0-07:
+      description: Confirm SDC Read Failures clean?
+      requirements:
+        value: N/A
+        pattern_items: []
+      input_files:
+      - C:\Users\yuyin\Desktop\CHECKLIST\IP_project_folder\logs\genus.syn_generic.log
+      waivers:
+        value: N/A
+        waive_items: []
+    IMP-5-0-0-08:
+      description: Confirm Multidriven Report clean?
+      requirements:
+        value: N/A
+        pattern_items: []
+      input_files:
+      - C:\Users\yuyin\Desktop\CHECKLIST\IP_project_folder\reports\multidriven.rpt
+      waivers:
+        value: N/A
+        waive_items: []
+    IMP-5-0-0-09:
+      description: Confirm Latches Inferred documented?
+      requirements:
+        value: N/A
+        pattern_items: []
+      input_files:
+      - C:\Users\yuyin\Desktop\CHECKLIST\IP_project_folder\reports\latch.rpt
+      waivers:
+        value: N/A
+        waive_items: []
+    IMP-5-0-0-10:
+      description: Confirm don't use cell list includes forbidden cells specified
+        in IMP-1-0-0-02?
+      requirements:
+        value: N/A
+        pattern_items: []
+      input_files:
+      - C:\Users\yuyin\Desktop\CHECKLIST\IP_project_folder\reports\gates.rpt
+      waivers:
+        value: N/A
+        waive_items: []
+    IMP-5-0-0-11:
+      description: Confirm synthesis log has been peer reviewed and all warnings are
+        understood and annotated with an explanation?
+      requirements:
+        value: N/A
+        pattern_items: []
+      input_files:
+      - C:\Users\yuyin\Desktop\CHECKLIST\IP_project_folder\logs\genus.syn_generic.log
+      - C:\Users\yuyin\Desktop\CHECKLIST\IP_project_folder\logs\genus.syn_opt.log
+      waivers:
+        value: N/A
+        waive_items: []
+    IMP-5-0-0-12:
+      description: Confirm synthesis Quality Of Results (QOR) meets requirements (timing,
+        area, power)?
+      requirements:
+        value: N/A
+        pattern_items: []
+      input_files:
+      - C:\Users\yuyin\Desktop\CHECKLIST\IP_project_folder\reports\qor.rpt
+      waivers:
+        value: N/A
+        waive_items: []
+    IMP-5-0-0-13:
+      description: Confirm scan is successfully inserted and non-scannable flops have
+        been peer reviewed and waived?
+      requirements:
+        value: N/A
+        pattern_items: []
+      input_files:
+      - C:\Users\yuyin\Desktop\CHECKLIST\IP_project_folder\reports\dft_chainRegs.rpt
+      waivers:
+        value: N/A
+        waive_items: []
+    IMP-5-0-0-14:
+      description: Confirm that there are no other violations or errors (max cap,
+        max transition etc)?
+      requirements:
+        value: N/A
+        pattern_items: []
+      input_files:
+      - C:\Users\yuyin\Desktop\CHECKLIST\IP_project_folder\reports\design_check_rule.rpt
+      waivers:
+        value: N/A
+        waive_items: []
+    IMP-5-0-0-15:
+      description: Confirm all DFT checks pass?
+      requirements:
+        value: N/A
+        pattern_items: []
+      input_files:
+      - C:\Users\yuyin\Desktop\CHECKLIST\IP_project_folder\logs\dft_check_test.log
+      waivers:
+        value: N/A
+        waive_items: []
+    IMP-5-0-0-16:
+      description: Confirm CPF/UPF file has passed Conformal LP quality checks against
+        RTL prior to synthesis?
+      requirements:
+        value: N/A
+        pattern_items: []
+      input_files:
+      - C:\Users\yuyin\Desktop\CHECKLIST\IP_project_folder\reports\verify_power_structure_test.rpt
+      waivers:
+        value: N/A
+        waive_items: []
+    IMP-5-0-0-17:
+      description: Confirm CPF/UPF file has passed Conformal LP quality checks against
+        post DFT insertion synthesis netlist?
+      requirements:
+        value: N/A
+        pattern_items: []
+      input_files:
+      - C:\Users\yuyin\Desktop\CHECKLIST\IP_project_folder\reports\verify_power_structure_post_dft.rpt
+      waivers:
+        value: N/A
+        waive_items: []
+    IMP-5-0-0-18:
+      description: Document DFT Stuck-At % generated by the DFT flow and confirm this
+        value meets or exceeds the DFT CoE expected value?
+      requirements:
+        value: N/A
+        pattern_items: []
+      input_files:
+      - C:\Users\yuyin\Desktop\CHECKLIST\IP_project_folder\logs\log_create_logic_tests_FULLSCAN_cdn_sd2101_i3p765_vm130_6x2ya2yb2yc2yd1ye1ga1gb_atpg_stuckat
+      waivers:
+        value: N/A
+        waive_items: []
+    IMP-5-0-0-19:
+      description: Document DFT Transition % generated by the DFT flow and confirm
+        this value meets or exceeds the DFT CoE expected value?
+      requirements:
+        value: N/A
+        pattern_items: []
+      input_files:
+      - C:\Users\yuyin\Desktop\CHECKLIST\IP_project_folder\logs\log_create_logic_delay_tests_FULLSCAN_cdn_sd2101_i3p765_vm130_6x2ya2yb2yc2yd1ye1ga1gb_atpg_dynamic
+      waivers:
+        value: N/A
+        waive_items: []
+  6.0_POST_SYNTHESIS_LEC_CHECK:
+    IMP-6-0-0-00:
+      description: Confirm conformal constraints have been peer reviewed and approved?
+      requirements:
+        value: N/A
+        pattern_items: []
+      input_files:
+      - C:\Users\yuyin\Desktop\CHECKLIST\IP_project_folder\logs\map_to_final.log
+      waivers:
+        value: N/A
+        waive_items: []
+    IMP-6-0-0-01:
+      description: Confirm conformal log file has been peer reviewed and all warnings
+        have a waiver/explanation?
+      requirements:
+        value: N/A
+        pattern_items: []
+      input_files:
+      - C:\Users\yuyin\Desktop\CHECKLIST\IP_project_folder\reports\post_lec\syn_final_lec.log
+      - C:\Users\yuyin\Desktop\CHECKLIST\IP_project_folder\logs\map_to_final.log
+      waivers:
+        value: N/A
+        waive_items: []
+    IMP-6-0-0-02:
+      description: Confirm all listed black boxes are intended?
+      requirements:
+        value: N/A
+        pattern_items: []
+      input_files:
+      - C:\Users\yuyin\Desktop\CHECKLIST\IP_project_folder\reports\post_lec\black_box.rpt
+      waivers:
+        value: N/A
+        waive_items: []
+    IMP-6-0-0-03:
+      description: Confirm all user defined black boxes have port definitions declared?
+        (.lib or verilog stub file)
+      requirements:
+        value: N/A
+        pattern_items: []
+      input_files:
+      - C:\Users\yuyin\Desktop\CHECKLIST\IP_project_folder\logs\map_to_final.log
+      waivers:
+        value: N/A
+        waive_items: []
+    IMP-6-0-0-04:
+      description: Confirm no aborted compare points exist in log files or reports?
+      requirements:
+        value: N/A
+        pattern_items: []
+      input_files:
+      - C:\Users\yuyin\Desktop\CHECKLIST\IP_project_folder\logs\map_to_final.log
+      waivers:
+        value: N/A
+        waive_items: []
+    IMP-6-0-0-05:
+      description: Confirm no non-equivalent points exist?
+      requirements:
+        value: N/A
+        pattern_items: []
+      input_files:
+      - C:\Users\yuyin\Desktop\CHECKLIST\IP_project_folder\reports\noneq.rpt
+      waivers:
+        value: N/A
+        waive_items: []
+    IMP-6-0-0-06:
+      description: Confirm all unmapped compare points have been peer reviewed and
+        annotated with a waiver/explanation?
+      requirements:
+        value: N/A
+        pattern_items: []
+      input_files:
+      - C:\Users\yuyin\Desktop\CHECKLIST\IP_project_folder\reports\notmapped_points.rpt
+      waivers:
+        value: N/A
+        waive_items: []
+    IMP-6-0-0-07:
+      description: Confirm "set flatten model -library_pin_verification" in LEC flow.
+      requirements:
+        value: N/A
+        pattern_items: []
+      input_files:
+      - C:\Users\yuyin\Desktop\CHECKLIST\IP_project_folder\logs\map_to_final.log
+      waivers:
+        value: N/A
+        waive_items: []
+  7.0_INNOVUS_DESIGN_IN_CHECK:
+    IMP-7-0-0-00:
+      description: 'TODO: Block name (e.g: cdn_hs_phy_data_slice)'
+      requirements:
+        value: N/A
+        pattern_items: []
+      input_files: []
+      waivers:
+        value: N/A
+        waive_items: []
+      _status: placeholder
+      _note: This is a placeholder. Replace with actual checker configuration when
+        implemented.
+    IMP-7-0-0-01:
+      description: 'TODO: Confirm the netlist/constraint version is correct. For MIG
+        program, list FEI release package name in comment.'
+      requirements:
+        value: N/A
+        pattern_items: []
+      input_files: []
+      waivers:
+        value: N/A
+        waive_items: []
+      _status: placeholder
+      _note: This is a placeholder. Replace with actual checker configuration when
+        implemented.
+    IMP-7-0-0-02:
+      description: 'TODO: Confirm no ERROR message during read constraints.'
+      requirements:
+        value: N/A
+        pattern_items: []
+      input_files: []
+      waivers:
+        value: N/A
+        waive_items: []
+      _status: placeholder
+      _note: This is a placeholder. Replace with actual checker configuration when
+        implemented.
+    IMP-7-0-0-03:
+      description: 'TODO: Confirm all Warning messages during read constraints can
+        be waived.'
+      requirements:
+        value: N/A
+        pattern_items: []
+      input_files: []
+      waivers:
+        value: N/A
+        waive_items: []
+      _status: placeholder
+      _note: This is a placeholder. Replace with actual checker configuration when
+        implemented.
+    IMP-7-0-0-04:
+      description: 'TODO: Confirm no issue for check_timing (all modes) in Innovus.'
+      requirements:
+        value: N/A
+        pattern_items: []
+      input_files: []
+      waivers:
+        value: N/A
+        waive_items: []
+      _status: placeholder
+      _note: This is a placeholder. Replace with actual checker configuration when
+        implemented.
+    IMP-7-0-0-05:
+      description: 'TODO: Confirm no issue for check_design in Innovus.'
+      requirements:
+        value: N/A
+        pattern_items: []
+      input_files: []
+      waivers:
+        value: N/A
+        waive_items: []
+      _status: placeholder
+      _note: This is a placeholder. Replace with actual checker configuration when
+        implemented.
+    IMP-7-0-0-06:
+      description: 'TODO: Confirm the preserve cell list of all modes(Func/DFT/etc)
+        are added to don’t touch list if design have.'
+      requirements:
+        value: N/A
+        pattern_items: []
+      input_files: []
+      waivers:
+        value: N/A
+        waive_items: []
+      _status: placeholder
+      _note: This is a placeholder. Replace with actual checker configuration when
+        implemented.
+    IMP-7-0-0-07:
+      description: 'TODO: Confirm UPF/CPF is delivered for Low Power Checks.(Fill
+        N/A if no UPF is needed)'
+      requirements:
+        value: N/A
+        pattern_items: []
+      input_files: []
+      waivers:
+        value: N/A
+        waive_items: []
+      _status: placeholder
+      _note: This is a placeholder. Replace with actual checker configuration when
+        implemented.
+  7.1_INNOVUS_DESIGN_IN_CHECK:
+    SRG-IMP-7-1-0-00:
+      description: 'TODO: Are the initial checks at block level of Functional and
+        DFT modes are reviewed with respective stakeholders?'
+      requirements:
+        value: N/A
+        pattern_items: []
+      input_files: []
+      waivers:
+        value: N/A
+        waive_items: []
+      _status: placeholder
+      _note: This is a placeholder. Replace with actual checker configuration when
+        implemented.
+    SRG-IMP-7-1-0-01:
+      description: 'TODO: Are the initial checks at flat level of Functional and DFT
+        modes are reviewed with respective stakeholders?'
+      requirements:
+        value: N/A
+        pattern_items: []
+      input_files: []
+      waivers:
+        value: N/A
+        waive_items: []
+      _status: placeholder
+      _note: This is a placeholder. Replace with actual checker configuration when
+        implemented.
+  8.0_PHYSICAL_IMPLEMENTATION_CHECK:
+    IMP-8-0-0-00:
+      description: 'TODO: Confirm block orientation matches to addendum(NS/EW).'
+      requirements:
+        value: N/A
+        pattern_items: []
+      input_files: []
+      waivers:
+        value: N/A
+        waive_items: []
+      _status: placeholder
+      _note: This is a placeholder. Replace with actual checker configuration when
+        implemented.
+    IMP-8-0-0-01:
+      description: 'TODO: Confirm all ports are assigned on metal track.'
+      requirements:
+        value: N/A
+        pattern_items: []
+      input_files: []
+      waivers:
+        value: N/A
+        waive_items: []
+      _status: placeholder
+      _note: This is a placeholder. Replace with actual checker configuration when
+        implemented.
+    IMP-8-0-0-02:
+      description: 'TODO: Confirm all ports status are Fixed.'
+      requirements:
+        value: N/A
+        pattern_items: []
+      input_files: []
+      waivers:
+        value: N/A
+        waive_items: []
+      _status: placeholder
+      _note: This is a placeholder. Replace with actual checker configuration when
+        implemented.
+    IMP-8-0-0-03:
+      description: 'TODO: Confirm routing blockages are created around the block edges.'
+      requirements:
+        value: N/A
+        pattern_items: []
+      input_files: []
+      waivers:
+        value: N/A
+        waive_items: []
+      _status: placeholder
+      _note: This is a placeholder. Replace with actual checker configuration when
+        implemented.
+    IMP-8-0-0-04:
+      description: 'TODO: Confirm buffers are attached for all ports and are set as
+        fixed.'
+      requirements:
+        value: N/A
+        pattern_items: []
+      input_files: []
+      waivers:
+        value: N/A
+        waive_items: []
+      _status: placeholder
+      _note: This is a placeholder. Replace with actual checker configuration when
+        implemented.
+    IMP-8-0-0-05:
+      description: 'TODO: Confirm the power switches connection is correct . (for
+        non-PSO, please fill N/A)'
+      requirements:
+        value: N/A
+        pattern_items: []
+      input_files: []
+      waivers:
+        value: N/A
+        waive_items: []
+      _status: placeholder
+      _note: This is a placeholder. Replace with actual checker configuration when
+        implemented.
+    IMP-8-0-0-06:
+      description: 'TODO: Confirm the switch power pin is not in lef . (for non-PSO,
+        please fill N/A)'
+      requirements:
+        value: N/A
+        pattern_items: []
+      input_files: []
+      waivers:
+        value: N/A
+        waive_items: []
+      _status: placeholder
+      _note: This is a placeholder. Replace with actual checker configuration when
+        implemented.
+    IMP-8-0-0-07:
+      description: 'TODO: Confirm no Frontend(base layer) DRC violations.'
+      requirements:
+        value: N/A
+        pattern_items: []
+      input_files: []
+      waivers:
+        value: N/A
+        waive_items: []
+      _status: placeholder
+      _note: This is a placeholder. Replace with actual checker configuration when
+        implemented.
+    IMP-8-0-0-08:
+      description: 'TODO: Confirm max routing layer is correct. Provide max routing
+        layer value in comment field.'
+      requirements:
+        value: N/A
+        pattern_items: []
+      input_files: []
+      waivers:
+        value: N/A
+        waive_items: []
+      _status: placeholder
+      _note: This is a placeholder. Replace with actual checker configuration when
+        implemented.
+    IMP-8-0-0-09:
+      description: 'TODO: Confirm we take care of the dynamic power optimization in
+        the whole innovs flow(Check the Note)'
+      requirements:
+        value: N/A
+        pattern_items: []
+      input_files: []
+      waivers:
+        value: N/A
+        waive_items: []
+      _status: placeholder
+      _note: This is a placeholder. Replace with actual checker configuration when
+        implemented.
+    IMP-8-0-0-10:
+      description: 'TODO: Confirm you placed the discrete synchronizer flops close
+        to each other (distance <= 10um) for process without dedicated 2/3 stage synchronizer
+        library cell like TSMC. Make sure “no buffering on the Q->D path between sync
+        flops” for the sync_regs falling under same hierarchy. Please fine tune clock
+        tree for hold fixing. Please don''t change the VT of synchronizer flops. (Check
+        the Note. Fill N/A for library has 2/3 stages dedicated library cell)'
+      requirements:
+        value: N/A
+        pattern_items: []
+      input_files: []
+      waivers:
+        value: N/A
+        waive_items: []
+      _status: placeholder
+      _note: This is a placeholder. Replace with actual checker configuration when
+        implemented.
+    IMP-8-0-0-11:
+      description: 'TODO: Confirm the design didn''t use any don’t use cell of foundry
+        and don’t_use cell list includes forbidden cells from IMP-1-0-0-02.'
+      requirements:
+        value: N/A
+        pattern_items: []
+      input_files: []
+      waivers:
+        value: N/A
+        waive_items: []
+      _status: placeholder
+      _note: This is a placeholder. Replace with actual checker configuration when
+        implemented.
+    IMP-8-0-0-12:
+      description: 'TODO: Confirm no inputs are tied directly to the power rails (VDD/VSS)
+        by using Tiehigh/Tielow cells(check the Note)'
+      requirements:
+        value: N/A
+        pattern_items: []
+      input_files: []
+      waivers:
+        value: N/A
+        waive_items: []
+      _status: placeholder
+      _note: This is a placeholder. Replace with actual checker configuration when
+        implemented.
+    IMP-8-0-0-13:
+      description: 'TODO: Confirm proper clock tree buffer/inverter types are used.
+        Provide a list in comment field.'
+      requirements:
+        value: N/A
+        pattern_items: []
+      input_files: []
+      waivers:
+        value: N/A
+        waive_items: []
+      _status: placeholder
+      _note: This is a placeholder. Replace with actual checker configuration when
+        implemented.
+    IMP-8-0-0-14:
+      description: 'TODO: Confirm no VT mixing on clock tree for all modes. For some
+        instances has clock attribute but used as data, please list that into Waiver
+        list.'
+      requirements:
+        value: N/A
+        pattern_items: []
+      input_files: []
+      waivers:
+        value: N/A
+        waive_items: []
+      _status: placeholder
+      _note: This is a placeholder. Replace with actual checker configuration when
+        implemented.
+    IMP-8-0-0-15:
+      description: 'TODO: Confirm clock tree VT requirements were met.'
+      requirements:
+        value: N/A
+        pattern_items: []
+      input_files: []
+      waivers:
+        value: N/A
+        waive_items: []
+      _status: placeholder
+      _note: This is a placeholder. Replace with actual checker configuration when
+        implemented.
+    IMP-8-0-0-16:
+      description: 'TODO: Confirm clock tree transitions meet requirement.'
+      requirements:
+        value: N/A
+        pattern_items: []
+      input_files: []
+      waivers:
+        value: N/A
+        waive_items: []
+      _status: placeholder
+      _note: This is a placeholder. Replace with actual checker configuration when
+        implemented.
+    IMP-8-0-0-17:
+      description: 'TODO: Confirm clock tree latency requirements were met across
+        all corners. Provide values in comments field.'
+      requirements:
+        value: N/A
+        pattern_items: []
+      input_files: []
+      waivers:
+        value: N/A
+        waive_items: []
+      _status: placeholder
+      _note: This is a placeholder. Replace with actual checker configuration when
+        implemented.
+    IMP-8-0-0-18:
+      description: 'TODO: Confirm clock tree skew requirements are met.'
+      requirements:
+        value: N/A
+        pattern_items: []
+      input_files: []
+      waivers:
+        value: N/A
+        waive_items: []
+      _status: placeholder
+      _note: This is a placeholder. Replace with actual checker configuration when
+        implemented.
+    IMP-8-0-0-19:
+      description: 'TODO: Confirm all multiflop synchronizer registers are the intended
+        celltype and VT type upon which MTBF was calculated.'
+      requirements:
+        value: N/A
+        pattern_items: []
+      input_files: []
+      waivers:
+        value: N/A
+        waive_items: []
+      _status: placeholder
+      _note: This is a placeholder. Replace with actual checker configuration when
+        implemented.
+    IMP-8-0-0-20:
+      description: 'TODO: Confirm that all the multiflop synchronizer registers are
+        placed close together and their clock pin connected to the same leaf buffer/inverter
+        of the clock tree?'
+      requirements:
+        value: N/A
+        pattern_items: []
+      input_files: []
+      waivers:
+        value: N/A
+        waive_items: []
+      _status: placeholder
+      _note: This is a placeholder. Replace with actual checker configuration when
+        implemented.
+    IMP-8-0-0-21:
+      description: 'TODO: If required, antenna diodes were added at the block/IP inputs.'
+      requirements:
+        value: N/A
+        pattern_items: []
+      input_files: []
+      waivers:
+        value: N/A
+        waive_items: []
+      _status: placeholder
+      _note: This is a placeholder. Replace with actual checker configuration when
+        implemented.
+    IMP-8-0-0-22:
+      description: 'TODO: Confirm buffers were added close to each I/O and macro port.'
+      requirements:
+        value: N/A
+        pattern_items: []
+      input_files: []
+      waivers:
+        value: N/A
+        waive_items: []
+      _status: placeholder
+      _note: This is a placeholder. Replace with actual checker configuration when
+        implemented.
+    IMP-8-0-0-23:
+      description: 'TODO: confirm no unplaced cells in design.'
+      requirements:
+        value: N/A
+        pattern_items: []
+      input_files: []
+      waivers:
+        value: N/A
+        waive_items: []
+      _status: placeholder
+      _note: This is a placeholder. Replace with actual checker configuration when
+        implemented.
+    IMP-8-0-0-24:
+      description: 'TODO: Confirm no assign in release netlist.'
+      requirements:
+        value: N/A
+        pattern_items: []
+      input_files: []
+      waivers:
+        value: N/A
+        waive_items: []
+      _status: placeholder
+      _note: This is a placeholder. Replace with actual checker configuration when
+        implemented.
+    IMP-8-0-1-00:
+      description: 'TODO: Confirm the BUMP DRC rule deck setting is correct.'
+      requirements:
+        value: N/A
+        pattern_items: []
+      input_files: []
+      waivers:
+        value: N/A
+        waive_items: []
+      _status: placeholder
+      _note: This is a placeholder. Replace with actual checker configuration when
+        implemented.
+    IMP-8-0-1-01:
+      description: 'TODO: Confirm no BUMP rule violation or can be waived by the client
+        or internal package team.'
+      requirements:
+        value: N/A
+        pattern_items: []
+      input_files: []
+      waivers:
+        value: N/A
+        waive_items: []
+      _status: placeholder
+      _note: This is a placeholder. Replace with actual checker configuration when
+        implemented.
+    IMP-8-0-1-02:
+      description: 'TODO: Confirm no RDL DRC violation.'
+      requirements:
+        value: N/A
+        pattern_items: []
+      input_files: []
+      waivers:
+        value: N/A
+        waive_items: []
+      _status: placeholder
+      _note: This is a placeholder. Replace with actual checker configuration when
+        implemented.
+    IMP-8-0-1-03:
+      description: 'TODO: Confirm TCD(FETCD/BETCD) cells are inserted based on foundry
+        requirement.'
+      requirements:
+        value: N/A
+        pattern_items: []
+      input_files: []
+      waivers:
+        value: N/A
+        waive_items: []
+      _status: placeholder
+      _note: This is a placeholder. Replace with actual checker configuration when
+        implemented.
+    IMP-8-0-1-04:
+      description: 'TODO: Confirm refer to Fab recommendation and requirement to insert
+        ESD cell for core violtage .'
+      requirements:
+        value: N/A
+        pattern_items: []
+      input_files: []
+      waivers:
+        value: N/A
+        waive_items: []
+      _status: placeholder
+      _note: This is a placeholder. Replace with actual checker configuration when
+        implemented.
+    IMP-8-0-1-05:
+      description: 'TODO: Confirm ESD cell power pins are connected to always on power
+        net. In general, it''s not allowed to add ESD clamps to VDDG power gated domain.
+        If customer request that, please review that with ESD experts about the wake-up
+        time requirement etc for this special case and request approval from PD/AMS
+        top management.'
+      requirements:
+        value: N/A
+        pattern_items: []
+      input_files: []
+      waivers:
+        value: N/A
+        waive_items: []
+      _status: placeholder
+      _note: This is a placeholder. Replace with actual checker configuration when
+        implemented.
+    IMP-8-0-1-06:
+      description: 'TODO: Confirm that set "don''t touch" is applied to all high voltage
+        nets inside core power domain which can''t be buffered with core cells (ex:
+        VDD*GONE net in DDR PHY)'
+      requirements:
+        value: N/A
+        pattern_items: []
+      input_files: []
+      waivers:
+        value: N/A
+        waive_items: []
+      _status: placeholder
+      _note: This is a placeholder. Replace with actual checker configuration when
+        implemented.
+    IMP-8-0-1-07:
+      description: 'TODO: Confirm that proper NDR rule is applied to all high voltage
+        nets inside core power domain to avoid HV spacing DRC violations (ex: VDD*GONE
+        net in DDR PHY)'
+      requirements:
+        value: N/A
+        pattern_items: []
+      input_files: []
+      waivers:
+        value: N/A
+        waive_items: []
+      _status: placeholder
+      _note: This is a placeholder. Replace with actual checker configuration when
+        implemented.
+    IMP-8-0-1-08:
+      description: 'TODO: Confirm set "don''t touch" is applied to all Analog Test
+        Bus (ATB*) and any other analog signals which can''t be buffered.'
+      requirements:
+        value: N/A
+        pattern_items: []
+      input_files: []
+      waivers:
+        value: N/A
+        waive_items: []
+      _status: placeholder
+      _note: This is a placeholder. Replace with actual checker configuration when
+        implemented.
+  8.1_PHYSICAL_IMPLEMENTATION_CHECK:
+    MIG-IMP-8-1-0-00:
+      description: 'TODO: Confirm followed the general slice top metal and top routing
+        layer spec. (check the Note)'
+      requirements:
+        value: N/A
+        pattern_items: []
+      input_files: []
+      waivers:
+        value: N/A
+        waive_items: []
+      _status: placeholder
+      _note: This is a placeholder. Replace with actual checker configuration when
+        implemented.
+    MIG-IMP-8-1-0-01:
+      description: 'TODO: Confirm all bit slice ports which connect to IO are assigned
+        at the same side close to IO.'
+      requirements:
+        value: N/A
+        pattern_items: []
+      input_files: []
+      waivers:
+        value: N/A
+        waive_items: []
+      _status: placeholder
+      _note: This is a placeholder. Replace with actual checker configuration when
+        implemented.
+    MIG-IMP-8-1-0-02:
+      description: 'TODO: Confirm the delay element and read entry flops are ULVT
+        type for DDR5/LPDDR5 whose date rate is 4400Mbps and above.(check the Note)'
+      requirements:
+        value: N/A
+        pattern_items: []
+      input_files: []
+      waivers:
+        value: N/A
+        waive_items: []
+      _status: placeholder
+      _note: This is a placeholder. Replace with actual checker configuration when
+        implemented.
+    MIG-IMP-8-1-0-03:
+      description: 'TODO: Confirm max D4 loading can be drove by DA cell and place
+        loading instance close to DA cell(check the Note)'
+      requirements:
+        value: N/A
+        pattern_items: []
+      input_files: []
+      waivers:
+        value: N/A
+        waive_items: []
+      _status: placeholder
+      _note: This is a placeholder. Replace with actual checker configuration when
+        implemented.
+    MIG-IMP-8-1-0-04:
+      description: 'TODO: Confirm there are no gaps for delay element placement for
+        both NS and EW orientation. Best practice is to place delay element by vertical
+        direction for EW slies. Building PG into EW delay element is another choice
+        to avoid gaps between delay elements. Pay attention to try our best to keep
+        same driven strenght along the READ/WRITE/LPBK path during the DCD fixing
+        (post DQ clock divider).'
+      requirements:
+        value: N/A
+        pattern_items: []
+      input_files: []
+      waivers:
+        value: N/A
+        waive_items: []
+      _status: placeholder
+      _note: This is a placeholder. Replace with actual checker configuration when
+        implemented.
+    MIG-IMP-8-1-0-05:
+      description: 'TODO: Confirm place the cells from delayElement0 to DL of each
+        delay line closely and don''t touch the net/cell on these paths.'
+      requirements:
+        value: N/A
+        pattern_items: []
+      input_files: []
+      waivers:
+        value: N/A
+        waive_items: []
+      _status: placeholder
+      _note: This is a placeholder. Replace with actual checker configuration when
+        implemented.
+    MIG-IMP-8-1-0-06:
+      description: 'TODO: Confirm NO analog module (such as DA) is put in the middle
+        of manual added inverter pairs in DCD path improvement activities.'
+      requirements:
+        value: N/A
+        pattern_items: []
+      input_files: []
+      waivers:
+        value: N/A
+        waive_items: []
+      _status: placeholder
+      _note: This is a placeholder. Replace with actual checker configuration when
+        implemented.
+    MIG-IMP-8-1-0-07:
+      description: 'TODO: Confirm placed the mimic delay cell related paths (from
+        delay line output to DL IE/IL pins) carefully. (check the Note)'
+      requirements:
+        value: N/A
+        pattern_items: []
+      input_files: []
+      waivers:
+        value: N/A
+        waive_items: []
+      _status: placeholder
+      _note: This is a placeholder. Replace with actual checker configuration when
+        implemented.
+    MIG-IMP-8-1-0-08:
+      description: 'TODO: Confirm you use the same VT and cell type(clock cell) as
+        that on read DQS path to balance read DQ/DQS skew. Treat DQ read path as clock
+        path.'
+      requirements:
+        value: N/A
+        pattern_items: []
+      input_files: []
+      waivers:
+        value: N/A
+        waive_items: []
+      _status: placeholder
+      _note: This is a placeholder. Replace with actual checker configuration when
+        implemented.
+    MIG-IMP-8-1-0-09:
+      description: 'TODO: Confirm the delay element design name and sub-module name
+        are uniquified. Make sure there is not same module name for difference slices.
+        For example, add "_ACS" and "_ACM" postfix to delay element design name and
+        sub-module name for ACS and ACM block.'
+      requirements:
+        value: N/A
+        pattern_items: []
+      input_files: []
+      waivers:
+        value: N/A
+        waive_items: []
+      _status: placeholder
+      _note: This is a placeholder. Replace with actual checker configuration when
+        implemented.
+    MIG-IMP-8-1-0-10:
+      description: 'TODO: Confirm followed the custom and Regulator cell integration
+        guide in custom cell delivery package. Please review the regulator physical
+        design with AMS team.Please place the write path DA cell close to IO port
+        and don''t insert the buffers/inverter between DCC loop and data out mux select
+        pin. (Check the Note)'
+      requirements:
+        value: N/A
+        pattern_items: []
+      input_files: []
+      waivers:
+        value: N/A
+        waive_items: []
+      _status: placeholder
+      _note: This is a placeholder. Replace with actual checker configuration when
+        implemented.
+    MIG-IMP-8-1-0-11:
+      description: 'TODO: Confirm the XTC crosstalk connection is correct for the
+        DDRIO has *XTC ports. (Check the Note)'
+      requirements:
+        value: N/A
+        pattern_items: []
+      input_files: []
+      waivers:
+        value: N/A
+        waive_items: []
+      _status: placeholder
+      _note: This is a placeholder. Replace with actual checker configuration when
+        implemented.
+    MIG-IMP-8-1-0-12:
+      description: 'TODO: Confirm there is no buffers/inverters inserted on the VDDR_OBS/VDDR_1UI_OBS/VDDR_6UI_OBS/ATB0_REG_OBS/ATB1_REG_OBS
+        nets from regulator to feedback IO. And make sure the net resistance less
+        than 500ohms. For 1UI+6UI case, if the 1UI or 6UI connected to two FBIOs,
+        make sure the path from the regulator to the near FBIO resistance less than
+        500ohms. For regulator to the far FBIO path, the resistance can be relaxed.
+        Check with AMS team if you have further questions.'
+      requirements:
+        value: N/A
+        pattern_items: []
+      input_files: []
+      waivers:
+        value: N/A
+        waive_items: []
+      _status: placeholder
+      _note: This is a placeholder. Replace with actual checker configuration when
+        implemented.
+    MIG-IMP-8-1-0-13:
+      description: 'TODO: Confirm "is_macro_cell : true ;" is specified for regulator
+        cells in regulator lib file and the regulator pin connection is correct.(NSLEEP_IN
+        and other input pins are not tied to 0. Fille N/A if there is no Regulator
+        in your design)'
+      requirements:
+        value: N/A
+        pattern_items: []
+      input_files: []
+      waivers:
+        value: N/A
+        waive_items: []
+      _status: placeholder
+      _note: This is a placeholder. Replace with actual checker configuration when
+        implemented.
+    MIG-IMP-8-1-0-14:
+      description: 'TODO: Confirm clock latency (EFG paths) meet requirement for timing
+        budget. Put the delay from DESKEW PLL to slice register CK(E) and pad_mem*
+        (F+G) to comment collomn (target SS corner delay < 800ps).'
+      requirements:
+        value: N/A
+        pattern_items: []
+      input_files: []
+      waivers:
+        value: N/A
+        waive_items: []
+      _status: placeholder
+      _note: This is a placeholder. Replace with actual checker configuration when
+        implemented.
+    MIG-IMP-8-1-0-15:
+      description: 'TODO: Confirm reorder VDD*GONE connection based on IO sequence
+        unless it''s took care by custom layout.'
+      requirements:
+        value: N/A
+        pattern_items: []
+      input_files: []
+      waivers:
+        value: N/A
+        waive_items: []
+      _status: placeholder
+      _note: This is a placeholder. Replace with actual checker configuration when
+        implemented.
+    MIG-IMP-8-1-0-16:
+      description: 'TODO: Confirm all the 3 NAND cells of clock mux in both PHY_TOP
+        and Slice level are placed closely (distance <= 10um) and there is NO buffer/inverters
+        inserted between the nand0/nand1 and nand2.'
+      requirements:
+        value: N/A
+        pattern_items: []
+      input_files: []
+      waivers:
+        value: N/A
+        waive_items: []
+      _status: placeholder
+      _note: This is a placeholder. Replace with actual checker configuration when
+        implemented.
+    MIG-IMP-8-1-0-17:
+      description: 'TODO: Confirm there is no dummy metal/via added inside DDRIO.
+        For furture programs, DDRIO will include the dummy metal/via EXCL layers inside
+        IO so PD don''t need to do anything. For currrent ongoing project, please
+        check whether there are EXCL layers in DDRIO and create dummy EXCL on IO area
+        if IO cells don''t have EXCL layers in gds.'
+      requirements:
+        value: N/A
+        pattern_items: []
+      input_files: []
+      waivers:
+        value: N/A
+        waive_items: []
+      _status: placeholder
+      _note: This is a placeholder. Replace with actual checker configuration when
+        implemented.
+    MIG-IMP-8-1-1-00:
+      description: 'TODO: Please confirm the below items one by one (check the Note)，
+        1. Confirm VDD/VDDQ/VDDQX additional Dcap value meet the performance requirement.
+        2. For LPDDR5 and LP5 combo, place RST/CKE pads to VDDQX domain. 3. For CS
+        pad, if CS/CKE swap logic is implemented (only for LP5/4X combo, CS type will
+        be se_txrx), the CS pad should be placed in VDDQ domain. If CS/CKE swap logic
+        is not implemented (LP5 mode,cs type will be se_cs_txrx), the CS pad should
+        be placed in VDDQX domain. 4. ATB pad can be put into VDDQX domain in general
+        for LP5 and LP5 combo case. Please check with AMS team. 5. Please connect
+        the CKE/RST/CS region vddq decap to VDDQX power net. For VDD decap, please
+        add that to VDD_ISO instead of VDD for LPDDR5 project using ddr800 Gen3IO.
+        6. For LP4X, place CKE/RESET into VDDQX IO domain.'
+      requirements:
+        value: N/A
+        pattern_items: []
+      input_files: []
+      waivers:
+        value: N/A
+        waive_items: []
+      _status: placeholder
+      _note: This is a placeholder. Replace with actual checker configuration when
+        implemented.
+    MIG-IMP-8-1-1-01:
+      description: 'TODO: Confirm meet a resistance less than 0.5Ω(not exceed 0.8Ω)
+        and a capacitance less than 350fF from pad opening to signal bump. (check
+        the Note)'
+      requirements:
+        value: N/A
+        pattern_items: []
+      input_files: []
+      waivers:
+        value: N/A
+        waive_items: []
+      _status: placeholder
+      _note: This is a placeholder. Replace with actual checker configuration when
+        implemented.
+    MIG-IMP-8-1-1-02:
+      description: 'TODO: Confirm NO special VDDCK bump for PAD memory clock domain
+        IO,should share the VDD bump from other core logic.'
+      requirements:
+        value: N/A
+        pattern_items: []
+      input_files: []
+      waivers:
+        value: N/A
+        waive_items: []
+      _status: placeholder
+      _note: This is a placeholder. Replace with actual checker configuration when
+        implemented.
+    MIG-IMP-8-1-1-03:
+      description: 'TODO: Confirm with IO designer whether the IO is Gen1 IO or Gen2
+        IO or Gen3 IO.(check the Note)'
+      requirements:
+        value: N/A
+        pattern_items: []
+      input_files: []
+      waivers:
+        value: N/A
+        waive_items: []
+      _status: placeholder
+      _note: This is a placeholder. Replace with actual checker configuration when
+        implemented.
+    MIG-IMP-8-1-1-04:
+      description: 'TODO: Confirm the VDDQX bumps are assigned correctly. Exactly
+        follow the "Memory Type" collum information. (check the Note)'
+      requirements:
+        value: N/A
+        pattern_items: []
+      input_files: []
+      waivers:
+        value: N/A
+        waive_items: []
+      _status: placeholder
+      _note: This is a placeholder. Replace with actual checker configuration when
+        implemented.
+    MIG-IMP-8-1-1-05:
+      description: 'TODO: Confirm assign VDDQ_AO for CKE/RST IO region if data retention
+        "CKE/RST always on enabled" is specified in addendum. And place the CKE/RST
+        domain IOs correctly. For DDR5 application,CS pad will be used to replace
+        CKE and should be put into VDDQ_AO IO domain too. (check the Note)'
+      requirements:
+        value: N/A
+        pattern_items: []
+      input_files: []
+      waivers:
+        value: N/A
+        waive_items: []
+      _status: placeholder
+      _note: This is a placeholder. Replace with actual checker configuration when
+        implemented.
+    MIG-IMP-8-1-1-06:
+      description: 'TODO: Make sure take care the PERC concern during the VDDQ and
+        VDDQ_CK bump assignment and PG integration for LPDDR5 as VDDQ and VDDQ_CK
+        are core voltage and the P2P resistance requirement is 0.1ohm which is tight.'
+      requirements:
+        value: N/A
+        pattern_items: []
+      input_files: []
+      waivers:
+        value: N/A
+        waive_items: []
+      _status: placeholder
+      _note: This is a placeholder. Replace with actual checker configuration when
+        implemented.
+    MIG-IMP-8-1-1-07:
+      description: 'TODO: Confirm use cdns_ddr_vddq_ck_v/h (with double clamp and
+        If exist in current DDRIO library) instead of cdns_ddr_vddq_v/h in memclk
+        region for better ESD protection of VDDQ_CK domain. (Fill N/A if this cell
+        doesn’t exist)'
+      requirements:
+        value: N/A
+        pattern_items: []
+      input_files: []
+      waivers:
+        value: N/A
+        waive_items: []
+      _status: placeholder
+      _note: This is a placeholder. Replace with actual checker configuration when
+        implemented.
+    MIG-IMP-8-1-1-08:
+      description: 'TODO: Confirm follow the "Gen* I/O VREF and ESD Insertion Rule"
+        in implementation guide AND DDRIO datasheet for IO planning. Please sent the
+        IO order to AMS team to review if you are not that sure. (check the Note)'
+      requirements:
+        value: N/A
+        pattern_items: []
+      input_files: []
+      waivers:
+        value: N/A
+        waive_items: []
+      _status: placeholder
+      _note: This is a placeholder. Replace with actual checker configuration when
+        implemented.
+    MIG-IMP-8-1-1-09:
+      description: 'TODO: confirm place the DESKEW PLL to the slice notch between
+        two adjacent dataslices for LPDDR5 design with 32 or more bits to make the
+        path delay from deskew pll to DQ/DQS write path smaller (better system budget).'
+      requirements:
+        value: N/A
+        pattern_items: []
+      input_files: []
+      waivers:
+        value: N/A
+        waive_items: []
+      _status: placeholder
+      _note: This is a placeholder. Replace with actual checker configuration when
+        implemented.
+    MIG-IMP-8-1-1-10:
+      description: 'TODO: Confirm the IO order and IO orientation are same as that
+        in the IO order excel table which was reviewed by AMS team or specified by
+        Customer (Like Renesas FIRM PHY project). If you changed the IO order or IO
+        orientation due to DRC or design closure, please make sure review and confirm
+        that with AMS or customer again.'
+      requirements:
+        value: N/A
+        pattern_items: []
+      input_files: []
+      waivers:
+        value: N/A
+        waive_items: []
+      _status: placeholder
+      _note: This is a placeholder. Replace with actual checker configuration when
+        implemented.
+    MIG-IMP-8-1-1-11:
+      description: 'TODO: Confirm the bump assignment is sync with and agreed with
+        the client or internal package team. And make sure the bump map sent to customer
+        is same as that in final database.'
+      requirements:
+        value: N/A
+        pattern_items: []
+      input_files: []
+      waivers:
+        value: N/A
+        waive_items: []
+      _status: placeholder
+      _note: This is a placeholder. Replace with actual checker configuration when
+        implemented.
+    MIG-IMP-8-1-1-12:
+      description: 'TODO: Confirm reset_n_pad (cdns_ddr_se_r_txrx_h) IO VDD_AO pin
+        must be connected to always-on VDD.'
+      requirements:
+        value: N/A
+        pattern_items: []
+      input_files: []
+      waivers:
+        value: N/A
+        waive_items: []
+      _status: placeholder
+      _note: This is a placeholder. Replace with actual checker configuration when
+        implemented.
+    MIG-IMP-8-1-1-13:
+      description: 'TODO: Confirm you have build the shortest clock tree to SOC level
+        SRAM interface clock ports for Dragonfly LP/DDR5 PHY and build shortest tree
+        to phy_pclk_out for Dragonfly DDR5 PHY. (Fill N/A for HPPHY) -For Dragonfly
+        Automotive LPPHY , build shortest clock tree from phy_pclk input port to phy_uc_IRam0CLK
+        and phy_uc_DRam00CLK output ports. -For Dragonfly DDR5, build shortest clock
+        tree from clk_ctlr_sync input port to phy_pclk_div_out output port. -For Dragonfly
+        DDR5, as controller will use phy_pclk_out as clock source, please build shortest
+        tree from clk_ctlr_sync input port to phy_pclk_out output port. To achieve
+        this, you need to place the top DESKEW PLL close to DFI boundary. As current
+        DFPHY bump plan is handled by AMS team, please pay attention to the top DESKEW
+        PLL bump location which needs to be assigned near to DFI boundary. Also, please
+        optimize the SRAM interface data path(in2reg/reg2out related to phy_uc* ports)
+        with tighter interface constraint and well balanced clock tree for these SRAM
+        related registers to reserve more margin on SRAM path delay on SOC side.'
+      requirements:
+        value: N/A
+        pattern_items: []
+      input_files: []
+      waivers:
+        value: N/A
+        waive_items: []
+      _status: placeholder
+      _note: This is a placeholder. Replace with actual checker configuration when
+        implemented.
+    MIG-IMP-8-1-1-14:
+      description: 'TODO: Confirm you created VDD_AO power pin for data retention
+        function of Dragonfly PHY. At the same time, create PHY VDD pin close to PHY
+        VDD_AO pin using same layer and output the PHY VDD and PHY VDD_AO pins to
+        LEF. (Fill N/A if you confirmed with customer that they will not turn off
+        the PHY VDD and this PHY will not be reused for other projects which may turn
+        off the PHY VDD externally)'
+      requirements:
+        value: N/A
+        pattern_items: []
+      input_files: []
+      waivers:
+        value: N/A
+        waive_items: []
+      _status: placeholder
+      _note: This is a placeholder. Replace with actual checker configuration when
+        implemented.
+    MIG-IMP-8-1-1-15:
+      description: 'TODO: Confirm you follow the below implementation guidance related
+        to data_retention and VDDA_AO for GDDR6/GDDR7. -For GDDR6 Gen1 (old architecture),
+        connect the data_retention pin to CMN CORE_VDDGONE directly with shortest
+        distance (please review the transition with AMS team) and don''t insert any
+        buffer on data_retention path as there is no VDD always supply in core area.
+        GDDR6 gen1 will not have VDDA_AO supply and VDDA on HM will be always on in
+        data_retention mode. -For GDDR6 new architecture or GDDR7, there will be VDDA_AO
+        bump (please double check with AMS team if there is no VDDA_AO bump), PD need
+        to add data_retention buffers(insert data_retention buffer to PHY boundary
+        also) powered by VDDA_AO.'
+      requirements:
+        value: N/A
+        pattern_items: []
+      input_files: []
+      waivers:
+        value: N/A
+        waive_items: []
+      _status: placeholder
+      _note: This is a placeholder. Replace with actual checker configuration when
+        implemented.
+    MIG-IMP-8-1-1-16:
+      description: 'TODO: For DDR5/DDR4 MCI 80bit PHY implementaton (Check the Note),
+        For HPPHY: group DS0~3 together with DS8-ECC and group DS4~7 together with
+        DS9-ECC, put DS8/DS9 close to CA. For Dragonfly DDR5 PHY: DS4 is used for
+        Channel A ECC data while DS9 is used for the Channel B ECC data. There is
+        no special rule requirement as HPPHY and please place them in order based
+        on each channel.'
+      requirements:
+        value: N/A
+        pattern_items: []
+      input_files: []
+      waivers:
+        value: N/A
+        waive_items: []
+      _status: placeholder
+      _note: This is a placeholder. Replace with actual checker configuration when
+        implemented.
+    MIG-IMP-8-1-1-17:
+      description: 'TODO: Confirm the PG connection of Deskew PLL is correct and the
+        PG resistance meet the integration guide. (check the Note)'
+      requirements:
+        value: N/A
+        pattern_items: []
+      input_files: []
+      waivers:
+        value: N/A
+        waive_items: []
+      _status: placeholder
+      _note: This is a placeholder. Replace with actual checker configuration when
+        implemented.
+    MIG-IMP-8-1-1-18:
+      description: 'TODO: Confirm the correct bump naming rule VDDAPLL_* for high
+        voltage pin VDDA of dual rail Deskew PLL (check the Note)'
+      requirements:
+        value: N/A
+        pattern_items: []
+      input_files: []
+      waivers:
+        value: N/A
+        waive_items: []
+      _status: placeholder
+      _note: This is a placeholder. Replace with actual checker configuration when
+        implemented.
+    MIG-IMP-8-1-1-19:
+      description: 'TODO: Confirm use the clock inverters and set NDR routing to the
+        paths from PLL TESTOUT and OBS out. For HPPHY: the paths are from DESKEW PLL
+        to pll_testout pad input pins or pll_testout DFI interface pins. For Dragonfly
+        LPPHY: the paths are from PLL_clk_obs_out(DS/AS HM)-> phy_obs_pll_clk(phy_top)
+        and PLL_refclk_obs_out(DS/AS HM)->phy_obs_pll_refclk(phy_top) For Dragonfly
+        DDR5 PHY: the paths are : from top deskew PLL(phy_top)->pll_refclk_testout_top_pll/pll_testout_top_pll(phy_top)
+        : from PLL_clk_obs_out(DS HM)->pll_testout_ds*_pll(phy_top), PLL_refclk_obs_out(DS
+        HM)->pll_refclk_testout_ds*_pll(phy_top) : from PLL_clk_obs_out(cmn_cas)->pll_testout_cmn_pll(phy_top),PLL_refclk_obs_out(cmn_cas)->pll_refclk_testout_cmn_pll(phy_top)
+        : from CMN_clk_obs_out(cmnhm)-> CMN_clk_obs_out(phy_top) For tv_chip level:
+        Do similar things to paths which are for FRACN-PLL/DESKEW-PLL clock testing
+        or observing.'
+      requirements:
+        value: N/A
+        pattern_items: []
+      input_files: []
+      waivers:
+        value: N/A
+        waive_items: []
+      _status: placeholder
+      _note: This is a placeholder. Replace with actual checker configuration when
+        implemented.
+    MIG-IMP-8-1-1-20:
+      description: 'TODO: Confirm the Deskew PLL CKFB connecte to FOUTP directly without
+        buffers. (check the Note)'
+      requirements:
+        value: N/A
+        pattern_items: []
+      input_files: []
+      waivers:
+        value: N/A
+        waive_items: []
+      _status: placeholder
+      _note: This is a placeholder. Replace with actual checker configuration when
+        implemented.
+    MIG-IMP-8-1-1-21:
+      description: 'TODO: Confirm dfi interface registers are placed close to DFI
+        interface pins and make the DFI interface input/output clock/datapath shortest
+        with minumum skew (If the project is dragonfly DDR5 and controller will use
+        PHY phy_pclk_out, please don''t build shortest clock tree for DFI interface
+        register clocks. You can balance DFI interface clock tree with internal clock
+        tree or a little larger than internal clock tree). Build separate clock tree
+        to DFI regsiters. One is for input registers, the other is for output registers.
+        And the input clock tree need to be balanced with output clock tree.(check
+        the Note)'
+      requirements:
+        value: N/A
+        pattern_items: []
+      input_files: []
+      waivers:
+        value: N/A
+        waive_items: []
+      _status: placeholder
+      _note: This is a placeholder. Replace with actual checker configuration when
+        implemented.
+    MIG-IMP-8-1-1-22:
+      description: 'TODO: Confirm place the cdn_hs_phy/inst_scan_dly module close
+        to PHY interface pins and create separate clock tree to these retime scan
+        registers if your design is based on HSPHY 2022Q1 or later branch and need
+        to support ETM timing signoff. Objective is to make the scan related interface
+        data/clock paths simpler and reduce the slack difference between flatten and
+        ETM model. For DFPHY,current design has not sperated inst_scan_dly module,
+        so please place the seperate “*scan_dly*” registers that belong to a in2reg/reg2out
+        path close to PHY ports similarly. (Fill N/A if design has not this module)'
+      requirements:
+        value: N/A
+        pattern_items: []
+      input_files: []
+      waivers:
+        value: N/A
+        waive_items: []
+      _status: placeholder
+      _note: This is a placeholder. Replace with actual checker configuration when
+        implemented.
+    MIG-IMP-8-1-1-23:
+      description: 'TODO: Confirm add at least 2 ESD clamps cells for each power domain.
+        For example: VDDPLL*/VDD_AO. Follow the guidance in AMS integration guide
+        specified in Notes. (for Intel process, need more clamps, please double check
+        with ESD experts)'
+      requirements:
+        value: N/A
+        pattern_items: []
+      input_files: []
+      waivers:
+        value: N/A
+        waive_items: []
+      _status: placeholder
+      _note: This is a placeholder. Replace with actual checker configuration when
+        implemented.
+    MIG-IMP-8-1-1-24:
+      description: 'TODO: Confirm Deskew/FRAC PLL(All power domains) Dcap meet the
+        system requirement. (e.g: 100pf per deskew/fracN pll each power domain for
+        6400Mbps, Please check the Notes for decap number for each PLL power domain
+        based on data rate). Follow the guidance in AMS integration guide specified
+        in Notes.'
+      requirements:
+        value: N/A
+        pattern_items: []
+      input_files: []
+      waivers:
+        value: N/A
+        waive_items: []
+      _status: placeholder
+      _note: This is a placeholder. Replace with actual checker configuration when
+        implemented.
+    MIG-IMP-8-1-1-25:
+      description: 'TODO: Confirm follow the datasheet and implementation guide of
+        IP blocks(DDRIO/PLL/Noisegen/GPIO etc). (check the Note)'
+      requirements:
+        value: N/A
+        pattern_items: []
+      input_files: []
+      waivers:
+        value: N/A
+        waive_items: []
+      _status: placeholder
+      _note: This is a placeholder. Replace with actual checker configuration when
+        implemented.
+    MIG-IMP-8-1-1-26:
+      description: 'TODO: Confirm assigned VDD_AO bump or create VDD_AO dedicated
+        power supply from SOC side to VDD_AO pin of internal data_retention pad depends
+        on the communication with customer side if "Does customer intend to shutoff
+        VDD externally" is yes in pre2post checklist and "power gating" is no in addendum.
+        (check the Note) Pay attention to assign dedicated ESD cells to VDD_AO supply
+        to make sure there is no ESD issue if VDD_AO bump is assigned. Make sure the
+        data_retention signal path from SOC side is always on ( not powered by PHY
+        VDD as that can be shut off externally) Make sure the related_power_pin of
+        data_retention signal in lib files should be VDD_AO.'
+      requirements:
+        value: N/A
+        pattern_items: []
+      input_files: []
+      waivers:
+        value: N/A
+        waive_items: []
+      _status: placeholder
+      _note: This is a placeholder. Replace with actual checker configuration when
+        implemented.
+    MIG-IMP-8-1-1-27:
+      description: 'TODO: Confirm meet the decap requirement in die model checklist.
+        (Check the Notes)'
+      requirements:
+        value: N/A
+        pattern_items: []
+      input_files: []
+      waivers:
+        value: N/A
+        waive_items: []
+      _status: placeholder
+      _note: This is a placeholder. Replace with actual checker configuration when
+        implemented.
+    MIG-IMP-8-1-1-28:
+      description: 'TODO: Confirm the scan pins are assigned to be interleaved for
+        PHY_TOP delivery. (check the Note)'
+      requirements:
+        value: N/A
+        pattern_items: []
+      input_files: []
+      waivers:
+        value: N/A
+        waive_items: []
+      _status: placeholder
+      _note: This is a placeholder. Replace with actual checker configuration when
+        implemented.
+    MIG-IMP-8-1-1-29:
+      description: 'TODO: For test chip, pay attention to the digital process moniter
+        implementation guide. (Check the guide in Notes)'
+      requirements:
+        value: N/A
+        pattern_items: []
+      input_files: []
+      waivers:
+        value: N/A
+        waive_items: []
+      _status: placeholder
+      _note: This is a placeholder. Replace with actual checker configuration when
+        implemented.
+    MIG-IMP-8-1-1-30:
+      description: 'TODO: Confrim add VDDQ/VDD decaps for DDRIO in test chip tv_chip
+        level(Follow same decap insertion guidance in PHY implementation guide).'
+      requirements:
+        value: N/A
+        pattern_items: []
+      input_files: []
+      waivers:
+        value: N/A
+        waive_items: []
+      _status: placeholder
+      _note: This is a placeholder. Replace with actual checker configuration when
+        implemented.
+    MIG-IMP-8-1-1-31:
+      description: 'TODO: Confirm data retention IO VDD_AO pin must be connected to
+        always-on VDD (mark N/A only when data_retention pad doesn''t exist)”'
+      requirements:
+        value: N/A
+        pattern_items: []
+      input_files: []
+      waivers:
+        value: N/A
+        waive_items: []
+      _status: placeholder
+      _note: This is a placeholder. Replace with actual checker configuration when
+        implemented.
+    MIG-IMP-8-1-1-32:
+      description: 'TODO: Confirm I/O voltage signal "DR_VALUE_HV/DR_EN_HV/VDDGONE*_HV/TIE*_HV/ATB*_HV"
+        does not connect to VDD voltage device.'
+      requirements:
+        value: N/A
+        pattern_items: []
+      input_files: []
+      waivers:
+        value: N/A
+        waive_items: []
+      _status: placeholder
+      _note: This is a placeholder. Replace with actual checker configuration when
+        implemented.
+    MIG-IMP-8-1-2-00:
+      description: 'TODO: [BRCM special] Confirm use pin blockage def for pin assignment
+        for BRCM projects (for non-BRCM projects, please fill N/A) The pin def information
+        is in /projects/workbench/versions/BRCM/pin_blockage_def/BRCM_Pin_Placement_DEF_release_notes.pdf'
+      requirements:
+        value: N/A
+        pattern_items: []
+      input_files: []
+      waivers:
+        value: N/A
+        waive_items: []
+      _status: placeholder
+      _note: This is a placeholder. Replace with actual checker configuration when
+        implemented.
+    MIG-IMP-8-1-2-01:
+      description: 'TODO: [BRCM special] Confirm the BRCM don’t_use cell list is correct.
+        Pay attention that the BRCM don’t use list is keeping change. Please check
+        whether you follow the latest one.(The BRCM don’t use file in workbench is
+        based on old program and you need to overwrite or update that per project.)
+        Latest BRCM dont_use cell list can be found in below path: N7: /process/tsmcN7/data/stdcell/tsmc/n7gp/BRCM/MISC_n7gp/docs/dont_use.info.latest
+        N5: /process/tsmcN5/data/stdcell/n5/BRCM/MISC_BRCM_n5/docs/dont_use.info.latest'
+      requirements:
+        value: N/A
+        pattern_items: []
+      input_files: []
+      waivers:
+        value: N/A
+        waive_items: []
+      _status: placeholder
+      _note: This is a placeholder. Replace with actual checker configuration when
+        implemented.
+    MIG-IMP-8-1-2-02:
+      description: 'TODO: [BRCM special] Confirm no issue for the BRCM speical ARC
+        rule check related to AP PAD enclosure (double check the setting in Note).
+        Also check with PM about the latest rule deck version. Below paths are just
+        for your reference. /process/tsmcN5/data/g_brcm/CALIBRE/DRC/23Mar2023/3stars_DRC_BRCM_5nm_AP_PAD_ENCLOSURE/sourceme
+        /process/tsmcN7/data/gp/CALIBRE/DRC/28Mar2023/3stars_DRC_BRCM_7nm_AP_PAD_ENCLOSURE/sourceme'
+      requirements:
+        value: N/A
+        pattern_items: []
+      input_files: []
+      waivers:
+        value: N/A
+        waive_items: []
+      _status: placeholder
+      _note: This is a placeholder. Replace with actual checker configuration when
+        implemented.
+    MIG-IMP-8-1-3-00:
+      description: 'TODO: [MIG-WB-Tracking] Confirm the workbench flow you are using.
+        (Current latest one: /projects/workbench/versions/workbench_v0.8) Put the
+        workbench flow dir in Comment and specify the reason why you don’t use the
+        central workbench flow. The reason maybe as belows, -This process is new and
+        not covered by the central workbench flow. -ECO based on old programs.'
+      requirements:
+        value: N/A
+        pattern_items: []
+      input_files: []
+      waivers:
+        value: N/A
+        waive_items: []
+      _status: placeholder
+      _note: This is a placeholder. Replace with actual checker configuration when
+        implemented.
+    MIG-IMP-8-1-3-01:
+      description: 'TODO: [MIG-WB-Tracking] Confirm compared the difference between
+        the workbench you used and the central workbench flow. You can use "diff -r
+        $your_workbench_dir /projects/workbench/versions/workbench_v0.8 > workbench_difference"
+        Please put the below message in Comment collumn, -put the workbench_difference
+        file location -Reason for the difference if has the difference -Suggestion
+        for central workbench flow'
+      requirements:
+        value: N/A
+        pattern_items: []
+      input_files: []
+      waivers:
+        value: N/A
+        waive_items: []
+      _status: placeholder
+      _note: This is a placeholder. Replace with actual checker configuration when
+        implemented.
+  8.2_PHYSICAL_IMPLEMENTATION_CHECK:
+    HPP-IMP-8-2-0-00:
+      description: 'TODO: Confirm floorplan has been peer reviewed and agreed?'
+      requirements:
+        value: N/A
+        pattern_items: []
+      input_files: []
+      waivers:
+        value: N/A
+        waive_items: []
+      _status: placeholder
+      _note: This is a placeholder. Replace with actual checker configuration when
+        implemented.
+    HPP-IMP-8-2-0-01:
+      description: 'TODO: Confirm area and density targets were met?'
+      requirements:
+        value: N/A
+        pattern_items: []
+      input_files: []
+      waivers:
+        value: N/A
+        waive_items: []
+      _status: placeholder
+      _note: This is a placeholder. Replace with actual checker configuration when
+        implemented.
+    HPP-IMP-8-2-0-02:
+      description: 'TODO: Confirm power goals are met in all modes (Functional & DFT)
+        and corners using an activity file representative of each mode generated by
+        Gate Level Simulation (GLS) on post PNR netlist?'
+      requirements:
+        value: N/A
+        pattern_items: []
+      input_files: []
+      waivers:
+        value: N/A
+        waive_items: []
+      _status: placeholder
+      _note: This is a placeholder. Replace with actual checker configuration when
+        implemented.
+    HPP-IMP-8-2-0-03:
+      description: 'TODO: Were approved buffer and delay cells used for hold fixing?
+        Provide buffer list used for hold fixing in comments field.'
+      requirements:
+        value: N/A
+        pattern_items: []
+      input_files: []
+      waivers:
+        value: N/A
+        waive_items: []
+      _status: placeholder
+      _note: This is a placeholder. Replace with actual checker configuration when
+        implemented.
+    HPP-IMP-8-2-0-04:
+      description: 'TODO: Confirm spare cells or GA fill cells were added and placed
+        evenly across the layout?'
+      requirements:
+        value: N/A
+        pattern_items: []
+      input_files: []
+      waivers:
+        value: N/A
+        waive_items: []
+      _status: placeholder
+      _note: This is a placeholder. Replace with actual checker configuration when
+        implemented.
+  8.3_PHYSICAL_IMPLEMENTATION_CHECK:
+    SRG-IMP-8-3-0-00:
+      description: 'TODO: If shielding is required, is it done as per the customer/IP
+        document inputs?'
+      requirements:
+        value: N/A
+        pattern_items: []
+      input_files: []
+      waivers:
+        value: N/A
+        waive_items: []
+      _status: placeholder
+      _note: This is a placeholder. Replace with actual checker configuration when
+        implemented.
+    SRG-IMP-8-3-0-01:
+      description: 'TODO: Is the base XOR is clean?'
+      requirements:
+        value: N/A
+        pattern_items: []
+      input_files: []
+      waivers:
+        value: N/A
+        waive_items: []
+      _status: placeholder
+      _note: This is a placeholder. Replace with actual checker configuration when
+        implemented.
+  9.0_RC_EXTRACTION_CHECK:
+    IMP-9-0-0-00:
+      description: 'TODO: Confirm SPEF extaction includes dummy metal gds.'
+      requirements:
+        value: N/A
+        pattern_items: []
+      input_files: []
+      waivers:
+        value: N/A
+        waive_items: []
+      _status: placeholder
+      _note: This is a placeholder. Replace with actual checker configuration when
+        implemented.
+    IMP-9-0-0-01:
+      description: 'TODO: Confirm QRC layer mapping and qrcTechFiles used are correct.'
+      requirements:
+        value: N/A
+        pattern_items: []
+      input_files: []
+      waivers:
+        value: N/A
+        waive_items: []
+      _status: placeholder
+      _note: This is a placeholder. Replace with actual checker configuration when
+        implemented.
+    IMP-9-0-0-02:
+      description: 'TODO: Confirm SPEF extraction includes NDR rule lef file.'
+      requirements:
+        value: N/A
+        pattern_items: []
+      input_files: []
+      waivers:
+        value: N/A
+        waive_items: []
+      _status: placeholder
+      _note: This is a placeholder. Replace with actual checker configuration when
+        implemented.
+    IMP-9-0-0-03:
+      description: 'TODO: Confirm no ERROR message in the QRC log files.'
+      requirements:
+        value: N/A
+        pattern_items: []
+      input_files: []
+      waivers:
+        value: N/A
+        waive_items: []
+      _status: placeholder
+      _note: This is a placeholder. Replace with actual checker configuration when
+        implemented.
+    IMP-9-0-0-04:
+      description: 'TODO: Confirm no physically open nets in QRC imcomplete net report.'
+      requirements:
+        value: N/A
+        pattern_items: []
+      input_files: []
+      waivers:
+        value: N/A
+        waive_items: []
+      _status: placeholder
+      _note: This is a placeholder. Replace with actual checker configuration when
+        implemented.
+    IMP-9-0-0-05:
+      description: 'TODO: Confirm proper Quantus version is used for RC extraction(match
+        to or mature than Foundry recommended Quantus version)'
+      requirements:
+        value: N/A
+        pattern_items: []
+      input_files: []
+      waivers:
+        value: N/A
+        waive_items: []
+      _status: placeholder
+      _note: This is a placeholder. Replace with actual checker configuration when
+        implemented.
+    IMP-9-0-0-06:
+      description: 'TODO: Confirm the reuse block spef generation QRC version is same
+        as your top level QRC version. If there is qrcTech file version update with
+        new tool version after slices were built and released, block level spef may
+        need to be regenerated. You can get the slice QRC version in BE checklist
+        or RELEASE_NOTES.'
+      requirements:
+        value: N/A
+        pattern_items: []
+      input_files: []
+      waivers:
+        value: N/A
+        waive_items: []
+      _status: placeholder
+      _note: This is a placeholder. Replace with actual checker configuration when
+        implemented.
+    IMP-9-0-0-07:
+      description: 'TODO: Confirm all Warning message in QRC log files can be waived.'
+      requirements:
+        value: N/A
+        pattern_items: []
+      input_files: []
+      waivers:
+        value: N/A
+        waive_items: []
+      _status: placeholder
+      _note: This is a placeholder. Replace with actual checker configuration when
+        implemented.
+  10.0_STA_DCD_CHECK:
+    IMP-10-0-0-00:
+      description: Confirm the netlist/spef version is correct.
+      requirements:
+        value: 1
+        pattern_items:
+        - Generated on:*2025*
+      input_files:
+      - C:\Users\yuyin\Desktop\CHECKLIST\IP_project_folder\logs\sta_post_syn.log
+      waivers:
+        value: 0
+        waive_items:
+        - Current stage is synthesis, SPEF check is not applicable.
+    IMP-10-0-0-01:
+      description: 'TODO: Confirm there is no unresolved reference.'
+      requirements:
+        value: N/A
+        pattern_items: []
+      input_files: []
+      waivers:
+        value: N/A
+        waive_items: []
+      _status: placeholder
+      _note: This is a placeholder. Replace with actual checker configuration when
+        implemented.
+    IMP-10-0-0-02:
+      description: Confirm the clock uncertainty setting is correct.
+      requirements:
+        value: N/A
+        pattern_items: []
+      input_files:
+      - C:\Users\yuyin\Desktop\CHECKLIST\IP_project_folder\reports\constr.rpt
+      waivers:
+        value: 2
+        waive_items:
+        - name: set_clock_uncertainty 0.01 -hold -from [get_clocks {PHASE_ALIGN_CLOCK}]
+            -to [get_clocks {PHASE_ALIGN_CLOCK}]
+          reason: Pre-implementation phase - approved by architect (Ticket#CLK-2025-001)
+        - name: set_clock_uncertainty 0.02 -hold -from [get_clocks {PHASE_ALIGN_CLOCK}]
+            -to [get_clocks {PHASE_ALIGN_CLOCK}]
+          reason: Extra hold timing waived for initial implementation
+    IMP-10-0-0-03:
+      description: 'TODO: Confirm the units in library match the units in the SDC.'
+      requirements:
+        value: N/A
+        pattern_items: []
+      input_files: []
+      waivers:
+        value: N/A
+        waive_items: []
+      _status: placeholder
+      _note: This is a placeholder. Replace with actual checker configuration when
+        implemented.
+    IMP-10-0-0-04:
+      description: Confirm the SDC has no ideal clock networks.
+      requirements:
+        value: 1
+        pattern_items:
+        - IO_ASYNC_CLOCK
+      input_files:
+      - C:\Users\yuyin\Desktop\CHECKLIST\IP_project_folder\reports\uncons_clocks.rpt.gz
+      waivers:
+        value: 1
+        waive_items:
+        - name: UNUSED_WAIVER_CLOCK
+          reason: This waiver should trigger WARN01
+    IMP-10-0-0-05:
+      description: Confirm all clocks propegated during STA.
+      requirements:
+        value: N/A
+        pattern_items: []
+      input_files:
+      - C:\Users\yuyin\Desktop\CHECKLIST\IP_project_folder\reports\clocks.rpt.gz
+      waivers:
+        value: 1
+        waive_items:
+        - IO_ASYNC_CLOCK
+    IMP-10-0-0-06:
+      description: Confirm the SI setting is correct.
+      requirements:
+        value: N/A
+        pattern_items: []
+      input_files:
+      - C:\Users\yuyin\Desktop\CHECKLIST\IP_project_folder\logs\sta_post_syn.log
+      waivers:
+        value: 2
+        waive_items:
+        - SI configuration note 1
+        - SI configuration note 2
+    IMP-10-0-0-07:
+      description: Confirm the OCV setting is correct (matches to latest foundary
+        recommendation or addendum).
+      requirements:
+        value: N/A
+        pattern_items: []
+      input_files:
+      - C:\Users\yuyin\Desktop\CHECKLIST\IP_project_folder\logs\sta_post_syn.log
+      waivers:
+        value: 2
+        waive_items:
+        - Some waived item
+        - Another waived item
+    IMP-10-0-0-08:
+      description: Confirm set the correct clock transition and data transition.
+      requirements:
+        value: N/A
+        pattern_items: []
+      input_files:
+      - C:\Users\yuyin\Desktop\CHECKLIST\IP_project_folder\reports\constr.rpt
+      waivers:
+        value: 1
+        waive_items:
+        - IO_ASYNC_CLOCK
+    IMP-10-0-0-09:
+      description: Confirm no SPEF annotation issue in STA.
+      requirements:
+        value: 2
+        pattern_items:
+        - func_rcss_0p675v_m40c_pcss_cmax_pcss3_setup
+        - func_rcss_0p675v_125c_pcss_cmax_pcff3_setup
+      input_files:
+      - C:\Users\yuyin\Desktop\CHECKLIST\IP_project_folder\logs\sta_post_route.log
+      - C:\Users\yuyin\Desktop\CHECKLIST\IP_project_folder\logs\func_rcss_0p675v_125c_pcss_cmax_pcff3_setup_sta_post_route.log
+      waivers:
+        value: 0
+        waive_items:
+        - I have confirmed that the SPEF annotation issue is acceptable for this implementation
+          phase.
+    IMP-10-0-0-10:
+      description: Confirm check full path group timing reports (in2out/in2reg/reg2out/reg2reg/default/cgdefault).
+      requirements:
+        value: N/A
+        pattern_items: []
+      input_files:
+      - C:\Users\yuyin\Desktop\CHECKLIST\IP_project_folder\logs\sta_post_syn.log
+      waivers:
+        value: 2
+        waive_items:
+        - name: cgdefault
+          reason: Design has no clock gating cells - cgdefault not applicable
+        - name: default
+          reason: Default path group not used in this design
+    IMP-10-0-0-11:
+      description: 'TODO: Confirm the timing of all path groups is clean.'
+      requirements:
+        value: N/A
+        pattern_items: []
+      input_files: []
+      waivers:
+        value: N/A
+        waive_items: []
+      _status: placeholder
+      _note: This is a placeholder. Replace with actual checker configuration when
+        implemented.
+    IMP-10-0-0-12:
+      description: 'TODO: Confirm the max_transition check result is clean.'
+      requirements:
+        value: N/A
+        pattern_items: []
+      input_files: []
+      waivers:
+        value: N/A
+        waive_items: []
+      _status: placeholder
+      _note: This is a placeholder. Replace with actual checker configuration when
+        implemented.
+    IMP-10-0-0-13:
+      description: 'TODO: Confirm the max_capacitance check result is clean.'
+      requirements:
+        value: N/A
+        pattern_items: []
+      input_files: []
+      waivers:
+        value: N/A
+        waive_items: []
+      _status: placeholder
+      _note: This is a placeholder. Replace with actual checker configuration when
+        implemented.
+    IMP-10-0-0-14:
+      description: 'TODO: Confirm the noise/glitch check result is clean.'
+      requirements:
+        value: N/A
+        pattern_items: []
+      input_files: []
+      waivers:
+        value: N/A
+        waive_items: []
+      _status: placeholder
+      _note: This is a placeholder. Replace with actual checker configuration when
+        implemented.
+    IMP-10-0-0-15:
+      description: 'TODO: Confirm the double_clock check result is clean.'
+      requirements:
+        value: N/A
+        pattern_items: []
+      input_files: []
+      waivers:
+        value: N/A
+        waive_items: []
+      _status: placeholder
+      _note: This is a placeholder. Replace with actual checker configuration when
+        implemented.
+    IMP-10-0-0-16:
+      description: 'TODO: Confirm clock signal full swing result is clean if foundry
+        timing signoff criteria has full swing requirement.'
+      requirements:
+        value: N/A
+        pattern_items: []
+      input_files: []
+      waivers:
+        value: N/A
+        waive_items: []
+      _status: placeholder
+      _note: This is a placeholder. Replace with actual checker configuration when
+        implemented.
+    IMP-10-0-0-17:
+      description: 'TODO: Confirm the min-pulse check result is clean.'
+      requirements:
+        value: N/A
+        pattern_items: []
+      input_files: []
+      waivers:
+        value: N/A
+        waive_items: []
+      _status: placeholder
+      _note: This is a placeholder. Replace with actual checker configuration when
+        implemented.
+    IMP-10-0-0-18:
+      description: 'TODO: Confirm the min_period check result is clean if library
+        has min_period check.'
+      requirements:
+        value: N/A
+        pattern_items: []
+      input_files: []
+      waivers:
+        value: N/A
+        waive_items: []
+      _status: placeholder
+      _note: This is a placeholder. Replace with actual checker configuration when
+        implemented.
+    IMP-10-0-0-19:
+      description: 'TODO: Confirm meet IP special DELAY/SKEW requirement if it have.'
+      requirements:
+        value: N/A
+        pattern_items: []
+      input_files: []
+      waivers:
+        value: N/A
+        waive_items: []
+      _status: placeholder
+      _note: This is a placeholder. Replace with actual checker configuration when
+        implemented.
+    IMP-10-0-0-20:
+      description: 'TODO: Confirm no ERROR message in the STA log files or the ERROR
+        messages can be waived.'
+      requirements:
+        value: N/A
+        pattern_items: []
+      input_files: []
+      waivers:
+        value: N/A
+        waive_items: []
+      _status: placeholder
+      _note: This is a placeholder. Replace with actual checker configuration when
+        implemented.
+    IMP-10-0-0-21:
+      description: 'TODO: Confirm all Warning message in the STA log files can be
+        waived.'
+      requirements:
+        value: N/A
+        pattern_items: []
+      input_files: []
+      waivers:
+        value: N/A
+        waive_items: []
+      _status: placeholder
+      _note: This is a placeholder. Replace with actual checker configuration when
+        implemented.
+    IMP-10-0-0-22:
+      description: 'TODO: Confirm timing/skew/drv/mpw/noise/ect results and log files
+        are checked based on all signoff modes and all signoff corners.'
+      requirements:
+        value: N/A
+        pattern_items: []
+      input_files: []
+      waivers:
+        value: N/A
+        waive_items: []
+      _status: placeholder
+      _note: This is a placeholder. Replace with actual checker configuration when
+        implemented.
+    IMP-10-0-0-23:
+      description: 'TODO: Confirm the DCD check is clean if the design request DCD
+        check on some special circuits.'
+      requirements:
+        value: N/A
+        pattern_items: []
+      input_files: []
+      waivers:
+        value: N/A
+        waive_items: []
+      _status: placeholder
+      _note: This is a placeholder. Replace with actual checker configuration when
+        implemented.
+    IMP-10-0-0-24:
+      description: 'TODO: Any special timing requirement from the specifications that
+        cannot be covered by SDC constraints are reported and reviewed? For example:
+        DDR DQ/DQS skew check'
+      requirements:
+        value: N/A
+        pattern_items: []
+      input_files: []
+      waivers:
+        value: N/A
+        waive_items: []
+      _status: placeholder
+      _note: This is a placeholder. Replace with actual checker configuration when
+        implemented.
+    IMP-10-0-0-25:
+      description: 'TODO: Confirm check_timing report has no issue.'
+      requirements:
+        value: N/A
+        pattern_items: []
+      input_files: []
+      waivers:
+        value: N/A
+        waive_items: []
+      _status: placeholder
+      _note: This is a placeholder. Replace with actual checker configuration when
+        implemented.
+    IMP-10-0-0-26:
+      description: 'TODO: Confirm check_design report has no issue.'
+      requirements:
+        value: N/A
+        pattern_items: []
+      input_files: []
+      waivers:
+        value: N/A
+        waive_items: []
+      _status: placeholder
+      _note: This is a placeholder. Replace with actual checker configuration when
+        implemented.
+    IMP-10-0-0-27:
+      description: 'TODO: Confirm final timing review was held and all open items
+        closed (capture the review and waiver in JIRA ticket).'
+      requirements:
+        value: N/A
+        pattern_items: []
+      input_files: []
+      waivers:
+        value: N/A
+        waive_items: []
+      _status: placeholder
+      _note: This is a placeholder. Replace with actual checker configuration when
+        implemented.
+  10.1_STA_DCD_CHECK:
+    MIG-IMP-10-1-0-00:
+      description: 'TODO: Confirm the the cel list specified in library_setup/set_instance_voltage.tcl
+        in STA environment matches to the real physical implemention for projects
+        with regulator. Please do local update for VDDR domain cell list in the file
+        when needed.'
+      requirements:
+        value: N/A
+        pattern_items: []
+      input_files: []
+      waivers:
+        value: N/A
+        waive_items: []
+      _status: placeholder
+      _note: This is a placeholder. Replace with actual checker configuration when
+        implemented.
+    MIG-IMP-10-1-0-01:
+      description: 'TODO: Confirm there are no unintentional cells in VDDR domain
+        and all cells in VDDR domain are updated to latest STA environment.'
+      requirements:
+        value: N/A
+        pattern_items: []
+      input_files: []
+      waivers:
+        value: N/A
+        waive_items: []
+      _status: placeholder
+      _note: This is a placeholder. Replace with actual checker configuration when
+        implemented.
+    MIG-IMP-10-1-0-02:
+      description: 'TODO: Confirm have provided DCD analysis team the DCD path to
+        set DCD analysis environment in stable stage and provide final DCD paths 2
+        weeks before final delivery.'
+      requirements:
+        value: N/A
+        pattern_items: []
+      input_files: []
+      waivers:
+        value: N/A
+        waive_items: []
+      _status: placeholder
+      _note: This is a placeholder. Replace with actual checker configuration when
+        implemented.
+    MIG-IMP-10-1-0-03:
+      description: 'TODO: Confirm the library version is correct. STA signoff environment
+        may not use the correct library paths. Please do local update when needed.'
+      requirements:
+        value: N/A
+        pattern_items: []
+      input_files: []
+      waivers:
+        value: N/A
+        waive_items: []
+      _status: placeholder
+      _note: This is a placeholder. Replace with actual checker configuration when
+        implemented.
+    MIG-IMP-10-1-0-04:
+      description: 'TODO: Confirm have provided verification team post-simulation
+        related files to set post-sim environment. (TT corner,Timing violations within
+        uncertainty, skew no impact post-sim) in stable stage and close to final version
+        (SS/TT/FF corners,Timing violations within uncertainty, skew violations less
+        than 10ps) post-simulation related files 2 weeks for slices (4 weeks for phy_top)
+        before final delivery.'
+      requirements:
+        value: N/A
+        pattern_items: []
+      input_files: []
+      waivers:
+        value: N/A
+        waive_items: []
+      _status: placeholder
+      _note: This is a placeholder. Replace with actual checker configuration when
+        implemented.
+    MIG-IMP-10-1-1-00:
+      description: 'TODO: [DCD check] Confirm the spice used for DCD run is lpe based
+        spice netlist with RC information. Otherwise the DCD results are not accurate.
+        (Check the Notes)'
+      requirements:
+        value: N/A
+        pattern_items: []
+      input_files: []
+      waivers:
+        value: N/A
+        waive_items: []
+      _status: placeholder
+      _note: This is a placeholder. Replace with actual checker configuration when
+        implemented.
+    MIG-IMP-10-1-1-01:
+      description: 'TODO: [DCD check] Confirm with Balbeer the DCD flow and results
+        are valid.'
+      requirements:
+        value: N/A
+        pattern_items: []
+      input_files: []
+      waivers:
+        value: N/A
+        waive_items: []
+      _status: placeholder
+      _note: This is a placeholder. Replace with actual checker configuration when
+        implemented.
+    MIG-IMP-10-1-1-02:
+      description: 'TODO: [DCD check] Confirm with Kato-san if DCD results is not
+        meet the target.'
+      requirements:
+        value: N/A
+        pattern_items: []
+      input_files: []
+      waivers:
+        value: N/A
+        waive_items: []
+      _status: placeholder
+      _note: This is a placeholder. Replace with actual checker configuration when
+        implemented.
+    MIG-IMP-10-1-2-00:
+      description: 'TODO: [ETMQA check] Confirm this program will support ETM based
+        timing signoff on customer side. (Fill N/A if it doesn''t support ETM based
+        timing signoff on customer side, check with design team or PM about the details)'
+      requirements:
+        value: N/A
+        pattern_items: []
+      input_files: []
+      waivers:
+        value: N/A
+        waive_items: []
+      _status: placeholder
+      _note: This is a placeholder. Replace with actual checker configuration when
+        implemented.
+    MIG-IMP-10-1-2-01:
+      description: 'TODO: [ETMQA check] Confirm there is no issue for ETMQA flow.
+        You can refer to /projects/workbench/versions/workbench_v0.8/workbench/kits/wrapper/etmQA_review_guide
+        about how to check the results. Please contact ipg_mig_arch_pd if you run
+        into any issue for the flow. （Fill N/A if customer will not run ETM based
+        STA)'
+      requirements:
+        value: N/A
+        pattern_items: []
+      input_files: []
+      waivers:
+        value: N/A
+        waive_items: []
+      _status: placeholder
+      _note: This is a placeholder. Replace with actual checker configuration when
+        implemented.
+    MIG-IMP-10-1-2-02:
+      description: 'TODO: [ETMQA check] Please provide the ETMQA run dir in comment.
+        （Fill N/A if customer will not run ETM based STA)'
+      requirements:
+        value: N/A
+        pattern_items: []
+      input_files: []
+      waivers:
+        value: N/A
+        waive_items: []
+      _status: placeholder
+      _note: This is a placeholder. Replace with actual checker configuration when
+        implemented.
+  10.2_STA_DCD_CHECK:
+    HBM-IMP-10-2-0-00:
+      description: 'TODO: Conditions used to verify max clock frequency (e.g. wireload
+        model, etc.). SPEF + 5% of clock period as setup uncertainty'
+      requirements:
+        value: N/A
+        pattern_items: []
+      input_files: []
+      waivers:
+        value: N/A
+        waive_items: []
+      _status: placeholder
+      _note: This is a placeholder. Replace with actual checker configuration when
+        implemented.
+    HBM-IMP-10-2-0-01:
+      description: 'TODO: Setup uncertainty, OCV Parameters. Static IR 15mV based
+        deltaV + 10C deltaT'
+      requirements:
+        value: N/A
+        pattern_items: []
+      input_files: []
+      waivers:
+        value: N/A
+        waive_items: []
+      _status: placeholder
+      _note: This is a placeholder. Replace with actual checker configuration when
+        implemented.
+    HBM-IMP-10-2-0-02:
+      description: 'TODO: Hold uncertainty, OCV parameters Static IR 15mV based deltaV
+        + 10C deltaT'
+      requirements:
+        value: N/A
+        pattern_items: []
+      input_files: []
+      waivers:
+        value: N/A
+        waive_items: []
+      _status: placeholder
+      _note: This is a placeholder. Replace with actual checker configuration when
+        implemented.
+    HBM-IMP-10-2-0-03:
+      description: 'TODO: Were appropriate lifetime deratings defined for use in STA/HSTA
+        analysis? (frequency or uncertainty deratings) describe in Comments section'
+      requirements:
+        value: N/A
+        pattern_items: []
+      input_files: []
+      waivers:
+        value: N/A
+        waive_items: []
+      _status: placeholder
+      _note: This is a placeholder. Replace with actual checker configuration when
+        implemented.
+  10.3_STA_DCD_CHECK:
+    SRG-IMP-10-3-0-00:
+      description: 'TODO: There should not be any clock cells in the data path'
+      requirements:
+        value: N/A
+        pattern_items: []
+      input_files: []
+      waivers:
+        value: N/A
+        waive_items: []
+      _status: placeholder
+      _note: This is a placeholder. Replace with actual checker configuration when
+        implemented.
+    SRG-IMP-10-3-0-01:
+      description: 'TODO: All the clock definitions should be defined on the clock
+        sources only'
+      requirements:
+        value: N/A
+        pattern_items: []
+      input_files: []
+      waivers:
+        value: N/A
+        waive_items: []
+      _status: placeholder
+      _note: This is a placeholder. Replace with actual checker configuration when
+        implemented.
+  11.0_POWER_EMIR_CHECK:
+    IMP-11-0-0-00:
+      description: 'TODO: Confirm input database(netlist/def/lef/spef/lib/pgv/etc)
+        are loaded correctly.'
+      requirements:
+        value: N/A
+        pattern_items: []
+      input_files: []
+      waivers:
+        value: N/A
+        waive_items: []
+      _status: placeholder
+      _note: This is a placeholder. Replace with actual checker configuration when
+        implemented.
+    IMP-11-0-0-01:
+      description: 'TODO: Confirm the design has no power open/short and all instances
+        are physically connected.'
+      requirements:
+        value: N/A
+        pattern_items: []
+      input_files: []
+      waivers:
+        value: N/A
+        waive_items: []
+      _status: placeholder
+      _note: This is a placeholder. Replace with actual checker configuration when
+        implemented.
+    IMP-11-0-0-02:
+      description: 'TODO: Confirm EMIR signoff criteria follows addendum or SOW, otherwise
+        follow internal spec (design rule with IP specific margin)'
+      requirements:
+        value: N/A
+        pattern_items: []
+      input_files: []
+      waivers:
+        value: N/A
+        waive_items: []
+      _status: placeholder
+      _note: This is a placeholder. Replace with actual checker configuration when
+        implemented.
+    IMP-11-0-0-03:
+      description: 'TODO: Confirm activity file was used? If not, provide default
+        switching activity values in comments field.'
+      requirements:
+        value: N/A
+        pattern_items: []
+      input_files: []
+      waivers:
+        value: N/A
+        waive_items: []
+      _status: placeholder
+      _note: This is a placeholder. Replace with actual checker configuration when
+        implemented.
+    IMP-11-0-0-04:
+      description: 'TODO: Confirm proper rc/PVT corners were used for IR drop and
+        EM analysis. List rc/PVT corners used in comments field.'
+      requirements:
+        value: N/A
+        pattern_items: []
+      input_files: []
+      waivers:
+        value: N/A
+        waive_items: []
+      _status: placeholder
+      _note: This is a placeholder. Replace with actual checker configuration when
+        implemented.
+    IMP-11-0-0-05:
+      description: 'TODO: Confirm generate all the power library with detail view
+        correctly.'
+      requirements:
+        value: N/A
+        pattern_items: []
+      input_files: []
+      waivers:
+        value: N/A
+        waive_items: []
+      _status: placeholder
+      _note: This is a placeholder. Replace with actual checker configuration when
+        implemented.
+    IMP-11-0-0-06:
+      description: 'TODO: Confirm use the proper spice model and spice netlist to
+        generate the PGV views.(check the Note)'
+      requirements:
+        value: N/A
+        pattern_items: []
+      input_files: []
+      waivers:
+        value: N/A
+        waive_items: []
+      _status: placeholder
+      _note: This is a placeholder. Replace with actual checker configuration when
+        implemented.
+    IMP-11-0-0-07:
+      description: 'TODO: Confirm all the PGV views are present in the EMIR scripts.'
+      requirements:
+        value: N/A
+        pattern_items: []
+      input_files: []
+      waivers:
+        value: N/A
+        waive_items: []
+      _status: placeholder
+      _note: This is a placeholder. Replace with actual checker configuration when
+        implemented.
+    IMP-11-0-0-08:
+      description: 'TODO: Confirm full PG connection information are included in def
+        to run PA.'
+      requirements:
+        value: N/A
+        pattern_items: []
+      input_files: []
+      waivers:
+        value: N/A
+        waive_items: []
+      _status: placeholder
+      _note: This is a placeholder. Replace with actual checker configuration when
+        implemented.
+    IMP-11-0-0-09:
+      description: 'TODO: Confirm Power pad locations correctly defined. Note: voltage
+        sources need to be defined on the input side (VDDG) of power switches to all
+        tool to calculate IR drop through power switch.'
+      requirements:
+        value: N/A
+        pattern_items: []
+      input_files: []
+      waivers:
+        value: N/A
+        waive_items: []
+      _status: placeholder
+      _note: This is a placeholder. Replace with actual checker configuration when
+        implemented.
+    IMP-11-0-0-10:
+      description: 'TODO: Confirm static power analysis results matches the requirement.'
+      requirements:
+        value: N/A
+        pattern_items: []
+      input_files: []
+      waivers:
+        value: N/A
+        waive_items: []
+      _status: placeholder
+      _note: This is a placeholder. Replace with actual checker configuration when
+        implemented.
+    IMP-11-0-0-11:
+      description: 'TODO: Confirm the power number can meet the power target in addendum
+        if addendum has the power spec.'
+      requirements:
+        value: N/A
+        pattern_items: []
+      input_files: []
+      waivers:
+        value: N/A
+        waive_items: []
+      _status: placeholder
+      _note: This is a placeholder. Replace with actual checker configuration when
+        implemented.
+    IMP-11-0-0-12:
+      description: 'TODO: Confirm the power number between EW and NS is similiar if
+        this program has both NS and EW orientations.(< 10% at least. fill N/A in
+        case only one orientation)'
+      requirements:
+        value: N/A
+        pattern_items: []
+      input_files: []
+      waivers:
+        value: N/A
+        waive_items: []
+      _status: placeholder
+      _note: This is a placeholder. Replace with actual checker configuration when
+        implemented.
+    IMP-11-0-0-13:
+      description: 'TODO: Confirm dynamic power results matches the requirement.'
+      requirements:
+        value: N/A
+        pattern_items: []
+      input_files: []
+      waivers:
+        value: N/A
+        waive_items: []
+      _status: placeholder
+      _note: This is a placeholder. Replace with actual checker configuration when
+        implemented.
+    IMP-11-0-0-14:
+      description: 'TODO: List default continous operation years in design rule. (eg:
+        10 years)'
+      requirements:
+        value: N/A
+        pattern_items: []
+      input_files: []
+      waivers:
+        value: N/A
+        waive_items: []
+      _status: placeholder
+      _note: This is a placeholder. Replace with actual checker configuration when
+        implemented.
+    IMP-11-0-0-15:
+      description: 'TODO: List default EM temperature in design rule. (eg. 105C/110C)'
+      requirements:
+        value: N/A
+        pattern_items: []
+      input_files: []
+      waivers:
+        value: N/A
+        waive_items: []
+      _status: placeholder
+      _note: This is a placeholder. Replace with actual checker configuration when
+        implemented.
+    IMP-11-0-0-16:
+      description: 'TODO: List continous operation years in your check.'
+      requirements:
+        value: N/A
+        pattern_items: []
+      input_files: []
+      waivers:
+        value: N/A
+        waive_items: []
+      _status: placeholder
+      _note: This is a placeholder. Replace with actual checker configuration when
+        implemented.
+    IMP-11-0-0-17:
+      description: 'TODO: List EM temperature in your check.'
+      requirements:
+        value: N/A
+        pattern_items: []
+      input_files: []
+      waivers:
+        value: N/A
+        waive_items: []
+      _status: placeholder
+      _note: This is a placeholder. Replace with actual checker configuration when
+        implemented.
+    IMP-11-0-0-18:
+      description: 'TODO: Confirm signalEM analysis results matches the requirement.'
+      requirements:
+        value: N/A
+        pattern_items: []
+      input_files: []
+      waivers:
+        value: N/A
+        waive_items: []
+      _status: placeholder
+      _note: This is a placeholder. Replace with actual checker configuration when
+        implemented.
+    IMP-11-0-0-19:
+      description: 'TODO: Confirm you are aware of and follow the customers'' requirement
+        about wake-up/rush-current if they have.(For non-PSO, please fill N/A)'
+      requirements:
+        value: N/A
+        pattern_items: []
+      input_files: []
+      waivers:
+        value: N/A
+        waive_items: []
+      _status: placeholder
+      _note: This is a placeholder. Replace with actual checker configuration when
+        implemented.
+    IMP-11-0-0-20:
+      description: 'TODO: Confirm wake-up time meet customer''s requirement. (For
+        non-PSO, please fill N/A)'
+      requirements:
+        value: N/A
+        pattern_items: []
+      input_files: []
+      waivers:
+        value: N/A
+        waive_items: []
+      _status: placeholder
+      _note: This is a placeholder. Replace with actual checker configuration when
+        implemented.
+    IMP-11-0-0-21:
+      description: 'TODO: Confirm rush-current meet the requirement. (For non-PSO,
+        please fill N/A)'
+      requirements:
+        value: N/A
+        pattern_items: []
+      input_files: []
+      waivers:
+        value: N/A
+        waive_items: []
+      _status: placeholder
+      _note: This is a placeholder. Replace with actual checker configuration when
+        implemented.
+    IMP-11-0-0-22:
+      description: 'TODO: Confirm no ERROR message in power analysis log files.'
+      requirements:
+        value: N/A
+        pattern_items: []
+      input_files: []
+      waivers:
+        value: N/A
+        waive_items: []
+      _status: placeholder
+      _note: This is a placeholder. Replace with actual checker configuration when
+        implemented.
+    IMP-11-0-0-23:
+      description: 'TODO: Confirm all Warning message in power analysis log files
+        can be waived.'
+      requirements:
+        value: N/A
+        pattern_items: []
+      input_files: []
+      waivers:
+        value: N/A
+        waive_items: []
+      _status: placeholder
+      _note: This is a placeholder. Replace with actual checker configuration when
+        implemented.
+    IMP-11-0-0-24:
+      description: 'TODO: Confirm the VT ratio calculation excludes physical cells(Filler/DCAP/Tap
+        etc).'
+      requirements:
+        value: N/A
+        pattern_items: []
+      input_files: []
+      waivers:
+        value: N/A
+        waive_items: []
+      _status: placeholder
+      _note: This is a placeholder. Replace with actual checker configuration when
+        implemented.
+    IMP-11-0-0-25:
+      description: 'TODO: Confirm use TSO to run power opt including leakage opt'
+      requirements:
+        value: N/A
+        pattern_items: []
+      input_files: []
+      waivers:
+        value: N/A
+        waive_items: []
+      _status: placeholder
+      _note: This is a placeholder. Replace with actual checker configuration when
+        implemented.
+    IMP-11-0-0-26:
+      description: 'TODO: List the VT ratio (without physical cells): EG: TSMCN7/N6:SVT(50%)/LVT(40%)/ULVT(10%)
+        TSMCN5/N4/N3/N2:SVT(50%)/LVTLL(20%)/LVT(20%)/ULVTLL(5%)/ULVT(5%)/ELVT(0%)
+        SEC:RVT(50%)/LVT(40%)/SLVT(10%) INTl_I3/18A:ad(HVT 30%)/ac(SVT 20%)/ab(LVT
+        30%)/aa(ULVT 20%)'
+      requirements:
+        value: N/A
+        pattern_items: []
+      input_files: []
+      waivers:
+        value: N/A
+        waive_items: []
+      _status: placeholder
+      _note: This is a placeholder. Replace with actual checker configuration when
+        implemented.
+    IMP-11-0-0-27:
+      description: 'TODO: Confirm adequate decaps were added to meet design requirements?'
+      requirements:
+        value: N/A
+        pattern_items: []
+      input_files: []
+      waivers:
+        value: N/A
+        waive_items: []
+      _status: placeholder
+      _note: This is a placeholder. Replace with actual checker configuration when
+        implemented.
+  11.1_POWER_EMIR_CHECK:
+    MIG-IMP-11-1-0-00:
+      description: 'TODO: Confirm enable the full delay line to check the PG weak
+        points related to delay line in EMIR analysis.'
+      requirements:
+        value: N/A
+        pattern_items: []
+      input_files: []
+      waivers:
+        value: N/A
+        waive_items: []
+      _status: placeholder
+      _note: This is a placeholder. Replace with actual checker configuration when
+        implemented.
+    MIG-IMP-11-1-0-01:
+      description: 'TODO: Confrim the MIMCAP PGV view is provided by AMS team for
+        die model correctness. (for non-MIMCAP case, please fill N/A)'
+      requirements:
+        value: N/A
+        pattern_items: []
+      input_files: []
+      waivers:
+        value: N/A
+        waive_items: []
+      _status: placeholder
+      _note: This is a placeholder. Replace with actual checker configuration when
+        implemented.
+    MIG-IMP-11-1-0-02:
+      description: 'TODO: Confirm run VDDR domain EMIR for projects with Regulator
+        and double confirm the VDDR domain total capacitance with AMS team. (For non
+        Regulator case,please fill N/A)'
+      requirements:
+        value: N/A
+        pattern_items: []
+      input_files: []
+      waivers:
+        value: N/A
+        waive_items: []
+      _status: placeholder
+      _note: This is a placeholder. Replace with actual checker configuration when
+        implemented.
+    MIG-IMP-11-1-1-00:
+      description: 'TODO: [VCD based Power Evaluation] Confirm all Warning message
+        in power evaluation log files can be waived.'
+      requirements:
+        value: N/A
+        pattern_items: []
+      input_files: []
+      waivers:
+        value: N/A
+        waive_items: []
+      _status: placeholder
+      _note: This is a placeholder. Replace with actual checker configuration when
+        implemented.
+    MIG-IMP-11-1-1-01:
+      description: 'TODO: [VCD-based Power Evaluation] Confirm no ERROR message in
+        power evaluation log files.'
+      requirements:
+        value: N/A
+        pattern_items: []
+      input_files: []
+      waivers:
+        value: N/A
+        waive_items: []
+      _status: placeholder
+      _note: This is a placeholder. Replace with actual checker configuration when
+        implemented.
+    MIG-IMP-11-1-1-02:
+      description: 'TODO: [VCD-based Power Evaluation] Confirm final power evaluation
+        checklist (DDR_PHY_IP_Performance_Analysis_Template_V1p2) and reports have
+        been reviewed by Reviewer.'
+      requirements:
+        value: N/A
+        pattern_items: []
+      input_files: []
+      waivers:
+        value: N/A
+        waive_items: []
+      _status: placeholder
+      _note: This is a placeholder. Replace with actual checker configuration when
+        implemented.
+  11.2_POWER_EMIR_CHECK:
+    HBM-IMP-11-2-0-00:
+      description: 'TODO: Was the final typical and worst case power computed using
+        a simulation based VCD dump and provided to the design teams?'
+      requirements:
+        value: N/A
+        pattern_items: []
+      input_files: []
+      waivers:
+        value: N/A
+        waive_items: []
+      _status: placeholder
+      _note: This is a placeholder. Replace with actual checker configuration when
+        implemented.
+  11.3_POWER_EMIR_CHECK:
+    SRG-IMP-11-3-0-00:
+      description: 'TODO: Is SDC/TWF coverage more than 95% ?'
+      requirements:
+        value: N/A
+        pattern_items: []
+      input_files: []
+      waivers:
+        value: N/A
+        waive_items: []
+      _status: placeholder
+      _note: This is a placeholder. Replace with actual checker configuration when
+        implemented.
+    SRG-IMP-11-3-0-01:
+      description: 'TODO: Is SPEF coverage 100% ?If not, mention reason in comments'
+      requirements:
+        value: N/A
+        pattern_items: []
+      input_files: []
+      waivers:
+        value: N/A
+        waive_items: []
+      _status: placeholder
+      _note: This is a placeholder. Replace with actual checker configuration when
+        implemented.
+    SRG-IMP-11-3-0-02:
+      description: 'TODO: Is QRC tech file with proper corner and metal stack mentioned
+        in comments?'
+      requirements:
+        value: N/A
+        pattern_items: []
+      input_files: []
+      waivers:
+        value: N/A
+        waive_items: []
+      _status: placeholder
+      _note: This is a placeholder. Replace with actual checker configuration when
+        implemented.
+    SRG-IMP-11-3-0-03:
+      description: 'TODO: Is the missing via check is clean'
+      requirements:
+        value: N/A
+        pattern_items: []
+      input_files: []
+      waivers:
+        value: N/A
+        waive_items: []
+      _status: placeholder
+      _note: This is a placeholder. Replace with actual checker configuration when
+        implemented.
+    SRG-IMP-11-3-0-04:
+      description: 'TODO: Is simulation time mentioned in the comments?'
+      requirements:
+        value: N/A
+        pattern_items: []
+      input_files: []
+      waivers:
+        value: N/A
+        waive_items: []
+      _status: placeholder
+      _note: This is a placeholder. Replace with actual checker configuration when
+        implemented.
+    SRG-IMP-11-3-0-05:
+      description: 'TODO: Is resolution during dynamic simulation mentioned in comments
+        ?'
+      requirements:
+        value: N/A
+        pattern_items: []
+      input_files: []
+      waivers:
+        value: N/A
+        waive_items: []
+      _status: placeholder
+      _note: This is a placeholder. Replace with actual checker configuration when
+        implemented.
+    SRG-IMP-11-3-0-06:
+      description: 'TODO: Is VCD tag mentioned in the comments?'
+      requirements:
+        value: N/A
+        pattern_items: []
+      input_files: []
+      waivers:
+        value: N/A
+        waive_items: []
+      _status: placeholder
+      _note: This is a placeholder. Replace with actual checker configuration when
+        implemented.
+  12.0_PHYSICAL_VERIFICATION_CHECK:
+    IMP-12-0-0-00:
+      description: 'TODO: Confirm the GDS includes dummy METAL/OD/PO/COD.'
+      requirements:
+        value: N/A
+        pattern_items: []
+      input_files: []
+      waivers:
+        value: N/A
+        waive_items: []
+      _status: placeholder
+      _note: This is a placeholder. Replace with actual checker configuration when
+        implemented.
+    IMP-12-0-0-01:
+      description: 'TODO: Confirm mock tapeout GDS includes dummy METAL/OD/PO/COD.'
+      requirements:
+        value: N/A
+        pattern_items: []
+      input_files: []
+      waivers:
+        value: N/A
+        waive_items: []
+      _status: placeholder
+      _note: This is a placeholder. Replace with actual checker configuration when
+        implemented.
+    IMP-12-0-0-02:
+      description: 'TODO: Confirm the GDS was generated properly and physical verification
+        has been run on final block GDS.'
+      requirements:
+        value: N/A
+        pattern_items: []
+      input_files: []
+      waivers:
+        value: N/A
+        waive_items: []
+      _status: placeholder
+      _note: This is a placeholder. Replace with actual checker configuration when
+        implemented.
+    IMP-12-0-0-03:
+      description: 'TODO: Confirm the DRC rule deck setting is correct. Make sure
+        the switch settings match with Foundry CTA (/local/method/CTAF/<process>/production
+        in chamber). Please add justification in Comment if you changed some switching
+        setting in CTA.'
+      requirements:
+        value: N/A
+        pattern_items: []
+      input_files: []
+      waivers:
+        value: N/A
+        waive_items: []
+      _status: placeholder
+      _note: This is a placeholder. Replace with actual checker configuration when
+        implemented.
+    IMP-12-0-0-04:
+      description: 'TODO: Confirm the "#define CHECK_FLOATING_GATE_BY_PRIMARY_TEXT"
+        DRC option in DRC rule deck is open to check PO.R.19 (input floating issue)
+        in IP level.'
+      requirements:
+        value: N/A
+        pattern_items: []
+      input_files: []
+      waivers:
+        value: N/A
+        waive_items: []
+      _status: placeholder
+      _note: This is a placeholder. Replace with actual checker configuration when
+        implemented.
+    IMP-12-0-0-05:
+      description: 'TODO: Confirm open the IP_TIGHTEN_DENSITY switch in DRC rule deck.'
+      requirements:
+        value: N/A
+        pattern_items: []
+      input_files: []
+      waivers:
+        value: N/A
+        waive_items: []
+      _status: placeholder
+      _note: This is a placeholder. Replace with actual checker configuration when
+        implemented.
+    IMP-12-0-0-06:
+      description: 'TODO: Confirm the MIM related check setting is correct. (Fill
+        N/A if no MIMCAP inserted or no MIM related layers)'
+      requirements:
+        value: N/A
+        pattern_items: []
+      input_files: []
+      waivers:
+        value: N/A
+        waive_items: []
+      _status: placeholder
+      _note: This is a placeholder. Replace with actual checker configuration when
+        implemented.
+    IMP-12-0-0-07:
+      description: 'TODO: Confirm the ANT rule deck setting is correct.'
+      requirements:
+        value: N/A
+        pattern_items: []
+      input_files: []
+      waivers:
+        value: N/A
+        waive_items: []
+      _status: placeholder
+      _note: This is a placeholder. Replace with actual checker configuration when
+        implemented.
+    IMP-12-0-0-08:
+      description: 'TODO: Confirm the MIM_ANT rule deck setting is correct. (For MIG,please
+        check with AMS team about the MIM cell type (MIM or SHDMIM) because the MIM_ANT
+        rule will be different).'
+      requirements:
+        value: N/A
+        pattern_items: []
+      input_files: []
+      waivers:
+        value: N/A
+        waive_items: []
+      _status: placeholder
+      _note: This is a placeholder. Replace with actual checker configuration when
+        implemented.
+    IMP-12-0-0-09:
+      description: 'TODO: Confirm the LVS rule deck setting is correct.'
+      requirements:
+        value: N/A
+        pattern_items: []
+      input_files: []
+      waivers:
+        value: N/A
+        waive_items: []
+      _status: placeholder
+      _note: This is a placeholder. Replace with actual checker configuration when
+        implemented.
+    IMP-12-0-0-10:
+      description: 'TODO: Confirm turn-off the VIRTUAL_CONNECT in LVS setting.'
+      requirements:
+        value: N/A
+        pattern_items: []
+      input_files: []
+      waivers:
+        value: N/A
+        waive_items: []
+      _status: placeholder
+      _note: This is a placeholder. Replace with actual checker configuration when
+        implemented.
+    IMP-12-0-0-11:
+      description: 'TODO: Confirm the DRC check result is clean. (fill the confidence
+        level of not touching floorplan again in comment if fill no, for example,
+        90%~100%)'
+      requirements:
+        value: N/A
+        pattern_items: []
+      input_files: []
+      waivers:
+        value: N/A
+        waive_items: []
+      _status: placeholder
+      _note: This is a placeholder. Replace with actual checker configuration when
+        implemented.
+    IMP-12-0-0-12:
+      description: 'TODO: Confirm the MIM related check is clean. (Need to check and
+        Fill N/A if no MIMCAP inserted or no MIM related layers in PHY or SOC level)
+        - If PHY needs to insert MIMCAP. 1. Need to pay attention to the MIMCAP KOZ
+        rule during MIMCAP insertion after check with customer about the SOC die size,
+        substrate layer number and PHY placement/location in SOC level. 2. Pay attention
+        to the option setting related to MIM DRC check like KOZ_High_subst_layer,
+        SHDMIM_KOZ_AP_SPACE_5um(on/off will impact the checking rule) etc in TSMC
+        rule deck(need to align these settings with customer). -If PHY doesn''t insert
+        MIMCAP but SOC level inserts MIMCAP. 1. Need to open SHDMIM switching in DRC
+        rule deck. 2. Need to check with customer whether PHY need to meet SHDMIM_KOZ_AP_SPACE_5um
+        rule (if SOC level this DRC switching setting is ON) in PHY area which falls
+        into SOC KOZ area for TSMC process. 3. May need to insert MIM dummy in PHY
+        level to meet SOC level MIM dummy density rule (you can sync with customer
+        whether PHY MIM dummy is needed and the KOZ information on PHY to make sure
+        there is no dummy added in KOZ area on PHY by adding MIM EXCL layer).'
+      requirements:
+        value: N/A
+        pattern_items: []
+      input_files: []
+      waivers:
+        value: N/A
+        waive_items: []
+      _status: placeholder
+      _note: This is a placeholder. Replace with actual checker configuration when
+        implemented.
+    IMP-12-0-0-13:
+      description: 'TODO: Confirm the ANT check result is clean.'
+      requirements:
+        value: N/A
+        pattern_items: []
+      input_files: []
+      waivers:
+        value: N/A
+        waive_items: []
+      _status: placeholder
+      _note: This is a placeholder. Replace with actual checker configuration when
+        implemented.
+    IMP-12-0-0-14:
+      description: 'TODO: Confirm the MIM_ANT check result is clean. (Fill N/a if
+        no MIMCAP inserted or no MIM related layers)'
+      requirements:
+        value: N/A
+        pattern_items: []
+      input_files: []
+      waivers:
+        value: N/A
+        waive_items: []
+      _status: placeholder
+      _note: This is a placeholder. Replace with actual checker configuration when
+        implemented.
+    IMP-12-0-0-15:
+      description: 'TODO: Confirm the LVS check result is match.'
+      requirements:
+        value: N/A
+        pattern_items: []
+      input_files: []
+      waivers:
+        value: N/A
+        waive_items: []
+      _status: placeholder
+      _note: This is a placeholder. Replace with actual checker configuration when
+        implemented.
+    IMP-12-0-0-16:
+      description: 'TODO: Confrim there is no issue for lvs.rep and extra pins in
+        lvs.rep.cls even the results shows MATCH(check the Note)'
+      requirements:
+        value: N/A
+        pattern_items: []
+      input_files: []
+      waivers:
+        value: N/A
+        waive_items: []
+      _status: placeholder
+      _note: This is a placeholder. Replace with actual checker configuration when
+        implemented.
+    IMP-12-0-0-17:
+      description: 'TODO: Confirm no soft-connect issue.'
+      requirements:
+        value: N/A
+        pattern_items: []
+      input_files: []
+      waivers:
+        value: N/A
+        waive_items: []
+      _status: placeholder
+      _note: This is a placeholder. Replace with actual checker configuration when
+        implemented.
+    IMP-12-0-0-18:
+      description: 'TODO: Confirm the ERC check result is clean.'
+      requirements:
+        value: N/A
+        pattern_items: []
+      input_files: []
+      waivers:
+        value: N/A
+        waive_items: []
+      _status: placeholder
+      _note: This is a placeholder. Replace with actual checker configuration when
+        implemented.
+    IMP-12-0-0-19:
+      description: 'TODO: Confirm Analog power/gnd labels are correct.'
+      requirements:
+        value: N/A
+        pattern_items: []
+      input_files: []
+      waivers:
+        value: N/A
+        waive_items: []
+      _status: placeholder
+      _note: This is a placeholder. Replace with actual checker configuration when
+        implemented.
+    IMP-12-0-0-20:
+      description: 'TODO: Confirm no unknown black boxes are reported.'
+      requirements:
+        value: N/A
+        pattern_items: []
+      input_files: []
+      waivers:
+        value: N/A
+        waive_items: []
+      _status: placeholder
+      _note: This is a placeholder. Replace with actual checker configuration when
+        implemented.
+    IMP-12-0-0-21:
+      description: 'TODO: Confirm no ERROR message in PV log files.'
+      requirements:
+        value: N/A
+        pattern_items: []
+      input_files: []
+      waivers:
+        value: N/A
+        waive_items: []
+      _status: placeholder
+      _note: This is a placeholder. Replace with actual checker configuration when
+        implemented.
+    IMP-12-0-0-22:
+      description: 'TODO: Confirm all Warning message in PV log files can be waived.'
+      requirements:
+        value: N/A
+        pattern_items: []
+      input_files: []
+      waivers:
+        value: N/A
+        waive_items: []
+      _status: placeholder
+      _note: This is a placeholder. Replace with actual checker configuration when
+        implemented.
+    IMP-12-0-0-23:
+      description: 'TODO: Confirm set proper LVS bump text files (e.g: not include
+        VDDG/VREF internal pin).'
+      requirements:
+        value: N/A
+        pattern_items: []
+      input_files: []
+      waivers:
+        value: N/A
+        waive_items: []
+      _status: placeholder
+      _note: This is a placeholder. Replace with actual checker configuration when
+        implemented.
+    IMP-12-0-0-24:
+      description: 'TODO: Confirm add the chipBoundary layer to check boundary DRC
+        for test chip.'
+      requirements:
+        value: N/A
+        pattern_items: []
+      input_files: []
+      waivers:
+        value: N/A
+        waive_items: []
+      _status: placeholder
+      _note: This is a placeholder. Replace with actual checker configuration when
+        implemented.
+    IMP-12-0-0-25:
+      description: 'TODO: Confirm the BUMP DRC rule deck setting is correct.'
+      requirements:
+        value: N/A
+        pattern_items: []
+      input_files: []
+      waivers:
+        value: N/A
+        waive_items: []
+      _status: placeholder
+      _note: This is a placeholder. Replace with actual checker configuration when
+        implemented.
+    IMP-12-0-0-26:
+      description: 'TODO: Confirm BUMP rule DRC result is clean.'
+      requirements:
+        value: N/A
+        pattern_items: []
+      input_files: []
+      waivers:
+        value: N/A
+        waive_items: []
+      _status: placeholder
+      _note: This is a placeholder. Replace with actual checker configuration when
+        implemented.
+    IMP-12-0-0-27:
+      description: 'TODO: Confirm Package to Chip comparison passes (bump excel vs
+        bump location in gds/oas)?'
+      requirements:
+        value: N/A
+        pattern_items: []
+      input_files: []
+      waivers:
+        value: N/A
+        waive_items: []
+      _status: placeholder
+      _note: This is a placeholder. Replace with actual checker configuration when
+        implemented.
+    IMP-12-0-0-28:
+      description: 'TODO: Confirm ARC check result is clean. (For BRCM project only,
+        for others fill N/A)'
+      requirements:
+        value: N/A
+        pattern_items: []
+      input_files: []
+      waivers:
+        value: N/A
+        waive_items: []
+      _status: placeholder
+      _note: This is a placeholder. Replace with actual checker configuration when
+        implemented.
+    IMP-12-0-0-29:
+      description: 'TODO: Confirm all Warning message in ARC log files can be waived.
+        (For BRCM project only, for others fill N/A)'
+      requirements:
+        value: N/A
+        pattern_items: []
+      input_files: []
+      waivers:
+        value: N/A
+        waive_items: []
+      _status: placeholder
+      _note: This is a placeholder. Replace with actual checker configuration when
+        implemented.
+    IMP-12-0-0-30:
+      description: 'TODO: Confirm DFM check result is clean. (for SEC process, for
+        others fill N/A)'
+      requirements:
+        value: N/A
+        pattern_items: []
+      input_files: []
+      waivers:
+        value: N/A
+        waive_items: []
+      _status: placeholder
+      _note: This is a placeholder. Replace with actual checker configuration when
+        implemented.
+    IMP-12-0-0-31:
+      description: 'TODO: Confirm FLT check result is clean. (for SEC process, for
+        others fill N/A)'
+      requirements:
+        value: N/A
+        pattern_items: []
+      input_files: []
+      waivers:
+        value: N/A
+        waive_items: []
+      _status: placeholder
+      _note: This is a placeholder. Replace with actual checker configuration when
+        implemented.
+    IMP-12-0-0-32:
+      description: 'TODO: Confirm no ERROR message in DFM/FLT log files. (for SEC
+        process, for others fill N/A)'
+      requirements:
+        value: N/A
+        pattern_items: []
+      input_files: []
+      waivers:
+        value: N/A
+        waive_items: []
+      _status: placeholder
+      _note: This is a placeholder. Replace with actual checker configuration when
+        implemented.
+    IMP-12-0-0-33:
+      description: 'TODO: Confirm all Warning message in DFM/FLT log files can be
+        waived. (for SEC process, for others fill N/A)'
+      requirements:
+        value: N/A
+        pattern_items: []
+      input_files: []
+      waivers:
+        value: N/A
+        waive_items: []
+      _status: placeholder
+      _note: This is a placeholder. Replace with actual checker configuration when
+        implemented.
+    IMP-12-0-0-34:
+      description: 'TODO: Confirm all Warning message in RTO DRC log files can be
+        waived. (for SEC process, for others fill N/A)'
+      requirements:
+        value: N/A
+        pattern_items: []
+      input_files: []
+      waivers:
+        value: N/A
+        waive_items: []
+      _status: placeholder
+      _note: This is a placeholder. Replace with actual checker configuration when
+        implemented.
+  13.0_POST_PD_EQUIVALENCE_CHECK:
+    IMP-13-0-0-00:
+      description: Confirm conformal constraints have been peer reviewed and approved?
+      requirements:
+        value: N/A
+        pattern_items: []
+      input_files:
+      - C:\Users\yuyin\Desktop\CHECKLIST\IP_project_folder\logs\map_to_final.log
+      waivers:
+        value: N/A
+        waive_items: []
+    IMP-13-0-0-01:
+      description: Confirm conformal log file has been peer reviewed and all warnings
+        have a waiver/explanation?
+      requirements:
+        value: N/A
+        pattern_items: []
+      input_files:
+      - C:\Users\yuyin\Desktop\CHECKLIST\IP_project_folder\reports\post_lec\syn_final_lec.log
+      - C:\Users\yuyin\Desktop\CHECKLIST\IP_project_folder\logs\map_to_final.log
+      waivers:
+        value: N/A
+        waive_items: []
+    IMP-13-0-0-02:
+      description: Confirm all listed black boxes are intended?
+      requirements:
+        value: N/A
+        pattern_items: []
+      input_files:
+      - C:\Users\yuyin\Desktop\CHECKLIST\IP_project_folder\reports\post_lec\black_box.rpt
+      waivers:
+        value: N/A
+        waive_items: []
+    IMP-13-0-0-03:
+      description: Confirm all user defined black boxes have port definitions declared?
+        (.lib or verilog stub file)
+      requirements:
+        value: N/A
+        pattern_items: []
+      input_files:
+      - C:\Users\yuyin\Desktop\CHECKLIST\IP_project_folder\logs\map_to_final.log
+      waivers:
+        value: N/A
+        waive_items: []
+    IMP-13-0-0-04:
+      description: Confirm no aborted compare points exist in log files or reports?
+      requirements:
+        value: N/A
+        pattern_items: []
+      input_files:
+      - C:\Users\yuyin\Desktop\CHECKLIST\IP_project_folder\logs\map_to_final.log
+      waivers:
+        value: N/A
+        waive_items: []
+    IMP-13-0-0-05:
+      description: Confirm no non-equivalent points exist?
+      requirements:
+        value: N/A
+        pattern_items: []
+      input_files:
+      - C:\Users\yuyin\Desktop\CHECKLIST\IP_project_folder\reports\noneq.rpt
+      waivers:
+        value: N/A
+        waive_items: []
+    IMP-13-0-0-06:
+      description: Confirm all unmapped compare points have been peer reviewed and
+        annotated with a waiver/explanation?
+      requirements:
+        value: N/A
+        pattern_items: []
+      input_files:
+      - C:\Users\yuyin\Desktop\CHECKLIST\IP_project_folder\reports\notmapped_points.rpt
+      waivers:
+        value: N/A
+        waive_items: []
+    IMP-13-0-0-07:
+      description: Confirm "set flatten model -library_pin_verification" in LEC flow.
+      requirements:
+        value: N/A
+        pattern_items: []
+      input_files:
+      - C:\Users\yuyin\Desktop\CHECKLIST\IP_project_folder\logs\map_to_final.log
+      waivers:
+        value: N/A
+        waive_items: []
+  14.0_CLP_CHECK:
+    IMP-14-0-0-00:
+      description: 'TODO: Confirm set the correct golden netlist.'
+      requirements:
+        value: N/A
+        pattern_items: []
+      input_files: []
+      waivers:
+        value: N/A
+        waive_items: []
+      _status: placeholder
+      _note: This is a placeholder. Replace with actual checker configuration when
+        implemented.
+    IMP-14-0-0-01:
+      description: 'TODO: Confirm pass the formal check for final release netlist.'
+      requirements:
+        value: N/A
+        pattern_items: []
+      input_files: []
+      waivers:
+        value: N/A
+        waive_items: []
+      _status: placeholder
+      _note: This is a placeholder. Replace with actual checker configuration when
+        implemented.
+    IMP-14-0-0-02:
+      description: 'TODO: Confirm connect the PSO chain correctly. (Fill N/A if no
+        PSO)'
+      requirements:
+        value: N/A
+        pattern_items: []
+      input_files: []
+      waivers:
+        value: N/A
+        waive_items: []
+      _status: placeholder
+      _note: This is a placeholder. Replace with actual checker configuration when
+        implemented.
+    IMP-14-0-0-03:
+      description: 'TODO: Confirm the CLP check result is clean.'
+      requirements:
+        value: N/A
+        pattern_items: []
+      input_files: []
+      waivers:
+        value: N/A
+        waive_items: []
+      _status: placeholder
+      _note: This is a placeholder. Replace with actual checker configuration when
+        implemented.
+    IMP-14-0-0-04:
+      description: 'TODO: Confirm no ERROR message in CLP log files.'
+      requirements:
+        value: N/A
+        pattern_items: []
+      input_files: []
+      waivers:
+        value: N/A
+        waive_items: []
+      _status: placeholder
+      _note: This is a placeholder. Replace with actual checker configuration when
+        implemented.
+    IMP-14-0-0-05:
+      description: 'TODO: Confirm all Warning message in CLP log files can be waived.'
+      requirements:
+        value: N/A
+        pattern_items: []
+      input_files: []
+      waivers:
+        value: N/A
+        waive_items: []
+      _status: placeholder
+      _note: This is a placeholder. Replace with actual checker configuration when
+        implemented.
+    IMP-14-0-0-06:
+      description: 'TODO: Confirm you have run CLP without issue if the design has
+        VDD_AO domain or other low power features like power gating, retention etc.'
+      requirements:
+        value: N/A
+        pattern_items: []
+      input_files: []
+      waivers:
+        value: N/A
+        waive_items: []
+      _status: placeholder
+      _note: This is a placeholder. Replace with actual checker configuration when
+        implemented.
+  15.0_ESD_PERC_CHECK:
+    IMP-15-0-0-00:
+      description: 'TODO: Confirm whether ESD PERC check is needed.'
+      requirements:
+        value: N/A
+        pattern_items: []
+      input_files: []
+      waivers:
+        value: N/A
+        waive_items: []
+      _status: placeholder
+      _note: This is a placeholder. Replace with actual checker configuration when
+        implemented.
+    IMP-15-0-0-01:
+      description: 'TODO: Confirm whether CNOD check is needed. For example, we need
+        to check CNOD for TSMCN5 process.'
+      requirements:
+        value: N/A
+        pattern_items: []
+      input_files: []
+      waivers:
+        value: N/A
+        waive_items: []
+      _status: placeholder
+      _note: This is a placeholder. Replace with actual checker configuration when
+        implemented.
+    IMP-15-0-0-02:
+      description: 'TODO: Confirm the PERC voltage setting is correct.(check the Note)'
+      requirements:
+        value: N/A
+        pattern_items: []
+      input_files: []
+      waivers:
+        value: N/A
+        waive_items: []
+      _status: placeholder
+      _note: This is a placeholder. Replace with actual checker configuration when
+        implemented.
+    IMP-15-0-0-03:
+      description: 'TODO: Confirm there is no issue about ESD PERC check if PERC check
+        is needed.'
+      requirements:
+        value: N/A
+        pattern_items: []
+      input_files: []
+      waivers:
+        value: N/A
+        waive_items: []
+      _status: placeholder
+      _note: This is a placeholder. Replace with actual checker configuration when
+        implemented.
+    IMP-15-0-0-04:
+      description: 'TODO: Confirm there is no issue about CNOD check if CNOD check
+        is needed.'
+      requirements:
+        value: N/A
+        pattern_items: []
+      input_files: []
+      waivers:
+        value: N/A
+        waive_items: []
+      _status: placeholder
+      _note: This is a placeholder. Replace with actual checker configuration when
+        implemented.
+    IMP-15-0-0-05:
+      description: 'TODO: Confirm the RDL and PG structure of final database match
+        to your PERC run pass version. If you made some changes on the RDL and PG
+        structure for DRC/EMIR after you passed PERC run, either you can submit another
+        free run within PERC run cycle or run XOR between PERC pass run gds and your
+        final gds and provide justifications like signal RDL layers and PG layers
+        to IO/ESD/PLL are same betwen the two versions.'
+      requirements:
+        value: N/A
+        pattern_items: []
+      input_files: []
+      waivers:
+        value: N/A
+        waive_items: []
+      _status: placeholder
+      _note: This is a placeholder. Replace with actual checker configuration when
+        implemented.
+  16.0_IPTAG_CHECK:
+    IMP-16-0-0-00:
+      description: 'TODO: Confirm the IPTAG content and format are correct.(check
+        the Note)'
+      requirements:
+        value: N/A
+        pattern_items: []
+      input_files: []
+      waivers:
+        value: N/A
+        waive_items: []
+      _status: placeholder
+      _note: This is a placeholder. Replace with actual checker configuration when
+        implemented.
+    IMP-16-0-0-01:
+      description: 'TODO: Confirm add TAG information to PHY.(TC/Controller don''t
+        need IPTAG)'
+      requirements:
+        value: N/A
+        pattern_items: []
+      input_files: []
+      waivers:
+        value: N/A
+        waive_items: []
+      _status: placeholder
+      _note: This is a placeholder. Replace with actual checker configuration when
+        implemented.
+    IMP-16-0-0-02:
+      description: 'TODO: Confirm PHY has the IPTAG for Hard PHY delivery and Slices
+        have the IPTAG for FIRM PHY delivery. (Can skip slice level IPTAG for Hard
+        PHY delivery)'
+      requirements:
+        value: N/A
+        pattern_items: []
+      input_files: []
+      waivers:
+        value: N/A
+        waive_items: []
+      _status: placeholder
+      _note: This is a placeholder. Replace with actual checker configuration when
+        implemented.
+    IMP-16-0-0-03:
+      description: 'TODO: Confirm use IP Type code for PHY - "P" in the slices IPTAG
+        for FIRM PHY delivery.'
+      requirements:
+        value: N/A
+        pattern_items: []
+      input_files: []
+      waivers:
+        value: N/A
+        waive_items: []
+      _status: placeholder
+      _note: This is a placeholder. Replace with actual checker configuration when
+        implemented.
+    IMP-16-0-0-04:
+      description: 'TODO: Confirm update the IPTAG if FIRM PHY slices are reused as
+        FIRM PHY delivery for another project.'
+      requirements:
+        value: N/A
+        pattern_items: []
+      input_files: []
+      waivers:
+        value: N/A
+        waive_items: []
+      _status: placeholder
+      _note: This is a placeholder. Replace with actual checker configuration when
+        implemented.
+    IMP-16-0-0-05:
+      description: 'TODO: Confirm remove the FIRM PHY slices IPTAG if FIRM PHY slices
+        are reused in Hard PHY project.'
+      requirements:
+        value: N/A
+        pattern_items: []
+      input_files: []
+      waivers:
+        value: N/A
+        waive_items: []
+      _status: placeholder
+      _note: This is a placeholder. Replace with actual checker configuration when
+        implemented.
+    IMP-16-0-0-06:
+      description: 'TODO: Confirm you followed the below document about IPTAG creation.
+        If you have further question, please check with Tobing. HSPHY/HPPHY/DFPHY/GDDR/HBM:
+        https://cadence.sharepoint.com/:w:/r/sites/IPGroup/DesignIP/Quality/_layouts/15/Doc.aspx?sourcedoc=%7B26DAB946-483A-415F-AC0C-C195C0838506%7D&file=IP%20Number%20Format%20-%20DDR%20PHY.docx&wdLOR=cF5835961-1465-461D-BAFD-3F0590F6A7F9&action=default&mobileredirect=true
+        SERDES: https://cadence.sharepoint.com/:w:/r/sites/IPGroup/DesignIP/Quality/IP_Numbers/IP%20Number%20Format%20-%20SerDes.docx?d=wf015c37bca9b4d3d951589cf616333fe&csf=1&web=1'
+      requirements:
+        value: N/A
+        pattern_items: []
+      input_files: []
+      waivers:
+        value: N/A
+        waive_items: []
+      _status: placeholder
+      _note: This is a placeholder. Replace with actual checker configuration when
+        implemented.
+    IMP-16-0-0-07:
+      description: 'TODO: Confirm the Final GDS have the IPTAG information?'
+      requirements:
+        value: N/A
+        pattern_items: []
+      input_files: []
+      waivers:
+        value: N/A
+        waive_items: []
+      _status: placeholder
+      _note: This is a placeholder. Replace with actual checker configuration when
+        implemented.
+  17.0_FINAL_DATA:
+    IMP-17-0-0-00:
+      description: 'TODO: Confirm data has been copied to final release area? Provide
+        a directory location in the comments field.'
+      requirements:
+        value: N/A
+        pattern_items: []
+      input_files: []
+      waivers:
+        value: N/A
+        waive_items: []
+      _status: placeholder
+      _note: This is a placeholder. Replace with actual checker configuration when
+        implemented.
+    IMP-17-0-0-01:
+      description: 'TODO: Is the ‘latest’ updated to point to the final release area?'
+      requirements:
+        value: N/A
+        pattern_items: []
+      input_files: []
+      waivers:
+        value: N/A
+        waive_items: []
+      _status: placeholder
+      _note: This is a placeholder. Replace with actual checker configuration when
+        implemented.
+    IMP-17-0-0-02:
+      description: 'TODO: Does the area contain all relevant and required information?
+        Netlist/gds/db/lef/libs/spef etc'
+      requirements:
+        value: N/A
+        pattern_items: []
+      input_files: []
+      waivers:
+        value: N/A
+        waive_items: []
+      _status: placeholder
+      _note: This is a placeholder. Replace with actual checker configuration when
+        implemented.
+    IMP-17-0-0-03:
+      description: 'TODO: Have all irrelevant release areas been deleted?'
+      requirements:
+        value: N/A
+        pattern_items: []
+      input_files: []
+      waivers:
+        value: N/A
+        waive_items: []
+      _status: placeholder
+      _note: This is a placeholder. Replace with actual checker configuration when
+        implemented.
+    IMP-17-0-0-04:
+      description: 'TODO: Have checks been run on release data (checkIt etc)?'
+      requirements:
+        value: N/A
+        pattern_items: []
+      input_files: []
+      waivers:
+        value: N/A
+        waive_items: []
+      _status: placeholder
+      _note: This is a placeholder. Replace with actual checker configuration when
+        implemented.
+  17.1_FINAL_DATA:
+    HPP-IMP-17-1-0-00:
+      description: 'TODO: If IP under DR3 review implements a register containing
+        the revision/version of the IP, please confirm that this register contains
+        the correct revision/version of the IP w.r.t this DR3 Review?'
+      requirements:
+        value: N/A
+        pattern_items: []
+      input_files: []
+      waivers:
+        value: N/A
+        waive_items: []
+      _status: placeholder
+      _note: This is a placeholder. Replace with actual checker configuration when
+        implemented.
+  17.2_FINAL_DATA:
+    HBM-IMP-17-2-0-00:
+      description: 'TODO: Has the complete set of rule decks, LVS/DRC settings, and
+        other setup requirements used to generate and signoff the final delivery been
+        archived in case the runs must be replicated in the future?'
+      requirements:
+        value: N/A
+        pattern_items: []
+      input_files: []
+      waivers:
+        value: N/A
+        waive_items: []
+      _status: placeholder
+      _note: This is a placeholder. Replace with actual checker configuration when
+        implemented.
+    HBM-IMP-17-2-0-01:
+      description: 'TODO: Recommend performing a flush of the delivery flow with the
+        customer to ensure all necessary files are delivered and the required database
+        formats used. Has this been done?'
+      requirements:
+        value: N/A
+        pattern_items: []
+      input_files: []
+      waivers:
+        value: N/A
+        waive_items: []
+      _status: placeholder
+      _note: This is a placeholder. Replace with actual checker configuration when
+        implemented.
+  17.3_FINAL_DATA:
+    SRG-IMP-17-3-0-00:
+      description: 'TODO: Is the Delivery Package contains layer map file'
+      requirements:
+        value: N/A
+        pattern_items: []
+      input_files: []
+      waivers:
+        value: N/A
+        waive_items: []
+      _status: placeholder
+      _note: This is a placeholder. Replace with actual checker configuration when
+        implemented.
+    SRG-IMP-17-3-0-01:
+      description: 'TODO: Is the Delivery Package contains Device List'
+      requirements:
+        value: N/A
+        pattern_items: []
+      input_files: []
+      waivers:
+        value: N/A
+        waive_items: []
+      _status: placeholder
+      _note: This is a placeholder. Replace with actual checker configuration when
+        implemented.
+    SRG-IMP-17-3-0-02:
+      description: 'TODO: Is the Delivery Package contains IP vendor check list form'
+      requirements:
+        value: N/A
+        pattern_items: []
+      input_files: []
+      waivers:
+        value: N/A
+        waive_items: []
+      _status: placeholder
+      _note: This is a placeholder. Replace with actual checker configuration when
+        implemented.
+    SRG-IMP-17-3-0-03:
+      description: 'TODO: Is the Delivery Package contains Test Chip Description doc'
+      requirements:
+        value: N/A
+        pattern_items: []
+      input_files: []
+      waivers:
+        value: N/A
+        waive_items: []
+      _status: placeholder
+      _note: This is a placeholder. Replace with actual checker configuration when
+        implemented.
+    SRG-IMP-17-3-0-04:
+      description: 'TODO: Is the Delivery Package contains all the PV report files'
+      requirements:
+        value: N/A
+        pattern_items: []
+      input_files: []
+      waivers:
+        value: N/A
+        waive_items: []
+      _status: placeholder
+      _note: This is a placeholder. Replace with actual checker configuration when
+        implemented.
+    SRG-IMP-17-3-0-05:
+      description: 'TODO: Is the Delivery Package contains all the PV run sets (Only
+        settings)'
+      requirements:
+        value: N/A
+        pattern_items: []
+      input_files: []
+      waivers:
+        value: N/A
+        waive_items: []
+      _status: placeholder
+      _note: This is a placeholder. Replace with actual checker configuration when
+        implemented.

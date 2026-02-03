@@ -1,0 +1,180 @@
+module: 2.0_TECHFILE_AND_RULE_DECK_CHECK
+stage: Initial
+generated_at: 2025-12-23T18:43:03
+check_items: 
+  IMP-2-0-0-00: 
+    executed: true
+    status: fail
+    description: List Innovus Tech Lef name. eg:N16_Encounter_11M_2Xa1Xd3Xe2Y2R_UTRDL_9T_PODE_1.2a.tlef
+    failures: 
+      - index: 1
+        detail: error_0
+        source_line: 5
+        source_file: 'C:\Users\yuyin\OneDrive - Cadence Design Systems Inc\2025\Checklist\AAI\CHECKLIST_V3\CHECKLIST\IP_project_folder\tcl\2.0\setup_vars.tcl'
+        reason: Item not found
+  IMP-2-0-0-01: 
+    executed: true
+    status: pass
+    description: 'List Innovus gdsout map name. eg: PRTF_Innovus_N3P_gdsout_17M_1Xa_h_1Xb_v_1Xc_h_1Xd_v_1Ya_h_1Yb_v_4Y_hvhv_2Yy2Yx2R_SHDMIM.10c.map'
+    infos: 
+      - index: 1
+        detail: PRTF_Innovus_N7_gdsout_15M_1X_h_1Xa_v_1Ya_h_5Y_vhvhv_2Yy2Yx2R.14_1a.map
+        source_line: 11
+        source_file: 'C:\Users\yuyin\OneDrive - Cadence Design Systems Inc\2025\Checklist\AAI\CHECKLIST_V3\CHECKLIST\IP_project_folder\tcl\2.0\setup_vars.tcl'
+        reason: Item found
+  IMP-2-0-0-02: 
+    executed: true
+    status: pass
+    description: 'Confirm latest DRC rule deck(s) was used? List DRC rule deck name in Comments. eg: PLN3ELO_17M_1Xa1Xb1Xc1Xd1Ya1Yb4Y2Yy2Yx2R_014.11_2a.encrypt PLN3ELO_17M_1Xa1Xb1Xc1Xd1Ya1Yb4Y2Yy2Yx2R_054_PATCH.11_2a.encrypt'
+    infos: 
+      - index: 1
+        detail: PLN3ELO_17M_1Xa1Xb1Xc1Xd1Ya1Yb4Y2Yy2Yx2R_014.11_2a.encrypt
+        source_line: N/A
+        source_file: N/A
+        reason: 'DRC rule deck version waived per design team approval: Waived per design review - using previous rule deck version approved for this tapeout[WAIVER]'
+      - index: 2
+        detail: PLN6FF_15M_1X1Xa1Ya5Y2Yy2Yx2R_001.11a.encrypt
+        source_line: 5
+        source_file: 'C:\Users\yuyin\OneDrive - Cadence Design Systems Inc\2025\Checklist\AAI\CHECKLIST_V3\CHECKLIST\IP_project_folder\tcl\2.0\CDN_104H_cdn_hs_phy_data_slice_EW.DRCwD.pvl'
+        reason: DRC rule deck information extracted successfully
+  IMP-2-0-0-03: 
+    executed: true
+    status: fail
+    description: Confirm DRC rule deck was not modified? If it was, explain in comments field.
+    failures: 
+      - index: 1
+        detail: input_files is empty in YAML configuration
+        source_line: N/A
+        source_file: N/A
+        reason: input_files is empty in YAML configuration
+  IMP-2-0-0-04: 
+    executed: true
+    status: fail
+    description: 'Confirm latest Antenna rule deck(s) was used? List DRC rule deck name in Comments. eg: PLN3ELO_17M_1Xa1Xb1Xc1Xd1Ya1Yb4Y2Yy2Yx2R_014_ANT.11_2a.encrypt PLN3ELO_17M_1Xa1Xb1Xc1Xd1Ya1Yb4Y2Yy2Yx2R_014_SHDMIM_ANT.11_2a.encrypt'
+    failures: 
+      - index: 1
+        detail: PLN3ELO_17M_1Xa1Xb1Xc1Xd1Ya1Yb4Y2Yy2Yx2R_014_ANT.11_2a.encrypt
+        source_line: N/A
+        source_file: N/A
+        reason: Missing expected antenna rule deck or version mismatch detected
+    infos: 
+      - index: 1
+        detail: PLN3ELO_17M_1Xa1Xb1Xc1Xd1Ya1Yb4Y2Yy2Yx2R_014_SHDMIM_ANT.11_2a.encrypt
+        source_line: N/A
+        source_file: N/A
+        reason: 'Antenna rule deck issue waived per design approval: SHDMIM antenna check not required for this IP block per design review DR-2024-001[WAIVER]'
+      - index: 2
+        detail: PLN6FF_15M_1X1Xa1Ya5Y2Yy2Yx2R_001_ANT.11a.encrypt
+        source_line: 5
+        source_file: 'C:\Users\yuyin\OneDrive - Cadence Design Systems Inc\2025\Checklist\AAI\CHECKLIST_V3\CHECKLIST\IP_project_folder\tcl\2.0\CDN_104H_cdn_hs_phy_data_slice_EW.ANTwD.pvl'
+        reason: Antenna rule deck found and version validated
+  IMP-2-0-0-05: 
+    executed: true
+    status: fail
+    description: Confirm ANT rule deck was not modified? If it was, explain in comments field.
+    failures: 
+      - index: 1
+        detail: input_files is empty in YAML configuration
+        source_line: N/A
+        source_file: N/A
+        reason: input_files is empty in YAML configuration
+  IMP-2-0-0-06: 
+    executed: true
+    status: pass
+    description: 'Confirm latest LVS rule deck(s) was used? List LVS rule deck name in Comments. eg: DFM_LVS_RC_PEGASUS_N3P_1p17M_1Xa1Xb1Xc1Xd1Ya1Yb4Y2Yy2Yx2R_ALRDL.1.0a'
+    infos: 
+      - index: 1
+        detail: 'CDN_104H_cdn_hs_phy_data_slice_EW: DFM_LVS_RC_PEGASUS_N6_1p15M_1X1Xa1Ya5Y2Yy2Yx2R_ALRDL.1.0b.DS'
+        source_line: 11
+        source_file: 'C:\Users\yuyin\OneDrive - Cadence Design Systems Inc\2025\Checklist\AAI\CHECKLIST_V3\CHECKLIST\IP_project_folder\tcl\2.0\CDN_104H_cdn_hs_phy_data_slice_EW.LVSwD.pvl'
+        reason: LVS rule deck found and version verified
+  IMP-2-0-0-07: 
+    executed: true
+    status: fail
+    description: Confirm LVS rule deck was not modified? If it was, explain in comments field.
+    failures: 
+      - index: 1
+        detail: input_files is empty in YAML configuration
+        source_line: N/A
+        source_file: N/A
+        reason: input_files is empty in YAML configuration
+  IMP-2-0-0-08: 
+    executed: true
+    status: fail
+    description: 'Confirm latest BUMP rule deck(s) was used? List BUMP rule deck name in Comments. eg: PN3_CU_ROUND_BUMP_ON_PAD_17M_1Xa1Xb1Xc1Xd1Ya1Yb4Y2Yy2Yx2R_003.10a'
+    failures: 
+      - index: 1
+        detail: input_files is empty in YAML configuration
+        source_line: N/A
+        source_file: N/A
+        reason: input_files is empty in YAML configuration
+  IMP-2-0-0-09: 
+    executed: true
+    status: fail
+    description: Confirm BUMP rule deck was not modified? If it was, explain in comments field.
+    failures: 
+      - index: 1
+        detail: input_files is empty in YAML configuration
+        source_line: N/A
+        source_file: N/A
+        reason: input_files is empty in YAML configuration
+  IMP-2-0-0-10: 
+    executed: true
+    status: pass
+    description: 'List FEOL dummy rule deck name. eg: Dummy_FEOL_Pegasus_3nm_E_17M_1Xa1Xb1Xc1Xd1Ya1Yb4Y2Yy2Yx2R_014.11_1a'
+    infos: 
+      - index: 1
+        detail: Dummy_FEOL_Pegasus_6nm_001.11a
+        source_line: 6
+        source_file: 'C:\Users\yuyin\OneDrive - Cadence Design Systems Inc\2025\Checklist\AAI\CHECKLIST_V3\CHECKLIST\IP_project_folder\tcl\2.0\CDN_104H_cdn_hs_phy_data_slice_EW.FEOL.pvl'
+        reason: FEOL dummy rule deck found in PVL runset file
+  IMP-2-0-0-11: 
+    executed: true
+    status: pass
+    description: 'List BEOL dummy rule deck name. eg: Dummy_BEOL_Pegasus_3nm_E_17M_1Xa1Xb1Xc1Xd1Ya1Yb4Y2Yy2Yx2R_014.11_1a'
+    infos: 
+      - index: 1
+        detail: Dummy_BEOL_Pegasus_6nm_001.11a
+        source_line: 5
+        source_file: 'C:\Users\yuyin\OneDrive - Cadence Design Systems Inc\2025\Checklist\AAI\CHECKLIST_V3\CHECKLIST\IP_project_folder\tcl\2.0\CDN_104H_cdn_hs_phy_data_slice_EW.BEOL.pvl'
+        reason: BEOL dummy rule deck file(s) successfully extracted from PVL runset
+  IMP-2-0-0-12: 
+    executed: true
+    status: fail
+    description: 'List COD dummy rule deck name (fill N/A if no COD). eg: PLN16FFP_FINcut_AutoGen.11b.encrypt'
+    failures: 
+      - index: 1
+        detail: input_files is empty in YAML configuration
+        source_line: N/A
+        source_file: N/A
+        reason: input_files is empty in YAML configuration
+  IMP-2-0-0-13: 
+    executed: true
+    status: fail
+    description: 'List Spice Model used for PGV generation. eg: tsmc3gp.a.4/models/spectre_v1d0_2p6/ir_em.scs'
+    failures: 
+      - index: 1
+        detail: input_files is empty in YAML configuration
+        source_line: N/A
+        source_file: N/A
+        reason: input_files is empty in YAML configuration
+  IMP-2-0-0-14: 
+    executed: true
+    status: fail
+    description: 'List EM irxc rule deck name. eg: ICT_EM_v1d0p1a/cln3p_1p17m+ut-alrdl_1xa1xb1xc1xd1ya1yb4y2yy2yx2r_shdmim.ictem'
+    failures: 
+      - index: 1
+        detail: input_files is empty in YAML configuration
+        source_line: N/A
+        source_file: N/A
+        reason: input_files is empty in YAML configuration
+  IMP-2-0-0-15: 
+    executed: true
+    status: fail
+    description: 'List QRC techfile name. eg: 17M1Xa1Xb1Xc1Xd1Ya1Yb4Y2Yy2Yx2R_SHDMIM_UT/fs_v1d0p1a'
+    failures: 
+      - index: 1
+        detail: input_files is empty in YAML configuration
+        source_line: N/A
+        source_file: N/A
+        reason: input_files is empty in YAML configuration

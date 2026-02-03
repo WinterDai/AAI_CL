@@ -1,0 +1,3 @@
+FAIL:IMP-4-0-0-09:Confirm SDC contains all necessary Functional, DFT and power modes (including voltage scaling mode/reduced voltage and/or performance)?
+Fail Occurrence: 1
+1: Fail: input_files is empty in YAML configuration

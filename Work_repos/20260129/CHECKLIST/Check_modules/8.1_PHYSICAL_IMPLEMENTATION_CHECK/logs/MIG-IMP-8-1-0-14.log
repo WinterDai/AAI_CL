@@ -1,0 +1,5 @@
+FAIL:MIG-IMP-8-1-0-14:Confirm clock latency (EFG paths) meet requirement for timing budget. Put the delay from DESKEW PLL to slice register CK(E) and pad_mem* (F+G) to comment collomn (target SS corner delay < 800ps).
+MIG-IMP-8-1-0-14-ERROR01: Configuration error:
+  Severity: Fail Occurrence: 1
+  - input_files is empty in YAML configuration
+

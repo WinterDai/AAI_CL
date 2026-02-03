@@ -1,0 +1,6 @@
+PASS:IMP-10-0-0-00:Confirm the netlist/spef version is correct.
+Info Occurrence: 4
+1: Info: Current stage is synthesis, SPEF check is not applicable.: Item not found[WAIVED_INFO]
+2: Info: Generated on:*2025*: Item not found[WAIVED_AS_INFO]
+3: Info: Error: Netlist file path not found in STA log: Unexpected item found[WAIVED_AS_INFO]
+4: Info: Error: SPEF file path not found in STA log: Unexpected item found[WAIVED_AS_INFO]

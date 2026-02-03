@@ -1,0 +1,5 @@
+FAIL:MIG-IMP-11-1-1-02:[VCD-based Power Evaluation] Confirm final power evaluation checklist (DDR_PHY_IP_Performance_Analysis_Template_V1p2) and reports have been reviewed by Reviewer.
+MIG-IMP-11-1-1-02-ERROR01: Configuration error:
+  Severity: Fail Occurrence: 1
+  - input_files is empty in YAML configuration
+

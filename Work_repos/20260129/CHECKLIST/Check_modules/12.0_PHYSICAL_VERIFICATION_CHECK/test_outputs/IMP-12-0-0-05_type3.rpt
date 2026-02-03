@@ -1,0 +1,6 @@
+PASS:IMP-12-0-0-05:Confirm open the IP_TIGHTEN_DENSITY switch in DRC rule deck.
+Warn Occurrence: 2
+1: Warn: CHECK_HIGH_DENSITY: Waiver defined but no violation matched: Waived - high density check not required for this IP block[WAIVER]
+2: Warn: IP_TIGHTEN_DENSITY: Waiver defined but no violation matched: Waived - legacy design uses chip-level density rules instead of IP-level[WAIVER]
+Info Occurrence: 1
+1: Info: IP_TIGHTEN_DENSITY. In line 119, /home/jingyu/checklist_dev/CHECKLIST/CHECKLIST/IP_project_folder/logs/do_cmd_3star_DRC_sourceme: IP_TIGHTEN_DENSITY switch matched and validated as enabled

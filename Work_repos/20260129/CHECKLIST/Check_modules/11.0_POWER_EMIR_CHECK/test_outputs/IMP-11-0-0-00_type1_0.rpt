@@ -1,0 +1,9 @@
+PASS:IMP-11-0-0-00:Confirm input database(netlist/def/lef/spef/lib/pgv/etc) are loaded correctly.
+Info Occurrence: 7
+1: Info: Explanation: Database loading errors are informational only for initial design exploration phase: Explanation: Database loading errors are informational only for initial design exploration phase[WAIVED_INFO]
+2: Info: Cell Libraries for Rail Analysis: Cell libraries for rail analysis processed successfully
+3: Info: LEF Loading: LEF loading completed successfully
+4: Info: SPEF Loading: SPEF files loaded for RC corner 'rcbest_CCbest_m40c' (30 file(s))
+5: Info: Verilog Netlist: Verilog netlist loading completed successfully
+6: Info: View Definition: View definition loaded successfully
+7: Info: DEF Loading. In line 1252, C:\dev_workspace\AI-Agent Checklist Automation\CHECKLIST\CHECKLIST\IP_project_folder\logs\ND1_func_ffgnp_0p825v_125c_cbest_CCbest_T_cworst_CCworst_hold_static.log: Unwaived ERROR messages detected during database loading[WAIVED_AS_INFO]

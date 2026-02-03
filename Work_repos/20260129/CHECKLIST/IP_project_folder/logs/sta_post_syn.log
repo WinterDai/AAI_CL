@@ -1,0 +1,126 @@
+Reading libset_ffgnp_0p825v_m40c_cbest_CCbest_T_cbest_CCbest_hold_ideal timing library '/process/tsmcN3/data/stdcell/n3ge/TSMC/tcbn03e_bwp143mh286l3p48cpd_mb_svt_110b/lvf/ccs/tcbn03e_bwp143mh286l3p48cpd_mb_svtffgnp_0p825v_m40c_cbest_CCbest_T_hm_lvf.lib.gz' ...
+Read 20 cells in library 'tcbn03e_bwp143mh286l3p48cpd_mb_svtffgnp_0p825v_m40c_cbest_CCbest_T_ccs' 
+Reading libset_ffgnp_0p825v_m40c_cbest_CCbest_T_cbest_CCbest_hold_ideal timing library '/process/tsmcN3/data/stdcell/n3ge/TSMC/tcbn03e_bwp143mh286l3p48cpd_mb_ulvt_110b/lvf/ccs/tcbn03e_bwp143mh286l3p48cpd_mb_ulvtffgnp_0p825v_m40c_cbest_CCbest_T_hm_lvf.lib.gz' ...
+Read 20 cells in library 'tcbn03e_bwp143mh286l3p48cpd_mb_ulvtffgnp_0p825v_m40c_cbest_CCbest_T_ccs' 
+reading netlists
+<CMD> read_netlist C:\Users\yuyin\Desktop\CHECKLIST_V3\CHECKLIST\IP_project_folder\dbs\phy_cmn_phase_align_digtop.v.gz
+#% Begin Load netlist data ... (date=11/17 14:24:59, mem=1874.7M)
+*** Begin netlist parsing (mem=2584.0M) ***
+Reading verilog netlist 'C:\Users\yuyin\Desktop\CHECKLIST_V3\CHECKLIST\IP_project_folder\dbs\phy_cmn_phase_align_digtop.v.gz'
+
+*** Memory Usage v#1 (Current mem = 2923.969M, initial mem = 828.688M) ***
+*** End netlist parsing (cpu=0:00:00.2, real=0:00:00.0, mem=2924.0M) ***
+#% End Load netlist data ... (date=11/17 14:24:59, total cpu=0:00:00.6, real=0:00:00.0, peak res=2395.9M, current mem=2395.9M)
+Top level cell is phy_cmn_phase_align_digtop.
+Building hierarchical netlist for Cell phy_cmn_phase_align_digtop ...
+***** UseNewTieNetMode *****.
+*** Netlist is unique.
+[INFO] flowtool/flowtool_flow_status already exists
+[INFO] flowtool/flowtool_flow_metric already exists
+#@ flow_step:read_parasitics defined in /apps/ssg_tools/p4/nu_global/2025w39.2/common/steps.tcl at line 2758
+#@ Begin flow_step read_parasitics
+[INFO] Skipping SPEF reading as we are writing post-synthesis SDF files
+#@ End flow_step read_parasitics
+      flow.cputime  flow.realtime  timing.setup.tns  timing.setup.wns  snapshot
+UM:           2.13              3                                      read_parasitics
+#@ flow_step:apply_derates defined in /apps/ssg_tools/p4/nu_global/2025w39.2/common/steps.tcl at line 887
+#@ Begin flow_step apply_derates
+
+Reading libset_ssgnp_0p675v_m40c_cworst_CCworst_T_rcworst_CCworst_hold_ideal timing library 'tcbn03e_bwp143mh117l3p48cpd_base_elvtssgnp_0p675v_m40c_cworst_CCworst_T_lvf.lib.gz' ...
+**WARN: (TECHLIB-302):	No function defined for cell 'FILLWALLSHNCBWP143M117H3P48CPDELVT'. The cell will only be used for analysis. (File tcbn03e_bwp143mh117l3p48cpd_base_elvtssgnp_0p675v_m40c_cworst_CCworst_T_lvf.lib.gz)
+**WARN: (TECHLIB-302):	No function defined for cell 'FILLWALLSHBWP143M117H3P48CPDELVT'. The cell will only be used for analysis. (File tcbn03e_bwp143mh117l3p48cpd_base_elvtssgnp_0p675v_m40c_cworst_CCworst_T_lvf.lib.gz)
+Reading libset_ssgnp_0p675v_m40c_cworst_CCworst_T_rcworst_CCworst_hold_ideal timing library 'tcbn03e_bwp143mh117l3p48cpd_base_lvtssgnp_0p675v_m40c_cworst_CCworst_T_lvf.lib.gz' ...
+Read 484 cells in library 'tcbn03e_bwp143mh117l3p48cpd_base_lvtssgnp_0p675v_m40c_cworst_CCworst_T_ccs' 
+Reading libset_ssgnp_0p675v_m40c_cworst_CCworst_T_rcworst_CCworst_hold_ideal timing library 'tcbn03e_bwp143mh117l3p48cpd_base_svtssgnp_0p675v_m40c_cworst_CCworst_T_lvf.lib.gz' ...
+Read 484 cells in library 'tcbn03e_bwp143mh117l3p48cpd_base_svtssgnp_0p675v_m40c_cworst_CCworst_T_ccs' 
+
+#@ End flow_step signoff_finish
+[INFO] No old run to delete
+[INFO] No old log_file to delete
+[INFO] No old logv_file to delete
+[INFO] No old cmd_file to delete
+[INFO] No old flowtool_log_file to delete
+
+Program version = 23.15-s108_1
+Working directory = C:\Users\yuyin\Desktop\CHECKLIST\IP_project_folder
+Databases directory = C:\Users\yuyin\Desktop\CHECKLIST\IP_project_folder\data\sta_post_syn.20251118_161209\dbs
+Starting time = Nov 18, 2025 16:24:18
+Ending time = Nov 18, 2025 16:25:01
+
+Run Flow Summary
+---------------------
+
+Steps run:  read_parasitics apply_derates propagate_clocks update_timing tempus_reports signoff_finish
+<CMD> update_timing -full
+AAE_INFO: opIsDesignInPostRouteState() is 0
+AAE_INFO: deleting AAE DB in update_timing -full ...
+AAE DB initialization (MEM=4561.035156 CPU=0:00:00.0 REAL=0:00:00.0) 
+#################################################################################
+# Design Name: phy_cmn_phase_align_digtop
+# Design Mode: 3nm
+# Analysis Mode: MMMC OCV (SOCV)
+# Parasitics Mode: No SPEF/RCDB 
+# Signoff Settings: SI On (EWM-WFP)
+#################################################################################
+**INFO: (IMPESI-700):	Start delay calculation (fullDC) (1 T). (MEM=4530.55)
+[INFO] setting delaycal_enable_si to 1
+**INFO: (IMPESI-5090):	AAE_INFO: switching set_db delaycal_enable_si from false to true ...
+**INFO: (IMPESI-5091):	AAE_INFO: The setting is changed from false to true in set_db delaycal_enable_si
+[INFO] setting timing_library_read_ccs_noise_data to 1
+[INFO] setting timing_report_retime_formatting_mode to retime_replace
+[INFO] setting timing_enable_spatial_derate_mode to 1
+[INFO] setting timing_spatial_derate_distance_mode to chip_size
+#@ Begin flow_step tempus_reports
+<CMD> report_noise -view func_ffgnp_0p825v_125c_cbest_CCbest_T_rcbest_CCbest_hold -failure -style detailed -out_file reports/func_ffgnp_0p825v_125c_cbest_CCbest_T_rcbest_CCbest_hold/phy_cmn_phase_align_digtop_glitch.rpt
+**INFO: (IMPESI-457):	Output report file name prefix is reports/func_ffgnp_0p825v_125c_cbest_CCbest_T_rcbest_CCbest_hold/phy_cmn_phase_align_digtop_glitch.rpt 
+**INFO: (IMPESI-2109):	Glitch results are not available for reporting. Ensure that parasitics are correctly annotated for all active RC corners, and glitch analysis has also been performed before running report_noise.
+[INFO] Executing apply_timing_derates
+<CMD> reset_timing_derate *
+
+Setting hold derates for dc_ffgnp_0p825v_125c_cbest_CCbest_T_rcbest_CCbest_hold on 16/16 libraries. No net derates applied for corner.
+[INFO] Timing socv rc variation mode is enabled. Applying deratings per views.
+<CMD> set_socv_rc_variation_factor 0.100 -early -views func_ffgnp_0p825v_125c_cbest_CCbest_T_rcbest_CCbest_hold
+<CMD> set_socv_rc_variation_factor 0.100 -late -views func_ffgnp_0p825v_125c_cbest_CCbest_T_rcbest_CCbest_hold
+ Setting ffgnp,rcbest_CCbest,0p825v,125c SOCV variation factor for func_ffgnp_0p825v_125c_cbest_CCbest_T_rcbest_CCbest_hold.
+<CMD> extra_tech_derate
+[INFO] Applying custom technology deratings
+[INFO] Searching for derate side files
+[INFO] Applying per delay corner derates
+### WIRE DERATE ###
++-------------+--------------+
+| User Derate | SOCV Factors |
++-------------+--------------+
+|             |      X       |
++-------------+--------------+
+
+SOCV RC Variation Factors
++----------------------------------------------------------+-------+-------+
+| Analysis View                                            | Early | Late  |
++----------------------------------------------------------+-------+-------+
+| func_ffgnp_0p825v_125c_cbest_CCbest_T_rcbest_CCbest_hold | 0.100 | 0.100 |
++----------------------------------------------------------+-------+-------+
+
+### OCV FILES ###
++-------------+-------------+
+|    AOCV     | Spatial-OCV |
++-------------+-------------+
+|             |      X      |
++-------------+-------------+
+
+SOCV Files:
+   - /process/tsmcN3/data/stdcell/n3ge/TSMC/tcbn03e_bwp143mh117l3p48cpd_base_elvt_110b/spm/socv/tcbn03e_bwp143mh117l3p48cpd_base_elvtffgnp_0p825v_125c_cbest_CCbest_T_sp.socv
+   - /process/tsmcN3/data/stdcell/n3ge/TSMC/tcbn03e_bwp143mh117l3p48cpd_base_lvt_110b/spm/socv/tcbn03e_bwp143mh117l3p48cpd_base_lvtffgnp_0p825v_125c_cbest_CCbest_T_sp.socv
+   - /process/tsmcN3/data/stdcell/n3ge/TSMC/tcbn03e_bwp143mh117l3p48cpd_base_svt_110b/spm/socv/tcbn03e_bwp143mh117l3p48cpd_base_svtffgnp_0p825v_125c_cbest_CCbest_T_sp.socv
+   - /process/tsmcN3/data/stdcell/n3ge/TSMC/tcbn03e_bwp143mh117l3p48cpd_base_ulvt_110b/spm/socv/tcbn03e_bwp143mh117l3p48cpd_base_ulvtffgnp_0p825v_125c_cbest_CCbest_T_sp.socv
+   - /process/tsmcN3/data/stdcell/n3ge/TSMC/tcbn03e_bwp143mh169l3p48cpd_base_elvt_110b/spm/socv/tcbn03e_bwp143mh169l3p48cpd_base_elvtffgnp_0p825v_125c_cbest_CCbest_T_sp.socv
+   - /process/tsmcN3/data/stdcell/n3ge/TSMC/tcbn03e_bwp143mh169l3p48cpd_base_lvt_110b/spm/socv/tcbn03e_bwp143mh169l3p48cpd_base_lvtffgnp_0p825v_125c_cbest_CCbest_T_sp.socv
+   - /process/tsmcN3/data/stdcell/n3ge/TSMC/tcbn03e_bwp143mh169l3p48cpd_base_svt_110b/spm/socv/tcbn03e_bwp143mh169l3p48cpd_base_svtffgnp_0p825v_125c_cbest_CCbest_T_sp.socv
+   - /process/tsmcN3/data/stdcell/n3ge/TSMC/tcbn03e_bwp143mh169l3p48cpd_base_ulvt_110b/spm/socv/tcbn03e_bwp143mh169l3p48cpd_base_ulvtffgnp_0p825v_125c_cbest_CCbest_T_sp.socv
+   - /process/tsmcN3/data/stdcell/n3ge/TSMC/tcbn03e_bwp143mh286l3p48cpd_base_elvt_110b/spm/socv/tcbn03e_bwp143mh286l3p48cpd_base_elvtffgnp_0p825v_125c_cbest_CCbest_T_sp.socv
+   - /process/tsmcN3/data/stdcell/n3ge/TSMC/tcbn03e_bwp143mh286l3p48cpd_base_lvt_110b/spm/socv/tcbn03e_bwp143mh286l3p48cpd_base_lvtffgnp_0p825v_125c_cbest_CCbest_T_sp.socv
+   - /process/tsmcN3/data/stdcell/n3ge/TSMC/tcbn03e_bwp143mh286l3p48cpd_base_svt_110b/spm/socv/tcbn03e_bwp143mh286l3p48cpd_base_svtffgnp_0p825v_125c_cbest_CCbest_T_sp.socv
+   - /process/tsmcN3/data/stdcell/n3ge/TSMC/tcbn03e_bwp143mh286l3p48cpd_base_ulvt_110b/spm/socv/tcbn03e_bwp143mh286l3p48cpd_base_ulvtffgnp_0p825v_125c_cbest_CCbest_T_sp.socv
+   - /process/tsmcN3/data/stdcell/n3ge/TSMC/tcbn03e_bwp143mh286l3p48cpd_mb_elvt_110b/spm/socv/tcbn03e_bwp143mh286l3p48cpd_mb_elvtffgnp_0p825v_125c_cbest_CCbest_T_sp.socv
+   - /process/tsmcN3/data/stdcell/n3ge/TSMC/tcbn03e_bwp143mh286l3p48cpd_mb_lvt_110b/spm/socv/tcbn03e_bwp143mh286l3p48cpd_mb_lvtffgnp_0p825v_125c_cbest_CCbest_T_sp.socv
+   - /process/tsmcN3/data/stdcell/n3ge/TSMC/tcbn03e_bwp143mh286l3p48cpd_mb_svt_110b/spm/socv/tcbn03e_bwp143mh286l3p48cpd_mb_svtffgnp_0p825v_125c_cbest_CCbest_T_sp.socv
+   - /process/tsmcN3/data/stdcell/n3ge/TSMC/tcbn03e_bwp143mh286l3p48cpd_mb_ulvt_110b/spm/socv/tcbn03e_bwp143mh286l3p48cpd_mb_ulvtffgnp_0p825v_125c_cbest_CCbest_T_sp.socv

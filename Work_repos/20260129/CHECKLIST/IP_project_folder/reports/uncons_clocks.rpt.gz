@@ -1,0 +1,30 @@
+ -------------------------------------------------------------------------------  
+                                 TIMING CHECK SUMMARY                                
+    -------------------------------------------------------------------------------  
+     Warning                            Warning Description              Number of   
+                                                                         Warnings    
+    -------------------------------------------------------------------------------  
+    clock_expected           Clock not found where clock is expected    2
+    ideal_clock_waveform     Clock waveform is ideal                    2
+    master_clk_edge_not_reaching   Master clock edge does not reach the generated clock target   0
+    pulse_non-pulse_clock_merge   Merge of pulse and non-pulse clock paths   0
+    no_gen_clock_source      No clock source found for generated clock  0
+    invalid_pll_configuration   No valid path exists from output pin to feedback pin of PLL   0
+    non_unate_clock          Non-unate arc/logic found in clock network 0
+    -------------------------------------------------------------------------------
+    ------------------------------------------------------------------------  
+                              TIMING CHECK DETAIL                             
+    ------------------------------------------------------------------------  
+     Pin                                         Warning               View   
+    ------------------------------------------------------------------------  
+    DFT_lockup_latch_neg_edge/EN     Clock not found where clock is expected   func_ssgnp_0p675v_m40c_cworst_CCworst_T_cworst_CCworst_T_setup
+    DFT_lockup_latch_neg_edge24731/EN   Clock not found where clock is expected   func_ssgnp_0p675v_m40c_cworst_CCworst_T_cworst_CCworst_T_setup
+    ------------------------------------------------------------------------------------------------------------
+    -----------------------------------------------------------------  
+                        TIMING CHECK IDEAL CLOCKS                      
+    -----------------------------------------------------------------  
+     Clock Waveform                   View                             
+    -----------------------------------------------------------------  
+    PHASE_ALIGN_CLOCK                func_ssgnp_0p675v_m40c_cworst_CCworst_T_cworst_CCworst_T_setup
+    IO_ASYNC_CLOCK                   func_ssgnp_0p675v_m40c_cworst_CCworst_T_cworst_CCworst_T_setup
+    -----------------------------------------------------------------

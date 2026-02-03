@@ -1,0 +1,5 @@
+PASS:IMP-3-0-0-02:List Conformal LEC tool version (eg. confrml/241/24.10.100)
+IMP-3-0-0-02-INFO01: Conformal LEC tool version found in setup configuration:
+  Severity: Info Occurrence: 1
+  - confrml/221/22.10.200
+

@@ -1,0 +1,5 @@
+FAIL:IMP-17-0-0-02:Does the area contain all relevant and required information? Netlist/gds/db/lef/libs/spef etc
+IMP-17-0-0-02-ERROR01: Configuration error:
+  Severity: Fail Occurrence: 1
+  - input_files is empty in YAML configuration
+

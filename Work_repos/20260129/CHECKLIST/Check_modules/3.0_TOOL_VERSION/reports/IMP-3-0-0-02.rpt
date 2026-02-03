@@ -1,0 +1,3 @@
+PASS:IMP-3-0-0-02:List Conformal LEC tool version (eg. confrml/241/24.10.100)
+Info Occurrence: 1
+1: Info: confrml/221/22.10.200. In line 32, C:\Users\yuyin\OneDrive - Cadence Design Systems Inc\2025\Checklist\AAI\CHECKLIST_V3\CHECKLIST\IP_project_folder\tcl\2.0\setup_vars.tcl: Conformal LEC tool version found in MODULE_CMD definition

@@ -1,0 +1,64 @@
+module: 15.0_ESD_PERC_CHECK
+stage: Initial
+generated_at: 2025-12-23T18:43:03
+check_items: 
+  IMP-15-0-0-00: 
+    executed: true
+    status: fail
+    description: Confirm whether ESD PERC check is needed.
+    failures: 
+      - index: 1
+        detail: input_files is empty in YAML configuration
+        source_line: N/A
+        source_file: N/A
+        reason: input_files is empty in YAML configuration
+  IMP-15-0-0-01: 
+    executed: true
+    status: fail
+    description: Confirm whether CNOD check is needed. For example, we need to check CNOD for TSMCN5 process.
+    failures: 
+      - index: 1
+        detail: input_files is empty in YAML configuration
+        source_line: N/A
+        source_file: N/A
+        reason: input_files is empty in YAML configuration
+  IMP-15-0-0-02: 
+    executed: true
+    status: fail
+    description: Confirm the PERC voltage setting is correct.(check the Note)
+    failures: 
+      - index: 1
+        detail: input_files is empty in YAML configuration
+        source_line: N/A
+        source_file: N/A
+        reason: input_files is empty in YAML configuration
+  IMP-15-0-0-03: 
+    executed: true
+    status: fail
+    description: Confirm there is no issue about ESD PERC check if PERC check is needed.
+    failures: 
+      - index: 1
+        detail: input_files is empty in YAML configuration
+        source_line: N/A
+        source_file: N/A
+        reason: input_files is empty in YAML configuration
+  IMP-15-0-0-04: 
+    executed: true
+    status: fail
+    description: Confirm there is no issue about CNOD check if CNOD check is needed.
+    failures: 
+      - index: 1
+        detail: input_files is empty in YAML configuration
+        source_line: N/A
+        source_file: N/A
+        reason: input_files is empty in YAML configuration
+  IMP-15-0-0-05: 
+    executed: true
+    status: fail
+    description: Confirm the RDL and PG structure of final database match to your PERC run pass version. If you made some changes on the RDL and PG structure for DRC/EMIR after you passed PERC run, either you can submit another free run within PERC run cycle or run XOR between PERC pass run gds and your final gds and provide justifications like signal RDL layers and PG layers to IO/ESD/PLL are same betwen the two versions.
+    failures: 
+      - index: 1
+        detail: input_files is empty in YAML configuration
+        source_line: N/A
+        source_file: N/A
+        reason: input_files is empty in YAML configuration

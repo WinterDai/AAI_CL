@@ -1,0 +1,45 @@
+{
+  "timestamp": "2026-01-28T13:56:38.399237",
+  "stage": "load_spec",
+  "inputs": {
+    "item_spec_path": "C:\\Users\\wentao\\AppData\\Local\\Temp\\tmpker9elgm\\item_specs\\TEST-01-0-0-00_ItemSpec.md"
+  },
+  "outputs": {
+    "item_spec_content": "# ItemSpec: TEST-01-0-0-00\n\n## 1. Parsing Logic\n\nTarget fields:\n- `tool_name`: The name of the EDA tool\n- `version`: Version string\n\n## 2. Check Logic\n\nType: existence\nDescription: Check that tool information exists\n\n## 3. Waiver Logic\n\nWaiver keywords: \"waiver\", \"exception\"\n\n## 4. Implementation Guide\n\nFile patterns: `*.log`\n",
+    "parsed_spec": {
+      "item_id": "TEST-01-0-0-00",
+      "parsing_logic": {
+        "target_fields": [
+          {
+            "name": "tool_name",
+            "description": "The name of the EDA tool"
+          },
+          {
+            "name": "version",
+            "description": "Version string"
+          }
+        ]
+      },
+      "check_logic": {
+        "type": "unknown",
+        "validation_items": []
+      },
+      "waiver_logic": {
+        "matching_keywords": [
+          "exception",
+          "waiver"
+        ],
+        "global_waiver_behavior": "not specified",
+        "selective_waiver_behavior": "not specified"
+      },
+      "implementation_hints": {
+        "file_patterns": [
+          "*.log"
+        ],
+        "extraction_keywords": [],
+        "special_scenarios": []
+      }
+    },
+    "item_id": "TEST-01-0-0-00"
+  }
+}

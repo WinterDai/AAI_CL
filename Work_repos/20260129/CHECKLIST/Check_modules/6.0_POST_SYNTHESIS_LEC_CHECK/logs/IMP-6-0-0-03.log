@@ -1,0 +1,5 @@
+PASS:IMP-6-0-0-03:Confirm all user defined black boxes have port definitions declared?   (.lib or verilog stub file)
+IMP-6-0-0-03-INFO01: Black box port definitions:
+  Severity: Info Occurrence: 1
+  - No black boxes defined in requirements
+

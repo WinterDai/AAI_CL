@@ -1,0 +1,6 @@
+FAIL:IMP-12-0-0-31:Confirm FLT check result is clean. (for SEC process, for others fill N/A)
+Fail Occurrence: 1
+1: Fail: FLTM.Mx.S.3_M3: FLT rule violations detected in Pegasus_FLT.sum
+Info Occurrence: 2
+1: Info: FLTM.Mx.S.1_M1. In line 348, C:\Users\jingyu\OneDrive - Cadence Design Systems Inc\Desktop\checklist_dev\AI_2026_V1\CHECKLIST\CHECKLIST\IP_project_folder\reports\pv\Pegasus_FLT.sum: FLT rule violation waived per design team approval: Waived - Known issue in legacy IP block, approved by design team[WAIVER]
+2: Info: FLTM.Mx.S.2_M2: FLT rule violation waived per design team approval: Waived - False positive due to custom metal stack configuration[WAIVER]

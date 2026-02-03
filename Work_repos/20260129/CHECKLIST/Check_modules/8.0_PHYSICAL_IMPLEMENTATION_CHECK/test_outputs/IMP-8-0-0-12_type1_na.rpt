@@ -1,0 +1,3 @@
+PASS:IMP-8-0-0-12:Confirm no inputs are tied directly to the power rails (VDD/VSS) by using Tiehigh/Tielow cells(check the Note)
+Info Occurrence: 1
+1: Info: CDN_1ACH_cdn_hs_phy_acm_slice_EW: No tie cell violations found - all inputs use proper Tiehigh/Tielow cells

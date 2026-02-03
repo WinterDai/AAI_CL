@@ -1,0 +1,6 @@
+PASS:IMP-11-0-0-05:Confirm generate all the power library with detail view correctly.
+Info Occurrence: 4
+1: Info: Violations are acceptable for this check: Violations are acceptable for this check[WAIVED_INFO]
+2: Info: gpio_ffgnp_0p825v_125c_cbest_CCbest_T. In line 26, C:\dev_workspace\AI-Agent Checklist Automation\CHECKLIST\CHECKLIST\IP_project_folder\logs\gpio_ffgnp_0p825v_125c_cbest_CCbest_T.LibGen.log: GDS file configuration found in log
+3: Info: sram_ffgnp_0p825v_125c_cbest_CCbest_T. In line 26, C:\dev_workspace\AI-Agent Checklist Automation\CHECKLIST\CHECKLIST\IP_project_folder\logs\sram_ffgnp_0p825v_125c_cbest_CCbest_T.LibGen.log: GDS file configuration found in log
+4: Info: tech_ffgnp_0p825v_125c_cbest_CCbest_T: GDS file configuration found in log

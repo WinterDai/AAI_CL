@@ -1,0 +1,75 @@
+## Task: Understand Check Intent (Layer 0)
+
+Based ONLY on the description and file names below, perform semantic analysis.
+Do NOT guess file content - focus on understanding the CHECK PURPOSE.
+
+## Description
+Confirm the netlist/spef version is correct.
+
+## Input Files (names only)
+
+
+## CRITICAL: Distinguish Target vs Source
+
+**Check Target**: What needs to be verified (the actual data to check)
+**Data Source**: Where to get the information (may be indirect)
+
+Example: "Confirm the netlist/spef version is correct"
+- Check Target: SPEF's *VERSION field, Netlist's version comment
+- Data Source: STA_Log contains PATHS to SPEF/Netlist files (indirect reference)
+- The STA_Log is NOT the target - it's the source that tells us WHERE to find targets
+
+## Output Requirements
+
+Generate JSON with the following structure:
+
+```json
+{
+  "check_target": "What is being verified (one sentence)",
+  "involved_formats": [
+    {
+      "name": "Format name (e.g., SPEF, Netlist_Verilog, STA_Log)",
+      "role": "Role in this check (e.g., source of parasitic data)",
+      "expected_sections": ["Key sections to look for"],
+      "criticality": "required | optional",
+      "data_role": "direct_source | indirect_reference"
+    }
+  ],
+  "data_flow": "How data flows between formats (e.g., A → compare with → B)",
+  "extraction_chain": "Step-by-step data extraction path (e.g., STA_Log → extract paths → parse SPEF → verify version)",
+  "success_criteria": "What defines PASS (be specific)",
+  "failure_criteria": "What defines FAIL (be specific)",
+  "format_hints": {
+    "FormatName": "Hint about this format (e.g., IEEE standard, tool-specific)"
+  }
+}
+```
+
+## Guidelines
+
+1. **data_role** (NEW - most important):
+   - "direct_source": The actual file to parse for verification data (e.g., SPEF for version check)
+   - "indirect_reference": Log/report that CONTAINS REFERENCES to target files (e.g., STA_Log containing SPEF path)
+   - If log file only contains PATHS to other files, it's "indirect_reference"
+   - If log file itself IS the data source (e.g., checking for errors IN the log), it's "direct_source"
+
+2. **criticality** rules:
+   - "required": Format is essential for the check to work
+   - "optional": Format provides supplementary information
+
+3. **extraction_chain**: Must describe the complete data flow
+   - Example: "STA_Log → extract SPEF path → parse SPEF *VERSION → compare with pattern"
+   - If target and source are same file: "Synthesis_Log → search error patterns → count occurrences"
+
+4. **expected_sections**: 
+   - For standard formats (SPEF, DEF, SDC), list known section names
+   - For logs, list expected keywords (Slack, WNS, Error, etc.)
+
+5. **Format name normalization**:
+   - SPEF files → "SPEF"
+   - Verilog/SystemVerilog netlists → "Netlist_Verilog"  
+   - STA logs/reports → "STA_Log"
+   - DEF files → "DEF"
+   - SDC files → "SDC"
+
+Output ONLY the JSON, no explanation.

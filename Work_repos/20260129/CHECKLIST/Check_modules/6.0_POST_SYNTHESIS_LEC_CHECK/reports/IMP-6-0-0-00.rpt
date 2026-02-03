@@ -1,0 +1,5 @@
+PASS:IMP-6-0-0-00:Confirm conformal constraints have been peer reviewed and approved?
+Warn Occurrence: 3
+1: Warn: Command: add_pin_constraints 0 {cmnda_scanmode} -golden. In line 32, C:\Users\yuyin\OneDrive - Cadence Design Systems Inc\2025\Checklist\AAI\CHECKLIST_V3\CHECKLIST\IP_project_folder\logs\map_to_final.log: Need to be peer reviewed
+2: Warn: Command: add_pin_constraints 0 {cmnda_scanen} -golden. In line 34, C:\Users\yuyin\OneDrive - Cadence Design Systems Inc\2025\Checklist\AAI\CHECKLIST_V3\CHECKLIST\IP_project_folder\logs\map_to_final.log: Need to be peer reviewed
+3: Warn: Command: add_pin_constraints 0 {cmnda_scanen_cg} -golden. In line 36, C:\Users\yuyin\OneDrive - Cadence Design Systems Inc\2025\Checklist\AAI\CHECKLIST_V3\CHECKLIST\IP_project_folder\logs\map_to_final.log: Need to be peer reviewed

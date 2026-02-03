@@ -1,0 +1,14 @@
+description: Confirm all Warning message in power analysis log files can be waived.
+input_files:
+- ${CHECKLIST_ROOT}/IP_project_folder/logs/11.0/func_func_ffgnp_0p825v_125c_cbest_CCbest_T_cworst_CCworst_hold_static.logv
+- ${CHECKLIST_ROOT}/IP_project_folder/logs/11.0/func_func_ssgnp_0p675v_125c_cworst_CCworst_T_cworst_CCworst_T_setup_static.logv
+- ${CHECKLIST_ROOT}/IP_project_folder/logs/11.0/func_func_tt_0p75v_85c_typical_typical_setup_dynamic.logv
+- ${CHECKLIST_ROOT}/IP_project_folder/logs/11.0/noerror.logv
+requirements:
+  pattern_items: []
+  value: N/A
+waivers:
+  value: 0
+  waive_items:
+  - 'Explanation: Power analysis warnings are informational only during early design
+    phase'

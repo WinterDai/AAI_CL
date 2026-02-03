@@ -1,0 +1,14 @@
+description: Confirm the switch power pin is not in lef . (for non-PSO, please fill
+  N/A)
+input_files:
+- ${CHECKLIST_ROOT}\IP_project_folder\logs\8.0\do_innovusOUTwoD.logv2
+- ${CHECKLIST_ROOT}\IP_project_folder\reports\8.0\switch_power_layer.rpt
+requirements:
+  pattern_items:
+  - gddr36_ew_cdn_ghs_phy_top
+  value: 1
+waivers:
+  value: 0
+  waive_items:
+  - 'Explanation: This check is informational only for top-level designs during early
+    integration phases'

@@ -1,0 +1,16 @@
+description: Confirm the power switches connection is correct . (for non-PSO, please
+  fill N/A)
+input_files:
+- ${CHECKLIST_ROOT}\IP_project_folder\logs\8.0\do_fv.log
+- ${CHECKLIST_ROOT}\IP_project_folder\reports\8.0\check_power_switch_connection.pass.rpt
+requirements:
+  pattern_items: []
+  value: N/A
+waivers:
+  value: 2
+  waive_items:
+  - name: SUCCEEDED!
+    reason: LEC verification waived - formal verification not required for this design
+      iteration
+  - name: Found no problems or warnings.
+    reason: Database check waived - known connectivity issues approved by design team

@@ -1,0 +1,100 @@
+Test Log: IMP-2-0-0-03
+================================================================================
+
+[Test 1/6] Type 1 (requirements.value=N/A, waivers.value=N/A)
+--------------------------------------------------------------------------------
+Test ID: type1_na
+Status: PASS
+
+Checker Log Output:
+PASS:IMP-2-0-0-03:Confirm DRC rule deck was not modified? If it was, explain in comments field.
+IMP-2-0-0-03-INFO01: DRC rule deck path found in log file:
+  Severity: Info Occurrence: 1
+  - C:\Users\chenweif\Checker_dev\CHECKLIST\CHECKLIST\IP_project_folder\ruledeck\2.0\PLN5LO_16M_1X1Xb1Xe1Ya1Yb6Y2Yy2R_014.13_1a.encrypt.phy
+
+
+================================================================================
+
+[Test 2/6] Type 1 (requirements.value=N/A, waivers.value=0)
+--------------------------------------------------------------------------------
+Test ID: type1_0
+Status: PASS
+
+Checker Log Output:
+PASS:IMP-2-0-0-03:Confirm DRC rule deck was not modified? If it was, explain in comments field.
+IMP-2-0-0-03-INFO01: [WAIVED_INFO]: Waived information:
+  Severity: Info Occurrence: 1
+  - Explanation: Rule deck path extraction is informational only for this project phase
+IMP-2-0-0-03-INFO02: DRC rule deck path found in log file:
+  Severity: Info Occurrence: 1
+  - C:\Users\chenweif\Checker_dev\CHECKLIST\CHECKLIST\IP_project_folder\ruledeck\2.0\PLN5LO_16M_1X1Xb1Xe1Ya1Yb6Y2Yy2R_014.13_1a.encrypt.phy
+
+
+================================================================================
+
+[Test 3/6] Type 2 (requirements.value>0, waivers.value=N/A)
+--------------------------------------------------------------------------------
+Test ID: type2_na
+Status: ERROR
+
+Checker Log Output:
+FAIL:IMP-2-0-0-03:Confirm DRC rule deck was not modified? If it was, explain in comments field.
+IMP-2-0-0-03-ERROR01: DRC rule deck modified from golden baseline:
+  Severity: Fail Occurrence: 1
+  - C:\Users\chenweif\Checker_dev\CHECKLIST\CHECKLIST\IP_project_folder\ruledeck\2.0\PLN5LO_16M_1X1Xb1Xe1Ya1Yb6Y2Yy2R_014.13_1a.encrypt.phy
+
+
+================================================================================
+
+[Test 4/6] Type 2 (requirements.value>0, waivers.value=0)
+--------------------------------------------------------------------------------
+Test ID: type2_0
+Status: PASS
+
+Checker Log Output:
+PASS:IMP-2-0-0-03:Confirm DRC rule deck was not modified? If it was, explain in comments field.
+IMP-2-0-0-03-INFO01: [WAIVED_INFO]: Waived information:
+  Severity: Info Occurrence: 1
+  - Explanation: Rule deck modifications are acceptable during development phase
+IMP-2-0-0-03-INFO02: [WAIVED_AS_INFO]: DRC rule deck modified from golden baseline:
+  Severity: Info Occurrence: 1
+  - C:\Users\chenweif\Checker_dev\CHECKLIST\CHECKLIST\IP_project_folder\ruledeck\2.0\PLN5LO_16M_1X1Xb1Xe1Ya1Yb6Y2Yy2R_014.13_1a.encrypt.phy
+
+
+================================================================================
+
+[Test 5/6] Type 3
+--------------------------------------------------------------------------------
+Test ID: type3
+Status: PASS
+
+Checker Log Output:
+PASS:IMP-2-0-0-03:Confirm DRC rule deck was not modified? If it was, explain in comments field.
+IMP-2-0-0-03-WARN01: Unused waivers:
+  Severity: Warn Occurrence: 1
+  - cdn_hs_phy_top.DRCwD.pvl
+IMP-2-0-0-03-INFO01: DRC rule deck modification waived:
+  Severity: Info Occurrence: 1
+  - C:\Users\chenweif\Checker_dev\CHECKLIST\CHECKLIST\IP_project_folder\ruledeck\2.0\PLN5LO_16M_1X1Xb1Xe1Ya1Yb6Y2Yy2R_014.13_1a.encrypt.phy
+
+
+================================================================================
+
+[Test 6/6] Type 4
+--------------------------------------------------------------------------------
+Test ID: type4
+Status: PASS
+
+Checker Log Output:
+PASS:IMP-2-0-0-03:Confirm DRC rule deck was not modified? If it was, explain in comments field.
+IMP-2-0-0-03-WARN01: Unused waivers:
+  Severity: Warn Occurrence: 2
+  - PLN5LO_16M_1X1Xb1Xe1Ya1Yb6Y2Yy2R_014.13_1a.encrypt
+  - cdn_hs_phy_top.DRCwD.pvl
+IMP-2-0-0-03-INFO01: DRC rule deck path found in log file:
+  Severity: Info Occurrence: 1
+  - C:\Users\chenweif\Checker_dev\CHECKLIST\CHECKLIST\IP_project_folder\ruledeck\2.0\PLN5LO_16M_1X1Xb1Xe1Ya1Yb6Y2Yy2R_014.13_1a.encrypt.phy
+
+
+================================================================================
+

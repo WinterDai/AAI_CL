@@ -1,0 +1,6 @@
+PASS:IMP-16-0-0-04:Confirm update the IPTAG if FIRM PHY slices are reused as FIRM PHY delivery for another project.
+IMP-16-0-0-04-INFO01: IPTAG verification completed - both block-level and PHY-level IPTAGs found:
+  Severity: Info Occurrence: 2
+  - Block IPTAG: cdn_hs_phy_top
+  - PHY IPTAG: HPCFSC_D5D4_T5G$C202209262108$17M1X1Xb1Xe1Ya1Yb5Y2Yy2Yx2R
+

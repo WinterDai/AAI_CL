@@ -1,0 +1,3 @@
+FAIL:IMP-2-0-0-07:Confirm LVS rule deck was not modified? If it was, explain in comments field.
+Fail Occurrence: 1
+1: Fail: local_file_missing: LVS rule deck content differs from golden baseline - see diff report for details - see diff file: C:\Users\chenweif\Checker_dev\CHECKLIST\CHECKLIST\Check_modules\2.0_TECHFILE_AND_RULE_DECK_CHECK\reports\IMP-2-0-0-07_diff.txt

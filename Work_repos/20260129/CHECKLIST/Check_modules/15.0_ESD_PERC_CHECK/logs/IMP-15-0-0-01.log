@@ -1,0 +1,5 @@
+PASS:IMP-15-0-0-01:Confirm whether CNOD check is needed. For example, we need to check CNOD for TSMCN5 process.
+IMP-15-0-0-01-INFO01: Process technology identified and CNOD requirement determined:
+  Severity: Info Occurrence: 1
+  - Process: tsmc3 | CNOD Check Required: Yes
+

@@ -1,0 +1,5 @@
+FAIL:IMP-11-0-0-19:Confirm you are aware of and follow the customers' requirement about wake-up/rush-current if they have.(For non-PSO, please fill N/A)
+IMP-11-0-0-19-ERROR01: Configuration error:
+  Severity: Fail Occurrence: 1
+  - input_files is empty in YAML configuration
+

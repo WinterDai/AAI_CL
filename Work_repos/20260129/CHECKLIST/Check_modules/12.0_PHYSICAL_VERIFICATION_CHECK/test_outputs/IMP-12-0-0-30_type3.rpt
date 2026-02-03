@@ -1,0 +1,5 @@
+PASS:IMP-12-0-0-30:Confirm DFM check result is clean. (for SEC process, for others fill N/A)
+Info Occurrence: 3
+1: Info: DFM rule: PM_M2_C_3 - 579 violations. In line 225, C:\Users\jingyu\OneDrive - Cadence Design Systems Inc\Desktop\checklist_dev\AI_2026_V1\CHECKLIST\CHECKLIST\IP_project_folder\reports\pv\Pegasus_DFM.sum: DFM rule violations waived per design team approval[WAIVER]
+2: Info: PM_M5_C_2: DFM rule violations waived per design team approval: Waived - Manufacturing team approved deviation for this metal layer[WAIVER]
+3: Info: DFM rule: PM_M3_C_1 - 0 violations. In line 227, C:\Users\jingyu\OneDrive - Cadence Design Systems Inc\Desktop\checklist_dev\AI_2026_V1\CHECKLIST\CHECKLIST\IP_project_folder\reports\pv\Pegasus_DFM.sum: All DFM rule checks validated with zero violations in Pegasus_DFM.sum

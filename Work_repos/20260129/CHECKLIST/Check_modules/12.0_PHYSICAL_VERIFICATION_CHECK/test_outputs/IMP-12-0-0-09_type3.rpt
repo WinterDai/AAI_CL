@@ -1,0 +1,4 @@
+PASS:IMP-12-0-0-09:Confirm the LVS rule deck setting is correct.
+Warn Occurrence: 2
+1: Warn: GATE_TO_PG_CHECK: Waiver defined but no violation matched: Waived - Gate-to-power/ground check disabled for analog blocks per design team[WAIVER]
+2: Warn: RC_DFM_RULE: Waiver defined but no violation matched: Waived - DFM rule checking not required for this design per foundry approval[WAIVER]

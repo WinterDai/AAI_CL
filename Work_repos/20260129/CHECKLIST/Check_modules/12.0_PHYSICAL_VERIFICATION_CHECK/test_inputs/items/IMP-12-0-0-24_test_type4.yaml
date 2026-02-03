@@ -1,0 +1,14 @@
+description: Confirm add the chipBoundary layer to check boundary DRC for test chip.
+input_files:
+- ${CHECKLIST_ROOT}/IP_project_folder/reports/pv/Calibre_DRC.rep
+- ${CHECKLIST_ROOT}/IP_project_folder/reports/pv/Pegasus_DRC.rep
+requirements:
+  pattern_items: []
+  value: N/A
+waivers:
+  value: 2
+  waive_items:
+  - name: Chip_Boundary
+    reason: Waived - Chip_Boundary layer not required for block-level DRC verification
+  - name: Chip_Boundary
+    reason: Waived - Multiple chip boundaries acceptable for multi-die design

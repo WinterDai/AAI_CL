@@ -1,0 +1,116 @@
+Test Log: IMP-12-0-0-07
+================================================================================
+
+[Test 1/6] Type 1 (requirements.value=N/A, waivers.value=N/A)
+--------------------------------------------------------------------------------
+Test ID: type1_na
+Status: ERROR
+
+Checker Log Output:
+FAIL:IMP-12-0-0-07:Confirm the ANT rule deck setting is correct.
+IMP-12-0-0-07-ERROR01: Required ANT rule deck settings not found or incorrectly configured:
+  Severity: Fail Occurrence: 1
+  - warning_102
+IMP-12-0-0-07-INFO01: ANT rule deck configuration validated successfully:
+  Severity: Info Occurrence: 6
+  - ACC_DEBUG
+  - DEBUG_MX
+  - DEBUG_VIA
+  - TSV_RULES
+  - WITH_2MR
+  - WITH_4MZ
+
+
+================================================================================
+
+[Test 2/6] Type 1 (requirements.value=N/A, waivers.value=0)
+--------------------------------------------------------------------------------
+Test ID: type1_0
+Status: PASS
+
+Checker Log Output:
+PASS:IMP-12-0-0-07:Confirm the ANT rule deck setting is correct.
+IMP-12-0-0-07-INFO01: [WAIVED_INFO]: Waived information:
+  Severity: Info Occurrence: 1
+  - Explanation: This check is informational only for early development phase
+IMP-12-0-0-07-INFO02: ANT rule deck configuration validated successfully:
+  Severity: Info Occurrence: 6
+  - ACC_DEBUG
+  - DEBUG_MX
+  - DEBUG_VIA
+  - TSV_RULES
+  - WITH_2MR
+  - WITH_4MZ
+IMP-12-0-0-07-INFO03: [WAIVED_AS_INFO]: Required ANT rule deck settings not found or incorrectly configured:
+  Severity: Info Occurrence: 1
+  - warning_102
+
+
+================================================================================
+
+[Test 3/6] Type 2 (requirements.value>0, waivers.value=N/A)
+--------------------------------------------------------------------------------
+Test ID: type2_na
+Status: PASS
+
+Checker Log Output:
+PASS:IMP-12-0-0-07:Confirm the ANT rule deck setting is correct.
+
+
+================================================================================
+
+[Test 4/6] Type 2 (requirements.value>0, waivers.value=0)
+--------------------------------------------------------------------------------
+Test ID: type2_0
+Status: PASS
+
+Checker Log Output:
+PASS:IMP-12-0-0-07:Confirm the ANT rule deck setting is correct.
+IMP-12-0-0-07-INFO01: [WAIVED_INFO]: Waived information:
+  Severity: Info Occurrence: 1
+  - Explanation: Debug settings are allowed during development phase
+
+
+================================================================================
+
+[Test 5/6] Type 3 (requirements.value>0, waivers.value>0)
+--------------------------------------------------------------------------------
+Test ID: type3
+Status: PASS
+
+Checker Log Output:
+PASS:IMP-12-0-0-07:Confirm the ANT rule deck setting is correct.
+IMP-12-0-0-07-WARN01: Unused waivers:
+  Severity: Warn Occurrence: 2
+  - ACC_DEBUG
+  - FHDMIM
+
+
+================================================================================
+
+[Test 6/6] Type 4 (requirements.value=N/A, waivers.value>0)
+--------------------------------------------------------------------------------
+Test ID: type4
+Status: ERROR
+
+Checker Log Output:
+FAIL:IMP-12-0-0-07:Confirm the ANT rule deck setting is correct.
+IMP-12-0-0-07-ERROR01: Required ANT rule deck settings not found or incorrectly configured:
+  Severity: Fail Occurrence: 1
+  - warning_102
+IMP-12-0-0-07-WARN01: Unused waivers:
+  Severity: Warn Occurrence: 2
+  - ACC_DEBUG
+  - FHDMIM
+IMP-12-0-0-07-INFO01: ANT rule deck configuration validated successfully:
+  Severity: Info Occurrence: 6
+  - ACC_DEBUG
+  - DEBUG_MX
+  - DEBUG_VIA
+  - TSV_RULES
+  - WITH_2MR
+  - WITH_4MZ
+
+
+================================================================================
+

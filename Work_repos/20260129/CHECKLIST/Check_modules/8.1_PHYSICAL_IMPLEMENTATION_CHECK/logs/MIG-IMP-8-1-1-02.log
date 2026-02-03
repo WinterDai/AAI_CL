@@ -1,0 +1,5 @@
+FAIL:MIG-IMP-8-1-1-02:Confirm NO special VDDCK bump for PAD memory clock domain IO,should share the VDD bump from other core logic.
+MIG-IMP-8-1-1-02-ERROR01: Configuration error:
+  Severity: Fail Occurrence: 1
+  - input_files is empty in YAML configuration
+

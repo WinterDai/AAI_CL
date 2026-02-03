@@ -1,0 +1,6 @@
+PASS:IMP-2-0-0-03:Confirm DRC rule deck was not modified? If it was, explain in comments field.
+Warn Occurrence: 2
+1: Warn: PLN5LO_16M_1X1Xb1Xe1Ya1Yb6Y2Yy2R_014.13_1a.encrypt: Waiver entry not matched - no corresponding rule deck modification found: Modification of this rule deck is acceptable for this project[WAIVER]
+2: Warn: cdn_hs_phy_top.DRCwD.pvl: Waiver entry not matched - no corresponding rule deck modification found: Project-specific rule deck customization approved by design team[WAIVER]
+Info Occurrence: 1
+1: Info: C:\Users\chenweif\Checker_dev\CHECKLIST\CHECKLIST\IP_project_folder\ruledeck\2.0\PLN5LO_16M_1X1Xb1Xe1Ya1Yb6Y2Yy2R_014.13_1a.encrypt.phy. In line 302, C:\Users\chenweif\Checker_dev\CHECKLIST\CHECKLIST\IP_project_folder\logs\2.0\DRC_pvl.log: Rule deck path successfully extracted from DRC log

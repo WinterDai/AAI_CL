@@ -1,0 +1,11 @@
+description: Confirm the design has no power open/short and all instances are physically
+  connected.
+input_files:
+- ${CHECKLIST_ROOT}/IP_project_folder/reports/lvs.rep.cls
+requirements:
+  pattern_items: []
+  value: N/A
+waivers:
+  value: 0
+  waive_items:
+  - 'Explanation: Power connectivity check is informational during early design phase'

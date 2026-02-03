@@ -1,0 +1,5 @@
+FAIL:IMP-5-0-0-07:Confirm that there are no other violations or errors (max cap, max transition etc)?
+IMP-5-0-0-07-ERROR01: Missing or unreadable input files - configuration error:
+  Severity: Fail Occurrence: 1
+  - C:\Users\wentao\AAI_local\AAI\Main_Work\ACL\CHECKLIST\CHECKLIST\IP_project_folder\logs\genus.syn_generic.log
+

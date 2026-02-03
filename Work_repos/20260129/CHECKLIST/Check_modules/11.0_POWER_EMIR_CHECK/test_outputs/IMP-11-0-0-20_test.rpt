@@ -1,0 +1,88 @@
+Test Report: IMP-11-0-0-20
+================================================================================
+
+[Test 1/6] Type 1 (requirements.value=N/A, waivers.value=N/A)
+--------------------------------------------------------------------------------
+Test ID: type1_na
+Status: PASS
+
+Checker Report Output:
+PASS:IMP-11-0-0-20:Confirm wake-up time meet customer's requirement. (For non-PSO, please fill N/A)
+Info Occurrence: 3
+1: Info: Wake-up time: 1.11e-07s. In line 9, C:\Users\chudongy\dev_workspace\ai_checklist\CHECKLIST\CHECKLIST\IP_project_folder\reports\11.0\Powerup.rpt: All power switches turned on and wake-up time found in simulation report
+2: Info: Power switches: 28215/28215 activated. In line 11, C:\Users\chudongy\dev_workspace\ai_checklist\CHECKLIST\CHECKLIST\IP_project_folder\reports\11.0\Powerup.rpt: All power switches turned on and wake-up time found in simulation report
+3: Info: Rush current: 0.427297A. In line 8, C:\Users\chudongy\dev_workspace\ai_checklist\CHECKLIST\CHECKLIST\IP_project_folder\reports\11.0\Powerup.rpt: All power switches turned on and wake-up time found in simulation report
+
+================================================================================
+
+[Test 2/6] Type 1 (requirements.value=N/A, waivers.value=0)
+--------------------------------------------------------------------------------
+Test ID: type1_0
+Status: PASS
+
+Checker Report Output:
+PASS:IMP-11-0-0-20:Confirm wake-up time meet customer's requirement. (For non-PSO, please fill N/A)
+Info Occurrence: 4
+1: Info: Explanation: Wake-up time check is informational only for early design stages: Explanation: Wake-up time check is informational only for early design stages[WAIVED_INFO]
+2: Info: Wake-up time: 1.11e-07s. In line 9, C:\Users\chudongy\dev_workspace\ai_checklist\CHECKLIST\CHECKLIST\IP_project_folder\reports\11.0\Powerup.rpt: All power switches turned on and wake-up time found in simulation report
+3: Info: Power switches: 28215/28215 activated. In line 11, C:\Users\chudongy\dev_workspace\ai_checklist\CHECKLIST\CHECKLIST\IP_project_folder\reports\11.0\Powerup.rpt: All power switches turned on and wake-up time found in simulation report
+4: Info: Rush current: 0.427297A. In line 8, C:\Users\chudongy\dev_workspace\ai_checklist\CHECKLIST\CHECKLIST\IP_project_folder\reports\11.0\Powerup.rpt: All power switches turned on and wake-up time found in simulation report
+
+================================================================================
+
+[Test 3/6] Type 2 (requirements.value>0, waivers.value=N/A)
+--------------------------------------------------------------------------------
+Test ID: type2_na
+Status: ERROR
+
+Checker Report Output:
+FAIL:IMP-11-0-0-20:Confirm wake-up time meet customer's requirement. (For non-PSO, please fill N/A)
+Fail Occurrence: 1
+1: Fail: Wake-up time: 1.11e-07s exceeds requirement 1.00e-07s by 1.10e-08s. In line 9, C:\Users\chudongy\dev_workspace\ai_checklist\CHECKLIST\CHECKLIST\IP_project_folder\reports\11.0\Powerup.rpt: Measured wake-up time exceeds customer requirement threshold
+
+================================================================================
+
+[Test 4/6] Type 2 (requirements.value>0, waivers.value=0)
+--------------------------------------------------------------------------------
+Test ID: type2_0
+Status: PASS
+
+Checker Report Output:
+PASS:IMP-11-0-0-20:Confirm wake-up time meet customer's requirement. (For non-PSO, please fill N/A)
+Info Occurrence: 2
+1: Info: Explanation: Wake-up time violations are acceptable for this low-power design: Explanation: Wake-up time violations are acceptable for this low-power design[WAIVED_INFO]
+2: Info: Wake-up time: 1.11e-07s exceeds requirement 1.00e-07s by 1.10e-08s. In line 9, C:\Users\chudongy\dev_workspace\ai_checklist\CHECKLIST\CHECKLIST\IP_project_folder\reports\11.0\Powerup.rpt: Measured wake-up time exceeds customer requirement threshold[WAIVED_AS_INFO]
+
+================================================================================
+
+[Test 5/6] Type 3
+--------------------------------------------------------------------------------
+Test ID: type3
+Status: PASS
+
+Checker Report Output:
+PASS:IMP-11-0-0-20:Confirm wake-up time meet customer's requirement. (For non-PSO, please fill N/A)
+Warn Occurrence: 1
+1: Warn: 2.0e-07: Waiver not matched - no corresponding wake-up time violation found: Wake-up time up to 200ns waived - acceptable for deep sleep recovery scenario[WAIVER]
+Info Occurrence: 1
+1: Info: Wake-up time: 1.11e-07s exceeds requirement 1.00e-07s by 1.10e-08s. In line 9, C:\Users\chudongy\dev_workspace\ai_checklist\CHECKLIST\CHECKLIST\IP_project_folder\reports\11.0\Powerup.rpt: : Wake-up time up to 150ns waived - customer approved for low-power mode operation[WAIVER]
+
+================================================================================
+
+[Test 6/6] Type 4
+--------------------------------------------------------------------------------
+Test ID: type4
+Status: PASS
+
+Checker Report Output:
+PASS:IMP-11-0-0-20:Confirm wake-up time meet customer's requirement. (For non-PSO, please fill N/A)
+Warn Occurrence: 2
+1: Warn: Power switches: Waiver not matched - no corresponding wake-up time violation found: Power switch activation check waived - incomplete simulation acceptable for early verification stage[WAIVER]
+2: Warn: Wake-up time: Waiver not matched - no corresponding wake-up time violation found: Wake-up time measurement waived - report format differs for legacy tool version[WAIVER]
+Info Occurrence: 3
+1: Info: Wake-up time: 1.11e-07s. In line 9, C:\Users\chudongy\dev_workspace\ai_checklist\CHECKLIST\CHECKLIST\IP_project_folder\reports\11.0\Powerup.rpt: All power switches turned on and wake-up time found in simulation report
+2: Info: Power switches: 28215/28215 activated. In line 11, C:\Users\chudongy\dev_workspace\ai_checklist\CHECKLIST\CHECKLIST\IP_project_folder\reports\11.0\Powerup.rpt: All power switches turned on and wake-up time found in simulation report
+3: Info: Rush current: 0.427297A. In line 8, C:\Users\chudongy\dev_workspace\ai_checklist\CHECKLIST\CHECKLIST\IP_project_folder\reports\11.0\Powerup.rpt: All power switches turned on and wake-up time found in simulation report
+
+================================================================================
+

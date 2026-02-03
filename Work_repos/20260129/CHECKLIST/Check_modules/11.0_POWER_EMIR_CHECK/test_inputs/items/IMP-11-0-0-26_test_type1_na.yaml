@@ -1,0 +1,11 @@
+description: 'List the VT ratio (without physical cells): EG: TSMCN7/N6:SVT(50%)/LVT(40%)/ULVT(10%)
+  TSMCN5/N4/N3/N2:SVT(50%)/LVTLL(20%)/LVT(20%)/ULVTLL(5%)/ULVT(5%)/ELVT(0%) SEC:RVT(50%)/LVT(40%)/SLVT(10%)
+  INTl_I3/18A:ad(HVT 30%)/ac(SVT 20%)/ab(LVT 30%)/aa(ULVT 20%)'
+input_files:
+- ${CHECKLIST_ROOT}/IP_project_folder/logs/11.0/vtratio.sum
+requirements:
+  pattern_items: []
+  value: N/A
+waivers:
+  value: N/A
+  waive_items: []

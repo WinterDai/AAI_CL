@@ -1,0 +1,18 @@
+PASS:IMP-12-0-0-11:Confirm the DRC check result is clean. (fill the confidence level of not touching floorplan again in comment if fill no, for example, 90%~100%)
+Info Occurrence: 16
+1: Info: Explanation: DRC violations are informational only for this design phase: Explanation: DRC violations are informational only for this design phase[WAIVED_INFO]
+2: Info: AN.R.20mg: 290: DRC violations found in reports - design requires fixes[WAIVED_AS_INFO]
+3: Info: EFP.VIA13.R.1.1: 41: DRC violations found in reports - design requires fixes[WAIVED_AS_INFO]
+4: Info: EFP.VIA13.R.1.2: 5: DRC violations found in reports - design requires fixes[WAIVED_AS_INFO]
+5: Info: ESD.1g: 1: DRC violations found in reports - design requires fixes[WAIVED_AS_INFO]
+6: Info: ESD.1g: 2: DRC violations found in reports - design requires fixes[WAIVED_AS_INFO]
+7: Info: HIA.CDM9A.3.1.zg: 20: DRC violations found in reports - design requires fixes[WAIVED_AS_INFO]
+8: Info: HIA.CDM9A.3.zg: 20: DRC violations found in reports - design requires fixes[WAIVED_AS_INFO]
+9: Info: PO.DN.11: 1: DRC violations found in reports - design requires fixes[WAIVED_AS_INFO]
+10: Info: RH_TN.WARN.1: 156: DRC violations found in reports - design requires fixes[WAIVED_AS_INFO]
+11: Info: RH_TN.WARN.1: 256: DRC violations found in reports - design requires fixes[WAIVED_AS_INFO]
+12: Info: RR:RE:FB1AN.R.5: 12973: DRC violations found in reports - design requires fixes[WAIVED_AS_INFO]
+13: Info: RR:RE:FB1AN_OD.R.22: 498: DRC violations found in reports - design requires fixes[WAIVED_AS_INFO]
+14: Info: RR:RE:FB1AN_OD.R.23.4: 491: DRC violations found in reports - design requires fixes[WAIVED_AS_INFO]
+15: Info: RR:RE:FB1AN_OD.R.24.1.z: 1944: DRC violations found in reports - design requires fixes[WAIVED_AS_INFO]
+16: Info: RR:RE:FB1AN_OD.S.27.z: 379: DRC violations found in reports - design requires fixes[WAIVED_AS_INFO]

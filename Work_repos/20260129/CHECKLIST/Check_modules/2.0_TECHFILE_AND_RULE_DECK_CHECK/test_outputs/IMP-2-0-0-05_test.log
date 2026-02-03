@@ -1,0 +1,131 @@
+Test Log: IMP-2-0-0-05
+================================================================================
+
+[Test 1/6] Type 1 (requirements.value=N/A, waivers.value=N/A)
+--------------------------------------------------------------------------------
+Test ID: type1_na
+Status: PASS
+
+Checker Log Output:
+PASS:IMP-2-0-0-05:Confirm ANT rule deck was not modified? If it was, explain in comments field.
+IMP-2-0-0-05-INFO01: ANT rule deck path found in log file:
+  Severity: Info Occurrence: 1
+  - PLN5LO_16M_1X1Xb1Xe1Ya1Yb6Y2Yy2R_014_ANT.13_1a.encrypt
+
+
+
+STDERR:
+C:\Users\chenweif\Checker_dev\CHECKLIST\CHECKLIST\Check_modules\2.0_TECHFILE_AND_RULE_DECK_CHECK\scripts\checker\IMP-2-0-0-05.py:163: SyntaxWarning: "\p" is an invalid escape sequence. Such sequences will not work in the future. Did you mean "\\p"? A raw string is also an option.
+  Pattern: include "C:\path\to\ANT_rule_deck.encrypt"
+
+================================================================================
+
+[Test 2/6] Type 1 (requirements.value=N/A, waivers.value=0)
+--------------------------------------------------------------------------------
+Test ID: type1_0
+Status: PASS
+
+Checker Log Output:
+PASS:IMP-2-0-0-05:Confirm ANT rule deck was not modified? If it was, explain in comments field.
+IMP-2-0-0-05-INFO01: [WAIVED_INFO]: Waived information:
+  Severity: Info Occurrence: 1
+  - Explanation: ANT rule deck modification check is informational only for this project phase
+IMP-2-0-0-05-INFO02: ANT rule deck path found in log file:
+  Severity: Info Occurrence: 1
+  - PLN5LO_16M_1X1Xb1Xe1Ya1Yb6Y2Yy2R_014_ANT.13_1a.encrypt
+
+
+
+STDERR:
+C:\Users\chenweif\Checker_dev\CHECKLIST\CHECKLIST\Check_modules\2.0_TECHFILE_AND_RULE_DECK_CHECK\scripts\checker\IMP-2-0-0-05.py:163: SyntaxWarning: "\p" is an invalid escape sequence. Such sequences will not work in the future. Did you mean "\\p"? A raw string is also an option.
+  Pattern: include "C:\path\to\ANT_rule_deck.encrypt"
+
+================================================================================
+
+[Test 3/6] Type 2 (requirements.value>0, waivers.value=N/A)
+--------------------------------------------------------------------------------
+Test ID: type2_na
+Status: ERROR
+
+Checker Log Output:
+FAIL:IMP-2-0-0-05:Confirm ANT rule deck was not modified? If it was, explain in comments field.
+IMP-2-0-0-05-ERROR01: ANT rule deck modified - differences detected:
+  Severity: Fail Occurrence: 1
+  - IMP-2-0-0-05_diff_20260121_145608.txt
+
+
+
+STDERR:
+C:\Users\chenweif\Checker_dev\CHECKLIST\CHECKLIST\Check_modules\2.0_TECHFILE_AND_RULE_DECK_CHECK\scripts\checker\IMP-2-0-0-05.py:163: SyntaxWarning: "\p" is an invalid escape sequence. Such sequences will not work in the future. Did you mean "\\p"? A raw string is also an option.
+  Pattern: include "C:\path\to\ANT_rule_deck.encrypt"
+
+================================================================================
+
+[Test 4/6] Type 2 (requirements.value>0, waivers.value=0)
+--------------------------------------------------------------------------------
+Test ID: type2_0
+Status: PASS
+
+Checker Log Output:
+PASS:IMP-2-0-0-05:Confirm ANT rule deck was not modified? If it was, explain in comments field.
+IMP-2-0-0-05-INFO01: [WAIVED_INFO]: Waived information:
+  Severity: Info Occurrence: 1
+  - Explanation: Rule deck modifications are acceptable during development phase
+IMP-2-0-0-05-INFO02: [WAIVED_AS_INFO]: ANT rule deck modified - differences detected:
+  Severity: Info Occurrence: 1
+  - IMP-2-0-0-05_diff_20260121_145608.txt
+
+
+
+STDERR:
+C:\Users\chenweif\Checker_dev\CHECKLIST\CHECKLIST\Check_modules\2.0_TECHFILE_AND_RULE_DECK_CHECK\scripts\checker\IMP-2-0-0-05.py:163: SyntaxWarning: "\p" is an invalid escape sequence. Such sequences will not work in the future. Did you mean "\\p"? A raw string is also an option.
+  Pattern: include "C:\path\to\ANT_rule_deck.encrypt"
+
+================================================================================
+
+[Test 5/6] Type 3
+--------------------------------------------------------------------------------
+Test ID: type3
+Status: ERROR
+
+Checker Log Output:
+FAIL:IMP-2-0-0-05:Confirm ANT rule deck was not modified? If it was, explain in comments field.
+IMP-2-0-0-05-ERROR01: ANT rule deck modified - differences detected:
+  Severity: Fail Occurrence: 1
+  - IMP-2-0-0-05_diff_20260121_145609.txt
+IMP-2-0-0-05-WARN01: Unused waivers:
+  Severity: Warn Occurrence: 2
+  - PLN5LO_16M_054_PATCH_ANT.13_1a.encrypt
+  - PLN5LO_16M_1X1Xb1Xe1Ya1Yb6Y2Yy2R_014_ANT.13_1a.encrypt
+
+
+
+STDERR:
+C:\Users\chenweif\Checker_dev\CHECKLIST\CHECKLIST\Check_modules\2.0_TECHFILE_AND_RULE_DECK_CHECK\scripts\checker\IMP-2-0-0-05.py:163: SyntaxWarning: "\p" is an invalid escape sequence. Such sequences will not work in the future. Did you mean "\\p"? A raw string is also an option.
+  Pattern: include "C:\path\to\ANT_rule_deck.encrypt"
+
+================================================================================
+
+[Test 6/6] Type 4
+--------------------------------------------------------------------------------
+Test ID: type4
+Status: PASS
+
+Checker Log Output:
+PASS:IMP-2-0-0-05:Confirm ANT rule deck was not modified? If it was, explain in comments field.
+IMP-2-0-0-05-WARN01: Unused waivers:
+  Severity: Warn Occurrence: 2
+  - PLN5LO_16M_1X1Xb1Xe1Ya1Yb6Y2Yy2R_014_ANT.13_1a.encrypt
+  - PLN5LO_16M_054_PATCH_ANT.13_1a.encrypt
+IMP-2-0-0-05-INFO01: ANT rule deck path found in log file:
+  Severity: Info Occurrence: 1
+  - PLN5LO_16M_1X1Xb1Xe1Ya1Yb6Y2Yy2R_014_ANT.13_1a.encrypt
+
+
+
+STDERR:
+C:\Users\chenweif\Checker_dev\CHECKLIST\CHECKLIST\Check_modules\2.0_TECHFILE_AND_RULE_DECK_CHECK\scripts\checker\IMP-2-0-0-05.py:163: SyntaxWarning: "\p" is an invalid escape sequence. Such sequences will not work in the future. Did you mean "\\p"? A raw string is also an option.
+  Pattern: include "C:\path\to\ANT_rule_deck.encrypt"
+
+================================================================================
+

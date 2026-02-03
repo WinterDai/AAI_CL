@@ -1,0 +1,9 @@
+FAIL:IMP-11-0-0-05:Confirm generate all the power library with detail view correctly.
+IMP-11-0-0-05-ERROR01: GDS file paths not found for library:
+  Severity: Fail Occurrence: 1
+  - pattern1
+IMP-11-0-0-05-WARN01: Unused waivers:
+  Severity: Warn Occurrence: 2
+  - item1
+  - item2
+

@@ -1,0 +1,584 @@
+Pegasus 23.22-s014 pFGEfODGlHwEPxS/sqz8tQ 2025-12-13 15:27:15 266876 nfdpc322
+Copyright 2024 Cadence Design Systems, Inc.
+All rights reserved worldwide.
+
+INFO:    Command Line Options: -drc -dp 32 -dpsubdir cdn_hs_phy_top/dp -lsf -oasis /projects/TC72_DDR5_SF4X_Dragonfly_9600_80bit_PHY/work/cdn_hs_phy_top/ericchou/signoff/signoff-eco-B1-fix-1213/dbs/cdn_hs_phy_top.wIPTAG.oas -top_cell cdn_hs_phy_top -run_dir cdn_hs_phy_top/PVS -flatten_output cdn_hs_phy_top/PVL/DFM_configfile.pvl
+INFO:    Launch host CPU: Model: Intel(R) Xeon(R) Gold 6242R CPU @ 3.10GHz, OS: Red Hat Enterprise Linux Workstation release 7.9 (Maipo), Logical cores: 40, Physical cores: 40, Cache: 36608 KB, CPU Speed: 3100 MHz
+         Launch host Memory: MemTotal: 772435 MB,  MemFree: 286615 MB,  SwapTotal: 32767 MB,  SwapFree: 12 MB,  VmallocTotal: 33554431 MB,  VmallocUsed: 1937 MB
+INFO:    Current path: /projects/TC72_DDR5_SF4X_Dragonfly_9600_80bit_PHY/work/cdn_hs_phy_top/ericchou/signoff/signoff-eco-B1-fix-1213/cmd_run/DFMwD
+INFO:    Run directory: /projects/TC72_DDR5_SF4X_Dragonfly_9600_80bit_PHY/work/cdn_hs_phy_top/ericchou/signoff/signoff-eco-B1-fix-1213/cmd_run/DFMwD/cdn_hs_phy_top/PVS
+INFO:    Log directory: /projects/TC72_DDR5_SF4X_Dragonfly_9600_80bit_PHY/work/cdn_hs_phy_top/ericchou/signoff/signoff-eco-B1-fix-1213/cmd_run/DFMwD/cdn_hs_phy_top/PVS/pegasus-1765619835-nfdpc322-266876
+INFO:    Setting LAYOUT_PATH to: /projects/TC72_DDR5_SF4X_Dragonfly_9600_80bit_PHY/work/cdn_hs_phy_top/ericchou/signoff/signoff-eco-B1-fix-1213/dbs/cdn_hs_phy_top.wIPTAG.oas 
+INFO:    Setting LAYOUT_PRIMARY to: cdn_hs_phy_top 
+INFO:    PVL parsing results:
+
+INFO:    See "/projects/TC72_DDR5_SF4X_Dragonfly_9600_80bit_PHY/work/cdn_hs_phy_top/ericchou/signoff/signoff-eco-B1-fix-1213/cmd_run/DFMwD/cdn_hs_phy_top/PVS/pegasus-1765619835-nfdpc322-266876/pvl.log" for additional details.
+
+INFO:    Checking out 3 license(s) of feature: 'Pegasus_DRC' version 23.2
+INFO:    License checkout successful ... 2025-12-13 15:27:20
+
+INFO:    Checking out 1 license(s) of feature: 'Pegasus_mature_node' version 23.2
+INFO:    License checkout successful ... 2025-12-13 15:27:20
+WARNING: 
+[WARN] no LSF resource specified, host use "bsub -W 36000" to start LSF slave. 
+You can use DP_LSF_RESOURCE environment to specify bsub resource.
+
+INFO:    Oasis Input Summary
+         File name: /projects/TC72_DDR5_SF4X_Dragonfly_9600_80bit_PHY/work/cdn_hs_phy_top/ericchou/signoff/signoff-eco-B1-fix-1213/dbs/cdn_hs_phy_top.wIPTAG.oas
+         File size: 1365491884
+         Version: 1.0
+         Last Modified: 15:26:30 11/13/2025
+         Last Accessed: 15:27:24 11/13/2025
+         User units per micron: 4000
+
+WARNING: Cell name parameter "NONE" for inside_cell [-not] operation not located.
+
+INFO:    Cell Summary:
+         ----------------------------------------------------------------------------
+             CELL                                                                                                                 INSTANCE    GEOMETRY      LABELS        HREF        FREF
+         ----------------------------------------------------------------------------
+         PLLSF4HSDESKEWA                                                                                                            136600        9043           0           1           1
+         BUMP66                                                                                                                          3           0           0         153         153
+         ----------------------------------------------------------------------------
+         TOTAL CELL = 42918;  INSTANCE = 418020751;  GEOMETRY = 391063277;  LABEL = 0
+
+INFO:    Layer Summary:
+         ----------------------------------------------------------------------------
+             LAYER                                                                           ID       HPN      HTC        FPN       FTC
+         ----------------------------------------------------------------------------
+         VNCAP                                                                             1011        36         0    345934         0
+         CELLSNR                                                                           1105         0         0         0         0
+         ROMEX                                                                             1139         0         0         0         0
+         SRPERIPH                                                                          1141         0         0         0         0
+         CDMM                                                                              2003         1         0        22         0
+         OUTLINE                                                                           2005     11690         0  53675909         0
+         NFETCFILLTR                                                                       2055       327         0  29762004         0
+         PFETCFILLTR                                                                       2057        96         0  18147594         0
+         CHIPEDGE                                                                          2271         0         0         0         0
+         GUARDEDG                                                                          2273         0         0         0         0
+         GUARDRNG                                                                          2275         0         0         0         0
+         HDVNCAP                                                                           3910        11         0      4185         0
+         NPLUS                                                                             4395      6704         0  27694572         0
+         NW                                                                                4397      7446         0  27237722         0
+         ----------------------------------------------------------------------------
+
+INFO:    CHIP EXTENT: 0 0 15932160 11448000
+
+INFO:    Worker 1 started on host nfdpcil046 with 4 cpu(s)
+         CPU: Model: Intel(R) Xeon(R) Gold 6342 CPU @ 2.80GHz, OS: Red Hat Enterprise Linux Workstation release 7.9 (Maipo), Logical cores: 48, Physical cores: 48, Cache: 36864 KB, CPU Speed: 2800 MHz
+         Memory: MemTotal: 1031337 MB,  MemFree: 765619 MB,  SwapTotal: 131071 MB,  SwapFree: 120378 MB,  VmallocTotal: 33554431 MB,  VmallocUsed: 1896 MB
+INFO:    Worker 2 started on host nfdpcsr276 with 4 cpu(s)
+         CPU: Model: Intel(R) Xeon(R) Platinum 8462Y+, OS: Red Hat Enterprise Linux release 8.6 (Ootpa), Logical cores: 64, Physical cores: 64, Cache: 61440 KB, CPU Speed: 2800 MHz
+         Memory: MemTotal: 1031238 MB,  MemFree: 774250 MB,  SwapTotal: 4095 MB,  SwapFree: 198 MB,  VmallocTotal: 13421772799 MB,  VmallocUsed: 0 MB
+INFO:    Worker 3 started on host nfdpc227 with 4 cpu(s)
+         CPU: Model: Intel(R) Xeon(R) Gold 6248 CPU @ 2.50GHz, OS: Red Hat Enterprise Linux Workstation release 7.4 (Maipo), Logical cores: 40, Physical cores: 40, Cache: 28160 KB, CPU Speed: 2500 MHz
+         Memory: MemTotal: 772418 MB,  MemFree: 678666 MB,  SwapTotal: 32767 MB,  SwapFree: 19012 MB,  VmallocTotal: 33554431 MB,  VmallocUsed: 1995 MB
+INFO:    Worker 4 started on host nfdpcsr265 with 4 cpu(s)
+         CPU: Model: Intel(R) Xeon(R) Platinum 8462Y+, OS: Red Hat Enterprise Linux release 8.6 (Ootpa), Logical cores: 64, Physical cores: 64, Cache: 61440 KB, CPU Speed: 2800 MHz
+         Memory: MemTotal: 1031238 MB,  MemFree: 785373 MB,  SwapTotal: 4095 MB,  SwapFree: 907 MB,  VmallocTotal: 13421772799 MB,  VmallocUsed: 0 MB
+INFO:    Worker 5 started on host nfdpcsr236 with 4 cpu(s)
+         CPU: Model: Intel(R) Xeon(R) Platinum 8462Y+, OS: Red Hat Enterprise Linux release 8.6 (Ootpa), Logical cores: 64, Physical cores: 64, Cache: 61440 KB, CPU Speed: 2800 MHz
+         Memory: MemTotal: 1031238 MB,  MemFree: 830574 MB,  SwapTotal: 4095 MB,  SwapFree: 521 MB,  VmallocTotal: 13421772799 MB,  VmallocUsed: 0 MB
+INFO:    Worker 6 started on host nfdpc265 with 4 cpu(s)
+         CPU: Model: Intel(R) Xeon(R) Gold 6242R CPU @ 3.10GHz, OS: Red Hat Enterprise Linux Workstation release 7.4 (Maipo), Logical cores: 40, Physical cores: 40, Cache: 36608 KB, CPU Speed: 3100 MHz
+         Memory: MemTotal: 772419 MB,  MemFree: 526300 MB,  SwapTotal: 32767 MB,  SwapFree: 22989 MB,  VmallocTotal: 33554431 MB,  VmallocUsed: 1985 MB
+INFO:    Worker 7 started on host nfdpc162 with 4 cpu(s)
+         CPU: Model: Intel(R) Xeon(R) Platinum 8168 CPU @ 2.70GHz, OS: Red Hat Enterprise Linux Workstation release 7.4 (Maipo), Logical cores: 48, Physical cores: 48, Cache: 33792 KB, CPU Speed: 2700 MHz
+         Memory: MemTotal: 1031289 MB,  MemFree: 696665 MB,  SwapTotal: 32767 MB,  SwapFree: 28049 MB,  VmallocTotal: 33554431 MB,  VmallocUsed: 1996 MB
+INFO:    Worker 8 started on host nfdpcsr241 with 4 cpu(s)
+         CPU: Model: Intel(R) Xeon(R) Platinum 8462Y+, OS: Red Hat Enterprise Linux release 8.6 (Ootpa), Logical cores: 64, Physical cores: 64, Cache: 61440 KB, CPU Speed: 2800 MHz
+         Memory: MemTotal: 1031238 MB,  MemFree: 870552 MB,  SwapTotal: 4095 MB,  SwapFree: 73 MB,  VmallocTotal: 13421772799 MB,  VmallocUsed: 0 MB
+
+INFO:    Ports ...
+         ========================================================================
+
+INFO:    Texts For Connectivity ...
+         ========================================================================
+
+INFO:    Texts For SELECT -LABEL ...
+         ========================================================================
+
+INFO:    Texts For EXPAND_TEXT_ORIGIN ...
+         ========================================================================
+
+INFO:    Texts For DFM_TEXT ...
+         ========================================================================
+
+INFO:    Layer Summary(Texts For Connectivity):
+         ----------------------------------------------------------------------------
+             LAYER                                                                           ID       TEXTS
+         ----------------------------------------------------------------------------
+         ----------------------------------------------------------------------------
+
+INFO:    Layer Summary(Texts For SELECT -LABEL):
+         ----------------------------------------------------------------------------
+             LAYER                                                                           ID       TEXTS
+         ----------------------------------------------------------------------------
+         ----------------------------------------------------------------------------
+
+INFO:    Layer Summary(Texts For EXPAND_TEXT_ORIGIN):
+         ----------------------------------------------------------------------------
+             LAYER                                                                           ID       TEXTS
+         ----------------------------------------------------------------------------
+         ----------------------------------------------------------------------------
+
+INFO:    Layer Summary(Texts For DFM_TEXT):
+         ----------------------------------------------------------------------------
+             LAYER                                                                           ID       TEXTS
+         ----------------------------------------------------------------------------
+         ----------------------------------------------------------------------------
+
+INFO:    Expanded Cell Summary
+INFO:    Status: Running preprocessing as of 2025-12-13 15:55:44   Elapsed: 00:28:25
+         Worker: Active CPUs  Total Mem(MB)  Active Mem(MB)  CPU time(s)
+              0:    1 /   1          18105           12097         1708
+INFO:    Status: Running preprocessing as of 2025-12-13 15:56:44   Elapsed: 00:29:25
+         Worker: Active CPUs  Total Mem(MB)  Active Mem(MB)  CPU time(s)
+              0:    1 /   1          18105           12138         1822
+INFO:    Status: Running preprocessing as of 2025-12-13 15:57:44   Elapsed: 00:30:25
+         Worker: Active CPUs  Total Mem(MB)  Active Mem(MB)  CPU time(s)
+              0:    1 /   1          18105           12125         1882
+INFO:    Status: Running preprocessing as of 2025-12-13 15:58:44   Elapsed: 00:31:25
+         Worker: Active CPUs  Total Mem(MB)  Active Mem(MB)  CPU time(s)
+              0:    1 /   1          18105           13451         1941
+INFO:    Status: Running preprocessing as of 2025-12-13 15:59:44   Elapsed: 00:32:25
+         Worker: Active CPUs  Total Mem(MB)  Active Mem(MB)  CPU time(s)
+              0:    1 /   1          18105           13919         2019
+INFO:    Status: Running preprocessing as of 2025-12-13 16:00:44   Elapsed: 00:33:25
+         Worker: Active CPUs  Total Mem(MB)  Active Mem(MB)  CPU time(s)
+              0:    1 /   1          18105           14324         2134
+INFO:    Status: Running preprocessing as of 2025-12-13 16:01:44   Elapsed: 00:34:25
+         Worker: Active CPUs  Total Mem(MB)  Active Mem(MB)  CPU time(s)
+              0:    1 /   1          18105           16295         2194
+INFO:    Status: Running preprocessing as of 2025-12-13 16:02:44   Elapsed: 00:35:25
+         Worker: Active CPUs  Total Mem(MB)  Active Mem(MB)  CPU time(s)
+              0:    1 /   1          18105           17887         2254
+INFO:    Status: Running preprocessing as of 2025-12-13 16:03:44   Elapsed: 00:36:25
+         Worker: Active CPUs  Total Mem(MB)  Active Mem(MB)  CPU time(s)
+              0:    1 /   1          18581           18254         2313
+
+INFO:    Status: Running preprocessing as of 2025-12-13 16:04:44   Elapsed: 00:37:25
+         Worker: Active CPUs  Total Mem(MB)  Active Mem(MB)  CPU time(s)
+              0:    1 /   1          18692           17047         2379
+INFO:    Status: Running preprocessing as of 2025-12-13 16:05:44   Elapsed: 00:38:25
+         Worker: Active CPUs  Total Mem(MB)  Active Mem(MB)  CPU time(s)
+              0:    1 /   1          18692           16232         2476
+INFO:    Status: Running preprocessing as of 2025-12-13 16:06:44   Elapsed: 00:39:25
+         Worker: Active CPUs  Total Mem(MB)  Active Mem(MB)  CPU time(s)
+              0:    1 /   1          18692           11075         2881
+INFO:    Status: Running preprocessing as of 2025-12-13 16:07:44   Elapsed: 00:40:25
+         Worker: Active CPUs  Total Mem(MB)  Active Mem(MB)  CPU time(s)
+              0:    1 /   1          18692           12708         3393
+INFO:    Status: Running preprocessing as of 2025-12-13 16:08:44   Elapsed: 00:41:25
+         Worker: Active CPUs  Total Mem(MB)  Active Mem(MB)  CPU time(s)
+              0:    1 /   1          18692           12705         3634
+INFO:    Status: Running preprocessing as of 2025-12-13 16:09:44   Elapsed: 00:42:25
+         Worker: Active CPUs  Total Mem(MB)  Active Mem(MB)  CPU time(s)
+              0:    1 /   1          18692           13104         4273
+INFO:    Status: Running preprocessing as of 2025-12-13 16:10:44   Elapsed: 00:43:25
+         Worker: Active CPUs  Total Mem(MB)  Active Mem(MB)  CPU time(s)
+              0:    1 /   1          18692           12748         5229
+INFO:    Status: Running preprocessing as of 2025-12-13 16:11:44   Elapsed: 00:44:25
+         Worker: Active CPUs  Total Mem(MB)  Active Mem(MB)  CPU time(s)
+              0:    1 /   1          18692           14774         6068
+INFO:    Status: Running preprocessing as of 2025-12-13 16:12:44   Elapsed: 00:45:25
+         Worker: Active CPUs  Total Mem(MB)  Active Mem(MB)  CPU time(s)
+              0:    1 /   1          18692           13755         6345
+INFO:    Status: Running preprocessing as of 2025-12-13 16:13:44   Elapsed: 00:46:25
+         Worker: Active CPUs  Total Mem(MB)  Active Mem(MB)  CPU time(s)
+              0:    1 /   1          18692           15332         6500
+INFO:    Status: Running preprocessing as of 2025-12-13 16:14:45   Elapsed: 00:47:25
+         Worker: Active CPUs  Total Mem(MB)  Active Mem(MB)  CPU time(s)
+              0:    1 /   1          20819            3365         6645
+INFO:    Status: Runset 4% complete as of 2025-12-13 16:16:14   Elapsed: 00:48:54
+         Worker: Active CPUs  Total Mem(MB)  Active Mem(MB)  CPU time(s)
+              1:    4 /   4            686             683          185
+              2:    4 /   4            986             985          178
+              3:    4 /   4            736             733          211
+              4:    4 /   4            743             737          174
+              5:    4 /   4            499             499          129
+              6:    4 /   4           1550            1549          150
+              7:    4 /   4            500             496          196
+              8:    4 /   4            488             487          131
+INFO:    Status: Runset 11% complete as of 2025-12-13 16:17:14   Elapsed: 00:49:54
+         Worker: Active CPUs  Total Mem(MB)  Active Mem(MB)  CPU time(s)
+              1:    4 /   4            433             432          359
+              2:    4 /   4           3663            3661          418
+              3:    4 /   4            960             951          417
+              4:    4 /   4           1185            1181          377
+              5:    4 /   4            470             468          291
+              6:    4 /   4           1719            1707          350
+              7:    4 /   4            413             412          385
+              8:    4 /   4            505             505          285
+INFO:    Status: Runset 32% complete as of 2025-12-13 16:18:14   Elapsed: 00:50:54
+         Worker: Active CPUs  Total Mem(MB)  Active Mem(MB)  CPU time(s)
+              1:    4 /   4            498             498          529
+              2:    4 /   4           6505            6491          568
+              3:    4 /   4            801             800          582
+              4:    4 /   4            755             748          568
+              5:    4 /   4            490             489          434
+              6:    4 /   4           1197            1181          509
+              7:    4 /   4            538             538          548
+              8:    4 /   4            433             411          441
+INFO:    Rule PM_D11_C_18_copy completed with no violations, 1/74
+INFO:    Rule PM_D11_C_18 completed with no violations, 2/74
+INFO:    Rule PM_D10_C_18_copy completed with no violations, 3/74
+INFO:    Rule PM_D10_C_18 completed with no violations, 4/74
+INFO:    Rule PM_D7_C_18_copy completed with no violations, 5/74
+INFO:    Rule PM_D7_C_18 completed with no violations, 6/74
+INFO:    Rule PM_D8_C_18_copy completed with no violations, 7/74
+INFO:    Rule PM_D8_C_18 completed with no violations, 8/74
+INFO:    Rule PM_D9_C_18_copy completed with no violations, 9/74
+INFO:    Rule PM_D9_C_18 completed with no violations, 10/74
+INFO:    Rule PM_D12_C_18_copy completed with no violations, 11/74
+INFO:    Rule PM_D12_C_18 completed with no violations, 12/74
+INFO:    Rule PM_D6_C_18_copy completed with no violations, 13/74
+INFO:    Rule PM_D6_C_18 completed with no violations, 14/74
+INFO:    Status: Runset 56% complete as of 2025-12-13 16:19:14   Elapsed: 00:51:54
+         Worker: Active CPUs  Total Mem(MB)  Active Mem(MB)  CPU time(s)
+              1:    4 /   4            505             504          706
+              2:    4 /   4            552             541          683
+              3:    4 /   4            783             783          786
+              4:    4 /   4            760             759          756
+              5:    4 /   4            868             865          634
+              6:    4 /   4           2086            2086          690
+              7:    4 /   4           1227            1227          705
+              8:    4 /   4           1044            1036          640
+INFO:    Rule PM_NW_C_1 completed with no violations, 15/74
+INFO:    Rule PM_MF_M3_C_1 completed with no violations, 16/74
+INFO:    Status: Runset 60% complete as of 2025-12-13 16:20:14   Elapsed: 00:52:54
+         Worker: Active CPUs  Total Mem(MB)  Active Mem(MB)  CPU time(s)
+              1:    4 /   4           1178            1176          898
+              2:    4 /   4            585             534          874
+              3:    4 /   4            541             493          983
+              4:    4 /   4            574             562          947
+              5:    4 /   4            503             468          822
+              6:    4 /   4           1605            1589          923
+              7:    4 /   4           1780            1780          869
+              8:    4 /   4           2838            2827          816
+INFO:    Rule PM_SxFirst_C_1 completed with no violations, 17/74
+INFO:    Rule PM_M1_C_1 completed with no violations, 18/74
+INFO:    Rule PM_PPLUS_C_1 completed with no violations, 19/74
+INFO:    Rule PM_M1_X1_C_1 completed with no violations, 20/74
+INFO:    Rule PM_D7_C_16 completed with no violations, 21/74
+INFO:    Status: Runset 73% complete as of 2025-12-13 16:21:14   Elapsed: 00:53:55
+         Worker: Active CPUs  Total Mem(MB)  Active Mem(MB)  CPU time(s)
+              1:    4 /   4            823             820         1071
+              2:    4 /   4           1321            1312         1017
+              3:    4 /   4            647             647         1160
+              4:    4 /   4            610             562         1145
+              5:    4 /   4            511             511         1012
+              6:    4 /   4           1745            1727         1163
+              7:    4 /   4            883             881         1004
+              8:    4 /   4           1962            1939         1004
+INFO:    Rule PM_D8_C_16 completed with no violations, 22/74
+INFO:    Rule PM_D9_C_16 completed with no violations, 23/74
+INFO:    Rule PM_D6_C_16 completed with no violations, 24/74
+INFO:    Rule PM_H1_C_1 completed with no violations, 25/74
+INFO:    Rule PM_D11_C_16 completed with no violations, 26/74
+INFO:    Rule PM_H2_C_1 completed with no violations, 27/74
+INFO:    Rule PM_D12_C_16 completed with no violations, 28/74
+INFO:    Rule PM_D10_C_16 completed with no violations, 29/74
+INFO:    Rule CHIP_AREA_INFO completed with no violations, 30/74
+INFO:    Rule PM_F5_C_2 completed with no violations, 31/74
+INFO:    Rule PM_D7_C_17 completed with no violations, 32/74
+INFO:    Rule OUTLINE_count completed with no violations, 33/74
+INFO:    Rule PM_V1_C_1 completed with no violations, 34/74
+INFO:    Status: Runset 82% complete as of 2025-12-13 16:22:14   Elapsed: 00:54:55
+         Worker: Active CPUs  Total Mem(MB)  Active Mem(MB)  CPU time(s)
+              1:    4 /   4            799             798         1274
+              2:    4 /   4            784             726         1130
+              3:    4 /   4            715             715         1328
+              4:    4 /   4            610             555         1339
+              5:    4 /   4            654             648         1190
+              6:    4 /   4           1182            1173         1288
+              7:    4 /   4            747             744         1165
+              8:    4 /   4           5678            5646         1214
+INFO:    Rule PM_D9_C_17 completed with no violations, 35/74
+INFO:    Rule PM_D11_C_17 completed with no violations, 36/74
+INFO:    Rule PM_D8_C_17 completed with no violations, 37/74
+INFO:    Rule PM_D6_C_17 completed with no violations, 38/74
+INFO:    Rule PM_D10_C_17 completed with no violations, 39/74
+INFO:    Rule PM_M2_C_3 completed with 579 violations, 40/74
+INFO:    Rule PM_F4_C_2 completed with no violations, 41/74
+INFO:    Rule PM_D12_C_17 completed with no violations, 42/74
+INFO:    Rule OVL_D14S13_C_1_Criteria completed with no violations, 43/74
+INFO:    Rule OVL_D13S12_C_1_Criteria completed with no violations, 44/74
+INFO:    Status: Runset 86% complete as of 2025-12-13 16:23:14   Elapsed: 00:55:55
+         Worker: Active CPUs  Total Mem(MB)  Active Mem(MB)  CPU time(s)
+              1:    4 /   4           2986            2975         1439
+              2:    4 /   4           4591            4590         1314
+              3:    4 /   4            597             597         1487
+              4:    4 /   4           2731            2725         1510
+              5:    4 /   4           1287            1266         1388
+              6:    4 /   4           1305            1303         1493
+              7:    4 /   4           1085            1080         1362
+              8:    4 /   4           3461            3421         1417
+INFO:    Rule OVL_D7S6_C_1_Criteria completed with no violations, 45/74
+INFO:    Rule OVL_D6FD_C_1_Criteria completed with no violations, 46/74
+INFO:    Rule cp_PM_M3_C_1_L1 completed with no violations, 47/74
+INFO:    Rule PM_M3_C_1 completed with no violations, 48/74
+INFO:    Status: Runset 88% complete as of 2025-12-13 16:24:14   Elapsed: 00:56:55
+         Worker: Active CPUs  Total Mem(MB)  Active Mem(MB)  CPU time(s)
+              1:    4 /   4           4158            4145         1560
+              2:    4 /   4           7224            7224         1389
+              3:    4 /   4           5641            5621         1651
+              4:    4 /   4           4221            4197         1644
+              5:    4 /   4           3206            3205         1584
+              6:    4 /   4           2105            2104         1694
+              7:    4 /   4            707             702         1568
+              8:    4 /   4           5599            5540         1581
+INFO:    Rule OVL_F5Q4_C_1_Criteria completed with no violations, 49/74
+INFO:    Rule OVL_D10S9_C_1_Criteria completed with no violations, 50/74
+INFO:    Rule OVL_D14S13_C_1_SCORE completed with no violations, 51/74
+INFO:    Rule OVL_D13S12_C_1_SCORE completed with no violations, 52/74
+INFO:    Rule OVL_D8S7_C_1_Criteria completed with no violations, 53/74
+INFO:    Status: Runset 89% complete as of 2025-12-13 16:25:14   Elapsed: 00:57:55
+         Worker: Active CPUs  Total Mem(MB)  Active Mem(MB)  CPU time(s)
+              1:    4 /   4           1851            1838         1654
+              2:    4 /   4           4854            4823         1505
+              3:    4 /   4           7312            7312         1711
+              4:    4 /   4           7854            7853         1719
+              5:    4 /   4           1907            1903         1799
+              6:    4 /   4           2233            2233         1933
+              7:    4 /   4           5080            5075         1696
+              8:    4 /   4           3219            3216         1661
+INFO:    Rule OVL_D11S10_C_1_Criteria completed with no violations, 54/74
+INFO:    Rule OVL_D6FD_C_1_SCORE completed with no violations, 55/74
+INFO:    Rule OVL_D12S11_C_1_Criteria completed with no violations, 56/74
+INFO:    Rule OVL_D9S8_C_1_Criteria completed with no violations, 57/74
+INFO:    Rule OVL_D7S6_C_1_SCORE completed with no violations, 58/74
+INFO:    Rule OVL_F5Q4_C_1_SCORE completed with no violations, 59/74
+INFO:    Status: Runset 89% complete as of 2025-12-13 16:26:14   Elapsed: 00:58:55
+         Worker: Active CPUs  Total Mem(MB)  Active Mem(MB)  CPU time(s)
+              1:    4 /   4           5537            5523         1775
+              2:    4 /   4           8031            8031         1612
+              3:    4 /   4           5668            5668         1856
+              4:    4 /   4           6790            6777         1848
+              5:    4 /   4           1255            1250         2002
+              6:    4 /   4           2369            2364         2077
+              7:    4 /   4           4663            4660         1830
+              8:    4 /   4           4183            4163         1852
+INFO:    Rule OVL_D12S11_C_1_SCORE completed with no violations, 60/74
+INFO:    Rule PM_M1_C_2 completed with no violations, 61/74
+INFO:    Rule PM_RX_C_1 completed with no violations, 62/74
+INFO:    Rule PM_M1_C_3 completed with no violations, 63/74
+INFO:    Rule OVL_D8S7_C_1_SCORE completed with no violations, 64/74
+         Remaining rules: cp_PM_M2_C_1_L1  OVL_D9S8_C_1_SCORE  OVL_D10S9_C_1_SCORE  OVL_D11S10_C_1_SCORE  PM_CA_C_1  PM_CB_CR_C_1  PM_M2_C_1  PM_M2_C_5  PM_V1_M1_C_1  PM_V2_M2_C_1 
+INFO:    Rule OVL_D11S10_C_1_SCORE completed with no violations, 65/74
+         Remaining rules: cp_PM_M2_C_1_L1  OVL_D9S8_C_1_SCORE  OVL_D10S9_C_1_SCORE  PM_CA_C_1  PM_CB_CR_C_1  PM_M2_C_1  PM_M2_C_5  PM_V1_M1_C_1  PM_V2_M2_C_1 
+INFO:    Status: Runset 90% complete as of 2025-12-13 16:27:14   Elapsed: 00:59:55
+         Worker: Active CPUs  Total Mem(MB)  Active Mem(MB)  CPU time(s)
+              1:    4 /   4           3258            3197         1807
+              2:    4 /   4           5807            5807         1817
+              3:    4 /   4           7525            7524         1918
+              4:    4 /   4           3313            3200         1883
+              5:    4 /   4            882             823         2071
+              6:    4 /   4           1437            1437         2141
+              7:    4 /   4           6366            6366         1898
+              8:    4 /   4           3313            3308         2076
+INFO:    Rule OVL_D9S8_C_1_SCORE completed with no violations, 66/74
+         Remaining rules: cp_PM_M2_C_1_L1  OVL_D10S9_C_1_SCORE  PM_CA_C_1  PM_CB_CR_C_1  PM_M2_C_1  PM_M2_C_5  PM_V1_M1_C_1  PM_V2_M2_C_1 
+INFO:    Rule OVL_D10S9_C_1_SCORE completed with no violations, 67/74
+         Remaining rules: cp_PM_M2_C_1_L1  PM_CA_C_1  PM_CB_CR_C_1  PM_M2_C_1  PM_M2_C_5  PM_V1_M1_C_1  PM_V2_M2_C_1 
+INFO:    Status: Runset 90% complete as of 2025-12-13 16:28:14   Elapsed: 01:00:55
+         Worker: Active CPUs  Total Mem(MB)  Active Mem(MB)  CPU time(s)
+              1:    4 /   4           3258            3197         1807
+              2:    4 /   4           7471            7470         2054
+              3:    4 /   4           2834            2792         1929
+              4:    4 /   4           3313            3200         1883
+              5:    4 /   4            882             823         2071
+              6:    4 /   4           1592            1592         2201
+              7:    4 /   4           3010            2909         1905
+              8:    4 /   4           3637            3630         2315
+INFO:    Status: Runset 90% complete as of 2025-12-13 16:29:14   Elapsed: 01:01:55
+         Worker: Active CPUs  Total Mem(MB)  Active Mem(MB)  CPU time(s)
+              1:    4 /   4           3258            3197         1807
+              2:    4 /   4           4008            4007         2166
+              3:    4 /   4           2834            2792         1929
+              4:    4 /   4           3313            3200         1883
+              5:    4 /   4            882             823         2071
+              6:    4 /   4           1758            1758         2261
+              7:    4 /   4           3010            2909         1905
+              8:    4 /   4           3924            3920         2553
+INFO:    Rule PM_CA_C_1 completed with no violations, 68/74
+         Remaining rules: cp_PM_M2_C_1_L1  PM_CB_CR_C_1  PM_M2_C_1  PM_M2_C_5  PM_V1_M1_C_1  PM_V2_M2_C_1 
+INFO:    Status: Runset 91% complete as of 2025-12-13 16:30:14   Elapsed: 01:02:55
+         Worker: Active CPUs  Total Mem(MB)  Active Mem(MB)  CPU time(s)
+              1:    4 /   4           3258            3197         1807
+              2:    4 /   4           3428            3413         2371
+              3:    4 /   4           2834            2792         1929
+              4:    4 /   4           3313            3200         1883
+              5:    4 /   4            882             823         2071
+              6:    4 /   4           1937            1936         2321
+              7:    4 /   4           3010            2909         1905
+              8:    4 /   4           4322            4308         2792
+INFO:    Status: Runset 91% complete as of 2025-12-13 16:31:14   Elapsed: 01:03:55
+         Worker: Active CPUs  Total Mem(MB)  Active Mem(MB)  CPU time(s)
+              1:    4 /   4           3258            3197         1807
+              2:    4 /   4           3428            3413         2371
+              3:    4 /   4           2834            2792         1929
+              4:    4 /   4           3313            3200         1883
+              5:    4 /   4            882             823         2071
+              6:    4 /   4           2449            2449         2380
+              7:    4 /   4           3010            2909         1905
+              8:    4 /   4           5656            5641         2977
+INFO:    Status: Runset 91% complete as of 2025-12-13 16:32:14   Elapsed: 01:04:55
+         Worker: Active CPUs  Total Mem(MB)  Active Mem(MB)  CPU time(s)
+              1:    4 /   4           3445            3430         1908
+              2:    4 /   4           3482            3481         2473
+              3:    4 /   4           2921            2921         2019
+              4:    4 /   4           3313            3200         1883
+              5:    4 /   4            882             823         2071
+              6:    4 /   4            706             604         2538
+              7:    4 /   4           3010            2909         1905
+              8:    4 /   4           5287            5269         3049
+INFO:    Rule cp_PM_M2_C_1_L1 completed with no violations, 69/74
+         Remaining rules: PM_CB_CR_C_1  PM_M2_C_1  PM_M2_C_5  PM_V1_M1_C_1  PM_V2_M2_C_1 
+INFO:    Rule PM_M2_C_1 completed with no violations, 70/74
+         Remaining rules: PM_CB_CR_C_1  PM_M2_C_5  PM_V1_M1_C_1  PM_V2_M2_C_1 
+INFO:    Rule PM_V2_M2_C_1 completed with no violations, 71/74
+         Remaining rules: PM_CB_CR_C_1  PM_M2_C_5  PM_V1_M1_C_1 
+INFO:    Rule PM_V1_M1_C_1 completed with no violations, 72/74
+         Remaining rules: PM_CB_CR_C_1  PM_M2_C_5 
+INFO:    Status: Runset 97% complete as of 2025-12-13 16:33:14   Elapsed: 01:05:55
+         Worker: Active CPUs  Total Mem(MB)  Active Mem(MB)  CPU time(s)
+              1:    4 /   4           3254            3197         1983
+              2:    4 /   4           3400            3385         2534
+              3:    4 /   4           3000            2997         2259
+              4:    4 /   4           3313            3200         1883
+              5:    4 /   4            882             823         2071
+              6:    4 /   4            643             536         2555
+              7:    4 /   4           3010            2909         1905
+              8:    4 /   4           5387            5369         3108
+INFO:    Status: Runset 97% complete as of 2025-12-13 16:34:14   Elapsed: 01:06:55
+         Worker: Active CPUs  Total Mem(MB)  Active Mem(MB)  CPU time(s)
+              1:    4 /   4           3254            3197         1983
+              2:    4 /   4           3400            3385         2534
+              3:    4 /   4           3003            3002         2464
+              4:    4 /   4           3313            3200         1883
+              5:    4 /   4            882             823         2071
+              6:    4 /   4            643             536         2555
+              7:    4 /   4           3010            2909         1905
+              8:    4 /   4           4628            4625         3273
+INFO:    Status: Runset 97% complete as of 2025-12-13 16:35:14   Elapsed: 01:07:55
+         Worker: Active CPUs  Total Mem(MB)  Active Mem(MB)  CPU time(s)
+              1:    4 /   4           3254            3197         1983
+              2:    4 /   4           3400            3385         2534
+              3:    4 /   4           3310            3310         2651
+              4:    4 /   4           3313            3200         1883
+              5:    4 /   4            882             823         2071
+              6:    4 /   4            643             536         2555
+              7:    4 /   4           3010            2909         1906
+              8:    4 /   4           7125            7118         3506
+INFO:    Status: Runset 98% complete as of 2025-12-13 16:36:14   Elapsed: 01:08:55
+         Worker: Active CPUs  Total Mem(MB)  Active Mem(MB)  CPU time(s)
+              1:    4 /   4           3254            3197         1983
+              2:    4 /   4           3400            3385         2534
+              3:    4 /   4           2956            2955         2855
+              4:    4 /   4           3313            3200         1883
+              5:    4 /   4            882             823         2071
+              6:    4 /   4            643             536         2555
+              7:    4 /   4           3010            2909         1906
+              8:    4 /   4           1677            1669         3632
+INFO:    Rule PM_M2_C_5 completed with 1 violations, 73/74
+         Remaining rules: PM_CB_CR_C_1 
+INFO:    Status: Runset 98% complete as of 2025-12-13 16:37:14   Elapsed: 01:09:55
+         Worker: Active CPUs  Total Mem(MB)  Active Mem(MB)  CPU time(s)
+              1:    4 /   4           4589            4589         2081
+              2:    4 /   4           3400            3385         2534
+              3:    4 /   4           2838            2808         2898
+              4:    4 /   4           3313            3200         1883
+              5:    4 /   4            882             823         2071
+              6:    4 /   4            643             536         2555
+              7:    4 /   4           3010            2909         1906
+              8:    4 /   4            672             562         3705
+INFO:    Status: Runset 98% complete as of 2025-12-13 16:38:15   Elapsed: 01:10:55
+         Worker: Active CPUs  Total Mem(MB)  Active Mem(MB)  CPU time(s)
+              1:    4 /   4           3479            3474         2207
+              2:    4 /   4           3400            3385         2534
+              3:    4 /   4           2838            2808         2898
+              4:    4 /   4           3313            3200         1883
+              5:    4 /   4            882             823         2071
+              6:    4 /   4            643             536         2555
+              7:    4 /   4           3010            2909         1906
+              8:    4 /   4            672             562         3705
+INFO:    Status: Runset 98% complete as of 2025-12-13 16:39:15   Elapsed: 01:11:55
+         Worker: Active CPUs  Total Mem(MB)  Active Mem(MB)  CPU time(s)
+              1:    4 /   4           4392            4392         2358
+              2:    4 /   4           3400            3385         2534
+              3:    4 /   4           2838            2808         2898
+              4:    4 /   4           3313            3200         1883
+              5:    4 /   4            882             823         2071
+              6:    4 /   4            643             536         2555
+              7:    4 /   4           3010            2909         1906
+              8:    4 /   4            672             562         3705
+INFO:    Status: Runset 99% complete as of 2025-12-13 16:40:15   Elapsed: 01:12:55
+         Worker: Active CPUs  Total Mem(MB)  Active Mem(MB)  CPU time(s)
+              1:    4 /   4           5294            5292         2469
+              2:    4 /   4           5302            5301         2598
+              3:    4 /   4           2838            2808         2898
+              4:    4 /   4           3313            3200         1883
+              5:    4 /   4            882             823         2071
+              6:    4 /   4            643             536         2555
+              7:    4 /   4           3010            2909         1906
+              8:    4 /   4            672             562         3705
+INFO:    Rule PM_CB_CR_C_1 completed with no violations, 74/74
+INFO:    Status: Runset 100% complete as of 2025-12-13 16:41:15   Elapsed: 01:13:55
+         Worker: Active CPUs  Total Mem(MB)  Active Mem(MB)  CPU time(s)
+              1:    4 /   4           3411            3339         2614
+              2:    4 /   4           3400            3385         2707
+              3:    4 /   4           2806            2769         2898
+              4:    4 /   4           3313            3200         1883
+              5:    4 /   4            882             823         2071
+              6:    4 /   4            643             536         2555
+              7:    4 /   4           3010            2909         1906
+              8:    4 /   4            672             562         3705
+INFO:	 Status: Finishing as of 2025-12-13 16:41:15   Elapsed: 01:13:55   CPU time[s]: 4435
+INFO:    Resource usage by worker at exit:
+                  CPU      Elapsed  CPUs       CPU       Peak        Peak engine
+         Worker:  time[s]  time[s]  Allocated  usage[%]  Memory[MB]  Memory[MB]
+              1:     2614     2792          4     23.40        7316         3339
+              2:     2707     2791          4     24.24        9759         3385
+              3:     2898     2791          4     25.96        8819         2769
+              4:     1883     2790          4     16.88        9687         3200
+              5:     2071     2791          4     18.56        3379          823
+              6:     2555     2791          4     22.88        3147          536
+              7:     1906     2792          4     17.07        8309         2909
+              8:     3705     2790          4     33.19        7181          562
+         Worker resource usage  summary: Total CPU[s]: 20339  Run duration[s]: 2792  Max peak memory[MB]: 9759
+         Worker CPU utilization summary: 20339 of 89312 available CPU seconds (22.77%) with 32 average available CPU(s)
+INFO:    Generating summary in /projects/TC72_DDR5_SF4X_Dragonfly_9600_80bit_PHY/work/cdn_hs_phy_top/ericchou/signoff/signoff-eco-B1-fix-1213/cmd_run/DFMwD/cdn_hs_phy_top/PVS/PVS.sum
+INFO:    All selected rules completed
+         Total CPU Time                    : 27845(s)
+         Total Real Time                   : 4478(s)
+         Total Original Geometry           : 391063277(10684500955)
+         Total DRC RuleChecks              : 74
+         Total DRC Results                 : 580 (580)
+         ASCII report database is /projects/TC72_DDR5_SF4X_Dragonfly_9600_80bit_PHY/work/cdn_hs_phy_top/ericchou/signoff/signoff-eco-B1-fix-1213/cmd_run/DFMwD/cdn_hs_phy_top/PVS/PVS.db
+         Graphic report database is /projects/TC72_DDR5_SF4X_Dragonfly_9600_80bit_PHY/work/cdn_hs_phy_top/ericchou/signoff/signoff-eco-B1-fix-1213/cmd_run/DFMwD/cdn_hs_phy_top/PVS/PM_MARKERS.gds
+INFO:    Checking in all SoftShare licenses.
+
+[ERROR] Invalid option. 
+
+Error: Pegasus exception during compilation (Worker 1)
+ERROR: missing_reference exception for cell "pm26" in parent cell "pm100" (Worker 1)
+ERROR: File system exception during memory reduction (Worker 11)
+ERROR: Out of temporary storage disk space, please check -tmp_dirs setting (Worker 11)
+ERROR (NVN-7090): The difference between the numbers of schematic and layout instances
+of the same type is 4234863. It exceeds the threshold of 1000000.
+231009 insts vs 4465872 insts. . . . . . . . . . . . . . . . . (94s)-mismatch
+
+
+WARNING: Worker 1 killed by external signal [9]
+WARNING: Results for rule floating.nxwell_float are lost
+Warning: Encountered problems with Worker 1, attempting recovery...
+
+WARNING: GDR-00003
+Version of status file is obsolete. Statuses and notes won't be applied
+
+[WARN] same label "x" for multiple nets, it is assigned to net x
+[WARN] different labels for net x , it is assigned to "X"
+[WARN] Unattached port label
+
+Pegasus finished normally. 2025-12-13 16:42:36

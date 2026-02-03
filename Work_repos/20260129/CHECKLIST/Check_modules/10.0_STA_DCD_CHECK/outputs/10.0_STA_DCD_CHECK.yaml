@@ -1,0 +1,757 @@
+module: 10.0_STA_DCD_CHECK
+stage: Initial
+generated_at: 2025-12-23T18:43:03
+check_items: 
+  IMP-10-0-0-00: 
+    executed: true
+    status: pass
+    description: Confirm the netlist/spef version is correct
+    infos: 
+      - index: 1
+        detail: Current stage is synthesis, SPEF check is not applicable.
+        source_line: N/A
+        source_file: N/A
+        reason: Current stage is synthesis, SPEF check is not applicable.[WAIVED_INFO]
+      - index: 2
+        detail: Generated on:*2025*
+        source_line: N/A
+        source_file: N/A
+        reason: Required pattern not found[WAIVED_AS_INFO]
+      - index: 3
+        detail: 'Error: STA log file not found: ${CHECKLIST_ROOT}/IP_project_folder/logs/sta_post_syn.log'
+        source_line: N/A
+        source_file: N/A
+        reason: Design has no spef/netlist file or unexpected error[WAIVED_AS_INFO]
+      - index: 4
+        detail: 'Error: Netlist file path not found in STA log'
+        source_line: N/A
+        source_file: N/A
+        reason: Design has no spef/netlist file or unexpected error[WAIVED_AS_INFO]
+      - index: 5
+        detail: 'Error: SPEF file path not found in STA log'
+        source_line: N/A
+        source_file: N/A
+        reason: Design has no spef/netlist file or unexpected error[WAIVED_AS_INFO]
+  IMP-10-0-0-01: 
+    executed: true
+    status: fail
+    description: Confirm there is no unresolved reference.
+    failures: 
+      - index: 1
+        detail: input_files is empty in YAML configuration
+        source_line: N/A
+        source_file: N/A
+        reason: input_files is empty in YAML configuration
+  IMP-10-0-0-02: 
+    executed: true
+    status: pass
+    description: Confirm the clock uncertainty setting is correct.
+    infos: 
+      - index: 1
+        detail: set_clock_uncertainty 0.02 -hold -from [get_clocks {PHASE_ALIGN_CLOCK}] -to [get_clocks {PHASE_ALIGN_CLOCK}]
+        source_line: 13
+        source_file: 'C:\Users\yuyin\OneDrive - Cadence Design Systems Inc\2025\Checklist\AAI\CHECKLIST_V3\CHECKLIST\IP_project_folder\reports\constr.rpt'
+        reason: Clock uncertainty setting found
+      - index: 2
+        detail: set_clock_uncertainty 0.055 -setup -from [get_clocks {PHASE_ALIGN_CLOCK}] -to [get_clocks {PHASE_ALIGN_CLOCK}]
+        source_line: 14
+        source_file: 'C:\Users\yuyin\OneDrive - Cadence Design Systems Inc\2025\Checklist\AAI\CHECKLIST_V3\CHECKLIST\IP_project_folder\reports\constr.rpt'
+        reason: Clock uncertainty setting found
+    warnings: 
+      - index: 1
+        detail: set_clock_uncertainty 0.01 -hold -from [get_clocks {PHASE_ALIGN_CLOCK}] -to [get_clocks {PHASE_ALIGN_CLOCK}]
+        source_line: N/A
+        source_file: 'C:\Users\yuyin\OneDrive - Cadence Design Systems Inc\2025\Checklist\AAI\CHECKLIST_V3\CHECKLIST\IP_project_folder\reports\constr.rpt'
+        reason: 'Waiver configured and not used: Pre-implementation phase - approved by architect (Ticket#CLK-2025-001)[WAIVER]'
+      - index: 2
+        detail: set_clock_uncertainty 0.02 -hold -from [get_clocks {PHASE_ALIGN_CLOCK}] -to [get_clocks {PHASE_ALIGN_CLOCK}]
+        source_line: 13
+        source_file: 'C:\Users\yuyin\OneDrive - Cadence Design Systems Inc\2025\Checklist\AAI\CHECKLIST_V3\CHECKLIST\IP_project_folder\reports\constr.rpt'
+        reason: Clock uncertainty setting found
+  IMP-10-0-0-03: 
+    executed: true
+    status: fail
+    description: Confirm the units in library match the units in the SDC.
+    failures: 
+      - index: 1
+        detail: input_files is empty in YAML configuration
+        source_line: N/A
+        source_file: N/A
+        reason: input_files is empty in YAML configuration
+  IMP-10-0-0-04: 
+    executed: true
+    status: pass
+  IMP-10-0-0-05: 
+    executed: true
+    status: pass
+  IMP-10-0-0-06: 
+    executed: true
+    status: fail
+    description: Confirm the SI setting is correct?
+    failures: 
+      - index: 1
+        detail: CCS libraries
+        source_line: N/A
+        source_file: N/A
+        reason: "SI setting isn't correct: indicator not found"
+    infos: 
+      - index: 1
+        detail: 'Signoff Settings: SI On'
+        source_line: 63
+        source_file: 'C:\Users\yuyin\OneDrive - Cadence Design Systems Inc\2025\Checklist\AAI\CHECKLIST_V3\CHECKLIST\IP_project_folder\logs\sta_post_syn.log'
+        reason: SI setting is correct
+      - index: 2
+        detail: delaycal_enable_si to 1
+        source_line: 66
+        source_file: 'C:\Users\yuyin\OneDrive - Cadence Design Systems Inc\2025\Checklist\AAI\CHECKLIST_V3\CHECKLIST\IP_project_folder\logs\sta_post_syn.log'
+        reason: SI setting is correct
+      - index: 3
+        detail: timing_library_read_ccs_noise_data to 1
+        source_line: 69
+        source_file: 'C:\Users\yuyin\OneDrive - Cadence Design Systems Inc\2025\Checklist\AAI\CHECKLIST_V3\CHECKLIST\IP_project_folder\logs\sta_post_syn.log'
+        reason: SI setting is correct
+      - index: 4
+        detail: report_noise
+        source_line: 76
+        source_file: 'C:\Users\yuyin\OneDrive - Cadence Design Systems Inc\2025\Checklist\AAI\CHECKLIST_V3\CHECKLIST\IP_project_folder\logs\sta_post_syn.log'
+        reason: SI setting is correct
+    warnings: 
+      - index: 1
+        detail: SI configuration note 1
+        source_line: N/A
+        source_file: N/A
+        reason: Waiver item (unused)[WAIVER]
+      - index: 2
+        detail: SI configuration note 2
+        source_line: N/A
+        source_file: N/A
+        reason: Waiver item (unused)[WAIVER]
+  IMP-10-0-0-07: 
+    executed: true
+    status: pass
+    description: Confirm the OCV setting is correct?
+    infos: 
+      - index: 1
+        detail: 'Analysis Mode: MMMC OCV'
+        source_line: 61
+        source_file: 'C:\Users\yuyin\OneDrive - Cadence Design Systems Inc\2025\Checklist\AAI\CHECKLIST_V3\CHECKLIST\IP_project_folder\logs\sta_post_syn.log'
+        reason: OCV setting found
+      - index: 2
+        detail: timing_enable_spatial_derate_mode to 1
+        source_line: 71
+        source_file: 'C:\Users\yuyin\OneDrive - Cadence Design Systems Inc\2025\Checklist\AAI\CHECKLIST_V3\CHECKLIST\IP_project_folder\logs\sta_post_syn.log'
+        reason: OCV setting found
+      - index: 3
+        detail: timing_spatial_derate_distance_mode to chip_size
+        source_line: 72
+        source_file: 'C:\Users\yuyin\OneDrive - Cadence Design Systems Inc\2025\Checklist\AAI\CHECKLIST_V3\CHECKLIST\IP_project_folder\logs\sta_post_syn.log'
+        reason: OCV setting found
+      - index: 4
+        detail: SOCV RC Variation Factors
+        source_line: 82
+        source_file: 'C:\Users\yuyin\OneDrive - Cadence Design Systems Inc\2025\Checklist\AAI\CHECKLIST_V3\CHECKLIST\IP_project_folder\logs\sta_post_syn.log'
+        reason: OCV setting found
+      - index: 5
+        detail: Wire Derate SOCV Factors
+        source_line: 89
+        source_file: 'C:\Users\yuyin\OneDrive - Cadence Design Systems Inc\2025\Checklist\AAI\CHECKLIST_V3\CHECKLIST\IP_project_folder\logs\sta_post_syn.log'
+        reason: OCV setting found
+      - index: 6
+        detail: SOCV Files
+        source_line: 103
+        source_file: 'C:\Users\yuyin\OneDrive - Cadence Design Systems Inc\2025\Checklist\AAI\CHECKLIST_V3\CHECKLIST\IP_project_folder\logs\sta_post_syn.log'
+        reason: OCV setting found
+    warnings: 
+      - index: 1
+        detail: Some waived item
+        source_line: N/A
+        source_file: N/A
+        reason: Waiver item (unused)[WAIVER]
+      - index: 2
+        detail: Another waived item
+        source_line: N/A
+        source_file: N/A
+        reason: Waiver item (unused)[WAIVER]
+  IMP-10-0-0-08: 
+    executed: true
+    status: pass
+    description: N/A
+    infos: 
+      - index: 1
+        detail: IO_ASYNC_CLOCK
+        source_line: 12
+        source_file: 'C:\Users\yuyin\OneDrive - Cadence Design Systems Inc\2025\Checklist\AAI\CHECKLIST_V3\CHECKLIST\IP_project_folder\reports\constr.rpt'
+        reason: Missing data_path[WAIVER]
+      - index: 2
+        detail: PHASE_ALIGN_CLOCK
+        source_line: 9
+        source_file: 'C:\Users\yuyin\OneDrive - Cadence Design Systems Inc\2025\Checklist\AAI\CHECKLIST_V3\CHECKLIST\IP_project_folder\reports\constr.rpt'
+        reason: Transition settings found (clock_path=0.0833333, data_path=0.166667)
+  IMP-10-0-0-09: 
+    executed: true
+    status: pass
+    description: Confirm no SPEF annotation issue in STA.
+    infos: 
+      - index: 1
+        detail: I have confirmed that the SPEF annotation issue is acceptable for this implementation phase.
+        source_line: N/A
+        source_file: 'C:\Users\yuyin\OneDrive - Cadence Design Systems Inc\2025\Checklist\AAI\CHECKLIST_V3\CHECKLIST\IP_project_folder\logs\sta_post_route.log'
+        reason: Not-annotated real net detected[WAIVED_INFO]
+      - index: 2
+        detail: func_rcss_0p675v_m40c_pcss_cmax_pcss3_setup
+        source_line: N/A
+        source_file: 'C:\Users\yuyin\OneDrive - Cadence Design Systems Inc\2025\Checklist\AAI\CHECKLIST_V3\CHECKLIST\IP_project_folder\logs\sta_post_route.log'
+        reason: All nets are annotated
+      - index: 3
+        detail: '[[u_pcs_top/u_phy_pcs_reg_ctrl/u_pcs_cdb_reg/UNCONNECTED_HIER_Z314]] (view: func_rcss_0p675v_125c_pcss_cmax_pcff3_setup)'
+        source_line: N/A
+        source_file: 'C:\Users\yuyin\OneDrive - Cadence Design Systems Inc\2025\Checklist\AAI\CHECKLIST_V3\CHECKLIST\IP_project_folder\logs\sta_post_route.log'
+        reason: Not-annotated real net detected[WAIVED_AS_INFO]
+  IMP-10-0-0-10: 
+    executed: true
+    status: fail
+    description: Confirm check full path group timing reports (in2out/in2reg/reg2out/reg2reg/default/cgdefault).
+    failures: 
+      - index: 1
+        detail: in2out
+        source_line: N/A
+        source_file: 'C:\Users\yuyin\OneDrive - Cadence Design Systems Inc\2025\Checklist\AAI\CHECKLIST_V3\CHECKLIST\IP_project_folder\logs\sta_post_syn.log'
+        reason: Path group timing reports NOT found in log (not waived)
+      - index: 2
+        detail: in2reg
+        source_line: N/A
+        source_file: 'C:\Users\yuyin\OneDrive - Cadence Design Systems Inc\2025\Checklist\AAI\CHECKLIST_V3\CHECKLIST\IP_project_folder\logs\sta_post_syn.log'
+        reason: Path group timing reports NOT found in log (not waived)
+      - index: 3
+        detail: reg2out
+        source_line: N/A
+        source_file: 'C:\Users\yuyin\OneDrive - Cadence Design Systems Inc\2025\Checklist\AAI\CHECKLIST_V3\CHECKLIST\IP_project_folder\logs\sta_post_syn.log'
+        reason: Path group timing reports NOT found in log (not waived)
+      - index: 4
+        detail: reg2reg
+        source_line: N/A
+        source_file: 'C:\Users\yuyin\OneDrive - Cadence Design Systems Inc\2025\Checklist\AAI\CHECKLIST_V3\CHECKLIST\IP_project_folder\logs\sta_post_syn.log'
+        reason: Path group timing reports NOT found in log (not waived)
+    infos: 
+      - index: 1
+        detail: cgdefault
+        source_line: N/A
+        source_file: 'C:\Users\yuyin\OneDrive - Cadence Design Systems Inc\2025\Checklist\AAI\CHECKLIST_V3\CHECKLIST\IP_project_folder\logs\sta_post_syn.log'
+        reason: 'Path group timing reports NOT found in log: Design has no clock gating cells - cgdefault not applicable[WAIVER]'
+      - index: 2
+        detail: default
+        source_line: N/A
+        source_file: 'C:\Users\yuyin\OneDrive - Cadence Design Systems Inc\2025\Checklist\AAI\CHECKLIST_V3\CHECKLIST\IP_project_folder\logs\sta_post_syn.log'
+        reason: 'Path group timing reports NOT found in log: Default path group not used in this design[WAIVER]'
+  IMP-10-0-0-11: 
+    executed: true
+    status: fail
+    description: Confirm the timing of all path groups is clean.
+    failures: 
+      - index: 1
+        detail: "View 'func_rcff_0p825v_125c_pcff_cmin_pcff3_hold' path_group 'default' hold: WNS=-0.0002ns (3 violations)"
+        source_line: 10
+        source_file: 'C:\Users\yuyin\OneDrive - Cadence Design Systems Inc\2025\Checklist\AAI\CHECKLIST_V3\CHECKLIST\IP_project_folder\reports\check_signoff.results'
+        reason: Timing violation detected
+      - index: 2
+        detail: "View 'func_rcff_0p825v_125c_pcff_cmin_pcss3_hold' path_group 'default' hold: WNS=-0.0013ns (14 violations)"
+        source_line: 11
+        source_file: 'C:\Users\yuyin\OneDrive - Cadence Design Systems Inc\2025\Checklist\AAI\CHECKLIST_V3\CHECKLIST\IP_project_folder\reports\check_signoff.results'
+        reason: Timing violation detected
+      - index: 3
+        detail: "View 'func_rcss_0p675v_125c_pcss_cmax_pcss3_setup' path_group 'default' setup: WNS=-0.2464ns (40 violations)"
+        source_line: 5
+        source_file: 'C:\Users\yuyin\OneDrive - Cadence Design Systems Inc\2025\Checklist\AAI\CHECKLIST_V3\CHECKLIST\IP_project_folder\reports\check_signoff.results'
+        reason: Timing violation detected
+      - index: 4
+        detail: "View 'func_rcss_0p675v_125c_pcss_cmax_prcf3_setup' path_group 'default' setup: WNS=-0.2300ns (40 violations)"
+        source_line: 6
+        source_file: 'C:\Users\yuyin\OneDrive - Cadence Design Systems Inc\2025\Checklist\AAI\CHECKLIST_V3\CHECKLIST\IP_project_folder\reports\check_signoff.results'
+        reason: Timing violation detected
+      - index: 5
+        detail: "View 'func_rcss_0p675v_125c_pcss_cmax_prcs3_setup' path_group 'default' setup: WNS=-0.2454ns (40 violations)"
+        source_line: 7
+        source_file: 'C:\Users\yuyin\OneDrive - Cadence Design Systems Inc\2025\Checklist\AAI\CHECKLIST_V3\CHECKLIST\IP_project_folder\reports\check_signoff.results'
+        reason: Timing violation detected
+      - index: 6
+        detail: "View 'func_rcss_0p675v_m40c_pcss_cmax_pcff3_setup' path_group 'default' setup: WNS=-0.2618ns (40 violations)"
+        source_line: 8
+        source_file: 'C:\Users\yuyin\OneDrive - Cadence Design Systems Inc\2025\Checklist\AAI\CHECKLIST_V3\CHECKLIST\IP_project_folder\reports\check_signoff.results'
+        reason: Timing violation detected
+      - index: 7
+        detail: "View 'func_rcss_0p675v_m40c_pcss_cmax_pcss3_setup' path_group 'default' setup: WNS=-0.2760ns (42 violations)"
+        source_line: 9
+        source_file: 'C:\Users\yuyin\OneDrive - Cadence Design Systems Inc\2025\Checklist\AAI\CHECKLIST_V3\CHECKLIST\IP_project_folder\reports\check_signoff.results'
+        reason: Timing violation detected
+    infos: 
+      - index: 1
+        detail: "View 'func_rcss_0p675v_125c_pcss_cmax_pcff3_setup' path_group 'default' setup: WNS=-0.2318ns (40 violations)"
+        source_line: 4
+        source_file: 'C:\Users\yuyin\OneDrive - Cadence Design Systems Inc\2025\Checklist\AAI\CHECKLIST_V3\CHECKLIST\IP_project_folder\reports\check_signoff.results'
+        reason: 'Timing violation waived per design approval: Approved waiver - false path not properly constrained, will be fixed in SDC update[WAIVER]'
+      - index: 2
+        detail: 'func_rcff_0p825v_125c_pcff_cmin_pcff3_hold: cgdefault (hold)'
+        source_line: 10
+        source_file: 'C:\Users\yuyin\OneDrive - Cadence Design Systems Inc\2025\Checklist\AAI\CHECKLIST_V3\CHECKLIST\IP_project_folder\reports\check_signoff.results'
+        reason: Path group meets timing requirements
+      - index: 3
+        detail: 'func_rcff_0p825v_125c_pcff_cmin_pcff3_hold: reg2reg (hold)'
+        source_line: 10
+        source_file: 'C:\Users\yuyin\OneDrive - Cadence Design Systems Inc\2025\Checklist\AAI\CHECKLIST_V3\CHECKLIST\IP_project_folder\reports\check_signoff.results'
+        reason: Path group meets timing requirements
+      - index: 4
+        detail: 'func_rcff_0p825v_125c_pcff_cmin_pcss3_hold: cgdefault (hold)'
+        source_line: 11
+        source_file: 'C:\Users\yuyin\OneDrive - Cadence Design Systems Inc\2025\Checklist\AAI\CHECKLIST_V3\CHECKLIST\IP_project_folder\reports\check_signoff.results'
+        reason: Path group meets timing requirements
+      - index: 5
+        detail: 'func_rcff_0p825v_125c_pcff_cmin_pcss3_hold: reg2reg (hold)'
+        source_line: 11
+        source_file: 'C:\Users\yuyin\OneDrive - Cadence Design Systems Inc\2025\Checklist\AAI\CHECKLIST_V3\CHECKLIST\IP_project_folder\reports\check_signoff.results'
+        reason: Path group meets timing requirements
+      - index: 6
+        detail: 'func_rcss_0p675v_125c_pcss_cmax_pcff3_setup: reg2reg (setup)'
+        source_line: 4
+        source_file: 'C:\Users\yuyin\OneDrive - Cadence Design Systems Inc\2025\Checklist\AAI\CHECKLIST_V3\CHECKLIST\IP_project_folder\reports\check_signoff.results'
+        reason: Path group meets timing requirements
+      - index: 7
+        detail: 'func_rcss_0p675v_125c_pcss_cmax_pcss3_setup: reg2reg (setup)'
+        source_line: 5
+        source_file: 'C:\Users\yuyin\OneDrive - Cadence Design Systems Inc\2025\Checklist\AAI\CHECKLIST_V3\CHECKLIST\IP_project_folder\reports\check_signoff.results'
+        reason: Path group meets timing requirements
+      - index: 8
+        detail: 'func_rcss_0p675v_125c_pcss_cmax_prcf3_setup: reg2reg (setup)'
+        source_line: 6
+        source_file: 'C:\Users\yuyin\OneDrive - Cadence Design Systems Inc\2025\Checklist\AAI\CHECKLIST_V3\CHECKLIST\IP_project_folder\reports\check_signoff.results'
+        reason: Path group meets timing requirements
+      - index: 9
+        detail: 'func_rcss_0p675v_125c_pcss_cmax_prcs3_setup: reg2reg (setup)'
+        source_line: 7
+        source_file: 'C:\Users\yuyin\OneDrive - Cadence Design Systems Inc\2025\Checklist\AAI\CHECKLIST_V3\CHECKLIST\IP_project_folder\reports\check_signoff.results'
+        reason: Path group meets timing requirements
+      - index: 10
+        detail: 'func_rcss_0p675v_m40c_pcss_cmax_pcff3_setup: reg2reg (setup)'
+        source_line: 8
+        source_file: 'C:\Users\yuyin\OneDrive - Cadence Design Systems Inc\2025\Checklist\AAI\CHECKLIST_V3\CHECKLIST\IP_project_folder\reports\check_signoff.results'
+        reason: Path group meets timing requirements
+      - index: 11
+        detail: 'func_rcss_0p675v_m40c_pcss_cmax_pcss3_setup: reg2reg (setup)'
+        source_line: 9
+        source_file: 'C:\Users\yuyin\OneDrive - Cadence Design Systems Inc\2025\Checklist\AAI\CHECKLIST_V3\CHECKLIST\IP_project_folder\reports\check_signoff.results'
+        reason: Path group meets timing requirements
+  IMP-10-0-0-12: 
+    executed: true
+    status: fail
+    description: Confirm the max_transition check result is clean.
+    failures: 
+      - index: 1
+        detail: 'FE_ECO_0828_fix_transC52_cmn_ref_clk_int/clk (view: at_speed_rcff_0p825v_125c_pcff_cmin_pcff3_hold, slack: -0.1323ns)'
+        source_line: 24
+        source_file: 'C:\Users\yuyin\OneDrive - Cadence Design Systems Inc\2025\Checklist\AAI\CHECKLIST_V3\CHECKLIST\IP_project_folder\reports\10.0\maxtran_1.rpt'
+        reason: Max_transition violation detected
+      - index: 2
+        detail: 'atb_0 (view: at_speed_rcff_0p825v_125c_pcff_cmin_pcff3_hold, slack: -0.4277ns)'
+        source_line: 14
+        source_file: 'C:\Users\yuyin\OneDrive - Cadence Design Systems Inc\2025\Checklist\AAI\CHECKLIST_V3\CHECKLIST\IP_project_folder\reports\10.0\maxtran_1.rpt'
+        reason: Max_transition violation detected
+      - index: 3
+        detail: 'atb_0 (view: func_rcff_0p825v_125c_pcff_cmin_pcff3_hold, slack: -0.4277ns)'
+        source_line: 21
+        source_file: 'C:\Users\yuyin\OneDrive - Cadence Design Systems Inc\2025\Checklist\AAI\CHECKLIST_V3\CHECKLIST\IP_project_folder\reports\10.0\maxtran_2.rpt'
+        reason: Max_transition violation detected
+      - index: 4
+        detail: 'atb_1 (view: at_speed_rcff_0p825v_125c_pcff_cmin_pcff3_hold, slack: -0.4285ns)'
+        source_line: 12
+        source_file: 'C:\Users\yuyin\OneDrive - Cadence Design Systems Inc\2025\Checklist\AAI\CHECKLIST_V3\CHECKLIST\IP_project_folder\reports\10.0\maxtran_1.rpt'
+        reason: Max_transition violation detected
+      - index: 5
+        detail: 'atb_1 (view: func_rcff_0p825v_125c_pcff_cmin_pcff3_hold, slack: -0.4285ns)'
+        source_line: 19
+        source_file: 'C:\Users\yuyin\OneDrive - Cadence Design Systems Inc\2025\Checklist\AAI\CHECKLIST_V3\CHECKLIST\IP_project_folder\reports\10.0\maxtran_2.rpt'
+        reason: Max_transition violation detected
+      - index: 6
+        detail: 'cmn_ref_clk_int (view: at_speed_rcff_0p825v_125c_pcff_cmin_pcff3_hold, slack: -0.0306ns)'
+        source_line: 30
+        source_file: 'C:\Users\yuyin\OneDrive - Cadence Design Systems Inc\2025\Checklist\AAI\CHECKLIST_V3\CHECKLIST\IP_project_folder\reports\10.0\maxtran_1.rpt'
+        reason: Max_transition violation detected
+      - index: 7
+        detail: 'cmnda_rext (view: at_speed_rcff_0p825v_125c_pcff_cmin_pcff3_hold, slack: -0.3666ns)'
+        source_line: 19
+        source_file: 'C:\Users\yuyin\OneDrive - Cadence Design Systems Inc\2025\Checklist\AAI\CHECKLIST_V3\CHECKLIST\IP_project_folder\reports\10.0\maxtran_1.rpt'
+        reason: Max_transition violation detected
+      - index: 8
+        detail: 'cmnda_rext (view: func_rcff_0p825v_125c_pcff_cmin_pcff3_hold, slack: -0.4666ns)'
+        source_line: 17
+        source_file: 'C:\Users\yuyin\OneDrive - Cadence Design Systems Inc\2025\Checklist\AAI\CHECKLIST_V3\CHECKLIST\IP_project_folder\reports\10.0\maxtran_2.rpt'
+        reason: Max_transition violation detected
+      - index: 9
+        detail: 'u_pma_top/u_pma_ana_wrapper/u_pma_ana/cmnda_ref_clk_int (view: at_speed_rcff_0p825v_125c_pcff_cmin_pcff3_hold, slack: -0.3306ns)'
+        source_line: 21
+        source_file: 'C:\Users\yuyin\OneDrive - Cadence Design Systems Inc\2025\Checklist\AAI\CHECKLIST_V3\CHECKLIST\IP_project_folder\reports\10.0\maxtran_1.rpt'
+        reason: Max_transition violation detected
+      - index: 10
+        detail: 'u_pma_top/u_pma_ana_wrapper/u_pma_ana/cmnda_ref_clk_int (view: func_rcff_0p825v_125c_pcff_cmin_pcff3_hold, slack: -0.0490ns)'
+        source_line: 23
+        source_file: 'C:\Users\yuyin\OneDrive - Cadence Design Systems Inc\2025\Checklist\AAI\CHECKLIST_V3\CHECKLIST\IP_project_folder\reports\10.0\maxtran_2.rpt'
+        reason: Max_transition violation detected
+      - index: 11
+        detail: 'u_pma_top/u_pma_ana_wrapper/u_pma_ana/cmnda_rext (view: at_speed_rcff_0p825v_125c_pcff_cmin_pcff3_hold, slack: -0.4166ns)'
+        source_line: 16
+        source_file: 'C:\Users\yuyin\OneDrive - Cadence Design Systems Inc\2025\Checklist\AAI\CHECKLIST_V3\CHECKLIST\IP_project_folder\reports\10.0\maxtran_1.rpt'
+        reason: Max_transition violation detected
+      - index: 12
+        detail: 'u_pma_top/u_pma_ana_wrapper/u_pma_ana/cmnda_rext (view: func_rcff_0p825v_125c_pcff_cmin_pcff3_hold, slack: -0.4666ns)'
+        source_line: 14
+        source_file: 'C:\Users\yuyin\OneDrive - Cadence Design Systems Inc\2025\Checklist\AAI\CHECKLIST_V3\CHECKLIST\IP_project_folder\reports\10.0\maxtran_2.rpt'
+        reason: Max_transition violation detected
+      - index: 13
+        detail: 'u_pma_top/u_pma_ana_wrapper/u_pma_ana/data_se_pd_ctrl (view: at_speed_rcff_0p825v_125c_pcff_cmin_pcff3_hold, slack: -0.0023ns)'
+        source_line: 35
+        source_file: 'C:\Users\yuyin\OneDrive - Cadence Design Systems Inc\2025\Checklist\AAI\CHECKLIST_V3\CHECKLIST\IP_project_folder\reports\10.0\maxtran_1.rpt'
+        reason: Max_transition violation detected
+      - index: 14
+        detail: 'u_pma_top/u_pma_ana_wrapper/u_pma_ana/data_se_pd_ctrl (view: func_rcff_0p825v_125c_pcff_cmin_pcff3_hold, slack: -0.0023ns)'
+        source_line: 32
+        source_file: 'C:\Users\yuyin\OneDrive - Cadence Design Systems Inc\2025\Checklist\AAI\CHECKLIST_V3\CHECKLIST\IP_project_folder\reports\10.0\maxtran_2.rpt'
+        reason: Max_transition violation detected
+      - index: 15
+        detail: 'u_pma_top/u_pma_ana_wrapper/u_pma_ana/pma_ana_data_m (view: at_speed_rcff_0p825v_125c_pcff_cmin_pcff3_hold, slack: -0.5108ns)'
+        source_line: 6
+        source_file: 'C:\Users\yuyin\OneDrive - Cadence Design Systems Inc\2025\Checklist\AAI\CHECKLIST_V3\CHECKLIST\IP_project_folder\reports\10.0\maxtran_1.rpt'
+        reason: Max_transition violation detected
+      - index: 16
+        detail: 'u_pma_top/u_pma_ana_wrapper/u_pma_ana/pma_ana_data_m (view: func_rcff_0p825v_125c_pcff_cmin_pcff3_hold, slack: -0.5108ns)'
+        source_line: 8
+        source_file: 'C:\Users\yuyin\OneDrive - Cadence Design Systems Inc\2025\Checklist\AAI\CHECKLIST_V3\CHECKLIST\IP_project_folder\reports\10.0\maxtran_2.rpt'
+        reason: Max_transition violation detected
+      - index: 17
+        detail: 'u_pma_top/u_pma_ana_wrapper/u_pma_ana/pma_ana_data_p (view: at_speed_rcff_0p825v_125c_pcff_cmin_pcff3_hold, slack: -0.5108ns)'
+        source_line: 9
+        source_file: 'C:\Users\yuyin\OneDrive - Cadence Design Systems Inc\2025\Checklist\AAI\CHECKLIST_V3\CHECKLIST\IP_project_folder\reports\10.0\maxtran_1.rpt'
+        reason: Max_transition violation detected
+      - index: 18
+        detail: 'u_pma_top/u_pma_ana_wrapper/u_pma_ana/pma_ana_data_p (view: func_rcff_0p825v_125c_pcff_cmin_pcff3_hold, slack: -0.5108ns)'
+        source_line: 11
+        source_file: 'C:\Users\yuyin\OneDrive - Cadence Design Systems Inc\2025\Checklist\AAI\CHECKLIST_V3\CHECKLIST\IP_project_folder\reports\10.0\maxtran_2.rpt'
+        reason: Max_transition violation detected
+  IMP-10-0-0-13: 
+    executed: true
+    status: fail
+    description: Confirm the max_capacitance check result is clean.
+    failures: 
+      - index: 1
+        detail: "Pin 'atb_0': Required=0.0830, Actual=0.1375, Slack=-0.0545 (View: func_rcff_0p825v_125c_pcff_cmin_pcff3_hold)"
+        source_line: 10
+        source_file: 'C:\Users\yuyin\OneDrive - Cadence Design Systems Inc\2025\Checklist\AAI\CHECKLIST_V3\CHECKLIST\IP_project_folder\reports\10.0\maxcap_2.rpt'
+        reason: Max_capacitance violation found
+      - index: 2
+        detail: "Pin 'atb_0': Required=0.0830, Actual=0.1417, Slack=-0.0587 (View: func_rcff_0p825v_125c_pcff_cmin_pcss3_hold)"
+        source_line: 8
+        source_file: 'C:\Users\yuyin\OneDrive - Cadence Design Systems Inc\2025\Checklist\AAI\CHECKLIST_V3\CHECKLIST\IP_project_folder\reports\10.0\maxcap_1.rpt'
+        reason: Max_capacitance violation found
+      - index: 3
+        detail: "Pin 'atb_1': Required=0.0830, Actual=0.1376, Slack=-0.0547 (View: func_rcff_0p825v_125c_pcff_cmin_pcff3_hold)"
+        source_line: 8
+        source_file: 'C:\Users\yuyin\OneDrive - Cadence Design Systems Inc\2025\Checklist\AAI\CHECKLIST_V3\CHECKLIST\IP_project_folder\reports\10.0\maxcap_2.rpt'
+        reason: Max_capacitance violation found
+      - index: 4
+        detail: "Pin 'atb_1': Required=0.0830, Actual=0.1417, Slack=-0.0587 (View: func_rcff_0p825v_125c_pcff_cmin_pcss3_hold)"
+        source_line: 10
+        source_file: 'C:\Users\yuyin\OneDrive - Cadence Design Systems Inc\2025\Checklist\AAI\CHECKLIST_V3\CHECKLIST\IP_project_folder\reports\10.0\maxcap_1.rpt'
+        reason: Max_capacitance violation found
+      - index: 5
+        detail: "Pin 'cmnda_rext': Required=0.0830, Actual=0.1273, Slack=-0.0444 (View: func_rcff_0p825v_125c_pcff_cmin_pcff3_hold)"
+        source_line: 12
+        source_file: 'C:\Users\yuyin\OneDrive - Cadence Design Systems Inc\2025\Checklist\AAI\CHECKLIST_V3\CHECKLIST\IP_project_folder\reports\10.0\maxcap_2.rpt'
+        reason: Max_capacitance violation found
+      - index: 6
+        detail: "Pin 'cmnda_rext': Required=0.0830, Actual=0.1275, Slack=-0.0445 (View: func_rcff_0p825v_125c_pcff_cmin_pcss3_hold)"
+        source_line: 12
+        source_file: 'C:\Users\yuyin\OneDrive - Cadence Design Systems Inc\2025\Checklist\AAI\CHECKLIST_V3\CHECKLIST\IP_project_folder\reports\10.0\maxcap_1.rpt'
+        reason: Max_capacitance violation found
+      - index: 7
+        detail: "Pin 'u_pma_top/u_pma_ana_wrapper/u_pma_ana/cmnda_atb_core_0': Required=0.1000, Actual=0.1375, Slack=-0.0375 (View: func_rcff_0p825v_125c_pcff_cmin_pcff3_hold)"
+        source_line: 17
+        source_file: 'C:\Users\yuyin\OneDrive - Cadence Design Systems Inc\2025\Checklist\AAI\CHECKLIST_V3\CHECKLIST\IP_project_folder\reports\10.0\maxcap_2.rpt'
+        reason: Max_capacitance violation found
+      - index: 8
+        detail: "Pin 'u_pma_top/u_pma_ana_wrapper/u_pma_ana/cmnda_atb_core_0': Required=0.1000, Actual=0.1417, Slack=-0.0417 (View: func_rcff_0p825v_125c_pcff_cmin_pcss3_hold)"
+        source_line: 14
+        source_file: 'C:\Users\yuyin\OneDrive - Cadence Design Systems Inc\2025\Checklist\AAI\CHECKLIST_V3\CHECKLIST\IP_project_folder\reports\10.0\maxcap_1.rpt'
+        reason: Max_capacitance violation found
+      - index: 9
+        detail: "Pin 'u_pma_top/u_pma_ana_wrapper/u_pma_ana/cmnda_atb_core_1': Required=0.1000, Actual=0.1376, Slack=-0.0376 (View: func_rcff_0p825v_125c_pcff_cmin_pcff3_hold)"
+        source_line: 14
+        source_file: 'C:\Users\yuyin\OneDrive - Cadence Design Systems Inc\2025\Checklist\AAI\CHECKLIST_V3\CHECKLIST\IP_project_folder\reports\10.0\maxcap_2.rpt'
+        reason: Max_capacitance violation found
+      - index: 10
+        detail: "Pin 'u_pma_top/u_pma_ana_wrapper/u_pma_ana/cmnda_atb_core_1': Required=0.1000, Actual=0.1417, Slack=-0.0417 (View: func_rcff_0p825v_125c_pcff_cmin_pcss3_hold)"
+        source_line: 17
+        source_file: 'C:\Users\yuyin\OneDrive - Cadence Design Systems Inc\2025\Checklist\AAI\CHECKLIST_V3\CHECKLIST\IP_project_folder\reports\10.0\maxcap_1.rpt'
+        reason: Max_capacitance violation found
+  IMP-10-0-0-14: 
+    executed: true
+    status: pass
+    description: Confirm the noise/glitch check result is clean.
+    infos: 
+      - index: 1
+        detail: 'View: func_rcff_0p825v_125c_pcff_cmin_pcff3_hold - CLEAN (DC violations: 0, Peak violations: 0, Total problem nets: 0)'
+        source_line: 30
+        source_file: 'C:\Users\yuyin\OneDrive - Cadence Design Systems Inc\2025\Checklist\AAI\CHECKLIST_V3\CHECKLIST\IP_project_folder\reports\10.0\noise_1.rpt'
+        reason: All noise/glitch analysis views are clean (0 violations)
+      - index: 2
+        detail: 'View: func_rcss_0p675v_125c_pcss_cmax_prcs3_hold - CLEAN (DC violations: 0, Peak violations: 0, Total problem nets: 0)'
+        source_line: 33
+        source_file: 'C:\Users\yuyin\OneDrive - Cadence Design Systems Inc\2025\Checklist\AAI\CHECKLIST_V3\CHECKLIST\IP_project_folder\reports\10.0\noise_2.rpt'
+        reason: All noise/glitch analysis views are clean (0 violations)
+  IMP-10-0-0-15: 
+    executed: true
+    status: pass
+    description: Confirm the double_clock check result is clean.
+    infos: 
+      - index: 1
+        detail: at_speed_rcff_0p825v_125c_pcff_cmin_pcff3_hold
+        source_line: 5
+        source_file: 'C:\Users\yuyin\OneDrive - Cadence Design Systems Inc\2025\Checklist\AAI\CHECKLIST_V3\CHECKLIST\IP_project_folder\reports\10.0\double_clock_1.rpt'
+        reason: All timing views are clean - no double clocking violations detected
+      - index: 2
+        detail: func_rcff_0p825v_125c_pcff_cmin_pcff3_hold
+        source_line: 5
+        source_file: 'C:\Users\yuyin\OneDrive - Cadence Design Systems Inc\2025\Checklist\AAI\CHECKLIST_V3\CHECKLIST\IP_project_folder\reports\10.0\double_clock_2.rpt'
+        reason: All timing views are clean - no double clocking violations detected
+  IMP-10-0-0-16: 
+    executed: true
+    status: fail
+    description: Confirm clock signal full swing result is clean if foundry timing signoff criteria has full swing requirement.
+    failures: 
+      - index: 1
+        detail: input_files is empty in YAML configuration
+        source_line: N/A
+        source_file: N/A
+        reason: input_files is empty in YAML configuration
+  IMP-10-0-0-17: 
+    executed: true
+    status: fail
+    description: Confirm the min-pulse check result is clean.
+    failures: 
+      - index: 1
+        detail: '[RAM_256x16/CLK] Pulse width violation: -0.849ns (clock: ram_clk, view: func_slow_RCMAX)'
+        source_line: N/A
+        source_file: N/A
+        reason: Min pulse width violations detected
+  IMP-10-0-0-18: 
+    executed: true
+    status: fail
+    description: Confirm the min_period check result is clean if library has min_period check.
+    failures: 
+      - index: 1
+        detail: input_files is empty in YAML configuration
+        source_line: N/A
+        source_file: N/A
+        reason: input_files is empty in YAML configuration
+  IMP-10-0-0-19: 
+    executed: true
+    status: fail
+    description: Confirm meet IP special DELAY/SKEW requirement if it have.
+    failures: 
+      - index: 1
+        detail: input_files is empty in YAML configuration
+        source_line: N/A
+        source_file: N/A
+        reason: input_files is empty in YAML configuration
+  IMP-10-0-0-20: 
+    executed: true
+    status: pass
+    description: Confirm no ERROR message in the STA log files or the ERROR messages can be waived.
+    infos: 
+      - index: 1
+        detail: tempus_1.log
+        source_line: N/A
+        source_file: ${CHECKLIST_ROOT}/IP_project_folder/reports/10.0/tempus_1.log
+        reason: All STA log files completed without errors
+      - index: 2
+        detail: tempus_2.log
+        source_line: N/A
+        source_file: ${CHECKLIST_ROOT}/IP_project_folder/reports/10.0/tempus_2.log
+        reason: All STA log files completed without errors
+  IMP-10-0-0-21: 
+    executed: true
+    status: pass
+    description: Confirm all Warning message in the STA log files can be waived.
+    infos: 
+      - index: 1
+        detail: Debug mode - all STA warnings are informational only
+        source_line: N/A
+        source_file: N/A
+        reason: Debug mode - all STA warnings are informational only[WAIVED_INFO]
+      - index: 2
+        detail: "TECHLIB-1320 (Count: 2): The user-defined attribute 'related_spice_node' is not present in any of the 'ccsn_first_stage' grou"
+        source_line: N/A
+        source_file: N/A
+        reason: STA warnings detected that require waiver review[WAIVED_AS_INFO]
+      - index: 3
+        detail: "TECHLIB-302 (Count: 4064): No function defined for cell '%s'. The c..."
+        source_line: N/A
+        source_file: N/A
+        reason: STA warnings detected that require waiver review[WAIVED_AS_INFO]
+  IMP-10-0-0-22: 
+    executed: true
+    status: fail
+    description: Confirm timing/skew/drv/mpw/noise/ect results and log files are checked based on all signoff modes and all signoff corners.
+    failures: 
+      - index: 1
+        detail: input_files is empty in YAML configuration
+        source_line: N/A
+        source_file: N/A
+        reason: input_files is empty in YAML configuration
+  IMP-10-0-0-23: 
+    executed: true
+    status: fail
+    description: Confirm the DCD check is clean if the design request DCD check on some special circuits.
+    failures: 
+      - index: 1
+        detail: input_files is empty in YAML configuration
+        source_line: N/A
+        source_file: N/A
+        reason: input_files is empty in YAML configuration
+  IMP-10-0-0-24: 
+    executed: true
+    status: fail
+    description: 'Any special timing requirement from the specifications that cannot be covered by SDC constraints are reported and reviewed? For example: DDR DQ/DQS skew check'
+    failures: 
+      - index: 1
+        detail: input_files is empty in YAML configuration
+        source_line: N/A
+        source_file: N/A
+        reason: input_files is empty in YAML configuration
+  IMP-10-0-0-25: 
+    executed: true
+    status: fail
+    description: Confirm check_timing report has no issue.
+    failures: 
+      - index: 1
+        detail: 'clock_expected (1 occurrences) | View: func_rcff_0p825v_125c_pcff_cmin_pcff3_hold'
+        source_line: 17
+        source_file: 'C:\Users\yuyin\OneDrive - Cadence Design Systems Inc\2025\Checklist\AAI\CHECKLIST_V3\CHECKLIST\IP_project_folder\reports\10.0\check_timing_func.rpt'
+        reason: Check_timing violations detected across timing views
+      - index: 2
+        detail: 'clock_expected (1 occurrences) | View: scan_shift_rcff_0p825v_125c_pcff_cmin_pcff3_hold'
+        source_line: 19
+        source_file: 'C:\Users\yuyin\OneDrive - Cadence Design Systems Inc\2025\Checklist\AAI\CHECKLIST_V3\CHECKLIST\IP_project_folder\reports\10.0\check_timing_scan.rpt'
+        reason: Check_timing violations detected across timing views
+      - index: 3
+        detail: 'ideal_clock_waveform (1 occurrences) | View: scan_shift_rcff_0p825v_125c_pcff_cmin_pcff3_hold'
+        source_line: 45
+        source_file: 'C:\Users\yuyin\OneDrive - Cadence Design Systems Inc\2025\Checklist\AAI\CHECKLIST_V3\CHECKLIST\IP_project_folder\reports\10.0\check_timing_scan.rpt'
+        reason: Check_timing violations detected across timing views
+      - index: 4
+        detail: 'ideal_clock_waveform (3 occurrences) | View: func_rcff_0p825v_125c_pcff_cmin_pcff3_hold'
+        source_line: 38
+        source_file: 'C:\Users\yuyin\OneDrive - Cadence Design Systems Inc\2025\Checklist\AAI\CHECKLIST_V3\CHECKLIST\IP_project_folder\reports\10.0\check_timing_func.rpt'
+        reason: Check_timing violations detected across timing views
+      - index: 5
+        detail: 'no_drive (2 occurrences) | View: func_rcff_0p825v_125c_pcff_cmin_pcff3_hold'
+        source_line: 29
+        source_file: 'C:\Users\yuyin\OneDrive - Cadence Design Systems Inc\2025\Checklist\AAI\CHECKLIST_V3\CHECKLIST\IP_project_folder\reports\10.0\check_timing_func.rpt'
+        reason: Check_timing violations detected across timing views
+      - index: 6
+        detail: 'no_drive (2 occurrences) | View: scan_shift_rcff_0p825v_125c_pcff_cmin_pcff3_hold'
+        source_line: 30
+        source_file: 'C:\Users\yuyin\OneDrive - Cadence Design Systems Inc\2025\Checklist\AAI\CHECKLIST_V3\CHECKLIST\IP_project_folder\reports\10.0\check_timing_scan.rpt'
+        reason: Check_timing violations detected across timing views
+  IMP-10-0-0-26: 
+    executed: true
+    status: fail
+    description: Confirm check_design report has no issue.
+    failures: 
+      - index: 1
+        detail: Floating Ports (3 occurrences)
+        source_line: 20
+        source_file: 'C:\Users\yuyin\OneDrive - Cadence Design Systems Inc\2025\Checklist\AAI\CHECKLIST_V3\CHECKLIST\IP_project_folder\reports\10.0\check_design_func.rpt'
+        reason: check_design violations detected in one or more categories
+      - index: 2
+        detail: Nets with parallel drivers (5 occurrences)
+        source_line: 67
+        source_file: 'C:\Users\yuyin\OneDrive - Cadence Design Systems Inc\2025\Checklist\AAI\CHECKLIST_V3\CHECKLIST\IP_project_folder\reports\10.0\check_design_func.rpt'
+        reason: check_design violations detected in one or more categories
+    infos: 
+      - index: 1
+        detail: Annotation to Physical Netlist (100%)
+        source_line: 9
+        source_file: 'C:\Users\yuyin\OneDrive - Cadence Design Systems Inc\2025\Checklist\AAI\CHECKLIST_V3\CHECKLIST\IP_project_folder\reports\10.0\check_design_func.rpt'
+        reason: All check_design categories passed with no violations
+      - index: 2
+        detail: Annotation to Verilog Netlist (100%)
+        source_line: 8
+        source_file: 'C:\Users\yuyin\OneDrive - Cadence Design Systems Inc\2025\Checklist\AAI\CHECKLIST_V3\CHECKLIST\IP_project_folder\reports\10.0\check_design_func.rpt'
+        reason: All check_design categories passed with no violations
+      - index: 3
+        detail: Cells with missing Timing data (0 occurrences)
+        source_line: 3
+        source_file: 'C:\Users\yuyin\OneDrive - Cadence Design Systems Inc\2025\Checklist\AAI\CHECKLIST_V3\CHECKLIST\IP_project_folder\reports\10.0\check_design_func.rpt'
+        reason: All check_design categories passed with no violations
+      - index: 4
+        detail: Dont use cells in design (0 occurrences)
+        source_line: 79
+        source_file: 'C:\Users\yuyin\OneDrive - Cadence Design Systems Inc\2025\Checklist\AAI\CHECKLIST_V3\CHECKLIST\IP_project_folder\reports\10.0\check_design_func.rpt'
+        reason: All check_design categories passed with no violations
+      - index: 5
+        detail: Floating Instance terminals (0 occurrences)
+        source_line: 51
+        source_file: 'C:\Users\yuyin\OneDrive - Cadence Design Systems Inc\2025\Checklist\AAI\CHECKLIST_V3\CHECKLIST\IP_project_folder\reports\10.0\check_design_func.rpt'
+        reason: All check_design categories passed with no violations
+      - index: 6
+        detail: Nets with multiple drivers (0 occurrences)
+        source_line: 68
+        source_file: 'C:\Users\yuyin\OneDrive - Cadence Design Systems Inc\2025\Checklist\AAI\CHECKLIST_V3\CHECKLIST\IP_project_folder\reports\10.0\check_design_func.rpt'
+        reason: All check_design categories passed with no violations
+      - index: 7
+        detail: Nets with no driver (No FanIn) (0 occurrences)
+        source_line: 69
+        source_file: 'C:\Users\yuyin\OneDrive - Cadence Design Systems Inc\2025\Checklist\AAI\CHECKLIST_V3\CHECKLIST\IP_project_folder\reports\10.0\check_design_func.rpt'
+        reason: All check_design categories passed with no violations
+      - index: 8
+        detail: Nets with tri-state driver (0 occurrences)
+        source_line: 58
+        source_file: 'C:\Users\yuyin\OneDrive - Cadence Design Systems Inc\2025\Checklist\AAI\CHECKLIST_V3\CHECKLIST\IP_project_folder\reports\10.0\check_design_func.rpt'
+        reason: All check_design categories passed with no violations
+      - index: 9
+        detail: Output pins connected to Power Ground net (0 occurrences)
+        source_line: 37
+        source_file: 'C:\Users\yuyin\OneDrive - Cadence Design Systems Inc\2025\Checklist\AAI\CHECKLIST_V3\CHECKLIST\IP_project_folder\reports\10.0\check_design_func.rpt'
+        reason: All check_design categories passed with no violations
+      - index: 10
+        detail: Output term shorted to Power Ground net (0 occurrences)
+        source_line: 54
+        source_file: 'C:\Users\yuyin\OneDrive - Cadence Design Systems Inc\2025\Checklist\AAI\CHECKLIST_V3\CHECKLIST\IP_project_folder\reports\10.0\check_design_func.rpt'
+        reason: All check_design categories passed with no violations
+      - index: 11
+        detail: Ports Connect to multiple Pads (0 occurrences)
+        source_line: 21
+        source_file: 'C:\Users\yuyin\OneDrive - Cadence Design Systems Inc\2025\Checklist\AAI\CHECKLIST_V3\CHECKLIST\IP_project_folder\reports\10.0\check_design_func.rpt'
+        reason: All check_design categories passed with no violations
+      - index: 12
+        detail: Tie Hi/Lo instances connected to output (0 occurrences)
+        source_line: 73
+        source_file: 'C:\Users\yuyin\OneDrive - Cadence Design Systems Inc\2025\Checklist\AAI\CHECKLIST_V3\CHECKLIST\IP_project_folder\reports\10.0\check_design_func.rpt'
+        reason: All check_design categories passed with no violations
+      - index: 13
+        detail: Tie Hi/Lo output terms floating (0 occurrences)
+        source_line: 53
+        source_file: 'C:\Users\yuyin\OneDrive - Cadence Design Systems Inc\2025\Checklist\AAI\CHECKLIST_V3\CHECKLIST\IP_project_folder\reports\10.0\check_design_func.rpt'
+        reason: All check_design categories passed with no violations
+      - index: 14
+        detail: Verilog nets with multiple drivers (0 occurrences)
+        source_line: 74
+        source_file: 'C:\Users\yuyin\OneDrive - Cadence Design Systems Inc\2025\Checklist\AAI\CHECKLIST_V3\CHECKLIST\IP_project_folder\reports\10.0\check_design_func.rpt'
+        reason: All check_design categories passed with no violations
+  IMP-10-0-0-27: 
+    executed: true
+    status: fail
+    description: Confirm final timing review was held and all open items closed (capture the review and waiver in JIRA ticket).
+    failures: 
+      - index: 1
+        detail: input_files is empty in YAML configuration
+        source_line: N/A
+        source_file: N/A
+        reason: input_files is empty in YAML configuration

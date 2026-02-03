@@ -1,0 +1,13 @@
+description: Confirm input database(netlist/def/lef/spef/lib/pgv/etc) are loaded correctly.
+input_files:
+- ${CHECKLIST_ROOT}/IP_project_folder/logs/*static*.log
+- ${CHECKLIST_ROOT}/IP_project_folder/logs/*dynamic*.log
+- ${CHECKLIST_ROOT}/IP_project_folder/logs/*EM*.log
+requirements:
+  pattern_items: []
+  value: N/A
+waivers:
+  value: 0
+  waive_items:
+  - 'Explanation: Database loading errors are informational only for initial design
+    exploration phase'

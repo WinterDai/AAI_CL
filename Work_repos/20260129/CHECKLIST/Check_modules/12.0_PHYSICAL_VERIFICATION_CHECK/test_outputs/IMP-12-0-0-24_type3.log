@@ -1,0 +1,5 @@
+PASS:IMP-12-0-0-24:Confirm add the chipBoundary layer to check boundary DRC for test chip.
+IMP-12-0-0-24-INFO01: Chip_Boundary layer requirement waived:
+  Severity: Info Occurrence: 1
+  - Chip_Boundary
+

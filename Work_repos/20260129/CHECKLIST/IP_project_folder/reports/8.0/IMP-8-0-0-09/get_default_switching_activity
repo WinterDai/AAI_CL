@@ -1,0 +1,2 @@
+-input_activity  {0.15 }
+-clip_activity_to_domain_freq  { }

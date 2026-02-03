@@ -1,0 +1,10 @@
+description: Confirm the netlist/spef version is correct.
+input_files:
+- ${CHECKLIST_ROOT}/IP_project_folder/logs/sta_post_syn.log
+requirements:
+  pattern_items: []
+  value: N/A
+waivers:
+  value: 0
+  waive_items:
+  - 'Explanation: Timestamp check is informational only for post-synthesis STA'

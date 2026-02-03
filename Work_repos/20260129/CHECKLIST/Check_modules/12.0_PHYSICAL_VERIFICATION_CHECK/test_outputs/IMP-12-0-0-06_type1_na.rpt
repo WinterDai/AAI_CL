@@ -1,0 +1,6 @@
+FAIL:IMP-12-0-0-06:Confirm the MIM related check setting is correct. (Fill N/A if no MIMCAP inserted or no MIM related layers)
+Fail Occurrence: 4
+1: Fail: FHDMIM: Required MIM switches not found in PVL log or sourceme file
+2: Fail: KOZ_HIGH_SUBST_LAYER: Required MIM switches not found in PVL log or sourceme file
+3: Fail: SHDMIM: Required MIM switches not found in PVL log or sourceme file
+4: Fail: SHDMIM_KOZ_AP_SPACE_5UM: Required MIM switches not found in PVL log or sourceme file

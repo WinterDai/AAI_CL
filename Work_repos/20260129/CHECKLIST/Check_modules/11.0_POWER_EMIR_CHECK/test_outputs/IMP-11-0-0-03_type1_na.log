@@ -1,0 +1,9 @@
+PASS:IMP-11-0-0-03:Confirm activity file was used? If not, provide default switching activity values in comments field.
+IMP-11-0-0-03-INFO01: Activity configuration found in power analysis log:
+  Severity: Info Occurrence: 5
+  - EM_ND1_func_ffgnp_0p825v_m40c_cbest_CCbest_T_rcbest_CCbest_hold.log
+  - ND1_func_ffgnp_0p825v_125c_cbest_CCbest_T_cworst_CCworst_hold_dynamic.log
+  - ND1_func_ffgnp_0p825v_125c_cbest_CCbest_T_cworst_CCworst_hold_static.log
+  - ND1_func_ssgnp_0p675v_125c_cworst_CCworst_T_cworst_CCworst_hold_dynamic.log
+  - ND1_func_ssgnp_0p675v_125c_cworst_CCworst_T_cworst_CCworst_hold_static.log
+

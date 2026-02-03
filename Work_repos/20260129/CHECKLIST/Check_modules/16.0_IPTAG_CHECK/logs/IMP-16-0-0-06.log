@@ -1,0 +1,5 @@
+FAIL:IMP-16-0-0-06:Confirm you followed the below document about IPTAG creation. If you have further question, please check with Tobing. HSPHY/HPPHY/DFPHY/GDDR/HBM: https://cadence.sharepoint.com/:w:/r/sites/IPGroup/DesignIP/Quality/_layouts/15/Doc.aspx?sourcedoc=%7B26DAB946-483A-415F-AC0C-C195C0838506%7D&file=IP%20Number%20Format%20-%20DDR%20PHY.docx&wdLOR=cF5835961-1465-461D-BAFD-3F0590F6A7F9&action=default&mobileredirect=true SERDES: https://cadence.sharepoint.com/:w:/r/sites/IPGroup/DesignIP/Quality/IP_Numbers/IP%20Number%20Format%20-%20SerDes.docx?d=wf015c37bca9b4d3d951589cf616333fe&csf=1&web=1
+IMP-16-0-0-06-ERROR01: IPTAG configuration validation failed:
+  Severity: Fail Occurrence: 1
+  - Field 11: CTIME
+

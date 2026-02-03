@@ -1,0 +1,11 @@
+FAIL:IMP-8-0-0-05:Confirm the power switches connection is correct . (for non-PSO, please fill N/A)
+IMP-8-0-0-05-ERROR01: PSO-related violations detected in CLP report:
+  Severity: Fail Occurrence: 3
+  - LIB_LINT_034:(Type: Library, Severity: Note, Occurrences: 1):Nominal conditions of macro cell are extracted for domains which can work with single nominal voltage
+  - LIB_LINT_067:(Type: Library, Severity: Warning, Occurrences: 18):Cell is extracted as a macro cell because it either has multiple power or ground pins or at least one of its data pins has is_isolated: true attribute specified.
+  - LIB_LINT_068:(Type: Library, Severity: Warning, Occurrences: 2):PG_PIN direction is changed to "input", which is compatible with the defined PG_TYPE.
+IMP-8-0-0-05-INFO01: PSO violations waived per design approval:
+  Severity: Info Occurrence: 2
+  - LIB_LINT_015:(Type: Library, Severity: Warning, Occurrences: 1):Level shifter does not have the required attribute setting to decide its valid location
+  - LIB_LINT_040:(Type: Library, Severity: Warning, Occurrences: 18):Ground pin defined as "pwell" type is not related to a primary, backup, or internal type ground pin
+

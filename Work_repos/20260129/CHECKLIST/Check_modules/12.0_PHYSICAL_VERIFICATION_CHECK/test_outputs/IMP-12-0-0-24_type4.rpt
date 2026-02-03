@@ -1,0 +1,5 @@
+FAIL:IMP-12-0-0-24:Confirm add the chipBoundary layer to check boundary DRC for test chip.
+Fail Occurrence: 1
+1: Fail: Invalid_Geometry_Count_Calibre_C:\Users\jingyu\OneDrive - Cadence Design Systems Inc\Desktop\checklist_dev\AI_2026_V1\CHECKLIST\CHECKLIST\IP_project_folder\reports\pv\Calibre_DRC.rep. In line 851, C:\Users\jingyu\OneDrive - Cadence Design Systems Inc\Desktop\checklist_dev\AI_2026_V1\CHECKLIST\CHECKLIST\IP_project_folder\reports\pv\Calibre_DRC.rep: Chip_Boundary layer not found in DRC report or geometry count ≠ 1
+Warn Occurrence: 1
+1: Warn: Chip_Boundary: Waiver not matched - Chip_Boundary layer found or no corresponding violation: Waived - Multiple chip boundaries acceptable for multi-die design[WAIVER]

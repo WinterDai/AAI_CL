@@ -1,0 +1,4 @@
+PASS:IMP-8-0-0-05:Confirm the power switches connection is correct . (for non-PSO, please fill N/A)
+Info Occurrence: 2
+1: Info: Database check. In line 20, C:\Users\chenweif\Checker_dev\CHECKLIST\CHECKLIST\IP_project_folder\reports\8.0\check_power_switch_connection.pass.rpt: Power Switch Connection is CORRECT based on db check and LEC result.
+2: Info: LEC verification. In line 2035, C:\Users\chenweif\Checker_dev\CHECKLIST\CHECKLIST\IP_project_folder\logs\8.0\do_fv.log: Power Switch Connection is CORRECT based on db check and LEC result.

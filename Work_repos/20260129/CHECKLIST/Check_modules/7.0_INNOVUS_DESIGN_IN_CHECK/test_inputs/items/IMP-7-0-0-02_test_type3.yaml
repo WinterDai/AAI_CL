@@ -1,0 +1,18 @@
+description: Confirm no ERROR message during read constraints.
+input_files:
+- ${CHECKLIST_ROOT}/IP_project_folder/reports/7.0/IMP-7-0-0-02.rpt
+requirements:
+  pattern_items:
+  - TCLCMD-1234
+  - IMPMSMV-8350
+  value: 2
+waivers:
+  value: 3
+  waive_items:
+  - name: TCLCMD-1234
+    reason: Waived - legacy constraint file uses deprecated syntax, will be updated
+      in next release
+  - name: TCLCMD-5678
+    reason: Waived - variable defined in separate include file, error is benign
+  - name: IMPMSMV-8350
+    reason: Waived - parse error is expected for this design configuration

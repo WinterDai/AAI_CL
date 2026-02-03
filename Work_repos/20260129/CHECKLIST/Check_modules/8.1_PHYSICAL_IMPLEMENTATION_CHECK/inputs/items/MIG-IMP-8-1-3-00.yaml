@@ -1,0 +1,12 @@
+description: 'TODO: [MIG-WB-Tracking] Confirm the workbench flow you are using. (Current
+  latest one: /projects/workbench/versions/workbench_v0.8) Put the workbench flow
+  dir in Comment and specify the reason why you don’t use the central workbench flow.
+  The reason maybe as belows, -This process is new and not covered by the central
+  workbench flow. -ECO based on old programs.'
+requirements:
+  value: N/A
+  pattern_items: []
+input_files: []
+waivers:
+  value: N/A
+  waive_items: []

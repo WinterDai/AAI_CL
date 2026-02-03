@@ -1,0 +1,5 @@
+PASS:IMP-8-0-0-23:confirm no unplaced cells in design.
+IMP-8-0-0-23-INFO01: All cells successfully placed in design:
+  Severity: Info Occurrence: 1
+  - All Cells Placed
+

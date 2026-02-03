@@ -1,0 +1,124 @@
+
+
+==================================================================================
+=== CALIBRE::DRC-H SUMMARY REPORT
+===
+Execution Date/Time:       Thu Aug 31 18:15:50 2023
+Calibre Version:           v2022.3_33.19    Tue Sep 6 12:10:05 PDT 2022
+Rule File Pathname:        TSMC_top.cal
+Rule File Title:           
+Layout System:             OASIS
+Layout Path(s):            cadence_phy_cdn_hs_phy_top.oas
+Layout Primary Cell:       cadence_phy_cdn_hs_phy_top
+Current Directory:         /proj/work/Amr/V2_2/pkg_2023_08_31_18_14_37_39440/3stars_DRC_MIM_ANT_AMD_TN04CLDR017C1_1_0B_01Sep0334
+User Name:                 moe
+Maximum Results/RuleCheck: ALL
+Maximum Result Vertices:   4096
+DRC Results Database:      DRC_RES.db (ASCII)
+Layout Depth:              ALL
+Text Depth:                PRIMARY
+Summary Report File:       summary.rep (REPLACE)
+Geometry Flagging:         ACUTE = NO  SKEW = NO  ANGLED = NO  OFFGRID = NO
+                           NONSIMPLE POLYGON = NO  NONSIMPLE PATH = NO
+Excluded Cells:           
+CheckText Mapping:         ALL TEXT
+Layers:                    MEMORY-BASED
+Keep Empty Checks:         NO
+----------------------------------------------------------------------------------
+--- RUNTIME WARNINGS
+---
+----------------------------------------------------------------------------------
+--- ORIGINAL LAYER STATISTICS
+---
+LAYER CM0B ......... TOTAL Original Geometry Count = 15108216 (51263313)
+LAYER M0xdx_CBii ... TOTAL Original Geometry Count = 77387835 (282174022)
+LAYER CM0A ......... TOTAL Original Geometry Count = 6904002  (24516427)
+LAYER M0xdx_CAii ... TOTAL Original Geometry Count = 46164727 (257644647)
+LAYER M1xdy_CBii ... TOTAL Original Geometry Count = 32512624 (124813822)
+LAYER M1xdy_CAii ... TOTAL Original Geometry Count = 9069517  (69111118)
+LAYER M2i .......... TOTAL Original Geometry Count = 31760643 (129689771)
+LAYER M3i .......... TOTAL Original Geometry Count = 25538998 (82614756)
+LAYER M4i .......... TOTAL Original Geometry Count = 16302404 (56353544)
+LAYER M5i .......... TOTAL Original Geometry Count = 8062394  (34200359)
+LAYER M6i .......... TOTAL Original Geometry Count = 3895935  (25050364)
+LAYER M7i .......... TOTAL Original Geometry Count = 2889069  (26952448)
+LAYER M8i .......... TOTAL Original Geometry Count = 2061751  (15968747)
+LAYER M9i .......... TOTAL Original Geometry Count = 1717458  (13716631)
+LAYER M10i ......... TOTAL Original Geometry Count = 1745607  (4793081)
+LAYER M11i ......... TOTAL Original Geometry Count = 1249517  (2567290)
+LAYER M12i ......... TOTAL Original Geometry Count = 538558   (1429646)
+LAYER M13i ......... TOTAL Original Geometry Count = 304517   (1044927)
+LAYER M14i ......... TOTAL Original Geometry Count = 302606   (1044523)
+LAYER M15i ......... TOTAL Original Geometry Count = 171488   (244379)
+LAYER CBM .......... TOTAL Original Geometry Count = 0        (0)
+LAYER CBM_O ........ TOTAL Original Geometry Count = 0        (0)
+LAYER ODi .......... TOTAL Original Geometry Count = 17643    (143640219)
+LAYER POi .......... TOTAL Original Geometry Count = 188264   (494042374)
+LAYER SRDPO ........ TOTAL Original Geometry Count = 4041194  (75443134)
+LAYER CTMDMY_14 .... TOTAL Original Geometry Count = 0        (0)
+LAYER CTMDMY_15 .... TOTAL Original Geometry Count = 0        (0)
+LAYER MPC_O ........ TOTAL Original Geometry Count = 0        (0)
+LAYER MPC .......... TOTAL Original Geometry Count = 0        (0)
+LAYER BPC_O ........ TOTAL Original Geometry Count = 0        (0)
+LAYER BPC .......... TOTAL Original Geometry Count = 0        (0)
+LAYER TPCDMY_AP2 ... TOTAL Original Geometry Count = 0        (0)
+LAYER CPOi ......... TOTAL Original Geometry Count = 51118    (93566482)
+LAYER VDi .......... TOTAL Original Geometry Count = 118841   (195280713)
+LAYER VDRi ......... TOTAL Original Geometry Count = 9701     (44133117)
+LAYER VGi .......... TOTAL Original Geometry Count = 310003   (458596162)
+LAYER CMDi ......... TOTAL Original Geometry Count = 336051   (687100571)
+LAYER MDi .......... TOTAL Original Geometry Count = 281816   (562046696)
+LAYER VIA0i ........ TOTAL Original Geometry Count = 11521726 (112118051)
+LAYER RH_TN ........ TOTAL Original Geometry Count = 1901     (125907)
+LAYER RHDMY2 ....... TOTAL Original Geometry Count = 0        (0)
+LAYER VIA1i ........ TOTAL Original Geometry Count = 14849306 (128597381)
+LAYER RHDMY3 ....... TOTAL Original Geometry Count = 0        (0)
+LAYER VIA2i ........ TOTAL Original Geometry Count = 12474799 (103670676)
+LAYER RHDMY4 ....... TOTAL Original Geometry Count = 0        (0)
+LAYER VIA3i ........ TOTAL Original Geometry Count = 9661861  (54353572)
+LAYER RHDMY5 ....... TOTAL Original Geometry Count = 0        (0)
+LAYER VIA4i ........ TOTAL Original Geometry Count = 5096313  (47388654)
+LAYER RHDMY6 ....... TOTAL Original Geometry Count = 520      (50626)
+LAYER VIA5i ........ TOTAL Original Geometry Count = 2373722  (32641784)
+LAYER RHDMY7 ....... TOTAL Original Geometry Count = 0        (0)
+LAYER VIA6i ........ TOTAL Original Geometry Count = 3832917  (32507521)
+LAYER RHDMY8 ....... TOTAL Original Geometry Count = 0        (0)
+LAYER VIA7i ........ TOTAL Original Geometry Count = 2537299  (23945977)
+LAYER RHDMY9 ....... TOTAL Original Geometry Count = 0        (0)
+LAYER VIA8i ........ TOTAL Original Geometry Count = 3198604  (36014713)
+LAYER RHDMY10 ...... TOTAL Original Geometry Count = 0        (0)
+LAYER VIA9i ........ TOTAL Original Geometry Count = 5600335  (55921694)
+LAYER RHDMY11 ...... TOTAL Original Geometry Count = 0        (0)
+LAYER VIA10i ....... TOTAL Original Geometry Count = 11269978 (51986650)
+LAYER RHDMY12 ...... TOTAL Original Geometry Count = 0        (0)
+LAYER VIA11i ....... TOTAL Original Geometry Count = 16183015 (42446806)
+LAYER RHDMY13 ...... TOTAL Original Geometry Count = 0        (0)
+LAYER VIA12i ....... TOTAL Original Geometry Count = 31523831 (50797734)
+LAYER RHDMY14 ...... TOTAL Original Geometry Count = 0        (0)
+LAYER VIA13i ....... TOTAL Original Geometry Count = 1767266  (2923626)
+LAYER RHDMY15 ...... TOTAL Original Geometry Count = 0        (0)
+LAYER VIA14i ....... TOTAL Original Geometry Count = 3295062  (4656726)
+LAYER APi .......... TOTAL Original Geometry Count = 20789    (20789)
+LAYER RVi .......... TOTAL Original Geometry Count = 74271    (74271)
+LAYER CBi .......... TOTAL Original Geometry Count = 0        (0)
+LAYER CBDi ......... TOTAL Original Geometry Count = 0        (0)
+----------------------------------------------------------------------------------
+--- RULECHECK RESULTS STATISTICS
+---
+RULECHECK MIM.A.R.1.1 ....... TOTAL Result Count = 0 (0)
+RULECHECK MIM.A.R.6.1:BPC ... TOTAL Result Count = 0 (0)
+RULECHECK MIM.A.R.6.1:MPC ... TOTAL Result Count = 0 (0)
+RULECHECK MIM.A.R.7.1:BPC ... TOTAL Result Count = 0 (0)
+RULECHECK MIM.A.R.7.1:MPC ... TOTAL Result Count = 0 (0)
+RULECHECK MIM.A.R.8.1:BPC ... TOTAL Result Count = 0 (0)
+RULECHECK MIM.A.R.8.1:MPC ... TOTAL Result Count = 0 (0)
+RULECHECK MIM.A.R.9.1:BPC ... TOTAL Result Count = 0 (0)
+RULECHECK MIM.A.R.9.1:MPC ... TOTAL Result Count = 0 (0)
+----------------------------------------------------------------------------------
+--- SUMMARY
+---
+TOTAL CPU Time:                  2814
+TOTAL REAL Time:                 414
+TOTAL Original Layer Geometries: 424326012 (4739286441)
+TOTAL DRC RuleChecks Executed:   9
+TOTAL DRC Results Generated:     0 (0)

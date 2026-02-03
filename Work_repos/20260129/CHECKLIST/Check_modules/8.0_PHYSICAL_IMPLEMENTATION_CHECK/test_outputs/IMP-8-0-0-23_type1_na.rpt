@@ -1,0 +1,11 @@
+FAIL:IMP-8-0-0-23:confirm no unplaced cells in design.
+Fail Occurrence: 9
+1: Fail: inst_data_ctrl_top/inst_ctrl_gen/g26516__9945: Unplaced cell instance detected - placement incomplete
+2: Fail: inst_data_ctrl_top/inst_ctrl_gen/g26625__4733: Unplaced cell instance detected - placement incomplete
+3: Fail: inst_data_param_top/inst_data_slice_param/FE_OFC54006_n: Unplaced cell instance detected - placement incomplete
+4: Fail: inst_data_param_top/inst_data_slice_param/inst_param_regout/g99009: Unplaced cell instance detected - placement incomplete
+5: Fail: inst_data_param_top/inst_data_slice_param/inst_phy_x4_dq_tsel_rd_timing/g1106: Unplaced cell instance detected - placement incomplete
+6: Fail: inst_data_param_top/inst_data_slice_param/inst_phy_x4_dq_tsel_rd_timing/g1147: Unplaced cell instance detected - placement incomplete
+7: Fail: inst_data_param_top/inst_data_slice_param/inst_phy_x4_dqs_tsel_rd_timing/g1105: Unplaced cell instance detected - placement incomplete
+8: Fail: inst_data_param_top/inst_data_slice_param/inst_phy_x4_dqs_tsel_rd_timing/g1106: Unplaced cell instance detected - placement incomplete
+9: Fail: inst_data_param_top/inst_data_slice_param/inst_phy_x4_dqs_tsel_rd_timing/g1107: Unplaced cell instance detected - placement incomplete

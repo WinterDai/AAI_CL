@@ -1,0 +1,13 @@
+description: Confirm open the IP_TIGHTEN_DENSITY switch in DRC rule deck.
+input_files:
+- ${CHECKLIST_ROOT}/IP_project_folder/logs/do_pvs_DRC_pvl.log
+- ${CHECKLIST_ROOT}/IP_project_folder/logs/do_cmd_3star_DRC_sourceme
+requirements:
+  pattern_items:
+  - IP_TIGHTEN_DENSITY
+  value: 1
+waivers:
+  value: 0
+  waive_items:
+  - 'Explanation: IP_TIGHTEN_DENSITY requirement is informational for this design
+    phase'

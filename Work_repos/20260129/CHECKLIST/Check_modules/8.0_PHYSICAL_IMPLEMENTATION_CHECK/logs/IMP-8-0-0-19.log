@@ -1,0 +1,5 @@
+FAIL:IMP-8-0-0-19:Confirm all multiflop synchronizer registers are the intended celltype and VT type upon which MTBF was calculated.
+IMP-8-0-0-19-ERROR01: Configuration error:
+  Severity: Fail Occurrence: 1
+  - input_files is empty in YAML configuration
+

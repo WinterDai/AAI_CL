@@ -1,0 +1,5 @@
+PASS:IMP-6-0-0-05:Confirm no non-equivalent points exist?
+IMP-6-0-0-05-INFO01: Non-equivalent points in LEC (Total: 0):
+  Severity: Info Occurrence: 1
+  - No non-equivalent points found
+

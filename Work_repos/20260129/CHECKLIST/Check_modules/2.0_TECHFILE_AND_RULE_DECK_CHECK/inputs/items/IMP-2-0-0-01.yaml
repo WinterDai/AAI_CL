@@ -1,0 +1,9 @@
+description: 'List Innovus gdsout map name. eg: PRTF_Innovus_N3P_gdsout_17M_1Xa_h_1Xb_v_1Xc_h_1Xd_v_1Ya_h_1Yb_v_4Y_hvhv_2Yy2Yx2R_SHDMIM.10c.map'
+requirements:
+  value: N/A
+  pattern_items: []
+input_files:
+- ${CHECKLIST_ROOT}\IP_project_folder\logs\2.0\do_innovusOUTwoD.logv
+waivers:
+  value: N/A
+  waive_items: []

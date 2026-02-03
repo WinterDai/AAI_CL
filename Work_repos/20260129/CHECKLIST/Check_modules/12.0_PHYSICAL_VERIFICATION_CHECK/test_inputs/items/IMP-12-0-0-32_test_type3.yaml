@@ -1,0 +1,20 @@
+description: 'TODO: Confirm no ERROR message in DFM/FLT log files. (for SEC process,
+  for others fill N/A)'
+input_files:
+- ${CHECKLIST_ROOT}/IP_project_folder/logs/do_pvsFLTwD.log
+- ${CHECKLIST_ROOT}/IP_project_folder/logs/Pegasus_DFM.log
+requirements:
+  pattern_items:
+  - Worker.*killed
+  - Out of.*disk space
+  - missing_reference exception
+  value: 3
+waivers:
+  value: 3
+  waive_items:
+  - name: Worker 1$
+    reason: 'Waived - Worker 1 crash is known infrastructure issue (ticket #12345)'
+  - name: Worker 11$
+    reason: Waived - Worker 11 disk space handled by storage team
+  - name: pm26
+    reason: Waived - Cell pm26 reference error is expected in SEC flow

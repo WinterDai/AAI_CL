@@ -1,0 +1,12 @@
+description: Confirm the min-pulse check result is clean.
+input_files:
+- ${CHECKLIST_ROOT}/IP_project_folder/reports/10.0/*min_pulse_width_hold.rpt
+requirements:
+  pattern_items:
+  - '[RAM_256x16/CLK-CLK] Pulse width violation: -0.849ns (clock: ram_clk, view: func_slow_RCMAX)'
+  - '[FIFO_CTRL/clk_gate/CLK] Pulse width violation: -0.123ns (clock: sys_clk, view:
+    func_fast_RCMIN)'
+  value: 2
+waivers:
+  value: N/A
+  waive_items: []

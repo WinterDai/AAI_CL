@@ -1,0 +1,3 @@
+FAIL:MIG-IMP-8-1-2-01:[BRCM special] Confirm the BRCM don’t_use cell list is correct. Pay attention that the BRCM don’t use list is keeping change. Please check whether you follow the latest one.(The BRCM don’t use file in workbench is based on old program and you need to overwrite or update that per project.) Latest BRCM dont_use cell list can be found in below path: N7: /process/tsmcN7/data/stdcell/tsmc/n7gp/BRCM/MISC_n7gp/docs/dont_use.info.latest N5: /process/tsmcN5/data/stdcell/n5/BRCM/MISC_BRCM_n5/docs/dont_use.info.latest
+Fail Occurrence: 1
+1: Fail: input_files is empty in YAML configuration

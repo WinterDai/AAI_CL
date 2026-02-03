@@ -1,0 +1,5 @@
+FAIL:IMP-8-0-1-01:Confirm no BUMP rule violation or can be waived by the client or internal package team.
+IMP-8-0-1-01-ERROR01: Configuration error:
+  Severity: Fail Occurrence: 1
+  - input_files is empty in YAML configuration
+

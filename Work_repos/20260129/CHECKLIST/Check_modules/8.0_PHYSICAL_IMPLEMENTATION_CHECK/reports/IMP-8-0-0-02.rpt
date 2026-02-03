@@ -1,0 +1,6 @@
+FAIL:IMP-8-0-0-02:Confirm all ports status are Fixed.
+Fail Occurrence: 1
+1: Fail: {pad_mem_data[7]}: Required port status patterns not satisfied or missing
+Info Occurrence: 2
+1: Info: clk4x. In line 15, C:\Users\yuyin\OneDrive - Cadence Design Systems Inc\2025\Checklist\AAI\CHECKLIST_V3\CHECKLIST\IP_project_folder\reports\8.0\IMP-8-0-0-02.rpt: All port status patterns matched and validated
+2: Info: pad_mem_dqs_p. In line 1, C:\Users\yuyin\OneDrive - Cadence Design Systems Inc\2025\Checklist\AAI\CHECKLIST_V3\CHECKLIST\IP_project_folder\reports\8.0\IMP-8-0-0-02.rpt: All port status patterns matched and validated

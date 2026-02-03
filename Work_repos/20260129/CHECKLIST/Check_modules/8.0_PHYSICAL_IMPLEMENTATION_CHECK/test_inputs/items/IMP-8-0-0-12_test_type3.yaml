@@ -1,0 +1,17 @@
+description: Confirm no inputs are tied directly to the power rails (VDD/VSS) by using
+  Tiehigh/Tielow cells(check the Note)
+input_files:
+- C:\Users\chyao\Desktop\checklist_dev\CHECKLIST\CHECKLIST\IP_project_folder\reports\8.0\IMP-8-0-0-12\IMP-8-0-0-12_case1.rpt
+requirements:
+  pattern_items:
+  - inst_data_path_top/inst_data_byte_macro/cdn_hs_phy_data_asic_pads/data_pad_7/PAD1_HV_IN_XTC
+  - inst_data_path_top/inst_data_byte_macro/cdn_hs_phy_data_asic_pads/data_pad_6/PAD1_HV_IN_XTC
+  value: 2
+waivers:
+  value: 2
+  waive_items:
+  - name: inst_data_path_top/inst_data_byte_macro/cdn_hs_phy_data_asic_pads/data_pad_7/PAD1_HV_IN_XTC
+    reason: Waived - PAD cell design allows direct power rail connection per technology
+      spec
+  - name: inst_data_path_top/inst_data_byte_macro/cdn_hs_phy_data_asic_pads/data_pad_6/PAD1_HV_IN_XTC
+    reason: Waived - Approved exception for HV input pad in this design

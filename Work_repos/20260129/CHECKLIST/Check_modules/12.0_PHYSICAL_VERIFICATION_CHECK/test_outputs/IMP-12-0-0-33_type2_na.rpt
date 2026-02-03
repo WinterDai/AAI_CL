@@ -1,0 +1,6 @@
+FAIL:IMP-12-0-0-33:Confirm all Warning message in DFM/FLT log files can be waived. (for SEC process, for others fill N/A)
+Fail Occurrence: 2
+1: Fail: Worker 1 killed by external signal [9] (matches: Worker.*killed): Monitored WARNING patterns found in verification logs
+2: Fail: same label "x" for multiple nets, it is assigned to net x (matches: same label.*multiple nets): Monitored WARNING patterns found in verification logs
+Info Occurrence: 1
+1: Info: Out of.*disk space: Monitored WARNING patterns not detected in verification logs

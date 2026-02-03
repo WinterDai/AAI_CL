@@ -1,0 +1,19 @@
+FAIL:IMP-16-0-0-03:Confirm use IP Type code for PHY - "P" in the slices IPTAG for FIRM PHY delivery.
+IMP-16-0-0-03-ERROR01: PHY instances missing IP Type code 'P' in IPTAG:
+  Severity: Fail Occurrence: 15
+  - AIOI21KAD1BWP280H6P57CNODLVT (GDS: cdn_hs_phy_top.wIPTAG.gds, Vendor: Taiwan Semiconductor Manufacturing Corp., Product: tcbn05_bwph280l6p57cnod_base_lvt)
+  - AIOI21KAD1BWP280H6P57CNODLVTLL (GDS: cdn_hs_phy_top.wIPTAG.gds, Vendor: Taiwan Semiconductor Manufacturing Corp., Product: tcbn05_bwph280l6p57cnod_base_lvtll)
+  - AIOI21KAD1BWP280H6P57CNODSVT (GDS: cdn_hs_phy_top.wIPTAG.gds, Vendor: Taiwan Semiconductor Manufacturing Corp., Product: tcbn05_bwph280l6p57cnod_base_svt)
+  - AIOI21KAD1BWP280H6P57CNODULVT (GDS: cdn_hs_phy_top.wIPTAG.gds, Vendor: Taiwan Semiconductor Manufacturing Corp., Product: tcbn05_bwph280l6p57cnod_base_ulvt)
+  - AIOI21KAD1BWP280H6P57CNODULVTLL (GDS: cdn_hs_phy_top.wIPTAG.gds, Vendor: Taiwan Semiconductor Manufacturing Corp., Product: tcbn05_bwph280l6p57cnod_base_ulvtll)
+  - AIOI21KAD2BWP280H6P57CNODLVT (GDS: cdn_hs_phy_top.wIPTAG.gds, Vendor: Taiwan Semiconductor Manufacturing Corp., Product: tcbn05_bwph280l6p57cnod_base_lvt)
+  - AIOI21KAD2BWP280H6P57CNODLVTLL (GDS: cdn_hs_phy_top.wIPTAG.gds, Vendor: Taiwan Semiconductor Manufacturing Corp., Product: tcbn05_bwph280l6p57cnod_base_lvtll)
+  - AIOI21KAD2BWP280H6P57CNODSVT (GDS: cdn_hs_phy_top.wIPTAG.gds, Vendor: Taiwan Semiconductor Manufacturing Corp., Product: tcbn05_bwph280l6p57cnod_base_svt)
+  - AIOI21KAD2BWP280H6P57CNODULVT (GDS: cdn_hs_phy_top.wIPTAG.gds, Vendor: Taiwan Semiconductor Manufacturing Corp., Product: tcbn05_bwph280l6p57cnod_base_ulvt)
+  - AIOI21KAD2BWP280H6P57CNODULVTLL (GDS: cdn_hs_phy_top.wIPTAG.gds, Vendor: Taiwan Semiconductor Manufacturing Corp., Product: tcbn05_bwph280l6p57cnod_base_ulvtll)
+  - AIOI21KAD4BWP280H6P57CNODLVT (GDS: cdn_hs_phy_top.wIPTAG.gds, Vendor: Taiwan Semiconductor Manufacturing Corp., Product: tcbn05_bwph280l6p57cnod_base_lvt)
+  - AIOI21KAD4BWP280H6P57CNODULVT (GDS: cdn_hs_phy_top.wIPTAG.gds, Vendor: Taiwan Semiconductor Manufacturing Corp., Product: tcbn05_bwph280l6p57cnod_base_ulvt)
+  - AIOI21KAD4BWP280H6P57CNODULVTLL (GDS: cdn_hs_phy_top.wIPTAG.gds, Vendor: Taiwan Semiconductor Manufacturing Corp., Product: tcbn05_bwph280l6p57cnod_base_ulvtll)
+  - cdn_hs_phy_top (GDS: cdn_hs_phy_top.wIPTAG.gds, Vendor: Cadence Design Systems, Inc., Product: HPCFSC_D5D4_T5G$C202209262108$17M1X1Xb1Xe1Ya1Yb5Y2Yy2Yx2R)
+  - cdns_ddr_atb_h (GDS: cdn_hs_phy_top.wIPTAG.gds, Vendor: Cadence Design Systems, Inc., Product: DDR500_T5G)
+

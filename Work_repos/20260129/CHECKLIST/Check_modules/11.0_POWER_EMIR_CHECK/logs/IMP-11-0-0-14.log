@@ -1,0 +1,5 @@
+FAIL:IMP-11-0-0-14:List default continous operation years in design rule. (eg: 10 years)
+IMP-11-0-0-14-ERROR01: Configuration error:
+  Severity: Fail Occurrence: 1
+  - input_files is empty in YAML configuration
+

@@ -1,0 +1,5 @@
+PASS:IMP-2-0-0-09:Confirm BUMP rule deck was not modified? If it was, explain in comments field.
+Warn Occurrence: 1
+1: Warn: PN5_CU_BUMP_030.10_2b: Waiver entry not matched - specified rule deck name not found in violations: Custom rule deck variant approved for advanced node testing[WAIVER]
+Info Occurrence: 1
+1: Info: PN5_CU_BUMP_030.10_1a. In line 24, C:\Users\chenweif\Checker_dev\CHECKLIST\CHECKLIST\IP_project_folder\ruledeck\2.0\PN5_CU_BUMP_030.10_1a: Rule deck modification approved and waived per project requirements: Modification of this rule deck is acceptable for this project per design team approval[WAIVER]

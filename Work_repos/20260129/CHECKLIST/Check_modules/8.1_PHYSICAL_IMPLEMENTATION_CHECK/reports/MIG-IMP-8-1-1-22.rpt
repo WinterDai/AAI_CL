@@ -1,0 +1,3 @@
+FAIL:MIG-IMP-8-1-1-22:Confirm place the cdn_hs_phy/inst_scan_dly module close to PHY interface pins and create separate clock tree to these retime scan registers if your design is based on HSPHY 2022Q1 or later branch and need to support ETM timing signoff. Objective is to make the scan related interface data/clock paths simpler and reduce the slack difference between flatten and ETM model. For DFPHY,current design has not sperated inst_scan_dly module, so please place the seperate “*scan_dly*” registers that belong to a in2reg/reg2out path close to PHY ports similarly. (Fill N/A if design has not this module)
+Fail Occurrence: 1
+1: Fail: input_files is empty in YAML configuration

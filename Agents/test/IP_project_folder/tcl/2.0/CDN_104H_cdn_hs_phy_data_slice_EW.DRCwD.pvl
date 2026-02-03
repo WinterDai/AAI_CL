@@ -1,0 +1,5 @@
+abort_on_layout_error YES
+layout_primary "CDN_104H_cdn_hs_phy_data_slice_EW"
+layout_path "dbs/CDN_104H_cdn_hs_phy_data_slice_EW.OUTwD.merged.gds.gz"
+layout_format		GDSII
+include "/projects/yunbao_N6_80bits_EW_PHY_OD_6400/libs/ruledeck/DRC/PLN6FF_15M_1X1Xa1Ya5Y2Yy2Yx2R_001.11a.encrypt.slice"

@@ -1,0 +1,5 @@
+FAIL:MIG-IMP-8-1-0-03:Confirm max D4 loading can be drove by DA cell and place loading instance close to DA cell(check the Note)
+MIG-IMP-8-1-0-03-ERROR01: Configuration error:
+  Severity: Fail Occurrence: 1
+  - input_files is empty in YAML configuration
+

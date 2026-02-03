@@ -1,0 +1,6 @@
+FAIL:IMP-5-0-0-17:Confirm CPF/UPF file  has passed Conformal LP quality checks against post DFT insertion synthesis netlist?
+Fail Occurrence: 4
+1: Fail: Top boundary output port 'scan_out[100]' is undriven. In line 7, C:\Users\yuyin\OneDrive - Cadence Design Systems Inc\2025\Checklist\AAI\CHECKLIST_V3\CHECKLIST\IP_project_folder\reports\verify_power_structure_post_dft.rpt: Top boundary port with output/inout direction does not have a driver
+2: Fail: Top boundary output port 'scan_out[101]' is undriven. In line 8, C:\Users\yuyin\OneDrive - Cadence Design Systems Inc\2025\Checklist\AAI\CHECKLIST_V3\CHECKLIST\IP_project_folder\reports\verify_power_structure_post_dft.rpt: Top boundary port with output/inout direction does not have a driver
+3: Fail: Top boundary output port 'scan_out[100]' is undriven for test. In line 11, C:\Users\yuyin\OneDrive - Cadence Design Systems Inc\2025\Checklist\AAI\CHECKLIST_V3\CHECKLIST\IP_project_folder\reports\verify_power_structure_post_dft.rpt: Top boundary port with output/inout direction does not have a driver2
+4: Fail: Top boundary output port 'scan_out[101]' is undriven for test. In line 12, C:\Users\yuyin\OneDrive - Cadence Design Systems Inc\2025\Checklist\AAI\CHECKLIST_V3\CHECKLIST\IP_project_folder\reports\verify_power_structure_post_dft.rpt: Top boundary port with output/inout direction does not have a driver2

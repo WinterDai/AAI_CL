@@ -1,0 +1,5 @@
+PASS:IMP-3-0-0-03:List Tempus timing signoff tool version (eg. ssv/231/23.12-s092_1)
+IMP-3-0-0-03-INFO01: Tempus timing signoff tool version found in setup configuration:
+  Severity: Info Occurrence: 1
+  - ssv/202/20.20.000
+

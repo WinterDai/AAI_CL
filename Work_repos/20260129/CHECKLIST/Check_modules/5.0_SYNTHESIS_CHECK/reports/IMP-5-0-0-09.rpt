@@ -1,0 +1,3 @@
+PASS:IMP-5-0-0-09:Confirm Latches Inferred documented?
+Info Occurrence: 1
+1: Info: CKLNQD1BWP143M286H3P48CPDLVT. In line 1, C:\Users\yuyin\OneDrive - Cadence Design Systems Inc\2025\Checklist\AAI\CHECKLIST_V3\CHECKLIST\IP_project_folder\reports\latch.rpt: Latch cell inferred (count: 4)

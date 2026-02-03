@@ -1,0 +1,3 @@
+FAIL:MIG-IMP-8-1-0-16:Confirm all the 3 NAND cells of clock mux in both PHY_TOP and Slice level are placed closely (distance <= 10um) and there is NO buffer/inverters inserted between the nand0/nand1 and nand2.
+Fail Occurrence: 1
+1: Fail: input_files is empty in YAML configuration

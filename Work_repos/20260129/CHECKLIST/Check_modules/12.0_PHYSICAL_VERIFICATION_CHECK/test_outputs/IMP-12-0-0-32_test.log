@@ -1,0 +1,143 @@
+Test Log: IMP-12-0-0-32
+================================================================================
+
+[Test 1/6] Type 1 (requirements.value=N/A, waivers.value=N/A)
+--------------------------------------------------------------------------------
+Test ID: type1_na
+Status: ERROR
+
+Checker Log Output:
+FAIL:IMP-12-0-0-32:Confirm no ERROR message in DFM/FLT log files. (for SEC process, for others fill N/A)
+IMP-12-0-0-32-ERROR01: ERROR messages detected in Pegasus verification logs:
+  Severity: Fail Occurrence: 12
+  - Assertion exception during computation (Worker 2) (Source: Worker 2)
+  - Cell pm26 is referenced, but does not exist. (Source: do_pvsFLTwD.log:line 279)
+  - File system exception during memory reduction (Worker 11) (Source: Worker 11)
+  - Invalid option. (Source: Pegasus_DFM.log:line 562)
+  - Invalid option. (Source: do_pvsFLTwD.log:line 281)
+  - Out of temporary storage disk space, please check -tmp_dirs setting (Worker 11) (Source: Worker 11)
+  - Pegasus exception during compilation (Worker 1) (Source: Worker 1)
+  - Run completed with errors due to worker failures (Source: do_pvsFLTwD.log:line 283)
+  - Terminating run, encountered unrecoverable error on Worker 2 (Source: do_pvsFLTwD.log:line 282)
+  - Terminating run, encountered unrecoverable layer loss (Source: do_pvsFLTwD.log:line 284)
+  - The difference between the numbers of schematic and layout instances (Source: NVN-7090)
+  - missing_reference exception for cell "pm26" in parent cell "pm100" (Worker 1) (Source: Worker 1)
+
+
+================================================================================
+
+[Test 2/6] Type 1 (requirements.value=N/A, waivers.value=0)
+--------------------------------------------------------------------------------
+Test ID: type1_0
+Status: PASS
+
+Checker Log Output:
+PASS:IMP-12-0-0-32:Confirm no ERROR message in DFM/FLT log files. (for SEC process, for others fill N/A)
+IMP-12-0-0-32-INFO01: [WAIVED_INFO]: Waived information:
+  Severity: Info Occurrence: 1
+  - Explanation: DFM/FLT verification errors are informational for SEC process
+IMP-12-0-0-32-INFO02: [WAIVED_AS_INFO]: ERROR messages detected in Pegasus verification logs:
+  Severity: Info Occurrence: 12
+  - Assertion exception during computation (Worker 2) (Source: Worker 2)
+  - Cell pm26 is referenced, but does not exist. (Source: do_pvsFLTwD.log:line 279)
+  - File system exception during memory reduction (Worker 11) (Source: Worker 11)
+  - Invalid option. (Source: Pegasus_DFM.log:line 562)
+  - Invalid option. (Source: do_pvsFLTwD.log:line 281)
+  - Out of temporary storage disk space, please check -tmp_dirs setting (Worker 11) (Source: Worker 11)
+  - Pegasus exception during compilation (Worker 1) (Source: Worker 1)
+  - Run completed with errors due to worker failures (Source: do_pvsFLTwD.log:line 283)
+  - Terminating run, encountered unrecoverable error on Worker 2 (Source: do_pvsFLTwD.log:line 282)
+  - Terminating run, encountered unrecoverable layer loss (Source: do_pvsFLTwD.log:line 284)
+  - The difference between the numbers of schematic and layout instances (Source: NVN-7090)
+  - missing_reference exception for cell "pm26" in parent cell "pm100" (Worker 1) (Source: Worker 1)
+
+
+================================================================================
+
+[Test 3/6] Type 2 (requirements.value>0, waivers.value=N/A)
+--------------------------------------------------------------------------------
+Test ID: type2_na
+Status: ERROR
+
+Checker Log Output:
+FAIL:IMP-12-0-0-32:Confirm no ERROR message in DFM/FLT log files. (for SEC process, for others fill N/A)
+IMP-12-0-0-32-ERROR01: Monitored ERROR patterns detected in verification logs:
+  Severity: Fail Occurrence: 1
+  - Worker.*killed
+IMP-12-0-0-32-INFO01: All monitored ERROR patterns validated (0 errors found):
+  Severity: Info Occurrence: 2
+  - Out of temporary storage disk space, please check -tmp_dirs setting (Worker 11) (Source: Worker 11)
+  - missing_reference exception for cell "pm26" in parent cell "pm100" (Worker 1) (Source: Worker 1)
+
+
+================================================================================
+
+[Test 4/6] Type 2 (requirements.value>0, waivers.value=0)
+--------------------------------------------------------------------------------
+Test ID: type2_0
+Status: PASS
+
+Checker Log Output:
+PASS:IMP-12-0-0-32:Confirm no ERROR message in DFM/FLT log files. (for SEC process, for others fill N/A)
+IMP-12-0-0-32-INFO01: [WAIVED_INFO]: Waived information:
+  Severity: Info Occurrence: 1
+  - Explanation: Monitored ERROR patterns are informational for SEC process
+IMP-12-0-0-32-INFO02: All monitored ERROR patterns validated (0 errors found):
+  Severity: Info Occurrence: 2
+  - Out of temporary storage disk space, please check -tmp_dirs setting (Worker 11) (Source: Worker 11)
+  - missing_reference exception for cell "pm26" in parent cell "pm100" (Worker 1) (Source: Worker 1)
+IMP-12-0-0-32-INFO03: [WAIVED_AS_INFO]: Monitored ERROR patterns detected in verification logs:
+  Severity: Info Occurrence: 1
+  - Worker.*killed
+
+
+================================================================================
+
+[Test 5/6] Type 3 (requirements.value>0, waivers.value>0)
+--------------------------------------------------------------------------------
+Test ID: type3
+Status: PASS
+
+Checker Log Output:
+PASS:IMP-12-0-0-32:Confirm no ERROR message in DFM/FLT log files. (for SEC process, for others fill N/A)
+IMP-12-0-0-32-WARN01: Unused waivers:
+  Severity: Warn Occurrence: 1
+  - pm26
+IMP-12-0-0-32-INFO01: ERROR messages waived per verification team approval:
+  Severity: Info Occurrence: 2
+  - Out of temporary storage disk space, please check -tmp_dirs setting (Worker 11) (Source: Worker 11)
+  - missing_reference exception for cell "pm26" in parent cell "pm100" (Worker 1) (Source: Worker 1)
+IMP-12-0-0-32-INFO02: All monitored ERROR patterns validated (0 errors found):
+  Severity: Info Occurrence: 1
+  - Worker.*killed
+
+
+================================================================================
+
+[Test 6/6] Type 4 (requirements.value=N/A, waivers.value>0)
+--------------------------------------------------------------------------------
+Test ID: type4
+Status: ERROR
+
+Checker Log Output:
+FAIL:IMP-12-0-0-32:Confirm no ERROR message in DFM/FLT log files. (for SEC process, for others fill N/A)
+IMP-12-0-0-32-ERROR01: ERROR messages detected in Pegasus verification logs:
+  Severity: Fail Occurrence: 7
+  - Assertion exception during computation (Worker 2) (Source: Worker 2)
+  - Invalid option. (Source: Pegasus_DFM.log:line 562)
+  - Invalid option. (Source: do_pvsFLTwD.log:line 281)
+  - Run completed with errors due to worker failures (Source: do_pvsFLTwD.log:line 283)
+  - Terminating run, encountered unrecoverable error on Worker 2 (Source: do_pvsFLTwD.log:line 282)
+  - Terminating run, encountered unrecoverable layer loss (Source: do_pvsFLTwD.log:line 284)
+  - The difference between the numbers of schematic and layout instances (Source: NVN-7090)
+IMP-12-0-0-32-INFO01: ERROR messages waived per verification team approval:
+  Severity: Info Occurrence: 5
+  - Cell pm26 is referenced, but does not exist. (Source: do_pvsFLTwD.log:line 279)
+  - File system exception during memory reduction (Worker 11) (Source: Worker 11)
+  - Out of temporary storage disk space, please check -tmp_dirs setting (Worker 11) (Source: Worker 11)
+  - Pegasus exception during compilation (Worker 1) (Source: Worker 1)
+  - missing_reference exception for cell "pm26" in parent cell "pm100" (Worker 1) (Source: Worker 1)
+
+
+================================================================================
+

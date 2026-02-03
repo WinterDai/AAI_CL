@@ -1,0 +1,99 @@
+Test Log: IMP-8-0-0-06
+================================================================================
+
+[Test 1/6] Type 1 (requirements.value=N/A, waivers.value=N/A)
+--------------------------------------------------------------------------------
+Test ID: type1_na
+Status: PASS
+
+Checker Log Output:
+PASS:IMP-8-0-0-06:Confirm the switch power pin is not in lef . (for non-PSO, please fill N/A)
+IMP-8-0-0-06-INFO01: Power Switch Pin would not write out into LEF:
+  Severity: Info Occurrence: 1
+  - Design: gddr36_ew_cdn_ghs_phy_top | Switch Power: VDDG
+
+
+================================================================================
+
+[Test 2/6] Type 1 (requirements.value=N/A, waivers.value=0)
+--------------------------------------------------------------------------------
+Test ID: type1_0
+Status: PASS
+
+Checker Log Output:
+PASS:IMP-8-0-0-06:Confirm the switch power pin is not in lef . (for non-PSO, please fill N/A)
+IMP-8-0-0-06-INFO01: [WAIVED_INFO]: Waived information:
+  Severity: Info Occurrence: 1
+  - Explanation: This check is informational only for early design stages where switch power pin exposure in LEF is acceptable
+IMP-8-0-0-06-INFO02: Power Switch Pin would not write out into LEF:
+  Severity: Info Occurrence: 1
+  - Design: gddr36_ew_cdn_ghs_phy_top | Switch Power: VDDG
+
+
+================================================================================
+
+[Test 3/6] Type 2 (requirements.value>0, waivers.value=N/A)
+--------------------------------------------------------------------------------
+Test ID: type2_na
+Status: PASS
+
+Checker Log Output:
+PASS:IMP-8-0-0-06:Confirm the switch power pin is not in lef . (for non-PSO, please fill N/A)
+IMP-8-0-0-06-INFO01: Power Switch Pin would not write out into LEF (TOP level) OR SUB-BLOCK level:
+  Severity: Info Occurrence: 1
+  - Design: gddr36_ew_cdn_ghs_phy_top | Switch Power: VDDG
+
+
+================================================================================
+
+[Test 4/6] Type 2 (requirements.value>0, waivers.value=0)
+--------------------------------------------------------------------------------
+Test ID: type2_0
+Status: PASS
+
+Checker Log Output:
+PASS:IMP-8-0-0-06:Confirm the switch power pin is not in lef . (for non-PSO, please fill N/A)
+IMP-8-0-0-06-INFO01: [WAIVED_INFO]: Waived information:
+  Severity: Info Occurrence: 1
+  - Explanation: This check is informational only for top-level designs during early integration phases
+IMP-8-0-0-06-INFO02: Power Switch Pin would not write out into LEF (TOP level) OR SUB-BLOCK level:
+  Severity: Info Occurrence: 1
+  - Design: gddr36_ew_cdn_ghs_phy_top | Switch Power: VDDG
+
+
+================================================================================
+
+[Test 5/6] Type 3
+--------------------------------------------------------------------------------
+Test ID: type3
+Status: PASS
+
+Checker Log Output:
+PASS:IMP-8-0-0-06:Confirm the switch power pin is not in lef . (for non-PSO, please fill N/A)
+IMP-8-0-0-06-WARN01: Unused waivers:
+  Severity: Warn Occurrence: 1
+  - gddr36_ew_cdn_ghs_phy_top
+IMP-8-0-0-06-INFO01: Power Switch Pin would not write out into LEF (TOP level) OR SUB-BLOCK level:
+  Severity: Info Occurrence: 1
+  - Design: gddr36_ew_cdn_ghs_phy_top | Switch Power: VDDG
+
+
+================================================================================
+
+[Test 6/6] Type 4
+--------------------------------------------------------------------------------
+Test ID: type4
+Status: PASS
+
+Checker Log Output:
+PASS:IMP-8-0-0-06:Confirm the switch power pin is not in lef . (for non-PSO, please fill N/A)
+IMP-8-0-0-06-WARN01: Unused waivers:
+  Severity: Warn Occurrence: 1
+  - gddr36_ew_cdn_ghs_phy_top
+IMP-8-0-0-06-INFO01: Power Switch Pin would not write out into LEF:
+  Severity: Info Occurrence: 1
+  - Design: gddr36_ew_cdn_ghs_phy_top | Switch Power: VDDG
+
+
+================================================================================
+

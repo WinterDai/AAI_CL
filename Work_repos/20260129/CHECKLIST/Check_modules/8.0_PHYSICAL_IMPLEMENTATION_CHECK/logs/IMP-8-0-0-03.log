@@ -1,0 +1,8 @@
+PASS:IMP-8-0-0-03:Confirm routing blockages are created around the block edges.
+IMP-8-0-0-03-INFO01: Required edge blockage patterns matched on all layers:
+  Severity: Info Occurrence: 4
+  - Bottom edge
+  - Left edge
+  - Right edge
+  - Top edge
+

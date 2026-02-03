@@ -1,0 +1,28 @@
+description: 'Confirm the ANT rule deck setting is correct.'
+requirements:
+  value: 7
+  pattern_items:
+    - ACC_DEBUG: disabled
+      # Turn on if you want to get more information for debugging
+    - DEBUG_VIA: disabled
+      # Turn on if you want to get more information for debugging
+    - First_priority: disabled
+      # Turn on to check DFM rules of first priority group
+    - Manufacturing_concern: disabled
+      # Turn on to check DFM rules of manufacturing-concern group
+    - DRC_TOLERANCE_FLOATING_POINT: disabled
+      # Turn on for ANT DRC resolution enhancement
+    - DEBUG_MX: disabled
+      # Turn on if you want to get more information for debugging
+    - FHDMIM: disabled
+      # Turn on for FHDMIM check, turn off for SHDMIM check
+
+input_files:
+  - ${CHECKLIST_ROOT}/IP_project_folder/logs/do_pvs_ANT_pvl.log
+  - ${CHECKLIST_ROOT}/IP_project_folder/logs/do_cmd_3star_ANT_sourceme
+
+waivers:
+  value: 1
+  waive_items:
+    - name: FHDMIM
+      reason: "test for waiver"

@@ -1,0 +1,20 @@
+PASS:IMP-5-0-0-00:Confirm synthesis is using lib models for timing?
+IMP-5-0-0-00-INFO01: All libraries loaded successfully:
+  Severity: Info Occurrence: 16
+  - tcbn03e_bwp143mh117l3p48cpd_base_elvtssgnp_0p675v_m40c_cworst_CCworst_T_ccs
+  - tcbn03e_bwp143mh117l3p48cpd_base_lvtssgnp_0p675v_m40c_cworst_CCworst_T_ccs
+  - tcbn03e_bwp143mh117l3p48cpd_base_svtssgnp_0p675v_m40c_cworst_CCworst_T_ccs
+  - tcbn03e_bwp143mh117l3p48cpd_base_ulvtssgnp_0p675v_m40c_cworst_CCworst_T_ccs
+  - tcbn03e_bwp143mh169l3p48cpd_base_elvtssgnp_0p675v_m40c_cworst_CCworst_T_ccs
+  - tcbn03e_bwp143mh169l3p48cpd_base_lvtssgnp_0p675v_m40c_cworst_CCworst_T_ccs
+  - tcbn03e_bwp143mh169l3p48cpd_base_svtssgnp_0p675v_m40c_cworst_CCworst_T_ccs
+  - tcbn03e_bwp143mh169l3p48cpd_base_ulvtssgnp_0p675v_m40c_cworst_CCworst_T_ccs
+  - tcbn03e_bwp143mh286l3p48cpd_base_elvtssgnp_0p675v_m40c_cworst_CCworst_T_ccs
+  - tcbn03e_bwp143mh286l3p48cpd_base_lvtssgnp_0p675v_m40c_cworst_CCworst_T_ccs
+  - tcbn03e_bwp143mh286l3p48cpd_base_svtssgnp_0p675v_m40c_cworst_CCworst_T_ccs
+  - tcbn03e_bwp143mh286l3p48cpd_base_ulvtssgnp_0p675v_m40c_cworst_CCworst_T_ccs
+  - tcbn03e_bwp143mh286l3p48cpd_mb_elvtssgnp_0p675v_m40c_cworst_CCworst_T_ccs
+  - tcbn03e_bwp143mh286l3p48cpd_mb_lvtssgnp_0p675v_m40c_cworst_CCworst_T_ccs
+  - tcbn03e_bwp143mh286l3p48cpd_mb_svtssgnp_0p675v_m40c_cworst_CCworst_T_ccs
+  - tcbn03e_bwp143mh286l3p48cpd_mb_ulvtssgnp_0p675v_m40c_cworst_CCworst_T_ccs
+

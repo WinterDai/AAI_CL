@@ -1,0 +1,14 @@
+IMP-16-0-0-00:
+  description: Confirm the IPTAG content and format are correct.(check the Note)
+  input_files:
+  - ${CHECKLIST_ROOT}/IP_project_folder/reports/16.0/phy_iptag.prod
+  requirements:
+    pattern_items: []
+    value: N/A
+  waivers:
+    value: 2
+    waive_items:
+    - name: 'PHY_Architecture: Invalid value ''X'' - must be H/L/U/P (line: 4)'
+      reason: Waived - experimental PHY architecture code approved for prototype testing
+    - name: 'Protocol: Invalid format ''D6'' - unsupported protocol code (line: 11)'
+      reason: Waived - DDR6 protocol code pre-approved for future IP development

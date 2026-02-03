@@ -1,0 +1,13 @@
+description: Confirm the timing of all path groups is clean.
+input_files:
+- ${CHECKLIST_ROOT}/IP_project_folder/reports/check_signoff.results
+requirements:
+  pattern_items: []
+  value: N/A
+waivers:
+  value: 1
+  waive_items:
+  - name: 'View ''func_rcss_0p675v_125c_pcss_cmax_pcff3_setup'' path_group ''default''
+      setup: WNS=-0.2318ns (40 violations)'
+    reason: Approved waiver - false path not properly constrained, will be fixed in
+      SDC update

@@ -1,0 +1,39 @@
+//File Edited with the following command: /home/sleclerc/perl/calibredrcDeckExtractSourceme.pl CN4_CU_BUMP_031.01_1a.enc
+
+// 1) Provide the top cell name and LAYOUT SYSTEM OASIS
+// 2) Review the switches below, especially the BUMP_PITCH
+
+LAYOUT SYSTEM OASIS
+LAYOUT PRIMARY cadence_phy_cdn_hs_phy_top
+DRC RESULTS DATABASE "DRC_RES.db"
+//DRC SUMMARY REPORT "DRC.rep"  // HIER
+//========================================
+
+/* SWITCH DEFINITION START */
+/* select Redistribution Interconnection */
+#DEFINE WITH_APRDL           // Turn on to use AP as the redistribution metal (AP_RDL)
+/* select AP Thickness */
+#DEFINE AP_28K_THICKNESS     // Turn on for 28K AP-RDL. Turn off for non-28K AP-RDL.
+// 28K AP is a must for this process. Please don't turn it off.
+//#DEFINE ChipWindowUsed  // Turn on to specify chip boundary directly by following variables
+VARIABLE xLB   0.0        // x-coordinate of left-bottom corner for user defined chip window
+VARIABLE yLB   0.0        // y-coordinate of left-bottom corner for user defined chip window
+VARIABLE xRT   1000.0     // x-coordinate of right-top corner for user defined chip window
+VARIABLE yRT   1000.0     // y-coordinate of right-top corner for user defined chip window
+//#DEFINE TOP_METAL_Checking // Turn on to check minimum top metal scheme requirement.
+/* Select a UBM pitch (Design dimension/Drawing dimension) */
+//#DEFINE  BUMP_PITCH_110um_130um          // For bump pitch >=110  <130 um
+#DEFINE  BUMP_PITCH_130um_150um       // For bump pitch >=130 <150 um
+//#DEFINE  BUMP_PITCH_150um_180um       // For bump pitch >=150 <180 um
+//#DEFINE  BUMP_PITCH_180um_210um       // For bump pitch >=180 <210 um
+/*Recommendation rules*/
+#DEFINE DFM                // Turn on to check recommendation rule
+#DEFINE FULL_CHIP          // Turn on for chip level design
+/* User-defined BUMP pitch and UBM width*/
+//#DEFINE USR_PITCH_WIDTH    // Turn on to define your own BUMP pitch and UBM width by following two variables. Please consult your bumping house before turning on this switch.
+VARIABLE USR_BUMP_PITCH   130 // User-defined BUMP pitch. Please consult your bumping house before defining this value.
+VARIABLE USR_UBM_WIDTH    80 // User-defined UBM width. Please consult your bumping house before defining this value.
+VARIABLE USR_PM_WIDTH     30 // User-defined PM width. Please consult your bumping house before defining this value.
+VARIABLE USR_CB2_WIDTH    40 // User-defined CB2 width. Please consult your bumping house before defining this value. 
+
+LAYOUT ERROR ON INPUT YES

@@ -1,0 +1,4 @@
+FAIL:IMP-5-0-0-11:Confirm synthesis log has been peer reviewed and all warnings are understood and annotated with an explanation?
+Fail Occurrence: 2
+1: Fail: C:\Users\wentao\AAI_local\AAI\Main_Work\ACL\CHECKLIST\CHECKLIST\IP_project_folder\logs\genus.syn_generic.log: Input file not found or unreadable - check configuration
+2: Fail: C:\Users\wentao\AAI_local\AAI\Main_Work\ACL\CHECKLIST\CHECKLIST\IP_project_folder\logs\genus.syn_opt.log: Input file not found or unreadable - check configuration

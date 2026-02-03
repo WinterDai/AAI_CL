@@ -1,0 +1,22 @@
+FAIL:IMP-10-0-0-26:Confirm check_design report has no issue.
+IMP-10-0-0-26-ERROR01: Physical design verification failed:
+  Severity: Fail Occurrence: 2
+  - Floating Ports (3 occurrences)
+  - Nets with parallel drivers (5 occurrences)
+IMP-10-0-0-26-INFO01: Physical design verification clean:
+  Severity: Info Occurrence: 14
+  - Annotation to Physical Netlist (100%)
+  - Annotation to Verilog Netlist (100%)
+  - Cells with missing Timing data (0 occurrences)
+  - Dont use cells in design (0 occurrences)
+  - Floating Instance terminals (0 occurrences)
+  - Nets with multiple drivers (0 occurrences)
+  - Nets with no driver (No FanIn) (0 occurrences)
+  - Nets with tri-state driver (0 occurrences)
+  - Output pins connected to Power Ground net (0 occurrences)
+  - Output term shorted to Power Ground net (0 occurrences)
+  - Ports Connect to multiple Pads (0 occurrences)
+  - Tie Hi/Lo instances connected to output (0 occurrences)
+  - Tie Hi/Lo output terms floating (0 occurrences)
+  - Verilog nets with multiple drivers (0 occurrences)
+

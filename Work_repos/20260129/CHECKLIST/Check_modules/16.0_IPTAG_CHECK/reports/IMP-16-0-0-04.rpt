@@ -1,0 +1,4 @@
+PASS:IMP-16-0-0-04:Confirm update the IPTAG if FIRM PHY slices are reused as FIRM PHY delivery for another project.
+Info Occurrence: 2
+1: Info: Block IPTAG: cdn_hs_phy_top. In line 16, C:\Users\yuyin\OneDrive - Cadence Design Systems Inc\2025\Checklist\AAI\CHECKLIST_V3\CHECKLIST\IP_project_folder\reports\16.0\cdn_hs_phy_top.csv: Both block IPTAG (cdn_hs_phy_top instance) and PHY IPTAG (FIRM PHY product) found in IP_checker report
+2: Info: PHY IPTAG: HPCFSC_D5D4_T5G$C202209262108$17M1X1Xb1Xe1Ya1Yb5Y2Yy2Yx2R. In line 16, C:\Users\yuyin\OneDrive - Cadence Design Systems Inc\2025\Checklist\AAI\CHECKLIST_V3\CHECKLIST\IP_project_folder\reports\16.0\cdn_hs_phy_top.csv: Both block IPTAG (cdn_hs_phy_top instance) and PHY IPTAG (FIRM PHY product) found in IP_checker report

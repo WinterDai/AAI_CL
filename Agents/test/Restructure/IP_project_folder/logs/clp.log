@@ -1,0 +1,78 @@
+
+                           CONFORMAL (R) Verify                           
+           Version 24.10-s200 (23-Aug-2024) (64 bit executable)           
+   Copyright (c) Cadence Design Systems, Inc., 1997-2024. All Rights Reserved
+
+
+This program is proprietary and confidential information belonging to
+Cadence Design Systems, Inc., and may be used and disclosed only as authorized
+in a license agreement controlling such use and disclosure.
+
+// Warning: This version is 424 days old. You can download the latest version from http://downloads.cadence.com.
+
+0
+// Command: set_dofile_abort off
+0
+// Command: set_undefined_cell Black_box
+0
+// Command: set_lowpower_option -local_constants
+0
+// Command: set_lowpower_option -native_1801
+0
+// Command: set_lowpower_option -analysis_style post_synthesis
+0
+// Command: set_lowpower_option -no_use_strategy_location_as_hierarchy
+0
+// Command: set_lowpower_option -exclude_single_pwr_and_single_gnd_at_missing_csn_macro
+0
+// Command: set_lowpower_option -witness_limit 0
+0
+// Command: set_lowpower_option -enable_terminal_boundary_support
+0
+// Command: set_rule_handling STRUCT_UNDRIVEN_PIN_LP_TOP -warning
+0
+// Command: set_naming_rule %L_%s %L_%d_%s %s -instance
+
+// Command: read_power_intent -1801 \
+//              final/xcvr_syn.upf
+// Warning: (1801_STRATEGY_NO_EFFECTIVE_ELEMENT) Strategy does not apply to any design instances or ports (occurrence:9)
+// Warning: (1801_STRATEGY_OVERRIDDEN) Strategy applies to design objects affected by higher priority strategies (occurrence:338)
+// Note: (PG_CONN_SUPPLY_NET_WITHOUT_SOURCE) Supply net power source is not defined (occurrence:1)
+// Note: (STRUCT_FLOATING_OUTPUT_LP) Low power cell output is floating (occurrence:195)
+// Error: (CROSSING_OFF_TO_ON_NOLP) Invalid OFF to ON crossing (occurrence:3744)
+// Error: (CROSSING_OFF_TO_ON_LSH) Level shifter cell fails OFF to ON check (occurrence:333)
+// Error: (CROSSING_OFF_TO_ON_RET) Retention cell fails OFF to ON check (occurrence:117)
+// Warning: (LSH_NO_MATCHING_STRATEGY) Level shifter cell cannot be matched to a level shifter strategy (occurrence:191)
+// Error: (ISO_MISSING_MATCHING_CELL) Isolation strategy for a signal with a receiver is missing a matching isolation cell in the design (occurrence:3914)
+// Warning: (LSH_MISSING_MATCHING_CELL) Level shifter strategy is missing a matching level shifter cell in the design (occurrence:188)
+// Error: (RET_MISSING_MATCHING_CELL) Retention strategy is missing a matching retention cell in the design (occurrence:5072)
+0
+
+
+// Warning: Macro 'PVDDIA12_12_H' in line 47465 not added. It already exists.
+// Warning: Macro 'PVDDIA12_12_V' in line 49536 not added. It already exists.
+// Warning: Macro 'PVSS08_12_H' in line 51607 not added. It already exists.
+// Warning: Macro 'PVSS08_12_V' in line 53238 not added. It already exists.
+// Warning: Macro 'PN_GUARD_INT_IO_CORNER' in line 54869 not added. It already exists.
+// Parsing file '/projects/sd2002_sf4x_pd/cpd_sd2002_sf4x/input/svn_20250905/lef/xcvr_ana.nocutobs.lef'.
+// Warning: Macro 'xcvr_ana' in line 20 not added. It already exists.
+// Note: (LEF_PARSE1a) No LEF macros defined (occurrence:55)
+// Note: (LEF1) No power and no ground pins defined for macro (occurrence:31)
+// Note: (LEF5) All pins of the macro defined as ground pins (occurrence:12)
+// Note: (LEF6) All pins of the macro defined as power pins (occurrence:12)
+0
+CPU time     : 198.04  seconds
+Elapse time  : 236     seconds
+Memory usage : 2628.41 M bytes
+// Command: read_design -verilog -sensitive final/xcvr_syn.v
+// Parsing file final/xcvr_syn.v ...
+// design root module is set to 'xcvr'
+// Warning: (RTL2.5) Net is referenced without an assignment. Design verification will be based on set_undriven_signal setting (occurrence:32)
+// Warning: (RTL2.13) Undriven pin is detected (occurrence:9616)
+// Warning: (RTL14) Signal has input but it has no output (occurrence:10084)
+// Warning: (RTL14.1) Fanout load of the signal is removed (occurrence:80)
+// Warning: (HRC3.10a) An input port is declared, but it is not completely used in the module (occurrence:3816)
+// Warning: Total black box modules referenced in design = 1
+// Warning: There are 9616 undriven nets in design
+// Warning: There are 9616 undriven pins in design
+// Note: Read VERILOG design successfully

@@ -1,0 +1,5 @@
+FAIL:IMP-10-0-0-24:Any special timing requirement from the specifications that cannot be covered by SDC constraints are reported and reviewed? For example: DDR DQ/DQS skew check
+IMP-10-0-0-24-ERROR01: Configuration error:
+  Severity: Fail Occurrence: 1
+  - input_files is empty in YAML configuration
+

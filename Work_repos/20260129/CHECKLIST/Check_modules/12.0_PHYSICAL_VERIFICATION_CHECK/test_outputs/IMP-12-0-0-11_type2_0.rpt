@@ -1,0 +1,6 @@
+PASS:IMP-12-0-0-11:Confirm the DRC check result is clean. (fill the confidence level of not touching floorplan again in comment if fill no, for example, 90%~100%)
+Info Occurrence: 4
+1: Info: Explanation: Specific DRC rules are informational only for this design phase: Explanation: Specific DRC rules are informational only for this design phase[WAIVED_INFO]
+2: Info: AN.R.20mg: 290: DRC rule violations detected - design rules not satisfied[WAIVED_AS_INFO]
+3: Info: EFP.VIA13.R.1.1: 41: DRC rule violations detected - design rules not satisfied[WAIVED_AS_INFO]
+4: Info: RH_TN.WARN.1: 256: DRC rule violations detected - design rules not satisfied[WAIVED_AS_INFO]

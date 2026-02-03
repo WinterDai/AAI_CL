@@ -1,0 +1,24 @@
+module: 7.1_INNOVUS_DESIGN_IN_CHECK
+stage: Initial
+generated_at: 2025-12-23T18:43:03
+check_items: 
+  SRG-IMP-7-1-0-00: 
+    executed: true
+    status: fail
+    description: Are the initial checks at block level of Functional and DFT modes are reviewed with respective stakeholders?
+    failures: 
+      - index: 1
+        detail: input_files is empty in YAML configuration
+        source_line: N/A
+        source_file: N/A
+        reason: input_files is empty in YAML configuration
+  SRG-IMP-7-1-0-01: 
+    executed: true
+    status: fail
+    description: Are the initial checks at flat level of Functional and DFT modes are reviewed with respective stakeholders?
+    failures: 
+      - index: 1
+        detail: input_files is empty in YAML configuration
+        source_line: N/A
+        source_file: N/A
+        reason: input_files is empty in YAML configuration

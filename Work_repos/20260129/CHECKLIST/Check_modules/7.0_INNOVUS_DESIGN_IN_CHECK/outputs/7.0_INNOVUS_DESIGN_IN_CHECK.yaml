@@ -1,0 +1,147 @@
+module: 7.0_INNOVUS_DESIGN_IN_CHECK
+stage: Initial
+generated_at: 2025-12-23T18:43:03
+check_items: 
+  IMP-7-0-0-00: 
+    executed: true
+    status: pass
+    description: 'Block name (e.g: cdn_hs_phy_data_slice)'
+    infos: 
+      - index: 1
+        detail: CDN_104H_cdn_hs_phy_data_slice_EW
+        source_line: 1
+        source_file: 'C:\Users\yuyin\OneDrive - Cadence Design Systems Inc\2025\Checklist\AAI\CHECKLIST_V3\CHECKLIST\IP_project_folder\reports\7.0\IMP-7-0-0-00.rpt'
+        reason: Block name successfully extracted from report header
+  IMP-7-0-0-01: 
+    executed: true
+    status: pass
+  IMP-7-0-0-02: 
+    executed: true
+    status: fail
+    description: Confirm no ERROR message during read constraints.
+    failures: 
+      - index: 1
+        detail: 'CHKPLC-41: Design has util %.1f% > 100%, placer cannot proceed. The problem may be caused by density screens (softBlockages and partial blockages) or user-specif'
+        source_line: 26
+        source_file: 'C:\Users\yuyin\OneDrive - Cadence Design Systems Inc\2025\Checklist\AAI\CHECKLIST_V3\CHECKLIST\IP_project_folder\reports\7.0\IMP-7-0-0-02.rpt'
+        reason: ERROR message detected during constraint reading phase
+      - index: 2
+        detail: 'IMPFP-7006: Follow pin (Pin Box:%s) routed over hard macro (%s) should be cut at macro boundary.'
+        source_line: 28
+        source_file: 'C:\Users\yuyin\OneDrive - Cadence Design Systems Inc\2025\Checklist\AAI\CHECKLIST_V3\CHECKLIST\IP_project_folder\reports\7.0\IMP-7-0-0-02.rpt'
+        reason: ERROR message detected during constraint reading phase
+      - index: 3
+        detail: 'IMPMSMV-8350: There are %d missing isolation violation nets and %d missing level shifter violation nets.  Use verifypowerdomain -isoNetPD -xNetPD to check those LP'
+        source_line: 15
+        source_file: 'C:\Users\yuyin\OneDrive - Cadence Design Systems Inc\2025\Checklist\AAI\CHECKLIST_V3\CHECKLIST\IP_project_folder\reports\7.0\IMP-7-0-0-02.rpt'
+        reason: ERROR message detected during constraint reading phase
+      - index: 4
+        detail: 'IMPMSMV-8623: Primary PG term %s of Instance %s is connected to net %s which conflicts with primary power net %s of the domain %s specified in UPF. This can impact'
+        source_line: 17
+        source_file: 'C:\Users\yuyin\OneDrive - Cadence Design Systems Inc\2025\Checklist\AAI\CHECKLIST_V3\CHECKLIST\IP_project_folder\reports\7.0\IMP-7-0-0-02.rpt'
+        reason: ERROR message detected during constraint reading phase
+      - index: 5
+        detail: 'IMPMSMV-8670: Instance (%s) of power domain (%s) is placed inside fence of power domain (%s).'
+        source_line: 19
+        source_file: 'C:\Users\yuyin\OneDrive - Cadence Design Systems Inc\2025\Checklist\AAI\CHECKLIST_V3\CHECKLIST\IP_project_folder\reports\7.0\IMP-7-0-0-02.rpt'
+        reason: ERROR message detected during constraint reading phase
+      - index: 6
+        detail: 'IMPPP-4418: The via for net %s in DPT layer %s does not align with the tracks at %f %f.'
+        source_line: 29
+        source_file: 'C:\Users\yuyin\OneDrive - Cadence Design Systems Inc\2025\Checklist\AAI\CHECKLIST_V3\CHECKLIST\IP_project_folder\reports\7.0\IMP-7-0-0-02.rpt'
+        reason: ERROR message detected during constraint reading phase
+      - index: 7
+        detail: 'IMPPP-4419: The color of PG wire which is a default width %f wire for net %s in layer %s should have the same color with the track at %f %f.'
+        source_line: 30
+        source_file: 'C:\Users\yuyin\OneDrive - Cadence Design Systems Inc\2025\Checklist\AAI\CHECKLIST_V3\CHECKLIST\IP_project_folder\reports\7.0\IMP-7-0-0-02.rpt'
+        reason: ERROR message detected during constraint reading phase
+      - index: 8
+        detail: 'IMPPP-4420: The color of PG wire which is a non-default width %f wire for net %s in layer %s should have the opposite color with the track at %f %f.'
+        source_line: 31
+        source_file: 'C:\Users\yuyin\OneDrive - Cadence Design Systems Inc\2025\Checklist\AAI\CHECKLIST_V3\CHECKLIST\IP_project_folder\reports\7.0\IMP-7-0-0-02.rpt'
+        reason: ERROR message detected during constraint reading phase
+  IMP-7-0-0-03: 
+    executed: true
+    status: fail
+    description: Confirm all Warning messages during read constraints can be waived.
+    failures: 
+      - index: 1
+        detail: 'CHKPLC-18: Preplaced instance <%s> has vertical pin-track mask violation.'
+        source_line: 32
+        source_file: 'C:\Users\yuyin\OneDrive - Cadence Design Systems Inc\2025\Checklist\AAI\CHECKLIST_V3\CHECKLIST\IP_project_folder\reports\7.0\IMP-7-0-0-02.rpt'
+        reason: WARNING message found during constraint reading - requires waiver or resolution
+      - index: 2
+        detail: 'IMPMSMV-8630: Power domain (%s) in view (%s) has no user defined operating condition.'
+        source_line: 20
+        source_file: 'C:\Users\yuyin\OneDrive - Cadence Design Systems Inc\2025\Checklist\AAI\CHECKLIST_V3\CHECKLIST\IP_project_folder\reports\7.0\IMP-7-0-0-02.rpt'
+        reason: WARNING message found during constraint reading - requires waiver or resolution
+      - index: 3
+        detail: "TCLCMD-1531: 'set_case_analysis' has been applied on hierarchical pin 'inst_master_delay/inst_cal_dly_macro/inst_cal_delay_line/cal_qtr_delay_sel[2]' (File /projects/yunbao_N6_80bits_EW_PHY_OD_6400/input/latest/innovus_cons/cdn_hs_phy_data_slice.con.edi, Line 501)."
+        source_line: 9
+        source_file: 'C:\Users\yuyin\OneDrive - Cadence Design Systems Inc\2025\Checklist\AAI\CHECKLIST_V3\CHECKLIST\IP_project_folder\reports\7.0\IMP-7-0-0-02.rpt'
+        reason: WARNING message found during constraint reading - requires waiver or resolution
+  IMP-7-0-0-04: 
+    executed: true
+    status: fail
+    description: Confirm no issue for check_timing (all modes) in Innovus.
+    failures: 
+      - index: 1
+        detail: 'clock_expected (2 occurrences) | View: func_rcff_0p825v_125c_pcff_cmin_pcff3_hold'
+        source_line: 17
+        source_file: 'C:\Users\yuyin\OneDrive - Cadence Design Systems Inc\2025\Checklist\AAI\CHECKLIST_V3\CHECKLIST\IP_project_folder\reports\7.0\IMP-7-0-0-04.rpt'
+        reason: Timing constraint warning detected - may cause incorrect timing analysis
+      - index: 2
+        detail: 'clock_expected (3 occurrences) | View: scan_shift_rcff_0p825v_125c_pcff_cmin_pcff3_hold'
+        source_line: 19
+        source_file: 'C:\Users\yuyin\OneDrive - Cadence Design Systems Inc\2025\Checklist\AAI\CHECKLIST_V3\CHECKLIST\IP_project_folder\reports\7.0\IMP-7-0-0-04_scan.rpt'
+        reason: Timing constraint warning detected - may cause incorrect timing analysis
+      - index: 3
+        detail: 'ideal_clock_waveform (1 occurrences) | View: scan_shift_rcff_0p825v_125c_pcff_cmin_pcff3_hold'
+        source_line: 45
+        source_file: 'C:\Users\yuyin\OneDrive - Cadence Design Systems Inc\2025\Checklist\AAI\CHECKLIST_V3\CHECKLIST\IP_project_folder\reports\7.0\IMP-7-0-0-04_scan.rpt'
+        reason: Timing constraint warning detected - may cause incorrect timing analysis
+      - index: 4
+        detail: 'ideal_clock_waveform (3 occurrences) | View: func_rcff_0p825v_125c_pcff_cmin_pcff3_hold'
+        source_line: 38
+        source_file: 'C:\Users\yuyin\OneDrive - Cadence Design Systems Inc\2025\Checklist\AAI\CHECKLIST_V3\CHECKLIST\IP_project_folder\reports\7.0\IMP-7-0-0-04.rpt'
+        reason: Timing constraint warning detected - may cause incorrect timing analysis
+      - index: 5
+        detail: 'uncons_endpoint (1 occurrences) | View: scan_shift_rcff_0p825v_125c_pcff_cmin_pcff3_hold'
+        source_line: 34
+        source_file: 'C:\Users\yuyin\OneDrive - Cadence Design Systems Inc\2025\Checklist\AAI\CHECKLIST_V3\CHECKLIST\IP_project_folder\reports\7.0\IMP-7-0-0-04_scan.rpt'
+        reason: Timing constraint warning detected - may cause incorrect timing analysis
+      - index: 6
+        detail: 'uncons_endpoint (2 occurrences) | View: func_rcff_0p825v_125c_pcff_cmin_pcff3_hold'
+        source_line: 23
+        source_file: 'C:\Users\yuyin\OneDrive - Cadence Design Systems Inc\2025\Checklist\AAI\CHECKLIST_V3\CHECKLIST\IP_project_folder\reports\7.0\IMP-7-0-0-04.rpt'
+        reason: Timing constraint warning detected - may cause incorrect timing analysis
+  IMP-7-0-0-05: 
+    executed: true
+    status: fail
+    description: Confirm no issue for check_design in Innovus.
+    failures: 
+      - index: 1
+        detail: input_files is empty in YAML configuration
+        source_line: N/A
+        source_file: N/A
+        reason: input_files is empty in YAML configuration
+  IMP-7-0-0-06: 
+    executed: true
+    status: fail
+    description: Confirm the preserve cell list of all modes(Func/DFT/etc) are added to don’t touch list if design have.
+    failures: 
+      - index: 1
+        detail: input_files is empty in YAML configuration
+        source_line: N/A
+        source_file: N/A
+        reason: input_files is empty in YAML configuration
+  IMP-7-0-0-07: 
+    executed: true
+    status: fail
+    description: Confirm UPF/CPF is delivered for Low Power Checks.(Fill N/A if no UPF is needed)
+    failures: 
+      - index: 1
+        detail: input_files is empty in YAML configuration
+        source_line: N/A
+        source_file: N/A
+        reason: input_files is empty in YAML configuration

@@ -1,0 +1,4 @@
+PASS:IMP-2-0-0-13:List Spice Model used for PGV generation. eg: tsmc3gp.a.4/models/spectre_v1d0_2p6/ir_em.scs
+Info Occurrence: 2
+1: Info: Explanation: SPICE model version check is informational - version mismatches are acceptable: Explanation: SPICE model version check is informational - version mismatches are acceptable[WAIVED_INFO]
+2: Info: tsmc5g.a.12/models/spectre_v1d2_2p5/ir_em.scs. In line 3, C:\Users\chenweif\Checker_dev\CHECKLIST\CHECKLIST\IP_project_folder\logs\2.0\command_list.btxt: SPICE model version matched and validated against golden reference

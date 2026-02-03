@@ -1,0 +1,5 @@
+PASS:IMP-2-0-0-12:List COD dummy rule deck name (fill N/A if no COD). eg: PLN16FFP_FINcut_AutoGen.11b.encrypt
+Warn Occurrence: 1
+1: Warn: PLN16FFP_FINcut_AutoGen.10a.COD: Waiver not matched - no corresponding COD rule deck mismatch found: Waived - intermediate COD deck version used for debug runs[WAIVER]
+Info Occurrence: 1
+1: Info: Expected: PLN16FFP_FINcut_AutoGen.11b.encrypt.COD, Found: PLN12FFC_FINcut_AutoGen.09_1a.COD. In line 22, C:\Users\chenweif\Checker_dev\CHECKLIST\CHECKLIST\IP_project_folder\logs\2.0\COD_pvl.log: COD rule deck mismatch waived per design team approval[WAIVER]

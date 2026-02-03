@@ -1,0 +1,5 @@
+FAIL:IMP-2-0-0-00:List Innovus Tech Lef name. eg:N16_Encounter_11M_2Xa1Xd3Xe2Y2R_UTRDL_9T_PODE_1.2a.tlef
+IMP-2-0-0-00-ERROR01: Failed to extract valid Innovus technology LEF:
+  Severity: Fail Occurrence: 1
+  - error_0
+

@@ -1,0 +1,7 @@
+PASS:IMP-12-0-0-32:Confirm no ERROR message in DFM/FLT log files. (for SEC process, for others fill N/A)
+Warn Occurrence: 1
+1: Warn: pm26: Waiver not matched - no corresponding ERROR found in logs[WAIVER]
+Info Occurrence: 3
+1: Info: Out of temporary storage disk space, please check -tmp_dirs setting (Worker 11) (Source: Worker 11). In line 567, C:\Users\jingyu\OneDrive - Cadence Design Systems Inc\Desktop\checklist_dev\AI_2026_V1\CHECKLIST\CHECKLIST\IP_project_folder\logs\Pegasus_DFM.log: Pegasus verification errors waived as known issues: Waived - Worker 11 disk space handled by storage team[WAIVER]
+2: Info: missing_reference exception for cell "pm26" in parent cell "pm100" (Worker 1) (Source: Worker 1). In line 565, C:\Users\jingyu\OneDrive - Cadence Design Systems Inc\Desktop\checklist_dev\AI_2026_V1\CHECKLIST\CHECKLIST\IP_project_folder\logs\Pegasus_DFM.log: Pegasus verification errors waived as known issues: Waived - Worker 1 crash is known infrastructure issue (ticket #12345)[WAIVER]
+3: Info: Worker.*killed: Monitored ERROR patterns not detected in verification logs

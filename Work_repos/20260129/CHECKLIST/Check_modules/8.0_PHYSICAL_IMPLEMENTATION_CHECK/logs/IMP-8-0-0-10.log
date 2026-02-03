@@ -1,0 +1,13 @@
+PASS:IMP-8-0-0-10:Confirm you placed the discrete synchronizer flops close to each other (distance <= 10um) for process without dedicated 2/3 stage synchronizer library cell like TSMC. Make sure no buffering on the Q->D path between sync flops for the sync_regs falling under same hierarchy. Please fine tune clock tree for hold fixing. Please don't change the VT of synchronizer flops. (Check the Note. Fill N/A for library has 2/3 stages dedicated library cell)
+IMP-8-0-0-10-WARN01: Unused waivers:
+  Severity: Warn Occurrence: 1
+  - inst_data_path_top/inst_data_byte_macro/RD_CLK_GEN_0__inst_rd_slice_clk_gen/inst_rd_bit_clk_gen/inst_rst_n_clk2x_sync/inst_hic_dff_out
+IMP-8-0-0-10-INFO01: Waived synchronizer placement violations:
+  Severity: Info Occurrence: 1
+  - inst_data_path_top/inst_data_byte_macro/WR_CLK_GEN_0__inst_wr_slice_clk_gen/inst_wr_bit_clk_gen/inst_rst_n_clk4x_sync/inst_hic_dff_out Group2: VIOLATION - Buffering detected: hic_dnt_mux2 on Q->D path: VIOLATION - Buffering detected: hic_dnt_mux2 on Q->D path
+IMP-8-0-0-10-INFO02: Synchronizer groups with compliant placement (distance ≤ 10um, no buffering):
+  Severity: Info Occurrence: 3
+  - inst_data_path_top/inst_data_byte_macro/WR_CLK_GEN_0__inst_wr_slice_clk_gen/inst_wr_bit_clk_gen/inst_rst_n_clk4x_sync/inst_hic_dff_out Group0: Stage reg0->reg1 distance=0.57um (compliant): distance=0.57um (compliant)
+  - inst_data_path_top/inst_data_byte_macro/WR_CLK_GEN_0__inst_wr_slice_clk_gen/inst_wr_bit_clk_gen/inst_rst_n_clk4x_sync/inst_hic_dff_out Group1: Stage reg1->reg2 distance=2.80um (compliant): distance=2.80um (compliant)
+  - inst_data_path_top/inst_data_byte_macro/WR_CLK_GEN_0__inst_wr_slice_clk_gen/inst_wr_bit_clk_gen/inst_rst_n_ctlr_clk4x_sync/inst_hic_dff_out Group3: Stage reg0->reg1 distance=0.87um (compliant): distance=0.87um (compliant)
+

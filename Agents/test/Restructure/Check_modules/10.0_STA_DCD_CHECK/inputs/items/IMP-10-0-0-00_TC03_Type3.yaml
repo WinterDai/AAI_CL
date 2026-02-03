@@ -1,0 +1,14 @@
+description: Confirm the netlist/spef version is correct.
+
+# Test Case: Type 3 (value>0, pattern_items, waiver.value>0)
+requirements:
+  value: 1
+  pattern_items:
+  - Generated on:*2025*
+  - Tool:*Quantus*
+input_files:
+- c:\Users\wentao\AAI_local\AAI\Main_Work\ACL\Latest\CHECKLIST\IP_project_folder\logs\sta_post_syn.log
+waivers:
+  value: 1
+  waive_items:
+  - Tool:*Quantus*

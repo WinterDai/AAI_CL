@@ -1,0 +1,81 @@
+Test Report: IMP-12-0-0-10
+================================================================================
+
+[Test 1/6] Type 1 (requirements.value=N/A, waivers.value=N/A)
+--------------------------------------------------------------------------------
+Test ID: type1_na
+Status: ERROR
+
+Checker Report Output:
+FAIL:IMP-12-0-0-10:Confirm turn-off the VIRTUAL_CONNECT in LVS setting.
+Fail Occurrence: 1
+1: Fail: VIRTUAL_CONNECT is YES (should be NO) (Line 80 in /home/jingyu/checklist_dev/CHECKLIST/CHECKLIST/IP_project_folder/logs/do_cmd_3star_LVS_sourceme): VIRTUAL_CONNECT is enabled or setting not found in file
+
+================================================================================
+
+[Test 2/6] Type 1 (requirements.value=N/A, waivers.value=0)
+--------------------------------------------------------------------------------
+Test ID: type1_0
+Status: PASS
+
+Checker Report Output:
+PASS:IMP-12-0-0-10:Confirm turn-off the VIRTUAL_CONNECT in LVS setting.
+Info Occurrence: 2
+1: Info: Explanation: VIRTUAL_CONNECT enabled is acceptable for this design because hierarchical LVS is required: Explanation: VIRTUAL_CONNECT enabled is acceptable for this design because hierarchical LVS is required[WAIVED_INFO]
+2: Info: VIRTUAL_CONNECT is YES (should be NO) (Line 80 in /home/jingyu/checklist_dev/CHECKLIST/CHECKLIST/IP_project_folder/logs/do_cmd_3star_LVS_sourceme): VIRTUAL_CONNECT is enabled or setting not found in file[WAIVED_AS_INFO]
+
+================================================================================
+
+[Test 3/6] Type 2 (requirements.value>0, waivers.value=N/A)
+--------------------------------------------------------------------------------
+Test ID: type2_na
+Status: ERROR
+
+Checker Report Output:
+FAIL:IMP-12-0-0-10:Confirm turn-off the VIRTUAL_CONNECT in LVS setting.
+Fail Occurrence: 1
+1: Fail: Expected pattern not found, got VIRTUAL CONNECT COLON YES (Line 80 in /home/jingyu/checklist_dev/CHECKLIST/CHECKLIST/IP_project_folder/logs/do_cmd_3star_LVS_sourceme): VIRTUAL_CONNECT setting does not satisfy disabled state requirement
+
+================================================================================
+
+[Test 4/6] Type 2 (requirements.value>0, waivers.value=0)
+--------------------------------------------------------------------------------
+Test ID: type2_0
+Status: PASS
+
+Checker Report Output:
+PASS:IMP-12-0-0-10:Confirm turn-off the VIRTUAL_CONNECT in LVS setting.
+Info Occurrence: 2
+1: Info: Explanation: VIRTUAL_CONNECT enabled is acceptable for hierarchical LVS verification: Explanation: VIRTUAL_CONNECT enabled is acceptable for hierarchical LVS verification[WAIVED_INFO]
+2: Info: Expected pattern not found, got VIRTUAL CONNECT COLON YES (Line 80 in /home/jingyu/checklist_dev/CHECKLIST/CHECKLIST/IP_project_folder/logs/do_cmd_3star_LVS_sourceme): VIRTUAL_CONNECT setting does not satisfy disabled state requirement[WAIVED_AS_INFO]
+
+================================================================================
+
+[Test 5/6] Type 3 (requirements.value>0, waivers.value>0)
+--------------------------------------------------------------------------------
+Test ID: type3
+Status: PASS
+
+Checker Report Output:
+PASS:IMP-12-0-0-10:Confirm turn-off the VIRTUAL_CONNECT in LVS setting.
+Warn Occurrence: 1
+1: Warn: VIRTUAL_CONNECT enabled: Waiver defined but no violation matched: Waived - hierarchical LVS requires VIRTUAL_CONNECT for this legacy design[WAIVER]
+Info Occurrence: 1
+1: Info: VIRTUAL CONNECT COLON YES. In line 80, /home/jingyu/checklist_dev/CHECKLIST/CHECKLIST/IP_project_folder/logs/do_cmd_3star_LVS_sourceme: VIRTUAL_CONNECT violation waived per configuration: Waived - Calibre LVS approved to use VIRTUAL_CONNECT per design review[WAIVER]
+
+================================================================================
+
+[Test 6/6] Type 4 (requirements.value=N/A, waivers.value>0)
+--------------------------------------------------------------------------------
+Test ID: type4
+Status: PASS
+
+Checker Report Output:
+PASS:IMP-12-0-0-10:Confirm turn-off the VIRTUAL_CONNECT in LVS setting.
+Warn Occurrence: 1
+1: Warn: VIRTUAL_CONNECT enabled: Waiver defined but no violation matched: Waived - hierarchical LVS requires VIRTUAL_CONNECT for this legacy design[WAIVER]
+Info Occurrence: 1
+1: Info: VIRTUAL CONNECT COLON YES. In line 80, /home/jingyu/checklist_dev/CHECKLIST/CHECKLIST/IP_project_folder/logs/do_cmd_3star_LVS_sourceme: VIRTUAL_CONNECT violation waived per configuration: Waived - Calibre LVS approved to use VIRTUAL_CONNECT per design review[WAIVER]
+
+================================================================================
+

@@ -1,0 +1,5 @@
+FAIL:IMP-11-0-0-09:Confirm Power pad locations correctly defined. Note: voltage sources need to be defined on the input side (VDDG) of power switches to all tool to calculate IR drop through power switch.
+IMP-11-0-0-09-ERROR01: Configuration error:
+  Severity: Fail Occurrence: 1
+  - input_files is empty in YAML configuration
+

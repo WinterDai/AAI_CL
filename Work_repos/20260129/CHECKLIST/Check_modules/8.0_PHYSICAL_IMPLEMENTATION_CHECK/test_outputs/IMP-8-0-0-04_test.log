@@ -1,0 +1,83 @@
+Test Log: IMP-8-0-0-04
+================================================================================
+
+[Test 1/6] Type 1 (requirements.value=N/A, waivers.value=N/A)
+--------------------------------------------------------------------------------
+Test ID: type1_na
+Status: PASS
+
+Checker Log Output:
+PASS:IMP-8-0-0-04:Confirm buffers are attached for all ports and are set as fixed.
+
+
+================================================================================
+
+[Test 2/6] Type 1 (requirements.value=N/A, waivers.value=0)
+--------------------------------------------------------------------------------
+Test ID: type1_0
+Status: PASS
+
+Checker Log Output:
+PASS:IMP-8-0-0-04:Confirm buffers are attached for all ports and are set as fixed.
+IMP-8-0-0-04-INFO01: [WAIVED_INFO]: Waived information:
+  Severity: Info Occurrence: 1
+  Explanation: Port buffer violations are informational only during early design stages
+
+
+================================================================================
+
+[Test 3/6] Type 2 (requirements.value>0, waivers.value=N/A)
+--------------------------------------------------------------------------------
+Test ID: type2_na
+Status: PASS
+
+Checker Log Output:
+PASS:IMP-8-0-0-04:Confirm buffers are attached for all ports and are set as fixed.
+
+
+================================================================================
+
+[Test 4/6] Type 2 (requirements.value>0, waivers.value=0)
+--------------------------------------------------------------------------------
+Test ID: type2_0
+Status: PASS
+
+Checker Log Output:
+PASS:IMP-8-0-0-04:Confirm buffers are attached for all ports and are set as fixed.
+IMP-8-0-0-04-INFO01: [WAIVED_INFO]: Waived information:
+  Severity: Info Occurrence: 1
+  Explanation: Port buffer check is informational during floorplan stage
+
+
+================================================================================
+
+[Test 5/6] Type 3 (requirements.value>0, waivers.value>0)
+--------------------------------------------------------------------------------
+Test ID: type3
+Status: PASS
+
+Checker Log Output:
+PASS:IMP-8-0-0-04:Confirm buffers are attached for all ports and are set as fixed.
+IMP-8-0-0-04-WARN01: Unused waivers:
+  Severity: Warn Occurrence: 2
+  debug_clk
+  test_port
+
+
+================================================================================
+
+[Test 6/6] Type 4 (requirements.value=N/A, waivers.value>0)
+--------------------------------------------------------------------------------
+Test ID: type4
+Status: PASS
+
+Checker Log Output:
+PASS:IMP-8-0-0-04:Confirm buffers are attached for all ports and are set as fixed.
+IMP-8-0-0-04-WARN01: Unused waivers:
+  Severity: Warn Occurrence: 2
+  debug_clk
+  test_port
+
+
+================================================================================
+

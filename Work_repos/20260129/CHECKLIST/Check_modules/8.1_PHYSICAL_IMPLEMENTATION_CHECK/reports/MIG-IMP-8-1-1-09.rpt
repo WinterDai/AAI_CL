@@ -1,0 +1,3 @@
+FAIL:MIG-IMP-8-1-1-09:confirm place the DESKEW PLL to the slice notch between two adjacent dataslices for LPDDR5 design with 32 or more bits to make the path delay from deskew pll to DQ/DQS write path smaller (better system budget).
+Fail Occurrence: 1
+1: Fail: input_files is empty in YAML configuration

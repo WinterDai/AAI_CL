@@ -1,0 +1,8 @@
+last_used:
+  item_id: IMP-7-0-0-00
+  model: claude-sonnet-4-5
+  module: 7.0_INNOVUS_DESIGN_IN_CHECK
+  provider: jedai
+recent_modules:
+- 7.0_INNOVUS_DESIGN_IN_CHECK
+- 10.0_STA_DCD_CHECK

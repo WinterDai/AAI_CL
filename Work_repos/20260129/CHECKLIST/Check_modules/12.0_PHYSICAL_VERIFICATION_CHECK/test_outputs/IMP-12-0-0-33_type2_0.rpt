@@ -1,0 +1,6 @@
+PASS:IMP-12-0-0-33:Confirm all Warning message in DFM/FLT log files can be waived. (for SEC process, for others fill N/A)
+Info Occurrence: 4
+1: Info: Explanation: DFM/FLT warning pattern check is informational only: Explanation: DFM/FLT warning pattern check is informational only[WAIVED_INFO]
+2: Info: Out of.*disk space: Monitored WARNING patterns not detected in verification logs
+3: Info: Worker 1 killed by external signal [9] (matches: Worker.*killed): Monitored WARNING patterns found in verification logs[WAIVED_AS_INFO]
+4: Info: same label "x" for multiple nets, it is assigned to net x (matches: same label.*multiple nets): Monitored WARNING patterns found in verification logs[WAIVED_AS_INFO]

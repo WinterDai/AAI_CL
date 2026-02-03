@@ -1,0 +1,6 @@
+PASS:IMP-8-0-0-02:Confirm all ports status are Fixed.
+IMP-8-0-0-02-WARN01: Unused waivers:
+  Severity: Warn Occurrence: 2
+  debug_scan_chain[0]
+  test_mode_port
+

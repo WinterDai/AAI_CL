@@ -1,0 +1,128 @@
+**************************************************************************
+*** Pegasus DRC SUMMARY
+***
+Execute on Date/Time    : 2026-01-06 20:36:18
+Pegasus VERSION         : 23.25-e831
+Rule Deck Path          : /projects/zte_n38_DDR5_DF_12800_phy/work/cdn_hs_phy_top/chudongy/signoff/signoff-260106/pvs_run/ANTMIMwD/scr/cdn_hs_phy_top.ANTMIMwD.pvl
+Rule Deck Title         :
+Layout System           : GDSII
+Layout Path             : /projects/zte_n38_DDR5_DF_12800_phy/work/cdn_hs_phy_top/chudongy/signoff/signoff-260106/dbs/cdn_hs_phy_top.uniquify.gds.gz
+Current Directory       : /projects/zte_n38_DDR5_DF_12800_phy/work/cdn_hs_phy_top/chudongy/signoff/signoff-260106/pvs_run/ANTMIMwD
+User Name               : chudongy
+Maximum Results         : unlimited
+Maximum Result Vertices : 4096
+Layout Depth            : ALL
+Text Depth              : 0
+Summary File            : /projects/zte_n38_DDR5_DF_12800_phy/work/cdn_hs_phy_top/chudongy/signoff/signoff-260106/pvs_run/ANTMIMwD/DRC_ANT.rep
+Geometry Flagging       : ACUTE = NO ANGLED = NO SKEW = NO OFFGRID = NO NONSIMPLE POLYGON = NO NONSIMPLE PATH = NO
+Keep Empty Checks       : NO
+Excluded Cells          :
+Layout Primary Cell     : cdn_hs_phy_top
+ASCII DRC Error Report  : /projects/zte_n38_DDR5_DF_12800_phy/work/cdn_hs_phy_top/chudongy/signoff/signoff-260106/pvs_run/ANTMIMwD/DRC_RES.db
+DRC Results Database    :
+--------------------------------------------------------------------------------
+--- RUNNING TIME WARNINGS
+---
+--------------------------------------------------------------------------------
+--- ORIGINAL LAYER STATISTICS
+---
+LAYER APi .................................. Total Original Geometry:       2630 (    486167)
+LAYER BPC .................................. Total Original Geometry:        141 (       943)
+LAYER BPC_O ................................ Total Original Geometry:         46 (     24721)
+LAYER CBDi ................................. Total Original Geometry:          0 (         0)
+LAYER CBM .................................. Total Original Geometry:          0 (         0)
+LAYER CBM_O ................................ Total Original Geometry:          0 (         0)
+LAYER CBi .................................. Total Original Geometry:          0 (         0)
+LAYER CM0A ................................. Total Original Geometry:   21602980 (  80058627)
+LAYER CM0B ................................. Total Original Geometry:   39718016 ( 147347150)
+LAYER CMDi ................................. Total Original Geometry:      83503 ( 715737297)
+LAYER CPOi ................................. Total Original Geometry:      34823 ( 108727137)
+LAYER CTMDMY_15 ............................ Total Original Geometry:          0 (         0)
+LAYER CTMDMY_16 ............................ Total Original Geometry:          0 (         0)
+LAYER M0xdx_CAii ........................... Total Original Geometry:  151124562 ( 529508692)
+LAYER M0xdx_CBii ........................... Total Original Geometry:  236095631 ( 614213643)
+LAYER M10i ................................. Total Original Geometry:    1039072 (   8499277)
+LAYER M11i ................................. Total Original Geometry:     836263 (   5705478)
+LAYER M12i ................................. Total Original Geometry:     458113 (   3502035)
+LAYER M13i ................................. Total Original Geometry:     335366 (   4049966)
+LAYER M14i ................................. Total Original Geometry:     204352 (   2856539)
+LAYER M15i ................................. Total Original Geometry:      11805 (   1935429)
+LAYER M16i ................................. Total Original Geometry:       7091 (   1698749)
+LAYER M1xdy_CAii ........................... Total Original Geometry:    9353276 (  88580439)
+LAYER M1xdy_CBii ........................... Total Original Geometry:   18133494 ( 145542954)
+LAYER M2i .................................. Total Original Geometry:   14689674 ( 160709016)
+LAYER M3i .................................. Total Original Geometry:    7936841 ( 100865094)
+LAYER M4i .................................. Total Original Geometry:    4266756 (  54825985)
+LAYER M5i .................................. Total Original Geometry:    3868911 (  37185069)
+LAYER M6i .................................. Total Original Geometry:    2642707 (  27145981)
+LAYER M7i .................................. Total Original Geometry:    2059087 (  22905289)
+LAYER M8i .................................. Total Original Geometry:    1599459 (  16858682)
+LAYER M9i .................................. Total Original Geometry:    1320624 (  12821911)
+LAYER MDi .................................. Total Original Geometry:     403635 ( 606736247)
+LAYER MPC .................................. Total Original Geometry:        141 (       943)
+LAYER MPC_O ................................ Total Original Geometry:         93 (     24150)
+LAYER ODi .................................. Total Original Geometry:      30997 ( 204260144)
+LAYER POi .................................. Total Original Geometry:      66577 ( 562596401)
+LAYER RHDMY10 .............................. Total Original Geometry:          0 (         0)
+LAYER RHDMY11 .............................. Total Original Geometry:          0 (         0)
+LAYER RHDMY12 .............................. Total Original Geometry:          0 (         0)
+LAYER RHDMY13 .............................. Total Original Geometry:          0 (         0)
+LAYER RHDMY14 .............................. Total Original Geometry:          0 (         0)
+LAYER RHDMY15 .............................. Total Original Geometry:          0 (         0)
+LAYER RHDMY16 .............................. Total Original Geometry:          0 (         0)
+LAYER RHDMY2 ............................... Total Original Geometry:          0 (         0)
+LAYER RHDMY3 ............................... Total Original Geometry:          0 (         0)
+LAYER RHDMY4 ............................... Total Original Geometry:          0 (         0)
+LAYER RHDMY5 ............................... Total Original Geometry:          0 (         0)
+LAYER RHDMY6 ............................... Total Original Geometry:        293 (     48135)
+LAYER RHDMY7 ............................... Total Original Geometry:          0 (         0)
+LAYER RHDMY8 ............................... Total Original Geometry:          0 (         0)
+LAYER RHDMY9 ............................... Total Original Geometry:          0 (         0)
+LAYER RH_TN ................................ Total Original Geometry:       1743 (    199420)
+LAYER RVi .................................. Total Original Geometry:        153 (    251111)
+LAYER SRDPO ................................ Total Original Geometry:     986276 ( 143691397)
+LAYER TPC .................................. Total Original Geometry:        142 (       944)
+LAYER TPCDMY_AP ............................ Total Original Geometry:         14 (        34)
+LAYER TPC_O ................................ Total Original Geometry:         40 (     24709)
+LAYER VDRi ................................. Total Original Geometry:       4409 (  41211382)
+LAYER VDi .................................. Total Original Geometry:     160224 ( 159180062)
+LAYER VGi .................................. Total Original Geometry:      47661 ( 492048974)
+LAYER VIA0i ................................ Total Original Geometry:      14939 ( 121381862)
+LAYER VIA10i ............................... Total Original Geometry:    1074158 (  90414720)
+LAYER VIA11i ............................... Total Original Geometry:    1070806 (  89491906)
+LAYER VIA12i ............................... Total Original Geometry:    1330049 ( 123198052)
+LAYER VIA13i ............................... Total Original Geometry:     651232 (  73925980)
+LAYER VIA14i ............................... Total Original Geometry:       9386 (   1659119)
+LAYER VIA15i ............................... Total Original Geometry:      11349 (   5245634)
+LAYER VIA1i ................................ Total Original Geometry:       4469 ( 103507972)
+LAYER VIA2i ................................ Total Original Geometry:       4508 (  77613820)
+LAYER VIA3i ................................ Total Original Geometry:       2269 (  41186711)
+LAYER VIA4i ................................ Total Original Geometry:       8077 (  33428947)
+LAYER VIA5i ................................ Total Original Geometry:      26693 (  25741600)
+LAYER VIA6i ................................ Total Original Geometry:      35107 (  24828138)
+LAYER VIA7i ................................ Total Original Geometry:      58759 (  25695141)
+LAYER VIA8i ................................ Total Original Geometry:     254836 (  49151156)
+LAYER VIA9i ................................ Total Original Geometry:     425984 (  66870452)
+--------------------------------------------------------------------------------
+--- WARNINGS FROM FLAG STATEMENT
+---
+--------------------------------------------------------------------------------
+--- RULECHECK RESULTS STATISTICS
+---
+RULECHECK MIM.A.R.1 .................................... Total Result          0 (         0)
+RULECHECK MIM.A.R.6:MPC ................................ Total Result          0 (         0)
+RULECHECK MIM.A.R.6:TPC_BPC ............................ Total Result          0 (         0)
+RULECHECK MIM.A.R.7:MPC ................................ Total Result          0 (         0)
+RULECHECK MIM.A.R.7:TPC_BPC ............................ Total Result          1 (         0)
+RULECHECK MIM.A.R.8:MPC ................................ Total Result          0 (         0)
+RULECHECK MIM.A.R.8:TPC_BPC ............................ Total Result          0 (         0)
+RULECHECK MIM.A.R.9:MPC ................................ Total Result          0 (         0)
+RULECHECK MIM.A.R.9:TPC_BPC ............................ Total Result          0 (         0)
+--------------------------------------------------------------------------------
+--- SUMMARY
+---
+Total CPU Time                    : 12545(s)
+Total Real Time                   : 1925(s)
+Total Original Geometry           : 524110242 (6055407533)
+Total DRC RuleChecks              : 9
+Total DRC Results                 : 0 (0)

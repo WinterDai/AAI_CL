@@ -1,0 +1,3 @@
+PASS:IMP-12-0-0-24:Confirm add the chipBoundary layer to check boundary DRC for test chip.
+Info Occurrence: 1
+1: Info: Chip_Boundary. In line 851, C:\Users\jingyu\OneDrive - Cadence Design Systems Inc\Desktop\checklist_dev\AI_2026_V1\CHECKLIST\CHECKLIST\IP_project_folder\reports\pv\Calibre_DRC.rep: Chip_Boundary layer check waived per design team approval: Waived - Multiple chip boundaries acceptable for multi-die design[WAIVER]

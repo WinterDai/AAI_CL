@@ -1,0 +1,10 @@
+description: Confirm all user defined black boxes have port definitions declared?
+  (.lib or verilog stub file)
+requirements:
+  value: N/A
+  pattern_items: []
+input_files:
+- ${CHECKLIST_ROOT}/IP_project_folder/logs/map_to_final.log
+waivers:
+  value: N/A
+  waive_items: []

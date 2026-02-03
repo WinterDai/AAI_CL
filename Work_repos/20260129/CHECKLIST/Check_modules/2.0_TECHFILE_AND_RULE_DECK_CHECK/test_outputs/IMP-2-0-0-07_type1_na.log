@@ -1,0 +1,5 @@
+PASS:IMP-2-0-0-07:Confirm LVS rule deck was not modified? If it was, explain in comments field.
+IMP-2-0-0-07-INFO01: LVS rule deck path found in log file:
+  Severity: Info Occurrence: 1
+  - /process/tsmcN5/data/g/PEGASUS/LVS/v1d2b/MAIN_DECK/PEGASUS_FLOW/DFM/PEGASUS.logic_operation2.enc
+

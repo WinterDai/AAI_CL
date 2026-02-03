@@ -1,0 +1,81 @@
+Test Report: IMP-8-0-0-06
+================================================================================
+
+[Test 1/6] Type 1 (requirements.value=N/A, waivers.value=N/A)
+--------------------------------------------------------------------------------
+Test ID: type1_na
+Status: PASS
+
+Checker Report Output:
+PASS:IMP-8-0-0-06:Confirm the switch power pin is not in lef . (for non-PSO, please fill N/A)
+Info Occurrence: 1
+1: Info: Design: gddr36_ew_cdn_ghs_phy_top | Switch Power: VDDG. In line 1, C:\Users\chenweif\Checker_dev\CHECKLIST\CHECKLIST\IP_project_folder\reports\8.0\switch_power_layer.rpt: No overlap detected between LEF PG pin layers and switch power layers
+
+================================================================================
+
+[Test 2/6] Type 1 (requirements.value=N/A, waivers.value=0)
+--------------------------------------------------------------------------------
+Test ID: type1_0
+Status: PASS
+
+Checker Report Output:
+PASS:IMP-8-0-0-06:Confirm the switch power pin is not in lef . (for non-PSO, please fill N/A)
+Info Occurrence: 2
+1: Info: Explanation: This check is informational only for early design stages where switch power pin exposure in LEF is acceptable: Explanation: This check is informational only for early design stages where switch power pin exposure in LEF is acceptable[WAIVED_INFO]
+2: Info: Design: gddr36_ew_cdn_ghs_phy_top | Switch Power: VDDG. In line 1, C:\Users\chenweif\Checker_dev\CHECKLIST\CHECKLIST\IP_project_folder\reports\8.0\switch_power_layer.rpt: No overlap detected between LEF PG pin layers and switch power layers
+
+================================================================================
+
+[Test 3/6] Type 2 (requirements.value>0, waivers.value=N/A)
+--------------------------------------------------------------------------------
+Test ID: type2_na
+Status: PASS
+
+Checker Report Output:
+PASS:IMP-8-0-0-06:Confirm the switch power pin is not in lef . (for non-PSO, please fill N/A)
+Info Occurrence: 1
+1: Info: Design: gddr36_ew_cdn_ghs_phy_top | Switch Power: VDDG. In line 1, C:\Users\chenweif\Checker_dev\CHECKLIST\CHECKLIST\IP_project_folder\reports\8.0\switch_power_layer.rpt: Design hierarchy matched and validated: No overlap between LEF PG pin layers and switch power layers, OR design is at sub-block level
+
+================================================================================
+
+[Test 4/6] Type 2 (requirements.value>0, waivers.value=0)
+--------------------------------------------------------------------------------
+Test ID: type2_0
+Status: PASS
+
+Checker Report Output:
+PASS:IMP-8-0-0-06:Confirm the switch power pin is not in lef . (for non-PSO, please fill N/A)
+Info Occurrence: 2
+1: Info: Explanation: This check is informational only for top-level designs during early integration phases: Explanation: This check is informational only for top-level designs during early integration phases[WAIVED_INFO]
+2: Info: Design: gddr36_ew_cdn_ghs_phy_top | Switch Power: VDDG. In line 1, C:\Users\chenweif\Checker_dev\CHECKLIST\CHECKLIST\IP_project_folder\reports\8.0\switch_power_layer.rpt: Design hierarchy matched and validated: No overlap between LEF PG pin layers and switch power layers, OR design is at sub-block level
+
+================================================================================
+
+[Test 5/6] Type 3
+--------------------------------------------------------------------------------
+Test ID: type3
+Status: PASS
+
+Checker Report Output:
+PASS:IMP-8-0-0-06:Confirm the switch power pin is not in lef . (for non-PSO, please fill N/A)
+Warn Occurrence: 1
+1: Warn: gddr36_ew_cdn_ghs_phy_top: Waiver not matched - no corresponding design hierarchy found or design passed validation: At this design hierarchy level, switch power pin in LEF can be accepted.[WAIVER]
+Info Occurrence: 1
+1: Info: Design: gddr36_ew_cdn_ghs_phy_top | Switch Power: VDDG. In line 1, C:\Users\chenweif\Checker_dev\CHECKLIST\CHECKLIST\IP_project_folder\reports\8.0\switch_power_layer.rpt: Design hierarchy matched and validated: No overlap between LEF PG pin layers and switch power layers, OR design is at sub-block level
+
+================================================================================
+
+[Test 6/6] Type 4
+--------------------------------------------------------------------------------
+Test ID: type4
+Status: PASS
+
+Checker Report Output:
+PASS:IMP-8-0-0-06:Confirm the switch power pin is not in lef . (for non-PSO, please fill N/A)
+Warn Occurrence: 1
+1: Warn: gddr36_ew_cdn_ghs_phy_top: Waiver not matched - no corresponding design hierarchy found or design passed validation: At this design hierarchy level, switch power pin in LEF can be accepted.[WAIVER]
+Info Occurrence: 1
+1: Info: Design: gddr36_ew_cdn_ghs_phy_top | Switch Power: VDDG. In line 1, C:\Users\chenweif\Checker_dev\CHECKLIST\CHECKLIST\IP_project_folder\reports\8.0\switch_power_layer.rpt: No overlap detected between LEF PG pin layers and switch power layers
+
+================================================================================
+

@@ -1,0 +1,4 @@
+PASS:IMP-2-0-0-05:Confirm ANT rule deck was not modified? If it was, explain in comments field.
+Info Occurrence: 2
+1: Info: Explanation: Rule deck modifications are acceptable during development phase: Explanation: Rule deck modifications are acceptable during development phase[WAIVED_INFO]
+2: Info: IMP-2-0-0-05_diff_20260121_145608.txt: Rule deck content differs from golden reference - see diff file for details - see diff file: C:\Users\chenweif\Checker_dev\CHECKLIST\CHECKLIST\Check_modules\2.0_TECHFILE_AND_RULE_DECK_CHECK\reports\IMP-2-0-0-05_diff.txt[WAIVED_AS_INFO]

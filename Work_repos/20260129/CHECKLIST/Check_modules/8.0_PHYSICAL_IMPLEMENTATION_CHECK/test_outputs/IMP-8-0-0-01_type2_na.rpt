@@ -1,0 +1,5 @@
+PASS:IMP-8-0-0-01:Confirm all ports are assigned on metal track.
+Info Occurrence: 3
+1: Info: e_pi_ctrl[0]: Port placement validated: all ports matched routing track requirements
+2: Info: rxda_cdrlf_scanmode: Port placement validated: all ports matched routing track requirements
+3: Info: rxda_cdrlf_scanout[0]: Port placement validated: all ports matched routing track requirements

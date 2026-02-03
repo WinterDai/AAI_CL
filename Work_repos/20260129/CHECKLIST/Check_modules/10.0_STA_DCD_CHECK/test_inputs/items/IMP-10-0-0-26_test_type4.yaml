@@ -1,0 +1,13 @@
+description: Confirm check_design report has no issue.
+input_files:
+- ${CHECKLIST_ROOT}/IP_project_folder/reports/10.0/check_design_func.rpt
+requirements:
+  pattern_items: []
+  value: N/A
+waivers:
+  value: 2
+  waive_items:
+  - name: Floating Ports
+    reason: Analog power pins connected at top level - waived per analog team
+  - name: Instances with input pins tied together
+    reason: Standard scan chain tie-off practice - approved by DFT team

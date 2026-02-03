@@ -1,0 +1,13 @@
+description: Confirm the DRC rule deck setting is correct. Make sure the switch settings
+  match with Foundry CTA (/local/method/CTAF/<process>/production in chamber). Please
+  add justification in Comment if you changed some switching setting in CTA.
+input_files:
+- ${CHECKLIST_ROOT}/IP_project_folder/logs/do_pvs_DRC_pvl.log
+- ${CHECKLIST_ROOT}/IP_project_folder/logs/do_cmd_3star_DRC_sourceme
+requirements:
+  pattern_items: []
+  value: N/A
+waivers:
+  value: 0
+  waive_items:
+  - 'Explanation: DRC rule deck validation is informational only for this IP release'

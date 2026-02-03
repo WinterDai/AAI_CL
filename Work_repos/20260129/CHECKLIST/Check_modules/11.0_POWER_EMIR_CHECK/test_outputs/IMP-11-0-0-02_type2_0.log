@@ -1,0 +1,5 @@
+FAIL:IMP-11-0-0-02:Confirm EMIR signoff criteria follows addendum or SOW, otherwise follow internal spec (design rule with IP specific margin)
+IMP-11-0-0-02-ERROR01: Configuration error:
+  Severity: Fail Occurrence: 1
+  - input_files is empty in YAML configuration
+

@@ -1,0 +1,5 @@
+FAIL:IMP-12-0-0-33:Confirm all Warning message in DFM/FLT log files can be waived. (for SEC process, for others fill N/A)
+IMP-12-0-0-33-ERROR01: Configuration error:
+  Severity: Fail Occurrence: 1
+  - input_files is empty in YAML configuration
+

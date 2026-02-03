@@ -1,0 +1,15 @@
+description: Confirm no ERROR message in the QRC log files.
+input_files:
+- ${CHECKLIST_ROOT}/IP_project_folder/logs/9.0/do_qrc*.log
+requirements:
+  pattern_items:
+  - EXTGRMP-456
+  - EXTSNZ-789
+  value: 2
+waivers:
+  value: 2
+  waive_items:
+  - name: item1
+    reason: Test waiver 1
+  - name: item2
+    reason: Test waiver 2

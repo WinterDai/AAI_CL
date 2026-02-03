@@ -1,0 +1,3 @@
+FAIL:IMP-14-0-0-01:Confirm pass the formal check for final release netlist.
+Fail Occurrence: 1
+1: Fail: input_files is empty in YAML configuration

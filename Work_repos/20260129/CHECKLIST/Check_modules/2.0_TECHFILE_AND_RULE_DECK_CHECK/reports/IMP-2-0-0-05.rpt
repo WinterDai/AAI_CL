@@ -1,0 +1,3 @@
+FAIL:IMP-2-0-0-05:Confirm ANT rule deck was not modified? If it was, explain in comments field.
+Fail Occurrence: 1
+1: Fail: input_files is empty in YAML configuration

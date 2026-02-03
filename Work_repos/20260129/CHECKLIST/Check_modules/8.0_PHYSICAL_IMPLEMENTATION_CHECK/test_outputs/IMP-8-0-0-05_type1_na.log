@@ -1,0 +1,6 @@
+PASS:IMP-8-0-0-05:Confirm the power switches connection is correct . (for non-PSO, please fill N/A)
+IMP-8-0-0-05-INFO01: Power switch connection verification passed - both LEC and database checks succeeded:
+  Severity: Info Occurrence: 2
+  - Database check
+  - LEC verification
+

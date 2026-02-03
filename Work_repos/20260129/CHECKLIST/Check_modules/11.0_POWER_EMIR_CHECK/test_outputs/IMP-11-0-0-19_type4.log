@@ -1,0 +1,14 @@
+PASS:IMP-11-0-0-19:Confirm you are aware of and follow the customers' requirement about wake-up/rush-current if they have.(For non-PSO, please fill N/A)
+IMP-11-0-0-19-WARN01: Unused waivers:
+  Severity: Warn Occurrence: 2
+  - Rush Current
+  - Wake-up Time
+IMP-11-0-0-19-INFO01: Powerup report complete with all required metrics found:
+  Severity: Info Occurrence: 6
+  - Rush Current: 0.427297A
+  - Wake-up Time: 1.11e-07s
+  - Switches: 28215/28215
+  - First Switch: cdns_lp6_x48_ew_phy_top_SW_MODULE/PSW_18497:NSLEEPIN @ 7.33883e-10s
+  - Last Switch: cdns_lp6_x48_ew_phy_top_SW_MODULE/PSW_18559:NSLEEPIN @ 4.50069e-07s
+  - Please confirm your wake-up time and rush current followed customer requirements
+

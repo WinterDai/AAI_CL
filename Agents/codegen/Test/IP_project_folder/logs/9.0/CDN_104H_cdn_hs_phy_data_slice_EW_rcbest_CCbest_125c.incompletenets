@@ -1,0 +1,16 @@
+NET: inst_data_path_top/inst_data_byte_macro/inst_bit_macro_dqs/inst_x4_rddqs/inst_rddqs_input_macro/inst_rddqs_base_slv_dly_macro/inst_rddqs_base_slv_dly_update/UNCONNECTED331
+- only one pin : COX is connected to a physical wire 
+NET: inst_data_path_top/inst_data_byte_macro/inst_bit_macro_dqs/inst_x4_rddqs/inst_rddqs_input_macro/inst_rddqs_base_slv_dly_macro/inst_rddqs_base_slv_dly_update/UNCONNECTED330
+- only one pin : CO is connected to a physical wire 
+NET: inst_data_path_top/inst_data_byte_macro/inst_bit_macro_dqs/inst_x4_rddqs/inst_rddqs_input_macro/inst_rddqs_base_slv_dly_macro/inst_rddqs_base_slv_dly_update/UNCONNECTED329
+- only one pin : COX is connected to a physical wire 
+NET: inst_data_path_top/inst_data_byte_macro/inst_bit_macro_dqs/inst_x4_rddqs/inst_rddqs_input_macro/inst_rddqs_base_slv_dly_macro/inst_rddqs_base_slv_dly_update/UNCONNECTED327
+- only one pin : COX is connected to a physical wire 
+NET: inst_data_path_top/inst_data_byte_macro/inst_bit_macro_dqs/inst_x4_rddqs/inst_rddqs_input_macro/inst_rddqs_base_slv_dly_macro/inst_rddqs_base_slv_dly_update/UNCONNECTED324
+- only one pin : CO is connected to a physical wire 
+NET: inst_data_path_top/inst_data_byte_macro/inst_bit_macro_dq3/inst_rddq/inst_rddq_input_macro/inst_rddq_slv_dly_macro_oh/inst_rddq_match_delay_line/UNCONNECTED84
+- only one pin : ZN is connected to a physical wire 
+NET: inst_data_path_top/inst_data_byte_macro/FE_OFN11025_param_phy_rdlvl_rd4_mux_control_2
+- only one pin : Z is connected to a physical wire 
+NET: inst_data_path_top/inst_data_byte_macro/FE_OFN11022_param_phy_rdlvl_rd4_mux_control_2
+- only one pin : Z is connected to a physical wire 

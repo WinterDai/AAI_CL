@@ -1,0 +1,48 @@
+is_pass: False
+value: 0
+has_pattern_items: True
+has_waiver_value: True
+
+Details (4 items):
+--------------------------------------------------------------------------------
+
+[1] FAIL
+    name: The required netlist's version is generated on Generated on:*2025*
+    line_number: 
+    file_path: 
+    reason: Version mismatch
+
+[2] INFO
+    name: Tool:*Quantus*
+    line_number: 
+    file_path: 
+    reason: Waived missing item[WAIVER]
+
+[3] FAIL
+    name: SPEF Reading was skipped
+    line_number: 22
+    file_path: c:\Users\wentao\AAI_local\AAI\Main_Work\ACL\Latest\CHECKLIST\IP_project_folder\logs\sta_post_syn.log
+    reason: Skipping SPEF reading as we are writing post-synthesis SDF files
+
+[4] INFO
+    name: Netlist path: C:\Users\yuyin\Desktop\CHECKLIST\IP_project_folder\dbs\phy_cmn_phase_align_digtop.v.gz
+    line_number: 17
+    file_path: c:\Users\wentao\AAI_local\AAI\Main_Work\ACL\Latest\CHECKLIST\IP_project_folder\logs\sta_post_syn.log
+    reason: Status: Success (found in log, file not accessible for version check)
+
+
+Info Groups (1 groups):
+--------------------------------------------------------------------------------
+
+INFO01: Netlist/SPEF version check
+  Items: ['Netlist path: C:\\Users\\yuyin\\Desktop\\CHECKLIST\\IP_project_folder\\dbs\\phy_cmn_phase_align_digtop.v.gz', 'Tool:*Quantus*']
+
+
+Error Groups (2 groups):
+--------------------------------------------------------------------------------
+
+ERROR01: Design has no spef/netlist file
+  Items: ['SPEF Reading was skipped']
+
+ERROR02: Netlist/spef version isn't correct
+  Items: ["The required netlist's version is generated on Generated on:*2025*"]

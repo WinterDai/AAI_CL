@@ -1,0 +1,3 @@
+FAIL:IMP-17-0-0-03:Have all irrelevant release areas been deleted?
+Fail Occurrence: 1
+1: Fail: input_files is empty in YAML configuration

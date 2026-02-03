@@ -1,0 +1,5 @@
+FAIL:HPP-IMP-8-2-0-01:Confirm area and density targets were met?
+HPP-IMP-8-2-0-01-ERROR01: Configuration error:
+  Severity: Fail Occurrence: 1
+  - input_files is empty in YAML configuration
+

@@ -1,0 +1,1199 @@
+# Known Issues Knowledge Base
+# Auto-loaded by code_validator.py to prevent common mistakes
+# Add new issues here when discovered - they will be automatically included in prompts
+#
+# Format:
+#   - id: Unique identifier
+#     category: API_USAGE | SYNTAX | LOGIC | OUTPUT_FORMAT
+#     severity: ERROR | WARNING
+#     pattern: Regex or text pattern to detect the issue
+#     wrong_usage: Example of incorrect code
+#     correct_usage: Example of correct code
+#     explanation: Why this is wrong and how to fix
+#     added_date: When this issue was added
+#
+# Version: 1.0.0
+# Last Updated: 2025-12-16
+
+known_issues:
+
+  # ============================================================================
+  # API Usage Issues
+  # ============================================================================
+  
+  - id: API-001
+    category: API_USAGE
+    severity: ERROR
+    pattern: "valid_files\\s*=\\s*self\\.validate_input_files\\(\\)"
+    wrong_usage: |
+      valid_files = self.validate_input_files()
+      for file_path in valid_files:  # WRONG: iterates over tuple!
+    correct_usage: |
+      valid_files, missing_files = self.validate_input_files()
+      for file_path in valid_files:  # CORRECT: iterates over list
+    explanation: |
+      validate_input_files() returns a TUPLE (valid_files_list, missing_files_list).
+      You must unpack it to get the actual file list.
+    added_date: 2025-12-16
+
+  - id: API-002
+    category: API_USAGE
+    severity: ERROR
+    pattern: "build_complete_output\\([^)]*item_desc\\s*="
+    wrong_usage: |
+      return self.build_complete_output(
+          found_items=items,
+          item_desc=self.item_desc  # WRONG: parameter doesn't exist!
+      )
+    correct_usage: |
+      return self.build_complete_output(
+          found_items=items,
+          found_desc="Items found",
+          missing_desc="Items not found"
+      )
+    explanation: |
+      build_complete_output() does NOT have an item_desc parameter.
+      Use found_desc and missing_desc for result descriptions.
+    added_date: 2025-12-16
+
+  - id: API-003
+    category: API_USAGE
+    severity: WARNING
+    pattern: "found_items\\s*=\\s*\\[|found_items\\s*=\\s*items\\s+if"
+    wrong_usage: |
+      found_items = ['item1', 'item2']
+      # or
+      found_items = items if len(items) > 0 else []
+    correct_usage: |
+      found_items = {
+          'item1': {'line_number': 10, 'file_path': '/path/to/file'},
+          'item2': {'line_number': 20, 'file_path': '/path/to/file'}
+      }
+    explanation: |
+      found_items should be a dict with metadata (line_number, file_path)
+      to enable source file/line display in reports.
+      Format: "Info: <name>. In line <N>, <filepath>: <reason>"
+    added_date: 2025-12-16
+
+  # ============================================================================
+  # Output Format Issues
+  # ============================================================================
+
+  - id: OUT-001
+    category: OUTPUT_FORMAT
+    severity: WARNING
+    pattern: "DISABLED_PATTERN_USE_VALIDATOR_FUNCTION"
+    wrong_usage: |
+      items.append({
+          'name': item_name,
+          # Missing line_number and file_path!
+      })
+    correct_usage: |
+      items.append({
+          'name': item_name,
+          'line_number': line_num,    # REQUIRED!
+          'file_path': str(file_path)  # REQUIRED!
+      })
+    explanation: |
+      Every parsed item MUST include line_number and file_path metadata
+      for proper source tracing in output reports.
+    added_date: 2025-12-16
+    note: |
+      This check is implemented in CodeValidator._check_metadata_requirements()
+      instead of using regex pattern, because regex cannot reliably detect
+      multi-line dict definitions with nested fields.
+
+  # ============================================================================
+  # Non-existent Method Issues
+  # ============================================================================
+
+  - id: API-004
+    category: API_USAGE
+    severity: ERROR
+    pattern: "self\\.log\\("
+    wrong_usage: |
+      self.log(f"Detected checker type: {checker_type}")
+      self.log(f"ERROR: Something went wrong")
+    correct_usage: |
+      # Option 1: Use print() for debugging (remove in production)
+      print(f"Detected checker type: {checker_type}")
+      
+      # Option 2: Just remove the log statement - not needed
+      # The framework handles logging automatically
+      
+      # Option 3: Use Python's logging module if you really need logging
+      import logging
+      logger = logging.getLogger(__name__)
+      logger.info(f"Detected checker type: {checker_type}")
+    explanation: |
+      BaseChecker does NOT have a log() method! This is a common AI hallucination.
+      The checker framework handles result reporting automatically through 
+      build_complete_output() and create_check_result(). 
+      Remove self.log() calls or use print() for debugging.
+    added_date: 2025-12-19
+
+  # ============================================================================
+  # Logic Issues
+  # ============================================================================
+
+  - id: LOGIC-001
+    category: LOGIC
+    severity: ERROR
+    pattern: "if not valid_files:|if valid_files is None:"
+    wrong_usage: |
+      valid_files, missing_files = self.validate_input_files()
+      if not valid_files:  # May not catch empty list properly
+          raise ConfigurationError(...)
+    correct_usage: |
+      valid_files, missing_files = self.validate_input_files()
+      if not valid_files or len(valid_files) == 0:
+          raise ConfigurationError(...)
+    explanation: |
+      Always explicitly check for empty list to ensure proper error handling.
+    added_date: 2025-12-16
+
+  - id: LOGIC-002
+    category: LOGIC
+    severity: WARNING
+    pattern: "for\\s+.*\\s+in\\s+self\\.validate_input_files"
+    wrong_usage: |
+      for file_path in self.validate_input_files():  # WRONG!
+    correct_usage: |
+      valid_files, _ = self.validate_input_files()
+      for file_path in valid_files:
+    explanation: |
+      Never iterate directly over validate_input_files() return value.
+      It returns a tuple, not a file list.
+    added_date: 2025-12-16
+
+  # ============================================================================
+  # Import Issues
+  # ============================================================================
+
+  - id: IMPORT-001
+    category: SYNTAX
+    severity: ERROR
+    pattern: "from checker_templates import"
+    wrong_usage: |
+      from checker_templates import WaiverHandlerMixin
+    correct_usage: |
+      from checker_templates.waiver_handler_template import WaiverHandlerMixin
+      from checker_templates.output_builder_template import OutputBuilderMixin
+      from checker_templates.input_file_parser_template import InputFileParserMixin
+    explanation: |
+      Import mixins from their specific template files, not from the package directly.
+    added_date: 2025-12-16
+
+  # ============================================================================
+  # build_complete_output() Parameter Issues
+  # ============================================================================
+
+  - id: API-004
+    category: API_USAGE
+    severity: ERROR
+    pattern: "waived_reason\\s*="
+    wrong_usage: |
+      return self.build_complete_output(
+          waived_items=waived,
+          waived_reason="Item waived"  # WRONG: parameter doesn't exist!
+      )
+    correct_usage: |
+      return self.build_complete_output(
+          waived_items=waived,
+          waived_base_reason="Item waived"  # CORRECT parameter name
+      )
+    explanation: |
+      The parameter is waived_BASE_reason, not waived_reason.
+      This is the base reason text that will have [WAIVER] tag appended.
+    added_date: 2025-12-16
+
+  - id: API-005
+    category: API_USAGE
+    severity: ERROR
+    pattern: "(found|missing|waived_base|extra)_reason\\s*=\\s*lambda.*\\)\\s*[,)]"
+    wrong_usage: |
+      # Lambda should receive item metadata dict
+      found_reason=lambda: f"Item found"  # WRONG: no parameter!
+    correct_usage: |
+      # Lambda receives item metadata dict as parameter
+      found_reason=lambda item: f"Slack={item.get('slack', 0):.4f}ns"
+      missing_reason=lambda item: f"WNS={item.get('wns', 0):.4f}ns"
+      waived_base_reason=lambda item: f"Violation: {item['details']}"
+    explanation: |
+      All *_reason parameters (except unused_waiver_reason) can be:
+      - Static string: "Item found"
+      - Callable (lambda): lambda item: f"Dynamic text based on {item['field']}"
+      The lambda receives item metadata dict with fields like line_number, file_path, and custom data.
+    added_date: 2025-12-16
+
+  - id: API-006
+    category: API_USAGE
+    severity: ERROR
+    pattern: "(found|missing|waived|extra|unused)_desc\\s*=\\s*lambda"
+    wrong_usage: |
+      return self.build_complete_output(
+          found_desc=lambda item: f"Found {len(items)} items"  # WRONG!
+      )
+    correct_usage: |
+      return self.build_complete_output(
+          found_desc="Found items",  # CORRECT: static string only
+          found_reason=lambda item: f"Item details: {item['value']}"  # Use lambda for reason
+      )
+    explanation: |
+      *_desc parameters are for GROUP descriptions and MUST be static strings.
+      Use *_reason parameters with lambda for per-item dynamic text.
+      DESC = group summary, REASON = per-item details.
+    added_date: 2025-12-16
+
+  - id: API-007
+    category: API_USAGE
+    severity: ERROR
+    pattern: "waived_desc_func|found_reason_func|missing_reason_func"
+    wrong_usage: |
+      return self.build_complete_output(
+          waived_desc_func=lambda item: ...  # WRONG: parameter doesn't exist!
+      )
+    correct_usage: |
+      return self.build_complete_output(
+          waived_base_reason=lambda item: f"Details: {item['info']}"  # Use *_reason with lambda
+      )
+    explanation: |
+      There are no *_func or *_reason_func parameters.
+      Use *_reason parameters directly with lambda or string.
+      Parameter naming: found_reason, missing_reason, waived_base_reason, extra_reason.
+    added_date: 2025-12-16
+
+  - id: API-008
+    category: API_USAGE
+    severity: ERROR
+    pattern: "parse_waive_items\\s*\\(\\s*\\)"
+    wrong_usage: |
+      # Missing required argument!
+      waive_dict = self.parse_waive_items()  # WRONG!
+    correct_usage: |
+      # UPDATED: Use waivers.get() instead of get_waive_items()
+      # See API-016 for details
+      waivers = self.get_waivers()
+      waive_items_raw = waivers.get('waive_items', [])
+      waive_dict = self.parse_waive_items(waive_items_raw)
+      # Result: {'item_name': 'reason', ...}
+    explanation: |
+      parse_waive_items() requires waive_items_raw argument!
+      
+      IMPORTANT: For Type 3/4 with dict-format waive_items,
+      use waivers.get('waive_items', []) NOT get_waive_items()!
+      See API-016 for the critical issue with get_waive_items().
+      
+      API: parse_waive_items(waive_items_raw, name_key='name', reason_key='reason')
+      Returns: Dict[str, str] mapping item names to reasons
+    added_date: 2025-12-16
+    updated_date: 2025-12-19
+
+  - id: API-009
+    category: API_USAGE
+    severity: ERROR
+    pattern: "(missing_items|waived_items|found_items)\\s*=\\s*list\\("
+    wrong_usage: |
+      return self.build_complete_output(
+          missing_items=list(unwaived_items.values()),  # WRONG! Passing list of dicts
+          waived_items=list(waived_items.values()),     # WRONG!
+      )
+    correct_usage: |
+      return self.build_complete_output(
+          missing_items=unwaived_items,  # CORRECT: dict {name: metadata}
+          waived_items=waived_items,     # CORRECT: dict {name: metadata}
+      )
+    explanation: |
+      build_complete_output() expects dict format {name: metadata} for items.
+      Do NOT use list(items.values()) - pass the dict directly.
+      
+      Expected format:
+        {'item_name1': {'line_number': 10, 'file_path': '...'}, 
+         'item_name2': {'line_number': 20, 'file_path': '...'}}
+      
+      NOT:
+        [{'line_number': 10, ...}, {'line_number': 20, ...}]
+    added_date: 2025-12-16
+
+  - id: API-010
+    category: API_USAGE
+    severity: ERROR
+    pattern: "(found_reason|missing_reason|waived_base_reason)\\s*=\\s*lambda\\s+item\\s*:[^\\n]*\\.(get|\\[)\\(item"
+    wrong_usage: |
+      return self.build_complete_output(
+          missing_items=missing_items,
+          missing_reason=lambda item: f"Error: {missing_items.get(item, {}).get('details')}"
+          # WRONG: 'item' is already a dict (metadata), can't use as dict key!
+      )
+    correct_usage: |
+      # Option 1: Access metadata directly (item is the metadata dict)
+      return self.build_complete_output(
+          missing_items=missing_items,
+          missing_reason=lambda item: f"Error: {item.get('details', 'N/A')}"
+      )
+      
+      # Option 2: Use static string (simpler and recommended for Type 1/2)
+      return self.build_complete_output(
+          missing_items=missing_items,
+          missing_reason=self.MISSING_REASON
+      )
+    explanation: |
+      When using lambda for *_reason parameters, the 'item' parameter is the 
+      metadata dict ({'name': ..., 'line_number': ..., 'file_path': ...}), NOT the item name!
+      
+      ❌ WRONG: missing_items.get(item, {})  # Can't use dict as dict key (unhashable)
+      ✅ CORRECT: item.get('details')        # Item IS the metadata, access it directly
+      
+      The lambda receives metadata for each item, so you can:
+      - Access item['name'], item['line_number'], item['file_path']
+      - Access custom fields like item.get('slack'), item.get('details')
+      
+      ⚠️ CRITICAL: Type 1/2 with waiver=0 mode DON'T support lambda!
+      When waivers.value = 0, waiver_handler checks "if tag not in reason" which fails if reason is a function.
+      
+      BEST PRACTICE for Type 1/2:
+      - ALWAYS use static strings: found_reason=self.FOUND_REASON
+      - Avoid lambda in Type 1/2 for waiver=0 compatibility
+      
+      If you don't need per-item customization, just use a static string:
+        missing_reason=self.MISSING_REASON  # No lambda needed
+    added_date: 2025-12-17
+
+  - id: API-011
+    category: API_USAGE
+    severity: WARNING
+    pattern: "def _execute_type[12].*?lambda\\s+item:"
+    wrong_usage: |
+      def _execute_type1(self) -> CheckResult:
+          return self.build_complete_output(
+              missing_reason=lambda item: f"Details: {item.get('details')}"
+              # WRONG: Type 1/2 should use static strings for waiver=0 compatibility
+          )
+    correct_usage: |
+      def _execute_type1(self) -> CheckResult:
+          return self.build_complete_output(
+              found_reason=self.FOUND_REASON,
+              missing_reason=self.MISSING_REASON  # Static string
+          )
+    explanation: |
+      Type 1/2 checkers should ALWAYS use static strings for *_reason parameters.
+      
+      WHY? When waivers.value = 0 (forced PASS mode), the waiver handler needs to check:
+        if waiver_tag not in reason:  # Fails if reason is a lambda function!
+      
+      This causes: TypeError: argument of type 'function' is not a container
+      
+      SOLUTION: Define reason strings as class constants and use them directly:
+        FOUND_REASON = "Item found in report"
+        MISSING_REASON = "Item not found in report"
+        
+        return self.build_complete_output(
+            found_reason=self.FOUND_REASON,
+            missing_reason=self.MISSING_REASON
+        )
+      
+      Lambda is OK for Type 3/4 (but static strings still preferred for consistency).
+    added_date: 2025-12-17
+
+  - id: API-016
+    category: API_USAGE
+    severity: ERROR
+    pattern: "waive_items_raw\\s*=\\s*self\\.get_waive_items\\(\\)"
+    wrong_usage: |
+      # WRONG! get_waive_items() converts dict to string for dict format
+      waive_items_raw = self.get_waive_items()
+      waive_dict = self.parse_waive_items(waive_items_raw)
+      # Result: {"{'name': 'xxx', 'reason': 'yyy'}": "", ...}  <- BROKEN!
+    correct_usage: |
+      # CORRECT! Use waivers.get() directly to preserve dict format
+      waivers = self.get_waivers()
+      waive_items_raw = waivers.get('waive_items', [])
+      waive_dict = self.parse_waive_items(waive_items_raw)
+      # Result: {'xxx': 'yyy', ...}  <- CORRECT!
+    explanation: |
+      CRITICAL: get_waive_items() calls str(item) which converts dicts to strings!
+      
+      When waive_items are dicts: [{'name': 'x', 'reason': 'y'}]
+      - get_waive_items() returns: ["{'name': 'x', 'reason': 'y'}"]  <- STRING!
+      - This breaks parse_waive_items() dict detection
+      
+      SOLUTION: Always use waivers.get('waive_items', []) in Type 3/4
+      to preserve the original data structure (dict or string).
+      
+      Reference: IMP-10-0-0-14.py (lines 437, 560) for correct pattern.
+    added_date: 2025-12-19
+
+  - id: LOGIC-004
+    category: LOGIC
+    severity: ERROR
+    pattern: "for pattern in pattern_items:.*for item in .*items:.*if.*match"
+    wrong_usage: |
+      # Type 3: WRONG - Only reports items that match patterns
+      for pattern in pattern_items:
+          for item in items:
+              if matches_pattern(item, pattern):
+                  found_items[item] = ...  # Only matched patterns!
+      
+      return self.build_complete_output(
+          found_items=found_items  # Missing other items found in file!
+      )
+      
+      # Another WRONG pattern - conditional item addition
+      for item in items:
+          for pattern in pattern_items:
+              if matches(item, pattern):
+                  found_items[item] = ...  # Only adds matched items!
+                  break
+          # Missing: else clause to add non-matched items!
+    correct_usage: |
+      # Type 3: CORRECT - Report ALL items found in file
+      found_pattern_items = {}  # Items matching required patterns
+      other_found_items = {}    # Other items (for reference)
+      
+      for item in items:
+          matches_any = False
+          for pattern in pattern_items:
+              if matches_pattern(item, pattern):
+                  found_pattern_items[item] = ...
+                  matches_any = True
+                  break
+          
+          if not matches_any:
+              other_found_items[item] = ...  # Report even if not in pattern!
+      
+      all_found = {**found_pattern_items, **other_found_items}
+      
+      return self.build_complete_output(
+          found_items=all_found  # ALL items found (matched + others)
+      )
+    explanation: |
+      🔴 CRITICAL: Type 3 MUST report ALL items found in input files!
+      
+      ⚠️ COMMON BUG: Agent only reports items that match pattern_items
+      
+      Type 3 should report ALL items found in input files, not just pattern matches!
+      
+      Real-world example (IMP-2-0-0-11 Antenna rule deck check):
+      - User requirement: PLN3ELO_17M_...014_ANT.11_2a.encrypt (in pattern_items)
+      - File actually has: PLN6FF_15M_...001_ANT.11a.encrypt (different file!)
+      - If you only report pattern matches:
+        * Output: "ERROR01: Pattern not found" ← User sees FAIL
+        * Missing: "INFO01: Found PLN6FF_15M..." ← User doesn't know what's there!
+      - User needs to see BOTH to debug the mismatch
+      
+      📋 MANDATORY Type 3 Output Structure:
+      
+      found_items = {
+          # Items matching required patterns (INFO - satisfied)
+          'PLN3ELO_17M_...014_ANT': {...},  # IF this pattern found
+          
+          # Items NOT matching patterns (INFO - for reference)
+          'PLN6FF_15M_...001_ANT': {...},   # Show what's actually there!
+      }
+      
+      missing_items = [
+          # Required patterns not found AND not waived (FAIL)
+          'PLN3ELO_17M_...014_ANT'  # IF not found AND not waived
+      ]
+      
+      waived_items = [
+          # Required patterns not found BUT waived (INFO)
+          'PLN3ELO_17M_...014_ANT'  # IF not found BUT waived
+      ]
+      
+      🔴 WRONG IMPLEMENTATION PATTERN (DO NOT USE):
+      ```python
+      # ❌ This only reports pattern matches!
+      found_items = {}
+      for pattern in pattern_items:
+          for item in items:
+              if matches(item, pattern):
+                  found_items[item] = ...  # Missing other items!
+      ```
+      
+      ✅ CORRECT IMPLEMENTATION PATTERN:
+      ```python
+      # Step 1: Report ALL items found (pattern + non-pattern)
+      found_items = {}
+      for item in items:
+          found_items[item['name']] = {
+              'name': item['name'],
+              'line_number': item.get('line_number', 0),
+              'file_path': item.get('file_path', 'N/A')
+          }
+      
+      # Step 2: Check which patterns are satisfied
+      missing_patterns = []
+      waived_patterns = []
+      
+      for pattern in pattern_items:
+          matched = any(matches(item, pattern) for item in items)
+          if not matched:
+              if waived:
+                  waived_patterns.append(pattern)
+              else:
+                  missing_patterns.append(pattern)
+      
+      # Step 3: Build output with ALL items
+      return self.build_complete_output(
+          found_items=found_items,      # ALL items (complete visibility!)
+          missing_items=missing_patterns,  # Patterns not found + not waived
+          waived_items=waived_patterns     # Patterns not found + waived
+      )
+      ```
+      
+      📌 Key Points:
+      1. found_items contains ALL items parsed from file (complete list)
+      2. missing_items contains PATTERNS (from pattern_items) not satisfied
+      3. Users see both what's required AND what's actually there
+      4. This enables debugging: "Why doesn't PLN6FF match PLN3ELO?"
+      
+      Reference: IMP-2-0-0-04/IMP-2-0-0-11 Type 3 enhancement (2025-12-22)
+    added_date: 2025-12-22
+
+  - id: LOGIC-003
+    category: LOGIC
+    severity: ERROR
+    pattern: "MANUAL_REVIEW_REQUIRED"
+    wrong_usage: |
+      # Type 3: WRONG - Waiving violations (found but not expected)
+      for violation in all_violations:
+          if waiver_matches:
+              waived_items.append(violation)  # WRONG TARGET!
+      
+      # Type 4: WRONG - Waiving all found items
+      for item in found_items:
+          if waiver_matches:
+              waived_items.append(item)  # WRONG!
+    correct_usage: |
+      # Type 3: CORRECT - Waive missing patterns (FAIL patterns)
+      for pattern in pattern_items:
+          if pattern_not_found_or_violated:
+              if waiver_matches:
+                  waived_items.append(pattern)  # Waive the FAIL pattern
+              else:
+                  missing_items.append(pattern)  # Still FAIL
+      
+      # Type 4: CORRECT - Waive violations that cause FAIL
+      for violation in all_violations:
+          if waiver_matches:
+              waived_items.append(violation)  # Waive to avoid FAIL
+          else:
+              missing_items.append(violation)  # Unwaived = FAIL
+    explanation: |
+      🔴 CRITICAL CONCEPT: Waivers target FAIL patterns, NOT violations!
+      
+      Type 3 Logic:
+      - Pattern found + clean → found_items (PASS) ✅
+      - Pattern NOT found/violated + waived → waived_items (PASS) ✅
+      - Pattern NOT found/violated + NOT waived → missing_items (FAIL) ❌
+      
+      Type 4 Logic:
+      - Clean items → found_items (PASS) ✅
+      - Violations + waived → waived_items (PASS) ✅
+      - Violations + NOT waived → missing_items (FAIL) ❌
+      
+      KEY POINT: missing_items = what causes FAIL = what can be waived
+      NOT: violations = what exists but shouldn't
+      
+      Common mistake: Agent confuses "violations" with "FAIL patterns"
+      - Violations (Type 2) = found but not expected (extra_items)
+      - FAIL patterns (Type 3/4) = expected but not found (missing_items)
+      
+      Reference: IMP-2-0-0-02 debugging session (2025-12-22)
+    added_date: 2025-12-22
+
+  - id: API-017
+    category: API_USAGE
+    severity: ERROR
+    pattern: "waive_dict\\.values\\(\\)|waive_data\\['name'\\]|waive_data\\[\"name\"\\]"
+    wrong_usage: |
+      # WRONG - Treating values as dicts
+      for waiver in waive_dict.values():
+          reason = waiver.get('reason')  # AttributeError!
+      
+      # WRONG - Accessing dict key on string value
+      for waive_key, waive_data in waive_dict.items():
+          if waive_data['name'] not in used_names:  # TypeError!
+              unused_waivers.append(waive_data['name'])
+    correct_usage: |
+      # CORRECT - Values are strings (reasons)
+      for name, reason in waive_dict.items():
+          print(f"{name}: {reason}")  # reason is a string
+      
+      # CORRECT - Keys are item names
+      unused_waivers = [name for name in waive_dict.keys() if name not in used_names]
+    explanation: |
+      waive_dict format: Dict[str, str] = {'name': 'reason'}
+      
+      After parse_waive_items(), waive_dict values are STRINGS, not dicts!
+      - waive_dict.keys() = item names (str) ← Use this for names!
+      - waive_dict.values() = reasons (str) ← These are strings!
+      - waive_dict.items() = (name, reason) tuples
+      
+      COMMON MISTAKES:
+      ❌ waive_data['name'] - TypeError: string indices must be integers
+      ❌ waive_data.get('reason') - AttributeError: 'str' has no attribute 'get'
+      ✅ Use waive_dict.keys() to get item names
+      ✅ Use waive_dict[name] to get reason string
+      
+      Reference: IMP-2-0-0-02 (2025-12-22), IMP-3-0-0-02 (2025-12-23)
+    added_date: 2025-12-22
+
+  - id: API-018
+    category: API_USAGE
+    severity: WARNING
+    pattern: "unused_waivers\\s*=\\s*\\{[^}]*:\\s*\\{[^}]*'reason'"
+    wrong_usage: |
+      # WRONG - Inconsistent format
+      waived_items = ['item1', 'item2']  # List
+      unused_waivers = {'w1': {'reason': 'text'}}  # Dict[str, Dict]
+    correct_usage: |
+      # CORRECT - Consistent format
+      waived_items = ['item1', 'item2']  # List
+      unused_waivers = ['w1', 'w2']  # List (consistent!)
+      
+      # OR both use Dict format:
+      waived_items = {'item1': {'line_number': 10}, ...}
+      unused_waivers = {'w1': {'line_number': 0, 'reason': 'text'}}
+    explanation: |
+      Keep consistent data format across all item collections!
+      
+      Options:
+      1. Simple: All use List[str]
+      2. Metadata: All use Dict[str, Dict]
+      
+      DO NOT mix:
+      - waived_items as List[str]
+      - missing_items as Dict[str, Dict]
+      - unused_waivers as List[str]
+      
+      Choose one format and stick with it throughout the checker.
+      
+      Reference: IMP-2-0-0-02 format confusion (2025-12-22)
+    added_date: 2025-12-22
+
+  - id: SYNTAX-002
+    category: SYNTAX
+    severity: ERROR
+    pattern: "\\bsplit\\(['\"]\\.['\"]\\)"
+    wrong_usage: |
+      # WRONG - Loses suffixes!
+      name = line.split('.')[0]  # 'PLN6FF_001' - Missing .11a.encrypt!
+      name = '.'.join(line.split('.')[:2])  # 'PLN6FF_001.11a' - Missing .encrypt!
+    correct_usage: |
+      # CORRECT - Preserves all suffixes
+      from pathlib import Path
+      name = Path(line).name  # 'PLN6FF_001.11a.encrypt' - Complete!
+      
+      # OR for full path extraction:
+      full_path = "/path/to/PLN6FF_001.11a.encrypt"
+      filename = Path(full_path).name
+    explanation: |
+      When extracting filenames, NEVER use split('.')!
+      
+      Patterns that MUST be preserved:
+      - Multiple dots: file.tar.gz, data.v1.2.json
+      - Encrypt suffix: *.encrypt
+      - Compression: *.gz, *.bz2
+      - Version numbers: lib_v1.2.3.a
+      - Special formats: file.11a.encrypt
+      
+      ALWAYS use Path(line).name to extract filename safely.
+      
+      Reference: IMP-2-0-0-02 name matching failure (2025-12-22)
+    added_date: 2025-12-22
+
+  - id: API-019
+    category: API_USAGE
+    severity: ERROR
+    pattern: "def _execute_type2.*?build_complete_output"
+    wrong_usage: |
+      # Type 2: WRONG - Missing critical parameters
+      def _execute_type2(self) -> CheckResult:
+          return self.build_complete_output(
+              found_items=found,
+              missing_items=missing
+              # Missing: value, has_pattern_items, has_waiver_value!
+          )
+    correct_usage: |
+      # Type 2: CORRECT - All required parameters
+      def _execute_type2(self) -> CheckResult:
+          requirements = self.item_data.get('requirements', {})
+          expected_value = requirements.get('value', 'N/A')
+          
+          return self.build_complete_output(
+              found_items=found,
+              missing_items=missing,
+              value=expected_value,        # REQUIRED!
+              has_pattern_items=True,      # REQUIRED!
+              has_waiver_value=False,      # REQUIRED!
+              found_desc="...",
+              missing_desc="...",
+              found_reason=self.FOUND_REASON,
+              missing_reason=self.MISSING_REASON
+          )
+    explanation: |
+      Type 2 checkers MUST include these parameters:
+      - value=requirements.value (for count comparison)
+      - has_pattern_items=True (enables Type 2 logic path)
+      - has_waiver_value=False (Type 2 has no waivers)
+      
+      Without these, OutputBuilderMixin will use wrong logic path
+      and produce incorrect PASS/FAIL determination.
+      
+      Type 3 also needs:
+      - has_waiver_value=True
+      - waived_tag="[WAIVER]"
+      - waive_dict=...
+      
+      Reference: IMP-2-0-0-02 missing parameters (2025-12-22)
+    added_date: 2025-12-22
+
+  - id: API-020
+    category: API_USAGE
+    severity: ERROR
+    pattern: "waived_base_reason\\s*=\\s*lambda"
+    wrong_usage: |
+      # WRONG - Lambda not supported for waived_base_reason!
+      return self.build_complete_output(
+          waived_base_reason=lambda item: f"Waived: {item['details']}"
+      )
+    correct_usage: |
+      # CORRECT - Use static string
+      return self.build_complete_output(
+          waived_base_reason="Timing violation waived per design approval"
+      )
+      
+      # For dynamic reasons, use found_reason/missing_reason:
+      return self.build_complete_output(
+          found_reason=lambda item: f"Slack={item.get('slack')}ns",
+          waived_base_reason="Violation waived"  # Static only!
+      )
+    explanation: |
+      waived_base_reason parameter ONLY supports static strings!
+      
+      The API signature explicitly states:
+        waived_base_reason: str = "..."  # NOT Callable!
+      
+      Other *_reason parameters support both string and lambda:
+        found_reason: Union[str, Callable[[Dict], str]]
+        missing_reason: Union[str, Callable[[Dict], str]]
+        extra_reason: Union[str, Callable[[Dict], str]]
+      
+      But waived_base_reason is string-only due to internal processing.
+      
+      Reference: API documentation + IMP-2-0-0-02 debugging (2025-12-22)
+    added_date: 2025-12-22
+
+  - id: API-021
+    category: API_USAGE
+    severity: ERROR
+    pattern: "build_complete_output\\([^)]*unwaived_items\\s*="
+    wrong_usage: |
+      # WRONG - Parameter name doesn't exist!
+      unwaived_items = [...]  # Variable name is OK
+      return self.build_complete_output(
+          unwaived_items=unwaived_items  # WRONG parameter name!
+      )
+    correct_usage: |
+      # CORRECT - Use missing_items parameter
+      unwaived_items = [...]  # Variable name is fine
+      return self.build_complete_output(
+          missing_items=unwaived_items  # CORRECT parameter name!
+      )
+      
+      # Or rename variable for clarity:
+      missing_items = [...]  # Better variable name
+      return self.build_complete_output(
+          missing_items=missing_items
+      )
+    explanation: |
+      build_complete_output() has NO 'unwaived_items' parameter!
+      
+      Valid parameters are:
+      - found_items: Items that passed check
+      - missing_items: Items that failed check (including unwaived violations)
+      - waived_items: Items that were waived
+      - unused_waivers: Waivers that didn't match anything
+      - extra_items: Unexpected items found
+      
+      Common mistake in Type 3/4:
+        unwaived_items = ... # Variable name is semantically correct
+        build_complete_output(unwaived_items=...) # But parameter name is wrong!
+      
+      Solution:
+        missing_items = unwaived_items  # Rename or pass directly
+        build_complete_output(missing_items=unwaived_items)
+      
+      Remember: Semantically, "unwaived violations" = "missing items" in Type 3/4
+      because they represent the check failures.
+      
+      Reference: IMP-2-0-0-04 TypeError (2025-12-22)
+    added_date: 2025-12-22
+
+  - id: API-022
+    category: API_USAGE
+    severity: INFO
+    pattern: "N/A"  # This is a template fix, not a code pattern issue
+    wrong_usage: |
+      # This was FIXED in output_builder_template.py
+      # No longer a code generation issue
+      # Kept for historical reference only
+    correct_usage: |
+      # Type 1/2 do NOT need waived_base_reason parameter
+      # waiver=0 mode is handled automatically by output_builder_template
+      return self.build_complete_output(
+          found_items=found_items,
+          missing_items=missing_items,
+          found_desc=self.FOUND_DESC,
+          missing_desc=self.MISSING_DESC,
+          found_reason=self.FOUND_REASON,
+          missing_reason=self.MISSING_REASON
+          # NO waived_base_reason needed! (Only Type 3/4 need it)
+      )
+    explanation: |
+      HISTORICAL ISSUE - Now fixed in output_builder_template.py (waiver=0 handling).
+      
+      Original Problem (IMP-2-0-0-06, 2025-12-22):
+      - waiver=0 mode showed "Item not found" for waive_items
+      - Simple string waive_items have empty reason: parse_waive_items('text') → {'text': ''}
+      - output_builder used default waived_base_reason = "Item not found"
+      
+      Fix Applied (output_builder_template.py line 942-946):
+      - In waiver=0 auto-detection, now sets waived_base_reason to waive_items text
+      - Uses first waive_items string as base reason instead of default
+      
+      Result:
+      - Type 1/2 checkers do NOT need to pass waived_base_reason parameter
+      - Only Type 3/4 need waived_base_reason (for their waiver logic)
+      - waiver=0 mode now displays correct explanatory text
+      
+      Code Generation Rule:
+      - Do NOT add waived_base_reason to Type 1/2 build_complete_output() calls
+      - Only add it to Type 3/4 (where waivers.value > 0)
+      
+      Reference: IMP-2-0-0-06 waiver=0 mode debugging (2025-12-22)
+    added_date: 2025-12-22
+
+  - id: API-023
+    category: API_USAGE
+    severity: ERROR
+    pattern: "waive_dict\\[\\w+\\]\\['name'\\]|waive_dict\\[key\\]\\['name'\\]"
+    wrong_usage: |
+      # WRONG: Treating waive_dict as Dict[str, Dict]
+      waive_dict = self.parse_waive_items(waive_items_raw)
+      unused_waivers = [waive_dict[key]['name'] for key in waive_dict]
+      # TypeError: string indices must be integers, not 'str'
+    correct_usage: |
+      # CORRECT: waive_dict is Dict[str, str] (name → reason)
+      waive_dict = self.parse_waive_items(waive_items_raw)
+      unused_waivers = [name for name in waive_dict]
+      # Or equivalently:
+      unused_waivers = list(waive_dict.keys())
+    explanation: |
+      🔴 CRITICAL: parse_waive_items() Return Format
+      
+      parse_waive_items() returns Dict[str, str] where:
+      - Keys: item names (e.g., 'net1', 'cell2')
+      - Values: reasons (strings, can be empty '')
+      
+      It does NOT return Dict[str, Dict] with nested 'name' keys!
+      
+      Correct Return Format:
+      {'item1': 'reason1', 'item2': 'reason2', 'item3': ''}
+      
+      Wrong Assumption:
+      {'key1': {'name': 'item1', 'reason': '...'}}  # NEVER this format!
+      
+      Usage Patterns:
+      1. Iterate names: for name in waive_dict
+      2. Get reason: reason = waive_dict[name]
+      3. Check existence: if name in waive_dict
+      4. List names: unused_waivers = [name for name in waive_dict if condition]
+      5. DO NOT access: waive_dict[x]['name'] ← This causes TypeError!
+      
+      Common Mistake in Type 3/4:
+      unused_waivers = [waive_dict[key]['name'] for key in waive_dict]  # WRONG
+      unused_waivers = [name for name in waive_dict]  # CORRECT
+      
+      Root Cause:
+      - Agent confuses data formats: waive_dict vs found_items
+      - found_items uses Dict[str, Dict] with metadata
+      - waive_dict is flat Dict[str, str] mapping
+      
+      Validation:
+      ✅ unused_waivers = [name for name in waive_dict]
+      ✅ unused_waivers = list(waive_dict.keys())
+      ✅ if name in waive_dict: reason = waive_dict[name]
+      ❌ waive_dict[key]['name']
+      ❌ waive_dict[key]['reason']
+      
+      Reference: IMP-2-0-0-10 Type 3/4 waive_dict access error (2025-12-22)
+    added_date: 2025-12-22
+
+  - id: CONFIG-001
+    category: CONFIG
+    severity: ERROR
+    pattern: "requirements:.*pattern_items:.*\\[.*\\].*value: N/A|requirements:.*value: N/A.*pattern_items: \\[\\]"
+    wrong_usage: |
+      # Type 1 with pattern_items - CONFLICT!
+      requirements:
+        pattern_items: ['something']  # ❌ Type 1 shouldn't have pattern_items
+        value: N/A
+      
+      # Type 2 with empty pattern_items - CONFLICT!
+      requirements:
+        pattern_items: []  # ❌ Type 2 requires pattern_items
+        value: 2
+      
+      # Type 1 with numeric value - WRONG!
+      requirements:
+        pattern_items: []
+        value: 0  # ❌ Type 1 MUST use "N/A", not numbers
+    correct_usage: |
+      # Type 1: Boolean Check
+      requirements:
+        pattern_items: []  # ✅ Empty for Type 1
+        value: N/A         # ✅ MUST be "N/A" (string, not number)
+      
+      # Type 2: Pattern Check
+      requirements:
+        pattern_items: ['pattern1', 'pattern2']  # ✅ Non-empty list
+        value: 2           # ✅ Numeric value for count
+      
+      # Type 3: Pattern with Waiver
+      requirements:
+        pattern_items: ['pattern1']
+        value: 1
+      waivers:
+        value: 1           # ✅ Non-zero for Type 3/4
+        waive_items: ['waived_pattern']
+      
+      # Type 4: Boolean with Waiver
+      requirements:
+        pattern_items: []
+        value: N/A
+      waivers:
+        value: 1
+        waive_items: ['waived_item']
+    explanation: |
+      🔴 CRITICAL: Configuration Validation Rules
+      
+      Valid Combinations:
+      
+      Type 1 (Boolean Check):
+      - pattern_items: [] (empty)
+      - value: "N/A" (string, NOT 0 or 1)
+      - waivers.value: 0 (no waiver)
+      
+      Type 2 (Pattern Check):
+      - pattern_items: [non-empty list]
+      - value: numeric (expected count)
+      - waivers.value: 0 (no waiver)
+      
+      Type 3 (Pattern + Waiver):
+      - pattern_items: [non-empty list]
+      - value: numeric (expected count)
+      - waivers.value: >0 (waiver enabled)
+      
+      Type 4 (Boolean + Waiver):
+      - pattern_items: [] (empty)
+      - value: "N/A" (string)
+      - waivers.value: >0 (waiver enabled)
+      
+      Common Mistakes:
+      ❌ Type 1 with value: 0 or value: 1 (should be "N/A")
+      ❌ Type 2 with pattern_items: [] (needs patterns to check)
+      ❌ Type 1 with pattern_items: ['something'] (conflicting logic)
+      ❌ Numeric value with empty pattern_items (what to check?)
+      
+      Detection Logic:
+      - If pattern_items is empty → Type 1 or 4 → value MUST be "N/A"
+      - If pattern_items is non-empty → Type 2 or 3 → value MUST be numeric
+      - If waivers.value > 0 → Type 3 or 4
+      - If waivers.value = 0 → Type 1 or 2
+      
+      Why This Matters:
+      - Prevents agent confusion during Type detection
+      - Ensures consistent checker behavior
+      - Validates README configuration correctness
+      - Avoids runtime errors from invalid combinations
+      
+      Reference: Configuration validation requirements (2025-12-23)
+    added_date: 2025-12-23
+
+  - id: API-024
+    category: API_USAGE
+    severity: ERROR
+    pattern: "found_reason=self\\.FOUND_REASON.*_execute_type[14]|missing_reason=self\\.MISSING_REASON.*_execute_type[14]"
+    wrong_usage: |
+      # Type 1 - WRONG: Passing reason parameters
+      def _execute_type1(self) -> CheckResult:
+          return self.build_complete_output(
+              found_items=found_items,
+              missing_items=missing_items,
+              found_desc=self.FOUND_DESC,
+              missing_desc=self.MISSING_DESC,
+              found_reason=self.FOUND_REASON,      # ❌ WRONG for Type 1!
+              missing_reason=self.MISSING_REASON   # ❌ WRONG for Type 1!
+          )
+      
+      # Type 4 - WRONG: Passing reason parameters
+      def _execute_type4(self) -> CheckResult:
+          return self.build_complete_output(
+              found_items=found_items,
+              waived_items=waived_items,
+              found_reason=self.FOUND_REASON,      # ❌ WRONG for Type 4!
+              missing_reason=self.MISSING_REASON   # ❌ WRONG for Type 4!
+          )
+    correct_usage: |
+      # Type 1 - CORRECT: Use default generic reasons
+      def _execute_type1(self) -> CheckResult:
+          return self.build_complete_output(
+              found_items=found_items,
+              missing_items=missing_items,
+              found_desc=self.FOUND_DESC,
+              missing_desc=self.MISSING_DESC
+              # ✅ NO found_reason/missing_reason
+              # Uses defaults: "Item found" / "Item not found"
+          )
+      
+      # Type 2 - CORRECT: MUST pass pattern matching reasons
+      def _execute_type2(self) -> CheckResult:
+          return self.build_complete_output(
+              found_items=found_items,
+              missing_items=missing_items,
+              found_desc=self.FOUND_DESC,
+              missing_desc=self.MISSING_DESC,
+              found_reason=self.FOUND_REASON,      # ✅ REQUIRED for Type 2!
+              missing_reason=self.MISSING_REASON   # ✅ REQUIRED for Type 2!
+          )
+      
+      # Type 3 - CORRECT: MUST pass both pattern reasons AND waiver params
+      def _execute_type3(self) -> CheckResult:
+          return self.build_complete_output(
+              found_items=found_items,
+              waived_items=waived_items,
+              missing_items=missing_items,
+              found_desc=self.FOUND_DESC,
+              waived_desc=self.WAIVED_DESC,             # ✅ REQUIRED
+              found_reason=self.FOUND_REASON,            # ✅ REQUIRED for Type 3!
+              missing_reason=self.MISSING_REASON,        # ✅ REQUIRED for Type 3!
+              waived_base_reason=self.WAIVED_BASE_REASON # ✅ REQUIRED
+          )
+      
+      # Type 4 - CORRECT: Use default reasons, but MUST pass waiver params
+      def _execute_type4(self) -> CheckResult:
+          return self.build_complete_output(
+              found_items=found_items,
+              waived_items=waived_items,
+              found_desc=self.FOUND_DESC,
+              waived_desc=self.WAIVED_DESC,             # ✅ REQUIRED
+              waived_base_reason=self.WAIVED_BASE_REASON # ✅ REQUIRED
+              # ✅ NO found_reason/missing_reason for Type 4
+          )
+    explanation: |
+      🔴 CRITICAL: Reason Parameters by Checker Type
+      
+      Type 1/4 (Boolean Checks - existence/configuration):
+      ❌ DO NOT pass found_reason/missing_reason
+      ✅ Use default generic text: "Item found" / "Item not found"
+      Rationale: Simple existence checks don't need custom reasons
+      
+      Type 2/3 (Pattern Matching - requirement satisfaction):
+      ✅ MUST pass found_reason/missing_reason
+      ✅ MUST use one of these terms: matched | satisfied | validated | compliant | fulfilled
+      ❌ Avoid generic terms: "found", "exists", "detected"
+      ✅ MUST reflect requirement comparison
+      Examples:
+        FOUND_REASON = "Required pattern matched and validated"
+        MISSING_REASON = "Expected pattern not satisfied in configuration"
+      
+      Type 3/4 (With Waivers):
+      ✅ MUST pass waiver parameters:
+         - waived_desc=self.WAIVED_DESC
+         - waived_base_reason=self.WAIVED_BASE_REASON
+         - unused_waiver_reason=self.UNUSED_WAIVER_REASON
+      
+      Why This Matters:
+      - Type 1/4: Generic "found/not found" is sufficient
+      - Type 2/3: Need specific pattern validation context
+      - Consistent output format based on checker type
+      - README Output Descriptions should reflect this
+      
+      README Guidelines:
+      - Type 1/4: Can skip found_reason/missing_reason or leave as TBD
+      - Type 2/3: MUST define with pattern matching terms
+      
+      Reference: IMP-3-0-0-00 reason parameters discussion (2025-12-23)
+    added_date: 2025-12-23
+
+  - id: API-027
+    category: API_USAGE
+    severity: ERROR
+    pattern: "DetailItem\\([^)]*description\\s*="
+    wrong_usage: |
+      # WRONG - Using 'description' parameter
+      return create_check_result(
+          is_pass=False,
+          item_id=self.item_id,
+          item_desc=self.item_desc,
+          details=[DetailItem(
+              severity=Severity.FAIL,
+              description="Error message",  # ❌ WRONG parameter name!
+              reason="Error reason"
+          )]
+      )
+    correct_usage: |
+      # CORRECT - Using 'message' parameter
+      return create_check_result(
+          is_pass=False,
+          item_id=self.item_id,
+          item_desc=self.item_desc,
+          details=[DetailItem(
+              severity=Severity.FAIL,
+              message="Error message",  # ✅ CORRECT parameter name!
+              reason="Error reason"
+          )]
+      )
+    explanation: |
+      DetailItem constructor parameters are:
+      - severity: Severity (PASS, INFO, WARN, FAIL)
+      - message: str (main error/info message)
+      - reason: str (detailed explanation)
+      
+      COMMON MISTAKE:
+      ❌ description= (parameter does not exist)
+      ✅ message= (correct parameter name)
+      
+      TypeError: DetailItem.__init__() got an unexpected keyword argument 'description'
+      
+      Reference: IMP-3-0-0-02 exception handling bug (2025-12-23)
+    added_date: 2025-12-23
+
+# ============================================================================
+# Metadata
+# ============================================================================
+metadata:
+  version: "2.0.0"
+  last_updated: "2025-12-23"
+  total_issues: 29
+  categories:
+    - API_USAGE
+    - OUTPUT_FORMAT
+    - LOGIC
+    - SYNTAX
+    - CONFIG
+  recent_updates:
+    - "2025-12-23: Added API-027 DetailItem parameter error (description→message)"
+    - "2025-12-23: Enhanced API-017 pattern to catch waive_data['name'] TypeError"
+    - "2025-12-23: Added CONFIG-001 invalid configuration combinations"
+    - "2025-12-23: Updated API-024 with mandatory terminology (matched|satisfied|validated|compliant|fulfilled)"
+    - "2025-12-23: Added API-024 reason parameters by checker type (CRITICAL)"
+    - "2025-12-23: Type 1/4 use default reasons, Type 2/3 MUST pass custom reasons"
+    - "2025-12-22: Added API-023 waive_dict format misunderstanding from IMP-2-0-0-10"
+    - "2025-12-22: Added API-022 missing waived_base_reason in Type 1/2 from IMP-2-0-0-06"
+    - "2025-12-22: Enhanced LOGIC-004 Type 3 must report ALL found items (severity: ERROR)"
+    - "2025-12-22: Added LOGIC-004 Type 3 incomplete reporting from IMP-2-0-0-04"
+    - "Critical: Reason parameter rules - Type 1/4 skip, Type 2/3 required with pattern terms"

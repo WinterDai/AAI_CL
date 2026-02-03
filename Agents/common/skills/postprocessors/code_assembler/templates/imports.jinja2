@@ -1,0 +1,24 @@
+{#
+    Standard Imports Template
+    
+    These imports are always included in generated Checker files.
+#}
+from pathlib import Path
+import gzip
+import re
+import sys
+from typing import List, Dict, Tuple, Optional, Any
+
+
+# Add common module to path
+_SCRIPT_DIR = Path(__file__).resolve().parent
+_CHECK_MODULES_DIR = _SCRIPT_DIR.parents[2]  # Go up to Check_modules/
+_COMMON_DIR = _CHECK_MODULES_DIR / 'common'
+if str(_COMMON_DIR) not in sys.path:
+    sys.path.insert(0, str(_COMMON_DIR))
+
+# Framework imports
+from base_checker import BaseChecker, CheckResult, ConfigurationError
+from output_formatter import DetailItem, Severity, create_check_result
+from checker_templates.waiver_handler_template import WaiverHandlerMixin
+from checker_templates.output_builder_template import OutputBuilderMixin

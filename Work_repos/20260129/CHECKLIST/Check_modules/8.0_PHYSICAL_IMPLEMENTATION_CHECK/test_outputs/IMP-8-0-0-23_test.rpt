@@ -1,0 +1,131 @@
+Test Report: IMP-8-0-0-23
+================================================================================
+
+[Test 1/6] Type 1 (requirements.value=N/A, waivers.value=N/A)
+--------------------------------------------------------------------------------
+Test ID: type1_na
+Status: ERROR
+
+Checker Report Output:
+FAIL:IMP-8-0-0-23:confirm no unplaced cells in design.
+Fail Occurrence: 9
+1: Fail: inst_data_ctrl_top/inst_ctrl_gen/g26516__9945: Unplaced cell instance detected - placement incomplete
+2: Fail: inst_data_ctrl_top/inst_ctrl_gen/g26625__4733: Unplaced cell instance detected - placement incomplete
+3: Fail: inst_data_param_top/inst_data_slice_param/FE_OFC54006_n: Unplaced cell instance detected - placement incomplete
+4: Fail: inst_data_param_top/inst_data_slice_param/inst_param_regout/g99009: Unplaced cell instance detected - placement incomplete
+5: Fail: inst_data_param_top/inst_data_slice_param/inst_phy_x4_dq_tsel_rd_timing/g1106: Unplaced cell instance detected - placement incomplete
+6: Fail: inst_data_param_top/inst_data_slice_param/inst_phy_x4_dq_tsel_rd_timing/g1147: Unplaced cell instance detected - placement incomplete
+7: Fail: inst_data_param_top/inst_data_slice_param/inst_phy_x4_dqs_tsel_rd_timing/g1105: Unplaced cell instance detected - placement incomplete
+8: Fail: inst_data_param_top/inst_data_slice_param/inst_phy_x4_dqs_tsel_rd_timing/g1106: Unplaced cell instance detected - placement incomplete
+9: Fail: inst_data_param_top/inst_data_slice_param/inst_phy_x4_dqs_tsel_rd_timing/g1107: Unplaced cell instance detected - placement incomplete
+
+================================================================================
+
+[Test 2/6] Type 1 (requirements.value=N/A, waivers.value=0)
+--------------------------------------------------------------------------------
+Test ID: type1_0
+Status: PASS
+
+Checker Report Output:
+PASS:IMP-8-0-0-23:confirm no unplaced cells in design.
+Info Occurrence: 10
+1: Info: Explanation: Unplaced cells are acceptable during early placement exploration phase: Explanation: Unplaced cells are acceptable during early placement exploration phase[WAIVED_INFO]
+2: Info: inst_data_ctrl_top/inst_ctrl_gen/g26516__9945: Unplaced cell instance detected - placement incomplete[WAIVED_AS_INFO]
+3: Info: inst_data_ctrl_top/inst_ctrl_gen/g26625__4733: Unplaced cell instance detected - placement incomplete[WAIVED_AS_INFO]
+4: Info: inst_data_param_top/inst_data_slice_param/FE_OFC54006_n: Unplaced cell instance detected - placement incomplete[WAIVED_AS_INFO]
+5: Info: inst_data_param_top/inst_data_slice_param/inst_param_regout/g99009: Unplaced cell instance detected - placement incomplete[WAIVED_AS_INFO]
+6: Info: inst_data_param_top/inst_data_slice_param/inst_phy_x4_dq_tsel_rd_timing/g1106: Unplaced cell instance detected - placement incomplete[WAIVED_AS_INFO]
+7: Info: inst_data_param_top/inst_data_slice_param/inst_phy_x4_dq_tsel_rd_timing/g1147: Unplaced cell instance detected - placement incomplete[WAIVED_AS_INFO]
+8: Info: inst_data_param_top/inst_data_slice_param/inst_phy_x4_dqs_tsel_rd_timing/g1105: Unplaced cell instance detected - placement incomplete[WAIVED_AS_INFO]
+9: Info: inst_data_param_top/inst_data_slice_param/inst_phy_x4_dqs_tsel_rd_timing/g1106: Unplaced cell instance detected - placement incomplete[WAIVED_AS_INFO]
+10: Info: inst_data_param_top/inst_data_slice_param/inst_phy_x4_dqs_tsel_rd_timing/g1107: Unplaced cell instance detected - placement incomplete[WAIVED_AS_INFO]
+
+================================================================================
+
+[Test 3/6] Type 2 (requirements.value>0, waivers.value=N/A)
+--------------------------------------------------------------------------------
+Test ID: type2_na
+Status: ERROR
+
+Checker Report Output:
+FAIL:IMP-8-0-0-23:confirm no unplaced cells in design.
+Fail Occurrence: 9
+1: Fail: inst_data_ctrl_top/inst_ctrl_gen/g26516__9945. In line 1, C:\Users\chyao\Desktop\checklist_dev\CHECKLIST\CHECKLIST\IP_project_folder\reports\8.0\IMP-8-0-0-23\IMP-8-0-0-23_case1.rpt: Cell placement status not satisfied - instance remains unplaced
+2: Fail: inst_data_ctrl_top/inst_ctrl_gen/g26625__4733. In line 1, C:\Users\chyao\Desktop\checklist_dev\CHECKLIST\CHECKLIST\IP_project_folder\reports\8.0\IMP-8-0-0-23\IMP-8-0-0-23_case1.rpt: Cell placement status not satisfied - instance remains unplaced
+3: Fail: inst_data_param_top/inst_data_slice_param/FE_OFC54006_n. In line 1, C:\Users\chyao\Desktop\checklist_dev\CHECKLIST\CHECKLIST\IP_project_folder\reports\8.0\IMP-8-0-0-23\IMP-8-0-0-23_case1.rpt: Cell placement status not satisfied - instance remains unplaced
+4: Fail: inst_data_param_top/inst_data_slice_param/inst_param_regout/g99009. In line 1, C:\Users\chyao\Desktop\checklist_dev\CHECKLIST\CHECKLIST\IP_project_folder\reports\8.0\IMP-8-0-0-23\IMP-8-0-0-23_case1.rpt: Cell placement status not satisfied - instance remains unplaced
+5: Fail: inst_data_param_top/inst_data_slice_param/inst_phy_x4_dq_tsel_rd_timing/g1106. In line 1, C:\Users\chyao\Desktop\checklist_dev\CHECKLIST\CHECKLIST\IP_project_folder\reports\8.0\IMP-8-0-0-23\IMP-8-0-0-23_case1.rpt: Cell placement status not satisfied - instance remains unplaced
+6: Fail: inst_data_param_top/inst_data_slice_param/inst_phy_x4_dq_tsel_rd_timing/g1147. In line 1, C:\Users\chyao\Desktop\checklist_dev\CHECKLIST\CHECKLIST\IP_project_folder\reports\8.0\IMP-8-0-0-23\IMP-8-0-0-23_case1.rpt: Cell placement status not satisfied - instance remains unplaced
+7: Fail: inst_data_param_top/inst_data_slice_param/inst_phy_x4_dqs_tsel_rd_timing/g1105. In line 1, C:\Users\chyao\Desktop\checklist_dev\CHECKLIST\CHECKLIST\IP_project_folder\reports\8.0\IMP-8-0-0-23\IMP-8-0-0-23_case1.rpt: Cell placement status not satisfied - instance remains unplaced
+8: Fail: inst_data_param_top/inst_data_slice_param/inst_phy_x4_dqs_tsel_rd_timing/g1106. In line 1, C:\Users\chyao\Desktop\checklist_dev\CHECKLIST\CHECKLIST\IP_project_folder\reports\8.0\IMP-8-0-0-23\IMP-8-0-0-23_case1.rpt: Cell placement status not satisfied - instance remains unplaced
+9: Fail: inst_data_param_top/inst_data_slice_param/inst_phy_x4_dqs_tsel_rd_timing/g1107. In line 1, C:\Users\chyao\Desktop\checklist_dev\CHECKLIST\CHECKLIST\IP_project_folder\reports\8.0\IMP-8-0-0-23\IMP-8-0-0-23_case1.rpt: Cell placement status not satisfied - instance remains unplaced
+
+================================================================================
+
+[Test 4/6] Type 2 (requirements.value>0, waivers.value=0)
+--------------------------------------------------------------------------------
+Test ID: type2_0
+Status: PASS
+
+Checker Report Output:
+PASS:IMP-8-0-0-23:confirm no unplaced cells in design.
+Info Occurrence: 10
+1: Info: Explanation: Unplaced cells are acceptable during incremental placement optimization: Explanation: Unplaced cells are acceptable during incremental placement optimization[WAIVED_INFO]
+2: Info: inst_data_ctrl_top/inst_ctrl_gen/g26516__9945. In line 1, C:\Users\chyao\Desktop\checklist_dev\CHECKLIST\CHECKLIST\IP_project_folder\reports\8.0\IMP-8-0-0-23\IMP-8-0-0-23_case1.rpt: Cell placement status not satisfied - instance remains unplaced[WAIVED_AS_INFO]
+3: Info: inst_data_ctrl_top/inst_ctrl_gen/g26625__4733. In line 1, C:\Users\chyao\Desktop\checklist_dev\CHECKLIST\CHECKLIST\IP_project_folder\reports\8.0\IMP-8-0-0-23\IMP-8-0-0-23_case1.rpt: Cell placement status not satisfied - instance remains unplaced[WAIVED_AS_INFO]
+4: Info: inst_data_param_top/inst_data_slice_param/FE_OFC54006_n. In line 1, C:\Users\chyao\Desktop\checklist_dev\CHECKLIST\CHECKLIST\IP_project_folder\reports\8.0\IMP-8-0-0-23\IMP-8-0-0-23_case1.rpt: Cell placement status not satisfied - instance remains unplaced[WAIVED_AS_INFO]
+5: Info: inst_data_param_top/inst_data_slice_param/inst_param_regout/g99009. In line 1, C:\Users\chyao\Desktop\checklist_dev\CHECKLIST\CHECKLIST\IP_project_folder\reports\8.0\IMP-8-0-0-23\IMP-8-0-0-23_case1.rpt: Cell placement status not satisfied - instance remains unplaced[WAIVED_AS_INFO]
+6: Info: inst_data_param_top/inst_data_slice_param/inst_phy_x4_dq_tsel_rd_timing/g1106. In line 1, C:\Users\chyao\Desktop\checklist_dev\CHECKLIST\CHECKLIST\IP_project_folder\reports\8.0\IMP-8-0-0-23\IMP-8-0-0-23_case1.rpt: Cell placement status not satisfied - instance remains unplaced[WAIVED_AS_INFO]
+7: Info: inst_data_param_top/inst_data_slice_param/inst_phy_x4_dq_tsel_rd_timing/g1147. In line 1, C:\Users\chyao\Desktop\checklist_dev\CHECKLIST\CHECKLIST\IP_project_folder\reports\8.0\IMP-8-0-0-23\IMP-8-0-0-23_case1.rpt: Cell placement status not satisfied - instance remains unplaced[WAIVED_AS_INFO]
+8: Info: inst_data_param_top/inst_data_slice_param/inst_phy_x4_dqs_tsel_rd_timing/g1105. In line 1, C:\Users\chyao\Desktop\checklist_dev\CHECKLIST\CHECKLIST\IP_project_folder\reports\8.0\IMP-8-0-0-23\IMP-8-0-0-23_case1.rpt: Cell placement status not satisfied - instance remains unplaced[WAIVED_AS_INFO]
+9: Info: inst_data_param_top/inst_data_slice_param/inst_phy_x4_dqs_tsel_rd_timing/g1106. In line 1, C:\Users\chyao\Desktop\checklist_dev\CHECKLIST\CHECKLIST\IP_project_folder\reports\8.0\IMP-8-0-0-23\IMP-8-0-0-23_case1.rpt: Cell placement status not satisfied - instance remains unplaced[WAIVED_AS_INFO]
+10: Info: inst_data_param_top/inst_data_slice_param/inst_phy_x4_dqs_tsel_rd_timing/g1107. In line 1, C:\Users\chyao\Desktop\checklist_dev\CHECKLIST\CHECKLIST\IP_project_folder\reports\8.0\IMP-8-0-0-23\IMP-8-0-0-23_case1.rpt: Cell placement status not satisfied - instance remains unplaced[WAIVED_AS_INFO]
+
+================================================================================
+
+[Test 5/6] Type 3 (requirements.value>0, waivers.value>0)
+--------------------------------------------------------------------------------
+Test ID: type3
+Status: ERROR
+
+Checker Report Output:
+FAIL:IMP-8-0-0-23:confirm no unplaced cells in design.
+Fail Occurrence: 9
+1: Fail: inst_data_ctrl_top/inst_ctrl_gen/g26516__9945. In line 1, C:\Users\chyao\Desktop\checklist_dev\CHECKLIST\CHECKLIST\IP_project_folder\reports\8.0\IMP-8-0-0-23\IMP-8-0-0-23_case1.rpt: Cell placement status not satisfied - instance remains unplaced
+2: Fail: inst_data_ctrl_top/inst_ctrl_gen/g26625__4733. In line 1, C:\Users\chyao\Desktop\checklist_dev\CHECKLIST\CHECKLIST\IP_project_folder\reports\8.0\IMP-8-0-0-23\IMP-8-0-0-23_case1.rpt: Cell placement status not satisfied - instance remains unplaced
+3: Fail: inst_data_param_top/inst_data_slice_param/FE_OFC54006_n. In line 1, C:\Users\chyao\Desktop\checklist_dev\CHECKLIST\CHECKLIST\IP_project_folder\reports\8.0\IMP-8-0-0-23\IMP-8-0-0-23_case1.rpt: Cell placement status not satisfied - instance remains unplaced
+4: Fail: inst_data_param_top/inst_data_slice_param/inst_param_regout/g99009. In line 1, C:\Users\chyao\Desktop\checklist_dev\CHECKLIST\CHECKLIST\IP_project_folder\reports\8.0\IMP-8-0-0-23\IMP-8-0-0-23_case1.rpt: Cell placement status not satisfied - instance remains unplaced
+5: Fail: inst_data_param_top/inst_data_slice_param/inst_phy_x4_dq_tsel_rd_timing/g1106. In line 1, C:\Users\chyao\Desktop\checklist_dev\CHECKLIST\CHECKLIST\IP_project_folder\reports\8.0\IMP-8-0-0-23\IMP-8-0-0-23_case1.rpt: Cell placement status not satisfied - instance remains unplaced
+6: Fail: inst_data_param_top/inst_data_slice_param/inst_phy_x4_dq_tsel_rd_timing/g1147. In line 1, C:\Users\chyao\Desktop\checklist_dev\CHECKLIST\CHECKLIST\IP_project_folder\reports\8.0\IMP-8-0-0-23\IMP-8-0-0-23_case1.rpt: Cell placement status not satisfied - instance remains unplaced
+7: Fail: inst_data_param_top/inst_data_slice_param/inst_phy_x4_dqs_tsel_rd_timing/g1105. In line 1, C:\Users\chyao\Desktop\checklist_dev\CHECKLIST\CHECKLIST\IP_project_folder\reports\8.0\IMP-8-0-0-23\IMP-8-0-0-23_case1.rpt: Cell placement status not satisfied - instance remains unplaced
+8: Fail: inst_data_param_top/inst_data_slice_param/inst_phy_x4_dqs_tsel_rd_timing/g1106. In line 1, C:\Users\chyao\Desktop\checklist_dev\CHECKLIST\CHECKLIST\IP_project_folder\reports\8.0\IMP-8-0-0-23\IMP-8-0-0-23_case1.rpt: Cell placement status not satisfied - instance remains unplaced
+9: Fail: inst_data_param_top/inst_data_slice_param/inst_phy_x4_dqs_tsel_rd_timing/g1107. In line 1, C:\Users\chyao\Desktop\checklist_dev\CHECKLIST\CHECKLIST\IP_project_folder\reports\8.0\IMP-8-0-0-23\IMP-8-0-0-23_case1.rpt: Cell placement status not satisfied - instance remains unplaced
+Warn Occurrence: 2
+1: Warn: design/memory_ctrl/buffer_inst/flop_23: Waiver defined but no violation matched: Waived - debug cell excluded from placement per design team approval[WAIVER]
+2: Warn: top/cpu_core/alu/adder_cell: Waiver defined but no violation matched: Waived - spare cell intentionally left unplaced for ECO purposes[WAIVER]
+
+================================================================================
+
+[Test 6/6] Type 4 (requirements.value=N/A, waivers.value>0)
+--------------------------------------------------------------------------------
+Test ID: type4
+Status: ERROR
+
+Checker Report Output:
+FAIL:IMP-8-0-0-23:confirm no unplaced cells in design.
+Fail Occurrence: 9
+1: Fail: inst_data_ctrl_top/inst_ctrl_gen/g26516__9945. In line 1, C:\Users\chyao\Desktop\checklist_dev\CHECKLIST\CHECKLIST\IP_project_folder\reports\8.0\IMP-8-0-0-23\IMP-8-0-0-23_case1.rpt: Unplaced cell instance detected - placement incomplete
+2: Fail: inst_data_ctrl_top/inst_ctrl_gen/g26625__4733. In line 1, C:\Users\chyao\Desktop\checklist_dev\CHECKLIST\CHECKLIST\IP_project_folder\reports\8.0\IMP-8-0-0-23\IMP-8-0-0-23_case1.rpt: Unplaced cell instance detected - placement incomplete
+3: Fail: inst_data_param_top/inst_data_slice_param/FE_OFC54006_n. In line 1, C:\Users\chyao\Desktop\checklist_dev\CHECKLIST\CHECKLIST\IP_project_folder\reports\8.0\IMP-8-0-0-23\IMP-8-0-0-23_case1.rpt: Unplaced cell instance detected - placement incomplete
+4: Fail: inst_data_param_top/inst_data_slice_param/inst_param_regout/g99009. In line 1, C:\Users\chyao\Desktop\checklist_dev\CHECKLIST\CHECKLIST\IP_project_folder\reports\8.0\IMP-8-0-0-23\IMP-8-0-0-23_case1.rpt: Unplaced cell instance detected - placement incomplete
+5: Fail: inst_data_param_top/inst_data_slice_param/inst_phy_x4_dq_tsel_rd_timing/g1106. In line 1, C:\Users\chyao\Desktop\checklist_dev\CHECKLIST\CHECKLIST\IP_project_folder\reports\8.0\IMP-8-0-0-23\IMP-8-0-0-23_case1.rpt: Unplaced cell instance detected - placement incomplete
+6: Fail: inst_data_param_top/inst_data_slice_param/inst_phy_x4_dq_tsel_rd_timing/g1147. In line 1, C:\Users\chyao\Desktop\checklist_dev\CHECKLIST\CHECKLIST\IP_project_folder\reports\8.0\IMP-8-0-0-23\IMP-8-0-0-23_case1.rpt: Unplaced cell instance detected - placement incomplete
+7: Fail: inst_data_param_top/inst_data_slice_param/inst_phy_x4_dqs_tsel_rd_timing/g1105. In line 1, C:\Users\chyao\Desktop\checklist_dev\CHECKLIST\CHECKLIST\IP_project_folder\reports\8.0\IMP-8-0-0-23\IMP-8-0-0-23_case1.rpt: Unplaced cell instance detected - placement incomplete
+8: Fail: inst_data_param_top/inst_data_slice_param/inst_phy_x4_dqs_tsel_rd_timing/g1106. In line 1, C:\Users\chyao\Desktop\checklist_dev\CHECKLIST\CHECKLIST\IP_project_folder\reports\8.0\IMP-8-0-0-23\IMP-8-0-0-23_case1.rpt: Unplaced cell instance detected - placement incomplete
+9: Fail: inst_data_param_top/inst_data_slice_param/inst_phy_x4_dqs_tsel_rd_timing/g1107. In line 1, C:\Users\chyao\Desktop\checklist_dev\CHECKLIST\CHECKLIST\IP_project_folder\reports\8.0\IMP-8-0-0-23\IMP-8-0-0-23_case1.rpt: Unplaced cell instance detected - placement incomplete
+Warn Occurrence: 2
+1: Warn: design/memory_ctrl/buffer_inst/flop_23: Waiver defined but no violation matched: Waived - debug cell excluded from placement per design team approval[WAIVER]
+2: Warn: top/cpu_core/alu/adder_cell: Waiver defined but no violation matched: Waived - spare cell intentionally left unplaced for ECO purposes[WAIVER]
+
+================================================================================
+

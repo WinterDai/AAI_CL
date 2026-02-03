@@ -1,0 +1,15 @@
+description: Confirm static power analysis results matches the requirement.
+input_files:
+- C:\Users\zhihan\projects\check_development\CHECKLIST\CHECKLIST\IP_project_folder\reports\11.0\VDD_VSS_div.iv
+- C:\Users\zhihan\projects\check_development\CHECKLIST\CHECKLIST\IP_project_folder\reports\11.0\results_VDD
+- C:\Users\zhihan\projects\check_development\CHECKLIST\CHECKLIST\IP_project_folder\reports\11.0\results_VSS
+requirements:
+  pattern_items:
+  - Static_IR_Drop
+  - VDD_Power_EM
+  - VSS_Power_EM
+  value: 3
+waivers:
+  value: 0
+  waive_items:
+  - 'Explanation: Power analysis violations are informational during pre-layout phase'

@@ -1,0 +1,73 @@
+Test Report: IMP-12-0-0-09
+================================================================================
+
+[Test 1/6] Type 1 (requirements.value=N/A, waivers.value=N/A)
+--------------------------------------------------------------------------------
+Test ID: type1_na
+Status: PASS
+
+Checker Report Output:
+PASS:IMP-12-0-0-09:Confirm the LVS rule deck setting is correct.
+
+================================================================================
+
+[Test 2/6] Type 1 (requirements.value=N/A, waivers.value=0)
+--------------------------------------------------------------------------------
+Test ID: type1_0
+Status: PASS
+
+Checker Report Output:
+PASS:IMP-12-0-0-09:Confirm the LVS rule deck setting is correct.
+Info Occurrence: 1
+1: Info: Explanation: LVS rule deck validation is informational only for this design phase: Explanation: LVS rule deck validation is informational only for this design phase[WAIVED_INFO]
+
+================================================================================
+
+[Test 3/6] Type 2 (requirements.value>0, waivers.value=N/A)
+--------------------------------------------------------------------------------
+Test ID: type2_na
+Status: PASS
+
+Checker Report Output:
+PASS:IMP-12-0-0-09:Confirm the LVS rule deck setting is correct.
+
+================================================================================
+
+[Test 4/6] Type 2 (requirements.value>0, waivers.value=0)
+--------------------------------------------------------------------------------
+Test ID: type2_0
+Status: PASS
+
+Checker Report Output:
+PASS:IMP-12-0-0-09:Confirm the LVS rule deck setting is correct.
+Info Occurrence: 1
+1: Info: Explanation: LVS configuration check is informational during early design phase: Explanation: LVS configuration check is informational during early design phase[WAIVED_INFO]
+
+================================================================================
+
+[Test 5/6] Type 3 (requirements.value>0, waivers.value>0)
+--------------------------------------------------------------------------------
+Test ID: type3
+Status: PASS
+
+Checker Report Output:
+PASS:IMP-12-0-0-09:Confirm the LVS rule deck setting is correct.
+Warn Occurrence: 2
+1: Warn: GATE_TO_PG_CHECK: Waiver defined but no violation matched: Waived - Gate-to-power/ground check disabled for analog blocks per design team[WAIVER]
+2: Warn: RC_DFM_RULE: Waiver defined but no violation matched: Waived - DFM rule checking not required for this design per foundry approval[WAIVER]
+
+================================================================================
+
+[Test 6/6] Type 4 (requirements.value=N/A, waivers.value>0)
+--------------------------------------------------------------------------------
+Test ID: type4
+Status: PASS
+
+Checker Report Output:
+PASS:IMP-12-0-0-09:Confirm the LVS rule deck setting is correct.
+Warn Occurrence: 2
+1: Warn: GATE_TO_PG_CHECK: Waiver defined but no violation matched: Waived - Gate-to-power/ground check disabled for analog blocks per design team[WAIVER]
+2: Warn: RC_DFM_RULE: Waiver defined but no violation matched: Waived - DFM rule checking not required for this design per foundry approval[WAIVER]
+
+================================================================================
+

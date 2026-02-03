@@ -1,0 +1,13 @@
+PASS:IMP-10-0-0-00:Confirm the netlist/spef version is correct
+IMP-10-0-0-00-INFO01: [WAIVED_INFO]: Waived information:
+  Severity: Info Occurrence: 1
+  - Current stage is synthesis, SPEF check is not applicable.
+IMP-10-0-0-00-INFO02: [WAIVED_AS_INFO]: Netlist/SPEF version isn't correct:
+  Severity: Info Occurrence: 1
+  - Generated on:*2025*
+IMP-10-0-0-00-INFO03: [WAIVED_AS_INFO]: Design has no spef/netlist file:
+  Severity: Info Occurrence: 3
+  - Error: Netlist file path not found in STA log
+  - Error: SPEF file path not found in STA log
+  - Error: STA log file not found: ${CHECKLIST_ROOT}/IP_project_folder/logs/sta_post_syn.log
+

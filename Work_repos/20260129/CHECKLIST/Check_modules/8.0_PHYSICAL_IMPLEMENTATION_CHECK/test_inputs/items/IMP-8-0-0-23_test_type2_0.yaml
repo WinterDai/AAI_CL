@@ -1,0 +1,11 @@
+description: confirm no unplaced cells in design.
+input_files:
+- C:\Users\chyao\Desktop\checklist_dev\CHECKLIST\CHECKLIST\IP_project_folder\reports\8.0\IMP-8-0-0-23\IMP-8-0-0-23_case1.rpt
+requirements:
+  pattern_items:
+  - '0x0'
+  value: 1
+waivers:
+  value: 0
+  waive_items:
+  - 'Explanation: Unplaced cells are acceptable during incremental placement optimization'

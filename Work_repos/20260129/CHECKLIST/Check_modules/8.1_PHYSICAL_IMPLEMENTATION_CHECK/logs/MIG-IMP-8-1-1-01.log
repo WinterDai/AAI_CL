@@ -1,0 +1,12 @@
+PASS:MIG-IMP-8-1-1-01:Confirm meet a resistance less than 0.5Ω(not exceed 0.8Ω) and a capacitance less than 350fF from pad opening to signal bump. (check the Note)
+MIG-IMP-8-1-1-01-WARN01: Unused waivers:
+  Severity: Warn Occurrence: 2
+  - pad_mem_clk
+  - pad_mem_data[12]
+MIG-IMP-8-1-1-01-INFO01: Nets meeting RC limits found in report:
+  Severity: Info Occurrence: 4
+  - pad_mem_data[46] @ rcworst_CCworst_T_125c
+  - pad_mem_data[47] @ rcworst_CCworst_T_125c
+  - pad_mem_data[56] @ rcworst_CCworst_T_125c
+  - pad_mem_data[57] @ rcworst_CCworst_T_125c
+

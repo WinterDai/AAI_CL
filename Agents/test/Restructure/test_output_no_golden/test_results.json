@@ -1,0 +1,14 @@
+{
+  "Type 1": {
+    "error": "NetlistSpefVersionChecker.execute_check() takes 1 positional argument but 2 were given"
+  },
+  "Type 2": {
+    "error": "NetlistSpefVersionChecker.execute_check() takes 1 positional argument but 2 were given"
+  },
+  "Type 3": {
+    "error": "NetlistSpefVersionChecker.execute_check() takes 1 positional argument but 2 were given"
+  },
+  "Type 4": {
+    "error": "NetlistSpefVersionChecker.execute_check() takes 1 positional argument but 2 were given"
+  }
+}

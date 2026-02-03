@@ -1,0 +1,3 @@
+FAIL:IMP-4-0-0-10:Confrim proper clock and data transition limit values were set?
+Fail Occurrence: 1
+1: Fail: input_files is empty in YAML configuration

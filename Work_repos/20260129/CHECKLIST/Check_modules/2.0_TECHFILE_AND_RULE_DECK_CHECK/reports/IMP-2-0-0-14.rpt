@@ -1,0 +1,3 @@
+FAIL:IMP-2-0-0-14:List EM irxc rule deck name. eg: ICT_EM_v1d0p1a/cln3p_1p17m+ut-alrdl_1xa1xb1xc1xd1ya1yb4y2yy2yx2r_shdmim.ictem
+Fail Occurrence: 1
+1: Fail: input_files is empty in YAML configuration

@@ -1,0 +1,3 @@
+FAIL:IMP-15-0-0-04:Confirm there is no issue about CNOD check if CNOD check is needed.
+Fail Occurrence: 1
+1: Fail: cnod_perc.rep (CNOD check failed or incomplete): CNOD verification failed or incomplete

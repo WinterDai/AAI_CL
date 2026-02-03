@@ -1,0 +1,4 @@
+PASS:IMP-8-0-0-14:Confirm no VT mixing on clock tree for all modes. For some instances has clock attribute but used as data, please list that into Waiver list.
+Info Occurrence: 2
+1: Info: Explanation: VT mixing check is informational only for this design phase: Explanation: VT mixing check is informational only for this design phase[WAIVED_INFO]
+2: Info: No VT mixing detected: Clock tree has consistent VT type across all cells

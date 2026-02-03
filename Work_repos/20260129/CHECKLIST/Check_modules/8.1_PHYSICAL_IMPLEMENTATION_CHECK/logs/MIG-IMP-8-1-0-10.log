@@ -1,0 +1,5 @@
+FAIL:MIG-IMP-8-1-0-10:Confirm followed the custom and Regulator cell integration guide in custom cell delivery package. Please review the regulator physical design with AMS team.Please place the write path DA cell close to IO port and don't insert the buffers/inverter between DCC loop and data out mux select pin. (Check the Note)
+MIG-IMP-8-1-0-10-ERROR01: Configuration error:
+  Severity: Fail Occurrence: 1
+  - input_files is empty in YAML configuration
+

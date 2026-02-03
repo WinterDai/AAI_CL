@@ -1,0 +1,5 @@
+FAIL:IMP-11-0-0-12:Confirm the power number between EW and NS is similiar if this program has both NS and EW orientations.(< 10% at least. fill N/A in case only one orientation)
+IMP-11-0-0-12-ERROR01: Configuration error:
+  Severity: Fail Occurrence: 1
+  - input_files is empty in YAML configuration
+

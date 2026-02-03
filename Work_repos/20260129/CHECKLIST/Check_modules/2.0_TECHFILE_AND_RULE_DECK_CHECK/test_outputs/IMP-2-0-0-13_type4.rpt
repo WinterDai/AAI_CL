@@ -1,0 +1,6 @@
+PASS:IMP-2-0-0-13:List Spice Model used for PGV generation. eg: tsmc3gp.a.4/models/spectre_v1d0_2p6/ir_em.scs
+Warn Occurrence: 2
+1: Warn: tsmc3gp.a.4/models/spectre_v1d0_2p6/ir_em.scs: Waiver not matched - no corresponding SPICE model version mismatch found: Waived - alternative SPICE model validated for PGV in this technology node[WAIVER]
+2: Warn: tsmc5g.a.11/models/spectre_v1d1_2p5/ir_em.scs: Waiver not matched - no corresponding SPICE model version mismatch found: Waived - legacy SPICE model approved for this design per foundry team[WAIVER]
+Info Occurrence: 1
+1: Info: tsmc5g.a.12/models/spectre_v1d2_2p5/ir_em.scs. In line 3, C:\Users\chenweif\Checker_dev\CHECKLIST\CHECKLIST\IP_project_folder\logs\2.0\command_list.btxt: SPICE model path successfully extracted from command_list.btxt

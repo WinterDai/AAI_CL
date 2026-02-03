@@ -1,0 +1,101 @@
+Test Log: IMP-2-0-0-11
+================================================================================
+
+[Test 1/6] Type 1 (requirements.value=N/A, waivers.value=N/A)
+--------------------------------------------------------------------------------
+Test ID: type1_na
+Status: PASS
+
+Checker Log Output:
+PASS:IMP-2-0-0-11:List BEOL dummy rule deck name. eg: Dummy_BEOL_Pegasus_3nm_E_17M_1Xa1Xb1Xc1Xd1Ya1Yb4Y2Yy2Yx2R_014.11_1a
+IMP-2-0-0-11-INFO01: BEOL dummy rule deck name found in PVL log:
+  Severity: Info Occurrence: 1
+  - Dummy_BEOL_Pegasus_5nm_014.13_1a.M16"
+
+
+================================================================================
+
+[Test 2/6] Type 1 (requirements.value=N/A, waivers.value=0)
+--------------------------------------------------------------------------------
+Test ID: type1_0
+Status: PASS
+
+Checker Log Output:
+PASS:IMP-2-0-0-11:List BEOL dummy rule deck name. eg: Dummy_BEOL_Pegasus_3nm_E_17M_1Xa1Xb1Xc1Xd1Ya1Yb4Y2Yy2Yx2R_014.11_1a
+IMP-2-0-0-11-INFO01: [WAIVED_INFO]: Waived information:
+  Severity: Info Occurrence: 1
+  - Explanation: This check is informational only - BEOL rule deck name is extracted for reference
+IMP-2-0-0-11-INFO02: BEOL dummy rule deck name found in PVL log:
+  Severity: Info Occurrence: 1
+  - Dummy_BEOL_Pegasus_5nm_014.13_1a.M16"
+
+
+================================================================================
+
+[Test 3/6] Type 2 (requirements.value>0, waivers.value=N/A)
+--------------------------------------------------------------------------------
+Test ID: type2_na
+Status: ERROR
+
+Checker Log Output:
+FAIL:IMP-2-0-0-11:List BEOL dummy rule deck name. eg: Dummy_BEOL_Pegasus_3nm_E_17M_1Xa1Xb1Xc1Xd1Ya1Yb4Y2Yy2Yx2R_014.11_1a
+IMP-2-0-0-11-ERROR01: BEOL dummy rule deck name does not match expected pattern:
+  Severity: Fail Occurrence: 1
+  - Dummy_BEOL_Pegasus_5nm_014.13_1a.M16
+
+
+================================================================================
+
+[Test 4/6] Type 2 (requirements.value>0, waivers.value=0)
+--------------------------------------------------------------------------------
+Test ID: type2_0
+Status: PASS
+
+Checker Log Output:
+PASS:IMP-2-0-0-11:List BEOL dummy rule deck name. eg: Dummy_BEOL_Pegasus_3nm_E_17M_1Xa1Xb1Xc1Xd1Ya1Yb4Y2Yy2Yx2R_014.11_1a
+IMP-2-0-0-11-INFO01: [WAIVED_INFO]: Waived information:
+  Severity: Info Occurrence: 1
+  - Explanation: BEOL rule deck version mismatch is acceptable for this design phase
+IMP-2-0-0-11-INFO02: [WAIVED_AS_INFO]: BEOL dummy rule deck name does not match expected pattern:
+  Severity: Info Occurrence: 1
+  - Dummy_BEOL_Pegasus_5nm_014.13_1a.M16
+
+
+================================================================================
+
+[Test 5/6] Type 3
+--------------------------------------------------------------------------------
+Test ID: type3
+Status: ERROR
+
+Checker Log Output:
+FAIL:IMP-2-0-0-11:List BEOL dummy rule deck name. eg: Dummy_BEOL_Pegasus_3nm_E_17M_1Xa1Xb1Xc1Xd1Ya1Yb4Y2Yy2Yx2R_014.11_1a
+IMP-2-0-0-11-ERROR01: BEOL dummy rule deck name does not match expected pattern:
+  Severity: Fail Occurrence: 1
+  - Dummy_BEOL_Pegasus_5nm_014.13_1a.M16
+IMP-2-0-0-11-WARN01: Unused waivers:
+  Severity: Warn Occurrence: 2
+  - Dummy_BEOL_Pegasus_5nm_014.11_1a.M16
+  - Dummy_BEOL_Pegasus_5nm_014.12_1a.M16
+
+
+================================================================================
+
+[Test 6/6] Type 4
+--------------------------------------------------------------------------------
+Test ID: type4
+Status: PASS
+
+Checker Log Output:
+PASS:IMP-2-0-0-11:List BEOL dummy rule deck name. eg: Dummy_BEOL_Pegasus_3nm_E_17M_1Xa1Xb1Xc1Xd1Ya1Yb4Y2Yy2Yx2R_014.11_1a
+IMP-2-0-0-11-WARN01: Unused waivers:
+  Severity: Warn Occurrence: 2
+  - Dummy_BEOL_Pegasus_5nm_014.11_1a.M16
+  - Dummy_BEOL_Pegasus_5nm_014.12_1a.M16
+IMP-2-0-0-11-INFO01: BEOL dummy rule deck name found in PVL log:
+  Severity: Info Occurrence: 1
+  - Dummy_BEOL_Pegasus_5nm_014.13_1a.M16"
+
+
+================================================================================
+

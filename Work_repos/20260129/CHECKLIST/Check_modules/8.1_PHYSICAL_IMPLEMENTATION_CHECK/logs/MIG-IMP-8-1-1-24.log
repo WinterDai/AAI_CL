@@ -1,0 +1,5 @@
+FAIL:MIG-IMP-8-1-1-24:Confirm Deskew/FRAC PLL(All power domains) Dcap meet the system requirement. (e.g: 100pf per deskew/fracN pll each power domain for 6400Mbps, Please check the Notes for decap number for each PLL power domain based on data rate). Follow the guidance in AMS integration guide specified in Notes.
+MIG-IMP-8-1-1-24-ERROR01: Configuration error:
+  Severity: Fail Occurrence: 1
+  - input_files is empty in YAML configuration
+

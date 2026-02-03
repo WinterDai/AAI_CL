@@ -1,0 +1,6 @@
+FAIL:IMP-12-0-0-03:Confirm the DRC rule deck setting is correct. Make sure the switch settings match with Foundry CTA (/local/method/CTAF/<process>/production in chamber). Please add justification in Comment if you changed some switching setting in CTA.
+Fail Occurrence: 1
+1: Fail: pattern1: Switch/variable setting does not match CTA requirement - justification required in comments
+Warn Occurrence: 2
+1: Warn: DEBUG_VOLTAGE_RULE: Waiver entry not matched - no corresponding setting mismatch found in input files: Waived - voltage debugging disabled for production release per foundry recommendation[WAIVER]
+2: Warn: FULL_CHIP: Waiver entry not matched - no corresponding setting mismatch found in input files: Waived - IP-level design does not require full chip mode per design team approval[WAIVER]

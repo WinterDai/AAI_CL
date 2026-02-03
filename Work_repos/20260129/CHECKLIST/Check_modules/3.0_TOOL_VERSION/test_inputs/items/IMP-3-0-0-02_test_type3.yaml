@@ -1,0 +1,16 @@
+description: List Conformal LEC tool version (eg. confrml/241/24.10.100)
+input_files:
+- ${CHECKLIST_ROOT}/IP_project_folder/tcl/2.0/setup_vars.tcl
+requirements:
+  pattern_items:
+  - confrml/221/22.10.200
+  - confrml/241/24.10.100
+  value: 2
+waivers:
+  value: 2
+  waive_items:
+  - name: confrml/231/23.15.500
+    reason: Waived - intermediate tool version used for debug, will be updated to
+      241/24.10.100 before tapeout
+  - name: confrml/211/21.08.100
+    reason: Waived - legacy version acceptable for this IP block per tool team approval

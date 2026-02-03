@@ -1,0 +1,11 @@
+PASS:IMP-12-0-0-06:Confirm the MIM related check setting is correct. (Fill N/A if no MIMCAP inserted or no MIM related layers)
+IMP-12-0-0-06-INFO01: [WAIVED_INFO]: Waived information:
+  Severity: Info Occurrence: 1
+  - Explanation: MIM configuration check is informational only for designs without MIMCAP
+IMP-12-0-0-06-INFO02: [WAIVED_AS_INFO]: Required MIM configuration switches not found in DRC setup:
+  Severity: Info Occurrence: 4
+  - FHDMIM
+  - KOZ_HIGH_SUBST_LAYER
+  - SHDMIM
+  - SHDMIM_KOZ_AP_SPACE_5UM
+

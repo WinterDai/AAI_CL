@@ -1,0 +1,12 @@
+FAIL:IMP-7-0-0-02:Confirm no ERROR message during read constraints.
+IMP-7-0-0-02-ERROR01: ERROR messages found during constraint reading:
+  Severity: Fail Occurrence: 8
+  - CHKPLC-41: Design has util %.1f% > 100%, placer cannot proceed. The problem may be caused by density screens (softBlockages and partial blockages) or user-specif
+  - IMPFP-7006: Follow pin (Pin Box:%s) routed over hard macro (%s) should be cut at macro boundary.
+  - IMPMSMV-8350: There are %d missing isolation violation nets and %d missing level shifter violation nets.  Use verifypowerdomain -isoNetPD -xNetPD to check those LP
+  - IMPMSMV-8623: Primary PG term %s of Instance %s is connected to net %s which conflicts with primary power net %s of the domain %s specified in UPF. This can impact
+  - IMPMSMV-8670: Instance (%s) of power domain (%s) is placed inside fence of power domain (%s).
+  - IMPPP-4418: The via for net %s in DPT layer %s does not align with the tracks at %f %f.
+  - IMPPP-4419: The color of PG wire which is a default width %f wire for net %s in layer %s should have the same color with the track at %f %f.
+  - IMPPP-4420: The color of PG wire which is a non-default width %f wire for net %s in layer %s should have the opposite color with the track at %f %f.
+

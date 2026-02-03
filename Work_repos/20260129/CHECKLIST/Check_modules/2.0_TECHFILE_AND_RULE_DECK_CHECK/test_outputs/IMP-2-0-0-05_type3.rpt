@@ -1,0 +1,6 @@
+FAIL:IMP-2-0-0-05:Confirm ANT rule deck was not modified? If it was, explain in comments field.
+Fail Occurrence: 1
+1: Fail: IMP-2-0-0-05_diff_20260121_145609.txt: Rule deck content differs from golden reference - see diff file for details - see diff file: C:\Users\chenweif\Checker_dev\CHECKLIST\CHECKLIST\Check_modules\2.0_TECHFILE_AND_RULE_DECK_CHECK\reports\IMP-2-0-0-05_diff_20260121_145609.txt
+Warn Occurrence: 2
+1: Warn: PLN5LO_16M_054_PATCH_ANT.13_1a.encrypt: Waiver entry not matched - specified rule deck not found or not modified: Waived - patch file with approved customizations for metal stack optimization[WAIVER]
+2: Warn: PLN5LO_16M_1X1Xb1Xe1Ya1Yb6Y2Yy2R_014_ANT.13_1a.encrypt: Waiver entry not matched - specified rule deck not found or not modified: Approved modification for project-specific antenna rules per design review DR-2024-001[WAIVER]

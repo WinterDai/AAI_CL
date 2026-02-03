@@ -1,0 +1,7 @@
+PASS:IMP-11-0-0-10:Confirm static power analysis results matches the requirement.
+IMP-11-0-0-10-INFO01: All power analysis data successfully extracted:
+  Severity: Info Occurrence: 3
+  - Static_IR_Drop: 2.40%
+  - VDD_Power_EM: 0.8907
+  - VSS_Power_EM: 1.5485
+

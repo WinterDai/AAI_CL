@@ -1,0 +1,9 @@
+PASS:IMP-12-0-0-31:Confirm FLT check result is clean. (for SEC process, for others fill N/A)
+IMP-12-0-0-31-INFO01: [WAIVED_INFO]: Waived information:
+  Severity: Info Occurrence: 1
+  - Explanation: FLT violations are informational for non-SEC process designs
+IMP-12-0-0-31-INFO02: [WAIVED_AS_INFO]: FLT check has violations - one or more rules failed:
+  Severity: Info Occurrence: 2
+  - FLT rule: FLTM.Hx.S.1_H1 - 10 violations
+  - FLT rule: FLTM.Mx.S.1_M1 - 12 violations
+

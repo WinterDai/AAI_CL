@@ -1,0 +1,13 @@
+{
+  "status": "partial",
+  "context_status": null,
+  "codegen_status": "success",
+  "validation_status": "failed",
+  "has_item_spec": false,
+  "has_generated_code": true,
+  "errors": [
+    "ValidationAgent failed: []"
+  ],
+  "warnings": [],
+  "duration_seconds": 107.303924
+}

@@ -1,0 +1,12 @@
+{
+  "timestamp": "2026-01-06T10:44:09.191674",
+  "duration_seconds": 78.968617,
+  "status": "success",
+  "errors": [],
+  "config": {
+    "run_context_agent": false,
+    "run_codegen_agent": true,
+    "run_validation_agent": true,
+    "validation_use_mock_llm": true
+  }
+}

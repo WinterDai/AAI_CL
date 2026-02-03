@@ -1,0 +1,7 @@
+PASS:IMP-8-0-0-01:Confirm all ports are assigned on metal track.
+IMP-8-0-0-01-INFO01: All ports correctly placed on metal routing tracks:
+  Severity: Info Occurrence: 3
+  e_pi_ctrl[0]
+  rxda_cdrlf_scanmode
+  rxda_cdrlf_scanout[0]
+

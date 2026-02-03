@@ -1,0 +1,5 @@
+FAIL:IMP-12-0-0-06:Confirm the MIM related check setting is correct. (Fill N/A if no MIMCAP inserted or no MIM related layers)
+IMP-12-0-0-06-ERROR01: Configuration error:
+  Severity: Fail Occurrence: 1
+  - input_files is empty in YAML configuration
+

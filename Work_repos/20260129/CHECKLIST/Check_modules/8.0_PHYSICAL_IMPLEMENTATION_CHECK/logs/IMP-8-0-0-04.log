@@ -1,0 +1,22 @@
+PASS:IMP-8-0-0-04:Confirm buffers are attached for all ports and are set as fixed.
+IMP-8-0-0-04-WARN01: Unused waivers:
+  Severity: Warn Occurrence: 2
+  - clk4x
+  - rst_n
+IMP-8-0-0-04-INFO01: Ports with buffers attached and fixed:
+  Severity: Info Occurrence: 14
+  - atb0_int
+  - atb1_int
+  - clk4x
+  - clk_ctlr_1x_mode
+  - clk_phy_bypass
+  - clk_switch_is_done
+  - pad_mem_data[7]
+  - pad_mem_dqs_m
+  - pad_mem_dqs_p
+  - pll_clk_mode
+  - regout_accept_slice
+  - regout_slice[0]
+  - regout_valid_slice
+  - reset_clk_div
+

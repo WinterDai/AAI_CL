@@ -1,0 +1,8 @@
+PASS:IMP-2-0-0-02:Confirm latest DRC rule deck(s) was used? List DRC rule deck name in Comments. eg: PLN3ELO_17M_1Xa1Xb1Xc1Xd1Ya1Yb4Y2Yy2Yx2R_014.11_2a.encrypt PLN3ELO_17M_1Xa1Xb1Xc1Xd1Ya1Yb4Y2Yy2Yx2R_054_PATCH.11_2a.encrypt
+IMP-2-0-0-02-INFO01: [WAIVED_INFO]: Waived information:
+  Severity: Info Occurrence: 1
+  - Explanation: Rule deck version check is informational - tracking for audit purposes only
+IMP-2-0-0-02-INFO02: [WAIVED_AS_INFO]: DRC rule deck document or version does not match expected values:
+  Severity: Info Occurrence: 1
+  - C:\Users\chenweif\Checker_dev\CHECKLIST\CHECKLIST\IP_project_folder\ruledeck\2.0\PLN5LO_16M_1X1Xb1Xe1Ya1Yb6Y2Yy2R_014.13_1a.encrypt.phy (T-N05-CL-DR-014-N1, 1.3_1a), Expect (T-N05-CL-DR-014-N1, 014.11_2a)
+

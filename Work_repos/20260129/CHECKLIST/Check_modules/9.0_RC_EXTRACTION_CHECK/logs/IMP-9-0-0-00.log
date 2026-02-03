@@ -1,0 +1,5 @@
+FAIL:IMP-9-0-0-00:Confirm SPEF extaction includes dummy metal gds.
+IMP-9-0-0-00-ERROR01: Metal fill extraction configuration missing or incomplete:
+  Severity: Fail Occurrence: 1
+  - GDS file path not configured (input_db -type metal_fill -gds_file missing)
+

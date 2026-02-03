@@ -1,0 +1,9 @@
+FAIL:IMP-2-0-0-05:Confirm ANT rule deck was not modified? If it was, explain in comments field.
+IMP-2-0-0-05-ERROR01: ANT rule deck modified - differences detected:
+  Severity: Fail Occurrence: 1
+  - IMP-2-0-0-05_diff_20260121_145609.txt
+IMP-2-0-0-05-WARN01: Unused waivers:
+  Severity: Warn Occurrence: 2
+  - PLN5LO_16M_054_PATCH_ANT.13_1a.encrypt
+  - PLN5LO_16M_1X1Xb1Xe1Ya1Yb6Y2Yy2R_014_ANT.13_1a.encrypt
+

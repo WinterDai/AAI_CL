@@ -1,0 +1,5 @@
+FAIL:IMP-10-0-0-00:Confirm the netlist/spef version is correct.
+IMP-10-0-0-00-WARN01: Design has no spef/netlist file:
+  Severity: Warn Occurrence: 1
+  - SPEF Reading was skipped
+

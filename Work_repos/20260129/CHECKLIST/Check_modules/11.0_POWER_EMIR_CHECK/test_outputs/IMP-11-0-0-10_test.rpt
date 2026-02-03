@@ -1,0 +1,97 @@
+Test Report: IMP-11-0-0-10
+================================================================================
+
+[Test 1/6] Type 1 (requirements.value=N/A, waivers.value=N/A)
+--------------------------------------------------------------------------------
+Test ID: type1_na
+Status: PASS
+
+Checker Report Output:
+PASS:IMP-11-0-0-10:Confirm static power analysis results matches the requirement.
+Info Occurrence: 3
+1: Info: Static_IR_Drop: 2.40%. In line 22, C:\Users\zhihan\projects\check_development\CHECKLIST\CHECKLIST\IP_project_folder\reports\11.0\VDD_VSS_div.iv: Static IR Drop and Power EM data extracted successfully
+2: Info: VDD_Power_EM: 0.8907. In line 179, C:\Users\zhihan\projects\check_development\CHECKLIST\CHECKLIST\IP_project_folder\reports\11.0\results_VDD: Static IR Drop and Power EM data extracted successfully
+3: Info: VSS_Power_EM: 1.5485. In line 163, C:\Users\zhihan\projects\check_development\CHECKLIST\CHECKLIST\IP_project_folder\reports\11.0\results_VSS: Static IR Drop and Power EM data extracted successfully
+
+================================================================================
+
+[Test 2/6] Type 1 (requirements.value=N/A, waivers.value=0)
+--------------------------------------------------------------------------------
+Test ID: type1_0
+Status: PASS
+
+Checker Report Output:
+PASS:IMP-11-0-0-10:Confirm static power analysis results matches the requirement.
+Info Occurrence: 4
+1: Info: Explanation: Power analysis violations are informational only during early design phase: Explanation: Power analysis violations are informational only during early design phase[WAIVED_INFO]
+2: Info: Static_IR_Drop: 2.40%. In line 22, C:\Users\zhihan\projects\check_development\CHECKLIST\CHECKLIST\IP_project_folder\reports\11.0\VDD_VSS_div.iv: Static IR Drop and Power EM data extracted successfully
+3: Info: VDD_Power_EM: 0.8907. In line 179, C:\Users\zhihan\projects\check_development\CHECKLIST\CHECKLIST\IP_project_folder\reports\11.0\results_VDD: Static IR Drop and Power EM data extracted successfully
+4: Info: VSS_Power_EM: 1.5485. In line 163, C:\Users\zhihan\projects\check_development\CHECKLIST\CHECKLIST\IP_project_folder\reports\11.0\results_VSS: Static IR Drop and Power EM data extracted successfully
+
+================================================================================
+
+[Test 3/6] Type 2 (requirements.value>0, waivers.value=N/A)
+--------------------------------------------------------------------------------
+Test ID: type2_na
+Status: ERROR
+
+Checker Report Output:
+FAIL:IMP-11-0-0-10:Confirm static power analysis results matches the requirement.
+Fail Occurrence: 1
+1: Fail: VSS_Power_EM: 1.5485 >= target (1.0): Power metric exceeds threshold requirement
+Info Occurrence: 2
+1: Info: Static_IR_Drop: 2.40% < target (3.0%). In line 22, C:\Users\zhihan\projects\check_development\CHECKLIST\CHECKLIST\IP_project_folder\reports\11.0\VDD_VSS_div.iv: All power metrics matched requirements and validated successfully
+2: Info: VDD_Power_EM: 0.8907 < target (1.0). In line 179, C:\Users\zhihan\projects\check_development\CHECKLIST\CHECKLIST\IP_project_folder\reports\11.0\results_VDD: All power metrics matched requirements and validated successfully
+
+================================================================================
+
+[Test 4/6] Type 2 (requirements.value>0, waivers.value=0)
+--------------------------------------------------------------------------------
+Test ID: type2_0
+Status: PASS
+
+Checker Report Output:
+PASS:IMP-11-0-0-10:Confirm static power analysis results matches the requirement.
+Info Occurrence: 4
+1: Info: Explanation: Power analysis violations are informational during pre-layout phase: Explanation: Power analysis violations are informational during pre-layout phase[WAIVED_INFO]
+2: Info: Static_IR_Drop: 2.40% < target (3.0%). In line 22, C:\Users\zhihan\projects\check_development\CHECKLIST\CHECKLIST\IP_project_folder\reports\11.0\VDD_VSS_div.iv: All power metrics matched requirements and validated successfully
+3: Info: VDD_Power_EM: 0.8907 < target (1.0). In line 179, C:\Users\zhihan\projects\check_development\CHECKLIST\CHECKLIST\IP_project_folder\reports\11.0\results_VDD: All power metrics matched requirements and validated successfully
+4: Info: VSS_Power_EM: 1.5485 >= target (1.0): Power metric exceeds threshold requirement[WAIVED_AS_INFO]
+
+================================================================================
+
+[Test 5/6] Type 3 (requirements.value>0, waivers.value>0)
+--------------------------------------------------------------------------------
+Test ID: type3
+Status: ERROR
+
+Checker Report Output:
+FAIL:IMP-11-0-0-10:Confirm static power analysis results matches the requirement.
+Fail Occurrence: 1
+1: Fail: VSS_Power_EM: 1.5485 >= target (1.0): Power metric exceeds threshold requirement
+Warn Occurrence: 2
+1: Warn: Static_IR_Drop: Waiver not matched - no corresponding power violation found: Waived - IR drop acceptable for low-power mode operation per design review[WAIVER]
+2: Warn: VDD_Power_EM: Waiver not matched - no corresponding power violation found: Waived - EM margin acceptable for target lifetime per reliability analysis[WAIVER]
+Info Occurrence: 2
+1: Info: Static_IR_Drop: 2.40% < target (3.0%). In line 22, C:\Users\zhihan\projects\check_development\CHECKLIST\CHECKLIST\IP_project_folder\reports\11.0\VDD_VSS_div.iv: All power metrics matched requirements and validated successfully
+2: Info: VDD_Power_EM: 0.8907 < target (1.0). In line 179, C:\Users\zhihan\projects\check_development\CHECKLIST\CHECKLIST\IP_project_folder\reports\11.0\results_VDD: All power metrics matched requirements and validated successfully
+
+================================================================================
+
+[Test 6/6] Type 4 (requirements.value=N/A, waivers.value>0)
+--------------------------------------------------------------------------------
+Test ID: type4
+Status: PASS
+
+Checker Report Output:
+PASS:IMP-11-0-0-10:Confirm static power analysis results matches the requirement.
+Warn Occurrence: 2
+1: Warn: Static_IR_Drop: Waiver not matched - no corresponding power violation found: Waived - IR drop acceptable for low-power mode operation per design review[WAIVER]
+2: Warn: VDD_Power_EM: Waiver not matched - no corresponding power violation found: Waived - EM margin acceptable for target lifetime per reliability analysis[WAIVER]
+Info Occurrence: 3
+1: Info: Static_IR_Drop: 2.40%. In line 22, C:\Users\zhihan\projects\check_development\CHECKLIST\CHECKLIST\IP_project_folder\reports\11.0\VDD_VSS_div.iv: Static IR Drop and Power EM data extracted successfully
+2: Info: VDD_Power_EM: 0.8907. In line 179, C:\Users\zhihan\projects\check_development\CHECKLIST\CHECKLIST\IP_project_folder\reports\11.0\results_VDD: Static IR Drop and Power EM data extracted successfully
+3: Info: VSS_Power_EM: 1.5485. In line 163, C:\Users\zhihan\projects\check_development\CHECKLIST\CHECKLIST\IP_project_folder\reports\11.0\results_VSS: Static IR Drop and Power EM data extracted successfully
+
+================================================================================
+

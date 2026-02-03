@@ -1,0 +1,14 @@
+description: Confirm SPEF extaction includes dummy metal gds.
+input_files:
+- ${CHECKLIST_ROOT}/IP_project_folder/logs/9.0/do_qrcrcworst_CCworst_T_125c.log
+- ${CHECKLIST_ROOT}/IP_project_folder/logs/9.0/do_qrccbest_CCbest_125c.log
+- ${CHECKLIST_ROOT}/IP_project_folder/logs/9.0/do_qrccbest_CCbest_m40c.log
+- ${CHECKLIST_ROOT}/IP_project_folder/logs/9.0/do_qrccworst_CCworst_m40c.log
+requirements:
+  pattern_items:
+  - do_qrcrcworst_CCworst_T_125c.log
+  - do_qrccbest_CCbest_125c.log
+  value: 2
+waivers:
+  value: N/A
+  waive_items: []

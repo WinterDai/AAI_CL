@@ -1,0 +1,143 @@
+Test Report: IMP-12-0-0-11
+================================================================================
+
+[Test 1/6] Type 1 (requirements.value=N/A, waivers.value=N/A)
+--------------------------------------------------------------------------------
+Test ID: type1_na
+Status: ERROR
+
+Checker Report Output:
+FAIL:IMP-12-0-0-11:Confirm the DRC check result is clean. (fill the confidence level of not touching floorplan again in comment if fill no, for example, 90%~100%)
+Fail Occurrence: 15
+1: Fail: AN.R.20mg: 290: DRC violations found in reports - design requires fixes
+2: Fail: EFP.VIA13.R.1.1: 41: DRC violations found in reports - design requires fixes
+3: Fail: EFP.VIA13.R.1.2: 5: DRC violations found in reports - design requires fixes
+4: Fail: ESD.1g: 1: DRC violations found in reports - design requires fixes
+5: Fail: ESD.1g: 2: DRC violations found in reports - design requires fixes
+6: Fail: HIA.CDM9A.3.1.zg: 20: DRC violations found in reports - design requires fixes
+7: Fail: HIA.CDM9A.3.zg: 20: DRC violations found in reports - design requires fixes
+8: Fail: PO.DN.11: 1: DRC violations found in reports - design requires fixes
+9: Fail: RH_TN.WARN.1: 156: DRC violations found in reports - design requires fixes
+10: Fail: RH_TN.WARN.1: 256: DRC violations found in reports - design requires fixes
+11: Fail: RR:RE:FB1AN.R.5: 12973: DRC violations found in reports - design requires fixes
+12: Fail: RR:RE:FB1AN_OD.R.22: 498: DRC violations found in reports - design requires fixes
+13: Fail: RR:RE:FB1AN_OD.R.23.4: 491: DRC violations found in reports - design requires fixes
+14: Fail: RR:RE:FB1AN_OD.R.24.1.z: 1944: DRC violations found in reports - design requires fixes
+15: Fail: RR:RE:FB1AN_OD.S.27.z: 379: DRC violations found in reports - design requires fixes
+
+================================================================================
+
+[Test 2/6] Type 1 (requirements.value=N/A, waivers.value=0)
+--------------------------------------------------------------------------------
+Test ID: type1_0
+Status: PASS
+
+Checker Report Output:
+PASS:IMP-12-0-0-11:Confirm the DRC check result is clean. (fill the confidence level of not touching floorplan again in comment if fill no, for example, 90%~100%)
+Info Occurrence: 16
+1: Info: Explanation: DRC violations are informational only for this design phase: Explanation: DRC violations are informational only for this design phase[WAIVED_INFO]
+2: Info: AN.R.20mg: 290: DRC violations found in reports - design requires fixes[WAIVED_AS_INFO]
+3: Info: EFP.VIA13.R.1.1: 41: DRC violations found in reports - design requires fixes[WAIVED_AS_INFO]
+4: Info: EFP.VIA13.R.1.2: 5: DRC violations found in reports - design requires fixes[WAIVED_AS_INFO]
+5: Info: ESD.1g: 1: DRC violations found in reports - design requires fixes[WAIVED_AS_INFO]
+6: Info: ESD.1g: 2: DRC violations found in reports - design requires fixes[WAIVED_AS_INFO]
+7: Info: HIA.CDM9A.3.1.zg: 20: DRC violations found in reports - design requires fixes[WAIVED_AS_INFO]
+8: Info: HIA.CDM9A.3.zg: 20: DRC violations found in reports - design requires fixes[WAIVED_AS_INFO]
+9: Info: PO.DN.11: 1: DRC violations found in reports - design requires fixes[WAIVED_AS_INFO]
+10: Info: RH_TN.WARN.1: 156: DRC violations found in reports - design requires fixes[WAIVED_AS_INFO]
+11: Info: RH_TN.WARN.1: 256: DRC violations found in reports - design requires fixes[WAIVED_AS_INFO]
+12: Info: RR:RE:FB1AN.R.5: 12973: DRC violations found in reports - design requires fixes[WAIVED_AS_INFO]
+13: Info: RR:RE:FB1AN_OD.R.22: 498: DRC violations found in reports - design requires fixes[WAIVED_AS_INFO]
+14: Info: RR:RE:FB1AN_OD.R.23.4: 491: DRC violations found in reports - design requires fixes[WAIVED_AS_INFO]
+15: Info: RR:RE:FB1AN_OD.R.24.1.z: 1944: DRC violations found in reports - design requires fixes[WAIVED_AS_INFO]
+16: Info: RR:RE:FB1AN_OD.S.27.z: 379: DRC violations found in reports - design requires fixes[WAIVED_AS_INFO]
+
+================================================================================
+
+[Test 3/6] Type 2 (requirements.value>0, waivers.value=N/A)
+--------------------------------------------------------------------------------
+Test ID: type2_na
+Status: ERROR
+
+Checker Report Output:
+FAIL:IMP-12-0-0-11:Confirm the DRC check result is clean. (fill the confidence level of not touching floorplan again in comment if fill no, for example, 90%~100%)
+Fail Occurrence: 3
+1: Fail: AN.R.20mg: 290: DRC rule violations detected - design rules not satisfied
+2: Fail: EFP.VIA13.R.1.1: 41: DRC rule violations detected - design rules not satisfied
+3: Fail: RH_TN.WARN.1: 256: DRC rule violations detected - design rules not satisfied
+
+================================================================================
+
+[Test 4/6] Type 2 (requirements.value>0, waivers.value=0)
+--------------------------------------------------------------------------------
+Test ID: type2_0
+Status: PASS
+
+Checker Report Output:
+PASS:IMP-12-0-0-11:Confirm the DRC check result is clean. (fill the confidence level of not touching floorplan again in comment if fill no, for example, 90%~100%)
+Info Occurrence: 4
+1: Info: Explanation: Specific DRC rules are informational only for this design phase: Explanation: Specific DRC rules are informational only for this design phase[WAIVED_INFO]
+2: Info: AN.R.20mg: 290: DRC rule violations detected - design rules not satisfied[WAIVED_AS_INFO]
+3: Info: EFP.VIA13.R.1.1: 41: DRC rule violations detected - design rules not satisfied[WAIVED_AS_INFO]
+4: Info: RH_TN.WARN.1: 256: DRC rule violations detected - design rules not satisfied[WAIVED_AS_INFO]
+
+================================================================================
+
+[Test 5/6] Type 3 (requirements.value>0, waivers.value>0)
+--------------------------------------------------------------------------------
+Test ID: type3
+Status: ERROR
+
+Checker Report Output:
+FAIL:IMP-12-0-0-11:Confirm the DRC check result is clean. (fill the confidence level of not touching floorplan again in comment if fill no, for example, 90%~100%)
+Fail Occurrence: 14
+1: Fail: EFP.VIA13.R.1.1: 41: DRC rule violations detected - design rules not satisfied
+2: Fail: EFP.VIA13.R.1.2: 5: DRC rule violations detected - design rules not satisfied
+3: Fail: ESD.1g: 1: DRC rule violations detected - design rules not satisfied
+4: Fail: ESD.1g: 2: DRC rule violations detected - design rules not satisfied
+5: Fail: HIA.CDM9A.3.1.zg: 20: DRC rule violations detected - design rules not satisfied
+6: Fail: HIA.CDM9A.3.zg: 20: DRC rule violations detected - design rules not satisfied
+7: Fail: PO.DN.11: 1: DRC rule violations detected - design rules not satisfied
+8: Fail: RH_TN.WARN.1: 156: DRC rule violations detected - design rules not satisfied
+9: Fail: RH_TN.WARN.1: 256: DRC rule violations detected - design rules not satisfied
+10: Fail: RR:RE:FB1AN.R.5: 12973: DRC rule violations detected - design rules not satisfied
+11: Fail: RR:RE:FB1AN_OD.R.22: 498: DRC rule violations detected - design rules not satisfied
+12: Fail: RR:RE:FB1AN_OD.R.23.4: 491: DRC rule violations detected - design rules not satisfied
+13: Fail: RR:RE:FB1AN_OD.R.24.1.z: 1944: DRC rule violations detected - design rules not satisfied
+14: Fail: RR:RE:FB1AN_OD.S.27.z: 379: DRC rule violations detected - design rules not satisfied
+Warn Occurrence: 1
+1: Warn: RH_TN.WARN.1: 300: Waiver entry not matched - no corresponding DRC violation found in reports: Routing hierarchy warnings in legacy blocks - waived per IP vendor approval[WAIVER]
+Info Occurrence: 1
+1: Info: AN.R.20mg: 290. In line 9404, C:\Users\jingyu\OneDrive - Cadence Design Systems Inc\Desktop\checklist_dev\AI_2026_V1\CHECKLIST\CHECKLIST\IP_project_folder\reports\pv\Calibre_DRC.rep: DRC violation waived per design approval: Antenna ratio violations in test structures - waived per design review[WAIVER]
+
+================================================================================
+
+[Test 6/6] Type 4 (requirements.value=N/A, waivers.value>0)
+--------------------------------------------------------------------------------
+Test ID: type4
+Status: ERROR
+
+Checker Report Output:
+FAIL:IMP-12-0-0-11:Confirm the DRC check result is clean. (fill the confidence level of not touching floorplan again in comment if fill no, for example, 90%~100%)
+Fail Occurrence: 14
+1: Fail: EFP.VIA13.R.1.1: 41: DRC violations found in reports - design requires fixes
+2: Fail: EFP.VIA13.R.1.2: 5: DRC violations found in reports - design requires fixes
+3: Fail: ESD.1g: 1: DRC violations found in reports - design requires fixes
+4: Fail: ESD.1g: 2: DRC violations found in reports - design requires fixes
+5: Fail: HIA.CDM9A.3.1.zg: 20: DRC violations found in reports - design requires fixes
+6: Fail: HIA.CDM9A.3.zg: 20: DRC violations found in reports - design requires fixes
+7: Fail: PO.DN.11: 1: DRC violations found in reports - design requires fixes
+8: Fail: RH_TN.WARN.1: 156: DRC violations found in reports - design requires fixes
+9: Fail: RH_TN.WARN.1: 256: DRC violations found in reports - design requires fixes
+10: Fail: RR:RE:FB1AN.R.5: 12973: DRC violations found in reports - design requires fixes
+11: Fail: RR:RE:FB1AN_OD.R.22: 498: DRC violations found in reports - design requires fixes
+12: Fail: RR:RE:FB1AN_OD.R.23.4: 491: DRC violations found in reports - design requires fixes
+13: Fail: RR:RE:FB1AN_OD.R.24.1.z: 1944: DRC violations found in reports - design requires fixes
+14: Fail: RR:RE:FB1AN_OD.S.27.z: 379: DRC violations found in reports - design requires fixes
+Warn Occurrence: 1
+1: Warn: RH_TN.WARN.1: 300: Waiver entry not matched - no corresponding DRC violation found in reports: Routing hierarchy warnings in legacy blocks - waived per IP vendor approval[WAIVER]
+Info Occurrence: 1
+1: Info: AN.R.20mg: 290. In line 9404, C:\Users\jingyu\OneDrive - Cadence Design Systems Inc\Desktop\checklist_dev\AI_2026_V1\CHECKLIST\CHECKLIST\IP_project_folder\reports\pv\Calibre_DRC.rep: DRC violation waived per design approval: Antenna ratio violations in test structures - waived per design review[WAIVER]
+
+================================================================================
+

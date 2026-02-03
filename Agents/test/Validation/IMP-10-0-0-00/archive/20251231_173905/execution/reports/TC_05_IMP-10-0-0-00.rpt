@@ -1,0 +1,6 @@
+WAIVER:IMP-10-0-0-00:Confirm the netlist/spef version is correct.
+TestCase: TC_05
+Expected: WAIVER
+Actual: WAIVER
+Verdict: CORRECT
+Confidence: HIGH

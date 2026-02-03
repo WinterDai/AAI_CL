@@ -1,0 +1,273 @@
+Test Report: IMP-8-0-0-02
+================================================================================
+
+[Test 1/6] Type 1 (requirements.value=N/A, waivers.value=N/A)
+--------------------------------------------------------------------------------
+Test ID: type1_na
+Status: ERROR
+
+Checker Report Output:
+FAIL:IMP-8-0-0-02:Confirm all ports status are Fixed.
+Fail Occurrence: 66
+1: Fail: bist_rddqs_dq_slave_delay[0] (Pstatus: placed). In line 5508, C:\Users\chyao\Desktop\checklist_dev\CHECKLIST\CHECKLIST\IP_project_folder\reports\8.0\IMP-8-0-0-02\IMP-8-0-0-02_case3.rpt: Port placement status is not fixed (placed or unplaced)
+2: Fail: bist_rddqs_dq_slave_delay[1] (Pstatus: placed). In line 5507, C:\Users\chyao\Desktop\checklist_dev\CHECKLIST\CHECKLIST\IP_project_folder\reports\8.0\IMP-8-0-0-02\IMP-8-0-0-02_case3.rpt: Port placement status is not fixed (placed or unplaced)
+3: Fail: bist_rddqs_dq_slave_delay[2] (Pstatus: placed). In line 5506, C:\Users\chyao\Desktop\checklist_dev\CHECKLIST\CHECKLIST\IP_project_folder\reports\8.0\IMP-8-0-0-02\IMP-8-0-0-02_case3.rpt: Port placement status is not fixed (placed or unplaced)
+4: Fail: bist_rddqs_dq_slave_delay[3] (Pstatus: placed). In line 5505, C:\Users\chyao\Desktop\checklist_dev\CHECKLIST\CHECKLIST\IP_project_folder\reports\8.0\IMP-8-0-0-02\IMP-8-0-0-02_case3.rpt: Port placement status is not fixed (placed or unplaced)
+5: Fail: bist_rddqs_dq_slave_delay[4] (Pstatus: placed). In line 5504, C:\Users\chyao\Desktop\checklist_dev\CHECKLIST\CHECKLIST\IP_project_folder\reports\8.0\IMP-8-0-0-02\IMP-8-0-0-02_case3.rpt: Port placement status is not fixed (placed or unplaced)
+6: Fail: bist_rddqs_dq_slave_delay[5] (Pstatus: placed). In line 5503, C:\Users\chyao\Desktop\checklist_dev\CHECKLIST\CHECKLIST\IP_project_folder\reports\8.0\IMP-8-0-0-02\IMP-8-0-0-02_case3.rpt: Port placement status is not fixed (placed or unplaced)
+7: Fail: bist_rddqs_dq_slave_delay[6] (Pstatus: placed). In line 5502, C:\Users\chyao\Desktop\checklist_dev\CHECKLIST\CHECKLIST\IP_project_folder\reports\8.0\IMP-8-0-0-02\IMP-8-0-0-02_case3.rpt: Port placement status is not fixed (placed or unplaced)
+8: Fail: bist_rddqs_dq_slave_delay[7] (Pstatus: placed). In line 5501, C:\Users\chyao\Desktop\checklist_dev\CHECKLIST\CHECKLIST\IP_project_folder\reports\8.0\IMP-8-0-0-02\IMP-8-0-0-02_case3.rpt: Port placement status is not fixed (placed or unplaced)
+9: Fail: bist_rddqs_dq_slave_delay[8] (Pstatus: placed). In line 5500, C:\Users\chyao\Desktop\checklist_dev\CHECKLIST\CHECKLIST\IP_project_folder\reports\8.0\IMP-8-0-0-02\IMP-8-0-0-02_case3.rpt: Port placement status is not fixed (placed or unplaced)
+10: Fail: deep_sleep (Pstatus: placed). In line 4527, C:\Users\chyao\Desktop\checklist_dev\CHECKLIST\CHECKLIST\IP_project_folder\reports\8.0\IMP-8-0-0-02\IMP-8-0-0-02_case3.rpt: Port placement status is not fixed (placed or unplaced)
+11: Fail: dfi_wdqlvl_dfe_result[0] (Pstatus: placed). In line 5209, C:\Users\chyao\Desktop\checklist_dev\CHECKLIST\CHECKLIST\IP_project_folder\reports\8.0\IMP-8-0-0-02\IMP-8-0-0-02_case3.rpt: Port placement status is not fixed (placed or unplaced)
+12: Fail: dfi_wdqlvl_dfe_result[10] (Pstatus: placed). In line 5199, C:\Users\chyao\Desktop\checklist_dev\CHECKLIST\CHECKLIST\IP_project_folder\reports\8.0\IMP-8-0-0-02\IMP-8-0-0-02_case3.rpt: Port placement status is not fixed (placed or unplaced)
+13: Fail: dfi_wdqlvl_dfe_result[11] (Pstatus: placed). In line 5198, C:\Users\chyao\Desktop\checklist_dev\CHECKLIST\CHECKLIST\IP_project_folder\reports\8.0\IMP-8-0-0-02\IMP-8-0-0-02_case3.rpt: Port placement status is not fixed (placed or unplaced)
+14: Fail: dfi_wdqlvl_dfe_result[12] (Pstatus: placed). In line 5197, C:\Users\chyao\Desktop\checklist_dev\CHECKLIST\CHECKLIST\IP_project_folder\reports\8.0\IMP-8-0-0-02\IMP-8-0-0-02_case3.rpt: Port placement status is not fixed (placed or unplaced)
+15: Fail: dfi_wdqlvl_dfe_result[13] (Pstatus: placed). In line 5196, C:\Users\chyao\Desktop\checklist_dev\CHECKLIST\CHECKLIST\IP_project_folder\reports\8.0\IMP-8-0-0-02\IMP-8-0-0-02_case3.rpt: Port placement status is not fixed (placed or unplaced)
+16: Fail: dfi_wdqlvl_dfe_result[14] (Pstatus: placed). In line 5195, C:\Users\chyao\Desktop\checklist_dev\CHECKLIST\CHECKLIST\IP_project_folder\reports\8.0\IMP-8-0-0-02\IMP-8-0-0-02_case3.rpt: Port placement status is not fixed (placed or unplaced)
+17: Fail: dfi_wdqlvl_dfe_result[15] (Pstatus: placed). In line 5194, C:\Users\chyao\Desktop\checklist_dev\CHECKLIST\CHECKLIST\IP_project_folder\reports\8.0\IMP-8-0-0-02\IMP-8-0-0-02_case3.rpt: Port placement status is not fixed (placed or unplaced)
+18: Fail: dfi_wdqlvl_dfe_result[16] (Pstatus: placed). In line 5193, C:\Users\chyao\Desktop\checklist_dev\CHECKLIST\CHECKLIST\IP_project_folder\reports\8.0\IMP-8-0-0-02\IMP-8-0-0-02_case3.rpt: Port placement status is not fixed (placed or unplaced)
+19: Fail: dfi_wdqlvl_dfe_result[17] (Pstatus: placed). In line 5192, C:\Users\chyao\Desktop\checklist_dev\CHECKLIST\CHECKLIST\IP_project_folder\reports\8.0\IMP-8-0-0-02\IMP-8-0-0-02_case3.rpt: Port placement status is not fixed (placed or unplaced)
+20: Fail: dfi_wdqlvl_dfe_result[1] (Pstatus: placed). In line 5208, C:\Users\chyao\Desktop\checklist_dev\CHECKLIST\CHECKLIST\IP_project_folder\reports\8.0\IMP-8-0-0-02\IMP-8-0-0-02_case3.rpt: Port placement status is not fixed (placed or unplaced)
+21: Fail: dfi_wdqlvl_dfe_result[2] (Pstatus: placed). In line 5207, C:\Users\chyao\Desktop\checklist_dev\CHECKLIST\CHECKLIST\IP_project_folder\reports\8.0\IMP-8-0-0-02\IMP-8-0-0-02_case3.rpt: Port placement status is not fixed (placed or unplaced)
+22: Fail: dfi_wdqlvl_dfe_result[3] (Pstatus: placed). In line 5206, C:\Users\chyao\Desktop\checklist_dev\CHECKLIST\CHECKLIST\IP_project_folder\reports\8.0\IMP-8-0-0-02\IMP-8-0-0-02_case3.rpt: Port placement status is not fixed (placed or unplaced)
+23: Fail: dfi_wdqlvl_dfe_result[4] (Pstatus: placed). In line 5205, C:\Users\chyao\Desktop\checklist_dev\CHECKLIST\CHECKLIST\IP_project_folder\reports\8.0\IMP-8-0-0-02\IMP-8-0-0-02_case3.rpt: Port placement status is not fixed (placed or unplaced)
+24: Fail: dfi_wdqlvl_dfe_result[5] (Pstatus: placed). In line 5204, C:\Users\chyao\Desktop\checklist_dev\CHECKLIST\CHECKLIST\IP_project_folder\reports\8.0\IMP-8-0-0-02\IMP-8-0-0-02_case3.rpt: Port placement status is not fixed (placed or unplaced)
+25: Fail: dfi_wdqlvl_dfe_result[6] (Pstatus: placed). In line 5203, C:\Users\chyao\Desktop\checklist_dev\CHECKLIST\CHECKLIST\IP_project_folder\reports\8.0\IMP-8-0-0-02\IMP-8-0-0-02_case3.rpt: Port placement status is not fixed (placed or unplaced)
+26: Fail: dfi_wdqlvl_dfe_result[7] (Pstatus: placed). In line 5202, C:\Users\chyao\Desktop\checklist_dev\CHECKLIST\CHECKLIST\IP_project_folder\reports\8.0\IMP-8-0-0-02\IMP-8-0-0-02_case3.rpt: Port placement status is not fixed (placed or unplaced)
+27: Fail: dfi_wdqlvl_dfe_result[8] (Pstatus: placed). In line 5201, C:\Users\chyao\Desktop\checklist_dev\CHECKLIST\CHECKLIST\IP_project_folder\reports\8.0\IMP-8-0-0-02\IMP-8-0-0-02_case3.rpt: Port placement status is not fixed (placed or unplaced)
+28: Fail: dfi_wdqlvl_dfe_result[9] (Pstatus: placed). In line 5200, C:\Users\chyao\Desktop\checklist_dev\CHECKLIST\CHECKLIST\IP_project_folder\reports\8.0\IMP-8-0-0-02\IMP-8-0-0-02_case3.rpt: Port placement status is not fixed (placed or unplaced)
+29: Fail: lpbk_en (Pstatus: placed). In line 5499, C:\Users\chyao\Desktop\checklist_dev\CHECKLIST\CHECKLIST\IP_project_folder\reports\8.0\IMP-8-0-0-02\IMP-8-0-0-02_case3.rpt: Port placement status is not fixed (placed or unplaced)
+30: Fail: phy_pad_fdbk_drive2[18] (Pstatus: placed). In line 5463, C:\Users\chyao\Desktop\checklist_dev\CHECKLIST\CHECKLIST\IP_project_folder\reports\8.0\IMP-8-0-0-02\IMP-8-0-0-02_case3.rpt: Port placement status is not fixed (placed or unplaced)
+31: Fail: phy_pad_fdbk_drive2[19] (Pstatus: placed). In line 5462, C:\Users\chyao\Desktop\checklist_dev\CHECKLIST\CHECKLIST\IP_project_folder\reports\8.0\IMP-8-0-0-02\IMP-8-0-0-02_case3.rpt: Port placement status is not fixed (placed or unplaced)
+32: Fail: phy_pad_fdbk_drive2[20] (Pstatus: placed). In line 5461, C:\Users\chyao\Desktop\checklist_dev\CHECKLIST\CHECKLIST\IP_project_folder\reports\8.0\IMP-8-0-0-02\IMP-8-0-0-02_case3.rpt: Port placement status is not fixed (placed or unplaced)
+33: Fail: phy_pad_fdbk_drive2[21] (Pstatus: placed). In line 5460, C:\Users\chyao\Desktop\checklist_dev\CHECKLIST\CHECKLIST\IP_project_folder\reports\8.0\IMP-8-0-0-02\IMP-8-0-0-02_case3.rpt: Port placement status is not fixed (placed or unplaced)
+34: Fail: phy_pad_fdbk_drive2[22] (Pstatus: placed). In line 5459, C:\Users\chyao\Desktop\checklist_dev\CHECKLIST\CHECKLIST\IP_project_folder\reports\8.0\IMP-8-0-0-02\IMP-8-0-0-02_case3.rpt: Port placement status is not fixed (placed or unplaced)
+35: Fail: phy_pad_fdbk_drive2[23] (Pstatus: placed). In line 5458, C:\Users\chyao\Desktop\checklist_dev\CHECKLIST\CHECKLIST\IP_project_folder\reports\8.0\IMP-8-0-0-02\IMP-8-0-0-02_case3.rpt: Port placement status is not fixed (placed or unplaced)
+36: Fail: phy_pad_fdbk_drive2[24] (Pstatus: placed). In line 5457, C:\Users\chyao\Desktop\checklist_dev\CHECKLIST\CHECKLIST\IP_project_folder\reports\8.0\IMP-8-0-0-02\IMP-8-0-0-02_case3.rpt: Port placement status is not fixed (placed or unplaced)
+37: Fail: phy_pad_fdbk_drive2[25] (Pstatus: placed). In line 5456, C:\Users\chyao\Desktop\checklist_dev\CHECKLIST\CHECKLIST\IP_project_folder\reports\8.0\IMP-8-0-0-02\IMP-8-0-0-02_case3.rpt: Port placement status is not fixed (placed or unplaced)
+38: Fail: phy_pad_fdbk_drive2[26] (Pstatus: placed). In line 5455, C:\Users\chyao\Desktop\checklist_dev\CHECKLIST\CHECKLIST\IP_project_folder\reports\8.0\IMP-8-0-0-02\IMP-8-0-0-02_case3.rpt: Port placement status is not fixed (placed or unplaced)
+39: Fail: phy_pad_fdbk_drive2[27] (Pstatus: placed). In line 5454, C:\Users\chyao\Desktop\checklist_dev\CHECKLIST\CHECKLIST\IP_project_folder\reports\8.0\IMP-8-0-0-02\IMP-8-0-0-02_case3.rpt: Port placement status is not fixed (placed or unplaced)
+40: Fail: phy_pad_fdbk_drive2[28] (Pstatus: placed). In line 5453, C:\Users\chyao\Desktop\checklist_dev\CHECKLIST\CHECKLIST\IP_project_folder\reports\8.0\IMP-8-0-0-02\IMP-8-0-0-02_case3.rpt: Port placement status is not fixed (placed or unplaced)
+41: Fail: phy_pad_fdbk_drive2[29] (Pstatus: placed). In line 5452, C:\Users\chyao\Desktop\checklist_dev\CHECKLIST\CHECKLIST\IP_project_folder\reports\8.0\IMP-8-0-0-02\IMP-8-0-0-02_case3.rpt: Port placement status is not fixed (placed or unplaced)
+42: Fail: scan_ddl_test (Pstatus: unplaced). In line 4539, C:\Users\chyao\Desktop\checklist_dev\CHECKLIST\CHECKLIST\IP_project_folder\reports\8.0\IMP-8-0-0-02\IMP-8-0-0-02_case3.rpt: Port placement status is not fixed (placed or unplaced)
+43: Fail: scan_en (Pstatus: unplaced). In line 4537, C:\Users\chyao\Desktop\checklist_dev\CHECKLIST\CHECKLIST\IP_project_folder\reports\8.0\IMP-8-0-0-02\IMP-8-0-0-02_case3.rpt: Port placement status is not fixed (placed or unplaced)
+44: Fail: scan_in[0] (Pstatus: unplaced). In line 4744, C:\Users\chyao\Desktop\checklist_dev\CHECKLIST\CHECKLIST\IP_project_folder\reports\8.0\IMP-8-0-0-02\IMP-8-0-0-02_case3.rpt: Port placement status is not fixed (placed or unplaced)
+45: Fail: scan_in[10] (Pstatus: unplaced). In line 4734, C:\Users\chyao\Desktop\checklist_dev\CHECKLIST\CHECKLIST\IP_project_folder\reports\8.0\IMP-8-0-0-02\IMP-8-0-0-02_case3.rpt: Port placement status is not fixed (placed or unplaced)
+46: Fail: scan_in[1] (Pstatus: unplaced). In line 4743, C:\Users\chyao\Desktop\checklist_dev\CHECKLIST\CHECKLIST\IP_project_folder\reports\8.0\IMP-8-0-0-02\IMP-8-0-0-02_case3.rpt: Port placement status is not fixed (placed or unplaced)
+47: Fail: scan_in[2] (Pstatus: unplaced). In line 4742, C:\Users\chyao\Desktop\checklist_dev\CHECKLIST\CHECKLIST\IP_project_folder\reports\8.0\IMP-8-0-0-02\IMP-8-0-0-02_case3.rpt: Port placement status is not fixed (placed or unplaced)
+48: Fail: scan_in[3] (Pstatus: unplaced). In line 4741, C:\Users\chyao\Desktop\checklist_dev\CHECKLIST\CHECKLIST\IP_project_folder\reports\8.0\IMP-8-0-0-02\IMP-8-0-0-02_case3.rpt: Port placement status is not fixed (placed or unplaced)
+49: Fail: scan_in[4] (Pstatus: unplaced). In line 4740, C:\Users\chyao\Desktop\checklist_dev\CHECKLIST\CHECKLIST\IP_project_folder\reports\8.0\IMP-8-0-0-02\IMP-8-0-0-02_case3.rpt: Port placement status is not fixed (placed or unplaced)
+50: Fail: scan_in[5] (Pstatus: unplaced). In line 4739, C:\Users\chyao\Desktop\checklist_dev\CHECKLIST\CHECKLIST\IP_project_folder\reports\8.0\IMP-8-0-0-02\IMP-8-0-0-02_case3.rpt: Port placement status is not fixed (placed or unplaced)
+51: Fail: scan_in[6] (Pstatus: unplaced). In line 4738, C:\Users\chyao\Desktop\checklist_dev\CHECKLIST\CHECKLIST\IP_project_folder\reports\8.0\IMP-8-0-0-02\IMP-8-0-0-02_case3.rpt: Port placement status is not fixed (placed or unplaced)
+52: Fail: scan_in[7] (Pstatus: unplaced). In line 4737, C:\Users\chyao\Desktop\checklist_dev\CHECKLIST\CHECKLIST\IP_project_folder\reports\8.0\IMP-8-0-0-02\IMP-8-0-0-02_case3.rpt: Port placement status is not fixed (placed or unplaced)
+53: Fail: scan_in[8] (Pstatus: unplaced). In line 4736, C:\Users\chyao\Desktop\checklist_dev\CHECKLIST\CHECKLIST\IP_project_folder\reports\8.0\IMP-8-0-0-02\IMP-8-0-0-02_case3.rpt: Port placement status is not fixed (placed or unplaced)
+54: Fail: scan_in[9] (Pstatus: unplaced). In line 4735, C:\Users\chyao\Desktop\checklist_dev\CHECKLIST\CHECKLIST\IP_project_folder\reports\8.0\IMP-8-0-0-02\IMP-8-0-0-02_case3.rpt: Port placement status is not fixed (placed or unplaced)
+55: Fail: scan_lckup_byp (Pstatus: unplaced). In line 4540, C:\Users\chyao\Desktop\checklist_dev\CHECKLIST\CHECKLIST\IP_project_folder\reports\8.0\IMP-8-0-0-02\IMP-8-0-0-02_case3.rpt: Port placement status is not fixed (placed or unplaced)
+56: Fail: scan_mode (Pstatus: unplaced). In line 4538, C:\Users\chyao\Desktop\checklist_dev\CHECKLIST\CHECKLIST\IP_project_folder\reports\8.0\IMP-8-0-0-02\IMP-8-0-0-02_case3.rpt: Port placement status is not fixed (placed or unplaced)
+57: Fail: scan_out[0] (Pstatus: unplaced). In line 4947, C:\Users\chyao\Desktop\checklist_dev\CHECKLIST\CHECKLIST\IP_project_folder\reports\8.0\IMP-8-0-0-02\IMP-8-0-0-02_case3.rpt: Port placement status is not fixed (placed or unplaced)
+58: Fail: scan_out[1] (Pstatus: unplaced). In line 4946, C:\Users\chyao\Desktop\checklist_dev\CHECKLIST\CHECKLIST\IP_project_folder\reports\8.0\IMP-8-0-0-02\IMP-8-0-0-02_case3.rpt: Port placement status is not fixed (placed or unplaced)
+59: Fail: scan_out[2] (Pstatus: unplaced). In line 4945, C:\Users\chyao\Desktop\checklist_dev\CHECKLIST\CHECKLIST\IP_project_folder\reports\8.0\IMP-8-0-0-02\IMP-8-0-0-02_case3.rpt: Port placement status is not fixed (placed or unplaced)
+60: Fail: scan_out[3] (Pstatus: unplaced). In line 4944, C:\Users\chyao\Desktop\checklist_dev\CHECKLIST\CHECKLIST\IP_project_folder\reports\8.0\IMP-8-0-0-02\IMP-8-0-0-02_case3.rpt: Port placement status is not fixed (placed or unplaced)
+61: Fail: scan_out[4] (Pstatus: unplaced). In line 4943, C:\Users\chyao\Desktop\checklist_dev\CHECKLIST\CHECKLIST\IP_project_folder\reports\8.0\IMP-8-0-0-02\IMP-8-0-0-02_case3.rpt: Port placement status is not fixed (placed or unplaced)
+62: Fail: scan_out[5] (Pstatus: unplaced). In line 4942, C:\Users\chyao\Desktop\checklist_dev\CHECKLIST\CHECKLIST\IP_project_folder\reports\8.0\IMP-8-0-0-02\IMP-8-0-0-02_case3.rpt: Port placement status is not fixed (placed or unplaced)
+63: Fail: scan_out[6] (Pstatus: unplaced). In line 4941, C:\Users\chyao\Desktop\checklist_dev\CHECKLIST\CHECKLIST\IP_project_folder\reports\8.0\IMP-8-0-0-02\IMP-8-0-0-02_case3.rpt: Port placement status is not fixed (placed or unplaced)
+64: Fail: scan_out[7] (Pstatus: unplaced). In line 4940, C:\Users\chyao\Desktop\checklist_dev\CHECKLIST\CHECKLIST\IP_project_folder\reports\8.0\IMP-8-0-0-02\IMP-8-0-0-02_case3.rpt: Port placement status is not fixed (placed or unplaced)
+65: Fail: scan_out[8] (Pstatus: unplaced). In line 4939, C:\Users\chyao\Desktop\checklist_dev\CHECKLIST\CHECKLIST\IP_project_folder\reports\8.0\IMP-8-0-0-02\IMP-8-0-0-02_case3.rpt: Port placement status is not fixed (placed or unplaced)
+66: Fail: scan_out[9] (Pstatus: unplaced). In line 4938, C:\Users\chyao\Desktop\checklist_dev\CHECKLIST\CHECKLIST\IP_project_folder\reports\8.0\IMP-8-0-0-02\IMP-8-0-0-02_case3.rpt: Port placement status is not fixed (placed or unplaced)
+
+================================================================================
+
+[Test 2/6] Type 1 (requirements.value=N/A, waivers.value=0)
+--------------------------------------------------------------------------------
+Test ID: type1_0
+Status: PASS
+
+Checker Report Output:
+PASS:IMP-8-0-0-02:Confirm all ports status are Fixed.
+Info Occurrence: 67
+1: Info: Explanation: Port placement violations are informational during early floorplanning stages: Explanation: Port placement violations are informational during early floorplanning stages[WAIVED_INFO]
+2: Info: bist_rddqs_dq_slave_delay[0] (Pstatus: placed). In line 5508, C:\Users\chyao\Desktop\checklist_dev\CHECKLIST\CHECKLIST\IP_project_folder\reports\8.0\IMP-8-0-0-02\IMP-8-0-0-02_case3.rpt: Port placement status is not fixed (placed or unplaced)[WAIVED_AS_INFO]
+3: Info: bist_rddqs_dq_slave_delay[1] (Pstatus: placed). In line 5507, C:\Users\chyao\Desktop\checklist_dev\CHECKLIST\CHECKLIST\IP_project_folder\reports\8.0\IMP-8-0-0-02\IMP-8-0-0-02_case3.rpt: Port placement status is not fixed (placed or unplaced)[WAIVED_AS_INFO]
+4: Info: bist_rddqs_dq_slave_delay[2] (Pstatus: placed). In line 5506, C:\Users\chyao\Desktop\checklist_dev\CHECKLIST\CHECKLIST\IP_project_folder\reports\8.0\IMP-8-0-0-02\IMP-8-0-0-02_case3.rpt: Port placement status is not fixed (placed or unplaced)[WAIVED_AS_INFO]
+5: Info: bist_rddqs_dq_slave_delay[3] (Pstatus: placed). In line 5505, C:\Users\chyao\Desktop\checklist_dev\CHECKLIST\CHECKLIST\IP_project_folder\reports\8.0\IMP-8-0-0-02\IMP-8-0-0-02_case3.rpt: Port placement status is not fixed (placed or unplaced)[WAIVED_AS_INFO]
+6: Info: bist_rddqs_dq_slave_delay[4] (Pstatus: placed). In line 5504, C:\Users\chyao\Desktop\checklist_dev\CHECKLIST\CHECKLIST\IP_project_folder\reports\8.0\IMP-8-0-0-02\IMP-8-0-0-02_case3.rpt: Port placement status is not fixed (placed or unplaced)[WAIVED_AS_INFO]
+7: Info: bist_rddqs_dq_slave_delay[5] (Pstatus: placed). In line 5503, C:\Users\chyao\Desktop\checklist_dev\CHECKLIST\CHECKLIST\IP_project_folder\reports\8.0\IMP-8-0-0-02\IMP-8-0-0-02_case3.rpt: Port placement status is not fixed (placed or unplaced)[WAIVED_AS_INFO]
+8: Info: bist_rddqs_dq_slave_delay[6] (Pstatus: placed). In line 5502, C:\Users\chyao\Desktop\checklist_dev\CHECKLIST\CHECKLIST\IP_project_folder\reports\8.0\IMP-8-0-0-02\IMP-8-0-0-02_case3.rpt: Port placement status is not fixed (placed or unplaced)[WAIVED_AS_INFO]
+9: Info: bist_rddqs_dq_slave_delay[7] (Pstatus: placed). In line 5501, C:\Users\chyao\Desktop\checklist_dev\CHECKLIST\CHECKLIST\IP_project_folder\reports\8.0\IMP-8-0-0-02\IMP-8-0-0-02_case3.rpt: Port placement status is not fixed (placed or unplaced)[WAIVED_AS_INFO]
+10: Info: bist_rddqs_dq_slave_delay[8] (Pstatus: placed). In line 5500, C:\Users\chyao\Desktop\checklist_dev\CHECKLIST\CHECKLIST\IP_project_folder\reports\8.0\IMP-8-0-0-02\IMP-8-0-0-02_case3.rpt: Port placement status is not fixed (placed or unplaced)[WAIVED_AS_INFO]
+11: Info: deep_sleep (Pstatus: placed). In line 4527, C:\Users\chyao\Desktop\checklist_dev\CHECKLIST\CHECKLIST\IP_project_folder\reports\8.0\IMP-8-0-0-02\IMP-8-0-0-02_case3.rpt: Port placement status is not fixed (placed or unplaced)[WAIVED_AS_INFO]
+12: Info: dfi_wdqlvl_dfe_result[0] (Pstatus: placed). In line 5209, C:\Users\chyao\Desktop\checklist_dev\CHECKLIST\CHECKLIST\IP_project_folder\reports\8.0\IMP-8-0-0-02\IMP-8-0-0-02_case3.rpt: Port placement status is not fixed (placed or unplaced)[WAIVED_AS_INFO]
+13: Info: dfi_wdqlvl_dfe_result[10] (Pstatus: placed). In line 5199, C:\Users\chyao\Desktop\checklist_dev\CHECKLIST\CHECKLIST\IP_project_folder\reports\8.0\IMP-8-0-0-02\IMP-8-0-0-02_case3.rpt: Port placement status is not fixed (placed or unplaced)[WAIVED_AS_INFO]
+14: Info: dfi_wdqlvl_dfe_result[11] (Pstatus: placed). In line 5198, C:\Users\chyao\Desktop\checklist_dev\CHECKLIST\CHECKLIST\IP_project_folder\reports\8.0\IMP-8-0-0-02\IMP-8-0-0-02_case3.rpt: Port placement status is not fixed (placed or unplaced)[WAIVED_AS_INFO]
+15: Info: dfi_wdqlvl_dfe_result[12] (Pstatus: placed). In line 5197, C:\Users\chyao\Desktop\checklist_dev\CHECKLIST\CHECKLIST\IP_project_folder\reports\8.0\IMP-8-0-0-02\IMP-8-0-0-02_case3.rpt: Port placement status is not fixed (placed or unplaced)[WAIVED_AS_INFO]
+16: Info: dfi_wdqlvl_dfe_result[13] (Pstatus: placed). In line 5196, C:\Users\chyao\Desktop\checklist_dev\CHECKLIST\CHECKLIST\IP_project_folder\reports\8.0\IMP-8-0-0-02\IMP-8-0-0-02_case3.rpt: Port placement status is not fixed (placed or unplaced)[WAIVED_AS_INFO]
+17: Info: dfi_wdqlvl_dfe_result[14] (Pstatus: placed). In line 5195, C:\Users\chyao\Desktop\checklist_dev\CHECKLIST\CHECKLIST\IP_project_folder\reports\8.0\IMP-8-0-0-02\IMP-8-0-0-02_case3.rpt: Port placement status is not fixed (placed or unplaced)[WAIVED_AS_INFO]
+18: Info: dfi_wdqlvl_dfe_result[15] (Pstatus: placed). In line 5194, C:\Users\chyao\Desktop\checklist_dev\CHECKLIST\CHECKLIST\IP_project_folder\reports\8.0\IMP-8-0-0-02\IMP-8-0-0-02_case3.rpt: Port placement status is not fixed (placed or unplaced)[WAIVED_AS_INFO]
+19: Info: dfi_wdqlvl_dfe_result[16] (Pstatus: placed). In line 5193, C:\Users\chyao\Desktop\checklist_dev\CHECKLIST\CHECKLIST\IP_project_folder\reports\8.0\IMP-8-0-0-02\IMP-8-0-0-02_case3.rpt: Port placement status is not fixed (placed or unplaced)[WAIVED_AS_INFO]
+20: Info: dfi_wdqlvl_dfe_result[17] (Pstatus: placed). In line 5192, C:\Users\chyao\Desktop\checklist_dev\CHECKLIST\CHECKLIST\IP_project_folder\reports\8.0\IMP-8-0-0-02\IMP-8-0-0-02_case3.rpt: Port placement status is not fixed (placed or unplaced)[WAIVED_AS_INFO]
+21: Info: dfi_wdqlvl_dfe_result[1] (Pstatus: placed). In line 5208, C:\Users\chyao\Desktop\checklist_dev\CHECKLIST\CHECKLIST\IP_project_folder\reports\8.0\IMP-8-0-0-02\IMP-8-0-0-02_case3.rpt: Port placement status is not fixed (placed or unplaced)[WAIVED_AS_INFO]
+22: Info: dfi_wdqlvl_dfe_result[2] (Pstatus: placed). In line 5207, C:\Users\chyao\Desktop\checklist_dev\CHECKLIST\CHECKLIST\IP_project_folder\reports\8.0\IMP-8-0-0-02\IMP-8-0-0-02_case3.rpt: Port placement status is not fixed (placed or unplaced)[WAIVED_AS_INFO]
+23: Info: dfi_wdqlvl_dfe_result[3] (Pstatus: placed). In line 5206, C:\Users\chyao\Desktop\checklist_dev\CHECKLIST\CHECKLIST\IP_project_folder\reports\8.0\IMP-8-0-0-02\IMP-8-0-0-02_case3.rpt: Port placement status is not fixed (placed or unplaced)[WAIVED_AS_INFO]
+24: Info: dfi_wdqlvl_dfe_result[4] (Pstatus: placed). In line 5205, C:\Users\chyao\Desktop\checklist_dev\CHECKLIST\CHECKLIST\IP_project_folder\reports\8.0\IMP-8-0-0-02\IMP-8-0-0-02_case3.rpt: Port placement status is not fixed (placed or unplaced)[WAIVED_AS_INFO]
+25: Info: dfi_wdqlvl_dfe_result[5] (Pstatus: placed). In line 5204, C:\Users\chyao\Desktop\checklist_dev\CHECKLIST\CHECKLIST\IP_project_folder\reports\8.0\IMP-8-0-0-02\IMP-8-0-0-02_case3.rpt: Port placement status is not fixed (placed or unplaced)[WAIVED_AS_INFO]
+26: Info: dfi_wdqlvl_dfe_result[6] (Pstatus: placed). In line 5203, C:\Users\chyao\Desktop\checklist_dev\CHECKLIST\CHECKLIST\IP_project_folder\reports\8.0\IMP-8-0-0-02\IMP-8-0-0-02_case3.rpt: Port placement status is not fixed (placed or unplaced)[WAIVED_AS_INFO]
+27: Info: dfi_wdqlvl_dfe_result[7] (Pstatus: placed). In line 5202, C:\Users\chyao\Desktop\checklist_dev\CHECKLIST\CHECKLIST\IP_project_folder\reports\8.0\IMP-8-0-0-02\IMP-8-0-0-02_case3.rpt: Port placement status is not fixed (placed or unplaced)[WAIVED_AS_INFO]
+28: Info: dfi_wdqlvl_dfe_result[8] (Pstatus: placed). In line 5201, C:\Users\chyao\Desktop\checklist_dev\CHECKLIST\CHECKLIST\IP_project_folder\reports\8.0\IMP-8-0-0-02\IMP-8-0-0-02_case3.rpt: Port placement status is not fixed (placed or unplaced)[WAIVED_AS_INFO]
+29: Info: dfi_wdqlvl_dfe_result[9] (Pstatus: placed). In line 5200, C:\Users\chyao\Desktop\checklist_dev\CHECKLIST\CHECKLIST\IP_project_folder\reports\8.0\IMP-8-0-0-02\IMP-8-0-0-02_case3.rpt: Port placement status is not fixed (placed or unplaced)[WAIVED_AS_INFO]
+30: Info: lpbk_en (Pstatus: placed). In line 5499, C:\Users\chyao\Desktop\checklist_dev\CHECKLIST\CHECKLIST\IP_project_folder\reports\8.0\IMP-8-0-0-02\IMP-8-0-0-02_case3.rpt: Port placement status is not fixed (placed or unplaced)[WAIVED_AS_INFO]
+31: Info: phy_pad_fdbk_drive2[18] (Pstatus: placed). In line 5463, C:\Users\chyao\Desktop\checklist_dev\CHECKLIST\CHECKLIST\IP_project_folder\reports\8.0\IMP-8-0-0-02\IMP-8-0-0-02_case3.rpt: Port placement status is not fixed (placed or unplaced)[WAIVED_AS_INFO]
+32: Info: phy_pad_fdbk_drive2[19] (Pstatus: placed). In line 5462, C:\Users\chyao\Desktop\checklist_dev\CHECKLIST\CHECKLIST\IP_project_folder\reports\8.0\IMP-8-0-0-02\IMP-8-0-0-02_case3.rpt: Port placement status is not fixed (placed or unplaced)[WAIVED_AS_INFO]
+33: Info: phy_pad_fdbk_drive2[20] (Pstatus: placed). In line 5461, C:\Users\chyao\Desktop\checklist_dev\CHECKLIST\CHECKLIST\IP_project_folder\reports\8.0\IMP-8-0-0-02\IMP-8-0-0-02_case3.rpt: Port placement status is not fixed (placed or unplaced)[WAIVED_AS_INFO]
+34: Info: phy_pad_fdbk_drive2[21] (Pstatus: placed). In line 5460, C:\Users\chyao\Desktop\checklist_dev\CHECKLIST\CHECKLIST\IP_project_folder\reports\8.0\IMP-8-0-0-02\IMP-8-0-0-02_case3.rpt: Port placement status is not fixed (placed or unplaced)[WAIVED_AS_INFO]
+35: Info: phy_pad_fdbk_drive2[22] (Pstatus: placed). In line 5459, C:\Users\chyao\Desktop\checklist_dev\CHECKLIST\CHECKLIST\IP_project_folder\reports\8.0\IMP-8-0-0-02\IMP-8-0-0-02_case3.rpt: Port placement status is not fixed (placed or unplaced)[WAIVED_AS_INFO]
+36: Info: phy_pad_fdbk_drive2[23] (Pstatus: placed). In line 5458, C:\Users\chyao\Desktop\checklist_dev\CHECKLIST\CHECKLIST\IP_project_folder\reports\8.0\IMP-8-0-0-02\IMP-8-0-0-02_case3.rpt: Port placement status is not fixed (placed or unplaced)[WAIVED_AS_INFO]
+37: Info: phy_pad_fdbk_drive2[24] (Pstatus: placed). In line 5457, C:\Users\chyao\Desktop\checklist_dev\CHECKLIST\CHECKLIST\IP_project_folder\reports\8.0\IMP-8-0-0-02\IMP-8-0-0-02_case3.rpt: Port placement status is not fixed (placed or unplaced)[WAIVED_AS_INFO]
+38: Info: phy_pad_fdbk_drive2[25] (Pstatus: placed). In line 5456, C:\Users\chyao\Desktop\checklist_dev\CHECKLIST\CHECKLIST\IP_project_folder\reports\8.0\IMP-8-0-0-02\IMP-8-0-0-02_case3.rpt: Port placement status is not fixed (placed or unplaced)[WAIVED_AS_INFO]
+39: Info: phy_pad_fdbk_drive2[26] (Pstatus: placed). In line 5455, C:\Users\chyao\Desktop\checklist_dev\CHECKLIST\CHECKLIST\IP_project_folder\reports\8.0\IMP-8-0-0-02\IMP-8-0-0-02_case3.rpt: Port placement status is not fixed (placed or unplaced)[WAIVED_AS_INFO]
+40: Info: phy_pad_fdbk_drive2[27] (Pstatus: placed). In line 5454, C:\Users\chyao\Desktop\checklist_dev\CHECKLIST\CHECKLIST\IP_project_folder\reports\8.0\IMP-8-0-0-02\IMP-8-0-0-02_case3.rpt: Port placement status is not fixed (placed or unplaced)[WAIVED_AS_INFO]
+41: Info: phy_pad_fdbk_drive2[28] (Pstatus: placed). In line 5453, C:\Users\chyao\Desktop\checklist_dev\CHECKLIST\CHECKLIST\IP_project_folder\reports\8.0\IMP-8-0-0-02\IMP-8-0-0-02_case3.rpt: Port placement status is not fixed (placed or unplaced)[WAIVED_AS_INFO]
+42: Info: phy_pad_fdbk_drive2[29] (Pstatus: placed). In line 5452, C:\Users\chyao\Desktop\checklist_dev\CHECKLIST\CHECKLIST\IP_project_folder\reports\8.0\IMP-8-0-0-02\IMP-8-0-0-02_case3.rpt: Port placement status is not fixed (placed or unplaced)[WAIVED_AS_INFO]
+43: Info: scan_ddl_test (Pstatus: unplaced). In line 4539, C:\Users\chyao\Desktop\checklist_dev\CHECKLIST\CHECKLIST\IP_project_folder\reports\8.0\IMP-8-0-0-02\IMP-8-0-0-02_case3.rpt: Port placement status is not fixed (placed or unplaced)[WAIVED_AS_INFO]
+44: Info: scan_en (Pstatus: unplaced). In line 4537, C:\Users\chyao\Desktop\checklist_dev\CHECKLIST\CHECKLIST\IP_project_folder\reports\8.0\IMP-8-0-0-02\IMP-8-0-0-02_case3.rpt: Port placement status is not fixed (placed or unplaced)[WAIVED_AS_INFO]
+45: Info: scan_in[0] (Pstatus: unplaced). In line 4744, C:\Users\chyao\Desktop\checklist_dev\CHECKLIST\CHECKLIST\IP_project_folder\reports\8.0\IMP-8-0-0-02\IMP-8-0-0-02_case3.rpt: Port placement status is not fixed (placed or unplaced)[WAIVED_AS_INFO]
+46: Info: scan_in[10] (Pstatus: unplaced). In line 4734, C:\Users\chyao\Desktop\checklist_dev\CHECKLIST\CHECKLIST\IP_project_folder\reports\8.0\IMP-8-0-0-02\IMP-8-0-0-02_case3.rpt: Port placement status is not fixed (placed or unplaced)[WAIVED_AS_INFO]
+47: Info: scan_in[1] (Pstatus: unplaced). In line 4743, C:\Users\chyao\Desktop\checklist_dev\CHECKLIST\CHECKLIST\IP_project_folder\reports\8.0\IMP-8-0-0-02\IMP-8-0-0-02_case3.rpt: Port placement status is not fixed (placed or unplaced)[WAIVED_AS_INFO]
+48: Info: scan_in[2] (Pstatus: unplaced). In line 4742, C:\Users\chyao\Desktop\checklist_dev\CHECKLIST\CHECKLIST\IP_project_folder\reports\8.0\IMP-8-0-0-02\IMP-8-0-0-02_case3.rpt: Port placement status is not fixed (placed or unplaced)[WAIVED_AS_INFO]
+49: Info: scan_in[3] (Pstatus: unplaced). In line 4741, C:\Users\chyao\Desktop\checklist_dev\CHECKLIST\CHECKLIST\IP_project_folder\reports\8.0\IMP-8-0-0-02\IMP-8-0-0-02_case3.rpt: Port placement status is not fixed (placed or unplaced)[WAIVED_AS_INFO]
+50: Info: scan_in[4] (Pstatus: unplaced). In line 4740, C:\Users\chyao\Desktop\checklist_dev\CHECKLIST\CHECKLIST\IP_project_folder\reports\8.0\IMP-8-0-0-02\IMP-8-0-0-02_case3.rpt: Port placement status is not fixed (placed or unplaced)[WAIVED_AS_INFO]
+51: Info: scan_in[5] (Pstatus: unplaced). In line 4739, C:\Users\chyao\Desktop\checklist_dev\CHECKLIST\CHECKLIST\IP_project_folder\reports\8.0\IMP-8-0-0-02\IMP-8-0-0-02_case3.rpt: Port placement status is not fixed (placed or unplaced)[WAIVED_AS_INFO]
+52: Info: scan_in[6] (Pstatus: unplaced). In line 4738, C:\Users\chyao\Desktop\checklist_dev\CHECKLIST\CHECKLIST\IP_project_folder\reports\8.0\IMP-8-0-0-02\IMP-8-0-0-02_case3.rpt: Port placement status is not fixed (placed or unplaced)[WAIVED_AS_INFO]
+53: Info: scan_in[7] (Pstatus: unplaced). In line 4737, C:\Users\chyao\Desktop\checklist_dev\CHECKLIST\CHECKLIST\IP_project_folder\reports\8.0\IMP-8-0-0-02\IMP-8-0-0-02_case3.rpt: Port placement status is not fixed (placed or unplaced)[WAIVED_AS_INFO]
+54: Info: scan_in[8] (Pstatus: unplaced). In line 4736, C:\Users\chyao\Desktop\checklist_dev\CHECKLIST\CHECKLIST\IP_project_folder\reports\8.0\IMP-8-0-0-02\IMP-8-0-0-02_case3.rpt: Port placement status is not fixed (placed or unplaced)[WAIVED_AS_INFO]
+55: Info: scan_in[9] (Pstatus: unplaced). In line 4735, C:\Users\chyao\Desktop\checklist_dev\CHECKLIST\CHECKLIST\IP_project_folder\reports\8.0\IMP-8-0-0-02\IMP-8-0-0-02_case3.rpt: Port placement status is not fixed (placed or unplaced)[WAIVED_AS_INFO]
+56: Info: scan_lckup_byp (Pstatus: unplaced). In line 4540, C:\Users\chyao\Desktop\checklist_dev\CHECKLIST\CHECKLIST\IP_project_folder\reports\8.0\IMP-8-0-0-02\IMP-8-0-0-02_case3.rpt: Port placement status is not fixed (placed or unplaced)[WAIVED_AS_INFO]
+57: Info: scan_mode (Pstatus: unplaced). In line 4538, C:\Users\chyao\Desktop\checklist_dev\CHECKLIST\CHECKLIST\IP_project_folder\reports\8.0\IMP-8-0-0-02\IMP-8-0-0-02_case3.rpt: Port placement status is not fixed (placed or unplaced)[WAIVED_AS_INFO]
+58: Info: scan_out[0] (Pstatus: unplaced). In line 4947, C:\Users\chyao\Desktop\checklist_dev\CHECKLIST\CHECKLIST\IP_project_folder\reports\8.0\IMP-8-0-0-02\IMP-8-0-0-02_case3.rpt: Port placement status is not fixed (placed or unplaced)[WAIVED_AS_INFO]
+59: Info: scan_out[1] (Pstatus: unplaced). In line 4946, C:\Users\chyao\Desktop\checklist_dev\CHECKLIST\CHECKLIST\IP_project_folder\reports\8.0\IMP-8-0-0-02\IMP-8-0-0-02_case3.rpt: Port placement status is not fixed (placed or unplaced)[WAIVED_AS_INFO]
+60: Info: scan_out[2] (Pstatus: unplaced). In line 4945, C:\Users\chyao\Desktop\checklist_dev\CHECKLIST\CHECKLIST\IP_project_folder\reports\8.0\IMP-8-0-0-02\IMP-8-0-0-02_case3.rpt: Port placement status is not fixed (placed or unplaced)[WAIVED_AS_INFO]
+61: Info: scan_out[3] (Pstatus: unplaced). In line 4944, C:\Users\chyao\Desktop\checklist_dev\CHECKLIST\CHECKLIST\IP_project_folder\reports\8.0\IMP-8-0-0-02\IMP-8-0-0-02_case3.rpt: Port placement status is not fixed (placed or unplaced)[WAIVED_AS_INFO]
+62: Info: scan_out[4] (Pstatus: unplaced). In line 4943, C:\Users\chyao\Desktop\checklist_dev\CHECKLIST\CHECKLIST\IP_project_folder\reports\8.0\IMP-8-0-0-02\IMP-8-0-0-02_case3.rpt: Port placement status is not fixed (placed or unplaced)[WAIVED_AS_INFO]
+63: Info: scan_out[5] (Pstatus: unplaced). In line 4942, C:\Users\chyao\Desktop\checklist_dev\CHECKLIST\CHECKLIST\IP_project_folder\reports\8.0\IMP-8-0-0-02\IMP-8-0-0-02_case3.rpt: Port placement status is not fixed (placed or unplaced)[WAIVED_AS_INFO]
+64: Info: scan_out[6] (Pstatus: unplaced). In line 4941, C:\Users\chyao\Desktop\checklist_dev\CHECKLIST\CHECKLIST\IP_project_folder\reports\8.0\IMP-8-0-0-02\IMP-8-0-0-02_case3.rpt: Port placement status is not fixed (placed or unplaced)[WAIVED_AS_INFO]
+65: Info: scan_out[7] (Pstatus: unplaced). In line 4940, C:\Users\chyao\Desktop\checklist_dev\CHECKLIST\CHECKLIST\IP_project_folder\reports\8.0\IMP-8-0-0-02\IMP-8-0-0-02_case3.rpt: Port placement status is not fixed (placed or unplaced)[WAIVED_AS_INFO]
+66: Info: scan_out[8] (Pstatus: unplaced). In line 4939, C:\Users\chyao\Desktop\checklist_dev\CHECKLIST\CHECKLIST\IP_project_folder\reports\8.0\IMP-8-0-0-02\IMP-8-0-0-02_case3.rpt: Port placement status is not fixed (placed or unplaced)[WAIVED_AS_INFO]
+67: Info: scan_out[9] (Pstatus: unplaced). In line 4938, C:\Users\chyao\Desktop\checklist_dev\CHECKLIST\CHECKLIST\IP_project_folder\reports\8.0\IMP-8-0-0-02\IMP-8-0-0-02_case3.rpt: Port placement status is not fixed (placed or unplaced)[WAIVED_AS_INFO]
+
+================================================================================
+
+[Test 3/6] Type 2 (requirements.value>0, waivers.value=N/A)
+--------------------------------------------------------------------------------
+Test ID: type2_na
+Status: PASS
+
+Checker Report Output:
+PASS:IMP-8-0-0-02:Confirm all ports status are Fixed.
+
+================================================================================
+
+[Test 4/6] Type 2 (requirements.value>0, waivers.value=0)
+--------------------------------------------------------------------------------
+Test ID: type2_0
+Status: PASS
+
+Checker Report Output:
+PASS:IMP-8-0-0-02:Confirm all ports status are Fixed.
+Info Occurrence: 1
+1: Info: Explanation: Monitoring specific critical ports for placement status tracking: Explanation: Monitoring specific critical ports for placement status tracking[WAIVED_INFO]
+
+================================================================================
+
+[Test 5/6] Type 3 (requirements.value>0, waivers.value>0)
+--------------------------------------------------------------------------------
+Test ID: type3
+Status: PASS
+
+Checker Report Output:
+PASS:IMP-8-0-0-02:Confirm all ports status are Fixed.
+Warn Occurrence: 2
+1: Warn: debug_scan_chain[0]: Waiver entry not matched - no corresponding port violation found: Debug port - non-critical path, placement flexibility allowed[WAIVER]
+2: Warn: test_mode_port: Waiver entry not matched - no corresponding port violation found: Test mode port - placement deferred to post-layout optimization[WAIVER]
+
+================================================================================
+
+[Test 6/6] Type 4 (requirements.value=N/A, waivers.value>0)
+--------------------------------------------------------------------------------
+Test ID: type4
+Status: ERROR
+
+Checker Report Output:
+FAIL:IMP-8-0-0-02:Confirm all ports status are Fixed.
+Fail Occurrence: 66
+1: Fail: bist_rddqs_dq_slave_delay[0] (Pstatus: placed). In line 5508, C:\Users\chyao\Desktop\checklist_dev\CHECKLIST\CHECKLIST\IP_project_folder\reports\8.0\IMP-8-0-0-02\IMP-8-0-0-02_case3.rpt: Port placement status is not fixed (placed or unplaced)
+2: Fail: bist_rddqs_dq_slave_delay[1] (Pstatus: placed). In line 5507, C:\Users\chyao\Desktop\checklist_dev\CHECKLIST\CHECKLIST\IP_project_folder\reports\8.0\IMP-8-0-0-02\IMP-8-0-0-02_case3.rpt: Port placement status is not fixed (placed or unplaced)
+3: Fail: bist_rddqs_dq_slave_delay[2] (Pstatus: placed). In line 5506, C:\Users\chyao\Desktop\checklist_dev\CHECKLIST\CHECKLIST\IP_project_folder\reports\8.0\IMP-8-0-0-02\IMP-8-0-0-02_case3.rpt: Port placement status is not fixed (placed or unplaced)
+4: Fail: bist_rddqs_dq_slave_delay[3] (Pstatus: placed). In line 5505, C:\Users\chyao\Desktop\checklist_dev\CHECKLIST\CHECKLIST\IP_project_folder\reports\8.0\IMP-8-0-0-02\IMP-8-0-0-02_case3.rpt: Port placement status is not fixed (placed or unplaced)
+5: Fail: bist_rddqs_dq_slave_delay[4] (Pstatus: placed). In line 5504, C:\Users\chyao\Desktop\checklist_dev\CHECKLIST\CHECKLIST\IP_project_folder\reports\8.0\IMP-8-0-0-02\IMP-8-0-0-02_case3.rpt: Port placement status is not fixed (placed or unplaced)
+6: Fail: bist_rddqs_dq_slave_delay[5] (Pstatus: placed). In line 5503, C:\Users\chyao\Desktop\checklist_dev\CHECKLIST\CHECKLIST\IP_project_folder\reports\8.0\IMP-8-0-0-02\IMP-8-0-0-02_case3.rpt: Port placement status is not fixed (placed or unplaced)
+7: Fail: bist_rddqs_dq_slave_delay[6] (Pstatus: placed). In line 5502, C:\Users\chyao\Desktop\checklist_dev\CHECKLIST\CHECKLIST\IP_project_folder\reports\8.0\IMP-8-0-0-02\IMP-8-0-0-02_case3.rpt: Port placement status is not fixed (placed or unplaced)
+8: Fail: bist_rddqs_dq_slave_delay[7] (Pstatus: placed). In line 5501, C:\Users\chyao\Desktop\checklist_dev\CHECKLIST\CHECKLIST\IP_project_folder\reports\8.0\IMP-8-0-0-02\IMP-8-0-0-02_case3.rpt: Port placement status is not fixed (placed or unplaced)
+9: Fail: bist_rddqs_dq_slave_delay[8] (Pstatus: placed). In line 5500, C:\Users\chyao\Desktop\checklist_dev\CHECKLIST\CHECKLIST\IP_project_folder\reports\8.0\IMP-8-0-0-02\IMP-8-0-0-02_case3.rpt: Port placement status is not fixed (placed or unplaced)
+10: Fail: deep_sleep (Pstatus: placed). In line 4527, C:\Users\chyao\Desktop\checklist_dev\CHECKLIST\CHECKLIST\IP_project_folder\reports\8.0\IMP-8-0-0-02\IMP-8-0-0-02_case3.rpt: Port placement status is not fixed (placed or unplaced)
+11: Fail: dfi_wdqlvl_dfe_result[0] (Pstatus: placed). In line 5209, C:\Users\chyao\Desktop\checklist_dev\CHECKLIST\CHECKLIST\IP_project_folder\reports\8.0\IMP-8-0-0-02\IMP-8-0-0-02_case3.rpt: Port placement status is not fixed (placed or unplaced)
+12: Fail: dfi_wdqlvl_dfe_result[10] (Pstatus: placed). In line 5199, C:\Users\chyao\Desktop\checklist_dev\CHECKLIST\CHECKLIST\IP_project_folder\reports\8.0\IMP-8-0-0-02\IMP-8-0-0-02_case3.rpt: Port placement status is not fixed (placed or unplaced)
+13: Fail: dfi_wdqlvl_dfe_result[11] (Pstatus: placed). In line 5198, C:\Users\chyao\Desktop\checklist_dev\CHECKLIST\CHECKLIST\IP_project_folder\reports\8.0\IMP-8-0-0-02\IMP-8-0-0-02_case3.rpt: Port placement status is not fixed (placed or unplaced)
+14: Fail: dfi_wdqlvl_dfe_result[12] (Pstatus: placed). In line 5197, C:\Users\chyao\Desktop\checklist_dev\CHECKLIST\CHECKLIST\IP_project_folder\reports\8.0\IMP-8-0-0-02\IMP-8-0-0-02_case3.rpt: Port placement status is not fixed (placed or unplaced)
+15: Fail: dfi_wdqlvl_dfe_result[13] (Pstatus: placed). In line 5196, C:\Users\chyao\Desktop\checklist_dev\CHECKLIST\CHECKLIST\IP_project_folder\reports\8.0\IMP-8-0-0-02\IMP-8-0-0-02_case3.rpt: Port placement status is not fixed (placed or unplaced)
+16: Fail: dfi_wdqlvl_dfe_result[14] (Pstatus: placed). In line 5195, C:\Users\chyao\Desktop\checklist_dev\CHECKLIST\CHECKLIST\IP_project_folder\reports\8.0\IMP-8-0-0-02\IMP-8-0-0-02_case3.rpt: Port placement status is not fixed (placed or unplaced)
+17: Fail: dfi_wdqlvl_dfe_result[15] (Pstatus: placed). In line 5194, C:\Users\chyao\Desktop\checklist_dev\CHECKLIST\CHECKLIST\IP_project_folder\reports\8.0\IMP-8-0-0-02\IMP-8-0-0-02_case3.rpt: Port placement status is not fixed (placed or unplaced)
+18: Fail: dfi_wdqlvl_dfe_result[16] (Pstatus: placed). In line 5193, C:\Users\chyao\Desktop\checklist_dev\CHECKLIST\CHECKLIST\IP_project_folder\reports\8.0\IMP-8-0-0-02\IMP-8-0-0-02_case3.rpt: Port placement status is not fixed (placed or unplaced)
+19: Fail: dfi_wdqlvl_dfe_result[17] (Pstatus: placed). In line 5192, C:\Users\chyao\Desktop\checklist_dev\CHECKLIST\CHECKLIST\IP_project_folder\reports\8.0\IMP-8-0-0-02\IMP-8-0-0-02_case3.rpt: Port placement status is not fixed (placed or unplaced)
+20: Fail: dfi_wdqlvl_dfe_result[1] (Pstatus: placed). In line 5208, C:\Users\chyao\Desktop\checklist_dev\CHECKLIST\CHECKLIST\IP_project_folder\reports\8.0\IMP-8-0-0-02\IMP-8-0-0-02_case3.rpt: Port placement status is not fixed (placed or unplaced)
+21: Fail: dfi_wdqlvl_dfe_result[2] (Pstatus: placed). In line 5207, C:\Users\chyao\Desktop\checklist_dev\CHECKLIST\CHECKLIST\IP_project_folder\reports\8.0\IMP-8-0-0-02\IMP-8-0-0-02_case3.rpt: Port placement status is not fixed (placed or unplaced)
+22: Fail: dfi_wdqlvl_dfe_result[3] (Pstatus: placed). In line 5206, C:\Users\chyao\Desktop\checklist_dev\CHECKLIST\CHECKLIST\IP_project_folder\reports\8.0\IMP-8-0-0-02\IMP-8-0-0-02_case3.rpt: Port placement status is not fixed (placed or unplaced)
+23: Fail: dfi_wdqlvl_dfe_result[4] (Pstatus: placed). In line 5205, C:\Users\chyao\Desktop\checklist_dev\CHECKLIST\CHECKLIST\IP_project_folder\reports\8.0\IMP-8-0-0-02\IMP-8-0-0-02_case3.rpt: Port placement status is not fixed (placed or unplaced)
+24: Fail: dfi_wdqlvl_dfe_result[5] (Pstatus: placed). In line 5204, C:\Users\chyao\Desktop\checklist_dev\CHECKLIST\CHECKLIST\IP_project_folder\reports\8.0\IMP-8-0-0-02\IMP-8-0-0-02_case3.rpt: Port placement status is not fixed (placed or unplaced)
+25: Fail: dfi_wdqlvl_dfe_result[6] (Pstatus: placed). In line 5203, C:\Users\chyao\Desktop\checklist_dev\CHECKLIST\CHECKLIST\IP_project_folder\reports\8.0\IMP-8-0-0-02\IMP-8-0-0-02_case3.rpt: Port placement status is not fixed (placed or unplaced)
+26: Fail: dfi_wdqlvl_dfe_result[7] (Pstatus: placed). In line 5202, C:\Users\chyao\Desktop\checklist_dev\CHECKLIST\CHECKLIST\IP_project_folder\reports\8.0\IMP-8-0-0-02\IMP-8-0-0-02_case3.rpt: Port placement status is not fixed (placed or unplaced)
+27: Fail: dfi_wdqlvl_dfe_result[8] (Pstatus: placed). In line 5201, C:\Users\chyao\Desktop\checklist_dev\CHECKLIST\CHECKLIST\IP_project_folder\reports\8.0\IMP-8-0-0-02\IMP-8-0-0-02_case3.rpt: Port placement status is not fixed (placed or unplaced)
+28: Fail: dfi_wdqlvl_dfe_result[9] (Pstatus: placed). In line 5200, C:\Users\chyao\Desktop\checklist_dev\CHECKLIST\CHECKLIST\IP_project_folder\reports\8.0\IMP-8-0-0-02\IMP-8-0-0-02_case3.rpt: Port placement status is not fixed (placed or unplaced)
+29: Fail: lpbk_en (Pstatus: placed). In line 5499, C:\Users\chyao\Desktop\checklist_dev\CHECKLIST\CHECKLIST\IP_project_folder\reports\8.0\IMP-8-0-0-02\IMP-8-0-0-02_case3.rpt: Port placement status is not fixed (placed or unplaced)
+30: Fail: phy_pad_fdbk_drive2[18] (Pstatus: placed). In line 5463, C:\Users\chyao\Desktop\checklist_dev\CHECKLIST\CHECKLIST\IP_project_folder\reports\8.0\IMP-8-0-0-02\IMP-8-0-0-02_case3.rpt: Port placement status is not fixed (placed or unplaced)
+31: Fail: phy_pad_fdbk_drive2[19] (Pstatus: placed). In line 5462, C:\Users\chyao\Desktop\checklist_dev\CHECKLIST\CHECKLIST\IP_project_folder\reports\8.0\IMP-8-0-0-02\IMP-8-0-0-02_case3.rpt: Port placement status is not fixed (placed or unplaced)
+32: Fail: phy_pad_fdbk_drive2[20] (Pstatus: placed). In line 5461, C:\Users\chyao\Desktop\checklist_dev\CHECKLIST\CHECKLIST\IP_project_folder\reports\8.0\IMP-8-0-0-02\IMP-8-0-0-02_case3.rpt: Port placement status is not fixed (placed or unplaced)
+33: Fail: phy_pad_fdbk_drive2[21] (Pstatus: placed). In line 5460, C:\Users\chyao\Desktop\checklist_dev\CHECKLIST\CHECKLIST\IP_project_folder\reports\8.0\IMP-8-0-0-02\IMP-8-0-0-02_case3.rpt: Port placement status is not fixed (placed or unplaced)
+34: Fail: phy_pad_fdbk_drive2[22] (Pstatus: placed). In line 5459, C:\Users\chyao\Desktop\checklist_dev\CHECKLIST\CHECKLIST\IP_project_folder\reports\8.0\IMP-8-0-0-02\IMP-8-0-0-02_case3.rpt: Port placement status is not fixed (placed or unplaced)
+35: Fail: phy_pad_fdbk_drive2[23] (Pstatus: placed). In line 5458, C:\Users\chyao\Desktop\checklist_dev\CHECKLIST\CHECKLIST\IP_project_folder\reports\8.0\IMP-8-0-0-02\IMP-8-0-0-02_case3.rpt: Port placement status is not fixed (placed or unplaced)
+36: Fail: phy_pad_fdbk_drive2[24] (Pstatus: placed). In line 5457, C:\Users\chyao\Desktop\checklist_dev\CHECKLIST\CHECKLIST\IP_project_folder\reports\8.0\IMP-8-0-0-02\IMP-8-0-0-02_case3.rpt: Port placement status is not fixed (placed or unplaced)
+37: Fail: phy_pad_fdbk_drive2[25] (Pstatus: placed). In line 5456, C:\Users\chyao\Desktop\checklist_dev\CHECKLIST\CHECKLIST\IP_project_folder\reports\8.0\IMP-8-0-0-02\IMP-8-0-0-02_case3.rpt: Port placement status is not fixed (placed or unplaced)
+38: Fail: phy_pad_fdbk_drive2[26] (Pstatus: placed). In line 5455, C:\Users\chyao\Desktop\checklist_dev\CHECKLIST\CHECKLIST\IP_project_folder\reports\8.0\IMP-8-0-0-02\IMP-8-0-0-02_case3.rpt: Port placement status is not fixed (placed or unplaced)
+39: Fail: phy_pad_fdbk_drive2[27] (Pstatus: placed). In line 5454, C:\Users\chyao\Desktop\checklist_dev\CHECKLIST\CHECKLIST\IP_project_folder\reports\8.0\IMP-8-0-0-02\IMP-8-0-0-02_case3.rpt: Port placement status is not fixed (placed or unplaced)
+40: Fail: phy_pad_fdbk_drive2[28] (Pstatus: placed). In line 5453, C:\Users\chyao\Desktop\checklist_dev\CHECKLIST\CHECKLIST\IP_project_folder\reports\8.0\IMP-8-0-0-02\IMP-8-0-0-02_case3.rpt: Port placement status is not fixed (placed or unplaced)
+41: Fail: phy_pad_fdbk_drive2[29] (Pstatus: placed). In line 5452, C:\Users\chyao\Desktop\checklist_dev\CHECKLIST\CHECKLIST\IP_project_folder\reports\8.0\IMP-8-0-0-02\IMP-8-0-0-02_case3.rpt: Port placement status is not fixed (placed or unplaced)
+42: Fail: scan_ddl_test (Pstatus: unplaced). In line 4539, C:\Users\chyao\Desktop\checklist_dev\CHECKLIST\CHECKLIST\IP_project_folder\reports\8.0\IMP-8-0-0-02\IMP-8-0-0-02_case3.rpt: Port placement status is not fixed (placed or unplaced)
+43: Fail: scan_en (Pstatus: unplaced). In line 4537, C:\Users\chyao\Desktop\checklist_dev\CHECKLIST\CHECKLIST\IP_project_folder\reports\8.0\IMP-8-0-0-02\IMP-8-0-0-02_case3.rpt: Port placement status is not fixed (placed or unplaced)
+44: Fail: scan_in[0] (Pstatus: unplaced). In line 4744, C:\Users\chyao\Desktop\checklist_dev\CHECKLIST\CHECKLIST\IP_project_folder\reports\8.0\IMP-8-0-0-02\IMP-8-0-0-02_case3.rpt: Port placement status is not fixed (placed or unplaced)
+45: Fail: scan_in[10] (Pstatus: unplaced). In line 4734, C:\Users\chyao\Desktop\checklist_dev\CHECKLIST\CHECKLIST\IP_project_folder\reports\8.0\IMP-8-0-0-02\IMP-8-0-0-02_case3.rpt: Port placement status is not fixed (placed or unplaced)
+46: Fail: scan_in[1] (Pstatus: unplaced). In line 4743, C:\Users\chyao\Desktop\checklist_dev\CHECKLIST\CHECKLIST\IP_project_folder\reports\8.0\IMP-8-0-0-02\IMP-8-0-0-02_case3.rpt: Port placement status is not fixed (placed or unplaced)
+47: Fail: scan_in[2] (Pstatus: unplaced). In line 4742, C:\Users\chyao\Desktop\checklist_dev\CHECKLIST\CHECKLIST\IP_project_folder\reports\8.0\IMP-8-0-0-02\IMP-8-0-0-02_case3.rpt: Port placement status is not fixed (placed or unplaced)
+48: Fail: scan_in[3] (Pstatus: unplaced). In line 4741, C:\Users\chyao\Desktop\checklist_dev\CHECKLIST\CHECKLIST\IP_project_folder\reports\8.0\IMP-8-0-0-02\IMP-8-0-0-02_case3.rpt: Port placement status is not fixed (placed or unplaced)
+49: Fail: scan_in[4] (Pstatus: unplaced). In line 4740, C:\Users\chyao\Desktop\checklist_dev\CHECKLIST\CHECKLIST\IP_project_folder\reports\8.0\IMP-8-0-0-02\IMP-8-0-0-02_case3.rpt: Port placement status is not fixed (placed or unplaced)
+50: Fail: scan_in[5] (Pstatus: unplaced). In line 4739, C:\Users\chyao\Desktop\checklist_dev\CHECKLIST\CHECKLIST\IP_project_folder\reports\8.0\IMP-8-0-0-02\IMP-8-0-0-02_case3.rpt: Port placement status is not fixed (placed or unplaced)
+51: Fail: scan_in[6] (Pstatus: unplaced). In line 4738, C:\Users\chyao\Desktop\checklist_dev\CHECKLIST\CHECKLIST\IP_project_folder\reports\8.0\IMP-8-0-0-02\IMP-8-0-0-02_case3.rpt: Port placement status is not fixed (placed or unplaced)
+52: Fail: scan_in[7] (Pstatus: unplaced). In line 4737, C:\Users\chyao\Desktop\checklist_dev\CHECKLIST\CHECKLIST\IP_project_folder\reports\8.0\IMP-8-0-0-02\IMP-8-0-0-02_case3.rpt: Port placement status is not fixed (placed or unplaced)
+53: Fail: scan_in[8] (Pstatus: unplaced). In line 4736, C:\Users\chyao\Desktop\checklist_dev\CHECKLIST\CHECKLIST\IP_project_folder\reports\8.0\IMP-8-0-0-02\IMP-8-0-0-02_case3.rpt: Port placement status is not fixed (placed or unplaced)
+54: Fail: scan_in[9] (Pstatus: unplaced). In line 4735, C:\Users\chyao\Desktop\checklist_dev\CHECKLIST\CHECKLIST\IP_project_folder\reports\8.0\IMP-8-0-0-02\IMP-8-0-0-02_case3.rpt: Port placement status is not fixed (placed or unplaced)
+55: Fail: scan_lckup_byp (Pstatus: unplaced). In line 4540, C:\Users\chyao\Desktop\checklist_dev\CHECKLIST\CHECKLIST\IP_project_folder\reports\8.0\IMP-8-0-0-02\IMP-8-0-0-02_case3.rpt: Port placement status is not fixed (placed or unplaced)
+56: Fail: scan_mode (Pstatus: unplaced). In line 4538, C:\Users\chyao\Desktop\checklist_dev\CHECKLIST\CHECKLIST\IP_project_folder\reports\8.0\IMP-8-0-0-02\IMP-8-0-0-02_case3.rpt: Port placement status is not fixed (placed or unplaced)
+57: Fail: scan_out[0] (Pstatus: unplaced). In line 4947, C:\Users\chyao\Desktop\checklist_dev\CHECKLIST\CHECKLIST\IP_project_folder\reports\8.0\IMP-8-0-0-02\IMP-8-0-0-02_case3.rpt: Port placement status is not fixed (placed or unplaced)
+58: Fail: scan_out[1] (Pstatus: unplaced). In line 4946, C:\Users\chyao\Desktop\checklist_dev\CHECKLIST\CHECKLIST\IP_project_folder\reports\8.0\IMP-8-0-0-02\IMP-8-0-0-02_case3.rpt: Port placement status is not fixed (placed or unplaced)
+59: Fail: scan_out[2] (Pstatus: unplaced). In line 4945, C:\Users\chyao\Desktop\checklist_dev\CHECKLIST\CHECKLIST\IP_project_folder\reports\8.0\IMP-8-0-0-02\IMP-8-0-0-02_case3.rpt: Port placement status is not fixed (placed or unplaced)
+60: Fail: scan_out[3] (Pstatus: unplaced). In line 4944, C:\Users\chyao\Desktop\checklist_dev\CHECKLIST\CHECKLIST\IP_project_folder\reports\8.0\IMP-8-0-0-02\IMP-8-0-0-02_case3.rpt: Port placement status is not fixed (placed or unplaced)
+61: Fail: scan_out[4] (Pstatus: unplaced). In line 4943, C:\Users\chyao\Desktop\checklist_dev\CHECKLIST\CHECKLIST\IP_project_folder\reports\8.0\IMP-8-0-0-02\IMP-8-0-0-02_case3.rpt: Port placement status is not fixed (placed or unplaced)
+62: Fail: scan_out[5] (Pstatus: unplaced). In line 4942, C:\Users\chyao\Desktop\checklist_dev\CHECKLIST\CHECKLIST\IP_project_folder\reports\8.0\IMP-8-0-0-02\IMP-8-0-0-02_case3.rpt: Port placement status is not fixed (placed or unplaced)
+63: Fail: scan_out[6] (Pstatus: unplaced). In line 4941, C:\Users\chyao\Desktop\checklist_dev\CHECKLIST\CHECKLIST\IP_project_folder\reports\8.0\IMP-8-0-0-02\IMP-8-0-0-02_case3.rpt: Port placement status is not fixed (placed or unplaced)
+64: Fail: scan_out[7] (Pstatus: unplaced). In line 4940, C:\Users\chyao\Desktop\checklist_dev\CHECKLIST\CHECKLIST\IP_project_folder\reports\8.0\IMP-8-0-0-02\IMP-8-0-0-02_case3.rpt: Port placement status is not fixed (placed or unplaced)
+65: Fail: scan_out[8] (Pstatus: unplaced). In line 4939, C:\Users\chyao\Desktop\checklist_dev\CHECKLIST\CHECKLIST\IP_project_folder\reports\8.0\IMP-8-0-0-02\IMP-8-0-0-02_case3.rpt: Port placement status is not fixed (placed or unplaced)
+66: Fail: scan_out[9] (Pstatus: unplaced). In line 4938, C:\Users\chyao\Desktop\checklist_dev\CHECKLIST\CHECKLIST\IP_project_folder\reports\8.0\IMP-8-0-0-02\IMP-8-0-0-02_case3.rpt: Port placement status is not fixed (placed or unplaced)
+Warn Occurrence: 2
+1: Warn: debug_scan_chain[0]: Waiver entry not matched - no corresponding port violation found: Debug port - non-critical path, placement flexibility allowed[WAIVER]
+2: Warn: test_mode_port: Waiver entry not matched - no corresponding port violation found: Test mode port - placement deferred to post-layout optimization[WAIVER]
+
+================================================================================
+

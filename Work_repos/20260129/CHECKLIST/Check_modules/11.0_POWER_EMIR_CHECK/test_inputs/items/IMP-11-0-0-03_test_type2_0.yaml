@@ -1,0 +1,16 @@
+description: Confirm activity file was used? If not, provide default switching activity
+  values in comments field.
+input_files:
+- ${CHECKLIST_ROOT}/IP_project_folder/logs/*static*.log
+- ${CHECKLIST_ROOT}/IP_project_folder/logs/*dynamic*.log
+- ${CHECKLIST_ROOT}/IP_project_folder/logs/*EM*.log
+requirements:
+  pattern_items:
+  - '''read_activity_file'' finished successfully'
+  - '''set_default_switching_activity'' finished successfully'
+  value: 2
+waivers:
+  value: 0
+  waive_items:
+  - 'Explanation: Activity configuration validation is informational during early
+    power analysis iterations'

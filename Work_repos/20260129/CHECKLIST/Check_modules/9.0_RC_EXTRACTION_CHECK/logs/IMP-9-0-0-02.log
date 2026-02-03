@@ -1,0 +1,25 @@
+FAIL:IMP-9-0-0-02:Confirm SPEF extraction includes NDR rule lef file.
+IMP-9-0-0-02-ERROR01: NDR LEF files not found in SPEF extraction:
+  Severity: Fail Occurrence: 3
+  - /projects/yunbao_N6_80bits_EW_PHY_OD_6400/libs/ndr/ndr_10w10s.lef (v5.6. vs tech v5.8)
+  - /projects/yunbao_N6_80bits_EW_PHY_OD_6400/libs/ndr/ndr_2w2s.lef (v5.6. vs tech v5.8)
+  - /projects/yunbao_N6_80bits_EW_PHY_OD_6400/libs/ndr/ndr_2w3s_em.lef (v5.6. vs tech v5.8)
+IMP-9-0-0-02-WARN01: Unused waivers:
+  Severity: Warn Occurrence: 2
+  - /projects/yunbao_N6_80bits_EW_PHY_OD_6400/libs/ndr/ndr_1w2s.lef
+  - /projects/yunbao_N6_80bits_EW_PHY_OD_6400/libs/ndr/ndr_2w3s.lef
+IMP-9-0-0-02-INFO01: Waived NDR LEF warnings:
+  Severity: Info Occurrence: 2
+  - /projects/yunbao_N6_80bits_EW_PHY_OD_6400/libs/ndr/ndr_1w2s.lef (v5.6. vs tech v5.8)
+  - /projects/yunbao_N6_80bits_EW_PHY_OD_6400/libs/ndr/ndr_2w3s.lef (v5.6. vs tech v5.8)
+IMP-9-0-0-02-INFO02: NDR LEF files successfully loaded in SPEF extraction:
+  Severity: Info Occurrence: 8
+  - /projects/yunbao_N6_80bits_EW_PHY_OD_6400/libs/ndr/ndr_10w10s.lef
+  - /projects/yunbao_N6_80bits_EW_PHY_OD_6400/libs/ndr/ndr_1w2s.lef
+  - /projects/yunbao_N6_80bits_EW_PHY_OD_6400/libs/ndr/ndr_1w2s_M4.lef
+  - /projects/yunbao_N6_80bits_EW_PHY_OD_6400/libs/ndr/ndr_2w1s.lef
+  - /projects/yunbao_N6_80bits_EW_PHY_OD_6400/libs/ndr/ndr_2w2s.lef
+  - /projects/yunbao_N6_80bits_EW_PHY_OD_6400/libs/ndr/ndr_2w2s_M4.lef
+  - /projects/yunbao_N6_80bits_EW_PHY_OD_6400/libs/ndr/ndr_2w2s_em.lef
+  - /projects/yunbao_N6_80bits_EW_PHY_OD_6400/libs/ndr/ndr_2w3s.lef
+

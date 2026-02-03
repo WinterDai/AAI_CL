@@ -1,0 +1,46 @@
+-------------------------------------------------------------------------------  
+                                 TIMING CHECK SUMMARY                                
+    -------------------------------------------------------------------------------  
+     Warning                            Warning Description              Number of   
+                                                                         Warnings    
+    -------------------------------------------------------------------------------  
+    clock_expected           Clock not found where clock is expected    4
+    ideal_clock_waveform     Clock waveform is ideal                    1
+    no_drive                 No drive assertion                         2
+    no_input_delay           No input delay assertion with respect to clock
+                                                                        1
+    uncons_endpoint          Unconstrained signal arriving at end point 2
+    -------------------------------------------------------------------------------
+    ------------------------------------------------------------------------  
+                              TIMING CHECK DETAIL                             
+    ------------------------------------------------------------------------  
+     Pin                                         Warning               View   
+    ------------------------------------------------------------------------  
+    u_pma_top/u_sec/u_ana_testmux_se_enable/G_ANASIG_TESTMUX_3_u_scan_mux_v0_out/u_scan_mux_synth/u_scan_mux_synth/clk2
+                                     Clock not found where clock is expected
+                                                                      scan_shift_rcff_0p825v_125c_pcff_cmin_pcff3_hold
+    u_pma_top/u_sec/u_ana_testmux_se_ctrl_value/G_ANASIG_TESTMUX_1_u_scan_mux_v0_fds/u_scan_mux_synth/u_scan_mux_synth/clk2
+                                     Clock not found where clock is expected
+                                                                      scan_shift_rcff_0p825v_125c_pcff_cmin_pcff3_hold
+    u_pma_top/u_sec/u_ana_testmux_rx_vcm_sel/G_ANASIG_TESTMUX_3_u_scan_mux_v0_out/u_scan_mux_synth/u_scan_mux_synth/clk2
+                                     Clock not found where clock is expected
+                                                                      scan_shift_rcff_0p825v_125c_pcff_cmin_pcff3_hold
+    u_pma_top/u_sec/u_ana_testmux_rx_vcm_sel/G_ANASIG_TESTMUX_0_u_scan_mux_v0_fds/u_scan_mux_synth/u_scan_mux_synth/clk2
+                                     Clock not found where clock is expected
+    APB_PCLK                         No drive assertion               scan_shift_rcff_0p825v_125c_pcff_cmin_pcff3_hold
+    scanclk_utmi_clk                 No drive assertion               scan_shift_rcff_0p825v_125c_pcff_cmin_pcff3_hold
+    ieee1687_tck                     No input delay assertion with respect to clock
+                                                                      scan_shift_rcff_0p825v_125c_pcff_cmin_pcff3_hold
+    u_pma_top/u_xcvr_ra/u_tx_ctrl/u_tx_bist_core_apb/u_tx_bist_core/u_bist_udd_fifo/fifo_array_reg_6_7/ssb
+                                     Unconstrained signal arriving at end point
+                                                                      scan_shift_rcff_0p825v_125c_pcff_cmin_pcff3_hold
+    u_pma_top/u_xcvr_ra/u_tx_ctrl/u_tx_bist_core_apb/u_tx_bist_core/u_bist_udd_fifo/fifo_array_reg_6_6/d
+                                     Unconstrained signal arriving at end point
+    ------------------------------------------------------------------------------------------------------------
+    -----------------------------------------------------------------  
+                        TIMING CHECK IDEAL CLOCKS                      
+    -----------------------------------------------------------------  
+     Clock Waveform                   View                             
+    -----------------------------------------------------------------  
+    PHY_SCANSHIFT_IO_ASYNC           scan_shift_rcff_0p825v_125c_pcff_cmin_pcff3_hold
+    -----------------------------------------------------------------

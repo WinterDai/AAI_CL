@@ -1,0 +1,5 @@
+FAIL:MIG-IMP-8-1-1-14:Confirm you created VDD_AO power pin for data retention function of Dragonfly PHY. At the same time, create PHY VDD pin close to PHY VDD_AO pin using same layer and output the PHY VDD and PHY VDD_AO pins to LEF. (Fill N/A if you confirmed with customer that they will not turn off the PHY VDD and this PHY will not be reused for other projects which may turn off the PHY VDD externally)
+MIG-IMP-8-1-1-14-ERROR01: Configuration error:
+  Severity: Fail Occurrence: 1
+  - input_files is empty in YAML configuration
+

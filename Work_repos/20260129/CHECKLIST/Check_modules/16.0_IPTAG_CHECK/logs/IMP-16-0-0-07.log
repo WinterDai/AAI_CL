@@ -1,0 +1,5 @@
+PASS:IMP-16-0-0-07:Confirm the Final GDS have the IPTAG information?
+IMP-16-0-0-07-INFO01: GDS files with complete IPTAG information:
+  Severity: Info Occurrence: 1
+  - cdn_hs_phy_top.wIPTAG.gds
+

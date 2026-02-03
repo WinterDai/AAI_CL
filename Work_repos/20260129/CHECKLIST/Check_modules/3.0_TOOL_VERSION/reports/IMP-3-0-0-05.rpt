@@ -1,0 +1,4 @@
+PASS:IMP-3-0-0-05:List Pegasus physical signoff tool version (eg. pegasus/232/23.25.000)
+Info Occurrence: 2
+1: Info: PEGASUS: pegasus/232/23.25.000. In line 38, C:\Users\yuyin\OneDrive - Cadence Design Systems Inc\2025\Checklist\AAI\CHECKLIST_V3\CHECKLIST\IP_project_folder\tcl\2.0\setup_vars.tcl: Pegasus tool version found in MODULE_CMD configuration
+2: Info: PVS: pegasus/232/23.25.000. In line 37, C:\Users\yuyin\OneDrive - Cadence Design Systems Inc\2025\Checklist\AAI\CHECKLIST_V3\CHECKLIST\IP_project_folder\tcl\2.0\setup_vars.tcl: Pegasus tool version found in MODULE_CMD configuration

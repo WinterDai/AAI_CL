@@ -1,0 +1,14 @@
+module: 11.2_POWER_EMIR_CHECK
+stage: Initial
+generated_at: 2025-12-23T18:43:03
+check_items: 
+  HBM-IMP-11-2-0-00: 
+    executed: true
+    status: fail
+    description: Was the final typical and worst case power computed using a simulation based VCD dump and provided to the design teams?
+    failures: 
+      - index: 1
+        detail: input_files is empty in YAML configuration
+        source_line: N/A
+        source_file: N/A
+        reason: input_files is empty in YAML configuration

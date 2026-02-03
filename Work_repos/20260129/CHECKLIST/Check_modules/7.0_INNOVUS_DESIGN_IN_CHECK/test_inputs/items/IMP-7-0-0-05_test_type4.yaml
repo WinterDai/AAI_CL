@@ -1,0 +1,15 @@
+description: Confirm no issue for check_design in Innovus.
+input_files:
+- ${CHECKLIST_ROOT}/IP_project_folder/reports/7.0/IMP-7-0-0-05.rpt
+requirements:
+  pattern_items: []
+  value: N/A
+waivers:
+  value: 2
+  waive_items:
+  - name: IMPMSMV-8623
+    reason: Waived per design review - legacy IP block uses multiple supply routing
+      for redundancy
+  - name: CHKNETLIST-1
+    reason: Waived - test mode signal intentionally left unconnected per verification
+      plan

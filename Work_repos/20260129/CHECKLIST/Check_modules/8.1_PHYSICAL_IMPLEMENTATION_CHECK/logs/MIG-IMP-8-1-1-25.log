@@ -1,0 +1,5 @@
+FAIL:MIG-IMP-8-1-1-25:Confirm follow the datasheet and implementation guide of IP blocks(DDRIO/PLL/Noisegen/GPIO etc). (check the Note)
+MIG-IMP-8-1-1-25-ERROR01: Configuration error:
+  Severity: Fail Occurrence: 1
+  - input_files is empty in YAML configuration
+

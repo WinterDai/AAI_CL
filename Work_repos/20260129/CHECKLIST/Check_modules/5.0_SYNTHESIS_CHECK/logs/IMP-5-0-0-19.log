@@ -1,0 +1,5 @@
+PASS:IMP-5-0-0-19:Document DFT Transition % meets or exceeds expected value?
+IMP-5-0-0-19-INFO01: DFT Transition Coverage:
+  Severity: Info Occurrence: 1
+  - ATCov%:40.6%
+

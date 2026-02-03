@@ -1,0 +1,1344 @@
+================================================================================
+CHECKLIST系统目录结构与Agent集成说明
+================================================================================
+
+一、整体架构概览
+================================================================================
+
+本文档详细说明CHECKLIST系统的目录结构、各目录功能职责，以及Agent系统如何与
+CHECKLIST运行环境进行集成。
+
+1.1 核心设计理念
+----------------------------------------
+
+CHECKLIST系统采用"**运行环境与代码生成分离**"的设计：
+- **Latest\CHECKLIST**：运行时环境（执行checker、聚合报告、展示Dashboard）
+- **CHECKLIST\Tool\Agent**：Agent开发环境（生成checker代码）
+- **Golden**：黄金参考库（手工编写的参考实现）
+
+这种分离确保：
+✅ 生成的checker可以在标准环境中无缝运行
+✅ Agent系统可以独立迭代和测试
+✅ 黄金参考保持不可变性（版本控制、回归验证）
+
+
+================================================================================
+二、Latest\CHECKLIST - 运行时环境
+================================================================================
+
+2.1 目录结构详解
+----------------------------------------
+
+Latest\CHECKLIST/
+├── Check_modules/              # 【核心】Checker模块库
+│   ├── common/                 # 框架核心（所有checker共享）
+│   │   ├── base_checker.py     # BaseChecker基类（Type判定、接口规范）
+│   │   ├── output_formatter.py # 输出格式化（.log/.rpt生成）
+│   │   ├── check_flowtool.py   # 执行引擎（调用checker、异常处理）
+│   │   ├── write_summary_yaml.py # YAML摘要生成
+│   │   └── checker_templates/  # Mixin模板库
+│   │       ├── input_file_parser_mixin.py  # 7种输入解析模式
+│   │       ├── waiver_handler_mixin.py     # 8种豁免处理模式
+│   │       └── output_builder_mixin.py     # 6种输出格式化模式
+│   │
+│   ├── 1.0_LIBRARY_CHECK/      # 模块1：库文件检查
+│   │   ├── items/              # 配置文件目录
+│   │   │   ├── IMP-1-0-0-00_item.yaml  # Checker配置
+│   │   │   ├── IMP-1-0-0-01_item.yaml
+│   │   │   └── ...
+│   │   └── scripts/            # Checker脚本目录
+│   │       ├── IMP-1-0-0-00_checker.py # 实际执行的checker
+│   │       ├── IMP-1-0-0-01_checker.py
+│   │       └── ...
+│   │
+│   ├── 5.0_SYNTHESIS_CHECK/    # 模块5：综合检查
+│   ├── 10.0_STA_DCD_CHECK/     # 模块10：静态时序分析
+│   ├── 13.0_POST_PD_EQUIVALENCE_CHECK/  # 模块13：后端等价性检查
+│   └── [其他模块]/
+│
+├── Data_interface/             # 【数据接口】全局数据路径配置
+│   └── outputs/
+│       └── DATA_INTERFACE.yaml # 所有工具输出路径的映射表
+│
+├── IP_project_folder/          # 【项目数据】EDA工具实际输出
+│   ├── reports/                # 设计报告（qor.rpt, timing.rpt等）
+│   ├── logs/                   # 工具运行日志
+│   └── dbs/                    # 数据库文件
+│
+├── Project_config/             # 【项目配置】环境变量和运行脚本
+│   ├── collaterals/            # 配置模板
+│   ├── prep_config/            # 预处理配置
+│   └── scripts/                # 辅助脚本
+│
+└── Work/                       # 【执行结果】所有运行输出的聚合目录
+    ├── assignments/            # 任务分配文件
+    │   └── yyin_10.0_STA_DCD_CHECK_*.yaml  # 运行时任务配置
+    │
+    ├── Results/                # 【核心输出】每个checker的执行结果
+    │   ├── 1.0_LIBRARY_CHECK/
+    │   │   ├── IMP-1-0-0-00.log        # 详细日志（包含所有Info/Warn/Error）
+    │   │   ├── IMP-1-0-0-00.rpt        # 简洁报告（只包含PASS/FAIL状态）
+    │   │   ├── IMP-1-0-0-00_summary.yaml # YAML格式摘要
+    │   │   └── ...
+    │   ├── 10.0_STA_DCD_CHECK/
+    │   └── [其他模块]/
+    │
+    ├── Reports/                # 【可视化Dashboard】HTML报告
+    │   ├── signoff_20251231.html   # 最新的Dashboard快照
+    │   ├── signoff_20251223.html   # 历史快照（用于趋势分析）
+    │   └── ...
+    │
+    ├── CheckList.rpt           # 【聚合报告】所有模块的文本报告
+    ├── CheckList.log           # 【聚合日志】详细执行日志
+    ├── Checkflow.log           # 【流程日志】执行顺序和时间戳
+    └── run.ps1/run.csh         # 【启动脚本】一键运行所有checker
+
+
+2.2 各目录功能详解
+----------------------------------------
+
+### 2.2.1 Check_modules/ - Checker模块库
+
+**功能定位**：
+存放所有checker的实现代码和配置文件，是整个系统的核心代码库。
+
+**目录结构规范**：
+```
+Check_modules/
+├── common/                     # 框架层（不允许修改，除非升级框架）
+└── X.Y_MODULE_NAME/            # 业务层（每个模块独立）
+    ├── items/                  # 配置层（YAML）
+    │   └── IMP-X-Y-Z-NN_item.yaml
+    └── scripts/                # 实现层（Python）
+        └── IMP-X-Y-Z-NN_checker.py
+```
+
+**命名规范**：
+- 模块编号：1.0, 2.0, ..., 17.3（与VLSI流程阶段对应）
+- Checker编号：IMP-X-Y-Z-NN
+  · X: 模块主版本（1~17）
+  · Y: 模块子版本（0~3）
+  · Z: 保留字段（通常为0）
+  · NN: Checker序号（00~99）
+
+**common/目录关键文件**：
+
+1. **base_checker.py**（约800行）
+   - BaseChecker类：所有checker的父类
+   - Type自动判定：根据requirements.value和waivers.value判定Type 1/2/3/4
+   - 接口规范：
+     ```python
+     class BaseChecker:
+         def parse_logic(self):      # 子类必须实现
+         def check_logic(self):      # 子类必须实现
+         def waiver_logic(self):     # 可选实现
+         
+         def run(self):              # 框架提供（Type分发逻辑）
+         def output(self):           # 框架提供（输出格式化）
+     ```
+   - ${CHECKLIST_ROOT}变量展开：运行时替换所有路径中的占位符
+
+2. **checker_templates/** Mixin库
+   - 提供3大类可复用模板（41-70%代码复用率）
+   - InputFileParserMixin：7种输入解析模式
+     · parse_report_by_sections()：按章节解析报告
+     · parse_log_with_timestamps()：带时间戳的日志解析
+   - WaiverHandlerMixin：8种豁免处理模式
+     · handle_global_waiver()：全局豁免
+     · handle_selective_waiver()：选择性豁免
+   - OutputBuilderMixin：6种输出格式化
+     · build_standard_output()：标准PASS/FAIL输出
+     · build_detailed_report()：详细报告输出
+
+
+### 2.2.2 Data_interface/ - 数据接口层
+
+**功能定位**：
+提供全局数据路径映射，解耦checker实现与实际文件路径。
+
+**DATA_INTERFACE.yaml 示例**：
+```yaml
+synthesis:
+  qor_report: '${CHECKLIST_ROOT}/IP_project_folder/reports/qor.rpt'
+  area_report: '${CHECKLIST_ROOT}/IP_project_folder/reports/area.rpt'
+
+timing:
+  sta_log: '${CHECKLIST_ROOT}/IP_project_folder/logs/sta_post_syn.log'
+  spef_file: '${CHECKLIST_ROOT}/IP_project_folder/reports/post_syn.spef'
+
+physical:
+  innovus_log: '${CHECKLIST_ROOT}/IP_project_folder/logs/innovus.log'
+  gds_file: '${CHECKLIST_ROOT}/IP_project_folder/dbs/final.gds'
+```
+
+**关键设计**：
+- 使用${CHECKLIST_ROOT}变量确保路径可移植
+- checker通过read_interface()读取，不硬编码路径
+- 跨平台兼容（Windows反斜杠自动转换）
+
+
+### 2.2.3 IP_project_folder/ - 项目数据层
+
+**功能定位**：
+存放EDA工具的实际输出文件（报告、日志、数据库）。
+
+**目录结构**：
+```
+IP_project_folder/
+├── reports/                # EDA工具生成的报告
+│   ├── qor.rpt             # Quality of Results报告（综合质量）
+│   ├── area.rpt            # 面积报告
+│   ├── timing.rpt          # 时序报告
+│   └── power.rpt           # 功耗报告
+│
+├── logs/                   # EDA工具运行日志
+│   ├── genus.log           # Cadence Genus综合日志
+│   ├── innovus.log         # Cadence Innovus布局布线日志
+│   └── sta_post_syn.log    # 静态时序分析日志
+│
+└── dbs/                    # 数据库文件
+    ├── final.gds           # GDSII版图文件
+    └── netlist.v           # 网表文件
+```
+
+**注意事项**：
+- 这些文件由EDA工具生成，CHECKLIST只读不写
+- Checker通过DATA_INTERFACE.yaml间接访问
+
+
+### 2.2.4 Work/ - 执行结果层（最重要）
+
+**功能定位**：
+CHECKLIST系统的"心脏"，存放所有checker的执行结果和可视化Dashboard。
+
+**Work/Results/ - 结果聚合目录**
+
+每个checker运行后会生成3个文件：
+```
+Results/10.0_STA_DCD_CHECK/
+├── IMP-10-0-0-00.log       # 详细日志（800-2000行）
+│   内容示例：
+│   [INFO] Parsing STA log: sta_post_syn.log
+│   [INFO] Found netlist version: Genus 21.1
+│   [INFO] Found SPEF version: 2025-01-01
+│   [PASS] All required versions found
+│   [INFO] No waiver applied
+│
+├── IMP-10-0-0-00.rpt       # 简洁报告（10-50行）
+│   内容示例：
+│   PASS:IMP-10-0-0-00:Check netlist and SPEF version completeness
+│   Info Occurrence: 4
+│   1: Info: Netlist version found in line 7
+│   2: Info: SPEF version found in line 42
+│   3: Info: All fields are complete
+│   4: Info: No waiver applied
+│
+└── IMP-10-0-0-00_summary.yaml  # YAML摘要（机器可读）
+    内容示例：
+    status: PASS
+    requirements:
+      value: 1
+      pattern_items: ["Generated on:*2025*"]
+    waivers:
+      value: 0
+    info_count: 4
+    warn_count: 0
+    error_count: 0
+```
+
+**Work/Reports/ - HTML Dashboard**
+
+这是系统的**可视化前端**，提供交互式Dashboard：
+
+**signoff_20251231.html 的关键特性**：
+
+1. **Executive Summary（执行摘要）**
+   - 项目级状态指示器：Ready/In Progress/Needs Attention
+   - 关键指标卡片：Total Checks, Pass Rate, Waiver Rate, Fail Count
+   - 趋势图表：历史快照对比
+
+2. **模块视图（Module View）**
+   - 30个模块的状态矩阵（1.0~17.3）
+   - 每个模块显示：
+     · Pass/Fail/Waived Count
+     · 进度条（绿色/黄色/红色）
+     · 点击展开详细checker列表
+
+3. **Checker详情（Checker Details）**
+   - 点击任意checker可查看：
+     · 完整的.log内容（带语法高亮）
+     · .rpt格式化展示
+     · YAML结构化数据
+   - 搜索过滤功能（按模块、状态、关键字）
+
+4. **Waiver分析（Waiver Analysis）**
+   - Global Waivers：全局豁免列表
+   - Selective Waivers：选择性豁免详情
+   - Waiver统计：按原因分类
+
+5. **技术实现**：
+   - 纯静态HTML（无需服务器）
+   - 内嵌SheetJS库（支持Excel/CSV预览）
+   - 响应式设计（支持移动端）
+   - 8993行HTML（包含所有数据和样式）
+
+**Work/CheckList.rpt - 聚合文本报告**
+
+所有模块的文本格式汇总（2067行），示例：
+```
+===== CheckList Aggregated Report =====
+Root: C:\Users\wentao\...\Latest\CHECKLIST
+Modules: 1.0_LIBRARY_CHECK, 2.0_TECHFILE_AND_RULE_DECK_CHECK, ...
+
+===== Module: 1.0_LIBRARY_CHECK =====
+
+--- IMP-1-0-0-00.rpt ---
+PASS:IMP-1-0-0-00:Confirm library versions...
+Info Occurrence: 1
+
+--- IMP-1-0-0-01.rpt ---
+PASS:IMP-1-0-0-01:List standard cell libraries...
+Info Occurrence: 16
+...
+```
+
+
+2.3 运行时数据流
+----------------------------------------
+
+**完整的执行流程**：
+
+1. **启动阶段**
+   ```
+   用户执行: Work/run.ps1
+   ↓
+   check_flowtool.py 读取所有模块配置
+   ↓
+   遍历 Check_modules/*/items/*.yaml
+   ```
+
+2. **单个Checker执行**
+   ```
+   check_flowtool.py 调用 IMP-X-Y-Z-NN_checker.py
+   ↓
+   Checker继承BaseChecker
+   ↓
+   BaseChecker.run() 执行Type分发逻辑：
+     - Type 1/2: parse() → check()
+     - Type 3/4: parse() → check() → waiver()
+   ↓
+   output_formatter.py 生成3个文件：
+     - Results/MODULE/IMP-X-Y-Z-NN.log
+     - Results/MODULE/IMP-X-Y-Z-NN.rpt
+     - Results/MODULE/IMP-X-Y-Z-NN_summary.yaml
+   ```
+
+3. **聚合阶段**
+   ```
+   write_summary_yaml.py 汇总所有 *_summary.yaml
+   ↓
+   生成 Work/CheckList.rpt（文本格式）
+   ↓
+   生成 Work/Reports/signoff_YYYYMMDD.html（Dashboard）
+   ```
+
+4. **可视化展示**
+   ```
+   用户打开浏览器访问：
+   Work/Reports/signoff_20251231.html
+   ↓
+   查看所有模块的Pass/Fail状态
+   ↓
+   点击任意checker查看详细日志
+   ```
+
+
+================================================================================
+三、CHECKLIST\Tool\Agent - Agent开发环境
+================================================================================
+
+3.1 目录结构详解
+----------------------------------------
+
+CHECKLIST\Tool\Agent/
+├── agents/                     # Agent实现（四大Agent）
+│   ├── orchestrator_agent.py   # Pipeline协调Agent
+│   ├── context_agent.py        # 语义压缩Agent
+│   ├── codegen_agent.py        # 代码生成Agent
+│   └── validation_agent.py     # 验证Agent
+│
+├── pipelines/                  # Pipeline编排
+│   ├── checker_generation_pipeline.py  # 完整生成流程
+│   └── protocols/              # 接口协议
+│
+├── knowledge_base/             # 领域知识库
+│   ├── global_rules.md         # Type系统定义（543行）
+│   ├── type_system_spec.md     # Type详细规范
+│   └── checker_patterns/       # 常见checker模式
+│
+├── skills_registry/            # LLM可用技能库
+│   ├── file_operations/        # 文件操作技能
+│   ├── text_processing/        # 文本处理技能
+│   └── code_generation/        # 代码生成技能
+│
+├── test/                       # 测试与验证
+│   ├── ContextAgent/           # Context Agent测试
+│   │   └── IMP-10-0-0-00/
+│   │       └── IMP-10-0-0-00_ItemSpec.md  # 生成的ItemSpec（538行）
+│   │
+│   └── Validation/             # 端到端验证
+│       └── IMP-10-0-0-00/
+│           ├── input/
+│           │   └── item.yaml   # 输入配置
+│           ├── output/
+│           │   └── IMP-10-0-0-00_checker.py  # 生成的checker
+│           └── archive/        # 历史版本
+│
+├── config/                     # Agent配置
+│   ├── llm_config.yaml         # LLM参数（模型、温度、token限制）
+│   └── pipeline_config.yaml    # Pipeline参数
+│
+└── run_test.py                 # 测试入口脚本
+
+
+3.2 四大Agent详解
+----------------------------------------
+
+### 3.2.1 Orchestrator Agent - Pipeline协调者
+
+**职责**：
+- 任务调度：协调其他3个Agent的执行顺序
+- 状态管理：跟踪整个生成流程的状态
+- 异常处理：处理任何Agent的失败，决定重试或终止
+
+**输入**：
+```yaml
+task:
+  type: generate_checker
+  item_id: IMP-10-0-0-00
+  input_file: Latest/CHECKLIST/Check_modules/10.0_STA_DCD_CHECK/items/IMP-10-0-0-00_item.yaml
+```
+
+**输出**：
+```yaml
+result:
+  status: success
+  generated_files:
+    - IMP-10-0-0-00_ItemSpec.md
+    - IMP-10-0-0-00_checker.py
+  execution_time: 120.5s
+```
+
+**关键逻辑**：
+```python
+def orchestrate_generation(item_yaml):
+    # Stage 1: Context Agent生成ItemSpec
+    itemspec = context_agent.generate_itemspec(item_yaml, global_rules)
+    
+    # Stage 2: CodeGen Agent生成checker
+    checker_code = codegen_agent.generate_checker(itemspec, item_yaml)
+    
+    # Stage 3: Validation Agent验证
+    validation_result = validation_agent.validate(checker_code, item_yaml)
+    
+    if validation_result.success:
+        return checker_code
+    else:
+        # 重试或终止
+        return retry_or_abort(validation_result)
+```
+
+
+### 3.2.2 Context Agent - 语义压缩专家
+
+**职责**：
+- 读取item.yaml（30-50行）和global_rules.md（543行）
+- 生成ItemSpec.md（400-600行）：
+  · 只保留当前checker需要的Type规范
+  · 提取相关的业务规则和regex
+  · 添加Implementation Guide
+
+**输入**：
+```yaml
+# item.yaml
+requirements:
+  value: 1
+  pattern_items: ["Generated on:*2025*"]
+waivers:
+  value: 0
+input_files:
+  - '${CHECKLIST_ROOT}/IP_project_folder/logs/sta_post_syn.log'
+```
+
+**输出**：
+```markdown
+# IMP-10-0-0-00 ItemSpec
+
+## Section 1: Parsing Logic
+### 1.1 Required Fields
+- netlist.tool_name: Tool that generated netlist
+- netlist.version: Netlist version number
+- spef.tool_name: Tool that generated SPEF
+- spef.version: SPEF version number
+
+### 1.2 Data Structure
+```python
+parsed_fields = {
+    "netlist": {"tool_name": str, "version": str, "loaded": bool},
+    "spef": {"tool_name": str, "version": str, "loaded": bool}
+}
+```
+
+## Section 2: Check Logic
+### 2.1 Validation Items
+1. Netlist loading status
+2. Netlist version completeness
+3. SPEF loading status
+4. SPEF version completeness
+
+### 2.2 Checking Algorithm
+For each validation item:
+- If value == N/A: Boolean check (loaded == True)
+- Else: Pattern matching check (version matches pattern)
+
+## Section 3: Waiver Logic
+### 3.1 Waivable Scenarios
+1. SPEF not required for synthesis stage
+2. Legacy design without version tags
+
+### 3.2 Waiver Keywords
+- "synthesis", "SPEF", "legacy", "ECO"
+
+## Section 4: Implementation Guide
+### 4.1 Regex Patterns
+```python
+tool_name_regex = r"(?i)(generator|created by|tool):\s*(\w+)"
+version_regex = r"version\s+([0-9.]+)"
+```
+
+### 4.2 Multi-stage Extraction Strategy
+Stage 1: Locate file path mentions
+Stage 2: Extract version metadata
+Stage 3: Validate completeness
+Stage 4: Cross-check consistency
+Stage 5: Build final data structure
+```
+
+**关键技术**：
+- CoT v9.0五轮迭代：
+  · Round 1-3: 生成Section 1-3
+  · Round 4: 生成Section 4（Implementation Guide）
+  · Round 5: 全局一致性检查
+- 语义压缩率：543行 → 538行（但信息密度大幅提升）
+- 只保留"just-enough detail"
+
+
+### 3.2.3 CodeGen Agent - 代码生成专家
+
+**职责**：
+- 读取ItemSpec.md（400-600行）和item.yaml（30-50行）
+- 生成checker.py（300-500行）：
+  · 实现parse_logic()、check_logic()、waiver_logic()
+  · 继承BaseChecker
+  · 包含完整的if-else分支（支持所有Type）
+
+**输入**：
+```python
+# 从ItemSpec读取
+itemspec = ItemSpec.load("IMP-10-0-0-00_ItemSpec.md")
+
+# 从item.yaml读取
+item_config = {
+    "requirements.value": 1,
+    "waivers.value": 0
+}
+```
+
+**输出**：
+```python
+# IMP-10-0-0-00_checker.py
+from Check_modules.common.base_checker import BaseChecker
+
+class IMP_10_0_0_00_Checker(BaseChecker):
+    def parse_logic(self):
+        """
+        ItemSpec Section 1: Parsing Logic
+        5-stage extraction strategy
+        """
+        # Stage 1: Locate file path
+        sta_log = self.read_input_file("sta_post_syn.log")
+        
+        # Stage 2: Extract netlist info
+        netlist_match = re.search(r"(?i)(generator|created by):\s*(\w+)", sta_log)
+        netlist_tool = netlist_match.group(2) if netlist_match else None
+        
+        # Stage 3: Extract SPEF info
+        spef_match = re.search(r"SPEF.*version\s+([0-9.]+)", sta_log)
+        spef_version = spef_match.group(1) if spef_match else None
+        
+        # Stage 4: Validate completeness
+        netlist_loaded = netlist_tool is not None
+        spef_loaded = spef_version is not None
+        
+        # Stage 5: Build data structure
+        return {
+            "netlist": {
+                "tool_name": netlist_tool,
+                "version": "21.1",  # 实际会从log提取
+                "loaded": netlist_loaded
+            },
+            "spef": {
+                "tool_name": "Quantus",
+                "version": spef_version,
+                "loaded": spef_loaded
+            }
+        }
+    
+    def check_logic(self, parsed_data, requirements):
+        """
+        ItemSpec Section 2: Check Logic
+        支持2种场景：Boolean check和Pattern check
+        """
+        results = []
+        
+        # 场景1：Boolean check（当requirements.value == N/A）
+        if requirements['value'] == 'N/A':
+            if parsed_data['netlist']['loaded']:
+                results.append(self.build_info("Netlist loaded successfully"))
+            else:
+                results.append(self.build_error("Netlist not found"))
+        
+        # 场景2：Pattern check（当requirements.value > 0）
+        else:
+            patterns = requirements.get('pattern_items', [])
+            for pattern in patterns:
+                # 模式匹配逻辑
+                if self.match_pattern(parsed_data, pattern):
+                    results.append(self.build_info(f"Pattern matched: {pattern}"))
+                else:
+                    results.append(self.build_error(f"Pattern not found: {pattern}"))
+        
+        return results
+    
+    def waiver_logic(self, check_results, waivers):
+        """
+        ItemSpec Section 3: Waiver Logic
+        支持2种模式：Global waiver和Selective waiver
+        """
+        if waivers['value'] == 0:
+            # Global waiver模式
+            waive_keywords = waivers.get('waive_items', [])
+            for result in check_results:
+                for keyword in waive_keywords:
+                    if keyword in result['message']:
+                        result['status'] = 'WAIVED'
+                        result['waiver_reason'] = f"Global waiver: {keyword}"
+        else:
+            # Selective waiver模式
+            waive_count = waivers['value']
+            waived = 0
+            for result in check_results:
+                if result['status'] == 'ERROR' and waived < waive_count:
+                    result['status'] = 'WAIVED'
+                    waived += 1
+        
+        return check_results
+```
+
+**关键技术**：
+- CoT分段生成：
+  · Round 1: 生成parse_logic()（输入：ItemSpec Section 1 + 4）
+  · Round 2: 生成check_logic()（输入：Section 2 + Round 1输出的数据结构）
+  · Round 3: 生成waiver_logic()（输入：Section 3 + Round 2输出）
+- 状态传递：Round N的输出作为Round N+1的输入
+- 数据契约：通过ItemSpec Section 1预定义，保证跨Round一致性
+
+
+### 3.2.4 Validation Agent - 质量保证专家
+
+**职责**：
+- 运行生成的checker（在实际环境中执行）
+- 对比输出与Golden参考
+- 评估质量：语法正确性、功能正确性、输出格式
+
+**输入**：
+```python
+checker_file = "test/Validation/IMP-10-0-0-00/output/IMP-10-0-0-00_checker.py"
+input_yaml = "test/Validation/IMP-10-0-0-00/input/item.yaml"
+golden_log = "Golden/IMP-10-0-0-00.log"
+```
+
+**输出**：
+```yaml
+validation_result:
+  syntax_check:
+    status: PASS
+    errors: []
+  
+  execution_check:
+    status: PASS
+    exit_code: 0
+    execution_time: 2.3s
+  
+  output_comparison:
+    status: PASS
+    diff_lines: 0
+    similarity_score: 100%
+  
+  overall:
+    status: PASS
+    confidence: 95%
+```
+
+**验证步骤**：
+```python
+def validate_checker(checker_file, input_yaml, golden_log):
+    # Step 1: 语法检查
+    syntax_ok = check_python_syntax(checker_file)
+    
+    # Step 2: 静态分析
+    imports_ok = check_required_imports(checker_file)
+    class_ok = check_basechecker_inheritance(checker_file)
+    
+    # Step 3: 实际运行
+    result = run_checker(checker_file, input_yaml)
+    
+    # Step 4: 输出对比
+    diff = compare_outputs(result.log, golden_log)
+    
+    # Step 5: 质量评分
+    score = calculate_quality_score(syntax_ok, imports_ok, class_ok, diff)
+    
+    return ValidationResult(score)
+```
+
+
+3.3 Agent与CHECKLIST的Hookup机制
+----------------------------------------
+
+**关键问题**：Agent生成的checker如何无缝集成到Latest\CHECKLIST运行环境？
+
+### 3.3.1 文件生成与部署
+
+**生成阶段**（在Tool\Agent目录）：
+```
+CodeGen Agent输出：
+test/Validation/IMP-10-0-0-00/output/IMP-10-0-0-00_checker.py
+```
+
+**部署阶段**（复制到Latest\CHECKLIST）：
+```
+cp test/Validation/IMP-10-0-0-00/output/IMP-10-0-0-00_checker.py \
+   Latest/CHECKLIST/Check_modules/10.0_STA_DCD_CHECK/scripts/
+```
+
+**运行阶段**（Latest\CHECKLIST）：
+```
+Work/run.ps1
+↓
+check_flowtool.py 发现新文件 IMP-10-0-0-00_checker.py
+↓
+执行 IMP-10-0-0-00_checker.py
+↓
+生成 Work/Results/10.0_STA_DCD_CHECK/IMP-10-0-0-00.log/.rpt
+```
+
+
+### 3.3.2 配置文件映射
+
+**Agent使用的配置**：
+```yaml
+# Tool/Agent/test/Validation/IMP-10-0-0-00/input/item.yaml
+requirements:
+  value: 1
+input_files:
+  - '${CHECKLIST_ROOT}/IP_project_folder/logs/sta_post_syn.log'
+```
+
+**Latest\CHECKLIST使用的配置**：
+```yaml
+# Latest/CHECKLIST/Check_modules/10.0_STA_DCD_CHECK/items/IMP-10-0-0-00_item.yaml
+requirements:
+  value: 1
+input_files:
+  - '${CHECKLIST_ROOT}/IP_project_folder/logs/sta_post_syn.log'
+```
+
+**关键机制**：
+- 两者配置完全相同（通过复制或符号链接保持同步）
+- ${CHECKLIST_ROOT}变量确保路径在不同环境下可移植
+
+
+### 3.3.3 BaseChecker继承保证兼容性
+
+**Agent生成的代码结构**：
+```python
+from Check_modules.common.base_checker import BaseChecker
+
+class IMP_10_0_0_00_Checker(BaseChecker):
+    def parse_logic(self): ...
+    def check_logic(self): ...
+    def waiver_logic(self): ...
+```
+
+**框架期望的结构**：
+```python
+# Latest/CHECKLIST/Check_modules/common/base_checker.py
+class BaseChecker:
+    def run(self):
+        parsed = self.parse_logic()
+        checked = self.check_logic(parsed)
+        waived = self.waiver_logic(checked)
+        self.output(waived)
+```
+
+**兼容性保证**：
+- Agent生成的checker继承BaseChecker
+- 只需实现3个抽象方法
+- 框架自动调用run()进行Type分发
+
+
+### 3.3.4 输出格式一致性
+
+**Agent生成的输出**：
+```python
+def check_logic(self, parsed_data, requirements):
+    results = []
+    results.append(self.build_info("Netlist version found"))
+    results.append(self.build_error("SPEF version missing"))
+    return results
+```
+
+**框架期望的格式**：
+```python
+# base_checker.py提供的辅助方法
+def build_info(self, message, line_number=None):
+    return {"level": "INFO", "message": message, "line": line_number}
+
+def build_error(self, message, line_number=None):
+    return {"level": "ERROR", "message": message, "line": line_number}
+```
+
+**一致性保证**：
+- Agent学习了base_checker.py的API
+- 使用相同的build_info()/build_error()接口
+- output_formatter.py识别相同的数据结构
+
+
+================================================================================
+四、Golden - 黄金参考库
+================================================================================
+
+4.1 目录结构
+----------------------------------------
+
+Golden/
+├── IMP-10-0-0-00_README.md     # Checker功能说明
+├── IMP-10-0-0-00.py            # 手工编写的参考实现
+├── IMP-2-0-0-00_README.md
+├── IMP-2-0-0-00.py
+└── [其他50+个参考实现]
+
+
+4.2 Golden的三重角色
+----------------------------------------
+
+### 4.2.1 训练材料（Training Material）
+
+**用途**：
+Context Agent学习如何生成高质量的ItemSpec
+
+**示例**：
+```
+Golden/IMP-10-0-0-00.py (400行手工代码)
+↓ 分析提取
+Context Agent学习到：
+- 如何结构化描述parsing logic
+- 如何定义数据契约（parsed_fields结构）
+- 如何编写Implementation Guide
+↓ 应用到新案例
+生成 IMP-10-0-0-02_ItemSpec.md（新的checker规范）
+```
+
+
+### 4.2.2 验证基准（Validation Baseline）
+
+**用途**：
+Validation Agent对比生成代码与Golden的质量差异
+
+**对比维度**：
+```python
+def compare_with_golden(generated_checker, golden_checker):
+    metrics = {
+        "code_structure": compare_class_structure(),
+        "method_signatures": compare_method_signatures(),
+        "logic_correctness": compare_execution_results(),
+        "output_format": compare_output_format(),
+        "error_handling": compare_edge_cases()
+    }
+    return QualityScore(metrics)
+```
+
+
+### 4.2.3 回归基线（Regression Baseline）
+
+**用途**：
+框架升级后，验证所有Golden案例仍能正常运行
+
+**回归测试流程**：
+```python
+# Check_modules/common/regression_testing/run_golden_tests.py
+for golden_file in Golden/*.py:
+    result = run_checker(golden_file)
+    assert result.status == PASS
+    assert output_matches_snapshot(result.log)
+```
+
+
+================================================================================
+五、完整的端到端流程
+================================================================================
+
+5.1 从需求到上线的完整路径
+----------------------------------------
+
+**第一步：需求定义**
+```
+设计工程师提出：需要检查STA log中netlist和SPEF的版本信息
+↓
+创建 item.yaml 配置：
+requirements:
+  value: 1
+  pattern_items: ["Generated on:*2025*"]
+waivers:
+  value: 0
+input_files:
+  - '${CHECKLIST_ROOT}/IP_project_folder/logs/sta_post_syn.log'
+```
+
+**第二步：Agent生成（Tool\Agent环境）**
+```
+Orchestrator Agent启动Pipeline
+↓
+Context Agent生成ItemSpec（5轮CoT）
+  · 读取：item.yaml + global_rules.md
+  · 输出：IMP-10-0-0-00_ItemSpec.md (538行)
+↓
+CodeGen Agent生成checker（3轮CoT）
+  · 读取：ItemSpec + item.yaml
+  · Round 1: 生成parse_logic()
+  · Round 2: 生成check_logic()
+  · Round 3: 生成waiver_logic()
+  · 输出：IMP-10-0-0-00_checker.py (350行)
+↓
+Validation Agent验证
+  · 运行checker
+  · 对比Golden
+  · 质量评分：95%
+```
+
+**第三步：部署到Latest\CHECKLIST**
+```
+复制生成的文件：
+cp IMP-10-0-0-00_checker.py → Latest/CHECKLIST/Check_modules/10.0_STA_DCD_CHECK/scripts/
+cp item.yaml → Latest/CHECKLIST/Check_modules/10.0_STA_DCD_CHECK/items/
+```
+
+**第四步：执行验证（Latest\CHECKLIST环境）**
+```
+cd Latest/CHECKLIST/Work
+./run.ps1
+↓
+check_flowtool.py执行：
+  1. 读取所有模块的item.yaml
+  2. 调用对应的checker.py
+  3. 收集执行结果
+↓
+生成输出：
+  Work/Results/10.0_STA_DCD_CHECK/IMP-10-0-0-00.log
+  Work/Results/10.0_STA_DCD_CHECK/IMP-10-0-0-00.rpt
+  Work/Results/10.0_STA_DCD_CHECK/IMP-10-0-0-00_summary.yaml
+```
+
+**第五步：可视化展示**
+```
+write_summary_yaml.py聚合：
+  · 读取所有 *_summary.yaml
+  · 生成 CheckList.rpt（文本）
+  · 生成 signoff_20251231.html（Dashboard）
+↓
+设计工程师打开浏览器：
+  Work/Reports/signoff_20251231.html
+  · 查看所有模块的Pass/Fail状态
+  · 点击IMP-10-0-0-00查看详细日志
+  · 分析Waiver情况
+```
+
+
+5.2 数据流向图
+----------------------------------------
+
+```
+┌─────────────────────────────────────────────────────────────────┐
+│                     Agent开发环境                                │
+│                 (CHECKLIST\Tool\Agent)                           │
+│                                                                   │
+│  ┌────────────┐    ┌────────────┐    ┌────────────┐           │
+│  │  Context   │ →  │  CodeGen   │ →  │ Validation │           │
+│  │   Agent    │    │   Agent    │    │   Agent    │           │
+│  └────────────┘    └────────────┘    └────────────┘           │
+│       ↓                  ↓                  ↓                    │
+│  ItemSpec.md      checker.py          质量评分                  │
+└─────────────────────────────────────────────────────────────────┘
+                            ↓
+                      【部署复制】
+                            ↓
+┌─────────────────────────────────────────────────────────────────┐
+│                   运行时环境                                     │
+│              (Latest\CHECKLIST)                                  │
+│                                                                   │
+│  ┌────────────────────────────────────────────────────────┐    │
+│  │  Check_modules/10.0_STA_DCD_CHECK/                     │    │
+│  │    ├── items/IMP-10-0-0-00_item.yaml                   │    │
+│  │    └── scripts/IMP-10-0-0-00_checker.py  ← 生成的代码 │    │
+│  └────────────────────────────────────────────────────────┘    │
+│                            ↓                                      │
+│  ┌────────────────────────────────────────────────────────┐    │
+│  │  check_flowtool.py (执行引擎)                          │    │
+│  │    ├── 读取item.yaml                                   │    │
+│  │    ├── 调用checker.py                                  │    │
+│  │    └── 收集结果                                        │    │
+│  └────────────────────────────────────────────────────────┘    │
+│                            ↓                                      │
+│  ┌────────────────────────────────────────────────────────┐    │
+│  │  Work/Results/10.0_STA_DCD_CHECK/                      │    │
+│  │    ├── IMP-10-0-0-00.log  (详细日志)                  │    │
+│  │    ├── IMP-10-0-0-00.rpt  (简洁报告)                  │    │
+│  │    └── IMP-10-0-0-00_summary.yaml                      │    │
+│  └────────────────────────────────────────────────────────┘    │
+│                            ↓                                      │
+│  ┌────────────────────────────────────────────────────────┐    │
+│  │  write_summary_yaml.py (聚合器)                        │    │
+│  │    ├── 聚合所有summary.yaml                            │    │
+│  │    ├── 生成CheckList.rpt                               │    │
+│  │    └── 生成signoff_YYYYMMDD.html                       │    │
+│  └────────────────────────────────────────────────────────┘    │
+│                            ↓                                      │
+│  ┌────────────────────────────────────────────────────────┐    │
+│  │  Work/Reports/signoff_20251231.html                     │    │
+│  │    ├── Executive Summary                                │    │
+│  │    ├── Module Status Matrix                             │    │
+│  │    ├── Checker Details                                  │    │
+│  │    └── Waiver Analysis                                  │    │
+│  └────────────────────────────────────────────────────────┘    │
+│                            ↓                                      │
+│                     【浏览器可视化】                             │
+└─────────────────────────────────────────────────────────────────┘
+```
+
+
+================================================================================
+六、关键设计决策与原理
+================================================================================
+
+6.1 为什么需要两个CHECKLIST目录？
+----------------------------------------
+
+**Latest\CHECKLIST（运行环境）**：
+- 用途：实际项目的验证执行
+- 特点：
+  · 包含真实的项目数据（IP_project_folder）
+  · 存放生成的Work结果
+  · 配置适配具体项目
+- 数据：可变的（每次运行都会更新Results/）
+
+**CHECKLIST\CHECKLIST（框架源码）**：
+- 用途：框架开发和维护
+- 特点：
+  · 包含base_checker.py等核心框架
+  · 包含checker_templates等可复用模板
+  · 配置通用化（使用${CHECKLIST_ROOT}）
+- 数据：相对稳定（只在框架升级时修改）
+
+**类比**：
+```
+Latest\CHECKLIST  ←→  /usr/local/myapp/（运行实例）
+CHECKLIST\CHECKLIST ←→  /usr/share/myapp/（程序包）
+```
+
+
+6.2 为什么Work目录如此重要？
+----------------------------------------
+
+**Work/是整个系统的"心脏"**：
+
+1. **Results/目录**：存放所有checker的执行结果
+   - 每个checker生成3个文件（.log/.rpt/.yaml）
+   - 提供多种格式以满足不同需求：
+     · .log：给开发者看（详细调试信息）
+     · .rpt：给管理者看（简洁状态报告）
+     · .yaml：给自动化工具看（机器可读）
+
+2. **Reports/目录**：可视化Dashboard
+   - signoff_YYYYMMDD.html是"项目仪表盘"
+   - 一页纸展示所有模块状态
+   - 历史快照支持趋势分析
+
+3. **CheckList.rpt**：聚合文本报告
+   - 2000+行的完整报告
+   - 可通过命令行工具解析
+   - 可集成到CI/CD pipeline
+
+**为什么不直接在Results/目录查看？**
+- Results/有30个模块 × 平均8个checker = 240个文件
+- 人工逐个检查效率太低
+- Dashboard提供：
+  · 一键查看所有Pass/Fail
+  · 搜索过滤功能
+  · Waiver统计分析
+
+
+6.3 Agent系统与CHECKLIST的"松耦合"设计
+----------------------------------------
+
+**问题**：如果Agent生成的代码有bug，会影响Latest\CHECKLIST运行吗？
+
+**答案**：不会，因为采用了"松耦合"设计：
+
+1. **文件级隔离**
+   ```
+   Tool\Agent生成：test/Validation/output/checker.py
+   Latest\CHECKLIST运行：Check_modules/scripts/checker.py
+   
+   中间有显式的"复制"步骤，不是自动同步
+   ```
+
+2. **验证后部署**
+   ```
+   Validation Agent先验证 → 质量评分95% → 人工审核 → 部署
+   如果质量评分<80%，则不部署
+   ```
+
+3. **Golden保底**
+   ```
+   如果Agent生成失败，可以回退到Golden参考实现
+   Golden/*.py是人工编写，100%可靠
+   ```
+
+4. **框架保护**
+   ```
+   即使checker代码有bug，base_checker.py也会捕获异常：
+   
+   try:
+       result = checker.run()
+   except Exception as e:
+       return FAIL("Checker execution failed: {e}")
+   ```
+
+
+6.4 ${CHECKLIST_ROOT}变量的妙用
+----------------------------------------
+
+**问题**：Windows和Linux的路径格式不同，如何保证跨平台？
+
+**传统方案的困境**：
+```yaml
+# 硬编码绝对路径（Windows）
+input_files:
+  - 'C:\Users\wentao\AAI_local\AAI\Main_Work\ACL\Latest\CHECKLIST\IP_project_folder\logs\sta.log'
+
+问题：
+1. 无法在Linux运行（路径不存在）
+2. 无法移植到其他机器（路径hardcoded）
+3. Git提交会污染代码库（个人路径）
+```
+
+**${CHECKLIST_ROOT}方案**：
+```yaml
+# 使用变量占位符
+input_files:
+  - '${CHECKLIST_ROOT}/IP_project_folder/logs/sta.log'
+
+运行时自动展开：
+- Windows: C:\Users\wentao\...\Latest\CHECKLIST\IP_project_folder\logs\sta.log
+- Linux: /home/user/workspace/Latest/CHECKLIST/IP_project_folder/logs/sta.log
+```
+
+**展开机制**（在base_checker.py实现）：
+```python
+class BaseChecker:
+    def __init__(self):
+        self.checklist_root = os.environ.get('CHECKLIST_ROOT') or os.getcwd()
+    
+    def expand_path(self, path_with_variable):
+        return path_with_variable.replace('${CHECKLIST_ROOT}', self.checklist_root)
+    
+    def read_input_file(self, relative_path):
+        full_path = self.expand_path(relative_path)
+        return open(full_path).read()
+```
+
+**优势**：
+✅ 跨平台兼容（Windows/Linux）
+✅ 可移植（只需设置环境变量）
+✅ Git友好（不污染代码库）
+
+
+================================================================================
+七、总结与最佳实践
+================================================================================
+
+7.1 目录结构最佳实践
+----------------------------------------
+
+1. **Latest\CHECKLIST（运行环境）**
+   - 用途：实际项目验证
+   - 关注点：Work/目录的结果
+   - 维护：定期清理旧的Reports快照
+
+2. **CHECKLIST\CHECKLIST（框架源码）**
+   - 用途：框架开发
+   - 关注点：common/目录的稳定性
+   - 维护：任何修改需要通过Golden回归测试
+
+3. **CHECKLIST\Tool\Agent（Agent开发）**
+   - 用途：checker自动生成
+   - 关注点：test/Validation的质量评分
+   - 维护：持续优化prompt和CoT策略
+
+4. **Golden（黄金参考）**
+   - 用途：训练、验证、回归
+   - 关注点：代码质量和可读性
+   - 维护：不可轻易修改（版本控制）
+
+
+7.2 Agent集成最佳实践
+----------------------------------------
+
+1. **明确边界**
+   - Agent生成 ≠ 自动部署
+   - 必须经过Validation Agent验证
+   - 人工审核后再部署到Latest\CHECKLIST
+
+2. **质量保证**
+   - 设置质量阈值（如95%）
+   - 低于阈值则触发人工介入
+   - 保留所有生成历史（test/archive/）
+
+3. **持续改进**
+   - 收集失败案例
+   - 分析Common Failure Patterns
+   - 优化ItemSpec生成策略
+
+
+7.3 Dashboard使用最佳实践
+----------------------------------------
+
+1. **日常监控**
+   - 每日检查signoff_YYYYMMDD.html
+   - 关注Pass Rate趋势
+   - 追踪Waiver数量变化
+
+2. **问题定位**
+   - 从Module View找到Fail的模块
+   - 点击Checker Details查看详细日志
+   - 分析错误原因（Info/Warn/Error）
+
+3. **报告生成**
+   - 使用CheckList.rpt生成文本报告
+   - 导出YAML数据进行自动化分析
+   - 历史快照支持趋势图
+
+
+7.4 常见问题与解决方案
+----------------------------------------
+
+**问题1：Agent生成的checker无法运行**
+原因：可能缺少BaseChecker继承
+解决：Validation Agent会提前检测，禁止部署
+
+**问题2：Dashboard显示空白**
+原因：缺少Results/目录的数据
+解决：先运行Work/run.ps1生成结果
+
+**问题3：Waiver不生效**
+原因：waiver_logic()实现错误
+解决：参考Golden案例修正
+
+**问题4：路径找不到文件**
+原因：${CHECKLIST_ROOT}未设置
+解决：在run.ps1中设置环境变量
+
+
+================================================================================
+附录：文件路径快速参考
+================================================================================
+
+A. Latest\CHECKLIST关键路径
+----------------------------------------
+运行环境根目录：C:\Users\wentao\AAI_local\AAI\Main_Work\ACL\Latest\CHECKLIST
+
+框架核心：
+  Check_modules/common/base_checker.py
+  Check_modules/common/output_formatter.py
+  Check_modules/common/check_flowtool.py
+
+Checker存放：
+  Check_modules/X.Y_MODULE_NAME/scripts/IMP-X-Y-Z-NN_checker.py
+
+配置文件：
+  Check_modules/X.Y_MODULE_NAME/items/IMP-X-Y-Z-NN_item.yaml
+
+项目数据：
+  IP_project_folder/reports/*.rpt
+  IP_project_folder/logs/*.log
+
+执行结果：
+  Work/Results/X.Y_MODULE_NAME/IMP-X-Y-Z-NN.log
+  Work/Results/X.Y_MODULE_NAME/IMP-X-Y-Z-NN.rpt
+  Work/Results/X.Y_MODULE_NAME/IMP-X-Y-Z-NN_summary.yaml
+
+Dashboard：
+  Work/Reports/signoff_YYYYMMDD.html
+
+聚合报告：
+  Work/CheckList.rpt
+
+
+B. CHECKLIST\Tool\Agent关键路径
+----------------------------------------
+Agent根目录：C:\Users\wentao\AAI_local\AAI\Main_Work\ACL\CHECKLIST\Tool\Agent
+
+四大Agent：
+  agents/orchestrator_agent.py
+  agents/context_agent.py
+  agents/codegen_agent.py
+  agents/validation_agent.py
+
+知识库：
+  knowledge_base/global_rules.md
+
+测试目录：
+  test/ContextAgent/IMP-10-0-0-00/IMP-10-0-0-00_ItemSpec.md
+  test/Validation/IMP-10-0-0-00/input/item.yaml
+  test/Validation/IMP-10-0-0-00/output/IMP-10-0-0-00_checker.py
+
+历史存档：
+  test/Validation/IMP-10-0-0-00/archive/YYYYMMDD_HHMMSS/
+
+
+C. Golden关键路径
+----------------------------------------
+Golden根目录：C:\Users\wentao\AAI_local\AAI\Main_Work\ACL\Golden
+
+黄金参考：
+  Golden/IMP-10-0-0-00_README.md
+  Golden/IMP-10-0-0-00.py
+
+
+================================================================================
+文档结束
+================================================================================
+版本：v1.0
+更新日期：2026-01-10
+下一步行动：与技术分析文档合并，生成完整的系统文档

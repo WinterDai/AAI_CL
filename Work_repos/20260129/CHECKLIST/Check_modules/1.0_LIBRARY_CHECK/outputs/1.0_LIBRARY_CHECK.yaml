@@ -1,0 +1,135 @@
+module: 1.0_LIBRARY_CHECK
+stage: Initial
+generated_at: 2025-12-23T18:43:03
+check_items: 
+  IMP-1-0-0-00: 
+    executed: true
+    status: pass
+    description: Confirm the version of all the libraries used for this project are correct and match to addendum.
+    infos: 
+      - index: 1
+        detail: 110
+        source_line: 7
+        source_file: 'C:\Users\yuyin\OneDrive - Cadence Design Systems Inc\2025\Checklist\AAI\CHECKLIST_V3\CHECKLIST\IP_project_folder\reports\qor.rpt'
+        reason: Library version found
+  IMP-1-0-0-01: 
+    executed: true
+    status: pass
+    description: List standard cell libraries used for implementation and signoff.
+    infos: 
+      - index: 1
+        detail: tcbn03e_bwp143mh117l3p48cpd_base_elvtssgnp_0p675v_m40c_cworst_CCworst_T_ccs
+        source_line: 7
+        source_file: 'C:\Users\yuyin\OneDrive - Cadence Design Systems Inc\2025\Checklist\AAI\CHECKLIST_V3\CHECKLIST\IP_project_folder\reports\qor.rpt'
+        reason: Standard cell library used for implementation
+      - index: 2
+        detail: tcbn03e_bwp143mh117l3p48cpd_base_lvtssgnp_0p675v_m40c_cworst_CCworst_T_ccs
+        source_line: 8
+        source_file: 'C:\Users\yuyin\OneDrive - Cadence Design Systems Inc\2025\Checklist\AAI\CHECKLIST_V3\CHECKLIST\IP_project_folder\reports\qor.rpt'
+        reason: Standard cell library used for implementation
+      - index: 3
+        detail: tcbn03e_bwp143mh117l3p48cpd_base_svtssgnp_0p675v_m40c_cworst_CCworst_T_ccs
+        source_line: 9
+        source_file: 'C:\Users\yuyin\OneDrive - Cadence Design Systems Inc\2025\Checklist\AAI\CHECKLIST_V3\CHECKLIST\IP_project_folder\reports\qor.rpt'
+        reason: Standard cell library used for implementation
+      - index: 4
+        detail: tcbn03e_bwp143mh117l3p48cpd_base_ulvtssgnp_0p675v_m40c_cworst_CCworst_T_ccs
+        source_line: 10
+        source_file: 'C:\Users\yuyin\OneDrive - Cadence Design Systems Inc\2025\Checklist\AAI\CHECKLIST_V3\CHECKLIST\IP_project_folder\reports\qor.rpt'
+        reason: Standard cell library used for implementation
+      - index: 5
+        detail: tcbn03e_bwp143mh169l3p48cpd_base_elvtssgnp_0p675v_m40c_cworst_CCworst_T_ccs
+        source_line: 11
+        source_file: 'C:\Users\yuyin\OneDrive - Cadence Design Systems Inc\2025\Checklist\AAI\CHECKLIST_V3\CHECKLIST\IP_project_folder\reports\qor.rpt'
+        reason: Standard cell library used for implementation
+      - index: 6
+        detail: tcbn03e_bwp143mh169l3p48cpd_base_lvtssgnp_0p675v_m40c_cworst_CCworst_T_ccs
+        source_line: 12
+        source_file: 'C:\Users\yuyin\OneDrive - Cadence Design Systems Inc\2025\Checklist\AAI\CHECKLIST_V3\CHECKLIST\IP_project_folder\reports\qor.rpt'
+        reason: Standard cell library used for implementation
+      - index: 7
+        detail: tcbn03e_bwp143mh169l3p48cpd_base_svtssgnp_0p675v_m40c_cworst_CCworst_T_ccs
+        source_line: 13
+        source_file: 'C:\Users\yuyin\OneDrive - Cadence Design Systems Inc\2025\Checklist\AAI\CHECKLIST_V3\CHECKLIST\IP_project_folder\reports\qor.rpt'
+        reason: Standard cell library used for implementation
+      - index: 8
+        detail: tcbn03e_bwp143mh169l3p48cpd_base_ulvtssgnp_0p675v_m40c_cworst_CCworst_T_ccs
+        source_line: 14
+        source_file: 'C:\Users\yuyin\OneDrive - Cadence Design Systems Inc\2025\Checklist\AAI\CHECKLIST_V3\CHECKLIST\IP_project_folder\reports\qor.rpt'
+        reason: Standard cell library used for implementation
+      - index: 9
+        detail: tcbn03e_bwp143mh286l3p48cpd_base_elvtssgnp_0p675v_m40c_cworst_CCworst_T_ccs
+        source_line: 15
+        source_file: 'C:\Users\yuyin\OneDrive - Cadence Design Systems Inc\2025\Checklist\AAI\CHECKLIST_V3\CHECKLIST\IP_project_folder\reports\qor.rpt'
+        reason: Standard cell library used for implementation
+      - index: 10
+        detail: tcbn03e_bwp143mh286l3p48cpd_base_lvtssgnp_0p675v_m40c_cworst_CCworst_T_ccs
+        source_line: 16
+        source_file: 'C:\Users\yuyin\OneDrive - Cadence Design Systems Inc\2025\Checklist\AAI\CHECKLIST_V3\CHECKLIST\IP_project_folder\reports\qor.rpt'
+        reason: Standard cell library used for implementation
+      - index: 11
+        detail: tcbn03e_bwp143mh286l3p48cpd_base_svtssgnp_0p675v_m40c_cworst_CCworst_T_ccs
+        source_line: 17
+        source_file: 'C:\Users\yuyin\OneDrive - Cadence Design Systems Inc\2025\Checklist\AAI\CHECKLIST_V3\CHECKLIST\IP_project_folder\reports\qor.rpt'
+        reason: Standard cell library used for implementation
+      - index: 12
+        detail: tcbn03e_bwp143mh286l3p48cpd_base_ulvtssgnp_0p675v_m40c_cworst_CCworst_T_ccs
+        source_line: 18
+        source_file: 'C:\Users\yuyin\OneDrive - Cadence Design Systems Inc\2025\Checklist\AAI\CHECKLIST_V3\CHECKLIST\IP_project_folder\reports\qor.rpt'
+        reason: Standard cell library used for implementation
+      - index: 13
+        detail: tcbn03e_bwp143mh286l3p48cpd_mb_elvtssgnp_0p675v_m40c_cworst_CCworst_T_ccs
+        source_line: 19
+        source_file: 'C:\Users\yuyin\OneDrive - Cadence Design Systems Inc\2025\Checklist\AAI\CHECKLIST_V3\CHECKLIST\IP_project_folder\reports\qor.rpt'
+        reason: Standard cell library used for implementation
+      - index: 14
+        detail: tcbn03e_bwp143mh286l3p48cpd_mb_lvtssgnp_0p675v_m40c_cworst_CCworst_T_ccs
+        source_line: 20
+        source_file: 'C:\Users\yuyin\OneDrive - Cadence Design Systems Inc\2025\Checklist\AAI\CHECKLIST_V3\CHECKLIST\IP_project_folder\reports\qor.rpt'
+        reason: Standard cell library used for implementation
+      - index: 15
+        detail: tcbn03e_bwp143mh286l3p48cpd_mb_svtssgnp_0p675v_m40c_cworst_CCworst_T_ccs
+        source_line: 21
+        source_file: 'C:\Users\yuyin\OneDrive - Cadence Design Systems Inc\2025\Checklist\AAI\CHECKLIST_V3\CHECKLIST\IP_project_folder\reports\qor.rpt'
+        reason: Standard cell library used for implementation
+      - index: 16
+        detail: tcbn03e_bwp143mh286l3p48cpd_mb_ulvtssgnp_0p675v_m40c_cworst_CCworst_T_ccs
+        source_line: 22
+        source_file: 'C:\Users\yuyin\OneDrive - Cadence Design Systems Inc\2025\Checklist\AAI\CHECKLIST_V3\CHECKLIST\IP_project_folder\reports\qor.rpt'
+        reason: Standard cell library used for implementation
+  IMP-1-0-0-02: 
+    executed: true
+    status: pass
+    description: List any forbidden cells (special request from foundry or customers).
+    infos: 
+      - index: 1
+        detail: N/A
+        source_line: N/A
+        source_file: N/A
+        reason: No forbidden cells found in current DATA_INTERFACE.yaml
+    warnings: 
+      - index: 1
+        detail: N/A
+        source_line: N/A
+        source_file: N/A
+        reason: Golden value expected but not provided
+  IMP-1-0-0-03: 
+    executed: true
+    status: pass
+    description: 'List all other libraries used for implementation and signoff (eg: IO/PLL/DCC/BUMP/NoiseGen/ProcessMonitor/etc).'
+    infos: 
+      - index: 1
+        detail: No other libraries found
+        source_line: N/A
+        source_file: genus.syn_generic.log
+        reason: No IO/PLL/DCC/BUMP/NoiseGen/ProcessMonitor libraries found
+  IMP-1-0-0-04: 
+    executed: true
+    status: pass
+    description: Confirm the versions of analog cells/macros are correct with AMS/Analog team.
+    infos: 
+      - index: 1
+        detail: No analog libraries found
+        source_line: N/A
+        source_file: genus.syn_generic.log
+        reason: No analog libraries detected

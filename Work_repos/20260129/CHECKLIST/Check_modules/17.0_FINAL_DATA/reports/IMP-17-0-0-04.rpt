@@ -1,0 +1,3 @@
+FAIL:IMP-17-0-0-04:Have checks been run on release data (checkIt etc)?
+Fail Occurrence: 1
+1: Fail: input_files is empty in YAML configuration

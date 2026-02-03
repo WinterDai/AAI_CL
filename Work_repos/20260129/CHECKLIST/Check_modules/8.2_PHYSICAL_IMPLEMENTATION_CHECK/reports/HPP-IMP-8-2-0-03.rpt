@@ -1,0 +1,3 @@
+FAIL:HPP-IMP-8-2-0-03:Were approved buffer and delay cells used for hold fixing? Provide buffer list used for hold fixing in comments field.
+Fail Occurrence: 1
+1: Fail: input_files is empty in YAML configuration

@@ -1,0 +1,15 @@
+FAIL:IMP-5-0-0-13:Confirm scan is successfully inserted and non-scannable flops have been peer reviewed and waived?
+IMP-5-0-0-13-ERROR01: Registers fail DFT rules:
+  Severity: Fail Occurrence: 1
+  - fail_dft_rules:ttttt
+IMP-5-0-0-13-ERROR02: Registers are misc. non-scan:
+  Severity: Fail Occurrence: 4
+  - misc_non_scan:u_accum/genus_inserted_cg_RC_CG_HIER_INST3/RC_CGIC_INST
+  - misc_non_scan:u_cmn_cpi_sreg_if/genus_inserted_cg_RC_CG_HIER_INST1/RC_CGIC_INST
+  - misc_non_scan:u_cmn_dpi_sreg_if/genus_inserted_cg_RC_CG_HIER_INST0/RC_CGIC_INST
+  - misc_non_scan:u_phalign_fsm/u_counter/genus_inserted_cg_RC_CG_HIER_INST2/RC_CGIC_INST
+IMP-5-0-0-13-ERROR03: Registers pass dft rule checks but are not a part of scan chains:
+  Severity: Fail Occurrence: 2
+  - pass_not_in_chains:aaaaaa
+  - pass_not_in_chains:bbbbbb
+

@@ -1,0 +1,5 @@
+PASS:IMP-6-0-0-04:Confirm no aborted compare points exist in log files or reports?
+IMP-6-0-0-04-INFO01: Aborted points in LEC (Total: 0):
+  Severity: Info Occurrence: 1
+  - No aborted points found
+

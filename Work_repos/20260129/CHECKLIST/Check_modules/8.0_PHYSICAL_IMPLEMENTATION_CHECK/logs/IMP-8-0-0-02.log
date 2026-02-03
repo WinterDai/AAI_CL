@@ -1,0 +1,9 @@
+FAIL:IMP-8-0-0-02:Confirm all ports status are Fixed.
+IMP-8-0-0-02-ERROR01: Required port status patterns not satisfied (0 unfixed, 1 patterns not found):
+  Severity: Fail Occurrence: 1
+  - {pad_mem_data[7]}
+IMP-8-0-0-02-INFO01: All required port status patterns matched (2/3 patterns found):
+  Severity: Info Occurrence: 2
+  - clk4x
+  - pad_mem_dqs_p
+

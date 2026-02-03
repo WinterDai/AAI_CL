@@ -1,0 +1,85 @@
+PASS:IMP-8-0-0-01:Confirm all ports are assigned on metal track.
+IMP-8-0-0-01-INFO01: [WAIVED_INFO]: Waived information:
+  Severity: Info Occurrence: 1
+  Explanation: Port placement violations are informational during early design stages
+IMP-8-0-0-01-INFO02: [WAIVED_AS_INFO]: Ports not found on metal routing tracks:
+  Severity: Info Occurrence: 78
+  atb_dm_0_pre: NOT ON ROUTING TRACK
+  atb_dm_1_pre: NOT ON ROUTING TRACK
+  atb_dm_2_pre: NOT ON ROUTING TRACK
+  atb_dqs_0_pre: NOT ON ROUTING TRACK
+  atb_dqs_1_pre: NOT ON ROUTING TRACK
+  atb_dqs_2_pre: NOT ON ROUTING TRACK
+  atb_gate_feedback_0_pre: NOT ON ROUTING TRACK
+  atb_gate_feedback_1_pre: NOT ON ROUTING TRACK
+  atb_gate_feedback_2_pre: NOT ON ROUTING TRACK
+  atb_x4_gate_feedback_0_pre: NOT ON ROUTING TRACK
+  atb_x4_gate_feedback_1_pre: NOT ON ROUTING TRACK
+  atb_x4_gate_feedback_2_pre: NOT ON ROUTING TRACK
+  clk4x: NOT ON ROUTING TRACK
+  clk_phy_bypass: NOT ON ROUTING TRACK
+  clk_switch_is_done: NOT ON ROUTING TRACK
+  ctrlupd_ack: NOT ON ROUTING TRACK
+  ctrlupd_req: NOT ON ROUTING TRACK
+  dcc_phyupd_req_dslice: NOT ON ROUTING TRACK
+  dfi_calvl_done: NOT ON ROUTING TRACK
+  dfi_calvl_en: NOT ON ROUTING TRACK
+  dfi_ddr5_wrlvl_cmd_stop_dcc: NOT ON ROUTING TRACK
+  dfi_enum: NOT ON ROUTING TRACK
+  dfi_init_complete: NOT ON ROUTING TRACK
+  dfi_init_start_period: NOT ON ROUTING TRACK
+  dfi_lvl_periodic: NOT ON ROUTING TRACK
+  dqs_error_merge: NOT ON ROUTING TRACK
+  dqs_ratio_ds: NOT ON ROUTING TRACK
+  ds_aging_toggle_sel: NOT ON ROUTING TRACK
+  ds_for_ca_path: NOT ON ROUTING TRACK
+  ds_mstr_lck_byp: NOT ON ROUTING TRACK
+  gate_fdbk_byp_en: NOT ON ROUTING TRACK
+  gate_fdbk_shutoff: NOT ON ROUTING TRACK
+  gate_fdbk_shutoff_gt: NOT ON ROUTING TRACK
+  iddq_en: NOT ON ROUTING TRACK
+  ie_shutoff_in_ds_R: NOT ON ROUTING TRACK
+  init_upd_rdy_dslice: NOT ON ROUTING TRACK
+  initial_lock_dslice: NOT ON ROUTING TRACK
+  lp_ds_en_data: NOT ON ROUTING TRACK
+  lp_ls_clk_en: NOT ON ROUTING TRACK
+  lp_ls_ds_en_io_data: NOT ON ROUTING TRACK
+  lp_ls_mstr_clk_en: NOT ON ROUTING TRACK
+  lvl_data_valid: NOT ON ROUTING TRACK
+  lvl_slice_calc_ready: NOT ON ROUTING TRACK
+  ntp_active_in: NOT ON ROUTING TRACK
+  ntp_active_out: NOT ON ROUTING TRACK
+  obs_pad_gate_feedback: NOT ON ROUTING TRACK
+  obs_pad_mem_dm: NOT ON ROUTING TRACK
+  obs_pad_mem_dqs: NOT ON ROUTING TRACK
+  obs_pad_x4_gate_feedback: NOT ON ROUTING TRACK
+  param_phy_low_freq_sel_slice_clk: NOT ON ROUTING TRACK
+  phy_bist_ddl_en: NOT ON ROUTING TRACK
+  phy_bist_done: NOT ON ROUTING TRACK
+  phy_bist_en: NOT ON ROUTING TRACK
+  phy_bist_en_pad: NOT ON ROUTING TRACK
+  phy_cs_adj_delay: NOT ON ROUTING TRACK
+  phy_ddl_data_track_en_dslice: NOT ON ROUTING TRACK
+  phy_regif_enable_slice: NOT ON ROUTING TRACK
+  phyupd_ack_dcc_dslice: NOT ON ROUTING TRACK
+  phyupd_ack_gt_dslice: NOT ON ROUTING TRACK
+  phyupd_ext_ack_dslice: NOT ON ROUTING TRACK
+  phyupd_ext_req_dslice: NOT ON ROUTING TRACK
+  phyupd_gt_req_accpt_dslice: NOT ON ROUTING TRACK
+  phyupd_int_ack_dslice: NOT ON ROUTING TRACK
+  phyupd_int_req_dslice: NOT ON ROUTING TRACK
+  phyupd_int_req_gt_dslice: NOT ON ROUTING TRACK
+  phyupd_man_req_dslice: NOT ON ROUTING TRACK
+  pll_ready: NOT ON ROUTING TRACK
+  rd_dbi_disable: NOT ON ROUTING TRACK
+  reg_command_ready_slice: NOT ON ROUTING TRACK
+  reg_command_valid_slice: NOT ON ROUTING TRACK
+  reg_write_slice: NOT ON ROUTING TRACK
+  regout_accept_slice: NOT ON ROUTING TRACK
+  regout_valid_slice: NOT ON ROUTING TRACK
+  rptr_rst: NOT ON ROUTING TRACK
+  rptr_sel: NOT ON ROUTING TRACK
+  slice_cs_adj_delay: NOT ON ROUTING TRACK
+  slice_init_complete: NOT ON ROUTING TRACK
+  static_aging_toggle: NOT ON ROUTING TRACK
+

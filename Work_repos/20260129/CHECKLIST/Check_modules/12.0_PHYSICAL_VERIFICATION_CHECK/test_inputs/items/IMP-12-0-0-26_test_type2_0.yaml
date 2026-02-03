@@ -1,0 +1,14 @@
+description: Confirm BUMP rule DRC result is clean.
+input_files:
+- ${CHECKLIST_ROOT}/IP_project_folder/reports/pv/Calibre_BUMP.rep
+- ${CHECKLIST_ROOT}/IP_project_folder/reports/pv/Pegasus_BUMP.rep
+requirements:
+  pattern_items:
+  - UBM.R.5
+  - UBM.R.5.1
+  - BUMP.M.3
+  value: 3
+waivers:
+  value: 0
+  waive_items:
+  - 'Explanation: These BUMP DRC rules are informational checks only'

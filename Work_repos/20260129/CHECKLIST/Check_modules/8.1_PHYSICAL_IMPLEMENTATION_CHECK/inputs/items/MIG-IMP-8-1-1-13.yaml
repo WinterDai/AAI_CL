@@ -1,0 +1,21 @@
+description: 'TODO: Confirm you have build the shortest clock tree to SOC level SRAM
+  interface clock ports for Dragonfly LP/DDR5 PHY and build shortest tree to phy_pclk_out
+  for Dragonfly DDR5 PHY. (Fill N/A for HPPHY) -For Dragonfly Automotive LPPHY , build
+  shortest clock tree from phy_pclk input port to phy_uc_IRam0CLK and phy_uc_DRam00CLK
+  output ports. -For Dragonfly DDR5, build shortest clock tree from clk_ctlr_sync
+  input port to phy_pclk_div_out output port. -For Dragonfly DDR5, as controller will
+  use phy_pclk_out as clock source, please build shortest tree from clk_ctlr_sync
+  input port to phy_pclk_out output port. To achieve this, you need to place the top
+  DESKEW PLL close to DFI boundary. As current DFPHY bump plan is handled by AMS team,
+  please pay attention to the top DESKEW PLL bump location which needs to be assigned
+  near to DFI boundary. Also, please optimize the SRAM interface data path(in2reg/reg2out
+  related to phy_uc* ports) with tighter interface constraint and well balanced clock
+  tree for these SRAM related registers to reserve more margin on SRAM path delay
+  on SOC side.'
+requirements:
+  value: N/A
+  pattern_items: []
+input_files: []
+waivers:
+  value: N/A
+  waive_items: []

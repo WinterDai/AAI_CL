@@ -1,0 +1,5 @@
+PASS:IMP-5-0-0-02:Confirm synthesis is using qrc tech file for RC data?
+IMP-5-0-0-02-INFO01: QRC tech files detected (design IS using QRC for RC data):
+  Severity: Info Occurrence: 1
+  - /process/tsmcN3/data/ge/QRC/15M1Xa1Xb1Xc1Xd1Ya1Yb4Y2Yy2Z_SHDMIM_UT/fs_v1d1p1a/cworst/Tech/cworst_CCworst_T/qrcTechFile
+

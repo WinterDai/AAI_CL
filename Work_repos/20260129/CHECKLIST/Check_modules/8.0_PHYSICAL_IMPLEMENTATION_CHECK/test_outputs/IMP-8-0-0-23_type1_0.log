@@ -1,0 +1,16 @@
+PASS:IMP-8-0-0-23:confirm no unplaced cells in design.
+IMP-8-0-0-23-INFO01: [WAIVED_INFO]: Waived information:
+  Severity: Info Occurrence: 1
+  Explanation: Unplaced cells are acceptable during early placement exploration phase
+IMP-8-0-0-23-INFO02: [WAIVED_AS_INFO]: Unplaced cells detected in design:
+  Severity: Info Occurrence: 9
+  inst_data_ctrl_top/inst_ctrl_gen/g26516__9945
+  inst_data_ctrl_top/inst_ctrl_gen/g26625__4733
+  inst_data_param_top/inst_data_slice_param/FE_OFC54006_n
+  inst_data_param_top/inst_data_slice_param/inst_param_regout/g99009
+  inst_data_param_top/inst_data_slice_param/inst_phy_x4_dq_tsel_rd_timing/g1106
+  inst_data_param_top/inst_data_slice_param/inst_phy_x4_dq_tsel_rd_timing/g1147
+  inst_data_param_top/inst_data_slice_param/inst_phy_x4_dqs_tsel_rd_timing/g1105
+  inst_data_param_top/inst_data_slice_param/inst_phy_x4_dqs_tsel_rd_timing/g1106
+  inst_data_param_top/inst_data_slice_param/inst_phy_x4_dqs_tsel_rd_timing/g1107
+

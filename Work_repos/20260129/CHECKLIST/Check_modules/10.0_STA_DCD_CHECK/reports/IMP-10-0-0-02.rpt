@@ -1,0 +1,7 @@
+PASS:IMP-10-0-0-02:Confirm the clock uncertainty setting is correct.
+Warn Occurrence: 2
+1: Warn: set_clock_uncertainty 0.01 -hold -from [get_clocks {PHASE_ALIGN_CLOCK}] -to [get_clocks {PHASE_ALIGN_CLOCK}]: Waiver configured and not used: Pre-implementation phase - approved by architect (Ticket#CLK-2025-001)[WAIVER]
+2: Warn: set_clock_uncertainty 0.02 -hold -from [get_clocks {PHASE_ALIGN_CLOCK}] -to [get_clocks {PHASE_ALIGN_CLOCK}]: Waiver configured and not used: Extra hold timing waived for initial implementation[WAIVER]
+Info Occurrence: 2
+1: Info: set_clock_uncertainty 0.02 -hold -from [get_clocks {PHASE_ALIGN_CLOCK}] -to [get_clocks {PHASE_ALIGN_CLOCK}]. In line 13, C:\Users\yuyin\OneDrive - Cadence Design Systems Inc\2025\Checklist\AAI\CHECKLIST_V3\CHECKLIST\IP_project_folder\reports\constr.rpt: Clock uncertainty setting found
+2: Info: set_clock_uncertainty 0.055 -setup -from [get_clocks {PHASE_ALIGN_CLOCK}] -to [get_clocks {PHASE_ALIGN_CLOCK}]. In line 14, C:\Users\yuyin\OneDrive - Cadence Design Systems Inc\2025\Checklist\AAI\CHECKLIST_V3\CHECKLIST\IP_project_folder\reports\constr.rpt: Clock uncertainty setting found

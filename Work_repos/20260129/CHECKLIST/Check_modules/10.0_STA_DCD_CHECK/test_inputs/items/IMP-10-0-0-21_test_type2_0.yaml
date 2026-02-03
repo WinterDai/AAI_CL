@@ -1,0 +1,13 @@
+description: Confirm all Warning message in the STA log files can be waived.
+input_files:
+- ${CHECKLIST_ROOT}/IP_project_folder/reports/10.0/tempus_1.log
+- ${CHECKLIST_ROOT}/IP_project_folder/reports/10.0/tempus_2.log
+requirements:
+  pattern_items:
+  - TECHLIB-302
+  - TECHLIB-1320
+  value: 2
+waivers:
+  value: 0
+  waive_items:
+  - Debug mode - all STA warnings are informational only

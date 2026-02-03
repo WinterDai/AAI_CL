@@ -1,0 +1,44 @@
+module: 10.2_STA_DCD_CHECK
+stage: Initial
+generated_at: 2025-12-23T18:43:03
+check_items: 
+  HBM-IMP-10-2-0-00: 
+    executed: true
+    status: fail
+    description: Conditions used to verify max clock frequency (e.g. wireload model, etc.). SPEF + 5% of clock period as setup uncertainty
+    failures: 
+      - index: 1
+        detail: input_files is empty in YAML configuration
+        source_line: N/A
+        source_file: N/A
+        reason: input_files is empty in YAML configuration
+  HBM-IMP-10-2-0-01: 
+    executed: true
+    status: fail
+    description: Setup uncertainty, OCV Parameters. Static IR 15mV based deltaV + 10C deltaT
+    failures: 
+      - index: 1
+        detail: input_files is empty in YAML configuration
+        source_line: N/A
+        source_file: N/A
+        reason: input_files is empty in YAML configuration
+  HBM-IMP-10-2-0-02: 
+    executed: true
+    status: fail
+    description: Hold uncertainty, OCV parameters Static IR 15mV based deltaV + 10C deltaT
+    failures: 
+      - index: 1
+        detail: input_files is empty in YAML configuration
+        source_line: N/A
+        source_file: N/A
+        reason: input_files is empty in YAML configuration
+  HBM-IMP-10-2-0-03: 
+    executed: true
+    status: fail
+    description: Were appropriate lifetime deratings defined for use in STA/HSTA analysis? (frequency or uncertainty deratings) describe in Comments section
+    failures: 
+      - index: 1
+        detail: input_files is empty in YAML configuration
+        source_line: N/A
+        source_file: N/A
+        reason: input_files is empty in YAML configuration

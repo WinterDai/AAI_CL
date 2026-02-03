@@ -1,0 +1,3 @@
+FAIL:IMP-8-0-1-07:Confirm that proper NDR rule is applied to all high voltage nets inside core power domain to avoid HV spacing DRC violations (ex: VDD*GONE net in DDR PHY)
+Fail Occurrence: 1
+1: Fail: input_files is empty in YAML configuration

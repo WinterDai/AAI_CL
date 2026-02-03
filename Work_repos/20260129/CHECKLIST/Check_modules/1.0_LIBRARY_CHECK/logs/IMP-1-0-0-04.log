@@ -1,0 +1,5 @@
+PASS:IMP-1-0-0-04:Confirm the versions of analog cells/macros are correct with AMS/Analog team.
+IMP-1-0-0-04-INFO01: Analog library versions:
+  Severity: Info Occurrence: 1
+  - No analog libraries found
+

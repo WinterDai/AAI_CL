@@ -1,0 +1,33 @@
+is_pass: False
+value: 1
+has_pattern_items: False
+has_waiver_value: False
+
+Details (2 items):
+--------------------------------------------------------------------------------
+
+[1] INFO
+    name: Netlist File (found in log, file not accessible)
+    line_number: 17
+    file_path: c:\Users\wentao\AAI_local\AAI\Main_Work\ACL\Latest\CHECKLIST\IP_project_folder\logs\sta_post_syn.log
+    reason: Item found
+
+[2] FAIL
+    name: SPEF Reading was skipped: Skipping SPEF reading as we are writing post-synthesis SDF files
+    line_number: 0
+    file_path: N/A
+    reason: Item not found
+
+
+Info Groups (1 groups):
+--------------------------------------------------------------------------------
+
+INFO01: Netlist/SPEF files loaded successfully
+  Items: ['Netlist File (found in log, file not accessible)']
+
+
+Error Groups (1 groups):
+--------------------------------------------------------------------------------
+
+ERROR01: Netlist/SPEF loading issues
+  Items: ['SPEF Reading was skipped']

@@ -1,0 +1,4 @@
+PASS:IMP-8-0-0-08:Confirm max routing layer is correct. Provide max routing layer value in comment field.
+Info Occurrence: 2
+1: Info: Explanation: Routing layer hierarchy check is informational only for this design phase: Explanation: Routing layer hierarchy check is informational only for this design phase[WAIVED_INFO]
+2: Info: Max routing layer: M15. In line 1, C:\Users\chyao\Desktop\checklist_dev\CHECKLIST\CHECKLIST\IP_project_folder\reports\8.0\IMP-8-0-0-08\IMP-8-0-0-08.rpt: Routing layer hierarchy validated: SignalNetLayerList max ≤ PGNetLayerList max ≤ techLayerList max

@@ -1,0 +1,6 @@
+PASS:IMP-11-0-0-10:Confirm static power analysis results matches the requirement.
+Info Occurrence: 4
+1: Info: Explanation: Power analysis violations are informational only during early design phase: Explanation: Power analysis violations are informational only during early design phase[WAIVED_INFO]
+2: Info: Static_IR_Drop: 2.40%. In line 22, C:\Users\zhihan\projects\check_development\CHECKLIST\CHECKLIST\IP_project_folder\reports\11.0\VDD_VSS_div.iv: Static IR Drop and Power EM data extracted successfully
+3: Info: VDD_Power_EM: 0.8907. In line 179, C:\Users\zhihan\projects\check_development\CHECKLIST\CHECKLIST\IP_project_folder\reports\11.0\results_VDD: Static IR Drop and Power EM data extracted successfully
+4: Info: VSS_Power_EM: 1.5485. In line 163, C:\Users\zhihan\projects\check_development\CHECKLIST\CHECKLIST\IP_project_folder\reports\11.0\results_VSS: Static IR Drop and Power EM data extracted successfully

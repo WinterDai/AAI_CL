@@ -1,0 +1,3 @@
+FAIL:MIG-IMP-8-1-2-00:[BRCM special] Confirm use pin blockage def for pin assignment for BRCM projects (for non-BRCM projects, please fill N/A) The pin def information is in /projects/workbench/versions/BRCM/pin_blockage_def/BRCM_Pin_Placement_DEF_release_notes.pdf
+Fail Occurrence: 1
+1: Fail: input_files is empty in YAML configuration

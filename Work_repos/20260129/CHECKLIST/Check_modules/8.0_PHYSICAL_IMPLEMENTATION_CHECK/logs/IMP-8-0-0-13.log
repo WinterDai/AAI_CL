@@ -1,0 +1,11 @@
+PASS:IMP-8-0-0-13:Confirm proper clock tree buffer/inverter types are used. Provide a list in comment field.
+IMP-8-0-0-13-WARN01: Unused waivers:
+  Severity: Warn Occurrence: 2
+  - CKL*QD4*H8*ULVT
+  - DCCKND4BWP300H8P64PDULVT
+IMP-8-0-0-13-INFO01: Required clock tree cell types matched in CTS library:
+  Severity: Info Occurrence: 3
+  - CKL*QD4*H8*ULVT
+  - CKND2D4BWP300H8P64PDULVT
+  - DCCKND4BWP300H8P64PDULVT
+

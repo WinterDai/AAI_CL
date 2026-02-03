@@ -1,0 +1,6 @@
+PASS:IMP-2-0-0-05:Confirm ANT rule deck was not modified? If it was, explain in comments field.
+Warn Occurrence: 2
+1: Warn: PLN5LO_16M_054_PATCH_ANT.13_1a.encrypt: Waiver entry not matched - specified rule deck not found or not modified: Waived - patch file with approved customizations for metal stack optimization[WAIVER]
+2: Warn: PLN5LO_16M_1X1Xb1Xe1Ya1Yb6Y2Yy2R_014_ANT.13_1a.encrypt: Waiver entry not matched - specified rule deck not found or not modified: Approved modification for project-specific antenna rules per design review DR-2024-001[WAIVER]
+Info Occurrence: 1
+1: Info: PLN5LO_16M_1X1Xb1Xe1Ya1Yb6Y2Yy2R_014_ANT.13_1a.encrypt. In line 24, C:\Users\chenweif\Checker_dev\CHECKLIST\CHECKLIST\IP_project_folder\ruledeck\2.0\PLN5LO_16M_1X1Xb1Xe1Ya1Yb6Y2Yy2R_014_ANT.13_1a.encrypt: Rule deck path successfully extracted from ANT_pvl.log

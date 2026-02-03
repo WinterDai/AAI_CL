@@ -1,0 +1,8 @@
+PASS:IMP-2-0-0-03:Confirm DRC rule deck was not modified? If it was, explain in comments field.
+IMP-2-0-0-03-INFO01: [WAIVED_INFO]: Waived information:
+  Severity: Info Occurrence: 1
+  - Explanation: Rule deck path extraction is informational only for this project phase
+IMP-2-0-0-03-INFO02: DRC rule deck path found in log file:
+  Severity: Info Occurrence: 1
+  - C:\Users\chenweif\Checker_dev\CHECKLIST\CHECKLIST\IP_project_folder\ruledeck\2.0\PLN5LO_16M_1X1Xb1Xe1Ya1Yb6Y2Yy2R_014.13_1a.encrypt.phy
+

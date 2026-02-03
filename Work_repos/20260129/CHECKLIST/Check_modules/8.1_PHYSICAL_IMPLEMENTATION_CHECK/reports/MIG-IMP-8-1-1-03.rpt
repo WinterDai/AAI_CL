@@ -1,0 +1,3 @@
+FAIL:MIG-IMP-8-1-1-03:Confirm with IO designer whether the IO is Gen1 IO or Gen2 IO or Gen3 IO.(check the Note)
+Fail Occurrence: 1
+1: Fail: input_files is empty in YAML configuration

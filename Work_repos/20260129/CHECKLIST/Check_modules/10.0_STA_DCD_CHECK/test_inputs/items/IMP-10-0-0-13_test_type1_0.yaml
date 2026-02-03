@@ -1,0 +1,11 @@
+description: Confirm the max_capacitance check result is clean.
+input_files:
+- ${CHECKLIST_ROOT}/IP_project_folder/reports/10.0/maxcap_1.rpt
+- ${CHECKLIST_ROOT}/IP_project_folder/reports/10.0/maxcap_2.rpt
+requirements:
+  pattern_items: []
+  value: N/A
+waivers:
+  value: 0
+  waive_items:
+  - Pre-implementation phase - max_capacitance violations expected before buffer insertion

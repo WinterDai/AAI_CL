@@ -1,0 +1,3 @@
+FAIL:SRG-IMP-11-3-0-01:Is SPEF coverage 100% ?If not, mention reason in comments
+Fail Occurrence: 1
+1: Fail: input_files is empty in YAML configuration

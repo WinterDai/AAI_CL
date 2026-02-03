@@ -1,0 +1,13 @@
+description: List Innovus implementation tool version (eg. innovus/221/22.11-s119_1)
+input_files:
+- ${CHECKLIST_ROOT}/IP_project_folder/tcl/2.0/setup_vars.tcl
+requirements:
+  pattern_items:
+  - innovus/231/23.33-s082_1
+  - innovus/221/22.11-s119_1
+  value: 2
+waivers:
+  value: 0
+  waive_items:
+  - 'Explanation: This check is informational only - version mismatch does not block
+    signoff'

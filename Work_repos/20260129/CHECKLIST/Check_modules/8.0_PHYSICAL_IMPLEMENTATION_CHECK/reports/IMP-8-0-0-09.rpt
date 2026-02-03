@@ -1,0 +1,13 @@
+PASS:IMP-8-0-0-09:Confirm we take care of the dynamic power optimization in the whole innovs flow(Check the Note)
+Warn Occurrence: 2
+1: Warn: getDesignMode powerEffort: none (EXPECTED: high): Waiver defined but no violation matched: Waived - low power mode used for this design variant per architecture team approval[WAIVER]
+2: Warn: get_default_switching_activity seq_activity: UNDEFINED: Waiver defined but no violation matched: Waived - switching activity will be back-annotated from simulation in later flow stage[WAIVER]
+Info Occurrence: 8
+1: Info: input_activity=0.15. In line 4, C:\Users\yuyin\OneDrive - Cadence Design Systems Inc\2025\Checklist\AAI\CHECKLIST_V3\CHECKLIST\IP_project_folder\reports\8.0\get_default_switching_activity: Dynamic power optimization setting found and properly configured
+2: Info: opt_leakage_to_dynamic_ratio=0.2. In line 60, C:\Users\yuyin\OneDrive - Cadence Design Systems Inc\2025\Checklist\AAI\CHECKLIST_V3\CHECKLIST\IP_project_folder\reports\8.0\getOptMode: Dynamic power optimization setting found and properly configured
+3: Info: opt_power_effort=high. In line 102, C:\Users\yuyin\OneDrive - Cadence Design Systems Inc\2025\Checklist\AAI\CHECKLIST_V3\CHECKLIST\IP_project_folder\reports\8.0\getOptMode: Dynamic power optimization setting found and properly configured
+4: Info: opt_route_type_for_power=true. In line 36, C:\Users\yuyin\OneDrive - Cadence Design Systems Inc\2025\Checklist\AAI\CHECKLIST_V3\CHECKLIST\IP_project_folder\reports\8.0\getOptMode: Dynamic power optimization setting found and properly configured
+5: Info: powerEffort=high. In line 19, C:\Users\yuyin\OneDrive - Cadence Design Systems Inc\2025\Checklist\AAI\CHECKLIST_V3\CHECKLIST\IP_project_folder\reports\8.0\getDesignMode: Dynamic power optimization setting found and properly configured
+6: Info: propagateActivity=true. In line 21, C:\Users\yuyin\OneDrive - Cadence Design Systems Inc\2025\Checklist\AAI\CHECKLIST_V3\CHECKLIST\IP_project_folder\reports\8.0\getDesignMode: Dynamic power optimization setting found and properly configured
+7: Info: route_global_with_power_driven=true. In line 81, C:\Users\yuyin\OneDrive - Cadence Design Systems Inc\2025\Checklist\AAI\CHECKLIST_V3\CHECKLIST\IP_project_folder\reports\8.0\getNanoRouteMode: Dynamic power optimization setting found and properly configured
+8: Info: seq_activity=0.2. In line 3, C:\Users\yuyin\OneDrive - Cadence Design Systems Inc\2025\Checklist\AAI\CHECKLIST_V3\CHECKLIST\IP_project_folder\reports\8.0\get_default_switching_activity: Dynamic power optimization setting found and properly configured

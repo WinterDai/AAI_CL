@@ -1,0 +1,6 @@
+PASS:IMP-2-0-0-00:List Innovus Tech Lef name. eg:N16_Encounter_11M_2Xa1Xd3Xe2Y2R_UTRDL_9T_PODE_1.2a.tlef
+Warn Occurrence: 2
+1: Warn: PRTF_Innovus_N5_16M_1X1Xb1Xe1Ya1Yb6Y2Yy2R_UTRDL_M1P34_M2P35_M3P42_M4P42_M5P76_M6P76_M7P76_M8P76_M9P76_M10P76_M11P76_M12P76_H210_SHDMIM.12b.tlef: Waiver entry not matched - no corresponding tech LEF mismatch found in log: Waived - using previous tech LEF version for legacy block compatibility[WAIVER]
+2: Warn: PRTF_Innovus_N5_8M_1X1Xb1Xe1Ya1Yb6Y2Yy2R_UTRDL_M1P34_M2P35_M3P42_M4P42_M5P76_M6P76_M7P76_M8P76_H210_SHDMIM.13a.tlef: Waiver entry not matched - no corresponding tech LEF mismatch found in log: Waived - using 8M stack variant for low-power design[WAIVER]
+Info Occurrence: 1
+1: Info: PRTF_Innovus_N5_16M_1X1Xb1Xe1Ya1Yb6Y2Yy2R_UTRDL_M1P34_M2P35_M3P42_M4P42_M5P76_M6P76_M7P76_M8P76_M9P76_M10P76_M11P76_M12P76_H210_SHDMIM.13a.tlef. In line 134, C:\Users\chenweif\Checker_dev\CHECKLIST\CHECKLIST\IP_project_folder\logs\2.0\do_innovusOUTwoD.logv: Technology LEF file successfully loaded in Innovus session

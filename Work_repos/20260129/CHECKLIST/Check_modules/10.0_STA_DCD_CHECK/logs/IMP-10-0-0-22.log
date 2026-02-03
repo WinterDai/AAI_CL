@@ -1,0 +1,5 @@
+FAIL:IMP-10-0-0-22:Confirm timing/skew/drv/mpw/noise/ect results and log files are checked based on all signoff modes and all signoff corners.
+IMP-10-0-0-22-ERROR01: Configuration error:
+  Severity: Fail Occurrence: 1
+  - input_files is empty in YAML configuration
+

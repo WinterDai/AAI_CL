@@ -1,0 +1,5 @@
+FAIL:IMP-12-0-0-07:Confirm the ANT rule deck setting is correct.
+IMP-12-0-0-07-ERROR01: Configuration error:
+  Severity: Fail Occurrence: 1
+  - input_files is empty in YAML configuration
+

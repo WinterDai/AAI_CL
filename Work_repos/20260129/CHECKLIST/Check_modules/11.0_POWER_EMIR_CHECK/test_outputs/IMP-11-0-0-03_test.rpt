@@ -1,0 +1,98 @@
+Test Report: IMP-11-0-0-03
+================================================================================
+
+[Test 1/6] Type 1 (requirements.value=N/A, waivers.value=N/A)
+--------------------------------------------------------------------------------
+Test ID: type1_na
+Status: PASS
+
+Checker Report Output:
+PASS:IMP-11-0-0-03:Confirm activity file was used? If not, provide default switching activity values in comments field.
+Info Occurrence: 5
+1: Info: EM_ND1_func_ffgnp_0p825v_m40c_cbest_CCbest_T_rcbest_CCbest_hold.log: Activity file successfully loaded or default switching activity configured
+2: Info: ND1_func_ffgnp_0p825v_125c_cbest_CCbest_T_cworst_CCworst_hold_dynamic.log: Activity file successfully loaded or default switching activity configured
+3: Info: ND1_func_ffgnp_0p825v_125c_cbest_CCbest_T_cworst_CCworst_hold_static.log: Activity file successfully loaded or default switching activity configured
+4: Info: ND1_func_ssgnp_0p675v_125c_cworst_CCworst_T_cworst_CCworst_hold_dynamic.log: Activity file successfully loaded or default switching activity configured
+5: Info: ND1_func_ssgnp_0p675v_125c_cworst_CCworst_T_cworst_CCworst_hold_static.log: Activity file successfully loaded or default switching activity configured
+
+================================================================================
+
+[Test 2/6] Type 1 (requirements.value=N/A, waivers.value=0)
+--------------------------------------------------------------------------------
+Test ID: type1_0
+Status: PASS
+
+Checker Report Output:
+PASS:IMP-11-0-0-03:Confirm activity file was used? If not, provide default switching activity values in comments field.
+Info Occurrence: 6
+1: Info: Explanation: Activity configuration check is informational only for early-stage power analysis: Explanation: Activity configuration check is informational only for early-stage power analysis[WAIVED_INFO]
+2: Info: EM_ND1_func_ffgnp_0p825v_m40c_cbest_CCbest_T_rcbest_CCbest_hold.log: Activity file successfully loaded or default switching activity configured
+3: Info: ND1_func_ffgnp_0p825v_125c_cbest_CCbest_T_cworst_CCworst_hold_dynamic.log: Activity file successfully loaded or default switching activity configured
+4: Info: ND1_func_ffgnp_0p825v_125c_cbest_CCbest_T_cworst_CCworst_hold_static.log: Activity file successfully loaded or default switching activity configured
+5: Info: ND1_func_ssgnp_0p675v_125c_cworst_CCworst_T_cworst_CCworst_hold_dynamic.log: Activity file successfully loaded or default switching activity configured
+6: Info: ND1_func_ssgnp_0p675v_125c_cworst_CCworst_T_cworst_CCworst_hold_static.log: Activity file successfully loaded or default switching activity configured
+
+================================================================================
+
+[Test 3/6] Type 2 (requirements.value>0, waivers.value=N/A)
+--------------------------------------------------------------------------------
+Test ID: type2_na
+Status: ERROR
+
+Checker Report Output:
+FAIL:IMP-11-0-0-03:Confirm activity file was used? If not, provide default switching activity values in comments field.
+Fail Occurrence: 2
+1: Fail: 'read_activity_file' finished successfully: Required activity configuration pattern not satisfied - no valid activity setup detected
+2: Fail: 'set_default_switching_activity' finished successfully: Required activity configuration pattern not satisfied - no valid activity setup detected
+
+================================================================================
+
+[Test 4/6] Type 2 (requirements.value>0, waivers.value=0)
+--------------------------------------------------------------------------------
+Test ID: type2_0
+Status: PASS
+
+Checker Report Output:
+PASS:IMP-11-0-0-03:Confirm activity file was used? If not, provide default switching activity values in comments field.
+Info Occurrence: 3
+1: Info: Explanation: Activity configuration validation is informational during early power analysis iterations: Explanation: Activity configuration validation is informational during early power analysis iterations[WAIVED_INFO]
+2: Info: 'read_activity_file' finished successfully: Required activity configuration pattern not satisfied - no valid activity setup detected[WAIVED_AS_INFO]
+3: Info: 'set_default_switching_activity' finished successfully: Required activity configuration pattern not satisfied - no valid activity setup detected[WAIVED_AS_INFO]
+
+================================================================================
+
+[Test 5/6] Type 3 (requirements.value>0, waivers.value>0)
+--------------------------------------------------------------------------------
+Test ID: type3
+Status: ERROR
+
+Checker Report Output:
+FAIL:IMP-11-0-0-03:Confirm activity file was used? If not, provide default switching activity values in comments field.
+Fail Occurrence: 2
+1: Fail: 'read_activity_file' finished successfully: Required activity configuration pattern not satisfied - no valid activity setup detected
+2: Fail: 'set_default_switching_activity' finished successfully: Required activity configuration pattern not satisfied - no valid activity setup detected
+Warn Occurrence: 2
+1: Warn: ND1_func_ffgnp_0p825v_125c_cbest_CCbest_T_cworst_CCworst_hold_EM.log: Waiver not matched - no corresponding activity configuration issue found in log: EM analysis uses conservative defaults - activity file not required per design review[WAIVER]
+2: Warn: ND1_test_ffgnp_0p825v_m40c_cbest_CCbest_T_rcbest_CCbest_hold_static.log: Waiver not matched - no corresponding activity configuration issue found in log: Test mode static analysis waived - using default activity acceptable for this corner[WAIVER]
+
+================================================================================
+
+[Test 6/6] Type 4 (requirements.value=N/A, waivers.value>0)
+--------------------------------------------------------------------------------
+Test ID: type4
+Status: PASS
+
+Checker Report Output:
+PASS:IMP-11-0-0-03:Confirm activity file was used? If not, provide default switching activity values in comments field.
+Warn Occurrence: 2
+1: Warn: ND1_func_ffgnp_0p825v_125c_cbest_CCbest_T_cworst_CCworst_hold_EM.log: Waiver not matched - no corresponding activity configuration issue found in log: EM analysis uses conservative defaults - activity file not required per design review[WAIVER]
+2: Warn: ND1_test_ffgnp_0p825v_m40c_cbest_CCbest_T_rcbest_CCbest_hold_static.log: Waiver not matched - no corresponding activity configuration issue found in log: Test mode static analysis waived - using default activity acceptable for this corner[WAIVER]
+Info Occurrence: 5
+1: Info: EM_ND1_func_ffgnp_0p825v_m40c_cbest_CCbest_T_rcbest_CCbest_hold.log: Activity file successfully loaded or default switching activity configured
+2: Info: ND1_func_ffgnp_0p825v_125c_cbest_CCbest_T_cworst_CCworst_hold_dynamic.log: Activity file successfully loaded or default switching activity configured
+3: Info: ND1_func_ffgnp_0p825v_125c_cbest_CCbest_T_cworst_CCworst_hold_static.log: Activity file successfully loaded or default switching activity configured
+4: Info: ND1_func_ssgnp_0p675v_125c_cworst_CCworst_T_cworst_CCworst_hold_dynamic.log: Activity file successfully loaded or default switching activity configured
+5: Info: ND1_func_ssgnp_0p675v_125c_cworst_CCworst_T_cworst_CCworst_hold_static.log: Activity file successfully loaded or default switching activity configured
+
+================================================================================
+

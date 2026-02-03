@@ -1,0 +1,6 @@
+PASS:IMP-12-0-0-31:Confirm FLT check result is clean. (for SEC process, for others fill N/A)
+Info Occurrence: 4
+1: Info: Explanation: FLT violations are informational for non-SEC process designs: Explanation: FLT violations are informational for non-SEC process designs[WAIVED_INFO]
+2: Info: FLTM.Mx.S.1_M1: FLT rule violations detected in Pegasus_FLT.sum[WAIVED_AS_INFO]
+3: Info: FLTM.Mx.S.2_M2: FLT rule violations detected in Pegasus_FLT.sum[WAIVED_AS_INFO]
+4: Info: FLTM.Mx.S.3_M3: FLT rule violations detected in Pegasus_FLT.sum[WAIVED_AS_INFO]

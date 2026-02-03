@@ -1,0 +1,6 @@
+PASS:IMP-11-0-0-04:Confirm proper rc/PVT corners were used for IR drop and EM analysis. List rc/PVT corners used in comments field.
+Info Occurrence: 4
+1: Info: Explanation: This check is informational only - corner coverage is validated in separate timing signoff checklist: Explanation: This check is informational only - corner coverage is validated in separate timing signoff checklist[WAIVED_INFO]
+2: Info: func_ffgnp_0p825v_125c. In line 33, C:\dev_workspace\AI-Agent Checklist Automation\CHECKLIST\CHECKLIST\IP_project_folder\logs\ND1_func_ffgnp_0p825v_125c_cbest_CCbest_T_cworst_CCworst_hold_static.log: Corner specification matched: PA view, Signal RC, and PG RC corners validated against expected configuration
+3: Info: func_ffgnp_0p825v_m40c. In line 33, C:\dev_workspace\AI-Agent Checklist Automation\CHECKLIST\CHECKLIST\IP_project_folder\logs\EM_ND1_func_ffgnp_0p825v_m40c_cbest_CCbest_T_rcbest_CCbest_hold.log: Corner specification matched: PA view, Signal RC, and PG RC corners validated against expected configuration
+4: Info: test_ssgnp_0p675v_125c: Corner specification not satisfied: expected PA view or RC corner configuration missing or incorrect[WAIVED_AS_INFO]

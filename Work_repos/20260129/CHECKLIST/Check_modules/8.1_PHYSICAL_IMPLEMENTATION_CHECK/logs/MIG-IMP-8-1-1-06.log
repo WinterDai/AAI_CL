@@ -1,0 +1,5 @@
+FAIL:MIG-IMP-8-1-1-06:Make sure take care the PERC concern during the VDDQ and VDDQ_CK bump assignment and PG integration for LPDDR5 as VDDQ and VDDQ_CK are core voltage and the P2P resistance requirement is 0.1ohm which is tight.
+MIG-IMP-8-1-1-06-ERROR01: Configuration error:
+  Severity: Fail Occurrence: 1
+  - input_files is empty in YAML configuration
+

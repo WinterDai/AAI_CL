@@ -1,0 +1,5 @@
+FAIL:MIG-IMP-8-1-0-11:Confirm the XTC crosstalk connection is correct for the DDRIO has *XTC ports. (Check the Note)
+MIG-IMP-8-1-0-11-ERROR01: Configuration error:
+  Severity: Fail Occurrence: 1
+  - input_files is empty in YAML configuration
+

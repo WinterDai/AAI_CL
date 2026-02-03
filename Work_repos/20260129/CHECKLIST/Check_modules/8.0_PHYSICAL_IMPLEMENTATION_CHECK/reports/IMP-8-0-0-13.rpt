@@ -1,0 +1,8 @@
+PASS:IMP-8-0-0-13:Confirm proper clock tree buffer/inverter types are used. Provide a list in comment field.
+Warn Occurrence: 2
+1: Warn: CKL*QD4*H8*ULVT: Waiver defined but no violation matched: Waived - clock gating disabled for this low-power block per design review[WAIVER]
+2: Warn: DCCKND4BWP300H8P64PDULVT: Waiver defined but no violation matched: Waived - alternative buffer DCCKND6BWP300H8P64PDULVT approved for this design[WAIVER]
+Info Occurrence: 3
+1: Info: CKL*QD4*H8*ULVT. In line 5, C:\Users\yuyin\OneDrive - Cadence Design Systems Inc\2025\Checklist\AAI\CHECKLIST_V3\CHECKLIST\IP_project_folder\reports\8.0\IMP-8-0-0-13.rpt: Required clock tree cell type matched and validated in CTS library specification
+2: Info: CKND2D4BWP300H8P64PDULVT. In line 4, C:\Users\yuyin\OneDrive - Cadence Design Systems Inc\2025\Checklist\AAI\CHECKLIST_V3\CHECKLIST\IP_project_folder\reports\8.0\IMP-8-0-0-13.rpt: Required clock tree cell type matched and validated in CTS library specification
+3: Info: DCCKND4BWP300H8P64PDULVT. In line 1, C:\Users\yuyin\OneDrive - Cadence Design Systems Inc\2025\Checklist\AAI\CHECKLIST_V3\CHECKLIST\IP_project_folder\reports\8.0\IMP-8-0-0-13.rpt: Required clock tree cell type matched and validated in CTS library specification

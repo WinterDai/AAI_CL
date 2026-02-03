@@ -1,0 +1,8 @@
+PASS:IMP-2-0-0-02:Confirm latest DRC rule deck(s) was used? List DRC rule deck name in Comments. eg: PLN3ELO_17M_1Xa1Xb1Xc1Xd1Ya1Yb4Y2Yy2Yx2R_014.11_2a.encrypt PLN3ELO_17M_1Xa1Xb1Xc1Xd1Ya1Yb4Y2Yy2Yx2R_054_PATCH.11_2a.encrypt
+IMP-2-0-0-02-INFO01: Waived DRC rule deck versions:
+  Severity: Info Occurrence: 1
+  - PLN3ELO_17M_1Xa1Xb1Xc1Xd1Ya1Yb4Y2Yy2Yx2R_014.11_2a.encrypt
+IMP-2-0-0-02-INFO02: DRC rule deck verification completed:
+  Severity: Info Occurrence: 1
+  - PLN6FF_15M_1X1Xa1Ya5Y2Yy2Yx2R_001.11a.encrypt
+

@@ -1,0 +1,13 @@
+description: Confirm wake-up time meet customer's requirement. (For non-PSO, please
+  fill N/A)
+input_files:
+- ${CHECKLIST_ROOT}\IP_project_folder\reports\11.0\Powerup.rpt
+requirements:
+  pattern_items:
+  - '1.0e-07'
+  value: 1
+waivers:
+  value: 2
+  waive_items:
+  - name: '1.5e-07'
+    reason: Wake-up time 150ns waived - customer approved for low-power mode operation

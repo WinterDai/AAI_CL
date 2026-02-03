@@ -1,0 +1,10 @@
+FAIL:IMP-5-0-0-14:Confirm that there are no other violations or errors (max cap, max transition etc)?
+IMP-5-0-0-14-ERROR01: Max transition violation:
+  Severity: Fail Occurrence: 3
+  - UDFF_th1/Q
+  - UBUF_fm/Y
+  - UDFF_to/Q
+IMP-5-0-0-14-WARN01: Max_fanout has no constraints:
+  Severity: Warn Occurrence: 1
+  - Max_fanout design rule has no constraints
+

@@ -1,0 +1,113 @@
+Test Report: IMP-11-0-0-19
+================================================================================
+
+[Test 1/6] Type 1 (requirements.value=N/A, waivers.value=N/A)
+--------------------------------------------------------------------------------
+Test ID: type1_na
+Status: PASS
+
+Checker Report Output:
+PASS:IMP-11-0-0-19:Confirm you are aware of and follow the customers' requirement about wake-up/rush-current if they have.(For non-PSO, please fill N/A)
+Info Occurrence: 6
+1: Info: Rush Current: 0.427297A. In line 8, C:\Users\chudongy\dev_workspace\ai_checklist\CHECKLIST\CHECKLIST\IP_project_folder\reports\11.0\Powerup.rpt: Powerup report contains rush current, wake-up time, and complete switch activation data
+2: Info: Wake-up Time: 1.11e-07s. In line 9, C:\Users\chudongy\dev_workspace\ai_checklist\CHECKLIST\CHECKLIST\IP_project_folder\reports\11.0\Powerup.rpt: Powerup report contains rush current, wake-up time, and complete switch activation data
+3: Info: Switches: 28215/28215. In line 11, C:\Users\chudongy\dev_workspace\ai_checklist\CHECKLIST\CHECKLIST\IP_project_folder\reports\11.0\Powerup.rpt: Powerup report contains rush current, wake-up time, and complete switch activation data
+4: Info: First Switch: cdns_lp6_x48_ew_phy_top_SW_MODULE/PSW_18497:NSLEEPIN @ 7.33883e-10s. In line 21, C:\Users\chudongy\dev_workspace\ai_checklist\CHECKLIST\CHECKLIST\IP_project_folder\reports\11.0\Powerup.rpt: Powerup report contains rush current, wake-up time, and complete switch activation data
+5: Info: Last Switch: cdns_lp6_x48_ew_phy_top_SW_MODULE/PSW_18559:NSLEEPIN @ 4.50069e-07s. In line 12, C:\Users\chudongy\dev_workspace\ai_checklist\CHECKLIST\CHECKLIST\IP_project_folder\reports\11.0\Powerup.rpt: Powerup report contains rush current, wake-up time, and complete switch activation data
+6: Info: Please confirm your wake-up time and rush current followed customer requirements
+
+================================================================================
+
+[Test 2/6] Type 1 (requirements.value=N/A, waivers.value=0)
+--------------------------------------------------------------------------------
+Test ID: type1_0
+Status: PASS
+
+Checker Report Output:
+PASS:IMP-11-0-0-19:Confirm you are aware of and follow the customers' requirement about wake-up/rush-current if they have.(For non-PSO, please fill N/A)
+Info Occurrence: 7
+1: Info: Explanation: Powerup metrics are informational only for this non-PSO design: Explanation: Powerup metrics are informational only for this non-PSO design[WAIVED_INFO]
+2: Info: Rush Current: 0.427297A. In line 8, C:\Users\chudongy\dev_workspace\ai_checklist\CHECKLIST\CHECKLIST\IP_project_folder\reports\11.0\Powerup.rpt: Powerup report contains rush current, wake-up time, and complete switch activation data
+3: Info: Wake-up Time: 1.11e-07s. In line 9, C:\Users\chudongy\dev_workspace\ai_checklist\CHECKLIST\CHECKLIST\IP_project_folder\reports\11.0\Powerup.rpt: Powerup report contains rush current, wake-up time, and complete switch activation data
+4: Info: Switches: 28215/28215. In line 11, C:\Users\chudongy\dev_workspace\ai_checklist\CHECKLIST\CHECKLIST\IP_project_folder\reports\11.0\Powerup.rpt: Powerup report contains rush current, wake-up time, and complete switch activation data
+5: Info: First Switch: cdns_lp6_x48_ew_phy_top_SW_MODULE/PSW_18497:NSLEEPIN @ 7.33883e-10s. In line 21, C:\Users\chudongy\dev_workspace\ai_checklist\CHECKLIST\CHECKLIST\IP_project_folder\reports\11.0\Powerup.rpt: Powerup report contains rush current, wake-up time, and complete switch activation data
+6: Info: Last Switch: cdns_lp6_x48_ew_phy_top_SW_MODULE/PSW_18559:NSLEEPIN @ 4.50069e-07s. In line 12, C:\Users\chudongy\dev_workspace\ai_checklist\CHECKLIST\CHECKLIST\IP_project_folder\reports\11.0\Powerup.rpt: Powerup report contains rush current, wake-up time, and complete switch activation data
+7: Info: Please confirm your wake-up time and rush current followed customer requirements
+
+================================================================================
+
+[Test 3/6] Type 2 (requirements.value>0, waivers.value=N/A)
+--------------------------------------------------------------------------------
+Test ID: type2_na
+Status: PASS
+
+Checker Report Output:
+PASS:IMP-11-0-0-19:Confirm you are aware of and follow the customers' requirement about wake-up/rush-current if they have.(For non-PSO, please fill N/A)
+Info Occurrence: 6
+1: Info: Rush Current: 0.427297A. In line 8, C:\Users\chudongy\dev_workspace\ai_checklist\CHECKLIST\CHECKLIST\IP_project_folder\reports\11.0\Powerup.rpt: All power switches turned on successfully, rush current and wake-up time metrics validated
+2: Info: Wake-up Time: 1.11e-07s. In line 9, C:\Users\chudongy\dev_workspace\ai_checklist\CHECKLIST\CHECKLIST\IP_project_folder\reports\11.0\Powerup.rpt: All power switches turned on successfully, rush current and wake-up time metrics validated
+3: Info: Switches: 28215/28215. In line 11, C:\Users\chudongy\dev_workspace\ai_checklist\CHECKLIST\CHECKLIST\IP_project_folder\reports\11.0\Powerup.rpt: All power switches turned on successfully, rush current and wake-up time metrics validated
+4: Info: First Switch: cdns_lp6_x48_ew_phy_top_SW_MODULE/PSW_18497:NSLEEPIN @ 7.33883e-10s. In line 21, C:\Users\chudongy\dev_workspace\ai_checklist\CHECKLIST\CHECKLIST\IP_project_folder\reports\11.0\Powerup.rpt: All power switches turned on successfully, rush current and wake-up time metrics validated
+5: Info: Last Switch: cdns_lp6_x48_ew_phy_top_SW_MODULE/PSW_18559:NSLEEPIN @ 4.50069e-07s. In line 12, C:\Users\chudongy\dev_workspace\ai_checklist\CHECKLIST\CHECKLIST\IP_project_folder\reports\11.0\Powerup.rpt: All power switches turned on successfully, rush current and wake-up time metrics validated
+6: Info: Please confirm your wake-up time and rush current followed customer requirements: All power switches turned on successfully, rush current and wake-up time metrics validated
+
+================================================================================
+
+[Test 4/6] Type 2 (requirements.value>0, waivers.value=0)
+--------------------------------------------------------------------------------
+Test ID: type2_0
+Status: PASS
+
+Checker Report Output:
+PASS:IMP-11-0-0-19:Confirm you are aware of and follow the customers' requirement about wake-up/rush-current if they have.(For non-PSO, please fill N/A)
+Info Occurrence: 7
+1: Info: Explanation: Powerup metric validation is informational only for this design phase: Explanation: Powerup metric validation is informational only for this design phase[WAIVED_INFO]
+2: Info: Rush Current: 0.427297A. In line 8, C:\Users\chudongy\dev_workspace\ai_checklist\CHECKLIST\CHECKLIST\IP_project_folder\reports\11.0\Powerup.rpt: All power switches turned on successfully, rush current and wake-up time metrics validated
+3: Info: Wake-up Time: 1.11e-07s. In line 9, C:\Users\chudongy\dev_workspace\ai_checklist\CHECKLIST\CHECKLIST\IP_project_folder\reports\11.0\Powerup.rpt: All power switches turned on successfully, rush current and wake-up time metrics validated
+4: Info: Switches: 28215/28215. In line 11, C:\Users\chudongy\dev_workspace\ai_checklist\CHECKLIST\CHECKLIST\IP_project_folder\reports\11.0\Powerup.rpt: All power switches turned on successfully, rush current and wake-up time metrics validated
+5: Info: First Switch: cdns_lp6_x48_ew_phy_top_SW_MODULE/PSW_18497:NSLEEPIN @ 7.33883e-10s. In line 21, C:\Users\chudongy\dev_workspace\ai_checklist\CHECKLIST\CHECKLIST\IP_project_folder\reports\11.0\Powerup.rpt: All power switches turned on successfully, rush current and wake-up time metrics validated
+6: Info: Last Switch: cdns_lp6_x48_ew_phy_top_SW_MODULE/PSW_18559:NSLEEPIN @ 4.50069e-07s. In line 12, C:\Users\chudongy\dev_workspace\ai_checklist\CHECKLIST\CHECKLIST\IP_project_folder\reports\11.0\Powerup.rpt: All power switches turned on successfully, rush current and wake-up time metrics validated
+7: Info: Please confirm your wake-up time and rush current followed customer requirements: All power switches turned on successfully, rush current and wake-up time metrics validated
+
+================================================================================
+
+[Test 5/6] Type 3
+--------------------------------------------------------------------------------
+Test ID: type3
+Status: PASS
+
+Checker Report Output:
+PASS:IMP-11-0-0-19:Confirm you are aware of and follow the customers' requirement about wake-up/rush-current if they have.(For non-PSO, please fill N/A)
+Warn Occurrence: 2
+1: Warn: Rush Current: Waiver entry not matched - no corresponding powerup issue found in report: Waived - rush current is within acceptable range per customer spec (max 0.5A)[WAIVER]
+2: Warn: Wake-up Time: Waiver entry not matched - no corresponding powerup issue found in report: Waived - wake-up time meets customer requirement (max 100ns)[WAIVER]
+Info Occurrence: 6
+1: Info: Rush Current: 0.427297A. In line 8, C:\Users\chudongy\dev_workspace\ai_checklist\CHECKLIST\CHECKLIST\IP_project_folder\reports\11.0\Powerup.rpt: All power switches turned on successfully, rush current and wake-up time metrics validated
+2: Info: Wake-up Time: 1.11e-07s. In line 9, C:\Users\chudongy\dev_workspace\ai_checklist\CHECKLIST\CHECKLIST\IP_project_folder\reports\11.0\Powerup.rpt: All power switches turned on successfully, rush current and wake-up time metrics validated
+3: Info: Switches: 28215/28215. In line 11, C:\Users\chudongy\dev_workspace\ai_checklist\CHECKLIST\CHECKLIST\IP_project_folder\reports\11.0\Powerup.rpt: All power switches turned on successfully, rush current and wake-up time metrics validated
+4: Info: First Switch: cdns_lp6_x48_ew_phy_top_SW_MODULE/PSW_18497:NSLEEPIN @ 7.33883e-10s. In line 21, C:\Users\chudongy\dev_workspace\ai_checklist\CHECKLIST\CHECKLIST\IP_project_folder\reports\11.0\Powerup.rpt: All power switches turned on successfully, rush current and wake-up time metrics validated
+5: Info: Last Switch: cdns_lp6_x48_ew_phy_top_SW_MODULE/PSW_18559:NSLEEPIN @ 4.50069e-07s. In line 12, C:\Users\chudongy\dev_workspace\ai_checklist\CHECKLIST\CHECKLIST\IP_project_folder\reports\11.0\Powerup.rpt: All power switches turned on successfully, rush current and wake-up time metrics validated
+6: Info: Please confirm your wake-up time and rush current followed customer requirements: All power switches turned on successfully, rush current and wake-up time metrics validated
+
+================================================================================
+
+[Test 6/6] Type 4
+--------------------------------------------------------------------------------
+Test ID: type4
+Status: PASS
+
+Checker Report Output:
+PASS:IMP-11-0-0-19:Confirm you are aware of and follow the customers' requirement about wake-up/rush-current if they have.(For non-PSO, please fill N/A)
+Warn Occurrence: 2
+1: Warn: Rush Current: Waiver entry not matched - no corresponding powerup issue found in report: Waived - rush current 0.427A is within acceptable range per customer spec (max 0.5A)[WAIVER]
+2: Warn: Wake-up Time: Waiver entry not matched - no corresponding powerup issue found in report: Waived - wake-up time 61.1ns meets customer requirement (max 100ns)[WAIVER]
+Info Occurrence: 6
+1: Info: Rush Current: 0.427297A. In line 8, C:\Users\chudongy\dev_workspace\ai_checklist\CHECKLIST\CHECKLIST\IP_project_folder\reports\11.0\Powerup.rpt: Powerup report contains rush current, wake-up time, and complete switch activation data
+2: Info: Wake-up Time: 1.11e-07s. In line 9, C:\Users\chudongy\dev_workspace\ai_checklist\CHECKLIST\CHECKLIST\IP_project_folder\reports\11.0\Powerup.rpt: Powerup report contains rush current, wake-up time, and complete switch activation data
+3: Info: Switches: 28215/28215. In line 11, C:\Users\chudongy\dev_workspace\ai_checklist\CHECKLIST\CHECKLIST\IP_project_folder\reports\11.0\Powerup.rpt: Powerup report contains rush current, wake-up time, and complete switch activation data
+4: Info: First Switch: cdns_lp6_x48_ew_phy_top_SW_MODULE/PSW_18497:NSLEEPIN @ 7.33883e-10s. In line 21, C:\Users\chudongy\dev_workspace\ai_checklist\CHECKLIST\CHECKLIST\IP_project_folder\reports\11.0\Powerup.rpt: Powerup report contains rush current, wake-up time, and complete switch activation data
+5: Info: Last Switch: cdns_lp6_x48_ew_phy_top_SW_MODULE/PSW_18559:NSLEEPIN @ 4.50069e-07s. In line 12, C:\Users\chudongy\dev_workspace\ai_checklist\CHECKLIST\CHECKLIST\IP_project_folder\reports\11.0\Powerup.rpt: Powerup report contains rush current, wake-up time, and complete switch activation data
+6: Info: Please confirm your wake-up time and rush current followed customer requirements: Powerup report contains rush current, wake-up time, and complete switch activation data
+
+================================================================================
+

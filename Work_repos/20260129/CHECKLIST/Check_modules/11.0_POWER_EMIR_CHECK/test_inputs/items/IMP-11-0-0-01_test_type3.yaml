@@ -1,0 +1,13 @@
+description: Confirm the design has no power open/short and all instances are physically
+  connected.
+input_files:
+- ${CHECKLIST_ROOT}/IP_project_folder/reports/lvs.rep.cls
+requirements:
+  pattern_items:
+  - MATCH
+  value: 1
+waivers:
+  value: 1
+  waive_items:
+  - name: Overall Run Result
+    reason: Waived - LVS mismatch acceptable for this design phase per design review

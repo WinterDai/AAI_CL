@@ -1,0 +1,13 @@
+description: Confirm SPEF extraction includes NDR rule lef file.
+input_files:
+- ${CHECKLIST_ROOT}/IP_project_folder/logs/9.0/do_qrc*.log
+requirements:
+  pattern_items: []
+  value: N/A
+waivers:
+  value: 2
+  waive_items:
+  - name: /projects/yunbao_N6_80bits_EW_PHY_OD_6400/libs/ndr/ndr_1w2s.lef
+    reason: Waived - NDR LEF v5.6 approved for this design despite tech LEF v5.8
+  - name: /projects/yunbao_N6_80bits_EW_PHY_OD_6400/libs/ndr/ndr_2w3s.lef
+    reason: Waived - legacy NDR file used per design team agreement

@@ -1,0 +1,100 @@
+Test Log: IMP-2-0-0-12
+================================================================================
+
+[Test 1/6] Type 1 (requirements.value=N/A, waivers.value=N/A)
+--------------------------------------------------------------------------------
+Test ID: type1_na
+Status: PASS
+
+Checker Log Output:
+PASS:IMP-2-0-0-12:List COD dummy rule deck name (fill N/A if no COD). eg: PLN16FFP_FINcut_AutoGen.11b.encrypt
+IMP-2-0-0-12-INFO01: COD rule deck found in PVL log file:
+  Severity: Info Occurrence: 1
+  - PLN12FFC_FINcut_AutoGen.09_1a.COD
+
+
+================================================================================
+
+[Test 2/6] Type 1 (requirements.value=N/A, waivers.value=0)
+--------------------------------------------------------------------------------
+Test ID: type1_0
+Status: PASS
+
+Checker Log Output:
+PASS:IMP-2-0-0-12:List COD dummy rule deck name (fill N/A if no COD). eg: PLN16FFP_FINcut_AutoGen.11b.encrypt
+IMP-2-0-0-12-INFO01: [WAIVED_INFO]: Waived information:
+  Severity: Info Occurrence: 1
+  - Explanation: COD check is not applicable for this project.
+IMP-2-0-0-12-INFO02: COD rule deck found in PVL log file:
+  Severity: Info Occurrence: 1
+  - PLN12FFC_FINcut_AutoGen.09_1a.COD
+
+
+================================================================================
+
+[Test 3/6] Type 2 (requirements.value>0, waivers.value=N/A)
+--------------------------------------------------------------------------------
+Test ID: type2_na
+Status: PASS
+
+Checker Log Output:
+PASS:IMP-2-0-0-12:List COD dummy rule deck name (fill N/A if no COD). eg: PLN16FFP_FINcut_AutoGen.11b.encrypt
+IMP-2-0-0-12-INFO01: COD rule deck matched expected configuration:
+  Severity: Info Occurrence: 1
+  - PLN12FFC_FINcut_AutoGen.09_1a.COD
+
+
+================================================================================
+
+[Test 4/6] Type 2 (requirements.value>0, waivers.value=0)
+--------------------------------------------------------------------------------
+Test ID: type2_0
+Status: PASS
+
+Checker Log Output:
+PASS:IMP-2-0-0-12:List COD dummy rule deck name (fill N/A if no COD). eg: PLN16FFP_FINcut_AutoGen.11b.encrypt
+IMP-2-0-0-12-INFO01: [WAIVED_INFO]: Waived information:
+  Severity: Info Occurrence: 1
+  - Explanation: COD rule deck version mismatch is acceptable for this design phase.
+IMP-2-0-0-12-INFO02: COD rule deck matched expected configuration:
+  Severity: Info Occurrence: 1
+  - PLN12FFC_FINcut_AutoGen.09_1a.COD
+
+
+================================================================================
+
+[Test 5/6] Type 3
+--------------------------------------------------------------------------------
+Test ID: type3
+Status: PASS
+
+Checker Log Output:
+PASS:IMP-2-0-0-12:List COD dummy rule deck name (fill N/A if no COD). eg: PLN16FFP_FINcut_AutoGen.11b.encrypt
+IMP-2-0-0-12-WARN01: Unused waivers:
+  Severity: Warn Occurrence: 1
+  - PLN16FFP_FINcut_AutoGen.10a.COD
+IMP-2-0-0-12-INFO01: COD rule deck check waived:
+  Severity: Info Occurrence: 1
+  - Expected: PLN16FFP_FINcut_AutoGen.11b.encrypt.COD, Found: PLN12FFC_FINcut_AutoGen.09_1a.COD
+
+
+================================================================================
+
+[Test 6/6] Type 4
+--------------------------------------------------------------------------------
+Test ID: type4
+Status: PASS
+
+Checker Log Output:
+PASS:IMP-2-0-0-12:List COD dummy rule deck name (fill N/A if no COD). eg: PLN16FFP_FINcut_AutoGen.11b.encrypt
+IMP-2-0-0-12-WARN01: Unused waivers:
+  Severity: Warn Occurrence: 2
+  - PLN12FFC_FINcut_AutoGen.09_1a.COD
+  - PLN16FFP_FINcut_AutoGen.10a.COD
+IMP-2-0-0-12-INFO01: COD rule deck found in PVL log file:
+  Severity: Info Occurrence: 1
+  - PLN12FFC_FINcut_AutoGen.09_1a.COD
+
+
+================================================================================
+

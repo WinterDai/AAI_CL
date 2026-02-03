@@ -1,0 +1,9 @@
+description: Confirm no ERROR message during read constraints.
+requirements:
+  value: N/A
+  pattern_items: []
+input_files:
+- ${CHECKLIST_ROOT}/IP_project_folder/reports/7.0/IMP-7-0-0-02.rpt
+waivers:
+  value: N/A
+  waive_items: []

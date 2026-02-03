@@ -1,0 +1,5 @@
+FAIL:IMP-11-0-0-07:Confirm all the PGV views are present in the EMIR scripts.
+IMP-11-0-0-07-ERROR01: Configuration error:
+  Severity: Fail Occurrence: 1
+  - input_files is empty in YAML configuration
+

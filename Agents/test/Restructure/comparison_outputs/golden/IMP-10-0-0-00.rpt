@@ -1,0 +1,7 @@
+PASS:IMP-10-0-0-00:Confirm the netlist/spef version is correct
+Info Occurrence: 5
+1: Info: Current stage is synthesis, SPEF check is not applicable.: Current stage is synthesis, SPEF check is not applicable.[WAIVED_INFO]
+2: Info: Generated on:*2025*: Required pattern not found[WAIVED_AS_INFO]
+3: Info: Error: Netlist file path not found in STA log: Design has no spef/netlist file or unexpected error[WAIVED_AS_INFO]
+4: Info: Error: SPEF file path not found in STA log: Design has no spef/netlist file or unexpected error[WAIVED_AS_INFO]
+5: Info: Error: STA log file not found: ${CHECKLIST_ROOT}/IP_project_folder/logs/sta_post_syn.log: Design has no spef/netlist file or unexpected error[WAIVED_AS_INFO]

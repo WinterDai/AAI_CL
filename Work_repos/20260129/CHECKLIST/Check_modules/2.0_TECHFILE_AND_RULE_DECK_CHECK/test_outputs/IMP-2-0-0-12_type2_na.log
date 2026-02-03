@@ -1,0 +1,5 @@
+PASS:IMP-2-0-0-12:List COD dummy rule deck name (fill N/A if no COD). eg: PLN16FFP_FINcut_AutoGen.11b.encrypt
+IMP-2-0-0-12-INFO01: COD rule deck matched expected configuration:
+  Severity: Info Occurrence: 1
+  - PLN12FFC_FINcut_AutoGen.09_1a.COD
+

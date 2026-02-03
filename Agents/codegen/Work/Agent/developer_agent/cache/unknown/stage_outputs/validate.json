@@ -1,0 +1,26 @@
+{
+  "timestamp": "2026-01-28T13:56:38.410800",
+  "stage": "validate",
+  "inputs": {
+    "code_combined": true
+  },
+  "outputs": {
+    "validation_errors": [],
+    "gate_results": {
+      "gate1_signature": true,
+      "gate1_schema": true,
+      "gate1_type_safety": true,
+      "gate2_none_safety": true,
+      "gate2_alternatives": true,
+      "gate2_bad_regex": true,
+      "gate2_literal_alt": true,
+      "gate2_precedence": true,
+      "gate2_default_strategy": true,
+      "gate2_invalid_mode": true,
+      "gate1_evidence": true,
+      "consistency": true
+    },
+    "error_source": "",
+    "full_code_length": 2356
+  }
+}

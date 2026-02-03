@@ -1,0 +1,10 @@
+FAIL:IMP-5-0-0-17:Confirm CPF/UPF file  has passed Conformal LP quality checks against post DFT insertion synthesis netlist?
+IMP-5-0-0-17-ERROR01: Top boundary port with output/inout direction does not have a driver:
+  Severity: Fail Occurrence: 2
+  - Top boundary output port 'scan_out[100]' is undriven
+  - Top boundary output port 'scan_out[101]' is undriven
+IMP-5-0-0-17-ERROR02: Top boundary port with output/inout direction does not have a driver2:
+  Severity: Fail Occurrence: 2
+  - Top boundary output port 'scan_out[100]' is undriven for test
+  - Top boundary output port 'scan_out[101]' is undriven for test
+

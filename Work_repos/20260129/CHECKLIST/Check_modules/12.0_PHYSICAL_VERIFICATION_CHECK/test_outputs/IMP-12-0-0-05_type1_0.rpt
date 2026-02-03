@@ -1,0 +1,4 @@
+PASS:IMP-12-0-0-05:Confirm open the IP_TIGHTEN_DENSITY switch in DRC rule deck.
+Info Occurrence: 2
+1: Info: Explanation: IP_TIGHTEN_DENSITY switch check is informational for legacy designs: Explanation: IP_TIGHTEN_DENSITY switch check is informational for legacy designs[WAIVED_INFO]
+2: Info: IP_TIGHTEN_DENSITY. In line 119, /home/jingyu/checklist_dev/CHECKLIST/CHECKLIST/IP_project_folder/logs/do_cmd_3star_DRC_sourceme: IP_TIGHTEN_DENSITY switch found enabled (uncommented #DEFINE)

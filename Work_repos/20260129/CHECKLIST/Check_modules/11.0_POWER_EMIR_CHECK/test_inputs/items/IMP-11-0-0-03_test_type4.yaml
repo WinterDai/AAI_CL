@@ -1,0 +1,18 @@
+description: Confirm activity file was used? If not, provide default switching activity
+  values in comments field.
+input_files:
+- ${CHECKLIST_ROOT}/IP_project_folder/logs/*static*.log
+- ${CHECKLIST_ROOT}/IP_project_folder/logs/*dynamic*.log
+- ${CHECKLIST_ROOT}/IP_project_folder/logs/*EM*.log
+requirements:
+  pattern_items: []
+  value: N/A
+waivers:
+  value: 2
+  waive_items:
+  - name: ND1_func_ffgnp_0p825v_125c_cbest_CCbest_T_cworst_CCworst_hold_EM.log
+    reason: EM analysis uses conservative defaults - activity file not required per
+      design review
+  - name: ND1_test_ffgnp_0p825v_m40c_cbest_CCbest_T_rcbest_CCbest_hold_static.log
+    reason: Test mode static analysis waived - using default activity acceptable for
+      this corner

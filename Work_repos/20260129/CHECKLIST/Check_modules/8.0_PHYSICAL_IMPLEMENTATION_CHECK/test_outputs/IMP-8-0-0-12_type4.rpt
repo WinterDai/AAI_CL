@@ -1,0 +1,6 @@
+PASS:IMP-8-0-0-12:Confirm no inputs are tied directly to the power rails (VDD/VSS) by using Tiehigh/Tielow cells(check the Note)
+Warn Occurrence: 2
+1: Warn: inst_data_path_top/inst_data_byte_macro/cdn_hs_phy_data_asic_pads/data_pad_6/PAD1_HV_IN_XTC: Waiver entry not matched - corresponding tie cell violation not found in report: Waived - Approved exception for HV input pad in this design[WAIVER]
+2: Warn: inst_data_path_top/inst_data_byte_macro/cdn_hs_phy_data_asic_pads/data_pad_7/PAD1_HV_IN_XTC: Waiver entry not matched - corresponding tie cell violation not found in report: Waived - PAD cell design allows direct power rail connection per technology spec[WAIVER]
+Info Occurrence: 1
+1: Info: CDN_1ACH_cdn_hs_phy_acm_slice_EW: No tie cell violations found - all inputs use proper Tiehigh/Tielow cells

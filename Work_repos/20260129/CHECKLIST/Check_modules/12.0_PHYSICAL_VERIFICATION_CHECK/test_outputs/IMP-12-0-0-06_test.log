@@ -1,0 +1,146 @@
+Test Log: IMP-12-0-0-06
+================================================================================
+
+[Test 1/6] Type 1 (requirements.value=N/A, waivers.value=N/A)
+--------------------------------------------------------------------------------
+Test ID: type1_na
+Status: ERROR
+
+Checker Log Output:
+FAIL:IMP-12-0-0-06:Confirm the MIM related check setting is correct. (Fill N/A if no MIMCAP inserted or no MIM related layers)
+IMP-12-0-0-06-ERROR01: Required MIM configuration switches not found in DRC setup:
+  Severity: Fail Occurrence: 4
+  - FHDMIM
+  - KOZ_HIGH_SUBST_LAYER
+  - SHDMIM
+  - SHDMIM_KOZ_AP_SPACE_5UM
+
+
+================================================================================
+
+[Test 2/6] Type 1 (requirements.value=N/A, waivers.value=0)
+--------------------------------------------------------------------------------
+Test ID: type1_0
+Status: PASS
+
+Checker Log Output:
+PASS:IMP-12-0-0-06:Confirm the MIM related check setting is correct. (Fill N/A if no MIMCAP inserted or no MIM related layers)
+IMP-12-0-0-06-INFO01: [WAIVED_INFO]: Waived information:
+  Severity: Info Occurrence: 1
+  - Explanation: MIM configuration check is informational only for designs without MIMCAP
+IMP-12-0-0-06-INFO02: [WAIVED_AS_INFO]: Required MIM configuration switches not found in DRC setup:
+  Severity: Info Occurrence: 4
+  - FHDMIM
+  - KOZ_HIGH_SUBST_LAYER
+  - SHDMIM
+  - SHDMIM_KOZ_AP_SPACE_5UM
+
+
+================================================================================
+
+[Test 3/6] Type 2 (requirements.value>0, waivers.value=N/A)
+--------------------------------------------------------------------------------
+Test ID: type2_na
+Status: ERROR
+
+(No log output)
+
+
+STDERR:
+Traceback (most recent call last):
+  File "C:\Users\jingyu\OneDrive - Cadence Design Systems Inc\Desktop\checklist_dev\AI_2026_V1\CHECKLIST\CHECKLIST\Check_modules\12.0_PHYSICAL_VERIFICATION_CHECK\scripts\checker\IMP-12-0-0-06.py", line 603, in <module>
+    sys.exit(main())
+             ~~~~^^
+  File "C:\Users\jingyu\OneDrive - Cadence Design Systems Inc\Desktop\checklist_dev\AI_2026_V1\CHECKLIST\CHECKLIST\Check_modules\12.0_PHYSICAL_VERIFICATION_CHECK\scripts\checker\IMP-12-0-0-06.py", line 596, in main
+    result = checker.execute_check()
+  File "C:\Users\jingyu\OneDrive - Cadence Design Systems Inc\Desktop\checklist_dev\AI_2026_V1\CHECKLIST\CHECKLIST\Check_modules\12.0_PHYSICAL_VERIFICATION_CHECK\scripts\checker\IMP-12-0-0-06.py", line 143, in execute_check
+    return self._execute_type2()
+           ~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\jingyu\OneDrive - Cadence Design Systems Inc\Desktop\checklist_dev\AI_2026_V1\CHECKLIST\CHECKLIST\Check_modules\12.0_PHYSICAL_VERIFICATION_CHECK\scripts\checker\IMP-12-0-0-06.py", line 387, in _execute_type2
+    found_items, missing_items = self._type2_core_logic()
+                                 ~~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\jingyu\OneDrive - Cadence Design Systems Inc\Desktop\checklist_dev\AI_2026_V1\CHECKLIST\CHECKLIST\Check_modules\12.0_PHYSICAL_VERIFICATION_CHECK\scripts\checker\IMP-12-0-0-06.py", line 418, in _type2_core_logic
+    for switch_name, expected_state in pattern_dict.items():
+                                       ^^^^^^^^^^^^^^^^^^
+AttributeError: 'str' object has no attribute 'items'
+
+================================================================================
+
+[Test 4/6] Type 2 (requirements.value>0, waivers.value=0)
+--------------------------------------------------------------------------------
+Test ID: type2_0
+Status: ERROR
+
+(No log output)
+
+
+STDERR:
+Traceback (most recent call last):
+  File "C:\Users\jingyu\OneDrive - Cadence Design Systems Inc\Desktop\checklist_dev\AI_2026_V1\CHECKLIST\CHECKLIST\Check_modules\12.0_PHYSICAL_VERIFICATION_CHECK\scripts\checker\IMP-12-0-0-06.py", line 603, in <module>
+    sys.exit(main())
+             ~~~~^^
+  File "C:\Users\jingyu\OneDrive - Cadence Design Systems Inc\Desktop\checklist_dev\AI_2026_V1\CHECKLIST\CHECKLIST\Check_modules\12.0_PHYSICAL_VERIFICATION_CHECK\scripts\checker\IMP-12-0-0-06.py", line 596, in main
+    result = checker.execute_check()
+  File "C:\Users\jingyu\OneDrive - Cadence Design Systems Inc\Desktop\checklist_dev\AI_2026_V1\CHECKLIST\CHECKLIST\Check_modules\12.0_PHYSICAL_VERIFICATION_CHECK\scripts\checker\IMP-12-0-0-06.py", line 143, in execute_check
+    return self._execute_type2()
+           ~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\jingyu\OneDrive - Cadence Design Systems Inc\Desktop\checklist_dev\AI_2026_V1\CHECKLIST\CHECKLIST\Check_modules\12.0_PHYSICAL_VERIFICATION_CHECK\scripts\checker\IMP-12-0-0-06.py", line 387, in _execute_type2
+    found_items, missing_items = self._type2_core_logic()
+                                 ~~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\jingyu\OneDrive - Cadence Design Systems Inc\Desktop\checklist_dev\AI_2026_V1\CHECKLIST\CHECKLIST\Check_modules\12.0_PHYSICAL_VERIFICATION_CHECK\scripts\checker\IMP-12-0-0-06.py", line 418, in _type2_core_logic
+    for switch_name, expected_state in pattern_dict.items():
+                                       ^^^^^^^^^^^^^^^^^^
+AttributeError: 'str' object has no attribute 'items'
+
+================================================================================
+
+[Test 5/6] Type 3 (requirements.value>0, waivers.value>0)
+--------------------------------------------------------------------------------
+Test ID: type3
+Status: ERROR
+
+(No log output)
+
+
+STDERR:
+Traceback (most recent call last):
+  File "C:\Users\jingyu\OneDrive - Cadence Design Systems Inc\Desktop\checklist_dev\AI_2026_V1\CHECKLIST\CHECKLIST\Check_modules\12.0_PHYSICAL_VERIFICATION_CHECK\scripts\checker\IMP-12-0-0-06.py", line 603, in <module>
+    sys.exit(main())
+             ~~~~^^
+  File "C:\Users\jingyu\OneDrive - Cadence Design Systems Inc\Desktop\checklist_dev\AI_2026_V1\CHECKLIST\CHECKLIST\Check_modules\12.0_PHYSICAL_VERIFICATION_CHECK\scripts\checker\IMP-12-0-0-06.py", line 596, in main
+    result = checker.execute_check()
+  File "C:\Users\jingyu\OneDrive - Cadence Design Systems Inc\Desktop\checklist_dev\AI_2026_V1\CHECKLIST\CHECKLIST\Check_modules\12.0_PHYSICAL_VERIFICATION_CHECK\scripts\checker\IMP-12-0-0-06.py", line 145, in execute_check
+    return self._execute_type3()
+           ~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\jingyu\OneDrive - Cadence Design Systems Inc\Desktop\checklist_dev\AI_2026_V1\CHECKLIST\CHECKLIST\Check_modules\12.0_PHYSICAL_VERIFICATION_CHECK\scripts\checker\IMP-12-0-0-06.py", line 471, in _execute_type3
+    found_items_base, violations = self._type2_core_logic()
+                                   ~~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\jingyu\OneDrive - Cadence Design Systems Inc\Desktop\checklist_dev\AI_2026_V1\CHECKLIST\CHECKLIST\Check_modules\12.0_PHYSICAL_VERIFICATION_CHECK\scripts\checker\IMP-12-0-0-06.py", line 418, in _type2_core_logic
+    for switch_name, expected_state in pattern_dict.items():
+                                       ^^^^^^^^^^^^^^^^^^
+AttributeError: 'str' object has no attribute 'items'
+
+================================================================================
+
+[Test 6/6] Type 4 (requirements.value=N/A, waivers.value>0)
+--------------------------------------------------------------------------------
+Test ID: type4
+Status: ERROR
+
+Checker Log Output:
+FAIL:IMP-12-0-0-06:Confirm the MIM related check setting is correct. (Fill N/A if no MIMCAP inserted or no MIM related layers)
+IMP-12-0-0-06-ERROR01: Required MIM configuration switches not found in DRC setup:
+  Severity: Fail Occurrence: 3
+  - KOZ_HIGH_SUBST_LAYER
+  - SHDMIM
+  - SHDMIM_KOZ_AP_SPACE_5UM
+IMP-12-0-0-06-WARN01: Unused waivers:
+  Severity: Warn Occurrence: 1
+  - FHDMIM_KOZ_AP_SPACE_5um_IP
+IMP-12-0-0-06-INFO01: Waived MIM configuration mismatches:
+  Severity: Info Occurrence: 1
+  - FHDMIM
+
+
+================================================================================
+

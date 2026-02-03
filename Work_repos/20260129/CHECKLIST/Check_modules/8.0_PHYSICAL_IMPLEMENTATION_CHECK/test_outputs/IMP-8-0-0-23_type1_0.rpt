@@ -1,0 +1,12 @@
+PASS:IMP-8-0-0-23:confirm no unplaced cells in design.
+Info Occurrence: 10
+1: Info: Explanation: Unplaced cells are acceptable during early placement exploration phase: Explanation: Unplaced cells are acceptable during early placement exploration phase[WAIVED_INFO]
+2: Info: inst_data_ctrl_top/inst_ctrl_gen/g26516__9945: Unplaced cell instance detected - placement incomplete[WAIVED_AS_INFO]
+3: Info: inst_data_ctrl_top/inst_ctrl_gen/g26625__4733: Unplaced cell instance detected - placement incomplete[WAIVED_AS_INFO]
+4: Info: inst_data_param_top/inst_data_slice_param/FE_OFC54006_n: Unplaced cell instance detected - placement incomplete[WAIVED_AS_INFO]
+5: Info: inst_data_param_top/inst_data_slice_param/inst_param_regout/g99009: Unplaced cell instance detected - placement incomplete[WAIVED_AS_INFO]
+6: Info: inst_data_param_top/inst_data_slice_param/inst_phy_x4_dq_tsel_rd_timing/g1106: Unplaced cell instance detected - placement incomplete[WAIVED_AS_INFO]
+7: Info: inst_data_param_top/inst_data_slice_param/inst_phy_x4_dq_tsel_rd_timing/g1147: Unplaced cell instance detected - placement incomplete[WAIVED_AS_INFO]
+8: Info: inst_data_param_top/inst_data_slice_param/inst_phy_x4_dqs_tsel_rd_timing/g1105: Unplaced cell instance detected - placement incomplete[WAIVED_AS_INFO]
+9: Info: inst_data_param_top/inst_data_slice_param/inst_phy_x4_dqs_tsel_rd_timing/g1106: Unplaced cell instance detected - placement incomplete[WAIVED_AS_INFO]
+10: Info: inst_data_param_top/inst_data_slice_param/inst_phy_x4_dqs_tsel_rd_timing/g1107: Unplaced cell instance detected - placement incomplete[WAIVED_AS_INFO]

@@ -1,0 +1,11 @@
+description: Confirm the LVS rule deck setting is correct.
+input_files:
+- ${CHECKLIST_ROOT}/IP_project_folder/logs/do_pvs_LVS_pvl.log
+- ${CHECKLIST_ROOT}/IP_project_folder/logs/do_cmd_3star_LVS_sourceme
+requirements:
+  pattern_items: []
+  value: N/A
+waivers:
+  value: 0
+  waive_items:
+  - 'Explanation: LVS rule deck validation is informational only for this design phase'

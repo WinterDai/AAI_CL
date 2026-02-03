@@ -1,0 +1,12 @@
+description: Confirm routing blockages are created around the block edges.
+input_files:
+- ${CHECKLIST_ROOT}/IP_project_folder/reports/8.0/IMP-8-0-0-03.rpt
+requirements:
+  pattern_items:
+  - Layer M15; Box {{0.0 0.0 0.3 535.8}}
+  - Layer M15; Box {{751.7 0.0 752.0 535.8}}
+  - Layer M15; Box {{0.3 0.0 751.7 0.3}}
+  value: 3
+waivers:
+  value: N/A
+  waive_items: []

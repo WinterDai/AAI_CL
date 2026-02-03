@@ -1,0 +1,3 @@
+FAIL:IMP-8-0-0-20:Confirm that all the multiflop synchronizer registers are placed close together and their clock pin connected to the same leaf buffer/inverter of the clock tree?
+Fail Occurrence: 1
+1: Fail: input_files is empty in YAML configuration

@@ -1,0 +1,8 @@
+PASS:IMP-2-0-0-09:Confirm BUMP rule deck was not modified? If it was, explain in comments field.
+IMP-2-0-0-09-INFO01: [WAIVED_INFO]: Waived information:
+  Severity: Info Occurrence: 1
+  - Explanation: Rule deck modifications are acceptable for this experimental design
+IMP-2-0-0-09-INFO02: [WAIVED_AS_INFO]: BUMP rule deck has been modified from golden reference:
+  Severity: Info Occurrence: 1
+  - PN5_CU_BUMP_030.10_1a
+

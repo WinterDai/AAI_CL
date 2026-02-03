@@ -1,0 +1,70 @@
+{
+  "item_id": "IMP-10-0-0-00",
+  "description": "Confirm the netlist/spef version is correct.",
+  "check_module": "IMP",
+  "detected_type": 1,
+  "requirements": {
+    "value": "N/A",
+    "pattern_items": []
+  },
+  "input_files": "logs/sta_post_syn.log",
+  "waivers": {
+    "value": "N/A",
+    "waive_items": []
+  },
+  "check_logic": {
+    "parsing_method": "Read STA log and extract netlist/SPEF file info",
+    "pass_fail_logic": "PASS if both files read successfully, FAIL otherwise",
+    "regex_patterns": [
+      "Read Netlist:\\s*(.+)",
+      "Read SPEF:\\s*(.+)",
+      "Status:\\s*(Success|Failed)"
+    ]
+  },
+  "file_analysis": {
+    "sample_lines": [
+      "INFO: Starting STA analysis",
+      "INFO: Read Netlist: /designs/block_a/netlist_v1.v.gz",
+      "  > Status: Success",
+      "  > Version: Cadence Genus 23.15",
+      "INFO: Read SPEF: /designs/block_a/parasitic.spef.gz",
+      "  > Status: Success",
+      "  > SPEF Version: IEEE 1481-1999",
+      "INFO: Analysis complete"
+    ]
+  },
+  "type_execution_specs": [
+    {
+      "type_id": 1,
+      "description": "Boolean check - netlist and SPEF read successfully",
+      "pass_condition": "Both files read with Status: Success",
+      "fail_condition": "Any file read failed",
+      "needs_pattern_search": false,
+      "needs_waiver_logic": false
+    },
+    {
+      "type_id": 2,
+      "description": "Value check with pattern matching",
+      "pass_condition": "Pattern items found in output",
+      "fail_condition": "Pattern items not found",
+      "needs_pattern_search": true,
+      "needs_waiver_logic": false
+    },
+    {
+      "type_id": 3,
+      "description": "Value check with waiver logic",
+      "pass_condition": "Pattern items found or waiver valid",
+      "fail_condition": "Pattern items not found and waiver invalid",
+      "needs_pattern_search": true,
+      "needs_waiver_logic": true
+    },
+    {
+      "type_id": 4,
+      "description": "Boolean check with waiver logic",
+      "pass_condition": "Check passed or waiver valid",
+      "fail_condition": "Check failed and waiver invalid/expired",
+      "needs_pattern_search": false,
+      "needs_waiver_logic": true
+    }
+  ]
+}

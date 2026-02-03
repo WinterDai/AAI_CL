@@ -1,0 +1,5 @@
+FAIL:MIG-IMP-8-1-1-19:Confirm use the clock inverters and set NDR routing to the paths from PLL TESTOUT and OBS out. For HPPHY: the paths are from DESKEW PLL to pll_testout pad input pins or pll_testout DFI interface pins. For Dragonfly LPPHY: the paths are from PLL_clk_obs_out(DS/AS HM)-> phy_obs_pll_clk(phy_top) and PLL_refclk_obs_out(DS/AS HM)->phy_obs_pll_refclk(phy_top) For Dragonfly DDR5 PHY: the paths are : from top deskew PLL(phy_top)->pll_refclk_testout_top_pll/pll_testout_top_pll(phy_top) : from PLL_clk_obs_out(DS HM)->pll_testout_ds*_pll(phy_top), PLL_refclk_obs_out(DS HM)->pll_refclk_testout_ds*_pll(phy_top) : from PLL_clk_obs_out(cmn_cas)->pll_testout_cmn_pll(phy_top),PLL_refclk_obs_out(cmn_cas)->pll_refclk_testout_cmn_pll(phy_top) : from CMN_clk_obs_out(cmnhm)-> CMN_clk_obs_out(phy_top) For tv_chip level: Do similar things to paths which are for FRACN-PLL/DESKEW-PLL clock testing or observing.
+MIG-IMP-8-1-1-19-ERROR01: Configuration error:
+  Severity: Fail Occurrence: 1
+  - input_files is empty in YAML configuration
+

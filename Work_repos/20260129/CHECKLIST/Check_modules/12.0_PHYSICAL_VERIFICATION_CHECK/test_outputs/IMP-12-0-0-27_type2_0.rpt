@@ -1,0 +1,6 @@
+PASS:IMP-12-0-0-27:Confirm Package to Chip comparison passes (bump excel vs bump location in gds/oas)?
+Info Occurrence: 4
+1: Info: Explanation: Bump location verification is informational only for this design phase: Explanation: Bump location verification is informational only for this design phase[WAIVED_INFO]
+2: Info: PAD_0: 5678.1234 6789.2345: Required bump locations missing or coordinates mismatched in GDS extraction report[WAIVED_AS_INFO]
+3: Info: VDD: 2345.6789 3456.7890: Required bump locations missing or coordinates mismatched in GDS extraction report[WAIVED_AS_INFO]
+4: Info: VSS: 1234.5678 2345.6789: Required bump locations missing or coordinates mismatched in GDS extraction report[WAIVED_AS_INFO]

@@ -1,0 +1,5 @@
+FAIL:MIG-IMP-8-1-1-16:For DDR5/DDR4 MCI 80bit PHY implementaton (Check the Note), For HPPHY: group DS0~3 together with DS8-ECC and group DS4~7 together with DS9-ECC, put DS8/DS9 close to CA. For Dragonfly DDR5 PHY: DS4 is used for Channel A ECC data while DS9 is used for the Channel B ECC data. There is no special rule requirement as HPPHY and please place them in order based on each channel.
+MIG-IMP-8-1-1-16-ERROR01: Configuration error:
+  Severity: Fail Occurrence: 1
+  - input_files is empty in YAML configuration
+

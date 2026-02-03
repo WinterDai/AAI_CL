@@ -1,0 +1,5 @@
+PASS:IMP-9-0-0-05:Confirm proper Quantus version is used for RC extraction(match to or mature than Foundry recommended Quantus version)
+IMP-9-0-0-05-INFO01: SPEF files with Quantus version matching or exceeding foundry requirements:
+  Severity: Info Occurrence: 1
+  - All RC extraction is used Quantus version 22.1.1-s233 (Foundry: TSMC_N6)
+

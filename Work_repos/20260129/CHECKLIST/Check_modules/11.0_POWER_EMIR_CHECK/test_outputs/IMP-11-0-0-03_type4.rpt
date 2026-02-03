@@ -1,0 +1,10 @@
+PASS:IMP-11-0-0-03:Confirm activity file was used? If not, provide default switching activity values in comments field.
+Warn Occurrence: 2
+1: Warn: ND1_func_ffgnp_0p825v_125c_cbest_CCbest_T_cworst_CCworst_hold_EM.log: Waiver not matched - no corresponding activity configuration issue found in log: EM analysis uses conservative defaults - activity file not required per design review[WAIVER]
+2: Warn: ND1_test_ffgnp_0p825v_m40c_cbest_CCbest_T_rcbest_CCbest_hold_static.log: Waiver not matched - no corresponding activity configuration issue found in log: Test mode static analysis waived - using default activity acceptable for this corner[WAIVER]
+Info Occurrence: 5
+1: Info: EM_ND1_func_ffgnp_0p825v_m40c_cbest_CCbest_T_rcbest_CCbest_hold.log: Activity file successfully loaded or default switching activity configured
+2: Info: ND1_func_ffgnp_0p825v_125c_cbest_CCbest_T_cworst_CCworst_hold_dynamic.log: Activity file successfully loaded or default switching activity configured
+3: Info: ND1_func_ffgnp_0p825v_125c_cbest_CCbest_T_cworst_CCworst_hold_static.log: Activity file successfully loaded or default switching activity configured
+4: Info: ND1_func_ssgnp_0p675v_125c_cworst_CCworst_T_cworst_CCworst_hold_dynamic.log: Activity file successfully loaded or default switching activity configured
+5: Info: ND1_func_ssgnp_0p675v_125c_cworst_CCworst_T_cworst_CCworst_hold_static.log: Activity file successfully loaded or default switching activity configured

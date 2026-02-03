@@ -1,0 +1,10 @@
+test_case_id: TC_06
+item_id: IMP-5-0-0-00
+type: 3
+direction: negative
+config_override:
+  waivers:
+    value: '2'
+    waive_items: "[\n          {\"name\": \"tcbn03e_bwp143mh117l3p48cpd_base_ulvtssgnp_0p675v_m40c_cworst_CCworst_T_ccs\"\
+      , \"reason\": \"Partial waiver\"}\n        ]"
+generated_at: '2026-01-06T11:40:42.486002'

@@ -1,0 +1,5 @@
+FAIL:MIG-IMP-8-1-0-02:Confirm the delay element and read entry flops are ULVT type for DDR5/LPDDR5 whose date rate is 4400Mbps and above.(check the Note)
+MIG-IMP-8-1-0-02-ERROR01: Configuration error:
+  Severity: Fail Occurrence: 1
+  - input_files is empty in YAML configuration
+

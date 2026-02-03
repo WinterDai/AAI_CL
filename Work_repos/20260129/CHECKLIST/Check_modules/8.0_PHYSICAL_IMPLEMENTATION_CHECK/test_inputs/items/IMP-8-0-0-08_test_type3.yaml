@@ -1,0 +1,15 @@
+description: Confirm max routing layer is correct. Provide max routing layer value
+  in comment field.
+input_files:
+- C:\Users\chyao\Desktop\checklist_dev\CHECKLIST\CHECKLIST\IP_project_folder\reports\8.0\IMP-8-0-0-08\IMP-8-0-0-08.rpt
+requirements:
+  pattern_items:
+  - M13
+  value: 1
+waivers:
+  value: 2
+  waive_items:
+  - name: PGNetLayerList_M14
+    reason: Power grid requires M14 for top-level routing - approved by design team
+  - name: SignalNetLayerList_M14
+    reason: Critical signal paths require M14 - timing closure exception

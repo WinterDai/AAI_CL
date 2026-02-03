@@ -1,0 +1,10 @@
+description: 'TODO: Confirm Power pad locations correctly defined. Note: voltage sources
+  need to be defined on the input side (VDDG) of power switches to all tool to calculate
+  IR drop through power switch.'
+requirements:
+  value: N/A
+  pattern_items: []
+input_files: []
+waivers:
+  value: N/A
+  waive_items: []

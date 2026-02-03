@@ -1,0 +1,16 @@
+description: 'Confirm latest BUMP rule deck(s) was used? List BUMP rule deck name
+  in Comments. eg: PN3_CU_ROUND_BUMP_ON_PAD_17M_1Xa1Xb1Xc1Xd1Ya1Yb4Y2Yy2Yx2R_003.10a'
+input_files:
+- ${CHECKLIST_ROOT}\IP_project_folder\logs\2.0\BUMP_pvl.log
+requirements:
+  pattern_items:
+  - T-000-BP-DR-030-N1
+  - 1.0_1a
+  value: 2
+waivers:
+  value: 2
+  waive_items:
+  - name: PN5_CU_BUMP_030.10_1a
+    reason: This version can be accepted for this project
+  - name: PN5_CU_BUMP_029.05_1b
+    reason: Legacy version approved for backward compatibility testing

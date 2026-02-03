@@ -1,0 +1,5 @@
+FAIL:IMP-12-0-0-10:Confirm turn-off the VIRTUAL_CONNECT in LVS setting.
+IMP-12-0-0-10-ERROR01: Configuration error:
+  Severity: Fail Occurrence: 1
+  - input_files is empty in YAML configuration
+

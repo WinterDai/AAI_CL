@@ -1,0 +1,3 @@
+Check_modules,Item,Info
+5.0_SYNTHESIS_CHECK,IMP-5-0-0-10-INFO01,Problematic cells are waived
+5.0_SYNTHESIS_CHECK,IMP-5-0-0-10-WARN01,Waived cell not used

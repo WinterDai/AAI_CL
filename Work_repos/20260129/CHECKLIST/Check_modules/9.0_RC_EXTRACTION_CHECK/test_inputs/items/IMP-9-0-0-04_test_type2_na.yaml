@@ -1,0 +1,11 @@
+description: Confirm no physically open nets in QRC imcomplete net report.
+input_files:
+- ${CHECKLIST_ROOT}/IP_project_folder/logs/9.0/*.incompletenets
+requirements:
+  pattern_items:
+  - inst_data_path_top/inst_data_byte_macro/FE_OFN11025_param_phy_rdlvl_rd4_mux_control_2
+  - inst_data_path_top/inst_control_macro/debug_signal_unrouted
+  value: 2
+waivers:
+  value: N/A
+  waive_items: []

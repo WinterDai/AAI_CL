@@ -1,0 +1,8 @@
+PASS:IMP-12-0-0-10:Confirm turn-off the VIRTUAL_CONNECT in LVS setting.
+IMP-12-0-0-10-WARN01: Unused waivers:
+  Severity: Warn Occurrence: 1
+  - VIRTUAL_CONNECT enabled
+IMP-12-0-0-10-INFO01: VIRTUAL_CONNECT violations waived by configuration:
+  Severity: Info Occurrence: 1
+  - VIRTUAL CONNECT COLON YES
+

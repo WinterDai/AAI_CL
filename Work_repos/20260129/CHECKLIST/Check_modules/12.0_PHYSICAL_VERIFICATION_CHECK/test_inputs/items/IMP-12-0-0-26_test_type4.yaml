@@ -1,0 +1,14 @@
+description: Confirm BUMP rule DRC result is clean.
+input_files:
+- ${CHECKLIST_ROOT}/IP_project_folder/reports/pv/Calibre_BUMP.rep
+- ${CHECKLIST_ROOT}/IP_project_folder/reports/pv/Pegasus_BUMP.rep
+requirements:
+  pattern_items: []
+  value: N/A
+waivers:
+  value: 2
+  waive_items:
+  - name: UBM.R.5
+    reason: Waived per design review - legacy BUMP design constraint
+  - name: BUMP.M.3
+    reason: Waived - acceptable spacing for this technology node

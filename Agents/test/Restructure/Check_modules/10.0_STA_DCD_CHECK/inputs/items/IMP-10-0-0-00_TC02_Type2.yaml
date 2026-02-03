@@ -1,0 +1,11 @@
+description: Confirm the netlist/spef version is correct.
+
+# Test Case: Type 2 (value>0, pattern_items, waiver.value=N/A)
+requirements:
+  value: 1
+  pattern_items:
+  - Generated on:*2025*
+input_files:
+- c:\Users\wentao\AAI_local\AAI\Main_Work\ACL\Latest\CHECKLIST\IP_project_folder\logs\sta_post_syn.log
+waivers:
+  value: N/A

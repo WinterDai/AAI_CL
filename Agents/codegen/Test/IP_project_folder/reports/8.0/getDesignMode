@@ -1,0 +1,25 @@
+-addPhysicalCell flat                   # enums={hier flat}, default=hier, user setting
+-backsideBottomRoutingLayer {}          # string, default=""
+-backsideTopRoutingLayer {}             # string, default=""
+-bottomRoutingLayer {}                  # string, default=""
+-compressedPGDB true                    # bool, default=true, user setting
+-congEffort auto                        # enums={low medium high auto}, default=auto
+-dual_rail_via_pitch {}                 # string, default=""
+-earlyClockFlow false                   # bool, default=false
+-earlyPBAMode none                      # enums={none high}, default=none
+-expressRoute false                     # bool, default=false
+-flowEffort extreme                     # enums={express standard extreme}, default=standard, user setting
+-highSpeedCore true                     # bool, default=false, user setting, private
+-idealHoldFixing false                  # bool, default=false
+-ignore_followpin_vias false            # bool, default=false
+-merge_trim_shapes {}                   # string, default=""
+-node unspecified                       # enums={N22 N12 N10 N7 N7Plus N6 N5 N5PlusPlus N4 N3 N3E N2 N2X A14 S11 S10 S8 S7 S5 S4 S3 S2 G7 G5 ICF I7 I5 P1222 P1276 P1277 P1278 P1278x P1280 20A 18A C12 C7 unspecified}, default=unspecified
+-optimizationDensityScreenMargin 0.1    # float, default=0.1, min=0, max=1
+-pessimisticMode false                  # enums={true false}, default=false
+-powerEffort high                       # enums={none low high}, default=none, user setting
+-process 7                              # int, default=90, min=1, max=250, user setting
+-propagateActivity true                 # bool, default=false, user setting, private
+-siPrevention true                      # bool, default=false, user setting, private
+-slackWeighting unityWeighting          # enums={unityWeighting viewBasedWeighting}, default=unityWeighting
+-topRoutingLayer M14                    # string, default="", user setting
+-trim_grid_group {}                     # string, default=""

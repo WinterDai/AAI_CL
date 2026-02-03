@@ -1,0 +1,117 @@
+Test Report: IMP-8-0-0-09
+================================================================================
+
+[Test 1/6] Type 1 (requirements.value=N/A, waivers.value=N/A)
+--------------------------------------------------------------------------------
+Test ID: type1_na
+Status: ERROR
+
+Checker Report Output:
+FAIL:IMP-8-0-0-09:Confirm we take care of the dynamic power optimization in the whole innovs flow(Check the Note)
+Fail Occurrence: 1
+1: Fail: get_default_switching_activity -clip_activity_to_domain_freq {} (expected: true). In line 2, C:\Users\chyao\Desktop\checklist_dev\CHECKLIST\CHECKLIST\IP_project_folder\reports\8.0\IMP-8-0-0-09\get_default_switching_activity: Required power optimization settings not found or incorrectly configured in configuration files
+Info Occurrence: 8
+1: Info: getDesignMode -powerEffort high. In line 1, C:\Users\chyao\Desktop\checklist_dev\CHECKLIST\CHECKLIST\IP_project_folder\reports\8.0\IMP-8-0-0-09\getDesignMode: All power optimization settings found and correctly configured in all four configuration files
+2: Info: getDesignMode -propagateActivity true. In line 2, C:\Users\chyao\Desktop\checklist_dev\CHECKLIST\CHECKLIST\IP_project_folder\reports\8.0\IMP-8-0-0-09\getDesignMode: All power optimization settings found and correctly configured in all four configuration files
+3: Info: getNanoRouteMode -route_global_exp_power_driven_effort medium. In line 2, C:\Users\chyao\Desktop\checklist_dev\CHECKLIST\CHECKLIST\IP_project_folder\reports\8.0\IMP-8-0-0-09\getNanoRouteMode: All power optimization settings found and correctly configured in all four configuration files
+4: Info: getNanoRouteMode -route_global_with_power_driven true. In line 1, C:\Users\chyao\Desktop\checklist_dev\CHECKLIST\CHECKLIST\IP_project_folder\reports\8.0\IMP-8-0-0-09\getNanoRouteMode: All power optimization settings found and correctly configured in all four configuration files
+5: Info: getOptMode -opt_leakage_to_dynamic_ratio 0.2. In line 1, C:\Users\chyao\Desktop\checklist_dev\CHECKLIST\CHECKLIST\IP_project_folder\reports\8.0\IMP-8-0-0-09\getOptMode: All power optimization settings found and correctly configured in all four configuration files
+6: Info: getOptMode -opt_power_effort high. In line 3, C:\Users\chyao\Desktop\checklist_dev\CHECKLIST\CHECKLIST\IP_project_folder\reports\8.0\IMP-8-0-0-09\getOptMode: All power optimization settings found and correctly configured in all four configuration files
+7: Info: getOptMode -opt_route_type_for_power true. In line 2, C:\Users\chyao\Desktop\checklist_dev\CHECKLIST\CHECKLIST\IP_project_folder\reports\8.0\IMP-8-0-0-09\getOptMode: All power optimization settings found and correctly configured in all four configuration files
+8: Info: get_default_switching_activity -input_activity 0.15. In line 1, C:\Users\chyao\Desktop\checklist_dev\CHECKLIST\CHECKLIST\IP_project_folder\reports\8.0\IMP-8-0-0-09\get_default_switching_activity: All power optimization settings found and correctly configured in all four configuration files
+
+================================================================================
+
+[Test 2/6] Type 1 (requirements.value=N/A, waivers.value=0)
+--------------------------------------------------------------------------------
+Test ID: type1_0
+Status: PASS
+
+Checker Report Output:
+PASS:IMP-8-0-0-09:Confirm we take care of the dynamic power optimization in the whole innovs flow(Check the Note)
+Info Occurrence: 10
+1: Info: Explanation: Power optimization configuration check is informational only for early design stages: Explanation: Power optimization configuration check is informational only for early design stages[WAIVED_INFO]
+2: Info: getDesignMode -powerEffort high. In line 1, C:\Users\chyao\Desktop\checklist_dev\CHECKLIST\CHECKLIST\IP_project_folder\reports\8.0\IMP-8-0-0-09\getDesignMode: All power optimization settings found and correctly configured in all four configuration files
+3: Info: getDesignMode -propagateActivity true. In line 2, C:\Users\chyao\Desktop\checklist_dev\CHECKLIST\CHECKLIST\IP_project_folder\reports\8.0\IMP-8-0-0-09\getDesignMode: All power optimization settings found and correctly configured in all four configuration files
+4: Info: getNanoRouteMode -route_global_exp_power_driven_effort medium. In line 2, C:\Users\chyao\Desktop\checklist_dev\CHECKLIST\CHECKLIST\IP_project_folder\reports\8.0\IMP-8-0-0-09\getNanoRouteMode: All power optimization settings found and correctly configured in all four configuration files
+5: Info: getNanoRouteMode -route_global_with_power_driven true. In line 1, C:\Users\chyao\Desktop\checklist_dev\CHECKLIST\CHECKLIST\IP_project_folder\reports\8.0\IMP-8-0-0-09\getNanoRouteMode: All power optimization settings found and correctly configured in all four configuration files
+6: Info: getOptMode -opt_leakage_to_dynamic_ratio 0.2. In line 1, C:\Users\chyao\Desktop\checklist_dev\CHECKLIST\CHECKLIST\IP_project_folder\reports\8.0\IMP-8-0-0-09\getOptMode: All power optimization settings found and correctly configured in all four configuration files
+7: Info: getOptMode -opt_power_effort high. In line 3, C:\Users\chyao\Desktop\checklist_dev\CHECKLIST\CHECKLIST\IP_project_folder\reports\8.0\IMP-8-0-0-09\getOptMode: All power optimization settings found and correctly configured in all four configuration files
+8: Info: getOptMode -opt_route_type_for_power true. In line 2, C:\Users\chyao\Desktop\checklist_dev\CHECKLIST\CHECKLIST\IP_project_folder\reports\8.0\IMP-8-0-0-09\getOptMode: All power optimization settings found and correctly configured in all four configuration files
+9: Info: get_default_switching_activity -input_activity 0.15. In line 1, C:\Users\chyao\Desktop\checklist_dev\CHECKLIST\CHECKLIST\IP_project_folder\reports\8.0\IMP-8-0-0-09\get_default_switching_activity: All power optimization settings found and correctly configured in all four configuration files
+10: Info: get_default_switching_activity -clip_activity_to_domain_freq {} (expected: true). In line 2, C:\Users\chyao\Desktop\checklist_dev\CHECKLIST\CHECKLIST\IP_project_folder\reports\8.0\IMP-8-0-0-09\get_default_switching_activity: Required power optimization settings not found or incorrectly configured in configuration files[WAIVED_AS_INFO]
+
+================================================================================
+
+[Test 3/6] Type 2 (requirements.value>0, waivers.value=N/A)
+--------------------------------------------------------------------------------
+Test ID: type2_na
+Status: ERROR
+
+Checker Report Output:
+FAIL:IMP-8-0-0-09:Confirm we take care of the dynamic power optimization in the whole innovs flow(Check the Note)
+Fail Occurrence: 1
+1: Fail: get_default_switching_activity -clip_activity_to_domain_freq {} (expected: true). In line 2, C:\Users\chyao\Desktop\checklist_dev\CHECKLIST\CHECKLIST\IP_project_folder\reports\8.0\IMP-8-0-0-09\get_default_switching_activity: Required power optimization parameters not satisfied: some parameters missing, have empty values, or incorrect configuration
+Info Occurrence: 2
+1: Info: getNanoRouteMode -route_global_with_power_driven true. In line 1, C:\Users\chyao\Desktop\checklist_dev\CHECKLIST\CHECKLIST\IP_project_folder\reports\8.0\IMP-8-0-0-09\getNanoRouteMode: All required power optimization parameters matched and validated: switching activity configured, power-driven routing enabled, design power effort set to high, optimizer power settings correct
+2: Info: get_default_switching_activity -input_activity 0.15. In line 1, C:\Users\chyao\Desktop\checklist_dev\CHECKLIST\CHECKLIST\IP_project_folder\reports\8.0\IMP-8-0-0-09\get_default_switching_activity: All required power optimization parameters matched and validated: switching activity configured, power-driven routing enabled, design power effort set to high, optimizer power settings correct
+
+================================================================================
+
+[Test 4/6] Type 2 (requirements.value>0, waivers.value=0)
+--------------------------------------------------------------------------------
+Test ID: type2_0
+Status: PASS
+
+Checker Report Output:
+PASS:IMP-8-0-0-09:Confirm we take care of the dynamic power optimization in the whole innovs flow(Check the Note)
+Info Occurrence: 4
+1: Info: Explanation: Power optimization parameter check is informational during early implementation phases: Explanation: Power optimization parameter check is informational during early implementation phases[WAIVED_INFO]
+2: Info: getNanoRouteMode -route_global_with_power_driven true. In line 1, C:\Users\chyao\Desktop\checklist_dev\CHECKLIST\CHECKLIST\IP_project_folder\reports\8.0\IMP-8-0-0-09\getNanoRouteMode: All required power optimization parameters matched and validated: switching activity configured, power-driven routing enabled, design power effort set to high, optimizer power settings correct
+3: Info: get_default_switching_activity -input_activity 0.15. In line 1, C:\Users\chyao\Desktop\checklist_dev\CHECKLIST\CHECKLIST\IP_project_folder\reports\8.0\IMP-8-0-0-09\get_default_switching_activity: All required power optimization parameters matched and validated: switching activity configured, power-driven routing enabled, design power effort set to high, optimizer power settings correct
+4: Info: get_default_switching_activity -clip_activity_to_domain_freq {} (expected: true). In line 2, C:\Users\chyao\Desktop\checklist_dev\CHECKLIST\CHECKLIST\IP_project_folder\reports\8.0\IMP-8-0-0-09\get_default_switching_activity: Required power optimization parameters not satisfied: some parameters missing, have empty values, or incorrect configuration[WAIVED_AS_INFO]
+
+================================================================================
+
+[Test 5/6] Type 3
+--------------------------------------------------------------------------------
+Test ID: type3
+Status: ERROR
+
+Checker Report Output:
+FAIL:IMP-8-0-0-09:Confirm we take care of the dynamic power optimization in the whole innovs flow(Check the Note)
+Fail Occurrence: 1
+1: Fail: get_default_switching_activity -clip_activity_to_domain_freq {} (expected: true). In line 2, C:\Users\chyao\Desktop\checklist_dev\CHECKLIST\CHECKLIST\IP_project_folder\reports\8.0\IMP-8-0-0-09\get_default_switching_activity: Required power optimization parameters not satisfied: some parameters missing, have empty values, or incorrect configuration
+Warn Occurrence: 2
+1: Warn: getDesignMode -powerEffort high: Waiver not matched - no corresponding power optimization configuration issue found: Waived - using medium power effort for initial implementation, will be increased during timing closure[WAIVER]
+2: Warn: getNanoRouteMode -route_global_with_power_driven true: Waiver not matched - no corresponding power optimization configuration issue found: Waived - power-driven routing disabled for this design due to runtime constraints, approved by design team[WAIVER]
+Info Occurrence: 2
+1: Info: getNanoRouteMode -route_global_with_power_driven true. In line 1, C:\Users\chyao\Desktop\checklist_dev\CHECKLIST\CHECKLIST\IP_project_folder\reports\8.0\IMP-8-0-0-09\getNanoRouteMode: All required power optimization parameters matched and validated: switching activity configured, power-driven routing enabled, design power effort set to high, optimizer power settings correct
+2: Info: get_default_switching_activity -input_activity 0.15. In line 1, C:\Users\chyao\Desktop\checklist_dev\CHECKLIST\CHECKLIST\IP_project_folder\reports\8.0\IMP-8-0-0-09\get_default_switching_activity: All required power optimization parameters matched and validated: switching activity configured, power-driven routing enabled, design power effort set to high, optimizer power settings correct
+
+================================================================================
+
+[Test 6/6] Type 4
+--------------------------------------------------------------------------------
+Test ID: type4
+Status: ERROR
+
+Checker Report Output:
+FAIL:IMP-8-0-0-09:Confirm we take care of the dynamic power optimization in the whole innovs flow(Check the Note)
+Fail Occurrence: 1
+1: Fail: get_default_switching_activity -clip_activity_to_domain_freq {} (expected: true). In line 2, C:\Users\chyao\Desktop\checklist_dev\CHECKLIST\CHECKLIST\IP_project_folder\reports\8.0\IMP-8-0-0-09\get_default_switching_activity: Required power optimization settings not found or incorrectly configured in configuration files
+Warn Occurrence: 2
+1: Warn: getDesignMode -powerEffort high: Waiver not matched - no corresponding power optimization configuration issue found: Waived - using medium power effort for initial implementation, will be increased during timing closure[WAIVER]
+2: Warn: getNanoRouteMode -route_global_with_power_driven true: Waiver not matched - no corresponding power optimization configuration issue found: Waived - power-driven routing disabled for this design due to runtime constraints, approved by design team[WAIVER]
+Info Occurrence: 8
+1: Info: getDesignMode -powerEffort high. In line 1, C:\Users\chyao\Desktop\checklist_dev\CHECKLIST\CHECKLIST\IP_project_folder\reports\8.0\IMP-8-0-0-09\getDesignMode: All power optimization settings found and correctly configured in all four configuration files
+2: Info: getDesignMode -propagateActivity true. In line 2, C:\Users\chyao\Desktop\checklist_dev\CHECKLIST\CHECKLIST\IP_project_folder\reports\8.0\IMP-8-0-0-09\getDesignMode: All power optimization settings found and correctly configured in all four configuration files
+3: Info: getNanoRouteMode -route_global_exp_power_driven_effort medium. In line 2, C:\Users\chyao\Desktop\checklist_dev\CHECKLIST\CHECKLIST\IP_project_folder\reports\8.0\IMP-8-0-0-09\getNanoRouteMode: All power optimization settings found and correctly configured in all four configuration files
+4: Info: getNanoRouteMode -route_global_with_power_driven true. In line 1, C:\Users\chyao\Desktop\checklist_dev\CHECKLIST\CHECKLIST\IP_project_folder\reports\8.0\IMP-8-0-0-09\getNanoRouteMode: All power optimization settings found and correctly configured in all four configuration files
+5: Info: getOptMode -opt_leakage_to_dynamic_ratio 0.2. In line 1, C:\Users\chyao\Desktop\checklist_dev\CHECKLIST\CHECKLIST\IP_project_folder\reports\8.0\IMP-8-0-0-09\getOptMode: All power optimization settings found and correctly configured in all four configuration files
+6: Info: getOptMode -opt_power_effort high. In line 3, C:\Users\chyao\Desktop\checklist_dev\CHECKLIST\CHECKLIST\IP_project_folder\reports\8.0\IMP-8-0-0-09\getOptMode: All power optimization settings found and correctly configured in all four configuration files
+7: Info: getOptMode -opt_route_type_for_power true. In line 2, C:\Users\chyao\Desktop\checklist_dev\CHECKLIST\CHECKLIST\IP_project_folder\reports\8.0\IMP-8-0-0-09\getOptMode: All power optimization settings found and correctly configured in all four configuration files
+8: Info: get_default_switching_activity -input_activity 0.15. In line 1, C:\Users\chyao\Desktop\checklist_dev\CHECKLIST\CHECKLIST\IP_project_folder\reports\8.0\IMP-8-0-0-09\get_default_switching_activity: All power optimization settings found and correctly configured in all four configuration files
+
+================================================================================
+

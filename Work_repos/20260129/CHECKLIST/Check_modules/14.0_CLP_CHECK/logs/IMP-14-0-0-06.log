@@ -1,0 +1,5 @@
+FAIL:IMP-14-0-0-06:Confirm you have run CLP without issue if the design has VDD_AO domain or other low power features like power gating, retention etc.
+IMP-14-0-0-06-ERROR01: Configuration error:
+  Severity: Fail Occurrence: 1
+  - input_files is empty in YAML configuration
+

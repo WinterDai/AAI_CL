@@ -1,0 +1,5 @@
+FAIL:SRG-IMP-11-3-0-05:Is resolution during dynamic simulation mentioned in comments ?
+SRG-IMP-11-3-0-05-ERROR01: Configuration error:
+  Severity: Fail Occurrence: 1
+  - input_files is empty in YAML configuration
+

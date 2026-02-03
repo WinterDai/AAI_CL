@@ -1,0 +1,14 @@
+description: Confirm the max_capacitance check result is clean.
+input_files:
+- ${CHECKLIST_ROOT}/IP_project_folder/reports/10.0/maxcap_1.rpt
+- ${CHECKLIST_ROOT}/IP_project_folder/reports/10.0/maxcap_2.rpt
+requirements:
+  pattern_items: []
+  value: N/A
+waivers:
+  value: 2
+  waive_items:
+  - name: atb_0
+    reason: Waived per design review - test mode pin with relaxed constraints
+  - name: u_pma_top/u_pma_ana_wrapper/u_pma_ana/cmnda_atb_core_0
+    reason: Waived per design review - analog core pin with external load management

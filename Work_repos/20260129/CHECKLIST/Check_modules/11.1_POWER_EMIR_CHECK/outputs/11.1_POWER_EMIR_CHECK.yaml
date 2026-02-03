@@ -1,0 +1,64 @@
+module: 11.1_POWER_EMIR_CHECK
+stage: Initial
+generated_at: 2025-12-23T18:43:03
+check_items: 
+  MIG-IMP-11-1-0-00: 
+    executed: true
+    status: fail
+    description: Confirm enable the full delay line to check the PG weak points related to delay line in EMIR analysis.
+    failures: 
+      - index: 1
+        detail: input_files is empty in YAML configuration
+        source_line: N/A
+        source_file: N/A
+        reason: input_files is empty in YAML configuration
+  MIG-IMP-11-1-0-01: 
+    executed: true
+    status: fail
+    description: Confrim the MIMCAP PGV view is provided by AMS team for die model correctness. (for non-MIMCAP case, please fill N/A)
+    failures: 
+      - index: 1
+        detail: input_files is empty in YAML configuration
+        source_line: N/A
+        source_file: N/A
+        reason: input_files is empty in YAML configuration
+  MIG-IMP-11-1-0-02: 
+    executed: true
+    status: fail
+    description: Confirm run VDDR domain EMIR for projects with Regulator and double confirm the VDDR domain total capacitance with AMS team. (For non Regulator case,please fill N/A)
+    failures: 
+      - index: 1
+        detail: input_files is empty in YAML configuration
+        source_line: N/A
+        source_file: N/A
+        reason: input_files is empty in YAML configuration
+  MIG-IMP-11-1-1-00: 
+    executed: true
+    status: fail
+    description: [VCD based Power Evaluation] Confirm all Warning message in power evaluation log files can be waived.
+    failures: 
+      - index: 1
+        detail: input_files is empty in YAML configuration
+        source_line: N/A
+        source_file: N/A
+        reason: input_files is empty in YAML configuration
+  MIG-IMP-11-1-1-01: 
+    executed: true
+    status: fail
+    description: [VCD-based Power Evaluation] Confirm no ERROR message in power evaluation log files.
+    failures: 
+      - index: 1
+        detail: input_files is empty in YAML configuration
+        source_line: N/A
+        source_file: N/A
+        reason: input_files is empty in YAML configuration
+  MIG-IMP-11-1-1-02: 
+    executed: true
+    status: fail
+    description: [VCD-based Power Evaluation] Confirm final power evaluation checklist (DDR_PHY_IP_Performance_Analysis_Template_V1p2) and reports have been reviewed by Reviewer.
+    failures: 
+      - index: 1
+        detail: input_files is empty in YAML configuration
+        source_line: N/A
+        source_file: N/A
+        reason: input_files is empty in YAML configuration

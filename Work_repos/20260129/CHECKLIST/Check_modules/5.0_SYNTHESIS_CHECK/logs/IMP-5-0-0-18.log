@@ -1,0 +1,5 @@
+PASS:IMP-5-0-0-18:Document DFT Stuck-At % meets or exceeds expected value?
+IMP-5-0-0-18-INFO01: DFT Stuck-At Coverage:
+  Severity: Info Occurrence: 1
+  - ATCov%:96.19%
+

@@ -1,0 +1,12 @@
+description: Confirm the DRC check result is clean. (fill the confidence level of
+  not touching floorplan again in comment if fill no, for example, 90%~100%)
+input_files:
+- ${CHECKLIST_ROOT}/IP_project_folder/reports/pv/Calibre_DRC.rep
+- ${CHECKLIST_ROOT}/IP_project_folder/reports/pv/Pegasus_DRC.rep
+requirements:
+  pattern_items: []
+  value: N/A
+waivers:
+  value: 0
+  waive_items:
+  - 'Explanation: DRC violations are informational only for this design phase'

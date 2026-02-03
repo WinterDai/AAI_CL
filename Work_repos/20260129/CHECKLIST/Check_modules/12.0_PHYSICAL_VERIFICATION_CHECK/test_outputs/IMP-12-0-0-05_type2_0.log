@@ -1,0 +1,8 @@
+PASS:IMP-12-0-0-05:Confirm open the IP_TIGHTEN_DENSITY switch in DRC rule deck.
+IMP-12-0-0-05-INFO01: [WAIVED_INFO]: Waived information:
+  Severity: Info Occurrence: 1
+  - Explanation: IP_TIGHTEN_DENSITY requirement is informational for this design phase
+IMP-12-0-0-05-INFO02: IP_TIGHTEN_DENSITY switch is enabled in DRC rule deck:
+  Severity: Info Occurrence: 1
+  - IP_TIGHTEN_DENSITY
+

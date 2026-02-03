@@ -1,0 +1,10 @@
+PASS:IMP-12-0-0-07:Confirm the ANT rule deck setting is correct.
+Info Occurrence: 8
+1: Info: Explanation: This check is informational only for early development phase: Explanation: This check is informational only for early development phase[WAIVED_INFO]
+2: Info: ACC_DEBUG. In line 19, C:\Users\jingyu\OneDrive - Cadence Design Systems Inc\Desktop\checklist_dev\AI_2026_V1\CHECKLIST\CHECKLIST\IP_project_folder\logs\do_cmd_3star_ANT_sourceme: All required ANT rule deck settings found and correctly configured
+3: Info: DEBUG_MX. In line 17, C:\Users\jingyu\OneDrive - Cadence Design Systems Inc\Desktop\checklist_dev\AI_2026_V1\CHECKLIST\CHECKLIST\IP_project_folder\logs\do_cmd_3star_ANT_sourceme: All required ANT rule deck settings found and correctly configured
+4: Info: DEBUG_VIA. In line 18, C:\Users\jingyu\OneDrive - Cadence Design Systems Inc\Desktop\checklist_dev\AI_2026_V1\CHECKLIST\CHECKLIST\IP_project_folder\logs\do_cmd_3star_ANT_sourceme: All required ANT rule deck settings found and correctly configured
+5: Info: TSV_RULES. In line 16, C:\Users\jingyu\OneDrive - Cadence Design Systems Inc\Desktop\checklist_dev\AI_2026_V1\CHECKLIST\CHECKLIST\IP_project_folder\logs\do_cmd_3star_ANT_sourceme: All required ANT rule deck settings found and correctly configured
+6: Info: WITH_2MR. In line 15, C:\Users\jingyu\OneDrive - Cadence Design Systems Inc\Desktop\checklist_dev\AI_2026_V1\CHECKLIST\CHECKLIST\IP_project_folder\logs\do_cmd_3star_ANT_sourceme: All required ANT rule deck settings found and correctly configured
+7: Info: WITH_4MZ. In line 14, C:\Users\jingyu\OneDrive - Cadence Design Systems Inc\Desktop\checklist_dev\AI_2026_V1\CHECKLIST\CHECKLIST\IP_project_folder\logs\do_cmd_3star_ANT_sourceme: All required ANT rule deck settings found and correctly configured
+8: Info: warning_102. In line 102, /projects/TC73_DDR5_12800_N5P/libs/ruledeck/PEGASUS/ANT/PLN5LO_16M_1X1Xb1Xe1Ya1Yb6Y2Yy2R_014_ANT.13_1a.encrypt: Required setting not found in configuration files or has incorrect value[WAIVED_AS_INFO]

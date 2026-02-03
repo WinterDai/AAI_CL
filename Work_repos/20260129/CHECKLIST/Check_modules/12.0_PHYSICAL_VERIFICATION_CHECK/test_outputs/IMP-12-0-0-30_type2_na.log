@@ -1,0 +1,9 @@
+FAIL:IMP-12-0-0-30:Confirm DFM check result is clean. (for SEC process, for others fill N/A)
+IMP-12-0-0-30-ERROR01: DFM rule violations found (rules with non-zero violations):
+  Severity: Fail Occurrence: 2
+  - DFM rule: PM_M2_C_3 - 579 violations
+  - PM_M5_C_2
+IMP-12-0-0-30-INFO01: All DFM rules clean (0 violations):
+  Severity: Info Occurrence: 1
+  - DFM rule: PM_M3_C_1 - 0 violations
+

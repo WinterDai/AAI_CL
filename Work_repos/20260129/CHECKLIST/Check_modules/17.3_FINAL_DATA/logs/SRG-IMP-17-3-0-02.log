@@ -1,0 +1,5 @@
+FAIL:SRG-IMP-17-3-0-02:Is the Delivery Package contains IP vendor check list form
+SRG-IMP-17-3-0-02-ERROR01: Configuration error:
+  Severity: Fail Occurrence: 1
+  - input_files is empty in YAML configuration
+

@@ -1,0 +1,6 @@
+PASS:IMP-2-0-0-07:Confirm LVS rule deck was not modified? If it was, explain in comments field.
+Warn Occurrence: 2
+1: Warn: DFM_LVS_RC_PEGASUS_N5_1p16M_1X1Xb1Xe1Ya1Yb6Y2Yy2R_ALRDL.1.2a: Waiver not matched - no corresponding rule deck modification found: Legacy rule deck version approved for backward compatibility testing[WAIVER]
+2: Warn: DFM_LVS_RC_PEGASUS_N5_1p16M_1X1Xb1Xe1Ya1Yb6Y2Yy2R_ALRDL.1.2b: Waiver not matched - no corresponding rule deck modification found: Modification of this rule deck is acceptable for this project[WAIVER]
+Info Occurrence: 1
+1: Info: /process/tsmcN5/data/g/PEGASUS/LVS/v1d2b/MAIN_DECK/PEGASUS_FLOW/DFM/PEGASUS.logic_operation2.enc. In line 34, C:\Users\chenweif\Checker_dev\CHECKLIST\CHECKLIST\IP_project_folder\logs\2.0\LVS_pvl.log: LVS rule deck path successfully extracted from LVS_pvl.log

@@ -1,0 +1,3 @@
+FAIL:IMP-2-0-0-15:List QRC techfile name. eg: 17M1Xa1Xb1Xc1Xd1Ya1Yb4Y2Yy2Yx2R_SHDMIM_UT/fs_v1d0p1a
+Fail Occurrence: 1
+1: Fail: input_files is empty in YAML configuration

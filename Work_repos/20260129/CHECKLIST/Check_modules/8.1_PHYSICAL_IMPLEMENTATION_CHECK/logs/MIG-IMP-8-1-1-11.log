@@ -1,0 +1,5 @@
+FAIL:MIG-IMP-8-1-1-11:Confirm the bump assignment is sync with and agreed with the client or internal package team. And make sure the bump map sent to customer is same as that in final database.
+MIG-IMP-8-1-1-11-ERROR01: Configuration error:
+  Severity: Fail Occurrence: 1
+  - input_files is empty in YAML configuration
+

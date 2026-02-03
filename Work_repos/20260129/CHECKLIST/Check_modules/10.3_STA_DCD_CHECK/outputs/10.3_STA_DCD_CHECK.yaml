@@ -1,0 +1,24 @@
+module: 10.3_STA_DCD_CHECK
+stage: Initial
+generated_at: 2025-12-23T18:43:03
+check_items: 
+  SRG-IMP-10-3-0-00: 
+    executed: true
+    status: fail
+    description: There should not be any clock cells in the data path
+    failures: 
+      - index: 1
+        detail: input_files is empty in YAML configuration
+        source_line: N/A
+        source_file: N/A
+        reason: input_files is empty in YAML configuration
+  SRG-IMP-10-3-0-01: 
+    executed: true
+    status: fail
+    description: All the clock definitions should be defined on the clock sources only
+    failures: 
+      - index: 1
+        detail: input_files is empty in YAML configuration
+        source_line: N/A
+        source_file: N/A
+        reason: input_files is empty in YAML configuration

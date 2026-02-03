@@ -1,0 +1,3 @@
+FAIL:IMP-12-0-0-08:Confirm the MIM_ANT rule deck setting is correct. (For MIG,please check with AMS team about the MIM cell type (MIM or SHDMIM) because the MIM_ANT rule will be different).
+Fail Occurrence: 1
+1: Fail: input_files is empty in YAML configuration

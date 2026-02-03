@@ -1,0 +1,90 @@
+Test Report: IMP-12-0-0-31
+================================================================================
+
+[Test 1/6] Type 1 (requirements.value=N/A, waivers.value=N/A)
+--------------------------------------------------------------------------------
+Test ID: type1_na
+Status: ERROR
+
+Checker Report Output:
+FAIL:IMP-12-0-0-31:Confirm FLT check result is clean. (for SEC process, for others fill N/A)
+Fail Occurrence: 2
+1: Fail: FLT rule: FLTM.Hx.S.1_H1 - 10 violations. In line 346, C:\Users\jingyu\OneDrive - Cadence Design Systems Inc\Desktop\checklist_dev\AI_2026_V1\CHECKLIST\CHECKLIST\IP_project_folder\reports\pv\Pegasus_FLT.sum: FLT rule violations detected in Pegasus_FLT.sum
+2: Fail: FLT rule: FLTM.Mx.S.1_M1 - 12 violations. In line 348, C:\Users\jingyu\OneDrive - Cadence Design Systems Inc\Desktop\checklist_dev\AI_2026_V1\CHECKLIST\CHECKLIST\IP_project_folder\reports\pv\Pegasus_FLT.sum: FLT rule violations detected in Pegasus_FLT.sum
+
+================================================================================
+
+[Test 2/6] Type 1 (requirements.value=N/A, waivers.value=0)
+--------------------------------------------------------------------------------
+Test ID: type1_0
+Status: PASS
+
+Checker Report Output:
+PASS:IMP-12-0-0-31:Confirm FLT check result is clean. (for SEC process, for others fill N/A)
+Info Occurrence: 3
+1: Info: Explanation: FLT violations are informational for non-SEC process designs: Explanation: FLT violations are informational for non-SEC process designs[WAIVED_INFO]
+2: Info: FLT rule: FLTM.Hx.S.1_H1 - 10 violations. In line 346, C:\Users\jingyu\OneDrive - Cadence Design Systems Inc\Desktop\checklist_dev\AI_2026_V1\CHECKLIST\CHECKLIST\IP_project_folder\reports\pv\Pegasus_FLT.sum: FLT rule violations detected in Pegasus_FLT.sum[WAIVED_AS_INFO]
+3: Info: FLT rule: FLTM.Mx.S.1_M1 - 12 violations. In line 348, C:\Users\jingyu\OneDrive - Cadence Design Systems Inc\Desktop\checklist_dev\AI_2026_V1\CHECKLIST\CHECKLIST\IP_project_folder\reports\pv\Pegasus_FLT.sum: FLT rule violations detected in Pegasus_FLT.sum[WAIVED_AS_INFO]
+
+================================================================================
+
+[Test 3/6] Type 2 (requirements.value>0, waivers.value=N/A)
+--------------------------------------------------------------------------------
+Test ID: type2_na
+Status: ERROR
+
+Checker Report Output:
+FAIL:IMP-12-0-0-31:Confirm FLT check result is clean. (for SEC process, for others fill N/A)
+Fail Occurrence: 3
+1: Fail: FLTM.Mx.S.1_M1: FLT rule violations detected in Pegasus_FLT.sum
+2: Fail: FLTM.Mx.S.2_M2: FLT rule violations detected in Pegasus_FLT.sum
+3: Fail: FLTM.Mx.S.3_M3: FLT rule violations detected in Pegasus_FLT.sum
+
+================================================================================
+
+[Test 4/6] Type 2 (requirements.value>0, waivers.value=0)
+--------------------------------------------------------------------------------
+Test ID: type2_0
+Status: PASS
+
+Checker Report Output:
+PASS:IMP-12-0-0-31:Confirm FLT check result is clean. (for SEC process, for others fill N/A)
+Info Occurrence: 4
+1: Info: Explanation: FLT violations are informational for non-SEC process designs: Explanation: FLT violations are informational for non-SEC process designs[WAIVED_INFO]
+2: Info: FLTM.Mx.S.1_M1: FLT rule violations detected in Pegasus_FLT.sum[WAIVED_AS_INFO]
+3: Info: FLTM.Mx.S.2_M2: FLT rule violations detected in Pegasus_FLT.sum[WAIVED_AS_INFO]
+4: Info: FLTM.Mx.S.3_M3: FLT rule violations detected in Pegasus_FLT.sum[WAIVED_AS_INFO]
+
+================================================================================
+
+[Test 5/6] Type 3 (requirements.value>0, waivers.value>0)
+--------------------------------------------------------------------------------
+Test ID: type3
+Status: ERROR
+
+Checker Report Output:
+FAIL:IMP-12-0-0-31:Confirm FLT check result is clean. (for SEC process, for others fill N/A)
+Fail Occurrence: 1
+1: Fail: FLTM.Mx.S.3_M3: FLT rule violations detected in Pegasus_FLT.sum
+Info Occurrence: 2
+1: Info: FLTM.Mx.S.1_M1. In line 348, C:\Users\jingyu\OneDrive - Cadence Design Systems Inc\Desktop\checklist_dev\AI_2026_V1\CHECKLIST\CHECKLIST\IP_project_folder\reports\pv\Pegasus_FLT.sum: FLT rule violation waived per design team approval: Waived - Known issue in legacy IP block, approved by design team[WAIVER]
+2: Info: FLTM.Mx.S.2_M2: FLT rule violation waived per design team approval: Waived - False positive due to custom metal stack configuration[WAIVER]
+
+================================================================================
+
+[Test 6/6] Type 4 (requirements.value=N/A, waivers.value>0)
+--------------------------------------------------------------------------------
+Test ID: type4
+Status: ERROR
+
+Checker Report Output:
+FAIL:IMP-12-0-0-31:Confirm FLT check result is clean. (for SEC process, for others fill N/A)
+Fail Occurrence: 1
+1: Fail: FLT rule: FLTM.Hx.S.1_H1 - 10 violations. In line 346, C:\Users\jingyu\OneDrive - Cadence Design Systems Inc\Desktop\checklist_dev\AI_2026_V1\CHECKLIST\CHECKLIST\IP_project_folder\reports\pv\Pegasus_FLT.sum: FLT rule violations detected in Pegasus_FLT.sum
+Warn Occurrence: 1
+1: Warn: FLTM.Mx.S.2_M2: Waiver not matched - no corresponding FLT rule violation found[WAIVER]
+Info Occurrence: 1
+1: Info: FLT rule: FLTM.Mx.S.1_M1 - 12 violations. In line 348, C:\Users\jingyu\OneDrive - Cadence Design Systems Inc\Desktop\checklist_dev\AI_2026_V1\CHECKLIST\CHECKLIST\IP_project_folder\reports\pv\Pegasus_FLT.sum: FLT rule violation waived per design team approval: Waived - Known issue in legacy IP block, approved by design team[WAIVER]
+
+================================================================================
+

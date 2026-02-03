@@ -1,0 +1,119 @@
+Test Log: IMP-11-0-0-10
+================================================================================
+
+[Test 1/6] Type 1 (requirements.value=N/A, waivers.value=N/A)
+--------------------------------------------------------------------------------
+Test ID: type1_na
+Status: PASS
+
+Checker Log Output:
+PASS:IMP-11-0-0-10:Confirm static power analysis results matches the requirement.
+IMP-11-0-0-10-INFO01: All power analysis data successfully extracted:
+  Severity: Info Occurrence: 3
+  - Static_IR_Drop: 2.40%
+  - VDD_Power_EM: 0.8907
+  - VSS_Power_EM: 1.5485
+
+
+================================================================================
+
+[Test 2/6] Type 1 (requirements.value=N/A, waivers.value=0)
+--------------------------------------------------------------------------------
+Test ID: type1_0
+Status: PASS
+
+Checker Log Output:
+PASS:IMP-11-0-0-10:Confirm static power analysis results matches the requirement.
+IMP-11-0-0-10-INFO01: [WAIVED_INFO]: Waived information:
+  Severity: Info Occurrence: 1
+  - Explanation: Power analysis violations are informational only during early design phase
+IMP-11-0-0-10-INFO02: All power analysis data successfully extracted:
+  Severity: Info Occurrence: 3
+  - Static_IR_Drop: 2.40%
+  - VDD_Power_EM: 0.8907
+  - VSS_Power_EM: 1.5485
+
+
+================================================================================
+
+[Test 3/6] Type 2 (requirements.value>0, waivers.value=N/A)
+--------------------------------------------------------------------------------
+Test ID: type2_na
+Status: ERROR
+
+Checker Log Output:
+FAIL:IMP-11-0-0-10:Confirm static power analysis results matches the requirement.
+IMP-11-0-0-10-ERROR01: Power analysis metrics exceed requirements (violations detected):
+  Severity: Fail Occurrence: 1
+  - VSS_Power_EM: 1.5485 >= target (1.0)
+IMP-11-0-0-10-INFO01: All power analysis metrics meet requirements (3/3 passed):
+  Severity: Info Occurrence: 2
+  - Static_IR_Drop: 2.40% < target (3.0%)
+  - VDD_Power_EM: 0.8907 < target (1.0)
+
+
+================================================================================
+
+[Test 4/6] Type 2 (requirements.value>0, waivers.value=0)
+--------------------------------------------------------------------------------
+Test ID: type2_0
+Status: PASS
+
+Checker Log Output:
+PASS:IMP-11-0-0-10:Confirm static power analysis results matches the requirement.
+IMP-11-0-0-10-INFO01: [WAIVED_INFO]: Waived information:
+  Severity: Info Occurrence: 1
+  - Explanation: Power analysis violations are informational during pre-layout phase
+IMP-11-0-0-10-INFO02: All power analysis metrics meet requirements (3/3 passed):
+  Severity: Info Occurrence: 2
+  - Static_IR_Drop: 2.40% < target (3.0%)
+  - VDD_Power_EM: 0.8907 < target (1.0)
+IMP-11-0-0-10-INFO03: [WAIVED_AS_INFO]: Power analysis metrics exceed requirements (violations detected):
+  Severity: Info Occurrence: 1
+  - VSS_Power_EM: 1.5485 >= target (1.0)
+
+
+================================================================================
+
+[Test 5/6] Type 3 (requirements.value>0, waivers.value>0)
+--------------------------------------------------------------------------------
+Test ID: type3
+Status: ERROR
+
+Checker Log Output:
+FAIL:IMP-11-0-0-10:Confirm static power analysis results matches the requirement.
+IMP-11-0-0-10-ERROR01: Power analysis metrics exceed requirements (violations detected):
+  Severity: Fail Occurrence: 1
+  - VSS_Power_EM: 1.5485 >= target (1.0)
+IMP-11-0-0-10-WARN01: Unused waivers:
+  Severity: Warn Occurrence: 2
+  - Static_IR_Drop
+  - VDD_Power_EM
+IMP-11-0-0-10-INFO01: All power analysis metrics meet requirements (3/3 passed):
+  Severity: Info Occurrence: 2
+  - Static_IR_Drop: 2.40% < target (3.0%)
+  - VDD_Power_EM: 0.8907 < target (1.0)
+
+
+================================================================================
+
+[Test 6/6] Type 4 (requirements.value=N/A, waivers.value>0)
+--------------------------------------------------------------------------------
+Test ID: type4
+Status: PASS
+
+Checker Log Output:
+PASS:IMP-11-0-0-10:Confirm static power analysis results matches the requirement.
+IMP-11-0-0-10-WARN01: Unused waivers:
+  Severity: Warn Occurrence: 2
+  - Static_IR_Drop
+  - VDD_Power_EM
+IMP-11-0-0-10-INFO01: All power analysis data successfully extracted:
+  Severity: Info Occurrence: 3
+  - Static_IR_Drop: 2.40%
+  - VDD_Power_EM: 0.8907
+  - VSS_Power_EM: 1.5485
+
+
+================================================================================
+

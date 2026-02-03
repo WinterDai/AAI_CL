@@ -1,0 +1,8 @@
+PASS:IMP-2-0-0-05:Confirm ANT rule deck was not modified? If it was, explain in comments field.
+IMP-2-0-0-05-INFO01: [WAIVED_INFO]: Waived information:
+  Severity: Info Occurrence: 1
+  - Explanation: Rule deck modifications are acceptable during development phase
+IMP-2-0-0-05-INFO02: [WAIVED_AS_INFO]: ANT rule deck modified - differences detected:
+  Severity: Info Occurrence: 1
+  - IMP-2-0-0-05_diff_20260121_145608.txt
+

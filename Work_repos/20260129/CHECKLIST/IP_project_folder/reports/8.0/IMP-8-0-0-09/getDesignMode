@@ -1,0 +1,2 @@
+-powerEffort high                       # enums={none low high}, default=none, user setting
+-propagateActivity true                 # bool, default=false, user setting, private

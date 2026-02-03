@@ -1,0 +1,6 @@
+FAIL:IMP-12-0-0-32:Confirm no ERROR message in DFM/FLT log files. (for SEC process, for others fill N/A)
+Fail Occurrence: 1
+1: Fail: Worker.*killed: Monitored ERROR patterns found in verification logs
+Info Occurrence: 2
+1: Info: Out of temporary storage disk space, please check -tmp_dirs setting (Worker 11) (Source: Worker 11). In line 567, C:\Users\jingyu\OneDrive - Cadence Design Systems Inc\Desktop\checklist_dev\AI_2026_V1\CHECKLIST\CHECKLIST\IP_project_folder\logs\Pegasus_DFM.log: Monitored ERROR patterns not detected in verification logs
+2: Info: missing_reference exception for cell "pm26" in parent cell "pm100" (Worker 1) (Source: Worker 1). In line 565, C:\Users\jingyu\OneDrive - Cadence Design Systems Inc\Desktop\checklist_dev\AI_2026_V1\CHECKLIST\CHECKLIST\IP_project_folder\logs\Pegasus_DFM.log: Monitored ERROR patterns not detected in verification logs

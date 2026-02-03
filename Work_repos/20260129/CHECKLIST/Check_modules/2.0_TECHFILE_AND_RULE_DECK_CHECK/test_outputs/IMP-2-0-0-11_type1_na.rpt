@@ -1,0 +1,3 @@
+PASS:IMP-2-0-0-11:List BEOL dummy rule deck name. eg: Dummy_BEOL_Pegasus_3nm_E_17M_1Xa1Xb1Xc1Xd1Ya1Yb4Y2Yy2Yx2R_014.11_1a
+Info Occurrence: 1
+1: Info: Dummy_BEOL_Pegasus_5nm_014.13_1a.M16". In line 179, C:\Users\chenweif\Checker_dev\CHECKLIST\CHECKLIST\IP_project_folder\logs\2.0\BEOL_pvl.log: BEOL dummy rule deck name successfully extracted from include statement

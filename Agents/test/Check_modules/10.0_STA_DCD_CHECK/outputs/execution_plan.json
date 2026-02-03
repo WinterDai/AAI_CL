@@ -1,0 +1,21 @@
+{
+  "plan_id": "plan_plan_imp_10_1766147366",
+  "workflow": [
+    [
+      "coding",
+      "generate_readme"
+    ]
+  ],
+  "estimated_time": 2.0,
+  "required_agents": [
+    "coding"
+  ],
+  "dependencies": {
+    "step_1": []
+  },
+  "metadata": {
+    "task_type": "unknown",
+    "complexity": 3,
+    "created_at": 1766147366.620746
+  }
+}

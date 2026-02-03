@@ -1,0 +1,5 @@
+FAIL:HPP-IMP-8-2-0-04:Confirm spare cells or GA fill cells were added and placed evenly across the layout?
+HPP-IMP-8-2-0-04-ERROR01: Configuration error:
+  Severity: Fail Occurrence: 1
+  - input_files is empty in YAML configuration
+

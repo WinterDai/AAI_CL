@@ -1,0 +1,4 @@
+PASS:IMP-8-0-0-04:Confirm buffers are attached for all ports and are set as fixed.
+Warn Occurrence: 2
+1: Warn: debug_clk: Waiver entry not matched - no corresponding port buffer violation found: Debug clock buffer intentionally unfixed for placement optimization - approved for non-critical path[WAIVER]
+2: Warn: test_port: Waiver entry not matched - no corresponding port buffer violation found: Test port uses custom IO cell per design specification - approved by design team[WAIVER]

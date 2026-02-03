@@ -1,0 +1,5 @@
+FAIL:IMP-12-0-0-31:Confirm FLT check result is clean. (for SEC process, for others fill N/A)
+Fail Occurrence: 3
+1: Fail: FLTM.Mx.S.1_M1: FLT rule violations detected in Pegasus_FLT.sum
+2: Fail: FLTM.Mx.S.2_M2: FLT rule violations detected in Pegasus_FLT.sum
+3: Fail: FLTM.Mx.S.3_M3: FLT rule violations detected in Pegasus_FLT.sum

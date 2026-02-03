@@ -1,0 +1,123 @@
+-opt_view_pruning_hold_views_active_list { func_func_ffgnp_0p935v_125c_cbest_CCbest_T_rcworst_CCworst_hold funcND_func_ssgnp_0p675v_125c_cworst_CCworst_T_rcworst_CCworst_hold scan_scan_ffgnp_0p935v_125c_cbest_CCbest_T_rcworst_CCworst_hold }
+                                           # string, default="", user setting, private
+-opt_view_pruning_setup_views_active_list { func_func_ssgnp_0p765v_125c_rcworst_CCworst_T_rcworst_CCworst_T_setup funcND_func_ssgnp_0p675v_125c_cworst_CCworst_T_cworst_CCworst_T_setup func_func_ssgnp_0p765v_m40c_cworst_CCworst_T_cworst_CCworst_T_setup scan_scan_ssgnp_0p765v_m40c_cworst_CCworst_T_cworst_CCworst_T_setup }
+                                           # string, default="", user setting, private
+-opt_activity_refresh_args {}              # string, default=""
+-opt_add_always_on_feed_through_buffers false
+                                           # bool, default=false
+-opt_add_insts true                        # bool, default=true
+-opt_new_inst_prefix {}                    # string, default=""
+-opt_new_net_prefix {}                     # string, default=""
+-opt_add_ports true                        # bool, default=true
+-opt_all_end_points true                   # bool, default=false, user setting
+-opt_allow_multi_bit_on_flop_with_sdc true
+                                           # enums={true false mergeOnly splitOnly}, default=true
+-opt_allow_only_cell_swapping false        # bool, default=false
+-opt_view_pruning_hold_views_persistent_list { scan_scan_ffgnp_0p935v_125c_cbest_CCbest_T_rcworst_CCworst_hold func_func_ffgnp_0p935v_125c_cbest_CCbest_T_rcworst_CCworst_hold funcND_func_ssgnp_0p675v_125c_cworst_CCworst_T_rcworst_CCworst_hold}
+                                           # string, default="", user setting, private
+-opt_view_pruning_setup_views_persistent_list { func_func_ssgnp_0p765v_m40c_cworst_CCworst_T_cworst_CCworst_T_setup scan_scan_ssgnp_0p765v_m40c_cworst_CCworst_T_cworst_CCworst_T_setup funcND_func_ssgnp_0p675v_125c_cworst_CCworst_T_cworst_CCworst_T_setup func_func_ssgnp_0p765v_125c_rcworst_CCworst_T_rcworst_CCworst_T_setup}
+                                           # string, default="", user setting, private
+-opt_view_pruning_hold_target_slack_auto_flow -100
+                                           # int, default=0, user setting, private
+-opt_hold_backward_compatible_path_group true
+                                           # bool, default=false, user setting, private
+-opt_multi_bit_flop_merge_bank_label_inference false
+                                           # bool, default=false
+-opt_consider_routing_congestion auto      # enums={auto false true}, default=auto
+-opt_clone_insts_list {}                   # string, default=""
+-opt_delete_insts true                     # bool, default=true, user setting
+-opt_add_repeater_report_failures false     # bool, default=false
+-opt_detail_drv_failure_reason_max_num_nets 50
+                                           # int, default=50, min=1, max=9999
+-opt_down_size_insts true                  # bool, default=true
+-opt_drv_margin 0                          # float, default=0, user setting
+-opt_early_hold_fixing none                # enums={none ideal propagated}, default=none
+-opt_enable_data_to_data_checks false      # enums={true false}, default=false
+-opt_route_type_for_power true             # bool, default=false, user setting, private
+-opt_enable_podv2_clock_opt_flow true      # bool, default=true
+-opt_enable_targeted_synthesis false       # bool, default=false
+-opt_exp_flow_effort_extreme true          # bool, default=false, user setting, private
+-opt_drv_with_miller_cap false             # bool, default=false
+-opt_post_route_fix_clock_drv true         # bool, default=true
+-opt_drv true                              # bool, default=true
+-opt_fix_fanout_load true                  # bool, default=false, user setting
+-opt_post_route_fix_glitch true            # bool, default=true
+-opt_hold_allow_overlap auto               # enums={auto false true}, default=auto
+-opt_hold_allow_resize true                # enums={false true}, default=true
+-opt_hold_allow_setup_tns_degradation false
+                                           # bool, default=true, user setting
+-opt_hold_on_excluded_clock_nets false     # bool, default=false
+-opt_post_route_fix_si_transitions false
+                                           # bool, default=false
+-opt_high_effort_cells {}                  # string, default=""
+-opt_hold_cells {}                         # string, default="", user setting
+-opt_hold_slack_threshold -1000            # float, default=-1000
+-opt_hold_target_slack -0.01               # float, default=0, user setting
+-opt_honor_density_screen false            # bool, default=false
+-opt_honor_fences false                    # bool, default=false
+-opt_hold_ignore_path_groups {in2reg reg2out in2out}
+                                           # string, default="", user setting
+-opt_leakage_to_dynamic_ratio 0.2          # float, default=1, user setting
+-opt_max_density 0.8                       # float, default=0.95, user setting
+-opt_max_length 150                        # float, default=-1, min=-1, max=2147483647, user setting
+-opt_multi_bit_flop_merge_timing_effort medium
+                                           # enums={low medium high}, default=medium
+-opt_multi_bit_flop_split_timing_effort low
+                                           # enums={low medium high}, default=low
+-opt_move_insts true                       # bool, default=true
+-opt_multi_bit_combinational_merge_timing_effort medium
+                                           # enums={low medium high}, default=medium
+-opt_multi_bit_combinational_mode auto     # enums={auto power area
+-opt_multi_bit_combinational_opt splitOnly
+                                           # enums={false true mergeOnly splitOnly}, default=splitOnly
+-opt_multi_bit_combinational_split_timing_effort low
+                                           # enums={low medium high}, default=low
+-opt_multi_bit_flop_name_prefix CDN_MBIT_
+                                           # string, default=CDN_MBIT_
+-opt_multi_bit_flop_name_separator _MB_    # string, default=_MB_
+-opt_multi_bit_flop_name_suffix {}         # string, default=""
+-opt_multi_bit_flop_opt splitOnly          # enums={false true mergeOnly splitOnly}, default=splitOnly
+-opt_multi_bit_flop_reorder_bits false     # enums={false true timing power}, default=false
+-opt_multi_bit_unused_bit_count 1          # int, default=1, min=1, max=32
+-opt_multi_bit_unused_bits prePlace        # enums={false true prePlace preCTS}, default=prePlace
+-opt_pre_route_ndr_aware {}                # string, default=""
+-opt_one_pass_lec false                    # bool, default=false
+-opt_duplicate_cte_constrained_hport false
+                                           # bool, default=false
+-opt_icg_enable_pin_rebuffering false      # enums={true auto false}, default=false
+-opt_report_multi_bit_unmerged_reasons false
+                                           # bool, default=false
+-opt_constant_inputs false                 # bool, default=false
+-opt_constant_nets true                    # bool, default=true
+-opt_resize_flip_flops true                # bool, default=true
+-opt_tied_inputs false                     # bool, default=false
+-opt_podv2_flow_effort auto                # enums={auto standard extreme}, default=auto
+-opt_post_route_allow_overlap true         # bool, default=true
+-opt_post_route_area_reclaim setupAware    # enums={none setupAware holdAndSetupAware}, default=none, user setting
+-opt_post_route_check_antenna_rules true
+                                           # bool, default=true
+-opt_post_route_drv_recovery auto          # ternary, default=auto
+-opt_post_route_hold_recovery false        # ternary, default=false
+-opt_post_route_setup_recovery auto        # ternary, default=auto
+-opt_power_effort high                     # enums={none low high}, default=none, user setting
+-opt_preserve_all_sequential false         # bool, default=false
+-opt_preserve_hpin_function false          # bool, default=false
+-opt_area_recovery true                    # enums={true false default}, default=default, user setting
+-opt_reclaim_area_incremental auto         # enums={true false auto}, default=auto, user setting, private
+-opt_multi_bit_flop_split_report_failure_reason true
+                                           # bool, default=true
+-opt_resize_power_switch_insts false       # bool, default=false
+-opt_resize_level_shifter_and_iso_insts false
+                                           # bool, default=false
+-opt_enable_restructure true               # bool, default=true, user setting
+-opt_sequential_genus_restructure_report_failure_reason false
+                                           # bool, default=false
+-opt_setup_target_slack 0.02               # float, default=0, user setting
+-opt_area_recovery_setup_target_slack 0    # float, default=0
+-opt_flop_pins_report false                # enums={false true}, default=false
+-opt_flops_report false                    # enums={false true}, default=false
+-opt_remove_redundant_insts true           # bool, default=true
+-opt_pin_swapping true                     # bool, default=true
+-opt_target_based_opt_file {}              # string, default=""
+-opt_target_based_opt_file_only true       # enums={false true}, default=true
+-opt_target_based_opt_hold_file {}         # string, default=""

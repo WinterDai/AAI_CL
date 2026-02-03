@@ -1,0 +1,6 @@
+
+abort_on_layout_error YES
+layout_primary "CDN_204H_cdn_hs_phy_data_slice"
+layout_path "dbs/CDN_204H_cdn_hs_phy_data_slice.OUTwD.merged.gds.gz"
+layout_format		GDSII
+include "PLN5LO_16M_1X1Xb1Xe1Ya1Yb6Y2Yy2R_014.13_1a.encrypt.block"

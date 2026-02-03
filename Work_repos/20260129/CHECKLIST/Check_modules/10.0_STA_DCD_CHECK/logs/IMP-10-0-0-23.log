@@ -1,0 +1,5 @@
+FAIL:IMP-10-0-0-23:Confirm the DCD check is clean if the design request DCD check on some special circuits.
+IMP-10-0-0-23-ERROR01: Configuration error:
+  Severity: Fail Occurrence: 1
+  - input_files is empty in YAML configuration
+

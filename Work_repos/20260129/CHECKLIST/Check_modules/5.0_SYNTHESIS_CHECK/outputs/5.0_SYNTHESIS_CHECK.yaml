@@ -1,0 +1,458 @@
+module: 5.0_SYNTHESIS_CHECK
+stage: Initial
+generated_at: 2025-12-23T18:43:03
+check_items: 
+  IMP-5-0-0-00: 
+    executed: true
+    status: pass
+    description: Confirm synthesis is using lib models for timing?
+    infos: 
+      - index: 1
+        detail: tcbn03e_bwp143mh117l3p48cpd_base_elvtssgnp_0p675v_m40c_cworst_CCworst_T_ccs
+        source_line: 7
+        source_file: 'C:\Users\yuyin\OneDrive - Cadence Design Systems Inc\2025\Checklist\AAI\CHECKLIST_V3\CHECKLIST\IP_project_folder\reports\qor.rpt'
+        reason: Library loaded successfully
+      - index: 2
+        detail: tcbn03e_bwp143mh117l3p48cpd_base_lvtssgnp_0p675v_m40c_cworst_CCworst_T_ccs
+        source_line: 8
+        source_file: 'C:\Users\yuyin\OneDrive - Cadence Design Systems Inc\2025\Checklist\AAI\CHECKLIST_V3\CHECKLIST\IP_project_folder\reports\qor.rpt'
+        reason: Library loaded successfully
+      - index: 3
+        detail: tcbn03e_bwp143mh117l3p48cpd_base_svtssgnp_0p675v_m40c_cworst_CCworst_T_ccs
+        source_line: 9
+        source_file: 'C:\Users\yuyin\OneDrive - Cadence Design Systems Inc\2025\Checklist\AAI\CHECKLIST_V3\CHECKLIST\IP_project_folder\reports\qor.rpt'
+        reason: Library loaded successfully
+      - index: 4
+        detail: tcbn03e_bwp143mh117l3p48cpd_base_ulvtssgnp_0p675v_m40c_cworst_CCworst_T_ccs
+        source_line: 10
+        source_file: 'C:\Users\yuyin\OneDrive - Cadence Design Systems Inc\2025\Checklist\AAI\CHECKLIST_V3\CHECKLIST\IP_project_folder\reports\qor.rpt'
+        reason: Library loaded successfully
+      - index: 5
+        detail: tcbn03e_bwp143mh169l3p48cpd_base_elvtssgnp_0p675v_m40c_cworst_CCworst_T_ccs
+        source_line: 11
+        source_file: 'C:\Users\yuyin\OneDrive - Cadence Design Systems Inc\2025\Checklist\AAI\CHECKLIST_V3\CHECKLIST\IP_project_folder\reports\qor.rpt'
+        reason: Library loaded successfully
+      - index: 6
+        detail: tcbn03e_bwp143mh169l3p48cpd_base_lvtssgnp_0p675v_m40c_cworst_CCworst_T_ccs
+        source_line: 12
+        source_file: 'C:\Users\yuyin\OneDrive - Cadence Design Systems Inc\2025\Checklist\AAI\CHECKLIST_V3\CHECKLIST\IP_project_folder\reports\qor.rpt'
+        reason: Library loaded successfully
+      - index: 7
+        detail: tcbn03e_bwp143mh169l3p48cpd_base_svtssgnp_0p675v_m40c_cworst_CCworst_T_ccs
+        source_line: 13
+        source_file: 'C:\Users\yuyin\OneDrive - Cadence Design Systems Inc\2025\Checklist\AAI\CHECKLIST_V3\CHECKLIST\IP_project_folder\reports\qor.rpt'
+        reason: Library loaded successfully
+      - index: 8
+        detail: tcbn03e_bwp143mh169l3p48cpd_base_ulvtssgnp_0p675v_m40c_cworst_CCworst_T_ccs
+        source_line: 14
+        source_file: 'C:\Users\yuyin\OneDrive - Cadence Design Systems Inc\2025\Checklist\AAI\CHECKLIST_V3\CHECKLIST\IP_project_folder\reports\qor.rpt'
+        reason: Library loaded successfully
+      - index: 9
+        detail: tcbn03e_bwp143mh286l3p48cpd_base_elvtssgnp_0p675v_m40c_cworst_CCworst_T_ccs
+        source_line: 15
+        source_file: 'C:\Users\yuyin\OneDrive - Cadence Design Systems Inc\2025\Checklist\AAI\CHECKLIST_V3\CHECKLIST\IP_project_folder\reports\qor.rpt'
+        reason: Library loaded successfully
+      - index: 10
+        detail: tcbn03e_bwp143mh286l3p48cpd_base_lvtssgnp_0p675v_m40c_cworst_CCworst_T_ccs
+        source_line: 16
+        source_file: 'C:\Users\yuyin\OneDrive - Cadence Design Systems Inc\2025\Checklist\AAI\CHECKLIST_V3\CHECKLIST\IP_project_folder\reports\qor.rpt'
+        reason: Library loaded successfully
+      - index: 11
+        detail: tcbn03e_bwp143mh286l3p48cpd_base_svtssgnp_0p675v_m40c_cworst_CCworst_T_ccs
+        source_line: 17
+        source_file: 'C:\Users\yuyin\OneDrive - Cadence Design Systems Inc\2025\Checklist\AAI\CHECKLIST_V3\CHECKLIST\IP_project_folder\reports\qor.rpt'
+        reason: Library loaded successfully
+      - index: 12
+        detail: tcbn03e_bwp143mh286l3p48cpd_base_ulvtssgnp_0p675v_m40c_cworst_CCworst_T_ccs
+        source_line: 18
+        source_file: 'C:\Users\yuyin\OneDrive - Cadence Design Systems Inc\2025\Checklist\AAI\CHECKLIST_V3\CHECKLIST\IP_project_folder\reports\qor.rpt'
+        reason: Library loaded successfully
+      - index: 13
+        detail: tcbn03e_bwp143mh286l3p48cpd_mb_elvtssgnp_0p675v_m40c_cworst_CCworst_T_ccs
+        source_line: 19
+        source_file: 'C:\Users\yuyin\OneDrive - Cadence Design Systems Inc\2025\Checklist\AAI\CHECKLIST_V3\CHECKLIST\IP_project_folder\reports\qor.rpt'
+        reason: Library loaded successfully
+      - index: 14
+        detail: tcbn03e_bwp143mh286l3p48cpd_mb_lvtssgnp_0p675v_m40c_cworst_CCworst_T_ccs
+        source_line: 20
+        source_file: 'C:\Users\yuyin\OneDrive - Cadence Design Systems Inc\2025\Checklist\AAI\CHECKLIST_V3\CHECKLIST\IP_project_folder\reports\qor.rpt'
+        reason: Library loaded successfully
+      - index: 15
+        detail: tcbn03e_bwp143mh286l3p48cpd_mb_svtssgnp_0p675v_m40c_cworst_CCworst_T_ccs
+        source_line: 21
+        source_file: 'C:\Users\yuyin\OneDrive - Cadence Design Systems Inc\2025\Checklist\AAI\CHECKLIST_V3\CHECKLIST\IP_project_folder\reports\qor.rpt'
+        reason: Library loaded successfully
+      - index: 16
+        detail: tcbn03e_bwp143mh286l3p48cpd_mb_ulvtssgnp_0p675v_m40c_cworst_CCworst_T_ccs
+        source_line: 22
+        source_file: 'C:\Users\yuyin\OneDrive - Cadence Design Systems Inc\2025\Checklist\AAI\CHECKLIST_V3\CHECKLIST\IP_project_folder\reports\qor.rpt'
+        reason: Library loaded successfully
+  IMP-5-0-0-01: 
+    executed: true
+    status: pass
+    description: Confirm synthesis is using lef data for PLE optimization?
+    infos: 
+      - index: 1
+        detail: /process/tsmcN3/data/stdcell/n3ge/TSMC/PRTF_Innovus_3nm_014_Cad_V11s1b/PRTF/PRTF_Innovus_3nm_014_Cad_V11_1b/PR_tech/Cadence/LefHeader/Standard/VHV/PRTF_Innovus_N3E_15M_1Xa1Xb1Xc1Xd1Ya1Yb4Y2Yy2Z_UTRDL_M1P48_M2P26_M3P35_M4P35_M5P42_M6P76_M7P76_M8P76_M9P76_M10P76_M11P76_143H_SHDMIM.11_1b.tlef
+        source_line: 4140
+        source_file: 'C:\Users\yuyin\OneDrive - Cadence Design Systems Inc\2025\Checklist\AAI\CHECKLIST_V3\CHECKLIST\IP_project_folder\logs\genus.syn_generic.log'
+        reason: LEF file is being used for PLE optimization
+      - index: 2
+        detail: /process/tsmcN3/data/stdcell/n3ge/TSMC/tcbn03e_bwp143mh117l3p48cpd_base_elvt_110b/lef/tcbn03e_bwp143mh117l3p48cpd_base_elvt_par.lef
+        source_line: 4141
+        source_file: 'C:\Users\yuyin\OneDrive - Cadence Design Systems Inc\2025\Checklist\AAI\CHECKLIST_V3\CHECKLIST\IP_project_folder\logs\genus.syn_generic.log'
+        reason: LEF file is being used for PLE optimization
+      - index: 3
+        detail: /process/tsmcN3/data/stdcell/n3ge/TSMC/tcbn03e_bwp143mh117l3p48cpd_base_elvt_110b/lef/tcbn03e_bwp143mh117l3p48cpd_base_elvt.lef
+        source_line: 4142
+        source_file: 'C:\Users\yuyin\OneDrive - Cadence Design Systems Inc\2025\Checklist\AAI\CHECKLIST_V3\CHECKLIST\IP_project_folder\logs\genus.syn_generic.log'
+        reason: LEF file is being used for PLE optimization
+      - index: 4
+        detail: /process/tsmcN3/data/stdcell/n3ge/TSMC/tcbn03e_bwp143mh117l3p48cpd_base_lvt_110b/lef/tcbn03e_bwp143mh117l3p48cpd_base_lvt.lef
+        source_line: 4143
+        source_file: 'C:\Users\yuyin\OneDrive - Cadence Design Systems Inc\2025\Checklist\AAI\CHECKLIST_V3\CHECKLIST\IP_project_folder\logs\genus.syn_generic.log'
+        reason: LEF file is being used for PLE optimization
+      - index: 5
+        detail: /process/tsmcN3/data/stdcell/n3ge/TSMC/tcbn03e_bwp143mh117l3p48cpd_base_svt_110b/lef/tcbn03e_bwp143mh117l3p48cpd_base_svt.lef
+        source_line: 4144
+        source_file: 'C:\Users\yuyin\OneDrive - Cadence Design Systems Inc\2025\Checklist\AAI\CHECKLIST_V3\CHECKLIST\IP_project_folder\logs\genus.syn_generic.log'
+        reason: LEF file is being used for PLE optimization
+      - index: 6
+        detail: /process/tsmcN3/data/stdcell/n3ge/TSMC/tcbn03e_bwp143mh117l3p48cpd_base_ulvt_110b/lef/tcbn03e_bwp143mh117l3p48cpd_base_ulvt.lef
+        source_line: 4145
+        source_file: 'C:\Users\yuyin\OneDrive - Cadence Design Systems Inc\2025\Checklist\AAI\CHECKLIST_V3\CHECKLIST\IP_project_folder\logs\genus.syn_generic.log'
+        reason: LEF file is being used for PLE optimization
+      - index: 7
+        detail: /process/tsmcN3/data/stdcell/n3ge/TSMC/tcbn03e_bwp143mh169l3p48cpd_base_elvt_110b/lef/tcbn03e_bwp143mh169l3p48cpd_base_elvt.lef
+        source_line: 4146
+        source_file: 'C:\Users\yuyin\OneDrive - Cadence Design Systems Inc\2025\Checklist\AAI\CHECKLIST_V3\CHECKLIST\IP_project_folder\logs\genus.syn_generic.log'
+        reason: LEF file is being used for PLE optimization
+      - index: 8
+        detail: /process/tsmcN3/data/stdcell/n3ge/TSMC/tcbn03e_bwp143mh169l3p48cpd_base_lvt_110b/lef/tcbn03e_bwp143mh169l3p48cpd_base_lvt.lef
+        source_line: 4147
+        source_file: 'C:\Users\yuyin\OneDrive - Cadence Design Systems Inc\2025\Checklist\AAI\CHECKLIST_V3\CHECKLIST\IP_project_folder\logs\genus.syn_generic.log'
+        reason: LEF file is being used for PLE optimization
+      - index: 9
+        detail: /process/tsmcN3/data/stdcell/n3ge/TSMC/tcbn03e_bwp143mh169l3p48cpd_base_svt_110b/lef/tcbn03e_bwp143mh169l3p48cpd_base_svt.lef
+        source_line: 4148
+        source_file: 'C:\Users\yuyin\OneDrive - Cadence Design Systems Inc\2025\Checklist\AAI\CHECKLIST_V3\CHECKLIST\IP_project_folder\logs\genus.syn_generic.log'
+        reason: LEF file is being used for PLE optimization
+      - index: 10
+        detail: /process/tsmcN3/data/stdcell/n3ge/TSMC/tcbn03e_bwp143mh169l3p48cpd_base_ulvt_110b/lef/tcbn03e_bwp143mh169l3p48cpd_base_ulvt.lef
+        source_line: 4149
+        source_file: 'C:\Users\yuyin\OneDrive - Cadence Design Systems Inc\2025\Checklist\AAI\CHECKLIST_V3\CHECKLIST\IP_project_folder\logs\genus.syn_generic.log'
+        reason: LEF file is being used for PLE optimization
+      - index: 11
+        detail: /process/tsmcN3/data/stdcell/n3ge/TSMC/tcbn03e_bwp143mh286l3p48cpd_base_elvt_110b/lef/tcbn03e_bwp143mh286l3p48cpd_base_elvt.lef
+        source_line: 4150
+        source_file: 'C:\Users\yuyin\OneDrive - Cadence Design Systems Inc\2025\Checklist\AAI\CHECKLIST_V3\CHECKLIST\IP_project_folder\logs\genus.syn_generic.log'
+        reason: LEF file is being used for PLE optimization
+      - index: 12
+        detail: /process/tsmcN3/data/stdcell/n3ge/TSMC/tcbn03e_bwp143mh286l3p48cpd_base_lvt_110b/lef/tcbn03e_bwp143mh286l3p48cpd_base_lvt.lef
+        source_line: 4151
+        source_file: 'C:\Users\yuyin\OneDrive - Cadence Design Systems Inc\2025\Checklist\AAI\CHECKLIST_V3\CHECKLIST\IP_project_folder\logs\genus.syn_generic.log'
+        reason: LEF file is being used for PLE optimization
+      - index: 13
+        detail: /process/tsmcN3/data/stdcell/n3ge/TSMC/tcbn03e_bwp143mh286l3p48cpd_base_svt_110b/lef/tcbn03e_bwp143mh286l3p48cpd_base_svt.lef
+        source_line: 4152
+        source_file: 'C:\Users\yuyin\OneDrive - Cadence Design Systems Inc\2025\Checklist\AAI\CHECKLIST_V3\CHECKLIST\IP_project_folder\logs\genus.syn_generic.log'
+        reason: LEF file is being used for PLE optimization
+      - index: 14
+        detail: /process/tsmcN3/data/stdcell/n3ge/TSMC/tcbn03e_bwp143mh286l3p48cpd_base_ulvt_110b/lef/tcbn03e_bwp143mh286l3p48cpd_base_ulvt.lef
+        source_line: 4153
+        source_file: 'C:\Users\yuyin\OneDrive - Cadence Design Systems Inc\2025\Checklist\AAI\CHECKLIST_V3\CHECKLIST\IP_project_folder\logs\genus.syn_generic.log'
+        reason: LEF file is being used for PLE optimization
+      - index: 15
+        detail: /process/tsmcN3/data/stdcell/n3ge/TSMC/tcbn03e_bwp143mh286l3p48cpd_mb_elvt_110b/lef/tcbn03e_bwp143mh286l3p48cpd_mb_elvt.lef
+        source_line: 4154
+        source_file: 'C:\Users\yuyin\OneDrive - Cadence Design Systems Inc\2025\Checklist\AAI\CHECKLIST_V3\CHECKLIST\IP_project_folder\logs\genus.syn_generic.log'
+        reason: LEF file is being used for PLE optimization
+      - index: 16
+        detail: /process/tsmcN3/data/stdcell/n3ge/TSMC/tcbn03e_bwp143mh286l3p48cpd_mb_lvt_110b/lef/tcbn03e_bwp143mh286l3p48cpd_mb_lvt.lef
+        source_line: 4155
+        source_file: 'C:\Users\yuyin\OneDrive - Cadence Design Systems Inc\2025\Checklist\AAI\CHECKLIST_V3\CHECKLIST\IP_project_folder\logs\genus.syn_generic.log'
+        reason: LEF file is being used for PLE optimization
+      - index: 17
+        detail: /process/tsmcN3/data/stdcell/n3ge/TSMC/tcbn03e_bwp143mh286l3p48cpd_mb_svt_110b/lef/tcbn03e_bwp143mh286l3p48cpd_mb_svt.lef
+        source_line: 4156
+        source_file: 'C:\Users\yuyin\OneDrive - Cadence Design Systems Inc\2025\Checklist\AAI\CHECKLIST_V3\CHECKLIST\IP_project_folder\logs\genus.syn_generic.log'
+        reason: LEF file is being used for PLE optimization
+      - index: 18
+        detail: /process/tsmcN3/data/stdcell/n3ge/TSMC/tcbn03e_bwp143mh286l3p48cpd_mb_ulvt_110b/lef/tcbn03e_bwp143mh286l3p48cpd_mb_ulvt.lef
+        source_line: 4157
+        source_file: 'C:\Users\yuyin\OneDrive - Cadence Design Systems Inc\2025\Checklist\AAI\CHECKLIST_V3\CHECKLIST\IP_project_folder\logs\genus.syn_generic.log'
+        reason: LEF file is being used for PLE optimization
+      - index: 19
+        detail: /process/tsmcN3/data/stdcell/n3v/TSMC/tpbn03_tn03bpdr003_100a/lef/fc/fc_lf_bu/APRDL/lef/tpbn03_tn03bpdr003.lef
+        source_line: 4158
+        source_file: 'C:\Users\yuyin\OneDrive - Cadence Design Systems Inc\2025\Checklist\AAI\CHECKLIST_V3\CHECKLIST\IP_project_folder\logs\genus.syn_generic.log'
+        reason: LEF file is being used for PLE optimization
+      - index: 20
+        detail: /process/tsmcN3/data/stdcell/n3ge/TSMC/N3E_DTCD_library_kit_general_v0d9.1.230327/lef/N3E_DTCD_M11/N3E_DTCD_v0d9_1.lef
+        source_line: 4159
+        source_file: 'C:\Users\yuyin\OneDrive - Cadence Design Systems Inc\2025\Checklist\AAI\CHECKLIST_V3\CHECKLIST\IP_project_folder\logs\genus.syn_generic.log'
+        reason: LEF file is being used for PLE optimization
+  IMP-5-0-0-02: 
+    executed: true
+    status: pass
+    description: Confirm synthesis is using qrc tech file for RC data?
+    infos: 
+      - index: 1
+        detail: /process/tsmcN3/data/ge/QRC/15M1Xa1Xb1Xc1Xd1Ya1Yb4Y2Yy2Z_SHDMIM_UT/fs_v1d1p1a/cworst/Tech/cworst_CCworst_T/qrcTechFile
+        source_line: 3614
+        source_file: 'C:\Users\yuyin\OneDrive - Cadence Design Systems Inc\2025\Checklist\AAI\CHECKLIST_V3\CHECKLIST\IP_project_folder\logs\genus.syn_generic.log'
+        reason: synthesis is using qrc tech file for RC data
+  IMP-5-0-0-03: 
+    executed: true
+    status: pass
+    description: Confirm target standard cell library corners are correct?
+    infos: 
+      - index: 1
+        detail: ssgnp_0p675v_m40c_cworst_CCworst_T
+        source_line: 5
+        source_file: 'C:\Users\yuyin\OneDrive - Cadence Design Systems Inc\2025\Checklist\AAI\CHECKLIST_V3\CHECKLIST\IP_project_folder\reports\qor.rpt'
+        reason: Library corner is being used
+  IMP-5-0-0-04: 
+    executed: true
+    status: fail
+    description: Confirm Jasper RTL Lint Summary report has no Error?
+    failures: 
+      - index: 1
+        detail: input_files is empty in YAML configuration
+        source_line: N/A
+        source_file: N/A
+        reason: input_files is empty in YAML configuration
+  IMP-5-0-0-05: 
+    executed: true
+    status: pass
+    description: Confirm Unresolved References are none?
+    infos: 
+      - index: 1
+        detail: N/A
+        source_line: N/A
+        source_file: N/A
+        reason: No unresolved references found in synthesis logs
+  IMP-5-0-0-06: 
+    executed: true
+    status: pass
+    description: Confirm Empty Modules are none or explained?
+    infos: 
+      - index: 1
+        detail: N/A
+        source_line: N/A
+        source_file: N/A
+        reason: 'No empty modules found in C:\Users\yuyin\OneDrive - Cadence Design Systems Inc\2025\Checklist\AAI\CHECKLIST_V3\CHECKLIST\IP_project_folder\logs\genus.syn_generic.log'
+  IMP-5-0-0-07: 
+    executed: true
+    status: pass
+    description: Confirm that there are no other violations or errors (max cap, max transition etc)?
+    infos: 
+      - index: 1
+        detail: set_false_path -hold -from [all_clocks] -to [remove_from_collection [get_pins -hier *reset_sync_synth_*/D] [get_pins -hier *reset_sync_synth_*1/D]] set_false_path -hold -from [all_clocks] -to [remove_from_collection [get_pins -hier *data_sync_synth_*/D] [get_pins -hier *data_sync_synth_*1/D]]
+        source_line: 181
+        source_file: /projects/ucie_t3_pd/FRONT_END/work/yyin/NU/work/phy_cmn_phase_align_digtop/yuyin_test_run_5/data/sdc/phy_cmn_phase_align_digtop.func.sdc
+        reason: 'set_false_path: A required object parameter could not be found. (informational only)'
+      - index: 2
+        detail: set_false_path -hold -from [all_clocks] -to [remove_from_collection [get_pins -hier *reset_sync_synth_*/D] [get_pins -hier *reset_sync_synth_*1/D]] set_false_path -hold -from [all_clocks] -to [remove_from_collection [get_pins -hier *data_sync_synth_*/D] [get_pins -hier *data_sync_synth_*1/D]]
+        source_line: 181
+        source_file: /projects/ucie_t3_pd/FRONT_END/work/yyin/NU/work/phy_cmn_phase_align_digtop/yuyin_test_run_5/data/sdc/phy_cmn_phase_align_digtop.func.sdc
+        reason: 'set_false_path: A required object parameter could not be found. (informational only)'
+  IMP-5-0-0-08: 
+    executed: true
+    status: pass
+    description: Confirm Multidriven Report clean?
+    infos: 
+      - index: 1
+        detail: pin:111
+        source_line: 12
+        source_file: 'C:\Users\yuyin\OneDrive - Cadence Design Systems Inc\2025\Checklist\AAI\CHECKLIST_V3\CHECKLIST\IP_project_folder\reports\multidriven.rpt'
+        reason: Multidriven sequential pin
+      - index: 2
+        detail: pin:222
+        source_line: 12
+        source_file: 'C:\Users\yuyin\OneDrive - Cadence Design Systems Inc\2025\Checklist\AAI\CHECKLIST_V3\CHECKLIST\IP_project_folder\reports\multidriven.rpt'
+        reason: Multidriven sequential pin
+      - index: 3
+        detail: hpin:333
+        source_line: 17
+        source_file: 'C:\Users\yuyin\OneDrive - Cadence Design Systems Inc\2025\Checklist\AAI\CHECKLIST_V3\CHECKLIST\IP_project_folder\reports\multidriven.rpt'
+        reason: Multidriven hierarchical pin
+      - index: 4
+        detail: hpin:444
+        source_line: 17
+        source_file: 'C:\Users\yuyin\OneDrive - Cadence Design Systems Inc\2025\Checklist\AAI\CHECKLIST_V3\CHECKLIST\IP_project_folder\reports\multidriven.rpt'
+        reason: Multidriven hierarchical pin
+  IMP-5-0-0-09: 
+    executed: true
+    status: pass
+    description: Confirm Latches Inferred documented?
+    infos: 
+      - index: 1
+        detail: CKLNQD1BWP143M286H3P48CPDLVT
+        source_line: 1
+        source_file: 'C:\Users\yuyin\OneDrive - Cadence Design Systems Inc\2025\Checklist\AAI\CHECKLIST_V3\CHECKLIST\IP_project_folder\reports\latch.rpt'
+        reason: 'Latch cell inferred (count: 4)'
+  IMP-5-0-0-10: 
+    executed: true
+    status: pass
+    description: "Confirm don't use cell list includes forbidden cells specified in IMP-1-0-0-02?"
+    infos: 
+      - index: 1
+        detail: N/A
+        source_line: N/A
+        source_file: N/A
+        reason: No forbidden cells configured in IMP-1-0-0-02, check passed
+  IMP-5-0-0-11: 
+    executed: true
+    status: pass
+    description: Confirm synthesis log has been peer reviewed and all warnings are understood and annotated with an explanation?
+    warnings: 
+      - index: 1
+        detail: Enabling message severity downgrade. [TUI-82] (204 remaining warnings and 14 errors)
+        source_line: 444
+        source_file: 'C:\Users\yuyin\OneDrive - Cadence Design Systems Inc\2025\Checklist\AAI\CHECKLIST_V3\CHECKLIST\IP_project_folder\logs\genus.syn_generic.log'
+        reason: genus.syn_generic.log needs to be reviewed
+      - index: 2
+        detail: Enabling message severity downgrade. [TUI-82] (1606 remaining warnings and 7 errors)
+        source_line: 444
+        source_file: 'C:\Users\yuyin\OneDrive - Cadence Design Systems Inc\2025\Checklist\AAI\CHECKLIST_V3\CHECKLIST\IP_project_folder\logs\genus.syn_opt.log'
+        reason: genus.syn_opt.log needs to be reviewed
+  IMP-5-0-0-12: 
+    executed: true
+    status: pass
+    description: Confirm synthesis Quality Of Results (QOR) meets requirements (timing, area, power)?
+    infos: 
+      - index: 1
+        detail: TNS:-0.0
+        source_line: 50
+        source_file: 'C:\Users\yuyin\OneDrive - Cadence Design Systems Inc\2025\Checklist\AAI\CHECKLIST_V3\CHECKLIST\IP_project_folder\reports\qor.rpt'
+        reason: TNS:-0.0
+      - index: 2
+        detail: Area:225.338
+        source_line: 67
+        source_file: 'C:\Users\yuyin\OneDrive - Cadence Design Systems Inc\2025\Checklist\AAI\CHECKLIST_V3\CHECKLIST\IP_project_folder\reports\qor.rpt'
+        reason: Area:225.338
+      - index: 3
+        detail: Power:1297805.093
+        source_line: 73
+        source_file: 'C:\Users\yuyin\OneDrive - Cadence Design Systems Inc\2025\Checklist\AAI\CHECKLIST_V3\CHECKLIST\IP_project_folder\reports\qor.rpt'
+        reason: Power:1297805.093
+  IMP-5-0-0-13: 
+    executed: true
+    status: fail
+    description: Confirm scan is successfully inserted and non-scannable flops have been peer reviewed and waived?
+    failures: 
+      - index: 1
+        detail: fail_dft_rules:ttttt
+        source_line: 4
+        source_file: 'C:\Users\yuyin\OneDrive - Cadence Design Systems Inc\2025\Checklist\AAI\CHECKLIST_V3\CHECKLIST\IP_project_folder\reports\dft_chainRegs.rpt'
+        reason: Registers fail DFT rules
+      - index: 2
+        detail: misc_non_scan:u_accum/genus_inserted_cg_RC_CG_HIER_INST3/RC_CGIC_INST
+        source_line: 11
+        source_file: 'C:\Users\yuyin\OneDrive - Cadence Design Systems Inc\2025\Checklist\AAI\CHECKLIST_V3\CHECKLIST\IP_project_folder\reports\dft_chainRegs.rpt'
+        reason: Registers are misc. non-scan
+      - index: 3
+        detail: misc_non_scan:u_cmn_cpi_sreg_if/genus_inserted_cg_RC_CG_HIER_INST1/RC_CGIC_INST
+        source_line: 11
+        source_file: 'C:\Users\yuyin\OneDrive - Cadence Design Systems Inc\2025\Checklist\AAI\CHECKLIST_V3\CHECKLIST\IP_project_folder\reports\dft_chainRegs.rpt'
+        reason: Registers are misc. non-scan
+      - index: 4
+        detail: misc_non_scan:u_cmn_dpi_sreg_if/genus_inserted_cg_RC_CG_HIER_INST0/RC_CGIC_INST
+        source_line: 11
+        source_file: 'C:\Users\yuyin\OneDrive - Cadence Design Systems Inc\2025\Checklist\AAI\CHECKLIST_V3\CHECKLIST\IP_project_folder\reports\dft_chainRegs.rpt'
+        reason: Registers are misc. non-scan
+      - index: 5
+        detail: misc_non_scan:u_phalign_fsm/u_counter/genus_inserted_cg_RC_CG_HIER_INST2/RC_CGIC_INST
+        source_line: 11
+        source_file: 'C:\Users\yuyin\OneDrive - Cadence Design Systems Inc\2025\Checklist\AAI\CHECKLIST_V3\CHECKLIST\IP_project_folder\reports\dft_chainRegs.rpt'
+        reason: Registers are misc. non-scan
+      - index: 6
+        detail: pass_not_in_chains:aaaaaa
+        source_line: 16
+        source_file: 'C:\Users\yuyin\OneDrive - Cadence Design Systems Inc\2025\Checklist\AAI\CHECKLIST_V3\CHECKLIST\IP_project_folder\reports\dft_chainRegs.rpt'
+        reason: Registers pass dft rule checks but are not a part of scan chains
+      - index: 7
+        detail: pass_not_in_chains:bbbbbb
+        source_line: 16
+        source_file: 'C:\Users\yuyin\OneDrive - Cadence Design Systems Inc\2025\Checklist\AAI\CHECKLIST_V3\CHECKLIST\IP_project_folder\reports\dft_chainRegs.rpt'
+        reason: Registers pass dft rule checks but are not a part of scan chains
+  IMP-5-0-0-14: 
+    executed: true
+    status: fail
+    description: Confirm that there are no other violations or errors (max cap, max transition etc)?
+    failures: 
+      - index: 1
+        detail: UDFF_th1/Q
+        source_line: 33
+        source_file: 'C:\Users\yuyin\OneDrive - Cadence Design Systems Inc\2025\Checklist\AAI\CHECKLIST_V3\CHECKLIST\IP_project_folder\reports\design_check_rule.rpt'
+        reason: Max transition violation
+      - index: 2
+        detail: UBUF_fm/Y
+        source_line: 37
+        source_file: 'C:\Users\yuyin\OneDrive - Cadence Design Systems Inc\2025\Checklist\AAI\CHECKLIST_V3\CHECKLIST\IP_project_folder\reports\design_check_rule.rpt'
+        reason: Max transition violation
+      - index: 3
+        detail: UDFF_to/Q
+        source_line: 41
+        source_file: 'C:\Users\yuyin\OneDrive - Cadence Design Systems Inc\2025\Checklist\AAI\CHECKLIST_V3\CHECKLIST\IP_project_folder\reports\design_check_rule.rpt'
+        reason: Max transition violation
+    warnings: 
+      - index: 1
+        detail: N/A
+        source_line: 48
+        source_file: 'C:\Users\yuyin\OneDrive - Cadence Design Systems Inc\2025\Checklist\AAI\CHECKLIST_V3\CHECKLIST\IP_project_folder\reports\design_check_rule.rpt'
+        reason: Max_fanout design rule has no constraints
+  IMP-5-0-0-15: 
+    executed: true
+    status: pass
+    description: Confirm all DFT checks pass?
+  IMP-5-0-0-16: 
+    executed: true
+    status: pass
+    description: Confirm CPF/UPF file  has passed Conformal LP quality checks against RTL prior to synthesis?
+  IMP-5-0-0-17: 
+    executed: true
+    status: fail
+    description: Confirm CPF/UPF file  has passed Conformal LP quality checks against post DFT insertion synthesis netlist?
+    failures: 
+      - index: 1
+        detail: "Top boundary output port 'scan_out[100]' is undriven"
+        source_line: 7
+        source_file: 'C:\Users\yuyin\OneDrive - Cadence Design Systems Inc\2025\Checklist\AAI\CHECKLIST_V3\CHECKLIST\IP_project_folder\reports\verify_power_structure_post_dft.rpt'
+        reason: Top boundary port with output/inout direction does not have a driver
+      - index: 2
+        detail: "Top boundary output port 'scan_out[101]' is undriven"
+        source_line: 8
+        source_file: 'C:\Users\yuyin\OneDrive - Cadence Design Systems Inc\2025\Checklist\AAI\CHECKLIST_V3\CHECKLIST\IP_project_folder\reports\verify_power_structure_post_dft.rpt'
+        reason: Top boundary port with output/inout direction does not have a driver
+      - index: 3
+        detail: "Top boundary output port 'scan_out[100]' is undriven for test"
+        source_line: 11
+        source_file: 'C:\Users\yuyin\OneDrive - Cadence Design Systems Inc\2025\Checklist\AAI\CHECKLIST_V3\CHECKLIST\IP_project_folder\reports\verify_power_structure_post_dft.rpt'
+        reason: Top boundary port with output/inout direction does not have a driver2
+      - index: 4
+        detail: "Top boundary output port 'scan_out[101]' is undriven for test"
+        source_line: 12
+        source_file: 'C:\Users\yuyin\OneDrive - Cadence Design Systems Inc\2025\Checklist\AAI\CHECKLIST_V3\CHECKLIST\IP_project_folder\reports\verify_power_structure_post_dft.rpt'
+        reason: Top boundary port with output/inout direction does not have a driver2
+  IMP-5-0-0-18: 
+    executed: true
+    status: pass
+    description: Document DFT Stuck-At % meets or exceeds expected value?
+    infos: 
+      - index: 1
+        detail: ATCov%:96.19%
+        source_line: 66
+        source_file: 'C:\Users\yuyin\OneDrive - Cadence Design Systems Inc\2025\Checklist\AAI\CHECKLIST_V3\CHECKLIST\IP_project_folder\logs\log_create_logic_tests_FULLSCAN_cdn_sd2101_i3p765_vm130_6x2ya2yb2yc2yd1ye1ga1gb_atpg_stuckat'
+        reason: 'DFT Stuck-At coverage: 96.19%'
+  IMP-5-0-0-19: 
+    executed: true
+    status: pass
+    description: Document DFT Transition % meets or exceeds expected value?
+    infos: 
+      - index: 1
+        detail: ATCov%:40.6%
+        source_line: 38
+        source_file: 'C:\Users\yuyin\OneDrive - Cadence Design Systems Inc\2025\Checklist\AAI\CHECKLIST_V3\CHECKLIST\IP_project_folder\logs\log_create_logic_delay_tests_FULLSCAN_cdn_sd2101_i3p765_vm130_6x2ya2yb2yc2yd1ye1ga1gb_atpg_dynamic'
+        reason: 'DFT Transition coverage: 40.6%'

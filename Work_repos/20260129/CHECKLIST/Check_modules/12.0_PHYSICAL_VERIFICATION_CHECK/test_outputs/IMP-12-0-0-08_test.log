@@ -1,0 +1,466 @@
+Test Log: IMP-12-0-0-08
+================================================================================
+
+[Test 1/6] Type 1 (requirements.value=N/A, waivers.value=N/A)
+--------------------------------------------------------------------------------
+Test ID: type1_na
+Status: PASS
+
+Checker Log Output:
+PASS:IMP-12-0-0-08:Confirm the MIM_ANT rule deck setting is correct. (For MIG,please check with AMS team about the MIM cell type (MIM or SHDMIM) because the MIM_ANT rule will be different).
+IMP-12-0-0-08-INFO01: MIM antenna rule deck configuration found and validated:
+  Severity: Info Occurrence: 111
+  - BPC_F
+  - BPC_W_FLOAT
+  - BPC_W_GATE
+  - BPC_W_OD
+  - BPCi
+  - CBM_F
+  - GATE
+  - M0
+  - M1
+  - M10
+  - M11
+  - M12
+  - M13
+  - M14
+  - M15
+  - M16
+  - M2
+  - M3
+  - M4
+  - M5
+  - M6
+  - M7
+  - M8
+  - M9
+  - MD
+  - MIM_CONNECTED_ALL_BPC
+  - MIM_CONNECTED_ALL_MPC
+  - MIM_CONNECTED_ALL_TPC
+  - MIM_FLOATING_ALL_BPC
+  - MIM_FLOATING_ALL_MPC
+  - MIM_FLOATING_ALL_TPC
+  - MPC_F
+  - MPC_W_FLOAT
+  - MPC_W_GATE
+  - MPC_W_OD
+  - MPCi
+  - POLYc
+  - RHTN10
+  - RHTN11
+  - RHTN12
+  - RHTN13
+  - RHTN14
+  - RHTN15
+  - RHTN16
+  - RHTN2
+  - RHTN3
+  - RHTN4
+  - RHTN5
+  - RHTN6
+  - RHTN7
+  - RHTN8
+  - RHTN9
+  - SD
+  - TPC_F
+  - TPC_W_FLOAT
+  - TPC_W_GATE
+  - TPC_W_OD
+  - TPCi
+  - V10HiR
+  - V11HiR
+  - V12HiR
+  - V13HiR
+  - V14CAP
+  - V14CAP_CBM_CTM
+  - V14HiR
+  - V15CAP
+  - V15CAP_CBM_CTM
+  - V15HiR
+  - V1HiR
+  - V2HiR
+  - V3HiR
+  - V4HiR
+  - V5HiR
+  - V6HiR
+  - V7HiR
+  - V8HiR
+  - V9HiR
+  - VD
+  - VDR
+  - VG
+  - VIA0
+  - VIA1
+  - VIA10
+  - VIA11
+  - VIA12
+  - VIA13
+  - VIA14
+  - VIA15
+  - VIA2
+  - VIA3
+  - VIA4
+  - VIA5
+  - VIA6
+  - VIA7
+  - VIA8
+  - VIA9
+  - _EPTMPL262145
+  - _EPTMPL262146
+  - _EPTMPL262181
+  - _EPTMPL262257
+  - _EPTMPL262265
+  - _EPTMPL262340
+  - _EPTMPL262342
+  - _EPTMPL262344
+  - _EPTMPL262346
+  - _EPTMPL262348
+  - _EPTMPL262350
+  - _EPTMPL262352
+  - _EPTMPL262354
+  - _EPTMPL262356
+  - _EPTMPL262421
+
+
+================================================================================
+
+[Test 2/6] Type 1 (requirements.value=N/A, waivers.value=0)
+--------------------------------------------------------------------------------
+Test ID: type1_0
+Status: PASS
+
+Checker Log Output:
+PASS:IMP-12-0-0-08:Confirm the MIM_ANT rule deck setting is correct. (For MIG,please check with AMS team about the MIM cell type (MIM or SHDMIM) because the MIM_ANT rule will be different).
+IMP-12-0-0-08-INFO01: [WAIVED_INFO]: Waived information:
+  Severity: Info Occurrence: 1
+  - Explanation: MIM antenna rule deck check is informational only for this project phase
+IMP-12-0-0-08-INFO02: MIM antenna rule deck configuration found and validated:
+  Severity: Info Occurrence: 111
+  - BPC_F
+  - BPC_W_FLOAT
+  - BPC_W_GATE
+  - BPC_W_OD
+  - BPCi
+  - CBM_F
+  - GATE
+  - M0
+  - M1
+  - M10
+  - M11
+  - M12
+  - M13
+  - M14
+  - M15
+  - M16
+  - M2
+  - M3
+  - M4
+  - M5
+  - M6
+  - M7
+  - M8
+  - M9
+  - MD
+  - MIM_CONNECTED_ALL_BPC
+  - MIM_CONNECTED_ALL_MPC
+  - MIM_CONNECTED_ALL_TPC
+  - MIM_FLOATING_ALL_BPC
+  - MIM_FLOATING_ALL_MPC
+  - MIM_FLOATING_ALL_TPC
+  - MPC_F
+  - MPC_W_FLOAT
+  - MPC_W_GATE
+  - MPC_W_OD
+  - MPCi
+  - POLYc
+  - RHTN10
+  - RHTN11
+  - RHTN12
+  - RHTN13
+  - RHTN14
+  - RHTN15
+  - RHTN16
+  - RHTN2
+  - RHTN3
+  - RHTN4
+  - RHTN5
+  - RHTN6
+  - RHTN7
+  - RHTN8
+  - RHTN9
+  - SD
+  - TPC_F
+  - TPC_W_FLOAT
+  - TPC_W_GATE
+  - TPC_W_OD
+  - TPCi
+  - V10HiR
+  - V11HiR
+  - V12HiR
+  - V13HiR
+  - V14CAP
+  - V14CAP_CBM_CTM
+  - V14HiR
+  - V15CAP
+  - V15CAP_CBM_CTM
+  - V15HiR
+  - V1HiR
+  - V2HiR
+  - V3HiR
+  - V4HiR
+  - V5HiR
+  - V6HiR
+  - V7HiR
+  - V8HiR
+  - V9HiR
+  - VD
+  - VDR
+  - VG
+  - VIA0
+  - VIA1
+  - VIA10
+  - VIA11
+  - VIA12
+  - VIA13
+  - VIA14
+  - VIA15
+  - VIA2
+  - VIA3
+  - VIA4
+  - VIA5
+  - VIA6
+  - VIA7
+  - VIA8
+  - VIA9
+  - _EPTMPL262145
+  - _EPTMPL262146
+  - _EPTMPL262181
+  - _EPTMPL262257
+  - _EPTMPL262265
+  - _EPTMPL262340
+  - _EPTMPL262342
+  - _EPTMPL262344
+  - _EPTMPL262346
+  - _EPTMPL262348
+  - _EPTMPL262350
+  - _EPTMPL262352
+  - _EPTMPL262354
+  - _EPTMPL262356
+  - _EPTMPL262421
+
+
+================================================================================
+
+[Test 3/6] Type 2 (requirements.value>0, waivers.value=N/A)
+--------------------------------------------------------------------------------
+Test ID: type2_na
+Status: ERROR
+
+(No log output)
+
+
+STDERR:
+Traceback (most recent call last):
+  File "C:\Users\jingyu\OneDrive - Cadence Design Systems Inc\Desktop\checklist_dev\AI_2026_V1\CHECKLIST\CHECKLIST\Check_modules\12.0_PHYSICAL_VERIFICATION_CHECK\scripts\checker\IMP-12-0-0-08.py", line 637, in <module>
+    sys.exit(main())
+             ~~~~^^
+  File "C:\Users\jingyu\OneDrive - Cadence Design Systems Inc\Desktop\checklist_dev\AI_2026_V1\CHECKLIST\CHECKLIST\Check_modules\12.0_PHYSICAL_VERIFICATION_CHECK\scripts\checker\IMP-12-0-0-08.py", line 630, in main
+    result = checker.execute_check()
+  File "C:\Users\jingyu\OneDrive - Cadence Design Systems Inc\Desktop\checklist_dev\AI_2026_V1\CHECKLIST\CHECKLIST\Check_modules\12.0_PHYSICAL_VERIFICATION_CHECK\scripts\checker\IMP-12-0-0-08.py", line 141, in execute_check
+    return self._execute_type2()
+           ~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\jingyu\OneDrive - Cadence Design Systems Inc\Desktop\checklist_dev\AI_2026_V1\CHECKLIST\CHECKLIST\Check_modules\12.0_PHYSICAL_VERIFICATION_CHECK\scripts\checker\IMP-12-0-0-08.py", line 392, in _execute_type2
+    found_items, missing_items = self._type2_core_logic()
+                                 ~~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\jingyu\OneDrive - Cadence Design Systems Inc\Desktop\checklist_dev\AI_2026_V1\CHECKLIST\CHECKLIST\Check_modules\12.0_PHYSICAL_VERIFICATION_CHECK\scripts\checker\IMP-12-0-0-08.py", line 423, in _type2_core_logic
+    for var_name, expected_value in pattern_dict.items():
+                                    ^^^^^^^^^^^^^^^^^^
+AttributeError: 'str' object has no attribute 'items'
+
+================================================================================
+
+[Test 4/6] Type 2 (requirements.value>0, waivers.value=0)
+--------------------------------------------------------------------------------
+Test ID: type2_0
+Status: ERROR
+
+(No log output)
+
+
+STDERR:
+Traceback (most recent call last):
+  File "C:\Users\jingyu\OneDrive - Cadence Design Systems Inc\Desktop\checklist_dev\AI_2026_V1\CHECKLIST\CHECKLIST\Check_modules\12.0_PHYSICAL_VERIFICATION_CHECK\scripts\checker\IMP-12-0-0-08.py", line 637, in <module>
+    sys.exit(main())
+             ~~~~^^
+  File "C:\Users\jingyu\OneDrive - Cadence Design Systems Inc\Desktop\checklist_dev\AI_2026_V1\CHECKLIST\CHECKLIST\Check_modules\12.0_PHYSICAL_VERIFICATION_CHECK\scripts\checker\IMP-12-0-0-08.py", line 630, in main
+    result = checker.execute_check()
+  File "C:\Users\jingyu\OneDrive - Cadence Design Systems Inc\Desktop\checklist_dev\AI_2026_V1\CHECKLIST\CHECKLIST\Check_modules\12.0_PHYSICAL_VERIFICATION_CHECK\scripts\checker\IMP-12-0-0-08.py", line 141, in execute_check
+    return self._execute_type2()
+           ~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\jingyu\OneDrive - Cadence Design Systems Inc\Desktop\checklist_dev\AI_2026_V1\CHECKLIST\CHECKLIST\Check_modules\12.0_PHYSICAL_VERIFICATION_CHECK\scripts\checker\IMP-12-0-0-08.py", line 392, in _execute_type2
+    found_items, missing_items = self._type2_core_logic()
+                                 ~~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\jingyu\OneDrive - Cadence Design Systems Inc\Desktop\checklist_dev\AI_2026_V1\CHECKLIST\CHECKLIST\Check_modules\12.0_PHYSICAL_VERIFICATION_CHECK\scripts\checker\IMP-12-0-0-08.py", line 423, in _type2_core_logic
+    for var_name, expected_value in pattern_dict.items():
+                                    ^^^^^^^^^^^^^^^^^^
+AttributeError: 'str' object has no attribute 'items'
+
+================================================================================
+
+[Test 5/6] Type 3 (requirements.value>0, waivers.value>0)
+--------------------------------------------------------------------------------
+Test ID: type3
+Status: ERROR
+
+(No log output)
+
+
+STDERR:
+Traceback (most recent call last):
+  File "C:\Users\jingyu\OneDrive - Cadence Design Systems Inc\Desktop\checklist_dev\AI_2026_V1\CHECKLIST\CHECKLIST\Check_modules\12.0_PHYSICAL_VERIFICATION_CHECK\scripts\checker\IMP-12-0-0-08.py", line 637, in <module>
+    sys.exit(main())
+             ~~~~^^
+  File "C:\Users\jingyu\OneDrive - Cadence Design Systems Inc\Desktop\checklist_dev\AI_2026_V1\CHECKLIST\CHECKLIST\Check_modules\12.0_PHYSICAL_VERIFICATION_CHECK\scripts\checker\IMP-12-0-0-08.py", line 630, in main
+    result = checker.execute_check()
+  File "C:\Users\jingyu\OneDrive - Cadence Design Systems Inc\Desktop\checklist_dev\AI_2026_V1\CHECKLIST\CHECKLIST\Check_modules\12.0_PHYSICAL_VERIFICATION_CHECK\scripts\checker\IMP-12-0-0-08.py", line 143, in execute_check
+    return self._execute_type3()
+           ~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\jingyu\OneDrive - Cadence Design Systems Inc\Desktop\checklist_dev\AI_2026_V1\CHECKLIST\CHECKLIST\Check_modules\12.0_PHYSICAL_VERIFICATION_CHECK\scripts\checker\IMP-12-0-0-08.py", line 478, in _execute_type3
+    found_items_base, violations = self._type2_core_logic()
+                                   ~~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\jingyu\OneDrive - Cadence Design Systems Inc\Desktop\checklist_dev\AI_2026_V1\CHECKLIST\CHECKLIST\Check_modules\12.0_PHYSICAL_VERIFICATION_CHECK\scripts\checker\IMP-12-0-0-08.py", line 423, in _type2_core_logic
+    for var_name, expected_value in pattern_dict.items():
+                                    ^^^^^^^^^^^^^^^^^^
+AttributeError: 'str' object has no attribute 'items'
+
+================================================================================
+
+[Test 6/6] Type 4 (requirements.value=N/A, waivers.value>0)
+--------------------------------------------------------------------------------
+Test ID: type4
+Status: PASS
+
+Checker Log Output:
+PASS:IMP-12-0-0-08:Confirm the MIM_ANT rule deck setting is correct. (For MIG,please check with AMS team about the MIM cell type (MIM or SHDMIM) because the MIM_ANT rule will be different).
+IMP-12-0-0-08-WARN01: Unused waivers:
+  Severity: Warn Occurrence: 2
+  - FHDMIM
+  - SHDMIM
+IMP-12-0-0-08-INFO01: MIM antenna rule deck configuration found and validated:
+  Severity: Info Occurrence: 111
+  - BPC_F
+  - BPC_W_FLOAT
+  - BPC_W_GATE
+  - BPC_W_OD
+  - BPCi
+  - CBM_F
+  - GATE
+  - M0
+  - M1
+  - M10
+  - M11
+  - M12
+  - M13
+  - M14
+  - M15
+  - M16
+  - M2
+  - M3
+  - M4
+  - M5
+  - M6
+  - M7
+  - M8
+  - M9
+  - MD
+  - MIM_CONNECTED_ALL_BPC
+  - MIM_CONNECTED_ALL_MPC
+  - MIM_CONNECTED_ALL_TPC
+  - MIM_FLOATING_ALL_BPC
+  - MIM_FLOATING_ALL_MPC
+  - MIM_FLOATING_ALL_TPC
+  - MPC_F
+  - MPC_W_FLOAT
+  - MPC_W_GATE
+  - MPC_W_OD
+  - MPCi
+  - POLYc
+  - RHTN10
+  - RHTN11
+  - RHTN12
+  - RHTN13
+  - RHTN14
+  - RHTN15
+  - RHTN16
+  - RHTN2
+  - RHTN3
+  - RHTN4
+  - RHTN5
+  - RHTN6
+  - RHTN7
+  - RHTN8
+  - RHTN9
+  - SD
+  - TPC_F
+  - TPC_W_FLOAT
+  - TPC_W_GATE
+  - TPC_W_OD
+  - TPCi
+  - V10HiR
+  - V11HiR
+  - V12HiR
+  - V13HiR
+  - V14CAP
+  - V14CAP_CBM_CTM
+  - V14HiR
+  - V15CAP
+  - V15CAP_CBM_CTM
+  - V15HiR
+  - V1HiR
+  - V2HiR
+  - V3HiR
+  - V4HiR
+  - V5HiR
+  - V6HiR
+  - V7HiR
+  - V8HiR
+  - V9HiR
+  - VD
+  - VDR
+  - VG
+  - VIA0
+  - VIA1
+  - VIA10
+  - VIA11
+  - VIA12
+  - VIA13
+  - VIA14
+  - VIA15
+  - VIA2
+  - VIA3
+  - VIA4
+  - VIA5
+  - VIA6
+  - VIA7
+  - VIA8
+  - VIA9
+  - _EPTMPL262145
+  - _EPTMPL262146
+  - _EPTMPL262181
+  - _EPTMPL262257
+  - _EPTMPL262265
+  - _EPTMPL262340
+  - _EPTMPL262342
+  - _EPTMPL262344
+  - _EPTMPL262346
+  - _EPTMPL262348
+  - _EPTMPL262350
+  - _EPTMPL262352
+  - _EPTMPL262354
+  - _EPTMPL262356
+  - _EPTMPL262421
+
+
+================================================================================
+

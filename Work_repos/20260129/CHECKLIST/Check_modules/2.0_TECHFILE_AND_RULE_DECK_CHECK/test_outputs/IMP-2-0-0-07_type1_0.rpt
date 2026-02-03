@@ -1,0 +1,4 @@
+PASS:IMP-2-0-0-07:Confirm LVS rule deck was not modified? If it was, explain in comments field.
+Info Occurrence: 2
+1: Info: Explanation: LVS rule deck path extraction is informational only for this project: Explanation: LVS rule deck path extraction is informational only for this project[WAIVED_INFO]
+2: Info: /process/tsmcN5/data/g/PEGASUS/LVS/v1d2b/MAIN_DECK/PEGASUS_FLOW/DFM/PEGASUS.logic_operation2.enc. In line 34, C:\Users\chenweif\Checker_dev\CHECKLIST\CHECKLIST\IP_project_folder\logs\2.0\LVS_pvl.log: LVS rule deck path successfully extracted from LVS_pvl.log

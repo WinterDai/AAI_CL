@@ -1,0 +1,5 @@
+FAIL:SRG-IMP-11-3-0-04:Is simulation time mentioned in the comments?
+SRG-IMP-11-3-0-04-ERROR01: Configuration error:
+  Severity: Fail Occurrence: 1
+  - input_files is empty in YAML configuration
+

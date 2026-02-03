@@ -1,0 +1,8 @@
+PASS:IMP-12-0-0-24:Confirm add the chipBoundary layer to check boundary DRC for test chip.
+IMP-12-0-0-24-INFO01: [WAIVED_INFO]: Waived information:
+  Severity: Info Occurrence: 1
+  - Explanation: Chip_Boundary layer check is informational for early design stages
+IMP-12-0-0-24-INFO02: [WAIVED_AS_INFO]: Chip_Boundary layer not found in DRC report or incorrect geometry count:
+  Severity: Info Occurrence: 1
+  - Invalid_Geometry_Count_Calibre_C:\Users\jingyu\OneDrive - Cadence Design Systems Inc\Desktop\checklist_dev\AI_2026_V1\CHECKLIST\CHECKLIST\IP_project_folder\reports\pv\Calibre_DRC.rep
+

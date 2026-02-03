@@ -1,0 +1,16 @@
+description: Confirm all ports are assigned on metal track.
+input_files:
+- C:\Users\chyao\Desktop\checklist_dev\CHECKLIST\CHECKLIST\IP_project_folder\reports\8.0\IMP-8-0-0-01\IMP-8-0-0-01_case0.rpt
+requirements:
+  pattern_items:
+  - rxda_cdrlf_scanmode
+  - rxda_cdrlf_scanout[0]
+  - e_pi_ctrl[0]
+  value: 3
+waivers:
+  value: 2
+  waive_items:
+  - name: rxda_cdrlf_scanmode
+    reason: Waived - scan mode port placement deferred to post-CTS optimization
+  - name: e_pi_ctrl[63]
+    reason: Waived - debug port, non-critical timing path

@@ -1,0 +1,5 @@
+FAIL:IMP-12-0-0-14:Confirm the MIM_ANT check result is clean. (Fill N/a if no MIMCAP inserted or no MIM related layers)
+IMP-12-0-0-14-ERROR01: Configuration error:
+  Severity: Fail Occurrence: 1
+  - input_files is empty in YAML configuration
+

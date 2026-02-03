@@ -1,0 +1,103 @@
+Test Report: IMP-10-0-0-00
+================================================================================
+
+[Test 1/6] Type 1 (requirements.value=N/A, waivers.value=N/A)
+--------------------------------------------------------------------------------
+Test ID: type1_na
+Status: PASS
+
+Checker Report Output:
+PASS:IMP-10-0-0-00:Confirm the netlist/spef version is correct.
+Info Occurrence: 6
+1: Info: Netlist Version: Nov 18 2025 15:58:15. In line 3, C:\Users\yuyin\Desktop\CHECKLIST_V3\CHECKLIST\IP_project_folder\dbs\phy_cmn_phase_align_digtop.v.gz: Netlist and SPEF version information found in log and file headers
+2: Info: Netlist: phy_cmn_phase_align_digtop.v.gz. In line 6, C:\Users\yuyin\Desktop\CHECKLIST_V3\CHECKLIST\IP_project_folder\logs\sta_post_syn.log: Netlist and SPEF version information found in log and file headers
+3: Info: Parasitics Mode: No SPEF/RCDB. In line 62, C:\Users\yuyin\Desktop\CHECKLIST_V3\CHECKLIST\IP_project_folder\logs\sta_post_syn.log: Netlist and SPEF version information found in log and file headers
+4: Info: SPEF: Skipped: we are writing post-synthesis SDF files. In line 22, C:\Users\yuyin\Desktop\CHECKLIST_V3\CHECKLIST\IP_project_folder\logs\sta_post_syn.log: Netlist and SPEF version information found in log and file headers
+5: Info: Tool Version: 23.15-s108_1. In line 44, C:\Users\yuyin\Desktop\CHECKLIST_V3\CHECKLIST\IP_project_folder\logs\sta_post_syn.log: Netlist and SPEF version information found in log and file headers
+6: Info: Top Design: phy_cmn_phase_align_digtop. In line 14, C:\Users\yuyin\Desktop\CHECKLIST_V3\CHECKLIST\IP_project_folder\logs\sta_post_syn.log: Netlist and SPEF version information found in log and file headers
+
+================================================================================
+
+[Test 2/6] Type 1 (requirements.value=N/A, waivers.value=0)
+--------------------------------------------------------------------------------
+Test ID: type1_0
+Status: PASS
+
+Checker Report Output:
+PASS:IMP-10-0-0-00:Confirm the netlist/spef version is correct.
+Info Occurrence: 7
+1: Info: Explanation: Timestamp check is informational only for post-synthesis STA: Explanation: Timestamp check is informational only for post-synthesis STA[WAIVED_INFO]
+2: Info: Netlist Version: Nov 18 2025 15:58:15. In line 3, C:\Users\yuyin\Desktop\CHECKLIST_V3\CHECKLIST\IP_project_folder\dbs\phy_cmn_phase_align_digtop.v.gz: Netlist and SPEF version information found in log and file headers
+3: Info: Netlist: phy_cmn_phase_align_digtop.v.gz. In line 6, C:\Users\yuyin\Desktop\CHECKLIST_V3\CHECKLIST\IP_project_folder\logs\sta_post_syn.log: Netlist and SPEF version information found in log and file headers
+4: Info: Parasitics Mode: No SPEF/RCDB. In line 62, C:\Users\yuyin\Desktop\CHECKLIST_V3\CHECKLIST\IP_project_folder\logs\sta_post_syn.log: Netlist and SPEF version information found in log and file headers
+5: Info: SPEF: Skipped: we are writing post-synthesis SDF files. In line 22, C:\Users\yuyin\Desktop\CHECKLIST_V3\CHECKLIST\IP_project_folder\logs\sta_post_syn.log: Netlist and SPEF version information found in log and file headers
+6: Info: Tool Version: 23.15-s108_1. In line 44, C:\Users\yuyin\Desktop\CHECKLIST_V3\CHECKLIST\IP_project_folder\logs\sta_post_syn.log: Netlist and SPEF version information found in log and file headers
+7: Info: Top Design: phy_cmn_phase_align_digtop. In line 14, C:\Users\yuyin\Desktop\CHECKLIST_V3\CHECKLIST\IP_project_folder\logs\sta_post_syn.log: Netlist and SPEF version information found in log and file headers
+
+================================================================================
+
+[Test 3/6] Type 2 (requirements.value>0, waivers.value=N/A)
+--------------------------------------------------------------------------------
+Test ID: type2_na
+Status: ERROR
+
+Checker Report Output:
+FAIL:IMP-10-0-0-00:Confirm the netlist/spef version is correct.
+Fail Occurrence: 1
+1: Fail: Nov 18 2025 10:28:15 UTC: Version pattern not satisfied or timestamp mismatch
+Info Occurrence: 1
+1: Info: SPEF: Skipped: we are writing post-synthesis SDF files. In line 22, C:\Users\yuyin\Desktop\CHECKLIST_V3\CHECKLIST\IP_project_folder\logs\sta_post_syn.log: Version pattern matched and timestamp validated
+
+================================================================================
+
+[Test 4/6] Type 2 (requirements.value>0, waivers.value=0)
+--------------------------------------------------------------------------------
+Test ID: type2_0
+Status: PASS
+
+Checker Report Output:
+PASS:IMP-10-0-0-00:Confirm the netlist/spef version is correct.
+Info Occurrence: 3
+1: Info: Explanation: Timestamp check is informational for post-synthesis flow: Explanation: Timestamp check is informational for post-synthesis flow[WAIVED_INFO]
+2: Info: SPEF: Skipped: we are writing post-synthesis SDF files. In line 22, C:\Users\yuyin\Desktop\CHECKLIST_V3\CHECKLIST\IP_project_folder\logs\sta_post_syn.log: Version pattern matched and timestamp validated
+3: Info: Nov 18 2025 10:28:15 UTC: Version pattern not satisfied or timestamp mismatch[WAIVED_AS_INFO]
+
+================================================================================
+
+[Test 5/6] Type 3
+--------------------------------------------------------------------------------
+Test ID: type3
+Status: ERROR
+
+Checker Report Output:
+FAIL:IMP-10-0-0-00:Confirm the netlist/spef version is correct.
+Fail Occurrence: 1
+1: Fail: Nov 18 2025 10:28:15 UTC: Version pattern not satisfied or timestamp mismatch
+Warn Occurrence: 2
+1: Warn: Nov 15 2025 08:15:30 UTC: Waiver defined but no version mismatch matched: Waived - legacy netlist timestamp Nov 15 2025 08:15:30 UTC approved for post-synthesis debug flow[WAIVER]
+2: Warn: SPEF: Loaded: Waiver defined but no version mismatch matched: Waived - SPEF loading acceptable for this analysis mode per design team[WAIVER]
+Info Occurrence: 1
+1: Info: SPEF: Skipped: we are writing post-synthesis SDF files. In line 22, C:\Users\yuyin\Desktop\CHECKLIST_V3\CHECKLIST\IP_project_folder\logs\sta_post_syn.log: Version pattern matched and timestamp validated
+
+================================================================================
+
+[Test 6/6] Type 4
+--------------------------------------------------------------------------------
+Test ID: type4
+Status: PASS
+
+Checker Report Output:
+PASS:IMP-10-0-0-00:Confirm the netlist/spef version is correct.
+Warn Occurrence: 2
+1: Warn: Nov 15 2025 08:15:30 UTC: Waiver defined but no version mismatch matched: Waived - legacy netlist timestamp Nov 15 2025 08:15:30 UTC approved for post-synthesis debug flow[WAIVER]
+2: Warn: SPEF: Loaded: Waiver defined but no version mismatch matched: Waived - SPEF loading acceptable for this analysis mode per design team[WAIVER]
+Info Occurrence: 6
+1: Info: Netlist Version: Nov 18 2025 15:58:15. In line 3, C:\Users\yuyin\Desktop\CHECKLIST_V3\CHECKLIST\IP_project_folder\dbs\phy_cmn_phase_align_digtop.v.gz: Netlist and SPEF version information found in log and file headers
+2: Info: Netlist: phy_cmn_phase_align_digtop.v.gz. In line 6, C:\Users\yuyin\Desktop\CHECKLIST_V3\CHECKLIST\IP_project_folder\logs\sta_post_syn.log: Netlist and SPEF version information found in log and file headers
+3: Info: Parasitics Mode: No SPEF/RCDB. In line 62, C:\Users\yuyin\Desktop\CHECKLIST_V3\CHECKLIST\IP_project_folder\logs\sta_post_syn.log: Netlist and SPEF version information found in log and file headers
+4: Info: SPEF: Skipped: we are writing post-synthesis SDF files. In line 22, C:\Users\yuyin\Desktop\CHECKLIST_V3\CHECKLIST\IP_project_folder\logs\sta_post_syn.log: Netlist and SPEF version information found in log and file headers
+5: Info: Tool Version: 23.15-s108_1. In line 44, C:\Users\yuyin\Desktop\CHECKLIST_V3\CHECKLIST\IP_project_folder\logs\sta_post_syn.log: Netlist and SPEF version information found in log and file headers
+6: Info: Top Design: phy_cmn_phase_align_digtop. In line 14, C:\Users\yuyin\Desktop\CHECKLIST_V3\CHECKLIST\IP_project_folder\logs\sta_post_syn.log: Netlist and SPEF version information found in log and file headers
+
+================================================================================
+

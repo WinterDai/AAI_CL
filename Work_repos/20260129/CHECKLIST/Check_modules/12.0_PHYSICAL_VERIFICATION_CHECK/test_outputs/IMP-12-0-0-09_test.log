@@ -1,0 +1,83 @@
+Test Log: IMP-12-0-0-09
+================================================================================
+
+[Test 1/6] Type 1 (requirements.value=N/A, waivers.value=N/A)
+--------------------------------------------------------------------------------
+Test ID: type1_na
+Status: PASS
+
+Checker Log Output:
+PASS:IMP-12-0-0-09:Confirm the LVS rule deck setting is correct.
+
+
+================================================================================
+
+[Test 2/6] Type 1 (requirements.value=N/A, waivers.value=0)
+--------------------------------------------------------------------------------
+Test ID: type1_0
+Status: PASS
+
+Checker Log Output:
+PASS:IMP-12-0-0-09:Confirm the LVS rule deck setting is correct.
+IMP-12-0-0-09-INFO01: [WAIVED_INFO]: Waived information:
+  Severity: Info Occurrence: 1
+  - Explanation: LVS rule deck validation is informational only for this design phase
+
+
+================================================================================
+
+[Test 3/6] Type 2 (requirements.value>0, waivers.value=N/A)
+--------------------------------------------------------------------------------
+Test ID: type2_na
+Status: PASS
+
+Checker Log Output:
+PASS:IMP-12-0-0-09:Confirm the LVS rule deck setting is correct.
+
+
+================================================================================
+
+[Test 4/6] Type 2 (requirements.value>0, waivers.value=0)
+--------------------------------------------------------------------------------
+Test ID: type2_0
+Status: PASS
+
+Checker Log Output:
+PASS:IMP-12-0-0-09:Confirm the LVS rule deck setting is correct.
+IMP-12-0-0-09-INFO01: [WAIVED_INFO]: Waived information:
+  Severity: Info Occurrence: 1
+  - Explanation: LVS configuration check is informational during early design phase
+
+
+================================================================================
+
+[Test 5/6] Type 3 (requirements.value>0, waivers.value>0)
+--------------------------------------------------------------------------------
+Test ID: type3
+Status: PASS
+
+Checker Log Output:
+PASS:IMP-12-0-0-09:Confirm the LVS rule deck setting is correct.
+IMP-12-0-0-09-WARN01: Unused waivers:
+  Severity: Warn Occurrence: 2
+  - GATE_TO_PG_CHECK
+  - RC_DFM_RULE
+
+
+================================================================================
+
+[Test 6/6] Type 4 (requirements.value=N/A, waivers.value>0)
+--------------------------------------------------------------------------------
+Test ID: type4
+Status: PASS
+
+Checker Log Output:
+PASS:IMP-12-0-0-09:Confirm the LVS rule deck setting is correct.
+IMP-12-0-0-09-WARN01: Unused waivers:
+  Severity: Warn Occurrence: 2
+  - GATE_TO_PG_CHECK
+  - RC_DFM_RULE
+
+
+================================================================================
+

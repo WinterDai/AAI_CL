@@ -1,0 +1,5 @@
+FAIL:IMP-8-0-0-21:If required, antenna diodes were added at the block/IP inputs.
+IMP-8-0-0-21-ERROR01: Configuration error:
+  Severity: Fail Occurrence: 1
+  - input_files is empty in YAML configuration
+

@@ -1,0 +1,16 @@
+description: Confirm turn-off the VIRTUAL_CONNECT in LVS setting.
+input_files:
+- ${CHECKLIST_ROOT}/IP_project_folder/logs/do_pvs_LVS_pvl.log
+- ${CHECKLIST_ROOT}/IP_project_folder/logs/do_cmd_3star_LVS_sourceme
+requirements:
+  pattern_items:
+  - VIRTUAL_CONNECT -COLON NO
+  - VIRTUAL CONNECT COLON NO
+  value: 2
+waivers:
+  value: 2
+  waive_items:
+  - name: VIRTUAL_CONNECT enabled
+    reason: Waived - hierarchical LVS requires VIRTUAL_CONNECT for this legacy design
+  - name: VIRTUAL CONNECT COLON YES
+    reason: Waived - Calibre LVS approved to use VIRTUAL_CONNECT per design review

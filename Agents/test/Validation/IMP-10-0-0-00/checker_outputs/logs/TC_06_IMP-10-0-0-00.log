@@ -1,0 +1,8 @@
+FAIL:IMP-10-0-0-00:Confirm the netlist/spef version is correct.
+IMP-10-0-0-00-ERROR01: Netlist/SPEF loading issues:
+  Severity: Fail Occurrence: 4
+  - Error: Netlist file path not found in STA log
+  - Error: SPEF file path not found in STA log
+  - Netlist (Status: Not Found)
+  - SPEF (Status: Not Found)
+

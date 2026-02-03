@@ -1,0 +1,12 @@
+description: 'TODO: Confirm have provided verification team post-simulation related
+  files to set post-sim environment. (TT corner,Timing violations within uncertainty,
+  skew no impact post-sim) in stable stage and close to final version (SS/TT/FF corners,Timing
+  violations within uncertainty, skew violations less than 10ps) post-simulation related
+  files 2 weeks for slices (4 weeks for phy_top) before final delivery.'
+requirements:
+  value: N/A
+  pattern_items: []
+input_files: []
+waivers:
+  value: N/A
+  waive_items: []

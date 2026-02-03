@@ -1,0 +1,13 @@
+description: List Pegasus physical signoff tool version (eg. pegasus/232/23.25.000)
+input_files:
+- ${CHECKLIST_ROOT}/IP_project_folder/tcl/2.0/setup_vars.tcl
+requirements:
+  pattern_items:
+  - pegasus/232/23.25.000
+  - pegasus/231/23.10.000
+  value: 2
+waivers:
+  value: 0
+  waive_items:
+  - 'Explanation: This check is informational only - Pegasus version verification
+    for audit trail'

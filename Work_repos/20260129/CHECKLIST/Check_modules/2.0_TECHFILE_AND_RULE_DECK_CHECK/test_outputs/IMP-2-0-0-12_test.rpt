@@ -1,0 +1,82 @@
+Test Report: IMP-2-0-0-12
+================================================================================
+
+[Test 1/6] Type 1 (requirements.value=N/A, waivers.value=N/A)
+--------------------------------------------------------------------------------
+Test ID: type1_na
+Status: PASS
+
+Checker Report Output:
+PASS:IMP-2-0-0-12:List COD dummy rule deck name (fill N/A if no COD). eg: PLN16FFP_FINcut_AutoGen.11b.encrypt
+Info Occurrence: 1
+1: Info: PLN12FFC_FINcut_AutoGen.09_1a.COD. In line 22, C:\Users\chenweif\Checker_dev\CHECKLIST\CHECKLIST\IP_project_folder\logs\2.0\COD_pvl.log: COD rule deck include statement found and extracted successfully
+
+================================================================================
+
+[Test 2/6] Type 1 (requirements.value=N/A, waivers.value=0)
+--------------------------------------------------------------------------------
+Test ID: type1_0
+Status: PASS
+
+Checker Report Output:
+PASS:IMP-2-0-0-12:List COD dummy rule deck name (fill N/A if no COD). eg: PLN16FFP_FINcut_AutoGen.11b.encrypt
+Info Occurrence: 2
+1: Info: Explanation: COD check is not applicable for this project.: Explanation: COD check is not applicable for this project.[WAIVED_INFO]
+2: Info: PLN12FFC_FINcut_AutoGen.09_1a.COD. In line 22, C:\Users\chenweif\Checker_dev\CHECKLIST\CHECKLIST\IP_project_folder\logs\2.0\COD_pvl.log: COD rule deck include statement found and extracted successfully
+
+================================================================================
+
+[Test 3/6] Type 2 (requirements.value>0, waivers.value=N/A)
+--------------------------------------------------------------------------------
+Test ID: type2_na
+Status: PASS
+
+Checker Report Output:
+PASS:IMP-2-0-0-12:List COD dummy rule deck name (fill N/A if no COD). eg: PLN16FFP_FINcut_AutoGen.11b.encrypt
+Info Occurrence: 1
+1: Info: PLN12FFC_FINcut_AutoGen.09_1a.COD. In line 22, C:\Users\chenweif\Checker_dev\CHECKLIST\CHECKLIST\IP_project_folder\logs\2.0\COD_pvl.log: COD rule deck filename matched expected golden value
+
+================================================================================
+
+[Test 4/6] Type 2 (requirements.value>0, waivers.value=0)
+--------------------------------------------------------------------------------
+Test ID: type2_0
+Status: PASS
+
+Checker Report Output:
+PASS:IMP-2-0-0-12:List COD dummy rule deck name (fill N/A if no COD). eg: PLN16FFP_FINcut_AutoGen.11b.encrypt
+Info Occurrence: 2
+1: Info: Explanation: COD rule deck version mismatch is acceptable for this design phase.: Explanation: COD rule deck version mismatch is acceptable for this design phase.[WAIVED_INFO]
+2: Info: PLN12FFC_FINcut_AutoGen.09_1a.COD. In line 22, C:\Users\chenweif\Checker_dev\CHECKLIST\CHECKLIST\IP_project_folder\logs\2.0\COD_pvl.log: COD rule deck filename matched expected golden value
+
+================================================================================
+
+[Test 5/6] Type 3
+--------------------------------------------------------------------------------
+Test ID: type3
+Status: PASS
+
+Checker Report Output:
+PASS:IMP-2-0-0-12:List COD dummy rule deck name (fill N/A if no COD). eg: PLN16FFP_FINcut_AutoGen.11b.encrypt
+Warn Occurrence: 1
+1: Warn: PLN16FFP_FINcut_AutoGen.10a.COD: Waiver not matched - no corresponding COD rule deck mismatch found: Waived - intermediate COD deck version used for debug runs[WAIVER]
+Info Occurrence: 1
+1: Info: Expected: PLN16FFP_FINcut_AutoGen.11b.encrypt.COD, Found: PLN12FFC_FINcut_AutoGen.09_1a.COD. In line 22, C:\Users\chenweif\Checker_dev\CHECKLIST\CHECKLIST\IP_project_folder\logs\2.0\COD_pvl.log: COD rule deck mismatch waived per design team approval[WAIVER]
+
+================================================================================
+
+[Test 6/6] Type 4
+--------------------------------------------------------------------------------
+Test ID: type4
+Status: PASS
+
+Checker Report Output:
+PASS:IMP-2-0-0-12:List COD dummy rule deck name (fill N/A if no COD). eg: PLN16FFP_FINcut_AutoGen.11b.encrypt
+Warn Occurrence: 2
+1: Warn: PLN12FFC_FINcut_AutoGen.09_1a.COD: Waiver not matched - no corresponding COD rule deck mismatch found: Waived - legacy COD deck approved for this design phase[WAIVER]
+2: Warn: PLN16FFP_FINcut_AutoGen.10a.COD: Waiver not matched - no corresponding COD rule deck mismatch found: Waived - intermediate COD deck version used for debug runs[WAIVER]
+Info Occurrence: 1
+1: Info: PLN12FFC_FINcut_AutoGen.09_1a.COD. In line 22, C:\Users\chenweif\Checker_dev\CHECKLIST\CHECKLIST\IP_project_folder\logs\2.0\COD_pvl.log: COD rule deck include statement found and extracted successfully
+
+================================================================================
+

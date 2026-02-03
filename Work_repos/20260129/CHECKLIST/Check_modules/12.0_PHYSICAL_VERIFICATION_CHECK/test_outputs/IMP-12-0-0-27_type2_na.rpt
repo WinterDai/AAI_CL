@@ -1,0 +1,5 @@
+FAIL:IMP-12-0-0-27:Confirm Package to Chip comparison passes (bump excel vs bump location in gds/oas)?
+Fail Occurrence: 3
+1: Fail: PAD_0: 5678.1234 6789.2345: Required bump locations missing or coordinates mismatched in GDS extraction report
+2: Fail: VDD: 2345.6789 3456.7890: Required bump locations missing or coordinates mismatched in GDS extraction report
+3: Fail: VSS: 1234.5678 2345.6789: Required bump locations missing or coordinates mismatched in GDS extraction report

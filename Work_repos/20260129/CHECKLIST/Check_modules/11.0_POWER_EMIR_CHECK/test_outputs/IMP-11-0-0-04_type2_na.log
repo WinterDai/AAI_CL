@@ -1,0 +1,9 @@
+FAIL:IMP-11-0-0-04:Confirm proper rc/PVT corners were used for IR drop and EM analysis. List rc/PVT corners used in comments field.
+IMP-11-0-0-04-ERROR01: RC/PVT corner configuration not satisfied - missing or incorrect specification:
+  Severity: Fail Occurrence: 1
+  - test_ssgnp_0p675v_125c
+IMP-11-0-0-04-INFO01: RC/PVT corner configuration validated and matched expected specification:
+  Severity: Info Occurrence: 2
+  - func_ffgnp_0p825v_125c
+  - func_ffgnp_0p825v_m40c
+

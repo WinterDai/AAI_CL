@@ -1,0 +1,18 @@
+description: Confirm the MIM related check setting is correct. (Fill N/A if no MIMCAP
+  inserted or no MIM related layers)
+input_files:
+- ${CHECKLIST_ROOT}/IP_project_folder/logs/do_pvs_DRC_pvl.log
+- ${CHECKLIST_ROOT}/IP_project_folder/logs/do_cmd_3star_DRC_sourceme
+requirements:
+  pattern_items:
+  - pattern1
+  value: 1
+waivers:
+  value: 2
+  waive_items:
+  - name: FHDMIM
+    reason: Waived - Test chip uses FHDMIM for characterization purposes per design
+      team approval
+  - name: FHDMIM_KOZ_AP_SPACE_5um_IP
+    reason: Waived - IP-level KOZ spacing not required for this integration per foundry
+      waiver

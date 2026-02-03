@@ -1,0 +1,3 @@
+PASS:IMP-5-0-0-18:Document DFT Stuck-At % meets or exceeds expected value?
+Info Occurrence: 1
+1: Info: ATCov%:96.19%. In line 66, C:\Users\wentao\AAI_local\AAI\Main_Work\ACL\CHECKLIST\CHECKLIST\IP_project_folder\logs\log_create_logic_tests_FULLSCAN_cdn_sd2101_i3p765_vm130_6x2ya2yb2yc2yd1ye1ga1gb_atpg_stuckat: DFT Stuck-At coverage: 96.19%

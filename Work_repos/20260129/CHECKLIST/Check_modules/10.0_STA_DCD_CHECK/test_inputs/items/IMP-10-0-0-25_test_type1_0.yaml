@@ -1,0 +1,11 @@
+description: Confirm check_timing report has no issue.
+input_files:
+- ${CHECKLIST_ROOT}/IP_project_folder/reports/10.0/check_timing_func.rpt
+- ${CHECKLIST_ROOT}/IP_project_folder/reports/10.0/check_timing_scan.rpt
+requirements:
+  pattern_items: []
+  value: N/A
+waivers:
+  value: 0
+  waive_items:
+  - 'Explanation: Check_timing violations are informational only for this IP release'

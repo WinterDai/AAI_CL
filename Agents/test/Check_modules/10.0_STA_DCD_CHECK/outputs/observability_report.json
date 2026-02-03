@@ -1,0 +1,22 @@
+{
+  "name": "real_case_e2e",
+  "timestamp": "2025-12-19T20:29:26.634383",
+  "logs": {
+    "total": 1,
+    "by_level": {
+      "INFO": 1
+    }
+  },
+  "traces": {
+    "total_spans": 0,
+    "active_spans": 0
+  },
+  "performance": {
+    "total_operations": 0,
+    "by_operation": {},
+    "overall": {
+      "total_duration": 0,
+      "avg_duration": 0
+    }
+  }
+}

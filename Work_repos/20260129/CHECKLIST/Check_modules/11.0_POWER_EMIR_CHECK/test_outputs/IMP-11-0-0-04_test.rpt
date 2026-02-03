@@ -1,0 +1,95 @@
+Test Report: IMP-11-0-0-04
+================================================================================
+
+[Test 1/6] Type 1 (requirements.value=N/A, waivers.value=N/A)
+--------------------------------------------------------------------------------
+Test ID: type1_na
+Status: ERROR
+
+Checker Report Output:
+FAIL:IMP-11-0-0-04:Confirm proper rc/PVT corners were used for IR drop and EM analysis. List rc/PVT corners used in comments field.
+Fail Occurrence: 3
+1: Fail: func_ffgnp_0p825v_125c. In line 33, C:\dev_workspace\AI-Agent Checklist Automation\CHECKLIST\CHECKLIST\IP_project_folder\logs\ND1_func_ffgnp_0p825v_125c_cbest_CCbest_T_cworst_CCworst_hold_dynamic.log: Missing corner specification: view definition, Signal RC corner, or Power/Ground RC corner not found in log file
+2: Fail: func_ffgnp_0p825v_m40c. In line 33, C:\dev_workspace\AI-Agent Checklist Automation\CHECKLIST\CHECKLIST\IP_project_folder\logs\EM_ND1_func_ffgnp_0p825v_m40c_cbest_CCbest_T_rcbest_CCbest_hold.log: Missing corner specification: view definition, Signal RC corner, or Power/Ground RC corner not found in log file
+3: Fail: func_ssgnp_0p675v_125c. In line 33, C:\dev_workspace\AI-Agent Checklist Automation\CHECKLIST\CHECKLIST\IP_project_folder\logs\ND1_func_ssgnp_0p675v_125c_cworst_CCworst_T_cworst_CCworst_hold_dynamic.log: Missing corner specification: view definition, Signal RC corner, or Power/Ground RC corner not found in log file
+
+================================================================================
+
+[Test 2/6] Type 1 (requirements.value=N/A, waivers.value=0)
+--------------------------------------------------------------------------------
+Test ID: type1_0
+Status: PASS
+
+Checker Report Output:
+PASS:IMP-11-0-0-04:Confirm proper rc/PVT corners were used for IR drop and EM analysis. List rc/PVT corners used in comments field.
+Info Occurrence: 4
+1: Info: Explanation: This check is informational only - corner specifications are validated separately in timing signoff: Explanation: This check is informational only - corner specifications are validated separately in timing signoff[WAIVED_INFO]
+2: Info: func_ffgnp_0p825v_125c. In line 33, C:\dev_workspace\AI-Agent Checklist Automation\CHECKLIST\CHECKLIST\IP_project_folder\logs\ND1_func_ffgnp_0p825v_125c_cbest_CCbest_T_cworst_CCworst_hold_dynamic.log: Missing corner specification: view definition, Signal RC corner, or Power/Ground RC corner not found in log file[WAIVED_AS_INFO]
+3: Info: func_ffgnp_0p825v_m40c. In line 33, C:\dev_workspace\AI-Agent Checklist Automation\CHECKLIST\CHECKLIST\IP_project_folder\logs\EM_ND1_func_ffgnp_0p825v_m40c_cbest_CCbest_T_rcbest_CCbest_hold.log: Missing corner specification: view definition, Signal RC corner, or Power/Ground RC corner not found in log file[WAIVED_AS_INFO]
+4: Info: func_ssgnp_0p675v_125c. In line 33, C:\dev_workspace\AI-Agent Checklist Automation\CHECKLIST\CHECKLIST\IP_project_folder\logs\ND1_func_ssgnp_0p675v_125c_cworst_CCworst_T_cworst_CCworst_hold_dynamic.log: Missing corner specification: view definition, Signal RC corner, or Power/Ground RC corner not found in log file[WAIVED_AS_INFO]
+
+================================================================================
+
+[Test 3/6] Type 2 (requirements.value>0, waivers.value=N/A)
+--------------------------------------------------------------------------------
+Test ID: type2_na
+Status: ERROR
+
+Checker Report Output:
+FAIL:IMP-11-0-0-04:Confirm proper rc/PVT corners were used for IR drop and EM analysis. List rc/PVT corners used in comments field.
+Fail Occurrence: 1
+1: Fail: test_ssgnp_0p675v_125c: Corner specification not satisfied: expected PA view or RC corner configuration missing or incorrect
+Info Occurrence: 2
+1: Info: func_ffgnp_0p825v_125c. In line 33, C:\dev_workspace\AI-Agent Checklist Automation\CHECKLIST\CHECKLIST\IP_project_folder\logs\ND1_func_ffgnp_0p825v_125c_cbest_CCbest_T_cworst_CCworst_hold_static.log: Corner specification matched: PA view, Signal RC, and PG RC corners validated against expected configuration
+2: Info: func_ffgnp_0p825v_m40c. In line 33, C:\dev_workspace\AI-Agent Checklist Automation\CHECKLIST\CHECKLIST\IP_project_folder\logs\EM_ND1_func_ffgnp_0p825v_m40c_cbest_CCbest_T_rcbest_CCbest_hold.log: Corner specification matched: PA view, Signal RC, and PG RC corners validated against expected configuration
+
+================================================================================
+
+[Test 4/6] Type 2 (requirements.value>0, waivers.value=0)
+--------------------------------------------------------------------------------
+Test ID: type2_0
+Status: PASS
+
+Checker Report Output:
+PASS:IMP-11-0-0-04:Confirm proper rc/PVT corners were used for IR drop and EM analysis. List rc/PVT corners used in comments field.
+Info Occurrence: 4
+1: Info: Explanation: This check is informational only - corner coverage is validated in separate timing signoff checklist: Explanation: This check is informational only - corner coverage is validated in separate timing signoff checklist[WAIVED_INFO]
+2: Info: func_ffgnp_0p825v_125c. In line 33, C:\dev_workspace\AI-Agent Checklist Automation\CHECKLIST\CHECKLIST\IP_project_folder\logs\ND1_func_ffgnp_0p825v_125c_cbest_CCbest_T_cworst_CCworst_hold_static.log: Corner specification matched: PA view, Signal RC, and PG RC corners validated against expected configuration
+3: Info: func_ffgnp_0p825v_m40c. In line 33, C:\dev_workspace\AI-Agent Checklist Automation\CHECKLIST\CHECKLIST\IP_project_folder\logs\EM_ND1_func_ffgnp_0p825v_m40c_cbest_CCbest_T_rcbest_CCbest_hold.log: Corner specification matched: PA view, Signal RC, and PG RC corners validated against expected configuration
+4: Info: test_ssgnp_0p675v_125c: Corner specification not satisfied: expected PA view or RC corner configuration missing or incorrect[WAIVED_AS_INFO]
+
+================================================================================
+
+[Test 5/6] Type 3 (requirements.value>0, waivers.value>0)
+--------------------------------------------------------------------------------
+Test ID: type3
+Status: PASS
+
+Checker Report Output:
+PASS:IMP-11-0-0-04:Confirm proper rc/PVT corners were used for IR drop and EM analysis. List rc/PVT corners used in comments field.
+Warn Occurrence: 1
+1: Warn: ND1_func_rcss_0p675v_m40c_dynamic: Waiver not matched - no corresponding corner specification violation found in analysis logs: Waived - low temperature dynamic analysis skipped per project plan[WAIVER]
+Info Occurrence: 3
+1: Info: test_ssgnp_0p675v_125c: Corner specification waived per design team approval - alternative corner configuration accepted[WAIVER]
+2: Info: func_ffgnp_0p825v_125c. In line 33, C:\dev_workspace\AI-Agent Checklist Automation\CHECKLIST\CHECKLIST\IP_project_folder\logs\ND1_func_ffgnp_0p825v_125c_cbest_CCbest_T_cworst_CCworst_hold_static.log: Corner specification matched: PA view, Signal RC, and PG RC corners validated against expected configuration
+3: Info: func_ffgnp_0p825v_m40c. In line 33, C:\dev_workspace\AI-Agent Checklist Automation\CHECKLIST\CHECKLIST\IP_project_folder\logs\EM_ND1_func_ffgnp_0p825v_m40c_cbest_CCbest_T_rcbest_CCbest_hold.log: Corner specification matched: PA view, Signal RC, and PG RC corners validated against expected configuration
+
+================================================================================
+
+[Test 6/6] Type 4 (requirements.value=N/A, waivers.value>0)
+--------------------------------------------------------------------------------
+Test ID: type4
+Status: ERROR
+
+Checker Report Output:
+FAIL:IMP-11-0-0-04:Confirm proper rc/PVT corners were used for IR drop and EM analysis. List rc/PVT corners used in comments field.
+Fail Occurrence: 3
+1: Fail: func_ffgnp_0p825v_125c. In line 33, C:\dev_workspace\AI-Agent Checklist Automation\CHECKLIST\CHECKLIST\IP_project_folder\logs\ND1_func_ffgnp_0p825v_125c_cbest_CCbest_T_cworst_CCworst_hold_dynamic.log: Missing corner specification: view definition, Signal RC corner, or Power/Ground RC corner not found in log file
+2: Fail: func_ffgnp_0p825v_m40c. In line 33, C:\dev_workspace\AI-Agent Checklist Automation\CHECKLIST\CHECKLIST\IP_project_folder\logs\EM_ND1_func_ffgnp_0p825v_m40c_cbest_CCbest_T_rcbest_CCbest_hold.log: Missing corner specification: view definition, Signal RC corner, or Power/Ground RC corner not found in log file
+3: Fail: func_ssgnp_0p675v_125c. In line 33, C:\dev_workspace\AI-Agent Checklist Automation\CHECKLIST\CHECKLIST\IP_project_folder\logs\ND1_func_ssgnp_0p675v_125c_cworst_CCworst_T_cworst_CCworst_hold_dynamic.log: Missing corner specification: view definition, Signal RC corner, or Power/Ground RC corner not found in log file
+Warn Occurrence: 2
+1: Warn: ND1_func_rcss_0p675v_m40c_dynamic: Waiver not matched - no corresponding corner specification violation found in analysis logs: Waived - low temperature dynamic analysis skipped per project plan[WAIVER]
+2: Warn: ND1_test_ssgnp_0p675v_125c_setup: Waiver not matched - no corresponding corner specification violation found in analysis logs: Waived - test mode corner not required for power-only EM analysis per design review[WAIVER]
+
+================================================================================
+

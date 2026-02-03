@@ -1,0 +1,16 @@
+description: Confirm all Warning message in the STA log files can be waived.
+input_files:
+- ${CHECKLIST_ROOT}/IP_project_folder/reports/10.0/tempus_1.log
+- ${CHECKLIST_ROOT}/IP_project_folder/reports/10.0/tempus_2.log
+requirements:
+  pattern_items: []
+  value: N/A
+waivers:
+  value: 2
+  waive_items:
+  - name: TECHLIB-302
+    reason: Known library limitation - cells are functional primitives without boolean
+      functions
+  - name: TECHLIB-1320
+    reason: SPICE correlation not required for this design - attribute can be safely
+      ignored

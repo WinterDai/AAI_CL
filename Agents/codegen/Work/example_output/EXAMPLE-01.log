@@ -1,0 +1,43 @@
+================================================================================
+Checker: EXAMPLE-01
+Description: Example design rule checker
+================================================================================
+
+Status: FAIL
+
+Found Items (2):
+--------------------------------------------------------------------------------
+  [1]
+      Description: Example design rule checker
+      Value: setup_violation
+      Source File: C:\Users\wentao\AppData\Local\Temp\tmpuxxk_wty.rpt
+      Line Number: 5
+      Matched Content: RULE: setup_violation [severity=error]
+      Parsed Fields: {'severity': 'error'}
+  [2]
+      Description: Example design rule checker
+      Value: hold_violation
+      Source File: C:\Users\wentao\AppData\Local\Temp\tmpuxxk_wty.rpt
+      Line Number: 6
+      Matched Content: RULE: hold_violation [severity=error]
+      Parsed Fields: {'severity': 'error'}
+
+Missing Items (1):
+--------------------------------------------------------------------------------
+  [1]
+      Description: Example design rule checker
+      Expected: max_fanout
+      Source File: (ghost)
+      Line Number: N/A
+      Searched Files: 1 file(s)
+        - C:\Users\wentao\AppData\Local\Temp\tmpuxxk_wty.rpt
+
+Extra Items (1):
+--------------------------------------------------------------------------------
+  [1]
+      Description: Example design rule checker
+      Value: max_transition
+      Source File: C:\Users\wentao\AppData\Local\Temp\tmpuxxk_wty.rpt
+      Line Number: 7
+      Matched Content: RULE: max_transition [severity=warning]
+      Parsed Fields: {'severity': 'warning'}

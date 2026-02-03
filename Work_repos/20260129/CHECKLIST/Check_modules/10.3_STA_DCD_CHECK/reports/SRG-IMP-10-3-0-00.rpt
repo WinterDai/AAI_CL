@@ -1,0 +1,3 @@
+FAIL:SRG-IMP-10-3-0-00:There should not be any clock cells in the data path
+Fail Occurrence: 1
+1: Fail: input_files is empty in YAML configuration

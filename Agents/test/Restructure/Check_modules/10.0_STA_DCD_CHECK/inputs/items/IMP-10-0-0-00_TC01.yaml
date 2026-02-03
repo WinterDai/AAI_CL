@@ -1,0 +1,11 @@
+description: TC_01 - Type 2 Value check (waivers.value=0)
+requirements:
+  value: 1
+  pattern_items:
+  - Generated on:*2025*
+input_files:
+- C:\Users\wentao\AAI_local\AAI\Main_Work\ACL\CHECKLIST\Tool\Agent\test\Restructure\IP_project_folder\logs\sta_post_syn.log
+waivers:
+  value: 0
+  waive_items:
+  - Current stage is synthesis, SPEF check is not applicable.

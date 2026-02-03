@@ -1,0 +1,4 @@
+PASS:IMP-2-0-0-02:Confirm latest DRC rule deck(s) was used? List DRC rule deck name in Comments. eg: PLN3ELO_17M_1Xa1Xb1Xc1Xd1Ya1Yb4Y2Yy2Yx2R_014.11_2a.encrypt PLN3ELO_17M_1Xa1Xb1Xc1Xd1Ya1Yb4Y2Yy2Yx2R_054_PATCH.11_2a.encrypt
+Info Occurrence: 2
+1: Info: PLN3ELO_17M_1Xa1Xb1Xc1Xd1Ya1Yb4Y2Yy2Yx2R_014.11_2a.encrypt: DRC rule deck version waived per design team approval: Waived per design review - using previous rule deck version approved for this tapeout[WAIVER]
+2: Info: PLN6FF_15M_1X1Xa1Ya5Y2Yy2Yx2R_001.11a.encrypt. In line 5, C:\Users\yuyin\OneDrive - Cadence Design Systems Inc\2025\Checklist\AAI\CHECKLIST_V3\CHECKLIST\IP_project_folder\tcl\2.0\CDN_104H_cdn_hs_phy_data_slice_EW.DRCwD.pvl: DRC rule deck information extracted successfully

@@ -1,0 +1,27 @@
+Compared points are: Non-equivalent (reachable)
+  (G) + 369  DFF  /u_cmn_cpi_ctrl_if/u_cdrlf_pi_pos/shift_register_counter_reg[6]/U$1
+  (R) - 369  DFF  /u_cmn_cpi_ctrl_if/u_cdrlf_pi_pos/shift_register_counter_reg[6]/U$1
+Due to these Non-equivalent points:
+[DATA]
+  (G) + 3421 OR   /u_cmn_cpi_ctrl_if/u_cdrlf_pi_pos/shift_register_counter_reg[6]/U$3
+  (R) - 3432 OR   /u_cmn_cpi_ctrl_if/u_cdrlf_pi_pos/shift_register_counter_reg[6]/U$4
+
+Compared points are: Non-equivalent (reachable)
+  (G) + 370  DFF  /u_cmn_cpi_ctrl_if/u_cdrlf_pi_pos/shift_register_counter_reg[5]/U$1
+  (R) - 370  DFF  /u_cmn_cpi_ctrl_if/u_cdrlf_pi_pos/shift_register_counter_reg[5]/U$1
+Due to these Non-equivalent points:
+[DATA]
+  (G) + 3427 OR   /u_cmn_cpi_ctrl_if/u_cdrlf_pi_pos/shift_register_counter_reg[5]/U$3
+  (R) - 3439 OR   /u_cmn_cpi_ctrl_if/u_cdrlf_pi_pos/shift_register_counter_reg[5]/U$4
+
+2 Non-equivalent point(s) reported
+2 compared point(s) reported
+================================================================================
+Compared points      PO     DFF       Total   
+--------------------------------------------------------------------------------
+Equivalent           285    290       575     
+--------------------------------------------------------------------------------
+Inverted-equivalent  0      97        97      
+--------------------------------------------------------------------------------
+Non-equivalent       0      2        2      
+================================================================================

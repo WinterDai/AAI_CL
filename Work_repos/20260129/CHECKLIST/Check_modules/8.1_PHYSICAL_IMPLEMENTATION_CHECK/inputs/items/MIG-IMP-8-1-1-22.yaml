@@ -1,0 +1,15 @@
+description: 'TODO: Confirm place the cdn_hs_phy/inst_scan_dly module close to PHY
+  interface pins and create separate clock tree to these retime scan registers if
+  your design is based on HSPHY 2022Q1 or later branch and need to support ETM timing
+  signoff. Objective is to make the scan related interface data/clock paths simpler
+  and reduce the slack difference between flatten and ETM model. For DFPHY,current
+  design has not sperated inst_scan_dly module, so please place the seperate “*scan_dly*”
+  registers that belong to a in2reg/reg2out path close to PHY ports similarly. (Fill
+  N/A if design has not this module)'
+requirements:
+  value: N/A
+  pattern_items: []
+input_files: []
+waivers:
+  value: N/A
+  waive_items: []

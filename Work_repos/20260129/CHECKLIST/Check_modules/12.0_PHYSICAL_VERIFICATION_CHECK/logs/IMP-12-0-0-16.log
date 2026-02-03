@@ -1,0 +1,5 @@
+FAIL:IMP-12-0-0-16:Confrim there is no issue for lvs.rep and extra pins in lvs.rep.cls even the results shows MATCH(check the Note)
+IMP-12-0-0-16-ERROR01: Configuration error:
+  Severity: Fail Occurrence: 1
+  - input_files is empty in YAML configuration
+

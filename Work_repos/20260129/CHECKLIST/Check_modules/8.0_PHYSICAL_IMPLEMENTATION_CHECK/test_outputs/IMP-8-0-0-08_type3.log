@@ -1,0 +1,9 @@
+PASS:IMP-8-0-0-08:Confirm max routing layer is correct. Provide max routing layer value in comment field.
+IMP-8-0-0-08-WARN01: Unused waivers:
+  Severity: Warn Occurrence: 2
+  PGNetLayerList_M14
+  SignalNetLayerList_M14
+IMP-8-0-0-08-INFO01: Max routing layer requirement satisfied:
+  Severity: Info Occurrence: 1
+  M13
+

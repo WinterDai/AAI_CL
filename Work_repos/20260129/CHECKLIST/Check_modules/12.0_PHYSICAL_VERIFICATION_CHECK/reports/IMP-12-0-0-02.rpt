@@ -1,0 +1,3 @@
+FAIL:IMP-12-0-0-02:Confirm the GDS was generated properly and physical verification has been run on final block GDS.
+Fail Occurrence: 1
+1: Fail: input_files is empty in YAML configuration

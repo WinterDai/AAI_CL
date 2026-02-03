@@ -1,0 +1,4 @@
+PASS:IMP-10-0-0-14:Confirm the noise/glitch check result is clean.
+Info Occurrence: 2
+1: Info: View: func_rcff_0p825v_125c_pcff_cmin_pcff3_hold - CLEAN (DC violations: 0, Peak violations: 0, Total problem nets: 0). In line 30, C:\Users\yuyin\OneDrive - Cadence Design Systems Inc\2025\Checklist\AAI\CHECKLIST_V3\CHECKLIST\IP_project_folder\reports\10.0\noise_1.rpt: All noise/glitch analysis views are clean (0 violations)
+2: Info: View: func_rcss_0p675v_125c_pcss_cmax_prcs3_hold - CLEAN (DC violations: 0, Peak violations: 0, Total problem nets: 0). In line 33, C:\Users\yuyin\OneDrive - Cadence Design Systems Inc\2025\Checklist\AAI\CHECKLIST_V3\CHECKLIST\IP_project_folder\reports\10.0\noise_2.rpt: All noise/glitch analysis views are clean (0 violations)

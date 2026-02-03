@@ -1,0 +1,8 @@
+PASS:IMP-8-0-0-08:Confirm max routing layer is correct. Provide max routing layer value in comment field.
+IMP-8-0-0-08-INFO01: [WAIVED_INFO]: Waived information:
+  Severity: Info Occurrence: 1
+  Explanation: Routing layer hierarchy check is informational only for this design phase
+IMP-8-0-0-08-INFO02: Max routing layer configuration validated:
+  Severity: Info Occurrence: 1
+  Max routing layer: M15
+

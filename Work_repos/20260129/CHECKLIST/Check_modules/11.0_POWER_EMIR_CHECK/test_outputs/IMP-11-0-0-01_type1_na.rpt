@@ -1,0 +1,3 @@
+PASS:IMP-11-0-0-01:Confirm the design has no power open/short and all instances are physically connected.
+Info Occurrence: 1
+1: Info: Overall_Run_Result. In line 12, C:\dev_workspace\AI-Agent Checklist Automation\CHECKLIST\CHECKLIST\IP_project_folder\reports\lvs.rep.cls: LVS Run Result: MATCH | No power open/short detected | All instances physically connected

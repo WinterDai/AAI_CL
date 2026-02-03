@@ -1,0 +1,3 @@
+FAIL:MIG-IMP-10-1-0-04:Confirm have provided verification team post-simulation related files to set post-sim environment. (TT corner,Timing violations within uncertainty, skew no impact post-sim) in stable stage and close to final version (SS/TT/FF corners,Timing violations within uncertainty, skew violations less than 10ps) post-simulation related files 2 weeks for slices (4 weeks for phy_top) before final delivery.
+Fail Occurrence: 1
+1: Fail: input_files is empty in YAML configuration

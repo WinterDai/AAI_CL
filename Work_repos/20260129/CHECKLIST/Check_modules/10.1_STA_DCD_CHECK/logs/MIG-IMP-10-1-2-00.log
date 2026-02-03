@@ -1,0 +1,5 @@
+FAIL:MIG-IMP-10-1-2-00:[ETMQA check] Confirm this program will support ETM based timing signoff on customer side. (Fill N/A if it doesn't support ETM based timing signoff on customer side, check with design team or PM about the details)
+MIG-IMP-10-1-2-00-ERROR01: Configuration error:
+  Severity: Fail Occurrence: 1
+  - input_files is empty in YAML configuration
+

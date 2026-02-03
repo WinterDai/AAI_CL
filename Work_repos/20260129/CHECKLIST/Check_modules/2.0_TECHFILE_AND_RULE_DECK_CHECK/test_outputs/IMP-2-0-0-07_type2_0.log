@@ -1,0 +1,8 @@
+PASS:IMP-2-0-0-07:Confirm LVS rule deck was not modified? If it was, explain in comments field.
+IMP-2-0-0-07-INFO01: [WAIVED_INFO]: Waived information:
+  Severity: Info Occurrence: 1
+  - Explanation: LVS rule deck modifications are acceptable for this project phase
+IMP-2-0-0-07-INFO02: [WAIVED_AS_INFO]: LVS rule deck modified - differences detected from golden baseline:
+  Severity: Info Occurrence: 1
+  - local_file_missing
+

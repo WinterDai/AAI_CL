@@ -1,0 +1,24 @@
+module: 17.2_FINAL_DATA
+stage: Initial
+generated_at: 2025-12-23T18:43:03
+check_items: 
+  HBM-IMP-17-2-0-00: 
+    executed: true
+    status: fail
+    description: Has the complete set of rule decks, LVS/DRC settings, and other setup requirements used to generate and signoff the final delivery been archived in case the runs must be replicated in the future?
+    failures: 
+      - index: 1
+        detail: input_files is empty in YAML configuration
+        source_line: N/A
+        source_file: N/A
+        reason: input_files is empty in YAML configuration
+  HBM-IMP-17-2-0-01: 
+    executed: true
+    status: fail
+    description: Recommend performing a flush of the delivery flow with the customer to ensure all necessary files are delivered and the required database formats used. Has this been done?
+    failures: 
+      - index: 1
+        detail: input_files is empty in YAML configuration
+        source_line: N/A
+        source_file: N/A
+        reason: input_files is empty in YAML configuration

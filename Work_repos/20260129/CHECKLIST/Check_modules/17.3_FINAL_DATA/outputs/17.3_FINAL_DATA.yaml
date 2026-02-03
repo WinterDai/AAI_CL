@@ -1,0 +1,64 @@
+module: 17.3_FINAL_DATA
+stage: Initial
+generated_at: 2025-12-23T18:43:03
+check_items: 
+  SRG-IMP-17-3-0-00: 
+    executed: true
+    status: fail
+    description: Is the Delivery Package contains layer map file
+    failures: 
+      - index: 1
+        detail: input_files is empty in YAML configuration
+        source_line: N/A
+        source_file: N/A
+        reason: input_files is empty in YAML configuration
+  SRG-IMP-17-3-0-01: 
+    executed: true
+    status: fail
+    description: Is the Delivery Package contains Device List
+    failures: 
+      - index: 1
+        detail: input_files is empty in YAML configuration
+        source_line: N/A
+        source_file: N/A
+        reason: input_files is empty in YAML configuration
+  SRG-IMP-17-3-0-02: 
+    executed: true
+    status: fail
+    description: Is the Delivery Package contains IP vendor check list form
+    failures: 
+      - index: 1
+        detail: input_files is empty in YAML configuration
+        source_line: N/A
+        source_file: N/A
+        reason: input_files is empty in YAML configuration
+  SRG-IMP-17-3-0-03: 
+    executed: true
+    status: fail
+    description: Is the Delivery Package contains Test Chip Description doc
+    failures: 
+      - index: 1
+        detail: input_files is empty in YAML configuration
+        source_line: N/A
+        source_file: N/A
+        reason: input_files is empty in YAML configuration
+  SRG-IMP-17-3-0-04: 
+    executed: true
+    status: fail
+    description: Is the Delivery Package contains all the PV report files
+    failures: 
+      - index: 1
+        detail: input_files is empty in YAML configuration
+        source_line: N/A
+        source_file: N/A
+        reason: input_files is empty in YAML configuration
+  SRG-IMP-17-3-0-05: 
+    executed: true
+    status: fail
+    description: Is the Delivery Package contains all the PV run sets (Only settings)
+    failures: 
+      - index: 1
+        detail: input_files is empty in YAML configuration
+        source_line: N/A
+        source_file: N/A
+        reason: input_files is empty in YAML configuration

@@ -1,0 +1,8 @@
+PASS:IMP-2-0-0-00:List Innovus Tech Lef name. eg:N16_Encounter_11M_2Xa1Xd3Xe2Y2R_UTRDL_9T_PODE_1.2a.tlef
+IMP-2-0-0-00-INFO01: [WAIVED_INFO]: Waived information:
+  Severity: Info Occurrence: 1
+  - Explanation: Tech LEF filename check is informational - different versions may be used across projects
+IMP-2-0-0-00-INFO02: Technology LEF filename matched expected pattern:
+  Severity: Info Occurrence: 1
+  - PRTF_Innovus_N5_16M_1X1Xb1Xe1Ya1Yb6Y2Yy2R_UTRDL_M1P34_M2P35_M3P42_M4P42_M5P76_M6P76_M7P76_M8P76_M9P76_M10P76_M11P76_M12P76_H210_SHDMIM.13a.tlef
+

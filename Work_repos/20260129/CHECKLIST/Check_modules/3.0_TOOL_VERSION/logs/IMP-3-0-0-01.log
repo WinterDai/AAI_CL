@@ -1,0 +1,5 @@
+PASS:IMP-3-0-0-01:List Quantus RC extraction tool version (eg. quantus/231/23.11.000)
+IMP-3-0-0-01-INFO01: Quantus RC extraction tool version found in setup configuration:
+  Severity: Info Occurrence: 1
+  - quantus/231/23.10.000 (QRC section)
+

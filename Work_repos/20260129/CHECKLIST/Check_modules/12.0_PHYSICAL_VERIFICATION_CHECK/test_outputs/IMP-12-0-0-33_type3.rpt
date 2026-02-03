@@ -1,0 +1,10 @@
+FAIL:IMP-12-0-0-33:Confirm all Warning message in DFM/FLT log files can be waived. (for SEC process, for others fill N/A)
+Fail Occurrence: 2
+1: Fail: Worker 1 killed by external signal [9] (matches: Worker.*killed). In line 573, C:\Users\jingyu\OneDrive - Cadence Design Systems Inc\Desktop\checklist_dev\AI_2026_V1\CHECKLIST\CHECKLIST\IP_project_folder\logs\Pegasus_DFM.log: Monitored WARNING patterns found in verification logs
+2: Fail: same label "x" for multiple nets, it is assigned to net x (matches: same label.*multiple nets). In line 580, C:\Users\jingyu\OneDrive - Cadence Design Systems Inc\Desktop\checklist_dev\AI_2026_V1\CHECKLIST\CHECKLIST\IP_project_folder\logs\Pegasus_DFM.log: Monitored WARNING patterns found in verification logs
+Warn Occurrence: 3
+1: Warn: GDR-00003: Waiver not matched - no corresponding WARNING found in logs[WAIVER]
+2: Warn: Worker 1$: Waiver not matched - no corresponding WARNING found in logs[WAIVER]
+3: Warn: Worker 11$: Waiver not matched - no corresponding WARNING found in logs[WAIVER]
+Info Occurrence: 1
+1: Info: Out of.*disk space: Monitored WARNING patterns not detected in verification logs

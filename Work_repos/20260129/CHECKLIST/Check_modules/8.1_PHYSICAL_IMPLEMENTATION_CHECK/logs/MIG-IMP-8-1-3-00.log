@@ -1,0 +1,5 @@
+FAIL:MIG-IMP-8-1-3-00:[MIG-WB-Tracking] Confirm the workbench flow you are using. (Current latest one: /projects/workbench/versions/workbench_v0.8) Put the workbench flow dir in Comment and specify the reason why you don’t use the central workbench flow. The reason maybe as belows, -This process is new and not covered by the central workbench flow. -ECO based on old programs.
+MIG-IMP-8-1-3-00-ERROR01: Configuration error:
+  Severity: Fail Occurrence: 1
+  - input_files is empty in YAML configuration
+

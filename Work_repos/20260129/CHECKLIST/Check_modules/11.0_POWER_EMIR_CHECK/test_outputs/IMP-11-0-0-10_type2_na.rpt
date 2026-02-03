@@ -1,0 +1,6 @@
+FAIL:IMP-11-0-0-10:Confirm static power analysis results matches the requirement.
+Fail Occurrence: 1
+1: Fail: VSS_Power_EM: 1.5485 >= target (1.0): Power metric exceeds threshold requirement
+Info Occurrence: 2
+1: Info: Static_IR_Drop: 2.40% < target (3.0%). In line 22, C:\Users\zhihan\projects\check_development\CHECKLIST\CHECKLIST\IP_project_folder\reports\11.0\VDD_VSS_div.iv: All power metrics matched requirements and validated successfully
+2: Info: VDD_Power_EM: 0.8907 < target (1.0). In line 179, C:\Users\zhihan\projects\check_development\CHECKLIST\CHECKLIST\IP_project_folder\reports\11.0\results_VDD: All power metrics matched requirements and validated successfully

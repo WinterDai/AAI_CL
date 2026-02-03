@@ -1,0 +1,116 @@
+Test Log: IMP-11-0-0-03
+================================================================================
+
+[Test 1/6] Type 1 (requirements.value=N/A, waivers.value=N/A)
+--------------------------------------------------------------------------------
+Test ID: type1_na
+Status: PASS
+
+Checker Log Output:
+PASS:IMP-11-0-0-03:Confirm activity file was used? If not, provide default switching activity values in comments field.
+IMP-11-0-0-03-INFO01: Activity configuration found in power analysis log:
+  Severity: Info Occurrence: 5
+  - EM_ND1_func_ffgnp_0p825v_m40c_cbest_CCbest_T_rcbest_CCbest_hold.log
+  - ND1_func_ffgnp_0p825v_125c_cbest_CCbest_T_cworst_CCworst_hold_dynamic.log
+  - ND1_func_ffgnp_0p825v_125c_cbest_CCbest_T_cworst_CCworst_hold_static.log
+  - ND1_func_ssgnp_0p675v_125c_cworst_CCworst_T_cworst_CCworst_hold_dynamic.log
+  - ND1_func_ssgnp_0p675v_125c_cworst_CCworst_T_cworst_CCworst_hold_static.log
+
+
+================================================================================
+
+[Test 2/6] Type 1 (requirements.value=N/A, waivers.value=0)
+--------------------------------------------------------------------------------
+Test ID: type1_0
+Status: PASS
+
+Checker Log Output:
+PASS:IMP-11-0-0-03:Confirm activity file was used? If not, provide default switching activity values in comments field.
+IMP-11-0-0-03-INFO01: [WAIVED_INFO]: Waived information:
+  Severity: Info Occurrence: 1
+  - Explanation: Activity configuration check is informational only for early-stage power analysis
+IMP-11-0-0-03-INFO02: Activity configuration found in power analysis log:
+  Severity: Info Occurrence: 5
+  - EM_ND1_func_ffgnp_0p825v_m40c_cbest_CCbest_T_rcbest_CCbest_hold.log
+  - ND1_func_ffgnp_0p825v_125c_cbest_CCbest_T_cworst_CCworst_hold_dynamic.log
+  - ND1_func_ffgnp_0p825v_125c_cbest_CCbest_T_cworst_CCworst_hold_static.log
+  - ND1_func_ssgnp_0p675v_125c_cworst_CCworst_T_cworst_CCworst_hold_dynamic.log
+  - ND1_func_ssgnp_0p675v_125c_cworst_CCworst_T_cworst_CCworst_hold_static.log
+
+
+================================================================================
+
+[Test 3/6] Type 2 (requirements.value>0, waivers.value=N/A)
+--------------------------------------------------------------------------------
+Test ID: type2_na
+Status: ERROR
+
+Checker Log Output:
+FAIL:IMP-11-0-0-03:Confirm activity file was used? If not, provide default switching activity values in comments field.
+IMP-11-0-0-03-ERROR01: No activity configuration detected (neither activity file nor defaults):
+  Severity: Fail Occurrence: 2
+  - 'read_activity_file' finished successfully
+  - 'set_default_switching_activity' finished successfully
+
+
+================================================================================
+
+[Test 4/6] Type 2 (requirements.value>0, waivers.value=0)
+--------------------------------------------------------------------------------
+Test ID: type2_0
+Status: PASS
+
+Checker Log Output:
+PASS:IMP-11-0-0-03:Confirm activity file was used? If not, provide default switching activity values in comments field.
+IMP-11-0-0-03-INFO01: [WAIVED_INFO]: Waived information:
+  Severity: Info Occurrence: 1
+  - Explanation: Activity configuration validation is informational during early power analysis iterations
+IMP-11-0-0-03-INFO02: [WAIVED_AS_INFO]: No activity configuration detected (neither activity file nor defaults):
+  Severity: Info Occurrence: 2
+  - 'read_activity_file' finished successfully
+  - 'set_default_switching_activity' finished successfully
+
+
+================================================================================
+
+[Test 5/6] Type 3 (requirements.value>0, waivers.value>0)
+--------------------------------------------------------------------------------
+Test ID: type3
+Status: ERROR
+
+Checker Log Output:
+FAIL:IMP-11-0-0-03:Confirm activity file was used? If not, provide default switching activity values in comments field.
+IMP-11-0-0-03-ERROR01: No activity configuration detected (neither activity file nor defaults):
+  Severity: Fail Occurrence: 2
+  - 'read_activity_file' finished successfully
+  - 'set_default_switching_activity' finished successfully
+IMP-11-0-0-03-WARN01: Unused waivers:
+  Severity: Warn Occurrence: 2
+  - ND1_func_ffgnp_0p825v_125c_cbest_CCbest_T_cworst_CCworst_hold_EM.log
+  - ND1_test_ffgnp_0p825v_m40c_cbest_CCbest_T_rcbest_CCbest_hold_static.log
+
+
+================================================================================
+
+[Test 6/6] Type 4 (requirements.value=N/A, waivers.value>0)
+--------------------------------------------------------------------------------
+Test ID: type4
+Status: PASS
+
+Checker Log Output:
+PASS:IMP-11-0-0-03:Confirm activity file was used? If not, provide default switching activity values in comments field.
+IMP-11-0-0-03-WARN01: Unused waivers:
+  Severity: Warn Occurrence: 2
+  - ND1_func_ffgnp_0p825v_125c_cbest_CCbest_T_cworst_CCworst_hold_EM.log
+  - ND1_test_ffgnp_0p825v_m40c_cbest_CCbest_T_rcbest_CCbest_hold_static.log
+IMP-11-0-0-03-INFO01: Activity configuration found in power analysis log:
+  Severity: Info Occurrence: 5
+  - EM_ND1_func_ffgnp_0p825v_m40c_cbest_CCbest_T_rcbest_CCbest_hold.log
+  - ND1_func_ffgnp_0p825v_125c_cbest_CCbest_T_cworst_CCworst_hold_dynamic.log
+  - ND1_func_ffgnp_0p825v_125c_cbest_CCbest_T_cworst_CCworst_hold_static.log
+  - ND1_func_ssgnp_0p675v_125c_cworst_CCworst_T_cworst_CCworst_hold_dynamic.log
+  - ND1_func_ssgnp_0p675v_125c_cworst_CCworst_T_cworst_CCworst_hold_static.log
+
+
+================================================================================
+

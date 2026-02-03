@@ -1,0 +1,16 @@
+description: Confirm all ports status are Fixed.
+input_files:
+- C:\Users\chyao\Desktop\checklist_dev\CHECKLIST\CHECKLIST\IP_project_folder\reports\8.0\IMP-8-0-0-02\IMP-8-0-0-02_case3.rpt
+requirements:
+  pattern_items:
+  - pad_mem_dqs_p
+  - pad_mem_data[7]
+  - clk4x
+  value: 3
+waivers:
+  value: 2
+  waive_items:
+  - name: test_mode_port
+    reason: Test mode port - placement deferred to post-layout optimization
+  - name: debug_scan_chain[0]
+    reason: Debug port - non-critical path, placement flexibility allowed

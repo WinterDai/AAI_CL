@@ -1,0 +1,17 @@
+description: Confirm the timing of all path groups is clean.
+input_files:
+- ${CHECKLIST_ROOT}/IP_project_folder/reports/check_signoff.results
+requirements:
+  pattern_items:
+  - View 'func_rcss_0p675v_125c_pcss_cmax_pcff3_setup' path_group 'reg2reg' setup
+  value: 1
+waivers:
+  value: 2
+  waive_items:
+  - name: 'View ''func_rcss_0p675v_125c_pcss_cmax_pcff3_setup'' path_group ''default''
+      setup: WNS=-0.2318ns (40 violations)'
+    reason: Waived per design review - non-critical debug path, will be fixed in next
+      revision
+  - name: 'View ''test_rcss_0p675v_125c_pcss_cmax_pcff3_setup'' path_group ''cgdefault''
+      setup: WNS=-0.0145ns (3 violations)'
+    reason: Waived - test mode only, does not affect functional operation

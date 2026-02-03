@@ -1,0 +1,15 @@
+description: 'TODO: Confirm all Warning message in DFM/FLT log files can be waived.
+  (for SEC process, for others fill N/A)'
+input_files:
+- ${CHECKLIST_ROOT}/IP_project_folder/logs/do_pvsFLTwD.log
+- ${CHECKLIST_ROOT}/IP_project_folder/logs/Pegasus_DFM.log
+requirements:
+  pattern_items:
+  - Worker.*killed
+  - Out of.*disk space
+  - same label.*multiple nets
+  value: 3
+waivers:
+  value: 0
+  waive_items:
+  - 'Explanation: DFM/FLT warning pattern check is informational only'

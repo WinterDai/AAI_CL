@@ -1,0 +1,101 @@
+Test Log: IMP-2-0-0-13
+================================================================================
+
+[Test 1/6] Type 1 (requirements.value=N/A, waivers.value=N/A)
+--------------------------------------------------------------------------------
+Test ID: type1_na
+Status: PASS
+
+Checker Log Output:
+PASS:IMP-2-0-0-13:List Spice Model used for PGV generation. eg: tsmc3gp.a.4/models/spectre_v1d0_2p6/ir_em.scs
+IMP-2-0-0-13-INFO01: SPICE model version found in command list:
+  Severity: Info Occurrence: 1
+  - tsmc5g.a.12/models/spectre_v1d2_2p5/ir_em.scs
+
+
+================================================================================
+
+[Test 2/6] Type 1 (requirements.value=N/A, waivers.value=0)
+--------------------------------------------------------------------------------
+Test ID: type1_0
+Status: PASS
+
+Checker Log Output:
+PASS:IMP-2-0-0-13:List Spice Model used for PGV generation. eg: tsmc3gp.a.4/models/spectre_v1d0_2p6/ir_em.scs
+IMP-2-0-0-13-INFO01: [WAIVED_INFO]: Waived information:
+  Severity: Info Occurrence: 1
+  - Explanation: This check is informational only - SPICE model version is reported for reference
+IMP-2-0-0-13-INFO02: SPICE model version found in command list:
+  Severity: Info Occurrence: 1
+  - tsmc5g.a.12/models/spectre_v1d2_2p5/ir_em.scs
+
+
+================================================================================
+
+[Test 3/6] Type 2 (requirements.value>0, waivers.value=N/A)
+--------------------------------------------------------------------------------
+Test ID: type2_na
+Status: PASS
+
+Checker Log Output:
+PASS:IMP-2-0-0-13:List Spice Model used for PGV generation. eg: tsmc3gp.a.4/models/spectre_v1d0_2p6/ir_em.scs
+IMP-2-0-0-13-INFO01: SPICE model version matched expected golden value:
+  Severity: Info Occurrence: 1
+  - tsmc5g.a.12/models/spectre_v1d2_2p5/ir_em.scs
+
+
+================================================================================
+
+[Test 4/6] Type 2 (requirements.value>0, waivers.value=0)
+--------------------------------------------------------------------------------
+Test ID: type2_0
+Status: PASS
+
+Checker Log Output:
+PASS:IMP-2-0-0-13:List Spice Model used for PGV generation. eg: tsmc3gp.a.4/models/spectre_v1d0_2p6/ir_em.scs
+IMP-2-0-0-13-INFO01: [WAIVED_INFO]: Waived information:
+  Severity: Info Occurrence: 1
+  - Explanation: SPICE model version check is informational - version mismatches are acceptable
+IMP-2-0-0-13-INFO02: SPICE model version matched expected golden value:
+  Severity: Info Occurrence: 1
+  - tsmc5g.a.12/models/spectre_v1d2_2p5/ir_em.scs
+
+
+================================================================================
+
+[Test 5/6] Type 3
+--------------------------------------------------------------------------------
+Test ID: type3
+Status: PASS
+
+Checker Log Output:
+PASS:IMP-2-0-0-13:List Spice Model used for PGV generation. eg: tsmc3gp.a.4/models/spectre_v1d0_2p6/ir_em.scs
+IMP-2-0-0-13-WARN01: Unused waivers:
+  Severity: Warn Occurrence: 2
+  - tsmc3gp.a.4/models/spectre_v1d0_2p6/ir_em.scs
+  - tsmc5g.a.11/models/spectre_v1d1_2p5/ir_em.scs
+IMP-2-0-0-13-INFO01: SPICE model version matched expected golden value:
+  Severity: Info Occurrence: 1
+  - tsmc5g.a.12/models/spectre_v1d2_2p5/ir_em.scs
+
+
+================================================================================
+
+[Test 6/6] Type 4
+--------------------------------------------------------------------------------
+Test ID: type4
+Status: PASS
+
+Checker Log Output:
+PASS:IMP-2-0-0-13:List Spice Model used for PGV generation. eg: tsmc3gp.a.4/models/spectre_v1d0_2p6/ir_em.scs
+IMP-2-0-0-13-WARN01: Unused waivers:
+  Severity: Warn Occurrence: 2
+  - tsmc3gp.a.4/models/spectre_v1d0_2p6/ir_em.scs
+  - tsmc5g.a.11/models/spectre_v1d1_2p5/ir_em.scs
+IMP-2-0-0-13-INFO01: SPICE model version found in command list:
+  Severity: Info Occurrence: 1
+  - tsmc5g.a.12/models/spectre_v1d2_2p5/ir_em.scs
+
+
+================================================================================
+

@@ -1,0 +1,11 @@
+{
+  "status": "success",
+  "context_status": null,
+  "codegen_status": "success",
+  "validation_status": "success",
+  "has_item_spec": false,
+  "has_generated_code": true,
+  "errors": [],
+  "warnings": [],
+  "duration_seconds": 78.968105
+}

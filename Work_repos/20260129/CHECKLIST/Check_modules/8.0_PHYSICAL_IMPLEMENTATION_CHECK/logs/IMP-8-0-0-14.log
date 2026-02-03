@@ -1,0 +1,8 @@
+PASS:IMP-8-0-0-14:Confirm no VT mixing on clock tree for all modes. For some instances has clock attribute but used as data, please list that into Waiver list.
+IMP-8-0-0-14-INFO01: [WAIVED_INFO]: Waived information:
+  Severity: Info Occurrence: 1
+  - Explanation: VT mixing check is informational only for this design phase
+IMP-8-0-0-14-INFO02: Clock trees with consistent VT types found:
+  Severity: Info Occurrence: 1
+  - No VT mixing detected
+

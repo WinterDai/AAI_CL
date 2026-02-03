@@ -1,0 +1,11 @@
+FAIL:IMP-10-0-0-06:Confirm the SI setting is correct?
+Fail Occurrence: 1
+1: Fail: CCS libraries: SI setting isn't correct: indicator not found
+Warn Occurrence: 2
+1: Warn: SI configuration note 1: Waiver item (unused)[WAIVER]
+2: Warn: SI configuration note 2: Waiver item (unused)[WAIVER]
+Info Occurrence: 4
+1: Info: Signoff Settings: SI On. In line 63, C:\Users\yuyin\OneDrive - Cadence Design Systems Inc\2025\Checklist\AAI\CHECKLIST_V3\CHECKLIST\IP_project_folder\logs\sta_post_syn.log: SI setting is correct
+2: Info: delaycal_enable_si to 1. In line 66, C:\Users\yuyin\OneDrive - Cadence Design Systems Inc\2025\Checklist\AAI\CHECKLIST_V3\CHECKLIST\IP_project_folder\logs\sta_post_syn.log: SI setting is correct
+3: Info: timing_library_read_ccs_noise_data to 1. In line 69, C:\Users\yuyin\OneDrive - Cadence Design Systems Inc\2025\Checklist\AAI\CHECKLIST_V3\CHECKLIST\IP_project_folder\logs\sta_post_syn.log: SI setting is correct
+4: Info: report_noise. In line 76, C:\Users\yuyin\OneDrive - Cadence Design Systems Inc\2025\Checklist\AAI\CHECKLIST_V3\CHECKLIST\IP_project_folder\logs\sta_post_syn.log: SI setting is correct

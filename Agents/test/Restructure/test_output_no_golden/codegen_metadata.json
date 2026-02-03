@@ -1,0 +1,15 @@
+{
+  "input_tokens": 17072,
+  "output_tokens": 6138,
+  "token_usage": {
+    "input": 17072,
+    "output": 6138
+  },
+  "duration_seconds": 76.32199597358704,
+  "client_type": "JEDAI",
+  "formatters_available": {
+    "black": false,
+    "isort": false
+  },
+  "input_mode": "v2.0"
+}

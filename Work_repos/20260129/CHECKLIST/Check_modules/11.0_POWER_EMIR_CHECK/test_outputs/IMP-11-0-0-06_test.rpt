@@ -1,0 +1,116 @@
+Test Report: IMP-11-0-0-06
+================================================================================
+
+[Test 1/6] Type 1 (requirements.value=N/A, waivers.value=N/A)
+--------------------------------------------------------------------------------
+Test ID: type1_na
+Status: PASS
+
+Checker Report Output:
+PASS:IMP-11-0-0-06:Confirm use the proper spice model and spice netlist to generate the PGV views.(check the Note)
+Info Occurrence: 3
+1: Info: gpio_ffgnp_0p825v_125c_cbest_CCbest_T [macros]. In line 26, C:\dev_workspace\AI-Agent Checklist Automation\CHECKLIST\CHECKLIST\IP_project_folder\logs\gpio_ffgnp_0p825v_125c_cbest_CCbest_T.LibGen.log: SPICE model and netlist paths found in set_pg_library_mode command
+2: Info: sram_ffgnp_0p825v_125c_cbest_CCbest_T [macros]. In line 26, C:\dev_workspace\AI-Agent Checklist Automation\CHECKLIST\CHECKLIST\IP_project_folder\logs\sram_ffgnp_0p825v_125c_cbest_CCbest_T.LibGen.log: SPICE model and netlist paths found in set_pg_library_mode command
+3: Info: stdcell_ffgnp_0p825v_125c_cbest_CCbest_T [stdcells]. In line 26, C:\dev_workspace\AI-Agent Checklist Automation\CHECKLIST\CHECKLIST\IP_project_folder\logs\stdcell_ffgnp_0p825v_125c_cbest_CCbest_T.LibGen.log: SPICE model and netlist paths found in set_pg_library_mode command
+
+================================================================================
+
+[Test 2/6] Type 1 (requirements.value=N/A, waivers.value=0)
+--------------------------------------------------------------------------------
+Test ID: type1_0
+Status: PASS
+
+Checker Report Output:
+PASS:IMP-11-0-0-06:Confirm use the proper spice model and spice netlist to generate the PGV views.(check the Note)
+Info Occurrence: 4
+1: Info: Explanation: This check is informational only - no automatic validation performed: Explanation: This check is informational only - no automatic validation performed[WAIVED_INFO]
+2: Info: gpio_ffgnp_0p825v_125c_cbest_CCbest_T [macros]. In line 26, C:\dev_workspace\AI-Agent Checklist Automation\CHECKLIST\CHECKLIST\IP_project_folder\logs\gpio_ffgnp_0p825v_125c_cbest_CCbest_T.LibGen.log: SPICE model and netlist paths found in set_pg_library_mode command
+3: Info: sram_ffgnp_0p825v_125c_cbest_CCbest_T [macros]. In line 26, C:\dev_workspace\AI-Agent Checklist Automation\CHECKLIST\CHECKLIST\IP_project_folder\logs\sram_ffgnp_0p825v_125c_cbest_CCbest_T.LibGen.log: SPICE model and netlist paths found in set_pg_library_mode command
+4: Info: stdcell_ffgnp_0p825v_125c_cbest_CCbest_T [stdcells]. In line 26, C:\dev_workspace\AI-Agent Checklist Automation\CHECKLIST\CHECKLIST\IP_project_folder\logs\stdcell_ffgnp_0p825v_125c_cbest_CCbest_T.LibGen.log: SPICE model and netlist paths found in set_pg_library_mode command
+
+================================================================================
+
+[Test 3/6] Type 2 (requirements.value>0, waivers.value=N/A)
+--------------------------------------------------------------------------------
+Test ID: type2_na
+Status: PASS
+
+Checker Report Output:
+PASS:IMP-11-0-0-06:Confirm use the proper spice model and spice netlist to generate the PGV views.(check the Note)
+Info Occurrence: 10
+1: Info: /process/tsmcN5/data/g/PDK/tsmc5g.a.13/models/spectre_v1d2_2p5/ir_em.scs. In line 26, C:\dev_workspace\AI-Agent Checklist Automation\CHECKLIST\CHECKLIST\IP_project_folder\logs\stdcell_ffgnp_0p825v_125c_cbest_CCbest_T.LibGen.log: SPICE configuration extracted and reported for user verification
+2: Info: /process/tsmcN5/data/g/PEGASUS/LVS/current/source.added. In line 26, C:\dev_workspace\AI-Agent Checklist Automation\CHECKLIST\CHECKLIST\IP_project_folder\logs\stdcell_ffgnp_0p825v_125c_cbest_CCbest_T.LibGen.log: SPICE configuration extracted and reported for user verification
+3: Info: /process/tsmcN5/data/stdcell/n5/TSMC/tcbn05_bwph210l6p51cnod_lvl_elvt_120c/lpe_spice/tcbn05_bwph210l6p51cnod_lvl_elvt_lpe_cworst_CCworst_T_125c.spi. In line 26, C:\dev_workspace\AI-Agent Checklist Automation\CHECKLIST\CHECKLIST\IP_project_folder\logs\stdcell_ffgnp_0p825v_125c_cbest_CCbest_T.LibGen.log: SPICE configuration extracted and reported for user verification
+4: Info: /process/tsmcN5/data/stdcell/n5/TSMC/tcbn05_bwph210l6p51cnod_lvl_lvt_120c/lpe_spice/tcbn05_bwph210l6p51cnod_lvl_lvt_lpe_cworst_CCworst_T_125c.spi. In line 26, C:\dev_workspace\AI-Agent Checklist Automation\CHECKLIST\CHECKLIST\IP_project_folder\logs\stdcell_ffgnp_0p825v_125c_cbest_CCbest_T.LibGen.log: SPICE configuration extracted and reported for user verification
+5: Info: /process/tsmcN5/data/stdcell/n5/TSMC/tcbn05_bwph210l6p51cnod_lvl_lvtll_120c/lpe_spice/tcbn05_bwph210l6p51cnod_lvl_lvtll_lpe_cworst_CCworst_T_125c.spi. In line 26, C:\dev_workspace\AI-Agent Checklist Automation\CHECKLIST\CHECKLIST\IP_project_folder\logs\stdcell_ffgnp_0p825v_125c_cbest_CCbest_T.LibGen.log: SPICE configuration extracted and reported for user verification
+6: Info: /process/tsmcN5/data/stdcell/n5/TSMC/tcbn05_bwph210l6p51cnod_lvl_svt_120c/lpe_spice/tcbn05_bwph210l6p51cnod_lvl_svt_lpe_cworst_CCworst_T_125c.spi. In line 26, C:\dev_workspace\AI-Agent Checklist Automation\CHECKLIST\CHECKLIST\IP_project_folder\logs\stdcell_ffgnp_0p825v_125c_cbest_CCbest_T.LibGen.log: SPICE configuration extracted and reported for user verification
+7: Info: /process/tsmcN5/data/stdcell/n5/TSMC/tcbn05_bwph210l6p51cnod_lvl_ulvt_120c/lpe_spice/tcbn05_bwph210l6p51cnod_lvl_ulvt_lpe_cworst_CCworst_T_125c.spi. In line 26, C:\dev_workspace\AI-Agent Checklist Automation\CHECKLIST\CHECKLIST\IP_project_folder\logs\stdcell_ffgnp_0p825v_125c_cbest_CCbest_T.LibGen.log: SPICE configuration extracted and reported for user verification
+8: Info: /process/tsmcN5/data/stdcell/n5/TSMC/tcbn05_bwph210l6p51cnod_lvl_ulvtll_120c/lpe_spice/tcbn05_bwph210l6p51cnod_lvl_ulvtll_lpe_cworst_CCworst_T_125c.spi. In line 26, C:\dev_workspace\AI-Agent Checklist Automation\CHECKLIST\CHECKLIST\IP_project_folder\logs\stdcell_ffgnp_0p825v_125c_cbest_CCbest_T.LibGen.log: SPICE configuration extracted and reported for user verification
+9: Info: /process/tsmcN5/data/stdcell/n5/TSMC/tphn05_12gpio_120b/lpe_spice/tphn05_12gpio_lpe_cworst_CCworst_T.spi. In line 26, C:\dev_workspace\AI-Agent Checklist Automation\CHECKLIST\CHECKLIST\IP_project_folder\logs\gpio_ffgnp_0p825v_125c_cbest_CCbest_T.LibGen.log: SPICE configuration extracted and reported for user verification
+10: Info: /projects/TC70_LPDDR6_N5P/libs/libGen/lijing/scripts/sram/ts1n05mblvta16384x39m16qwbzhodcp.spi. In line 26, C:\dev_workspace\AI-Agent Checklist Automation\CHECKLIST\CHECKLIST\IP_project_folder\logs\sram_ffgnp_0p825v_125c_cbest_CCbest_T.LibGen.log: SPICE configuration extracted and reported for user verification
+
+================================================================================
+
+[Test 4/6] Type 2 (requirements.value>0, waivers.value=0)
+--------------------------------------------------------------------------------
+Test ID: type2_0
+Status: PASS
+
+Checker Report Output:
+PASS:IMP-11-0-0-06:Confirm use the proper spice model and spice netlist to generate the PGV views.(check the Note)
+Info Occurrence: 11
+1: Info: Explanation: SPICE path validation is informational - paths extracted for manual review: Explanation: SPICE path validation is informational - paths extracted for manual review[WAIVED_INFO]
+2: Info: /process/tsmcN5/data/g/PDK/tsmc5g.a.13/models/spectre_v1d2_2p5/ir_em.scs. In line 26, C:\dev_workspace\AI-Agent Checklist Automation\CHECKLIST\CHECKLIST\IP_project_folder\logs\stdcell_ffgnp_0p825v_125c_cbest_CCbest_T.LibGen.log: SPICE configuration extracted and reported for user verification
+3: Info: /process/tsmcN5/data/g/PEGASUS/LVS/current/source.added. In line 26, C:\dev_workspace\AI-Agent Checklist Automation\CHECKLIST\CHECKLIST\IP_project_folder\logs\stdcell_ffgnp_0p825v_125c_cbest_CCbest_T.LibGen.log: SPICE configuration extracted and reported for user verification
+4: Info: /process/tsmcN5/data/stdcell/n5/TSMC/tcbn05_bwph210l6p51cnod_lvl_elvt_120c/lpe_spice/tcbn05_bwph210l6p51cnod_lvl_elvt_lpe_cworst_CCworst_T_125c.spi. In line 26, C:\dev_workspace\AI-Agent Checklist Automation\CHECKLIST\CHECKLIST\IP_project_folder\logs\stdcell_ffgnp_0p825v_125c_cbest_CCbest_T.LibGen.log: SPICE configuration extracted and reported for user verification
+5: Info: /process/tsmcN5/data/stdcell/n5/TSMC/tcbn05_bwph210l6p51cnod_lvl_lvt_120c/lpe_spice/tcbn05_bwph210l6p51cnod_lvl_lvt_lpe_cworst_CCworst_T_125c.spi. In line 26, C:\dev_workspace\AI-Agent Checklist Automation\CHECKLIST\CHECKLIST\IP_project_folder\logs\stdcell_ffgnp_0p825v_125c_cbest_CCbest_T.LibGen.log: SPICE configuration extracted and reported for user verification
+6: Info: /process/tsmcN5/data/stdcell/n5/TSMC/tcbn05_bwph210l6p51cnod_lvl_lvtll_120c/lpe_spice/tcbn05_bwph210l6p51cnod_lvl_lvtll_lpe_cworst_CCworst_T_125c.spi. In line 26, C:\dev_workspace\AI-Agent Checklist Automation\CHECKLIST\CHECKLIST\IP_project_folder\logs\stdcell_ffgnp_0p825v_125c_cbest_CCbest_T.LibGen.log: SPICE configuration extracted and reported for user verification
+7: Info: /process/tsmcN5/data/stdcell/n5/TSMC/tcbn05_bwph210l6p51cnod_lvl_svt_120c/lpe_spice/tcbn05_bwph210l6p51cnod_lvl_svt_lpe_cworst_CCworst_T_125c.spi. In line 26, C:\dev_workspace\AI-Agent Checklist Automation\CHECKLIST\CHECKLIST\IP_project_folder\logs\stdcell_ffgnp_0p825v_125c_cbest_CCbest_T.LibGen.log: SPICE configuration extracted and reported for user verification
+8: Info: /process/tsmcN5/data/stdcell/n5/TSMC/tcbn05_bwph210l6p51cnod_lvl_ulvt_120c/lpe_spice/tcbn05_bwph210l6p51cnod_lvl_ulvt_lpe_cworst_CCworst_T_125c.spi. In line 26, C:\dev_workspace\AI-Agent Checklist Automation\CHECKLIST\CHECKLIST\IP_project_folder\logs\stdcell_ffgnp_0p825v_125c_cbest_CCbest_T.LibGen.log: SPICE configuration extracted and reported for user verification
+9: Info: /process/tsmcN5/data/stdcell/n5/TSMC/tcbn05_bwph210l6p51cnod_lvl_ulvtll_120c/lpe_spice/tcbn05_bwph210l6p51cnod_lvl_ulvtll_lpe_cworst_CCworst_T_125c.spi. In line 26, C:\dev_workspace\AI-Agent Checklist Automation\CHECKLIST\CHECKLIST\IP_project_folder\logs\stdcell_ffgnp_0p825v_125c_cbest_CCbest_T.LibGen.log: SPICE configuration extracted and reported for user verification
+10: Info: /process/tsmcN5/data/stdcell/n5/TSMC/tphn05_12gpio_120b/lpe_spice/tphn05_12gpio_lpe_cworst_CCworst_T.spi. In line 26, C:\dev_workspace\AI-Agent Checklist Automation\CHECKLIST\CHECKLIST\IP_project_folder\logs\gpio_ffgnp_0p825v_125c_cbest_CCbest_T.LibGen.log: SPICE configuration extracted and reported for user verification
+11: Info: /projects/TC70_LPDDR6_N5P/libs/libGen/lijing/scripts/sram/ts1n05mblvta16384x39m16qwbzhodcp.spi. In line 26, C:\dev_workspace\AI-Agent Checklist Automation\CHECKLIST\CHECKLIST\IP_project_folder\logs\sram_ffgnp_0p825v_125c_cbest_CCbest_T.LibGen.log: SPICE configuration extracted and reported for user verification
+
+================================================================================
+
+[Test 5/6] Type 3 (requirements.value>0, waivers.value>0)
+--------------------------------------------------------------------------------
+Test ID: type3
+Status: PASS
+
+Checker Report Output:
+PASS:IMP-11-0-0-06:Confirm use the proper spice model and spice netlist to generate the PGV views.(check the Note)
+Warn Occurrence: 2
+1: Warn: ffgnp_0p825v_125c_cbest_CCbest_T: Waiver not matched - no corresponding SPICE configuration issue found: Waived - using alternative SPICE model for fast corner per design team approval[WAIVER]
+2: Warn: rcss_0p675v_m40c_cworst_CCworst_T: Waiver not matched - no corresponding SPICE configuration issue found: Waived - legacy SPICE netlist approved for low voltage corner[WAIVER]
+Info Occurrence: 10
+1: Info: /process/tsmcN5/data/g/PDK/tsmc5g.a.13/models/spectre_v1d2_2p5/ir_em.scs. In line 26, C:\dev_workspace\AI-Agent Checklist Automation\CHECKLIST\CHECKLIST\IP_project_folder\logs\stdcell_ffgnp_0p825v_125c_cbest_CCbest_T.LibGen.log: SPICE configuration extracted and reported for user verification
+2: Info: /process/tsmcN5/data/g/PEGASUS/LVS/current/source.added. In line 26, C:\dev_workspace\AI-Agent Checklist Automation\CHECKLIST\CHECKLIST\IP_project_folder\logs\stdcell_ffgnp_0p825v_125c_cbest_CCbest_T.LibGen.log: SPICE configuration extracted and reported for user verification
+3: Info: /process/tsmcN5/data/stdcell/n5/TSMC/tcbn05_bwph210l6p51cnod_lvl_elvt_120c/lpe_spice/tcbn05_bwph210l6p51cnod_lvl_elvt_lpe_cworst_CCworst_T_125c.spi. In line 26, C:\dev_workspace\AI-Agent Checklist Automation\CHECKLIST\CHECKLIST\IP_project_folder\logs\stdcell_ffgnp_0p825v_125c_cbest_CCbest_T.LibGen.log: SPICE configuration extracted and reported for user verification
+4: Info: /process/tsmcN5/data/stdcell/n5/TSMC/tcbn05_bwph210l6p51cnod_lvl_lvt_120c/lpe_spice/tcbn05_bwph210l6p51cnod_lvl_lvt_lpe_cworst_CCworst_T_125c.spi. In line 26, C:\dev_workspace\AI-Agent Checklist Automation\CHECKLIST\CHECKLIST\IP_project_folder\logs\stdcell_ffgnp_0p825v_125c_cbest_CCbest_T.LibGen.log: SPICE configuration extracted and reported for user verification
+5: Info: /process/tsmcN5/data/stdcell/n5/TSMC/tcbn05_bwph210l6p51cnod_lvl_lvtll_120c/lpe_spice/tcbn05_bwph210l6p51cnod_lvl_lvtll_lpe_cworst_CCworst_T_125c.spi. In line 26, C:\dev_workspace\AI-Agent Checklist Automation\CHECKLIST\CHECKLIST\IP_project_folder\logs\stdcell_ffgnp_0p825v_125c_cbest_CCbest_T.LibGen.log: SPICE configuration extracted and reported for user verification
+6: Info: /process/tsmcN5/data/stdcell/n5/TSMC/tcbn05_bwph210l6p51cnod_lvl_svt_120c/lpe_spice/tcbn05_bwph210l6p51cnod_lvl_svt_lpe_cworst_CCworst_T_125c.spi. In line 26, C:\dev_workspace\AI-Agent Checklist Automation\CHECKLIST\CHECKLIST\IP_project_folder\logs\stdcell_ffgnp_0p825v_125c_cbest_CCbest_T.LibGen.log: SPICE configuration extracted and reported for user verification
+7: Info: /process/tsmcN5/data/stdcell/n5/TSMC/tcbn05_bwph210l6p51cnod_lvl_ulvt_120c/lpe_spice/tcbn05_bwph210l6p51cnod_lvl_ulvt_lpe_cworst_CCworst_T_125c.spi. In line 26, C:\dev_workspace\AI-Agent Checklist Automation\CHECKLIST\CHECKLIST\IP_project_folder\logs\stdcell_ffgnp_0p825v_125c_cbest_CCbest_T.LibGen.log: SPICE configuration extracted and reported for user verification
+8: Info: /process/tsmcN5/data/stdcell/n5/TSMC/tcbn05_bwph210l6p51cnod_lvl_ulvtll_120c/lpe_spice/tcbn05_bwph210l6p51cnod_lvl_ulvtll_lpe_cworst_CCworst_T_125c.spi. In line 26, C:\dev_workspace\AI-Agent Checklist Automation\CHECKLIST\CHECKLIST\IP_project_folder\logs\stdcell_ffgnp_0p825v_125c_cbest_CCbest_T.LibGen.log: SPICE configuration extracted and reported for user verification
+9: Info: /process/tsmcN5/data/stdcell/n5/TSMC/tphn05_12gpio_120b/lpe_spice/tphn05_12gpio_lpe_cworst_CCworst_T.spi. In line 26, C:\dev_workspace\AI-Agent Checklist Automation\CHECKLIST\CHECKLIST\IP_project_folder\logs\gpio_ffgnp_0p825v_125c_cbest_CCbest_T.LibGen.log: SPICE configuration extracted and reported for user verification
+10: Info: /projects/TC70_LPDDR6_N5P/libs/libGen/lijing/scripts/sram/ts1n05mblvta16384x39m16qwbzhodcp.spi. In line 26, C:\dev_workspace\AI-Agent Checklist Automation\CHECKLIST\CHECKLIST\IP_project_folder\logs\sram_ffgnp_0p825v_125c_cbest_CCbest_T.LibGen.log: SPICE configuration extracted and reported for user verification
+
+================================================================================
+
+[Test 6/6] Type 4 (requirements.value=N/A, waivers.value>0)
+--------------------------------------------------------------------------------
+Test ID: type4
+Status: PASS
+
+Checker Report Output:
+PASS:IMP-11-0-0-06:Confirm use the proper spice model and spice netlist to generate the PGV views.(check the Note)
+Warn Occurrence: 2
+1: Warn: ffgnp_0p825v_125c_cbest_CCbest_T: Waiver not matched - no corresponding SPICE configuration issue found: Waived - using alternative SPICE model for fast corner per design team approval[WAIVER]
+2: Warn: rcss_0p675v_m40c_cworst_CCworst_T: Waiver not matched - no corresponding SPICE configuration issue found: Waived - legacy SPICE netlist approved for low voltage corner[WAIVER]
+Info Occurrence: 3
+1: Info: gpio_ffgnp_0p825v_125c_cbest_CCbest_T [macros]. In line 26, C:\dev_workspace\AI-Agent Checklist Automation\CHECKLIST\CHECKLIST\IP_project_folder\logs\gpio_ffgnp_0p825v_125c_cbest_CCbest_T.LibGen.log: SPICE model and netlist paths found in set_pg_library_mode command
+2: Info: sram_ffgnp_0p825v_125c_cbest_CCbest_T [macros]. In line 26, C:\dev_workspace\AI-Agent Checklist Automation\CHECKLIST\CHECKLIST\IP_project_folder\logs\sram_ffgnp_0p825v_125c_cbest_CCbest_T.LibGen.log: SPICE model and netlist paths found in set_pg_library_mode command
+3: Info: stdcell_ffgnp_0p825v_125c_cbest_CCbest_T [stdcells]. In line 26, C:\dev_workspace\AI-Agent Checklist Automation\CHECKLIST\CHECKLIST\IP_project_folder\logs\stdcell_ffgnp_0p825v_125c_cbest_CCbest_T.LibGen.log: SPICE model and netlist paths found in set_pg_library_mode command
+
+================================================================================
+

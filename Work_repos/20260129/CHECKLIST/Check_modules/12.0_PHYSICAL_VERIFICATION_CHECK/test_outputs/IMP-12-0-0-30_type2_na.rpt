@@ -1,0 +1,6 @@
+FAIL:IMP-12-0-0-30:Confirm DFM check result is clean. (for SEC process, for others fill N/A)
+Fail Occurrence: 2
+1: Fail: DFM rule: PM_M2_C_3 - 579 violations. In line 225, C:\Users\jingyu\OneDrive - Cadence Design Systems Inc\Desktop\checklist_dev\AI_2026_V1\CHECKLIST\CHECKLIST\IP_project_folder\reports\pv\Pegasus_DFM.sum: DFM rule check failed with violations in Pegasus_DFM.sum
+2: Fail: PM_M5_C_2: DFM rule check failed with violations in Pegasus_DFM.sum
+Info Occurrence: 1
+1: Info: DFM rule: PM_M3_C_1 - 0 violations. In line 227, C:\Users\jingyu\OneDrive - Cadence Design Systems Inc\Desktop\checklist_dev\AI_2026_V1\CHECKLIST\CHECKLIST\IP_project_folder\reports\pv\Pegasus_DFM.sum: All DFM rule checks validated with zero violations in Pegasus_DFM.sum

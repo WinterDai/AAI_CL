@@ -1,0 +1,9 @@
+description: Confirm the double_clock check result is clean.
+input_files:
+- ${CHECKLIST_ROOT}/IP_project_folder/reports/10.0/double_clock_*.rpt
+requirements:
+  pattern_items: []
+  value: N/A
+waivers:
+  value: N/A
+  waive_items: []

@@ -1,0 +1,16 @@
+PASS:IMP-8-0-0-09:Confirm we take care of the dynamic power optimization in the whole innovs flow(Check the Note)
+IMP-8-0-0-09-WARN01: Unused waivers:
+  Severity: Warn Occurrence: 2
+  - getDesignMode powerEffort: none (EXPECTED: high)
+  - get_default_switching_activity seq_activity: UNDEFINED
+IMP-8-0-0-09-INFO01: Dynamic power optimization settings found and enabled:
+  Severity: Info Occurrence: 8
+  - input_activity=0.15
+  - opt_leakage_to_dynamic_ratio=0.2
+  - opt_power_effort=high
+  - opt_route_type_for_power=true
+  - powerEffort=high
+  - propagateActivity=true
+  - route_global_with_power_driven=true
+  - seq_activity=0.2
+

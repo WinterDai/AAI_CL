@@ -1,0 +1,16 @@
+PASS:IMP-12-0-0-07:Confirm the ANT rule deck setting is correct.
+IMP-12-0-0-07-INFO01: [WAIVED_INFO]: Waived information:
+  Severity: Info Occurrence: 1
+  - Explanation: This check is informational only for early development phase
+IMP-12-0-0-07-INFO02: ANT rule deck configuration validated successfully:
+  Severity: Info Occurrence: 6
+  - ACC_DEBUG
+  - DEBUG_MX
+  - DEBUG_VIA
+  - TSV_RULES
+  - WITH_2MR
+  - WITH_4MZ
+IMP-12-0-0-07-INFO03: [WAIVED_AS_INFO]: Required ANT rule deck settings not found or incorrectly configured:
+  Severity: Info Occurrence: 1
+  - warning_102
+

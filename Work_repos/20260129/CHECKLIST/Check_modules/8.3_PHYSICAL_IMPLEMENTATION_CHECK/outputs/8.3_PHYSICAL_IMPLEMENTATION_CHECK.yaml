@@ -1,0 +1,24 @@
+module: 8.3_PHYSICAL_IMPLEMENTATION_CHECK
+stage: Initial
+generated_at: 2025-12-23T18:43:03
+check_items: 
+  SRG-IMP-8-3-0-00: 
+    executed: true
+    status: fail
+    description: If shielding is required, is it done as per the customer/IP document inputs?
+    failures: 
+      - index: 1
+        detail: input_files is empty in YAML configuration
+        source_line: N/A
+        source_file: N/A
+        reason: input_files is empty in YAML configuration
+  SRG-IMP-8-3-0-01: 
+    executed: true
+    status: fail
+    description: Is the base XOR is clean?
+    failures: 
+      - index: 1
+        detail: input_files is empty in YAML configuration
+        source_line: N/A
+        source_file: N/A
+        reason: input_files is empty in YAML configuration

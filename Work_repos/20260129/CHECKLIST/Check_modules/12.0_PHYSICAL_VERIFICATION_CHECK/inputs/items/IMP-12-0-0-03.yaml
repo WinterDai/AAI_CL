@@ -1,0 +1,254 @@
+description: 'Confirm the DRC rule deck setting is correct. Make sure the switch
+  settings match with Foundry CTA (/local/method/CTAF/<process>/production in chamber).
+  Please add justification in Comment if you changed some switching setting in CTA.'
+requirements:
+  value: 112
+  pattern_items:
+    - DEBUG_VOLTAGE_RULE: disabled
+      # Turn on to enable delta voltage rule debugging by writing out essential data into "voltage_debug.rdb"
+    - DEBUG_VOLTAGE_RULE_WITH_METAL_CONNECTION: disabled
+      # Turn on to further dump metal shapes into "voltage_debug.rdb" for delta voltage rule debugging
+    - FULL_CHIP: disabled
+      # Turn on for chip level design
+    - WITH_SEALRING: disabled
+      # Turn on if sealring is assembled in chip
+    - CHECK_LOW_DENSITY: enabled
+      # Turn off to skip local low density and empty space check in cell level before dummy insertion
+    - CHECK_HIGH_DENSITY: enabled
+      # Turn off to skip local high density rule checks in cell level
+    - PT_CHECK: enabled
+      # Turn off to skip *.PT rules
+    - WITH_POLYIMIDE: enabled
+      # Turn off when process without Polyimide
+    - WITH_APRDL: enabled
+      # Turn on if AP_RDL is applied
+    - N4P_DTCO: disabled
+      # Turn on need to consult with TSMC before turn on this switch.
+    - SNAPPING_TOLERANCE: enabled
+      # Turn on to add the tolerance for snapping compensation but not for design window purposes
+    - MASK_reduction: enabled
+      # Turn on for MASK-reduction product.
+    - Lid: disabled
+      # Turn on for Lid package
+    - Ring: disabled
+      # Turn on for Ring package
+    - CoWoS_S: disabled
+      # Turn on for CoWoS-S SHDMIM / FHDMIM KOZ Check
+    - Check_Dummy_Under_INDDMY: enabled
+      # Turn on to check dummy cells under INDDMY
+    - SHDMIM: enabled
+      # Turn on to check related MIM.AP.* rules
+    - FHDMIM: disabled
+      # Turn on to check FHDMIM related rules
+    - G0_MASK_HINT: disabled
+      # Turn on to randomly assign color for G0 mask hint (just to help layout fixing)
+    - USE_IO_VOLTAGE_ON_CORE_TO_IO_NET: disabled
+      # Turn on to check all I/O net.
+    - USE_SD_VOLTAGE_ON_CORE_TO_IO_NET: enabled
+      # Turn on to use S/D voltage on net without voltage text/marker and connect to IO & core MOS simultaneously
+    - SKIP_CELL_BOUNDARY: disabled
+      # Turn on to skip OD.S.25, PO.EX.3, PO.EX.3.1, PO.EX.3.2, PO.EX.3.3, and PO.EX.3.4 boundary check in cell level.
+    - LUP_FILTER: disabled
+      # Turn on to filter out LUP false error if PWR/GND pad do not connect to NWSTRAP/PWSTRAP
+    - DEFINE_IOPAD_BY_IODMY: enabled
+      # Turn off to disable IODMY functionality
+    - ALL_AREA_IO: enabled
+      # Turn on to treat all IO as AAIO for LUP.10/LUP.13/LUP.14 checking
+    - DISCONNECT_ALL_RESISTOR: disabled
+      # Turn on to disconnect all resistors between pad and device for Latch:Up rule check.
+    - CONNECT_ALL_RESISTOR: disabled
+      # Turn on to connect all resistors between pad and device for Latch:Up rule check.
+    - DEFINE_PAD_BY_TEXT: enabled
+      # Turn on to recognize IO PAD by following text
+    - CHECK_FLOATING_GATE_BY_TEXT: disabled
+      # Turn on to avoid PO.R.19 false error from empty IP by following text
+    - CHECK_FLOATING_GATE_BY_PRIMARY_TEXT: enabled
+      # Turn on to check PO.R.19 in cell level and avoid false error by following primary text
+    - GUIDELINE_ESD_CDM7A: disabled
+      # Turn on to check GUIDELINE_ESD_CDM7A rules
+    - GUIDELINE_ESD_CDM9A: disabled
+      # Turn on to check GUIDELINE_ESD_CDM9A rules
+    - IP_LEVEL_LUP_CHECK: enabled
+      # LUP015U, LUP075U, LUP_150U to recognize OD injector checking window for IP level LUP rule check
+    - LUP_MASK_HINT: disabled
+      # Turn on to output RDB file for LUP OD injector and window of mask hint
+    - LUP_SANITY_CHECK: enabled
+      # Turn on to check LUP.WARN.5
+    - ESDLU_IP_TIGHTEN_DENSITY: enabled
+      # Turn on to check LUP2.2/LUP2.3 Tighten rule in IP Level
+    - BOOST_VT_OP: disabled
+    - NO_INDICATOR_OF_OFFGRID_DIRECTIONAL: disabled
+      # Turn on to disable indicator of OFFGRID DIRECTIONAL command
+    - KOZ_High_subst_layer: disabled
+      # Turn on to check KOZ for package substrate layer >14
+    - SHDMIM_KOZ_AP_SPACE_5um: disabled
+      # Turn on to check related MIM rules
+    - SHDMIM_KOZ_AP_SPACE_5um_IP: disabled
+      # Turn on to check related MIM rules
+    - FHDMIM_KOZ_AP_SPACE_5um: disabled
+      # Turn on to check related MIM rules
+    - FHDMIM_KOZ_AP_SPACE_5um_IP: disabled
+      # Turn on to check related MIM rules
+    - Multi_VOLTAGE_BIN_WITHIN_CHIP: enabled
+      # Turn on for multi voltage bin check
+    - SINGLE_VOLTAGE_BIN_WITHIN_CHIP: disabled
+      # Turn on for single voltage bin check
+    - SINGLE_VOLTAGE_BIN_0D96: enabled
+      # Turn on for 0.96 single voltage check
+    - SINGLE_VOLTAGE_BIN_1D32: disabled
+      # Turn on for 1.32 single voltage check
+    - SINGLE_VOLTAGE_BIN_1D65: disabled
+      # Turn on for 1.65 single voltage check
+    - USER_DEFINED_DELTA_VOLTAGE: disabled
+      # Turn on to use user define delta voltage
+    - Flip_Chip: enabled
+      # Turn on to check EFP.VIAz, EFP.VIAr, stacked VIAy/VIAyy and other flip-chip related rules
+    - Flip_Chip_SUB_wi_presolder: enabled
+      # option for flip-chip with pre-solder
+    - Flip_Chip_Thin_Die: enabled
+      # Turn on to check VIAy.R.16, VIAy.R.16.1, VIAy.R.16.1.2, VIAy.R.16.2, VIAyy.R.15, VIAyy.R.15.1
+    - COD_RULE_CHECK: enabled
+      # Turn off to not to check COD rules in cell level
+    - COD_MASK_HINT: disabled
+      # Turn on to output related COD_H/COD_V patterns for hint (just to help layout fixing)
+    - COD_RULE_CHECK_ONLY: disabled
+      # Turn on to only check the COD rules only
+    - FRONT_END: enabled
+      # Turn on to check Front:End rules
+    - BACK_END: enabled
+      # Turn on to check Back:End rules
+    - prBoundary_GRID: enabled
+      # Turn on to check prBoundary rules in FEOL cell for global grid alignment after APR tool auto placement
+    - DVIAxR3_For_NonFlipChip: enabled
+      # DVIAx.R.3 is must for Flip:Chip PAD application and also strongly recommended for Non Flip:Chip PAD
+    - GUIDELINE_ESD: enabled
+      # Turn on to check ESD protection guidelines
+    - GUIDELINE_ANALOG: disabled
+      # Turn on to check Analog guidelines
+    - G0_RULE_CHECK: enabled
+      # Turn off to unselect G0 rules
+    - G0_RULE_CHECK_ONLY: disabled
+      # Turn on to only select G0 rules
+    - VOLTAGE_RULE_CHECK: enabled
+      # Turn off to unselect voltage:dependent rules
+    - VOLTAGE_RULE_CHECK_ONLY: disabled
+      # Turn on to only select voltage:dependent rules
+    - ESD_LUP_RULE_CHECK: enabled
+      # Turn off to unselect ESD/LUP rules
+    - ESD_LUP_RULE_CHECK_ONLY: disabled
+      # Turn on to only select ESD/LUP rules
+    - DENSITY_RULE_CHECK_ONLY: disabled
+      # Turn on to only select denstiy rules
+    - SRAM_SANITY_DRC: enabled
+      # Turn off to unselect SRAM sanity rules
+    - SRAM_SANITY_DRC_ONLY: disabled
+      # Turn on to only select SRAM sanity rules
+    - UseprBoundary: enabled
+      # Turn on to specify chip boundary by prBoundary(108:0) layer
+    - ChipWindowUsed: disabled
+      # Turn on to specify chip boundary directly by following variables
+    - DUMMY_PRE_CHECK: disabled
+      # Turn on to predict density/empty region error before dummy insertion (assume the fill result is perfect)
+    - DUMMY_PRE_CHECK_TIGHTEN: disabled
+      # Turn on to predict density/empty region error before dummy insertion (assume the fill result is not perfect)
+    - IP_TIGHTEN_DENSITY: enabled
+      # Turn on to tighten local density check in IP/macro/block level
+    - IP_TIGHTEN_BOUNDARY: enabled
+      # Turn on to tighten empty space check around IP boundary to avoid empty space error after IP abutment
+    - DFM: disabled
+      # Turn on to check DFM rules
+    - DFM_ONLY: disabled
+      # Turn on to check DFM rules only
+    - Recommended: disabled
+      # Turn on to check Recommendations
+    - Guideline: enabled
+      # Turn on to check Guidelines
+    - First_priority: enabled
+      # Turn on to check DFM rules of first priority group
+    - Manufacturing_concern: enabled
+      # Turn on to check DFM rules of manufacturing:concern group
+    - Device_performance: enabled
+      # Turn on to check DFM rules of device performance group
+    - DISABLE_CDN_DRC_MATCH_LOD: enabled
+      # Turn on to disable custom match check
+    - PAD_TEXT:
+        - "bump"
+        - "rx_p"
+        - "rx_m"
+        - "tx_p"
+        - "tx_m"
+        - "tx_out_p"
+        - "tx_out_m"
+      # Pin name of PAD
+    - VDD_TEXT:
+        - "vdd"
+        - "xcvr_avdd_h"
+        - "cmn_avdd_h"
+        - "avdd_h"
+        - "cmn_avdd"
+        - "avdd"
+      # Pin name of VDD
+    - VSS_TEXT:
+        - "vss"
+        - "agnd"
+        - "gnd"
+      # Pin name of VSS
+    - PoP_PAD_TEXT: "pop?"
+      # pin name of Package-on-Package IOPAD
+    - IP_PIN_TEXT: "?"
+    - ULTRA_LOW_NOISE_PAD_TEXT: "_null_text_name_"
+      # ultra low noise signal pins
+    - LOW_NOISE_PAD_TEXT: "_null_text_name1_"
+      # low noise signal pins
+    - MED_LOW_NOISE_PAD_TEXT: "_null_text_name2_"
+      # MED_low noise signal pins
+    - MED_NOISE_PAD_TEXT: "_null_text_name3_"
+      # MED noise signal pins
+    - HIGH_NOISE_PAD_TEXT: "_null_text_name4_"
+      # HIGH noise noise signal pins
+    - DUMMY_PAD_TEXT: "_null_text_name5_"
+      # define dummy pad pins
+    - WAIVE_ESD_R_1_PAD_TEXT: "_null_text_name9_"
+      # pin name to waive ESD.R.1
+    - D2D_INT_CDM05V_PAD_TEXT: "_null_text_name8_1_"
+      # define  pin name of D2D PAD
+    - D2D_INT_CDM10V_PAD_TEXT: "_null_text_name8_2_"
+      # define  pin name of D2D PAD
+    - D2D_INT_CDM30V_PAD_TEXT: "_null_text_name8_3_"
+      # define  pin name of D2D PAD
+    - D2D_INT_CDM50V_PAD_TEXT: "_null_text_name8_4_"
+      # define  pin name of D2D PAD
+    - xLB: 0.0
+      # x-coordinate of left-bottom corner for user defined chip window
+    - yLB: 0.0
+      # y-coordinate of left-bottom corner for user defined chip window
+    - xRT: 1000.0
+      # x-coordinate of right-top corner for user defined chip window
+    - yRT: 1000.0
+      # y-coordinate of right-top corner for user defined chip window
+    - ScribeLineX: 180.0
+      # Width of scribe_line X (um) for Mask Field Utilization (MFU)
+    - ScribeLineY: 180.0
+      # Width of scribe_line Y (um) for Mask Field Utilization (MFU)
+    - CellsForRRuleRecommended: "*"
+      # include cell in Recommendations check
+    - CellsForRRuleAnalog: "*"
+      # include cell in Analog Recommendations and Guidelines check (default is empty)
+    - CellsForRRuleGuideline: "*"
+      # include cell in Guidleline check
+    - ExclCellsForRRuleRecommended: " "
+      # exclude cell from Recommendations check
+    - ExclCellsForRRuleAnalog: " "
+      # exclude cell from Analog Recommendations and Guidelines check
+    - ExclCellsForRRuleGuideline: " "
+      # exclude cell from Guidleline check
+
+input_files:
+  - ${CHECKLIST_ROOT}/IP_project_folder/logs/do_pvs_DRC_pvl.log
+  - ${CHECKLIST_ROOT}/IP_project_folder/logs/do_cmd_3star_DRC_sourceme
+  
+waivers:
+  value: 1
+  waive_items:
+    - name: FULL_CHIP
+      reason: "test for waiver"

@@ -1,0 +1,5 @@
+FAIL:MIG-IMP-8-1-1-29:For test chip, pay attention to the digital process moniter implementation guide. (Check the guide in Notes)
+MIG-IMP-8-1-1-29-ERROR01: Configuration error:
+  Severity: Fail Occurrence: 1
+  - input_files is empty in YAML configuration
+

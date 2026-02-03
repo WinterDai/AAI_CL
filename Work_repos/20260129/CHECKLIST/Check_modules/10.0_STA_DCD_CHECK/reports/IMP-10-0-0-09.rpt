@@ -1,0 +1,5 @@
+PASS:IMP-10-0-0-09:Confirm no SPEF annotation issue in STA.
+Info Occurrence: 3
+1: Info: I have confirmed that the SPEF annotation issue is acceptable for this implementation phase.: Not-annotated real net detected[WAIVED_INFO]
+2: Info: func_rcss_0p675v_m40c_pcss_cmax_pcss3_setup: All nets are annotated
+3: Info: [[u_pcs_top/u_phy_pcs_reg_ctrl/u_pcs_cdb_reg/UNCONNECTED_HIER_Z314]] (view: func_rcss_0p675v_125c_pcss_cmax_pcff3_setup): Not-annotated real net detected[WAIVED_AS_INFO]

@@ -1,0 +1,11 @@
+description: Confirm the "#define CHECK_FLOATING_GATE_BY_PRIMARY_TEXT" DRC option
+  in DRC rule deck is open to check PO.R.19 (input floating issue) in IP level.
+input_files:
+- ${CHECKLIST_ROOT}/IP_project_folder/logs/do_pvs_DRC_pvl.log
+- ${CHECKLIST_ROOT}/IP_project_folder/logs/do_cmd_3star_DRC_sourceme
+requirements:
+  pattern_items: []
+  value: N/A
+waivers:
+  value: N/A
+  waive_items: []

@@ -1,0 +1,6 @@
+PASS:IMP-10-0-0-20:Confirm no ERROR message in the STA log files or the ERROR messages can be waived.
+IMP-10-0-0-20-INFO01: STA log files with no errors:
+  Severity: Info Occurrence: 2
+  - tempus_1.log
+  - tempus_2.log
+

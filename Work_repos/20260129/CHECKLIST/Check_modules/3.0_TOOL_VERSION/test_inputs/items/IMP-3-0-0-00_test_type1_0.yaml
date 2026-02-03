@@ -1,0 +1,11 @@
+description: List Innovus implementation tool version (eg. innovus/221/22.11-s119_1)
+input_files:
+- ${CHECKLIST_ROOT}/IP_project_folder/tcl/2.0/setup_vars.tcl
+requirements:
+  pattern_items: []
+  value: N/A
+waivers:
+  value: 0
+  waive_items:
+  - 'Explanation: This check is informational only - version extraction failure does
+    not block signoff'

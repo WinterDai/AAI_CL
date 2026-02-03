@@ -1,0 +1,19 @@
+   LVS FILTER  ppode_ulvt_mac  OPEN
+   LVS FILTER  ppode_ulvtll_mac  OPEN
+   LVS FILTER  rmsp  SHORT
+
+
+
+                               CELL VERIFICATION RESULTS
+
+
+
+                          ######################################  
+                          #                                    #  
+                          #           CHECK(s) PASSED          #  
+                          #                                    #  
+                          ######################################  
+
+
+
+CELL NAME:         AIOI21ARD1BWP143M169H3P48CPDLVTLL (10 placements)

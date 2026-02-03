@@ -1,0 +1,302 @@
+{
+  "functional_units": {
+    "parsing_logic": {
+      "purpose": "从Netlist和SPEF文件中提取版本信息，验证版本规范的正确性",
+      "extraction_targets": [
+        {
+          "object_name": "SPEF文件版本信息",
+          "key_information": [
+            {
+              "field_name": "spef_file_path",
+              "usage": "定位SPEF文件位置",
+              "extraction_hint": "从输入参数或配置中获取SPEF文件路径"
+            },
+            {
+              "field_name": "spef_file_exists",
+              "usage": "验证文件存在性",
+              "extraction_hint": "检查文件系统中文件是否存在"
+            },
+            {
+              "field_name": "spef_version_field",
+              "usage": "验证IEEE 1481版本规范",
+              "extraction_hint": "解析SPEF文件头部，定位*VERSION行，提取版本字符串（格式：*VERSION \"IEEE 1481-YYYY\"）"
+            },
+            {
+              "field_name": "spef_header_structure",
+              "usage": "验证头部结构完整性",
+              "extraction_hint": "检查*SPEF、*DESIGN、*DATE、*VENDOR、*PROGRAM、*VERSION等必需头部字段的存在性和顺序"
+            }
+          ]
+        },
+        {
+          "object_name": "Netlist文件版本信息",
+          "key_information": [
+            {
+              "field_name": "netlist_file_path",
+              "usage": "定位Netlist文件位置",
+              "extraction_hint": "从输入参数或配置中获取Verilog netlist文件路径"
+            },
+            {
+              "field_name": "netlist_file_exists",
+              "usage": "验证文件存在性",
+              "extraction_hint": "检查文件系统中文件是否存在"
+            },
+            {
+              "field_name": "netlist_version_comment",
+              "usage": "验证工具版本标识",
+              "extraction_hint": "解析Netlist文件头部注释块，定位// Version:行，提取版本标识符（工具名称+版本号）"
+            },
+            {
+              "field_name": "netlist_module_structure",
+              "usage": "验证基本语法结构",
+              "extraction_hint": "检查module/endmodule关键字存在性，确认文件为有效Verilog格式"
+            }
+          ]
+        }
+      ],
+      "data_source": "直接读取SPEF文件和Netlist_Verilog文件（involved_formats中data_role=direct_source）",
+      "extraction_strategy": "single_file",
+      "implementation_guidance": "实现两个独立的文件解析器：\n1. SPEF解析器：\n   - 打开SPEF文件，读取前50-100行（头部区域）\n   - 使用正则表达式匹配*VERSION行：r'^\\*VERSION\\s+\"([^\"]+)\"'\n   - 验证版本字符串格式：r'IEEE\\s+1481-\\d{4}'\n   - 检查*VERSION在*DESIGN之前出现\n   - 记录解析状态：file_found, version_found, version_value, format_valid\n\n2. Netlist解析器：\n   - 打开Verilog文件，读取前100行（注释块通常在此范围）\n   - 使用正则表达式匹配版本注释：r'//\\s*Version:\\s*(.+)'\n   - 提取工具名称和版本号（格式依工具而定，如\"Synopsys DC 2021.06\"）\n   - 验证module关键字存在性\n   - 记录解析状态：file_found, version_comment_found, version_value, module_found\n\n错误处理：\n   - 文件不存在 → 记录file_exists=false\n   - 文件无法读取 → 记录parse_error\n   - 版本字段缺失 → 记录version_found=false\n   - 版本格式错误 → 记录format_valid=false"
+    },
+    "check_logic": {
+      "verification_items": [
+        {
+          "item_name": "SPEF文件存在性",
+          "item_description": "验证SPEF文件是否存在且可访问",
+          "existence_check": {
+            "found_condition": "parsed_data.spef_file_exists == true",
+            "missing_condition": "parsed_data.spef_file_exists == false OR parsed_data.spef_file_path is None",
+            "expected_fields": [
+              "spef_file_path",
+              "spef_file_exists"
+            ]
+          },
+          "pattern_check": {
+            "applicable": false,
+            "pattern_matching_rule": "N/A",
+            "mismatch_handling": "N/A"
+          }
+        },
+        {
+          "item_name": "SPEF版本字段规范性",
+          "item_description": "验证SPEF文件*VERSION字段符合IEEE 1481标准格式",
+          "existence_check": {
+            "found_condition": "parsed_data.spef_version_field is not None AND parsed_data.spef_version_field != ''",
+            "missing_condition": "parsed_data.spef_version_field is None OR parsed_data.spef_version_field == ''",
+            "expected_fields": [
+              "spef_version_field",
+              "spef_header_structure"
+            ]
+          },
+          "pattern_check": {
+            "applicable": true,
+            "pattern_matching_rule": "如果requirements.pattern_items非空，则：\n1. 提取pattern_items中的期望版本（如[\"IEEE 1481-1999\", \"IEEE 1481-2009\"]）\n2. 检查parsed_data.spef_version_field是否在pattern_items列表中\n3. 同时验证格式：必须匹配r'^IEEE\\s+1481-\\d{4}$'\n如果requirements.pattern_items为空，则仅验证格式合法性",
+            "mismatch_handling": "如果版本不在pattern_items中或格式不合法：\n- 记录为FAIL\n- 输出详细信息：Expected: [pattern_items], Found: [actual_version]\n- 如果格式错误，额外标注：Invalid format (expected 'IEEE 1481-YYYY')"
+          }
+        },
+        {
+          "item_name": "Netlist文件存在性",
+          "item_description": "验证Netlist文件是否存在且可访问",
+          "existence_check": {
+            "found_condition": "parsed_data.netlist_file_exists == true",
+            "missing_condition": "parsed_data.netlist_file_exists == false OR parsed_data.netlist_file_path is None",
+            "expected_fields": [
+              "netlist_file_path",
+              "netlist_file_exists"
+            ]
+          },
+          "pattern_check": {
+            "applicable": false,
+            "pattern_matching_rule": "N/A",
+            "mismatch_handling": "N/A"
+          }
+        },
+        {
+          "item_name": "Netlist版本注释规范性",
+          "item_description": "验证Netlist文件版本注释存在且符合工具规范",
+          "existence_check": {
+            "found_condition": "parsed_data.netlist_version_comment is not None AND parsed_data.netlist_version_comment != ''",
+            "missing_condition": "parsed_data.netlist_version_comment is None OR parsed_data.netlist_version_comment == ''",
+            "expected_fields": [
+              "netlist_version_comment",
+              "netlist_module_structure"
+            ]
+          },
+          "pattern_check": {
+            "applicable": true,
+            "pattern_matching_rule": "如果requirements.pattern_items非空，则：\n1. 提取pattern_items中的期望工具版本（如[\"Synopsys DC 2021.06\", \"Cadence Genus 19.1\"]）\n2. 对parsed_data.netlist_version_comment进行模糊匹配：\n   - 提取工具名称和版本号\n   - 检查是否与pattern_items中任一项匹配（允许部分匹配，如版本号前缀）\n如果requirements.pattern_items为空，则仅验证版本注释存在性",
+            "mismatch_handling": "如果版本不匹配pattern_items：\n- 记录为FAIL\n- 输出详细信息：Expected tool versions: [pattern_items], Found: [actual_version]\n- 如果完全缺失版本注释，标注：Version comment not found in header"
+          }
+        }
+      ],
+      "pass_condition": "(SPEF文件存在性 == PASS) AND (SPEF版本字段规范性 == PASS) AND (Netlist文件存在性 == PASS) AND (Netlist版本注释规范性 == PASS)",
+      "fail_condition": "(SPEF文件存在性 == FAIL) OR (SPEF版本字段规范性 == FAIL) OR (Netlist文件存在性 == FAIL) OR (Netlist版本注释规范性 == FAIL)"
+    },
+    "waiver_logic": {
+      "waivable_items": [
+        {
+          "item_name": "SPEF文件存在性",
+          "waiver_scenario": "在综合（synthesis）阶段或前端设计阶段，SPEF文件尚未生成，此时可豁免SPEF相关检查",
+          "typical_waiver_reason": "Design stage does not require SPEF file (synthesis phase)",
+          "matching_keywords": [
+            "SPEF",
+            "synthesis",
+            "frontend",
+            "pre-layout",
+            "stage"
+          ]
+        },
+        {
+          "item_name": "SPEF版本字段规范性",
+          "waiver_scenario": "使用旧版本EDA工具生成的SPEF文件，版本标识可能不符合最新IEEE标准，但功能可用",
+          "typical_waiver_reason": "Legacy SPEF format from older tool version (IEEE 1481-1998 instead of 1481-1999)",
+          "matching_keywords": [
+            "SPEF",
+            "version",
+            "legacy",
+            "old",
+            "IEEE 1481"
+          ]
+        },
+        {
+          "item_name": "Netlist文件存在性",
+          "waiver_scenario": "在RTL设计阶段或仿真阶段，综合网表尚未生成",
+          "typical_waiver_reason": "RTL design phase does not require synthesized netlist",
+          "matching_keywords": [
+            "netlist",
+            "RTL",
+            "simulation",
+            "pre-synthesis"
+          ]
+        },
+        {
+          "item_name": "Netlist版本注释规范性",
+          "waiver_scenario": "手动修改的网表或从第三方IP导入的网表，版本注释可能缺失或格式不标准",
+          "typical_waiver_reason": "Manually edited netlist or third-party IP without standard version header",
+          "matching_keywords": [
+            "netlist",
+            "version",
+            "manual",
+            "third-party",
+            "IP",
+            "header"
+          ]
+        }
+      ],
+      "force_pass_mode": {
+        "applicable_types": [
+          3,
+          4
+        ],
+        "behavior": "当waivers.value=0时：\n1. 忽略所有verification_items的FAIL结果\n2. 将所有原本为ERROR的项转换为INFO级别\n3. 在每个豁免项后添加标签[WAIVED_AS_INFO]\n4. 最终check结果强制为PASS\n5. Console输出格式：\n   [PASS]:IMP-10-0-0-00:Confirm the netlist/spef version is correct.\n   IMP-10-0-0-00-[INFO][01]: [WAIVED_AS_INFO]: SPEF file missing:\n     Severity: INFO  Occurrence: 1\n     - File not found: /path/to/design.spef\n6. Report输出格式：\n   [PASS]:IMP-10-0-0-00:Confirm the netlist/spef version is correct.\n   INFO Occurrence: 4\n   01: INFO: SPEF file missing: File not found: /path/to/design.spef [WAIVED_AS_INFO]"
+      },
+      "selective_waiver_mode": {
+        "matching_strategy": "当waivers.value>0时：\n1. 遍历所有FAIL的verification_items\n2. 对每个FAIL项，提取其描述信息（item_name + 详细错误信息）\n3. 遍历waivers.waive_items列表（最多waivers.value个）\n4. 对每个waive_item：\n   a. 提取waive_item中的关键词（基于waivable_items.matching_keywords）\n   b. 检查FAIL项描述是否包含这些关键词（不区分大小写）\n   c. 如果匹配成功：\n      - 将该FAIL项转换为INFO级别\n      - 添加标签[WAIVER]\n      - 在详细信息中附加waive_item的原因说明\n   d. 如果匹配失败：\n      - 保持ERROR级别\n      - 不添加任何标签\n5. 最终check结果：如果仍有未豁免的ERROR项，则FAIL；否则PASS",
+        "unmatched_handling": "未匹配到waive_items的FAIL项：\n1. 保持原始ERROR级别\n2. 正常输出到Console和Report\n3. Console格式：\n   IMP-10-0-0-00-[ERROR][02]: Netlist version mismatch:\n     Severity: ERROR  Occurrence: 1\n     - Expected: Synopsys DC 2021.06, Found: Synopsys DC 2020.09\n4. Report格式：\n   02: ERROR: Netlist version mismatch: Expected: Synopsys DC 2021.06, Found: Synopsys DC 2020.09\n5. 这些未豁免项将导致最终check结果为FAIL"
+      }
+    }
+  },
+  "type_specifications": {
+    "type1": {
+      "functional_composition": "Parsing Logic + Check Logic (Boolean only - 仅存在性检查，无pattern匹配)",
+      "parameters": "无参数（requirements.value=\"N/A\"）",
+      "behavior": "执行流程：\n1. 调用parsing_logic，解析SPEF和Netlist文件\n2. 执行check_logic中4个verification_items的existence_check：\n   - SPEF文件存在性\n   - SPEF版本字段存在性（不验证格式）\n   - Netlist文件存在性\n   - Netlist版本注释存在性（不验证格式）\n3. 跳过所有pattern_check（applicable=false）\n4. 汇总结果，输出PASS/FAIL",
+      "output_format": "Console输出：\n[PASS/FAIL]:IMP-10-0-0-00:Confirm the netlist/spef version is correct.\nIMP-10-0-0-00-[INFO][01]: SPEF version field found:\n  Severity: INFO  Occurrence: 1\n  - Version: IEEE 1481-1999\nIMP-10-0-0-00-[ERROR][02]: Netlist version comment missing:\n  Severity: ERROR  Occurrence: 1\n  - File: /path/to/netlist.v\n\nReport输出：\n[PASS/FAIL]:IMP-10-0-0-00:Confirm the netlist/spef version is correct.\nINFO Occurrence: 2\n01: INFO: SPEF version field found: Version: IEEE 1481-1999\n02: INFO: Netlist version comment found: Version: Synopsys DC 2021.06\nERROR Occurrence: 0"
+    },
+    "type2": {
+      "functional_composition": "Parsing Logic + Check Logic (Boolean + Pattern - 存在性检查 + 模式匹配)",
+      "parameters": "requirements.pattern_items（期望的版本列表，如[\"IEEE 1481-1999\", \"Synopsys DC 2021.06\"]）",
+      "behavior": "执行流程：\n1. 调用parsing_logic，解析SPEF和Netlist文件\n2. 执行check_logic中4个verification_items的existence_check\n3. 对applicable=true的项执行pattern_check：\n   - SPEF版本字段规范性：验证版本是否在pattern_items中且格式正确\n   - Netlist版本注释规范性：验证工具版本是否匹配pattern_items\n4. 汇总结果：\n   - 存在且匹配 → INFO\n   - 存在但不匹配 → ERROR（附详细对比信息）\n   - 不存在 → ERROR\n5. 输出PASS/FAIL",
+      "output_format": "Console输出：\n[FAIL]:IMP-10-0-0-00:Confirm the netlist/spef version is correct.\nIMP-10-0-0-00-[INFO][01]: SPEF version matched:\n  Severity: INFO  Occurrence: 1\n  - Expected: IEEE 1481-1999, Found: IEEE 1481-1999\nIMP-10-0-0-00-[ERROR][02]: Netlist version mismatch:\n  Severity: ERROR  Occurrence: 1\n  - Expected: Synopsys DC 2021.06, Found: Synopsys DC 2020.09\n\nReport输出：\n[FAIL]:IMP-10-0-0-00:Confirm the netlist/spef version is correct.\nINFO Occurrence: 1\n01: INFO: SPEF version matched: Expected: IEEE 1481-1999, Found: IEEE 1481-1999\nERROR Occurrence: 1\n02: ERROR: Netlist version mismatch: Expected: Synopsys DC 2021.06, Found: Synopsys DC 2020.09"
+    },
+    "type3": {
+      "functional_composition": "Type 2 + Waiver Control（复用Type 2的完整check结果，应用豁免逻辑）",
+      "parameters": "requirements.pattern_items, waivers.waive_items, waivers.value",
+      "behavior": "执行流程：\n1. 调用Type 2完整流程，获取所有verification_items的检查结果\n2. 不重新执行parsing或check，直接使用Type 2的结果\n3. 应用waiver_logic：\n   - 如果waivers.value=0 → 进入force_pass_mode\n   - 如果waivers.value>0 → 进入selective_waiver_mode\n4. 根据豁免模式转换结果级别和标签\n5. 输出最终PASS/FAIL",
+      "waiver_modes": {
+        "value_0": "强制PASS模式：\n- 所有ERROR项转为INFO\n- 添加标签[WAIVED_AS_INFO]\n- 最终结果强制为PASS\n示例输出：\n[PASS]:IMP-10-0-0-00:Confirm the netlist/spef version is correct.\nIMP-10-0-0-00-[INFO][01]: [WAIVED_AS_INFO]: SPEF file missing:\n  Severity: INFO  Occurrence: 1\n  - File not found: /path/to/design.spef\nIMP-10-0-0-00-[INFO][02]: [WAIVED_AS_INFO]: Netlist version mismatch:\n  Severity: INFO  Occurrence: 1\n  - Expected: Synopsys DC 2021.06, Found: Synopsys DC 2020.09",
+        "value_gt_0": "选择性豁免模式（waivers.value=N，waive_items包含N个豁免项）：\n- 匹配到waive_items的ERROR项 → 转为INFO + [WAIVER]\n- 未匹配的ERROR项 → 保持ERROR\n- 如果仍有ERROR项，最终结果为FAIL；否则PASS\n示例输出（waivers.value=1, waive_items=[\"SPEF file not required in synthesis stage\"]）：\n[FAIL]:IMP-10-0-0-00:Confirm the netlist/spef version is correct.\nIMP-10-0-0-00-[INFO][01]: [WAIVER]: SPEF file missing:\n  Severity: INFO  Occurrence: 1\n  - File not found: /path/to/design.spef\n  - Waiver reason: SPEF file not required in synthesis stage\nIMP-10-0-0-00-[ERROR][02]: Netlist version mismatch:\n  Severity: ERROR  Occurrence: 1\n  - Expected: Synopsys DC 2021.06, Found: Synopsys DC 2020.09"
+      }
+    },
+    "type4": {
+      "functional_composition": "Type 1 + Waiver Control（复用Type 1的Boolean检查结果，应用豁免逻辑）",
+      "parameters": "waivers.waive_items, waivers.value",
+      "behavior": "执行流程：\n1. 调用Type 1完整流程，获取所有verification_items的存在性检查结果\n2. 不重新执行parsing或check，直接使用Type 1的结果\n3. 应用waiver_logic（与Type 3相同的豁免逻辑）\n4. 根据豁免模式转换结果级别和标签\n5. 输出最终PASS/FAIL",
+      "waiver_modes": {
+        "value_0": "强制PASS模式（与Type 3相同）：\n- 所有ERROR项转为INFO\n- 添加标签[WAIVED_AS_INFO]\n- 最终结果强制为PASS\n示例输出：\n[PASS]:IMP-10-0-0-00:Confirm the netlist/spef version is correct.\nIMP-10-0-0-00-[INFO][01]: [WAIVED_AS_INFO]: SPEF version field missing:\n  Severity: INFO  Occurrence: 1\n  - File: /path/to/design.spef",
+        "value_gt_0": "选择性豁免模式（与Type 3相同）：\n- 匹配到waive_items的ERROR项 → 转为INFO + [WAIVER]\n- 未匹配的ERROR项 → 保持ERROR\n示例输出（waivers.value=1, waive_items=[\"Netlist version comment not required for third-party IP\"]）：\n[FAIL]:IMP-10-0-0-00:Confirm the netlist/spef version is correct.\nIMP-10-0-0-00-[INFO][01]: SPEF version field found:\n  Severity: INFO  Occurrence: 1\n  - Version: IEEE 1481-1999\nIMP-10-0-0-00-[INFO][02]: [WAIVER]: Netlist version comment missing:\n  Severity: INFO  Occurrence: 1\n  - File: /path/to/ip_netlist.v\n  - Waiver reason: Netlist version comment not required for third-party IP\nIMP-10-0-0-00-[ERROR][03]: SPEF file missing:\n  Severity: ERROR  Occurrence: 1\n  - File not found: /path/to/design.spef"
+      }
+    }
+  },
+  "output_messages": {
+    "console_format": {
+      "structure": "[PASS/FAIL]:ITEM_ID:DESCRIPTION\nITEM_ID-[级别][序号]: [标签]: [标题]:\n  Severity: [级别] Occurrence: [数量]\n  - [详细项1]\n  - [详细项2]",
+      "severity_mapping": {
+        "found_items_no_waiver": "INFO - 文件存在且版本匹配时输出",
+        "missing_items_no_waiver": "ERROR - 文件缺失或版本不匹配时输出",
+        "waived_items_value_0": "INFO with [WAIVED_AS_INFO] - 强制豁免模式下所有错误转为INFO",
+        "waived_items_value_gt_0": "INFO with [WAIVER] - 选择性豁免模式下匹配项转为INFO，未匹配项保持ERROR"
+      },
+      "examples": {
+        "type1_pass": "[PASS]:IMP-10-0-0-00:Confirm the netlist/spef version is correct.\nIMP-10-0-0-00-[INFO][01]: SPEF file found:\n  Severity: INFO  Occurrence: 1\n  - File: /project/design.spef\nIMP-10-0-0-00-[INFO][02]: SPEF version field found:\n  Severity: INFO  Occurrence: 1\n  - Version: IEEE 1481-1999\nIMP-10-0-0-00-[INFO][03]: Netlist file found:\n  Severity: INFO  Occurrence: 1\n  - File: /project/design.v\nIMP-10-0-0-00-[INFO][04]: Netlist version comment found:\n  Severity: INFO  Occurrence: 1\n  - Version: Synopsys DC 2021.06",
+        "type2_fail": "[FAIL]:IMP-10-0-0-00:Confirm the netlist/spef version is correct.\nIMP-10-0-0-00-[INFO][01]: SPEF version matched:\n  Severity: INFO  Occurrence: 1\n  - Expected: IEEE 1481-1999, Found: IEEE 1481-1999\nIMP-10-0-0-00-[ERROR][02]: Netlist version mismatch:\n  Severity: ERROR  Occurrence: 1\n  - Expected: Synopsys DC 2021.06, Found: Synopsys DC 2020.09\nIMP-10-0-0-00-[ERROR][03]: SPEF header structure incomplete:\n  Severity: ERROR  Occurrence: 1\n  - Missing fields: *VENDOR, *PROGRAM",
+        "type3_selective_waiver": "[PASS]:IMP-10-0-0-00:Confirm the netlist/spef version is correct.\nIMP-10-0-0-00-[INFO][01]: SPEF version matched:\n  Severity: INFO  Occurrence: 1\n  - Expected: IEEE 1481-1999, Found: IEEE 1481-1999\nIMP-10-0-0-00-[INFO][02]: [WAIVER]: Netlist version mismatch:\n  Severity: INFO  Occurrence: 1\n  - Expected: Synopsys DC 2021.06, Found: Synopsys DC 2020.09\n  - Waiver reason: Legacy netlist from older tool version acceptable for this design",
+        "type4_force_pass": "[PASS]:IMP-10-0-0-00:Confirm the netlist/spef version is correct.\nIMP-10-0-0-00-[INFO][01]: [WAIVED_AS_INFO]: SPEF file missing:\n  Severity: INFO  Occurrence: 1\n  - File not found: /project/design.spef\nIMP-10-0-0-00-[INFO][02]: [WAIVED_AS_INFO]: SPEF version field missing:\n  Severity: INFO  Occurrence: 1\n  - Cannot verify version without file\nIMP-10-0-0-00-[INFO][03]: Netlist file found:\n  Severity: INFO  Occurrence: 1\n  - File: /project/design.v\nIMP-10-0-0-00-[INFO][04]: [WAIVED_AS_INFO]: Netlist version comment missing:\n  Severity: INFO  Occurrence: 1\n  - Version comment not found in header"
+      }
+    },
+    "report_format": {
+      "structure": "[PASS/FAIL]:ITEM_ID:DESCRIPTION\n[级别] Occurrence: [总数]\n[序号]: [级别]: [描述]: [详情][标签]",
+      "item_templates": {
+        "found_item": "Item found: [文件路径或版本信息]",
+        "missing_item": "Item missing: [缺失原因或错误详情]",
+        "waived_item": "Item waived: [原始错误] [豁免原因][WAIVER/WAIVED_AS_INFO]"
+      },
+      "examples": {
+        "type1_pass": "[PASS]:IMP-10-0-0-00:Confirm the netlist/spef version is correct.\nINFO Occurrence: 4\n01: INFO: SPEF file found: File: /project/design.spef\n02: INFO: SPEF version field found: Version: IEEE 1481-1999\n03: INFO: Netlist file found: File: /project/design.v\n04: INFO: Netlist version comment found: Version: Synopsys DC 2021.06\nERROR Occurrence: 0",
+        "type2_fail": "[FAIL]:IMP-10-0-0-00:Confirm the netlist/spef version is correct.\nINFO Occurrence: 1\n01: INFO: SPEF version matched: Expected: IEEE 1481-1999, Found: IEEE 1481-1999\nERROR Occurrence: 2\n02: ERROR: Netlist version mismatch: Expected: Synopsys DC 2021.06, Found: Synopsys DC 2020.09\n03: ERROR: SPEF header structure incomplete: Missing fields: *VENDOR, *PROGRAM",
+        "type3_selective_waiver": "[PASS]:IMP-10-0-0-00:Confirm the netlist/spef version is correct.\nINFO Occurrence: 2\n01: INFO: SPEF version matched: Expected: IEEE 1481-1999, Found: IEEE 1481-1999\n02: INFO: Netlist version mismatch: Expected: Synopsys DC 2021.06, Found: Synopsys DC 2020.09 [WAIVER: Legacy netlist from older tool version acceptable for this design]\nERROR Occurrence: 0",
+        "type4_force_pass": "[PASS]:IMP-10-0-0-00:Confirm the netlist/spef version is correct.\nINFO Occurrence: 4\n01: INFO: SPEF file missing: File not found: /project/design.spef [WAIVED_AS_INFO]\n02: INFO: SPEF version field missing: Cannot verify version without file [WAIVED_AS_INFO]\n03: INFO: Netlist file found: File: /project/design.v\n04: INFO: Netlist version comment missing: Version comment not found in header [WAIVED_AS_INFO]\nERROR Occurrence: 0"
+      }
+    }
+  },
+  "_v6_metadata": {
+    "semantic_intent": {
+      "check_target": "Verification that the netlist and SPEF files use the correct version specification",
+      "involved_formats": [
+        {
+          "name": "SPEF",
+          "role": "Target file containing parasitic data with version header",
+          "expected_sections": [
+            "*SPEF",
+            "*DESIGN",
+            "*DATE",
+            "*VENDOR",
+            "*PROGRAM",
+            "*VERSION"
+          ],
+          "criticality": "required",
+          "data_role": "direct_source"
+        },
+        {
+          "name": "Netlist_Verilog",
+          "role": "Target file containing synthesized netlist with version comment",
+          "expected_sections": [
+            "// Version:",
+            "module",
+            "endmodule"
+          ],
+          "criticality": "required",
+          "data_role": "direct_source"
+        }
+      ],
+      "data_flow": "Parse SPEF *VERSION field → verify format compliance; Parse Netlist version comment → verify format compliance",
+      "extraction_chain": "SPEF → locate *VERSION header → extract version string → validate against IEEE 1481 standard; Netlist_Verilog → locate version comment → extract version identifier → validate against tool specification",
+      "success_criteria": "SPEF *VERSION field matches expected IEEE 1481 version format (e.g., \"IEEE 1481-1999\") AND Netlist version comment matches expected tool version pattern",
+      "failure_criteria": "SPEF *VERSION field is missing, malformed, or incorrect version number OR Netlist version comment is missing, malformed, or incorrect version identifier",
+      "format_hints": {
+        "SPEF": "IEEE 1481 standard format; *VERSION appears in header section before *DESIGN",
+        "Netlist_Verilog": "Tool-generated Verilog; version typically in header comment block"
+      }
+    }
+  }
+}

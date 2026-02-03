@@ -1,0 +1,3 @@
+FAIL:MIG-IMP-8-1-1-07:Confirm use cdns_ddr_vddq_ck_v/h (with double clamp and If exist in current DDRIO library) instead of cdns_ddr_vddq_v/h in memclk region for better ESD protection of VDDQ_CK domain. (Fill N/A if this cell doesn’t exist)
+Fail Occurrence: 1
+1: Fail: input_files is empty in YAML configuration

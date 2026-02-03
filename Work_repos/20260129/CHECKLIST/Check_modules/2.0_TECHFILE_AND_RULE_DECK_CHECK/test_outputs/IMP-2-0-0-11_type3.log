@@ -1,0 +1,9 @@
+FAIL:IMP-2-0-0-11:List BEOL dummy rule deck name. eg: Dummy_BEOL_Pegasus_3nm_E_17M_1Xa1Xb1Xc1Xd1Ya1Yb4Y2Yy2Yx2R_014.11_1a
+IMP-2-0-0-11-ERROR01: BEOL dummy rule deck name does not match expected pattern:
+  Severity: Fail Occurrence: 1
+  - Dummy_BEOL_Pegasus_5nm_014.13_1a.M16
+IMP-2-0-0-11-WARN01: Unused waivers:
+  Severity: Warn Occurrence: 2
+  - Dummy_BEOL_Pegasus_5nm_014.11_1a.M16
+  - Dummy_BEOL_Pegasus_5nm_014.12_1a.M16
+

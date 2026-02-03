@@ -1,0 +1,15 @@
+description: List Tempus timing signoff tool version (eg. ssv/231/23.12-s092_1)
+input_files:
+- ${CHECKLIST_ROOT}/IP_project_folder/tcl/2.0/setup_vars.tcl
+requirements:
+  pattern_items: []
+  value: N/A
+waivers:
+  value: 2
+  waive_items:
+  - name: ssv/202/20.20.000
+    reason: Waived - older Tempus version approved for this design due to tool stability
+      requirements
+  - name: ssv/231/23.15-s092_1
+    reason: Waived - intermediate tool version used for debug, will be updated before
+      tapeout

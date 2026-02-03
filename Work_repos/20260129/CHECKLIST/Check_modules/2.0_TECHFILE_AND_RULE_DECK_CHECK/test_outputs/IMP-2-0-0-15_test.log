@@ -1,0 +1,101 @@
+Test Log: IMP-2-0-0-15
+================================================================================
+
+[Test 1/6] Type 1 (requirements.value=N/A, waivers.value=N/A)
+--------------------------------------------------------------------------------
+Test ID: type1_na
+Status: PASS
+
+Checker Log Output:
+PASS:IMP-2-0-0-15:List QRC techfile name. eg: 17M1Xa1Xb1Xc1Xd1Ya1Yb4Y2Yy2Yx2R_SHDMIM_UT/fs_v1d0p1a
+IMP-2-0-0-15-INFO01: QRC techfile reference found in extraction log:
+  Severity: Info Occurrence: 1
+  - 16M1X1Xb1Xe1Ya1Yb6Y2Yy2R_SHDMIM_UT/fs_v1d2p4a
+
+
+================================================================================
+
+[Test 2/6] Type 1 (requirements.value=N/A, waivers.value=0)
+--------------------------------------------------------------------------------
+Test ID: type1_0
+Status: PASS
+
+Checker Log Output:
+PASS:IMP-2-0-0-15:List QRC techfile name. eg: 17M1Xa1Xb1Xc1Xd1Ya1Yb4Y2Yy2Yx2R_SHDMIM_UT/fs_v1d0p1a
+IMP-2-0-0-15-INFO01: [WAIVED_INFO]: Waived information:
+  Severity: Info Occurrence: 1
+  - Explanation: This check is informational only - QRC techfile extraction is for reference purposes
+IMP-2-0-0-15-INFO02: QRC techfile reference found in extraction log:
+  Severity: Info Occurrence: 1
+  - 16M1X1Xb1Xe1Ya1Yb6Y2Yy2R_SHDMIM_UT/fs_v1d2p4a
+
+
+================================================================================
+
+[Test 3/6] Type 2 (requirements.value>0, waivers.value=N/A)
+--------------------------------------------------------------------------------
+Test ID: type2_na
+Status: PASS
+
+Checker Log Output:
+PASS:IMP-2-0-0-15:List QRC techfile name. eg: 17M1Xa1Xb1Xc1Xd1Ya1Yb4Y2Yy2Yx2R_SHDMIM_UT/fs_v1d0p1a
+IMP-2-0-0-15-INFO01: QRC techfile version matched expected configuration:
+  Severity: Info Occurrence: 1
+  - 16M1X1Xb1Xe1Ya1Yb6Y2Yy2R_SHDMIM_UT/fs_v1d2p4a
+
+
+================================================================================
+
+[Test 4/6] Type 2 (requirements.value>0, waivers.value=0)
+--------------------------------------------------------------------------------
+Test ID: type2_0
+Status: PASS
+
+Checker Log Output:
+PASS:IMP-2-0-0-15:List QRC techfile name. eg: 17M1Xa1Xb1Xc1Xd1Ya1Yb4Y2Yy2Yx2R_SHDMIM_UT/fs_v1d0p1a
+IMP-2-0-0-15-INFO01: [WAIVED_INFO]: Waived information:
+  Severity: Info Occurrence: 1
+  - Explanation: QRC techfile version check is informational - multiple valid versions exist
+IMP-2-0-0-15-INFO02: QRC techfile version matched expected configuration:
+  Severity: Info Occurrence: 1
+  - 16M1X1Xb1Xe1Ya1Yb6Y2Yy2R_SHDMIM_UT/fs_v1d2p4a
+
+
+================================================================================
+
+[Test 5/6] Type 3
+--------------------------------------------------------------------------------
+Test ID: type3
+Status: PASS
+
+Checker Log Output:
+PASS:IMP-2-0-0-15:List QRC techfile name. eg: 17M1Xa1Xb1Xc1Xd1Ya1Yb4Y2Yy2Yx2R_SHDMIM_UT/fs_v1d0p1a
+IMP-2-0-0-15-WARN01: Unused waivers:
+  Severity: Warn Occurrence: 2
+  - 16M1X1Xb1Xe1Ya1Yb6Y2Yy2R_SHDMIM_UT/fs_v1d1p0a
+  - 17M1Xa1Xb1Xc1Xd1Ya1Yb4Y2Yy2Yx2R_SHDMIM_UT/fs_v1d0p1a
+IMP-2-0-0-15-INFO01: QRC techfile version matched expected configuration:
+  Severity: Info Occurrence: 1
+  - 16M1X1Xb1Xe1Ya1Yb6Y2Yy2R_SHDMIM_UT/fs_v1d2p4a
+
+
+================================================================================
+
+[Test 6/6] Type 4
+--------------------------------------------------------------------------------
+Test ID: type4
+Status: PASS
+
+Checker Log Output:
+PASS:IMP-2-0-0-15:List QRC techfile name. eg: 17M1Xa1Xb1Xc1Xd1Ya1Yb4Y2Yy2Yx2R_SHDMIM_UT/fs_v1d0p1a
+IMP-2-0-0-15-WARN01: Unused waivers:
+  Severity: Warn Occurrence: 2
+  - 16M1X1Xb1Xe1Ya1Yb6Y2Yy2R_SHDMIM_UT/fs_v1d1p0a
+  - 17M1Xa1Xb1Xc1Xd1Ya1Yb4Y2Yy2Yx2R_SHDMIM_UT/fs_v1d0p1a
+IMP-2-0-0-15-INFO01: QRC techfile reference found in extraction log:
+  Severity: Info Occurrence: 1
+  - 16M1X1Xb1Xe1Ya1Yb6Y2Yy2R_SHDMIM_UT/fs_v1d2p4a
+
+
+================================================================================
+

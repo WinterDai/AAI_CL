@@ -1,0 +1,8 @@
+PASS:IMP-2-0-0-10:List FEOL dummy rule deck name. eg: Dummy_FEOL_Pegasus_3nm_E_17M_1Xa1Xb1Xc1Xd1Ya1Yb4Y2Yy2Yx2R_014.11_1a
+IMP-2-0-0-10-INFO01: [WAIVED_INFO]: Waived information:
+  Severity: Info Occurrence: 1
+  - Explanation: This check is informational only - it extracts and reports the FEOL rule deck name for documentation purposes
+IMP-2-0-0-10-INFO02: FEOL dummy rule deck name found in PVL log:
+  Severity: Info Occurrence: 1
+  - Dummy_FEOL_Pegasus_5nm_014.13_1a.FEOL
+

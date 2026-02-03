@@ -1,0 +1,7 @@
+PASS(Waive):IMP-10-0-0-08:Confirm set the correct clock transition and data transition?
+IMP-10-0-0-08-INFO01: Transition settings verified (1 clock):
+  Severity: Info Occurrence: 1
+  - PHASE_ALIGN_CLOCK: clock_path=0.0833333, data_path=0.166667
+IMP-10-0-0-08-INFO02: Incomplete clocks waived:
+  Severity: Info Occurrence: 1
+  - IO_ASYNC_CLOCK: Missing data_path[WAIVER]

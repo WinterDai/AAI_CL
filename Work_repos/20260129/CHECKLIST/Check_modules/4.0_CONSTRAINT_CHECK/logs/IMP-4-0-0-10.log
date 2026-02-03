@@ -1,0 +1,5 @@
+FAIL:IMP-4-0-0-10:Confrim proper clock and data transition limit values were set?
+IMP-4-0-0-10-ERROR01: Configuration error:
+  Severity: Fail Occurrence: 1
+  - input_files is empty in YAML configuration
+

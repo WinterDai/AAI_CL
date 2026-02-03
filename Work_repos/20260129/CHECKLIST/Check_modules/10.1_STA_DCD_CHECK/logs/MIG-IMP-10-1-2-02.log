@@ -1,0 +1,5 @@
+FAIL:MIG-IMP-10-1-2-02:[ETMQA check] Please provide the ETMQA run dir in comment. （Fill N/A if customer will not run ETM based STA)
+MIG-IMP-10-1-2-02-ERROR01: Configuration error:
+  Severity: Fail Occurrence: 1
+  - input_files is empty in YAML configuration
+

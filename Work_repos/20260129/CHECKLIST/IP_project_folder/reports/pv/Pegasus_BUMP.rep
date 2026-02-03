@@ -1,0 +1,299 @@
+********************************************************************************
+*** Pegasus DRC SUMMARY
+***
+Execute on Date/Time    : Mon Mar  3 15:36:43 2025
+Pegasus VERSION         : 23.25-s012 Tue Sep 10 16:57:41 PDT 2024
+Rule Deck Path          : scr/cdns_lp6_x48_ew_phy_top.PKGwD.pvl
+Rule Deck Title         :
+Layout System           : GDSII
+Layout Path             : dbs/cdns_lp6_x48_ew_phy_top.uniquify.gds.gz
+Current Directory       : /projects/TC65_LPDDR6_N3P_14400/work/cdns_lp6_x48_ew_phy_top/chudongy/signoff/signoff-0303/pvs_run/PKGwD
+User Name               : chudongy
+Maximum Results         : unlimited
+Maximum Result Vertices : 4096
+Layout Depth            : ALL
+Text Depth              : 0
+Summary File            : /projects/TC65_LPDDR6_N3P_14400/work/cdns_lp6_x48_ew_phy_top/chudongy/signoff/signoff-0303/pvs_run/PKGwD/DRC_BUMP.rep
+Geometry Flagging       : ACUTE = YES  ANGLED = NO  SKEW = YES  OFFGRID = YES
+                          NONSIMPLE POLYGON = YES  NONSIMPLE PATH = NO
+Keep Empty Checks       : NO
+Excluded Cells          : 
+Layout Primary Cell     : cdns_lp6_x48_ew_phy_top
+ASCII DRC Error Report  : /projects/TC65_LPDDR6_N3P_14400/work/cdns_lp6_x48_ew_phy_top/chudongy/signoff/signoff-0303/pvs_run/PKGwD/DRC_RES.db
+DRC Results Database    :
+--------------------------------------------------------------------------------
+--- RUNNING TIME WARNINGS
+---
+--------------------------------------------------------------------------------
+--- ORIGINAL LAYER STATISTICS
+---
+LAYER RV ................................... Total Original Geometry:       3916 (     38402)
+LAYER CB2_FC ............................... Total Original Geometry:          2 (       776)
+LAYER CB2_WB ............................... Total Original Geometry:          0 (         0)
+LAYER CB2_FCU .............................. Total Original Geometry:          0 (         0)
+LAYER CB2_IN ............................... Total Original Geometry:          0 (         0)
+LAYER CB2_INU .............................. Total Original Geometry:          0 (         0)
+LAYER UBM_FC ............................... Total Original Geometry:          0 (         0)
+LAYER SEALRING_ALL ......................... Total Original Geometry:          0 (         0)
+LAYER CBD .................................. Total Original Geometry:          0 (         0)
+LAYER UBM .................................. Total Original Geometry:          2 (       776)
+LAYER UBM_FCU .............................. Total Original Geometry:          0 (         0)
+LAYER UUBM ................................. Total Original Geometry:          0 (         0)
+LAYER PRBOUNDARY ........................... Total Original Geometry:      25299 (  63450811)
+LAYER Chip_Boundary ........................ Total Original Geometry:          0 (         0)
+LAYER LMARK ................................ Total Original Geometry:          0 (         0)
+LAYER Cu_CB2_FC ............................ Total Original Geometry:          0 (         0)
+LAYER Cu_CB2_FCU ........................... Total Original Geometry:          0 (         0)
+LAYER PM ................................... Total Original Geometry:          2 (       776)
+LAYER OD ................................... Total Original Geometry:      26955 ( 158588145)
+LAYER AP ................................... Total Original Geometry:       2047 (     35171)
+LAYER CB ................................... Total Original Geometry:          0 (         0)
+LAYER LOGO ................................. Total Original Geometry:          0 (         0)
+--------------------------------------------------------------------------------
+--- WARNINGS FROM FLAG STATEMENT
+---
+Acute Angle on layer AP at location (298.171,-35.437) in cell tc65_cdns_ddr1100_h_cdns_ddr1100_custom_caslice_x100.
+Acute Angle on layer AP at location (286.057,-23.322) in cell tc65_cdns_ddr1100_h_cdns_ddr1100_custom_caslice_x100.
+Acute Angle on layer AP at location (259.360,3.375) in cell tc65_cdns_ddr1100_h_cdns_ddr1100_custom_caslice_x100.
+Acute Angle on layer AP at location (215.246,59.623) in cell tc65_cdns_ddr1100_h_cdns_ddr1100_custom_caslice_x100.
+Acute Angle on layer AP at location (211.607,63.261) in cell tc65_cdns_ddr1100_h_cdns_ddr1100_custom_caslice_x100.
+Acute Angle on layer AP at location (263.454,-103.541) in cell tc65_cdns_ddr1100_h_cdns_ddr1100_custom_caslice_x100.
+Acute Angle on layer AP at location (204.464,-102.170) in cell tc65_cdns_ddr1100_h_cdns_ddr1100_custom_caslice_x100.
+Acute Angle on layer AP at location (193.086,-90.791) in cell tc65_cdns_ddr1100_h_cdns_ddr1100_custom_caslice_x100.
+Acute Angle on layer AP at location (412.784,160.689) in cell tc65_cdns_ddr1100_h_cdns_ddr1100_custom_caslice_x100.
+Acute Angle on layer AP at location (390.068,183.405) in cell tc65_cdns_ddr1100_h_cdns_ddr1100_custom_caslice_x100.
+Acute Angle on layer AP at location (378.808,194.665) in cell tc65_cdns_ddr1100_h_cdns_ddr1100_custom_caslice_x100.
+Acute Angle on layer AP at location (194.185,265.822) in cell tc65_cdns_ddr1100_h_cdns_ddr1100_custom_caslice_x100.
+Acute Angle on layer AP at location (191.163,268.843) in cell tc65_cdns_ddr1100_h_cdns_ddr1100_custom_caslice_x100.
+Acute Angle on layer AP at location (188.919,271.087) in cell tc65_cdns_ddr1100_h_cdns_ddr1100_custom_caslice_x100.
+Acute Angle on layer AP at location (178.314,137.004) in cell tc65_cdns_ddr1100_h_cdns_ddr1100_custom_caslice_x100.
+Acute Angle on layer AP at location (177.657,137.661) in cell tc65_cdns_ddr1100_h_cdns_ddr1100_custom_caslice_x100.
+Acute Angle on layer AP at location (767.538,257.637) in cell tc65_cdns_ddr1100_h_cdns_ddr1100_custom_caslice_x100.
+Acute Angle on layer AP at location (486.572,251.013) in cell tc65_cdns_ddr1100_h_cdns_ddr1100_custom_caslice_x100.
+Acute Angle on layer AP at location (417.521,106.814) in cell tc65_cdns_ddr1100_h_cdns_ddr1100_custom_caslice_x100.
+Acute Angle on layer AP at location (270.959,296.821) in cell tc65_cdns_ddr1100_h_cdns_ddr1100_custom_caslice_x100.
+Acute Angle on layer AP at location (313.615,773.252) in cell tc65_cdns_ddr1100_h_cdns_ddr1100_custom_caslice_x100.
+Acute Angle on layer AP at location (285.930,837.806) in cell tc65_cdns_ddr1100_h_cdns_ddr1100_custom_caslice_x100.
+Acute Angle on layer AP at location (267.851,678.329) in cell tc65_cdns_ddr1100_h_cdns_ddr1100_custom_caslice_x100.
+Acute Angle on layer AP at location (369.388,251.966) in cell tc65_cdns_ddr1100_h_cdns_ddr1100_custom_caslice_x100.
+Acute Angle on layer AP at location (344.243,246.873) in cell tc65_cdns_ddr1100_h_cdns_ddr1100_custom_caslice_x100.
+Acute Angle on layer AP at location (98.020,-29.988) in cell tc65_cdns_ddr1100_h_cdns_ddr1100_custom_caslice_x100.
+Acute Angle on layer AP at location (79.377,-11.345) in cell tc65_cdns_ddr1100_h_cdns_ddr1100_custom_caslice_x100.
+Acute Angle on layer AP at location (78.212,-10.179) in cell tc65_cdns_ddr1100_h_cdns_ddr1100_custom_caslice_x100.
+Acute Angle on layer AP at location (271.856,908.007) in cell tc65_cdns_ddr1100_h_cdns_ddr1100_custom_caslice_x100.
+Acute Angle on layer AP at location (243.279,832.209) in cell tc65_cdns_ddr1100_h_cdns_ddr1100_custom_caslice_x100.
+Acute Angle on layer AP at location (432.795,494.395) in cell tc65_cdns_ddr1100_h_cdns_ddr1100_custom_caslice_x100.
+Acute Angle on layer AP at location (495.134,872.407) in cell tc65_cdns_ddr1100_h_cdns_ddr1100_custom_caslice_x100.
+Acute Angle on layer AP at location (75.272,391.976) in cell tc65_cdns_ddr1100_h_cdns_ddr1100_custom_caslice_x100.
+Acute Angle on layer AP at location (352.785,846.216) in cell tc65_cdns_ddr1100_h_cdns_ddr1100_custom_caslice_x100.
+Acute Angle on layer AP at location (307.803,852.607) in cell tc65_cdns_ddr1100_h_cdns_ddr1100_custom_caslice_x100.
+Acute Angle on layer AP at location (284.812,829.616) in cell tc65_cdns_ddr1100_h_cdns_ddr1100_custom_caslice_x100.
+Acute Angle on layer AP at location (428.103,261.796) in cell tc65_cdns_ddr1100_h_cdns_ddr1100_custom_caslice_x100.
+Acute Angle on layer AP at location (352.628,248.946) in cell tc65_cdns_ddr1100_h_cdns_ddr1100_custom_caslice_x100.
+Acute Angle on layer AP at location (330.759,257.315) in cell tc65_cdns_ddr1100_h_cdns_ddr1100_custom_caslice_x100.
+Acute Angle on layer AP at location (309.358,201.399) in cell tc65_cdns_ddr1100_h_cdns_ddr1100_custom_caslice_x100.
+Acute Angle on layer AP at location (433.360,-101.052) in cell tc65_cdns_ddr1100_h_cdns_ddr1100_custom_caslice_x100.
+Acute Angle on layer AP at location (426.767,-94.460) in cell tc65_cdns_ddr1100_h_cdns_ddr1100_custom_caslice_x100.
+Acute Angle on layer AP at location (614.246,-13.169) in cell tc65_cdns_ddr1100_h_cdns_ddr1100_custom_caslice_x100.
+Acute Angle on layer AP at location (551.931,-24.202) in cell tc65_cdns_ddr1100_h_cdns_ddr1100_custom_caslice_x100.
+Acute Angle on layer AP at location (539.451,-11.723) in cell tc65_cdns_ddr1100_h_cdns_ddr1100_custom_caslice_x100.
+Acute Angle on layer AP at location (487.000,-105.195) in cell tc65_cdns_ddr1100_h_cdns_ddr1100_custom_caslice_x100.
+Acute Angle on layer AP at location (449.411,653.498) in cell tc65_cdns_ddr1100_h_cdns_ddr1100_custom_caslice_x100.
+Acute Angle on layer AP at location (439.209,670.663) in cell tc65_cdns_ddr1100_h_cdns_ddr1100_custom_caslice_x100.
+Acute Angle on layer AP at location (420.668,584.183) in cell tc65_cdns_ddr1100_h_cdns_ddr1100_custom_caslice_x100.
+Acute Angle on layer AP at location (518.593,137.972) in cell tc65_cdns_ddr1100_h_cdns_ddr1100_custom_caslice_x100.
+Acute Angle on layer AP at location (429.668,71.461) in cell tc65_cdns_ddr1100_h_cdns_ddr1100_custom_caslice_x100.
+Acute Angle on layer AP at location (614.246,-13.169) in cell tc65_cdns_lp6_x48_ew_phy_as_top.
+Acute Angle on layer AP at location (551.931,-24.202) in cell tc65_cdns_lp6_x48_ew_phy_as_top.
+Acute Angle on layer AP at location (539.451,-11.723) in cell tc65_cdns_lp6_x48_ew_phy_as_top.
+Acute Angle on layer AP at location (487.000,-105.195) in cell tc65_cdns_lp6_x48_ew_phy_as_top.
+Acute Angle on layer AP at location (433.360,-101.052) in cell tc65_cdns_lp6_x48_ew_phy_as_top.
+Acute Angle on layer AP at location (426.767,-94.460) in cell tc65_cdns_lp6_x48_ew_phy_as_top.
+Acute Angle on layer AP at location (269.807,0.000) in cell tc65_cdns_lp6_x48_ew_phy_as_top.
+Acute Angle on layer AP at location (98.020,-29.988) in cell tc65_cdns_lp6_x48_ew_phy_as_top.
+Acute Angle on layer AP at location (79.377,-11.345) in cell tc65_cdns_lp6_x48_ew_phy_as_top.
+Acute Angle on layer AP at location (78.212,-10.179) in cell tc65_cdns_lp6_x48_ew_phy_as_top.
+Acute Angle on layer AP at location (767.538,257.637) in cell tc65_cdns_lp6_x48_ew_phy_as_top.
+Acute Angle on layer AP at location (298.171,-35.437) in cell tc65_cdns_lp6_x48_ew_phy_as_top.
+Acute Angle on layer AP at location (286.057,-23.322) in cell tc65_cdns_lp6_x48_ew_phy_as_top.
+Acute Angle on layer AP at location (263.454,-103.541) in cell tc65_cdns_lp6_x48_ew_phy_as_top.
+Acute Angle on layer AP at location (204.464,-102.170) in cell tc65_cdns_lp6_x48_ew_phy_as_top.
+Acute Angle on layer AP at location (193.086,-90.791) in cell tc65_cdns_lp6_x48_ew_phy_as_top.
+Acute Angle on layer AP at location (271.856,908.007) in cell tc65_cdns_lp6_x48_ew_phy_as_top.
+Acute Angle on layer AP at location (248.876,837.806) in cell tc65_cdns_lp6_x48_ew_phy_as_top.
+Acute Angle on layer AP at location (285.930,837.806) in cell tc65_cdns_lp6_x48_ew_phy_as_top.
+Acute Angle on layer AP at location (782.303,204.046) in cell tc65_cdns_ddr1100_h_cdns_ddr1100_custom_cmnslice_r100.
+Acute Angle on layer AP at location (758.947,217.451) in cell tc65_cdns_ddr1100_h_cdns_ddr1100_custom_cmnslice_r100.
+Acute Angle on layer AP at location (758.859,217.502) in cell tc65_cdns_ddr1100_h_cdns_ddr1100_custom_cmnslice_r100.
+Acute Angle on layer AP at location (267.471,220.382) in cell tc65_cdns_ddr1100_h_cdns_ddr1100_custom_cmnslice_r100.
+Acute Angle on layer AP at location (238.356,160.148) in cell tc65_cdns_ddr1100_h_cdns_ddr1100_custom_cmnslice_r100.
+Acute Angle on layer AP at location (210.071,207.989) in cell tc65_cdns_ddr1100_h_cdns_ddr1100_custom_cmnslice_r100.
+Acute Angle on layer AP at location (210.071,117.423) in cell tc65_cdns_ddr1100_h_cdns_ddr1100_custom_cmnslice_r100.
+Acute Angle on layer AP at location (91.779,132.242) in cell tc65_cdns_ddr1100_h_cdns_ddr1100_custom_cmnslice_r100.
+Acute Angle on layer AP at location (262.152,54.916) in cell tc65_cdns_ddr1100_h_cdns_ddr1100_custom_cmnslice_r100.
+Acute Angle on layer AP at location (257.832,50.594) in cell tc65_cdns_ddr1100_h_cdns_ddr1100_custom_cmnslice_r100.
+Acute Angle on layer AP at location (212.832,46.350) in cell tc65_cdns_ddr1100_h_cdns_ddr1100_custom_cmnslice_r100.
+Acute Angle on layer AP at location (195.929,117.721) in cell tc65_cdns_ddr1100_h_cdns_ddr1100_custom_cmnslice_r100.
+Acute Angle on layer AP at location (194.161,119.490) in cell tc65_cdns_ddr1100_h_cdns_ddr1100_custom_cmnslice_r100.
+Acute Angle on layer AP at location (195.929,117.722) in cell tc65_cdns_ddr1100_h_cdns_ddr1100_custom_cmnslice_r100.
+Acute Angle on layer AP at location (166.524,143.034) in cell tc65_cdns_ddr1100_h_cdns_ddr1100_custom_cmnslice_r100.
+Acute Angle on layer AP at location (151.524,128.034) in cell tc65_cdns_ddr1100_h_cdns_ddr1100_custom_cmnslice_r100.
+Acute Angle on layer AP at location (432.271,56.136) in cell tc65_cdns_ddr1100_h_cdns_ddr1100_custom_cmnslice_r100.
+Acute Angle on layer AP at location (268.116,60.879) in cell tc65_cdns_ddr1100_h_cdns_ddr1100_custom_cmnslice_r100.
+Acute Angle on layer AP at location (67.088,271.840) in cell tc65_cdns_ddr1100_h_cdns_ddr1100_custom_dataslice_r100_AP_RDL.
+Acute Angle on layer AP at location (95.694,262.933) in cell tc65_cdns_ddr1100_h_cdns_ddr1100_custom_dataslice_r100_AP_RDL.
+Acute Angle on layer AP at location (92.931,262.281) in cell tc65_cdns_ddr1100_h_cdns_ddr1100_custom_dataslice_r100_AP_RDL.
+Acute Angle on layer AP at location (430.568,658.958) in cell tc65_cdns_ddr1100_h_cdns_ddr1100_custom_dataslice_r100_AP_RDL.
+Acute Angle on layer AP at location (547.069,579.251) in cell tc65_cdns_ddr1100_h_cdns_ddr1100_custom_dataslice_r100_AP_RDL.
+Acute Angle on layer AP at location (182.068,756.765) in cell tc65_cdns_ddr1100_h_cdns_ddr1100_custom_dataslice_r100_AP_RDL.
+Acute Angle on layer AP at location (169.968,744.665) in cell tc65_cdns_ddr1100_h_cdns_ddr1100_custom_dataslice_r100_AP_RDL.
+Acute Angle on layer AP at location (415.438,182.866) in cell tc65_cdns_ddr1100_h_cdns_ddr1100_custom_dataslice_r100_AP_RDL.
+Acute Angle on layer AP at location (571.359,574.741) in cell tc65_cdns_ddr1100_h_cdns_ddr1100_custom_dataslice_r100_AP_RDL.
+Acute Angle on layer AP at location (508.418,690.414) in cell tc65_cdns_ddr1100_h_cdns_ddr1100_custom_dataslice_r100_AP_RDL.
+Acute Angle on layer AP at location (186.986,267.670) in cell tc65_cdns_ddr1100_h_cdns_ddr1100_custom_dataslice_r100_AP_RDL.
+Acute Angle on layer AP at location (547.069,350.669) in cell tc65_cdns_ddr1100_h_cdns_ddr1100_custom_dataslice_r100_AP_RDL.
+Maximum Acute Angle warning count of 100 has been reached.
+Skew Edge on layer PM at location (41.471,25.073) (42.926,25.288) in cell tc65_cdns_ddr1100_h_PAD120PITCH.
+Skew Edge on layer PM at location (42.926,25.288) (44.355,25.646) in cell tc65_cdns_ddr1100_h_PAD120PITCH.
+Skew Edge on layer PM at location (44.355,25.646) (45.740,26.142) in cell tc65_cdns_ddr1100_h_PAD120PITCH.
+Skew Edge on layer PM at location (45.740,26.142) (47.071,26.771) in cell tc65_cdns_ddr1100_h_PAD120PITCH.
+Skew Edge on layer PM at location (47.071,26.771) (48.334,27.528) in cell tc65_cdns_ddr1100_h_PAD120PITCH.
+Skew Edge on layer PM at location (48.334,27.528) (49.516,28.405) in cell tc65_cdns_ddr1100_h_PAD120PITCH.
+Skew Edge on layer PM at location (49.516,28.405) (50.606,29.393) in cell tc65_cdns_ddr1100_h_PAD120PITCH.
+Skew Edge on layer PM at location (50.606,29.393) (51.595,30.484) in cell tc65_cdns_ddr1100_h_PAD120PITCH.
+Skew Edge on layer PM at location (51.595,30.484) (52.472,31.666) in cell tc65_cdns_ddr1100_h_PAD120PITCH.
+Skew Edge on layer PM at location (52.472,31.666) (53.229,32.929) in cell tc65_cdns_ddr1100_h_PAD120PITCH.
+Skew Edge on layer PM at location (53.229,32.929) (53.858,34.260) in cell tc65_cdns_ddr1100_h_PAD120PITCH.
+Skew Edge on layer PM at location (53.858,34.260) (54.354,35.645) in cell tc65_cdns_ddr1100_h_PAD120PITCH.
+Skew Edge on layer PM at location (54.354,35.645) (54.712,37.074) in cell tc65_cdns_ddr1100_h_PAD120PITCH.
+Skew Edge on layer PM at location (54.712,37.074) (54.928,38.529) in cell tc65_cdns_ddr1100_h_PAD120PITCH.
+Skew Edge on layer PM at location (54.928,38.529) (55.000,40.000) in cell tc65_cdns_ddr1100_h_PAD120PITCH.
+Skew Edge on layer PM at location (55.000,40.000) (54.928,41.471) in cell tc65_cdns_ddr1100_h_PAD120PITCH.
+Skew Edge on layer PM at location (54.928,41.471) (54.712,42.926) in cell tc65_cdns_ddr1100_h_PAD120PITCH.
+Skew Edge on layer PM at location (54.712,42.926) (54.354,44.355) in cell tc65_cdns_ddr1100_h_PAD120PITCH.
+Skew Edge on layer PM at location (54.354,44.355) (53.858,45.740) in cell tc65_cdns_ddr1100_h_PAD120PITCH.
+Skew Edge on layer PM at location (53.858,45.740) (53.229,47.071) in cell tc65_cdns_ddr1100_h_PAD120PITCH.
+Skew Edge on layer PM at location (53.229,47.071) (52.472,48.334) in cell tc65_cdns_ddr1100_h_PAD120PITCH.
+Skew Edge on layer PM at location (52.472,48.334) (51.595,49.516) in cell tc65_cdns_ddr1100_h_PAD120PITCH.
+Skew Edge on layer PM at location (51.595,49.516) (50.606,50.606) in cell tc65_cdns_ddr1100_h_PAD120PITCH.
+Skew Edge on layer PM at location (50.606,50.606) (49.516,51.595) in cell tc65_cdns_ddr1100_h_PAD120PITCH.
+Skew Edge on layer PM at location (49.516,51.595) (48.334,52.472) in cell tc65_cdns_ddr1100_h_PAD120PITCH.
+Skew Edge on layer PM at location (48.334,52.472) (47.071,53.229) in cell tc65_cdns_ddr1100_h_PAD120PITCH.
+Skew Edge on layer PM at location (47.071,53.229) (45.740,53.858) in cell tc65_cdns_ddr1100_h_PAD120PITCH.
+Skew Edge on layer PM at location (45.740,53.858) (44.355,54.354) in cell tc65_cdns_ddr1100_h_PAD120PITCH.
+Skew Edge on layer PM at location (44.355,54.354) (42.926,54.712) in cell tc65_cdns_ddr1100_h_PAD120PITCH.
+Skew Edge on layer PM at location (42.926,54.712) (41.471,54.928) in cell tc65_cdns_ddr1100_h_PAD120PITCH.
+Skew Edge on layer PM at location (41.471,54.928) (40.000,55.000) in cell tc65_cdns_ddr1100_h_PAD120PITCH.
+Skew Edge on layer PM at location (40.000,55.000) (38.529,54.928) in cell tc65_cdns_ddr1100_h_PAD120PITCH.
+Skew Edge on layer PM at location (38.529,54.928) (37.074,54.712) in cell tc65_cdns_ddr1100_h_PAD120PITCH.
+Skew Edge on layer PM at location (37.074,54.712) (35.645,54.354) in cell tc65_cdns_ddr1100_h_PAD120PITCH.
+Skew Edge on layer PM at location (35.645,54.354) (34.260,53.858) in cell tc65_cdns_ddr1100_h_PAD120PITCH.
+Skew Edge on layer PM at location (34.260,53.858) (32.929,53.229) in cell tc65_cdns_ddr1100_h_PAD120PITCH.
+Skew Edge on layer PM at location (32.929,53.229) (31.666,52.472) in cell tc65_cdns_ddr1100_h_PAD120PITCH.
+Skew Edge on layer PM at location (31.666,52.472) (30.484,51.595) in cell tc65_cdns_ddr1100_h_PAD120PITCH.
+Skew Edge on layer PM at location (30.484,51.595) (29.393,50.606) in cell tc65_cdns_ddr1100_h_PAD120PITCH.
+Skew Edge on layer PM at location (29.393,50.606) (28.405,49.516) in cell tc65_cdns_ddr1100_h_PAD120PITCH.
+Skew Edge on layer PM at location (28.405,49.516) (27.528,48.334) in cell tc65_cdns_ddr1100_h_PAD120PITCH.
+Skew Edge on layer PM at location (27.528,48.334) (26.771,47.071) in cell tc65_cdns_ddr1100_h_PAD120PITCH.
+Skew Edge on layer PM at location (26.771,47.071) (26.142,45.740) in cell tc65_cdns_ddr1100_h_PAD120PITCH.
+Skew Edge on layer PM at location (26.142,45.740) (25.646,44.355) in cell tc65_cdns_ddr1100_h_PAD120PITCH.
+Skew Edge on layer PM at location (25.646,44.355) (25.288,42.926) in cell tc65_cdns_ddr1100_h_PAD120PITCH.
+Skew Edge on layer PM at location (25.288,42.926) (25.073,41.471) in cell tc65_cdns_ddr1100_h_PAD120PITCH.
+Skew Edge on layer PM at location (25.073,41.471) (25.000,40.000) in cell tc65_cdns_ddr1100_h_PAD120PITCH.
+Skew Edge on layer PM at location (25.000,40.000) (25.073,38.529) in cell tc65_cdns_ddr1100_h_PAD120PITCH.
+Skew Edge on layer PM at location (25.073,38.529) (25.288,37.074) in cell tc65_cdns_ddr1100_h_PAD120PITCH.
+Skew Edge on layer PM at location (25.288,37.074) (25.646,35.645) in cell tc65_cdns_ddr1100_h_PAD120PITCH.
+Skew Edge on layer PM at location (25.646,35.645) (26.142,34.260) in cell tc65_cdns_ddr1100_h_PAD120PITCH.
+Skew Edge on layer PM at location (26.142,34.260) (26.771,32.929) in cell tc65_cdns_ddr1100_h_PAD120PITCH.
+Skew Edge on layer PM at location (26.771,32.929) (27.528,31.666) in cell tc65_cdns_ddr1100_h_PAD120PITCH.
+Skew Edge on layer PM at location (27.528,31.666) (28.405,30.484) in cell tc65_cdns_ddr1100_h_PAD120PITCH.
+Skew Edge on layer PM at location (28.405,30.484) (29.393,29.393) in cell tc65_cdns_ddr1100_h_PAD120PITCH.
+Skew Edge on layer PM at location (29.393,29.393) (30.484,28.405) in cell tc65_cdns_ddr1100_h_PAD120PITCH.
+Skew Edge on layer PM at location (30.484,28.405) (31.666,27.528) in cell tc65_cdns_ddr1100_h_PAD120PITCH.
+Skew Edge on layer PM at location (31.666,27.528) (32.929,26.771) in cell tc65_cdns_ddr1100_h_PAD120PITCH.
+Skew Edge on layer PM at location (32.929,26.771) (34.260,26.142) in cell tc65_cdns_ddr1100_h_PAD120PITCH.
+Skew Edge on layer PM at location (34.260,26.142) (35.645,25.646) in cell tc65_cdns_ddr1100_h_PAD120PITCH.
+Skew Edge on layer PM at location (35.645,25.646) (37.074,25.288) in cell tc65_cdns_ddr1100_h_PAD120PITCH.
+Skew Edge on layer PM at location (37.074,25.288) (38.529,25.073) in cell tc65_cdns_ddr1100_h_PAD120PITCH.
+Skew Edge on layer PM at location (38.529,25.073) (40.000,25.000) in cell tc65_cdns_ddr1100_h_PAD120PITCH.
+Skew Edge on layer PM at location (40.000,25.000) (41.471,25.073) in cell tc65_cdns_ddr1100_h_PAD120PITCH.
+Skew Edge on layer CB2_FC at location (41.961,20.096) (43.901,20.384) in cell tc65_cdns_ddr1100_h_PAD120PITCH.
+Skew Edge on layer CB2_FC at location (43.901,20.384) (45.806,20.861) in cell tc65_cdns_ddr1100_h_PAD120PITCH.
+Skew Edge on layer CB2_FC at location (45.806,20.861) (47.654,21.523) in cell tc65_cdns_ddr1100_h_PAD120PITCH.
+Skew Edge on layer CB2_FC at location (47.654,21.523) (49.428,22.361) in cell tc65_cdns_ddr1100_h_PAD120PITCH.
+Skew Edge on layer CB2_FC at location (49.428,22.361) (51.111,23.371) in cell tc65_cdns_ddr1100_h_PAD120PITCH.
+Skew Edge on layer CB2_FC at location (51.111,23.371) (52.688,24.540) in cell tc65_cdns_ddr1100_h_PAD120PITCH.
+Skew Edge on layer CB2_FC at location (52.688,24.540) (54.142,25.858) in cell tc65_cdns_ddr1100_h_PAD120PITCH.
+Skew Edge on layer CB2_FC at location (54.142,25.858) (55.460,27.312) in cell tc65_cdns_ddr1100_h_PAD120PITCH.
+Skew Edge on layer CB2_FC at location (55.460,27.312) (56.629,28.889) in cell tc65_cdns_ddr1100_h_PAD120PITCH.
+Skew Edge on layer CB2_FC at location (56.629,28.889) (57.639,30.572) in cell tc65_cdns_ddr1100_h_PAD120PITCH.
+Skew Edge on layer CB2_FC at location (57.639,30.572) (58.477,32.346) in cell tc65_cdns_ddr1100_h_PAD120PITCH.
+Skew Edge on layer CB2_FC at location (58.477,32.346) (59.139,34.194) in cell tc65_cdns_ddr1100_h_PAD120PITCH.
+Skew Edge on layer CB2_FC at location (59.139,34.194) (59.615,36.099) in cell tc65_cdns_ddr1100_h_PAD120PITCH.
+Skew Edge on layer CB2_FC at location (59.615,36.099) (59.904,38.039) in cell tc65_cdns_ddr1100_h_PAD120PITCH.
+Skew Edge on layer CB2_FC at location (59.904,38.039) (60.000,40.000) in cell tc65_cdns_ddr1100_h_PAD120PITCH.
+Skew Edge on layer CB2_FC at location (60.000,40.000) (59.904,41.961) in cell tc65_cdns_ddr1100_h_PAD120PITCH.
+Skew Edge on layer CB2_FC at location (59.904,41.961) (59.615,43.901) in cell tc65_cdns_ddr1100_h_PAD120PITCH.
+Skew Edge on layer CB2_FC at location (59.615,43.901) (59.139,45.806) in cell tc65_cdns_ddr1100_h_PAD120PITCH.
+Skew Edge on layer CB2_FC at location (59.139,45.806) (58.477,47.654) in cell tc65_cdns_ddr1100_h_PAD120PITCH.
+Skew Edge on layer CB2_FC at location (58.477,47.654) (57.639,49.428) in cell tc65_cdns_ddr1100_h_PAD120PITCH.
+Skew Edge on layer CB2_FC at location (57.639,49.428) (56.629,51.111) in cell tc65_cdns_ddr1100_h_PAD120PITCH.
+Skew Edge on layer CB2_FC at location (56.629,51.111) (55.460,52.688) in cell tc65_cdns_ddr1100_h_PAD120PITCH.
+Skew Edge on layer CB2_FC at location (55.460,52.688) (54.142,54.142) in cell tc65_cdns_ddr1100_h_PAD120PITCH.
+Skew Edge on layer CB2_FC at location (54.142,54.142) (52.688,55.460) in cell tc65_cdns_ddr1100_h_PAD120PITCH.
+Skew Edge on layer CB2_FC at location (52.688,55.460) (51.111,56.629) in cell tc65_cdns_ddr1100_h_PAD120PITCH.
+Skew Edge on layer CB2_FC at location (51.111,56.629) (49.428,57.639) in cell tc65_cdns_ddr1100_h_PAD120PITCH.
+Skew Edge on layer CB2_FC at location (49.428,57.639) (47.654,58.477) in cell tc65_cdns_ddr1100_h_PAD120PITCH.
+Skew Edge on layer CB2_FC at location (47.654,58.477) (45.806,59.139) in cell tc65_cdns_ddr1100_h_PAD120PITCH.
+Skew Edge on layer CB2_FC at location (45.806,59.139) (43.901,59.615) in cell tc65_cdns_ddr1100_h_PAD120PITCH.
+Skew Edge on layer CB2_FC at location (43.901,59.615) (41.961,59.904) in cell tc65_cdns_ddr1100_h_PAD120PITCH.
+Skew Edge on layer CB2_FC at location (41.961,59.904) (40.000,60.000) in cell tc65_cdns_ddr1100_h_PAD120PITCH.
+Skew Edge on layer CB2_FC at location (40.000,60.000) (38.039,59.904) in cell tc65_cdns_ddr1100_h_PAD120PITCH.
+Skew Edge on layer CB2_FC at location (38.039,59.904) (36.099,59.615) in cell tc65_cdns_ddr1100_h_PAD120PITCH.
+Skew Edge on layer CB2_FC at location (36.099,59.615) (34.194,59.139) in cell tc65_cdns_ddr1100_h_PAD120PITCH.
+Skew Edge on layer CB2_FC at location (34.194,59.139) (32.346,58.477) in cell tc65_cdns_ddr1100_h_PAD120PITCH.
+Skew Edge on layer CB2_FC at location (32.346,58.477) (30.572,57.639) in cell tc65_cdns_ddr1100_h_PAD120PITCH.
+Maximum Skew Edge warning count of 100 has been reached.
+--------------------------------------------------------------------------------
+--- RULECHECK RESULTS STATISTICS
+---
+RULECHECK AP.EN.2 ...................................... Total Result          0 (         0)
+RULECHECK Area.R.1 ..................................... Total Result          0 (         0)
+RULECHECK BP.EN.5 ...................................... Total Result          0 (         0)
+RULECHECK BP.R.1 ....................................... Total Result          0 (         0)
+RULECHECK BP.R.2 ....................................... Total Result          0 (         0)
+RULECHECK BP.R.3 ....................................... Total Result          0 (         0)
+RULECHECK BP.W.4 ....................................... Total Result          0 (         0)
+RULECHECK BP.W.6 ....................................... Total Result          0 (         0)
+RULECHECK PM.EN.2 ...................................... Total Result          0 (         0)
+RULECHECK PM.R.1 ....................................... Total Result          0 (         0)
+RULECHECK PM.R.2 ....................................... Total Result          0 (         0)
+RULECHECK PM.W.3 ....................................... Total Result          0 (         0)
+RULECHECK RR:RE:UBM.EN.2 ............................... Total Result          0 (         0)
+RULECHECK RR:RE:UBM.R.10 ............................... Total Result          0 (         0)
+RULECHECK RR:RE:UBM.S.4 ................................ Total Result          0 (         0)
+RULECHECK RV.R.5 ....................................... Total Result          0 (         0)
+RULECHECK RV.S.5 ....................................... Total Result          0 (         0)
+RULECHECK RV.S.7 ....................................... Total Result          0 (         0)
+RULECHECK UBM.DN.1 ..................................... Total Result          0 (         0)
+RULECHECK UBM.DN.3 ..................................... Total Result          0 (         0)
+RULECHECK UBM.DN.4:High ................................ Total Result          0 (         0)
+RULECHECK UBM.DN.4:Low ................................. Total Result          0 (         0)
+RULECHECK UBM.EN.1 ..................................... Total Result          0 (         0)
+RULECHECK UBM.EN.2 ..................................... Total Result          0 (         0)
+RULECHECK UBM.P.1 ...................................... Total Result          0 (         0)
+RULECHECK UBM.R.1 ...................................... Total Result          0 (         0)
+RULECHECK UBM.R.3:a .................................... Total Result          0 (         0)
+RULECHECK UBM.R.3:b .................................... Total Result          0 (         0)
+RULECHECK UBM.R.5.1 .................................... Total Result          4 (         4)
+RULECHECK UBM.R.5.2 .................................... Total Result          0 (         0)
+RULECHECK UBM.R.9 ...................................... Total Result          0 (         0)
+RULECHECK UBM_CB:WARNING ............................... Total Result          0 (         0)
+--------------------------------------------------------------------------------
+--- SUMMARY
+---
+Total CPU Time                    : 192 + 247(s)
+Total Real Time (Init + Exec)     : 302(2 + 300)(s)
+Total Original Geometry           : 58223 (222114857)
+Total DRC RuleChecks              : 32
+Total DRC Results                 : 4 (4)

@@ -1,0 +1,5 @@
+FAIL:IMP-10-0-0-17:Confirm the min-pulse check result is clean.
+IMP-10-0-0-17-ERROR01: Min pulse width verification failed - clock pulses too narrow:
+  Severity: Fail Occurrence: 1
+  - [RAM_256x16/CLK] Pulse width violation: -0.849ns (clock: ram_clk, view: func_slow_RCMAX)
+

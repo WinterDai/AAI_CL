@@ -1,0 +1,11 @@
+description: Confirm the netlist/spef version is correct.
+
+# Test Case: Type 4 (value=N/A, no pattern_items, waiver.value>0)
+requirements:
+  value: N/A
+input_files:
+- c:\Users\wentao\AAI_local\AAI\Main_Work\ACL\Latest\CHECKLIST\IP_project_folder\logs\sta_post_syn.log
+waivers:
+  value: 1
+  waive_items:
+  - SPEF Reading was skipped

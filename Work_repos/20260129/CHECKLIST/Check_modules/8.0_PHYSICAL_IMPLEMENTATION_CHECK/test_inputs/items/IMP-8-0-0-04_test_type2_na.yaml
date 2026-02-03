@@ -1,0 +1,12 @@
+description: Confirm buffers are attached for all ports and are set as fixed.
+input_files:
+- C:\Users\chyao\Desktop\checklist_dev\CHECKLIST\CHECKLIST\IP_project_folder\reports\8.0\IMP-8-0-0-04\IMP-8-0-0-04_case2.rpt
+requirements:
+  pattern_items:
+  - clk4x
+  - rst_n
+  - scan_en
+  value: 3
+waivers:
+  value: N/A
+  waive_items: []

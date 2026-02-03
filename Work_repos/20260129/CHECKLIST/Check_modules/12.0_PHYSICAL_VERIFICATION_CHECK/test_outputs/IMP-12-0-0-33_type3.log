@@ -1,0 +1,14 @@
+FAIL:IMP-12-0-0-33:Confirm all Warning message in DFM/FLT log files can be waived. (for SEC process, for others fill N/A)
+IMP-12-0-0-33-ERROR01: Monitored WARNING patterns detected in verification logs:
+  Severity: Fail Occurrence: 2
+  - Worker 1 killed by external signal [9] (matches: Worker.*killed)
+  - same label "x" for multiple nets, it is assigned to net x (matches: same label.*multiple nets)
+IMP-12-0-0-33-WARN01: Unused waivers:
+  Severity: Warn Occurrence: 3
+  - GDR-00003
+  - Worker 1$
+  - Worker 11$
+IMP-12-0-0-33-INFO01: All monitored WARNING patterns validated (0 warnings found):
+  Severity: Info Occurrence: 1
+  - Out of.*disk space
+

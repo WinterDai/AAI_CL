@@ -1,0 +1,5 @@
+FAIL:IMP-11-0-0-24:Confirm the VT ratio calculation excludes physical cells(Filler/DCAP/Tap etc).
+IMP-11-0-0-24-ERROR01: Configuration error:
+  Severity: Fail Occurrence: 1
+  - input_files is empty in YAML configuration
+

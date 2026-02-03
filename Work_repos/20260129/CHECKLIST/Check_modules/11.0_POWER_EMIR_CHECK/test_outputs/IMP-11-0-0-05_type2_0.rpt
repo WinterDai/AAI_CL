@@ -1,0 +1,6 @@
+PASS:IMP-11-0-0-05:Confirm generate all the power library with detail view correctly.
+Info Occurrence: 4
+1: Info: Informational check: GDS file paths printed for user verification: Informational check: GDS file paths printed for user verification[WAIVED_INFO]
+2: Info: ffgnp_0p825v_125c_cbest_CCbest_T: set_pg_library_mode command with -gds_files not found in log[WAIVED_AS_INFO]
+3: Info: ffgnp_0p825v_m40c_cbest_CCbest_T: set_pg_library_mode command with -gds_files not found in log[WAIVED_AS_INFO]
+4: Info: ssgnp_0p675v_m40c_cworst_CCworst_T: set_pg_library_mode command with -gds_files not found in log[WAIVED_AS_INFO]

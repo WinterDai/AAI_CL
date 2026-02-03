@@ -1,0 +1,14 @@
+description: Confirm activity file was used? If not, provide default switching activity
+  values in comments field.
+input_files:
+- ${CHECKLIST_ROOT}/IP_project_folder/logs/*static*.log
+- ${CHECKLIST_ROOT}/IP_project_folder/logs/*dynamic*.log
+- ${CHECKLIST_ROOT}/IP_project_folder/logs/*EM*.log
+requirements:
+  pattern_items: []
+  value: N/A
+waivers:
+  value: 0
+  waive_items:
+  - 'Explanation: Activity configuration check is informational only for early-stage
+    power analysis'

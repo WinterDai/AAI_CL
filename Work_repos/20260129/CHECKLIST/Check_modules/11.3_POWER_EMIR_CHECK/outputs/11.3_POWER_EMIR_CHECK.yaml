@@ -1,0 +1,74 @@
+module: 11.3_POWER_EMIR_CHECK
+stage: Initial
+generated_at: 2025-12-23T18:43:03
+check_items: 
+  SRG-IMP-11-3-0-00: 
+    executed: true
+    status: fail
+    description: Is SDC/TWF coverage more than 95% ?
+    failures: 
+      - index: 1
+        detail: input_files is empty in YAML configuration
+        source_line: N/A
+        source_file: N/A
+        reason: input_files is empty in YAML configuration
+  SRG-IMP-11-3-0-01: 
+    executed: true
+    status: fail
+    description: Is SPEF coverage 100% ?If not, mention reason in comments
+    failures: 
+      - index: 1
+        detail: input_files is empty in YAML configuration
+        source_line: N/A
+        source_file: N/A
+        reason: input_files is empty in YAML configuration
+  SRG-IMP-11-3-0-02: 
+    executed: true
+    status: fail
+    description: Is QRC tech file with proper corner and metal stack mentioned in comments?
+    failures: 
+      - index: 1
+        detail: input_files is empty in YAML configuration
+        source_line: N/A
+        source_file: N/A
+        reason: input_files is empty in YAML configuration
+  SRG-IMP-11-3-0-03: 
+    executed: true
+    status: fail
+    description: Is the missing via check is clean
+    failures: 
+      - index: 1
+        detail: input_files is empty in YAML configuration
+        source_line: N/A
+        source_file: N/A
+        reason: input_files is empty in YAML configuration
+  SRG-IMP-11-3-0-04: 
+    executed: true
+    status: fail
+    description: Is simulation time mentioned in the comments?
+    failures: 
+      - index: 1
+        detail: input_files is empty in YAML configuration
+        source_line: N/A
+        source_file: N/A
+        reason: input_files is empty in YAML configuration
+  SRG-IMP-11-3-0-05: 
+    executed: true
+    status: fail
+    description: Is resolution during dynamic simulation mentioned in comments ?
+    failures: 
+      - index: 1
+        detail: input_files is empty in YAML configuration
+        source_line: N/A
+        source_file: N/A
+        reason: input_files is empty in YAML configuration
+  SRG-IMP-11-3-0-06: 
+    executed: true
+    status: fail
+    description: Is VCD tag mentioned in the comments?
+    failures: 
+      - index: 1
+        detail: input_files is empty in YAML configuration
+        source_line: N/A
+        source_file: N/A
+        reason: input_files is empty in YAML configuration

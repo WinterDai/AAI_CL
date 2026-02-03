@@ -1,0 +1,7 @@
+FAIL:IMP-10-0-0-00:Confirm the netlist/spef version is correct.
+Fail Occurrence: 2
+1: Fail: SPEF Reading was skipped. In line 22, c:\Users\wentao\AAI_local\AAI\Main_Work\ACL\Latest\CHECKLIST\IP_project_folder\logs\sta_post_syn.log: Unexpected item found
+2: Fail: Generated on:*2025*: Required pattern not found: Item not found
+Info Occurrence: 2
+1: Info: Tool:*Quantus*: Item not found[WAIVER]
+2: Info: Netlist path: C:\Users\yuyin\Desktop\CHECKLIST\IP_project_folder\dbs\phy_cmn_phase_align_digtop.v.gz: Status: Success (found in log, file not accessible for version check). In line 17, c:\Users\wentao\AAI_local\AAI\Main_Work\ACL\Latest\CHECKLIST\IP_project_folder\logs\sta_post_syn.log: Item found

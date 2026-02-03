@@ -1,0 +1,70 @@
+all_items:
+- IMP-2-0-0-00
+- IMP-2-0-0-01
+- IMP-2-0-0-02
+- IMP-2-0-0-03
+- IMP-2-0-0-04
+- IMP-2-0-0-05
+- IMP-2-0-0-06
+- IMP-2-0-0-07
+- IMP-2-0-0-08
+- IMP-2-0-0-09
+- IMP-2-0-0-10
+- IMP-2-0-0-11
+- IMP-2-0-0-12
+- IMP-2-0-0-13
+- IMP-2-0-0-14
+- IMP-2-0-0-15
+- IMP-8-0-0-05
+- IMP-8-0-0-06
+- IMP-8-0-0-07
+- IMP-8-0-0-16
+- IMP-8-0-0-17
+- IMP-8-0-0-18
+- IMP-8-0-0-19
+- IMP-8-0-0-20
+- IMP-8-0-0-21
+- IMP-8-0-1-00
+- IMP-8-0-1-01
+- IMP-8-0-1-02
+- IMP-8-0-1-03
+- IMP-8-0-1-04
+assignment_date: '2026-01-06'
+developer: Chenwei Fan
+items_by_module:
+  2.0_TECHFILE_AND_RULE_DECK_CHECK:
+  - IMP-2-0-0-00
+  - IMP-2-0-0-01
+  - IMP-2-0-0-02
+  - IMP-2-0-0-03
+  - IMP-2-0-0-04
+  - IMP-2-0-0-05
+  - IMP-2-0-0-06
+  - IMP-2-0-0-07
+  - IMP-2-0-0-08
+  - IMP-2-0-0-09
+  - IMP-2-0-0-10
+  - IMP-2-0-0-11
+  - IMP-2-0-0-12
+  - IMP-2-0-0-13
+  - IMP-2-0-0-14
+  - IMP-2-0-0-15
+  8.0_PHYSICAL_IMPLEMENTATION_CHECK:
+  - IMP-8-0-0-05
+  - IMP-8-0-0-06
+  - IMP-8-0-0-07
+  - IMP-8-0-0-16
+  - IMP-8-0-0-17
+  - IMP-8-0-0-18
+  - IMP-8-0-0-19
+  - IMP-8-0-0-20
+  - IMP-8-0-0-21
+  - IMP-8-0-1-00
+  - IMP-8-0-1-01
+  - IMP-8-0-1-02
+  - IMP-8-0-1-03
+  - IMP-8-0-1-04
+modules:
+- 2.0_TECHFILE_AND_RULE_DECK_CHECK
+- 8.0_PHYSICAL_IMPLEMENTATION_CHECK
+status: assigned

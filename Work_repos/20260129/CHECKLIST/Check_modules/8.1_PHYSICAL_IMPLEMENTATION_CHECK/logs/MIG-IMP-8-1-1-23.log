@@ -1,0 +1,5 @@
+FAIL:MIG-IMP-8-1-1-23:Confirm add at least 2 ESD clamps cells for each power domain. For example: VDDPLL*/VDD_AO. Follow the guidance in AMS integration guide specified in Notes. (for Intel process, need more clamps, please double check with ESD experts)
+MIG-IMP-8-1-1-23-ERROR01: Configuration error:
+  Severity: Fail Occurrence: 1
+  - input_files is empty in YAML configuration
+

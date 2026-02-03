@@ -1,0 +1,74 @@
+module: 3.0_TOOL_VERSION
+stage: Initial
+generated_at: 2025-12-23T18:43:03
+check_items: 
+  IMP-3-0-0-00: 
+    executed: true
+    status: pass
+    description: List Innovus implementation tool version (eg. innovus/221/22.11-s119_1)
+    infos: 
+      - index: 1
+        detail: innovus/231/23.33-s082_1
+        source_line: 18
+        source_file: 'C:\Users\yuyin\OneDrive - Cadence Design Systems Inc\2025\Checklist\AAI\CHECKLIST_V3\CHECKLIST\IP_project_folder\tcl\2.0\setup_vars.tcl'
+        reason: Item found
+  IMP-3-0-0-01: 
+    executed: true
+    status: pass
+    description: List Quantus RC extraction tool version (eg. quantus/231/23.11.000)
+    infos: 
+      - index: 1
+        detail: quantus/231/23.10.000 (QRC section)
+        source_line: 35
+        source_file: 'C:\Users\yuyin\OneDrive - Cadence Design Systems Inc\2025\Checklist\AAI\CHECKLIST_V3\CHECKLIST\IP_project_folder\tcl\2.0\setup_vars.tcl'
+        reason: Quantus version found in setup_vars.tcl configuration file
+  IMP-3-0-0-02: 
+    executed: true
+    status: pass
+    description: List Conformal LEC tool version (eg. confrml/241/24.10.100)
+    infos: 
+      - index: 1
+        detail: confrml/221/22.10.200
+        source_line: 32
+        source_file: 'C:\Users\yuyin\OneDrive - Cadence Design Systems Inc\2025\Checklist\AAI\CHECKLIST_V3\CHECKLIST\IP_project_folder\tcl\2.0\setup_vars.tcl'
+        reason: Conformal LEC tool version found in MODULE_CMD definition
+  IMP-3-0-0-03: 
+    executed: true
+    status: pass
+    description: List Tempus timing signoff tool version (eg. ssv/231/23.12-s092_1)
+    infos: 
+      - index: 1
+        detail: ssv/202/20.20.000
+        source_line: 33
+        source_file: 'C:\Users\yuyin\OneDrive - Cadence Design Systems Inc\2025\Checklist\AAI\CHECKLIST_V3\CHECKLIST\IP_project_folder\tcl\2.0\setup_vars.tcl'
+        reason: Tempus timing signoff tool version found in TEMPUS(MODULE_CMD) variable
+  IMP-3-0-0-04: 
+    executed: true
+    status: pass
+    description: List Voltus power and EMIR signoff tool version (eg. quantus/231/23.11.000)
+    infos: 
+      - index: 1
+        detail: quantus/231/23.10.000
+        source_line: 35
+        source_file: 'C:\Users\yuyin\OneDrive - Cadence Design Systems Inc\2025\Checklist\AAI\CHECKLIST_V3\CHECKLIST\IP_project_folder\tcl\2.0\setup_vars.tcl'
+        reason: QRC and VOLTUS tool version information successfully extracted from setup_vars.tcl
+      - index: 2
+        detail: ssv/202/20.20.000
+        source_line: 34
+        source_file: 'C:\Users\yuyin\OneDrive - Cadence Design Systems Inc\2025\Checklist\AAI\CHECKLIST_V3\CHECKLIST\IP_project_folder\tcl\2.0\setup_vars.tcl'
+        reason: QRC and VOLTUS tool version information successfully extracted from setup_vars.tcl
+  IMP-3-0-0-05: 
+    executed: true
+    status: pass
+    description: List Pegasus physical signoff tool version (eg. pegasus/232/23.25.000)
+    infos: 
+      - index: 1
+        detail: 'PEGASUS: pegasus/232/23.25.000'
+        source_line: 38
+        source_file: 'C:\Users\yuyin\OneDrive - Cadence Design Systems Inc\2025\Checklist\AAI\CHECKLIST_V3\CHECKLIST\IP_project_folder\tcl\2.0\setup_vars.tcl'
+        reason: Pegasus tool version found in MODULE_CMD configuration
+      - index: 2
+        detail: 'PVS: pegasus/232/23.25.000'
+        source_line: 37
+        source_file: 'C:\Users\yuyin\OneDrive - Cadence Design Systems Inc\2025\Checklist\AAI\CHECKLIST_V3\CHECKLIST\IP_project_folder\tcl\2.0\setup_vars.tcl'
+        reason: Pegasus tool version found in MODULE_CMD configuration

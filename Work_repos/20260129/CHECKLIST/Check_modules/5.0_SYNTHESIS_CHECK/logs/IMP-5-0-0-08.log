@@ -1,0 +1,8 @@
+PASS:IMP-5-0-0-08:Confirm Multidriven Report clean?
+IMP-5-0-0-08-INFO01: Check result:
+  Severity: Info Occurrence: 4
+  - pin:111
+  - pin:222
+  - hpin:333
+  - hpin:444
+

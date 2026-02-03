@@ -1,0 +1,9 @@
+PASS:MIG-IMP-8-1-1-01:Confirm meet a resistance less than 0.5Ω(not exceed 0.8Ω) and a capacitance less than 350fF from pad opening to signal bump. (check the Note)
+Warn Occurrence: 2
+1: Warn: pad_mem_clk: Waiver defined but no violation matched: Waived - resistance margin acceptable, clock path has sufficient timing margin[WAIVER]
+2: Warn: pad_mem_data[12]: Waiver defined but no violation matched: Waived per design review - non-critical debug signal, acceptable for this corner[WAIVER]
+Info Occurrence: 4
+1: Info: pad_mem_data[46] @ rcworst_CCworst_T_125c. In line 9, C:\Users\yuyin\OneDrive - Cadence Design Systems Inc\2025\Checklist\AAI\CHECKLIST_V3\CHECKLIST\IP_project_folder\reports\8.1\MIG-IMP-8-1-1-01.rpt: Net meets resistance (<0.5Ω) and capacitance (<350fF) limits
+2: Info: pad_mem_data[47] @ rcworst_CCworst_T_125c. In line 1, C:\Users\yuyin\OneDrive - Cadence Design Systems Inc\2025\Checklist\AAI\CHECKLIST_V3\CHECKLIST\IP_project_folder\reports\8.1\MIG-IMP-8-1-1-01.rpt: Net meets resistance (<0.5Ω) and capacitance (<350fF) limits
+3: Info: pad_mem_data[56] @ rcworst_CCworst_T_125c. In line 25, C:\Users\yuyin\OneDrive - Cadence Design Systems Inc\2025\Checklist\AAI\CHECKLIST_V3\CHECKLIST\IP_project_folder\reports\8.1\MIG-IMP-8-1-1-01.rpt: Net meets resistance (<0.5Ω) and capacitance (<350fF) limits
+4: Info: pad_mem_data[57] @ rcworst_CCworst_T_125c. In line 17, C:\Users\yuyin\OneDrive - Cadence Design Systems Inc\2025\Checklist\AAI\CHECKLIST_V3\CHECKLIST\IP_project_folder\reports\8.1\MIG-IMP-8-1-1-01.rpt: Net meets resistance (<0.5Ω) and capacitance (<350fF) limits

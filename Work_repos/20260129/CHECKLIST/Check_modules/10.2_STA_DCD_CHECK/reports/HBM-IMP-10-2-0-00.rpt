@@ -1,0 +1,3 @@
+FAIL:HBM-IMP-10-2-0-00:Conditions used to verify max clock frequency (e.g. wireload model, etc.). SPEF + 5% of clock period as setup uncertainty
+Fail Occurrence: 1
+1: Fail: input_files is empty in YAML configuration

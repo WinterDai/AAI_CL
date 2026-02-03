@@ -1,0 +1,9 @@
+description: TC_04 - Type 4 Boolean check with waiver
+requirements:
+  value: N/A
+input_files:
+- C:\Users\wentao\AAI_local\AAI\Main_Work\ACL\CHECKLIST\Tool\Agent\test\Restructure\IP_project_folder\logs\sta_post_syn.log
+waivers:
+  value: 1
+  waive_items:
+  - SPEF Reading was skipped

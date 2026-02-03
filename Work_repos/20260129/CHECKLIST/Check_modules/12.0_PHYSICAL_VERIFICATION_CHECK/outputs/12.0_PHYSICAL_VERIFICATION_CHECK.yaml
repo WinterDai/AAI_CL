@@ -1,0 +1,354 @@
+module: 12.0_PHYSICAL_VERIFICATION_CHECK
+stage: Initial
+generated_at: 2025-12-23T18:43:03
+check_items: 
+  IMP-12-0-0-00: 
+    executed: true
+    status: fail
+    description: Confirm the GDS includes dummy METAL/OD/PO/COD.
+    failures: 
+      - index: 1
+        detail: input_files is empty in YAML configuration
+        source_line: N/A
+        source_file: N/A
+        reason: input_files is empty in YAML configuration
+  IMP-12-0-0-01: 
+    executed: true
+    status: fail
+    description: Confirm mock tapeout GDS includes dummy METAL/OD/PO/COD.
+    failures: 
+      - index: 1
+        detail: input_files is empty in YAML configuration
+        source_line: N/A
+        source_file: N/A
+        reason: input_files is empty in YAML configuration
+  IMP-12-0-0-02: 
+    executed: true
+    status: fail
+    description: Confirm the GDS was generated properly and physical verification has been run on final block GDS.
+    failures: 
+      - index: 1
+        detail: input_files is empty in YAML configuration
+        source_line: N/A
+        source_file: N/A
+        reason: input_files is empty in YAML configuration
+  IMP-12-0-0-03: 
+    executed: true
+    status: fail
+    description: Confirm the DRC rule deck setting is correct. Make sure the switch settings match with Foundry CTA (/local/method/CTAF/<process>/production in chamber). Please add justification in Comment if you changed some switching setting in CTA.
+    failures: 
+      - index: 1
+        detail: input_files is empty in YAML configuration
+        source_line: N/A
+        source_file: N/A
+        reason: input_files is empty in YAML configuration
+  IMP-12-0-0-04: 
+    executed: true
+    status: fail
+    description: Confirm the 
+    failures: 
+      - index: 1
+        detail: input_files is empty in YAML configuration
+        source_line: N/A
+        source_file: N/A
+        reason: input_files is empty in YAML configuration
+  IMP-12-0-0-05: 
+    executed: true
+    status: fail
+    description: Confirm open the IP_TIGHTEN_DENSITY switch in DRC rule deck.
+    failures: 
+      - index: 1
+        detail: input_files is empty in YAML configuration
+        source_line: N/A
+        source_file: N/A
+        reason: input_files is empty in YAML configuration
+  IMP-12-0-0-06: 
+    executed: true
+    status: fail
+    description: Confirm the MIM related check setting is correct. (Fill N/A if no MIMCAP inserted or no MIM related layers)
+    failures: 
+      - index: 1
+        detail: input_files is empty in YAML configuration
+        source_line: N/A
+        source_file: N/A
+        reason: input_files is empty in YAML configuration
+  IMP-12-0-0-07: 
+    executed: true
+    status: fail
+    description: Confirm the ANT rule deck setting is correct.
+    failures: 
+      - index: 1
+        detail: input_files is empty in YAML configuration
+        source_line: N/A
+        source_file: N/A
+        reason: input_files is empty in YAML configuration
+  IMP-12-0-0-08: 
+    executed: true
+    status: fail
+    description: Confirm the MIM_ANT rule deck setting is correct. (For MIG,please check with AMS team about the MIM cell type (MIM or SHDMIM) because the MIM_ANT rule will be different).
+    failures: 
+      - index: 1
+        detail: input_files is empty in YAML configuration
+        source_line: N/A
+        source_file: N/A
+        reason: input_files is empty in YAML configuration
+  IMP-12-0-0-09: 
+    executed: true
+    status: fail
+    description: Confirm the LVS rule deck setting is correct.
+    failures: 
+      - index: 1
+        detail: input_files is empty in YAML configuration
+        source_line: N/A
+        source_file: N/A
+        reason: input_files is empty in YAML configuration
+  IMP-12-0-0-10: 
+    executed: true
+    status: fail
+    description: Confirm turn-off the VIRTUAL_CONNECT in LVS setting.
+    failures: 
+      - index: 1
+        detail: input_files is empty in YAML configuration
+        source_line: N/A
+        source_file: N/A
+        reason: input_files is empty in YAML configuration
+  IMP-12-0-0-11: 
+    executed: true
+    status: fail
+    description: Confirm the DRC check result is clean. (fill the confidence level of not touching floorplan again in comment if fill no, for example, 90%~100%)
+    failures: 
+      - index: 1
+        detail: input_files is empty in YAML configuration
+        source_line: N/A
+        source_file: N/A
+        reason: input_files is empty in YAML configuration
+  IMP-12-0-0-12: 
+    executed: true
+    status: fail
+    description: "Confirm the MIM related check is clean. (Need to check and Fill N/A if no MIMCAP inserted or no MIM related layers in PHY or SOC level) - If PHY needs to insert MIMCAP. 1. Need to pay attention to the MIMCAP KOZ rule during MIMCAP insertion after check with customer about the SOC die size, substrate layer number and PHY placement/location in SOC level. 2. Pay attention to the option setting related to MIM DRC check like KOZ_High_subst_layer, SHDMIM_KOZ_AP_SPACE_5um(on/off will impact the checking rule) etc in TSMC rule deck(need to align these settings with customer). -If PHY doesn't insert MIMCAP but SOC level inserts MIMCAP. 1. Need to open SHDMIM switching in DRC rule deck. 2. Need to check with customer whether PHY need to meet SHDMIM_KOZ_AP_SPACE_5um rule (if SOC level this DRC switching setting is ON) in PHY area which falls into SOC KOZ area for TSMC process. 3. May need to insert MIM dummy in PHY level to meet SOC level MIM dummy density rule (you can sync with customer whether PHY MIM dummy is needed and the KOZ information on PHY to make sure there is no dummy added in KOZ area on PHY by adding MIM EXCL layer)."
+    failures: 
+      - index: 1
+        detail: input_files is empty in YAML configuration
+        source_line: N/A
+        source_file: N/A
+        reason: input_files is empty in YAML configuration
+  IMP-12-0-0-13: 
+    executed: true
+    status: fail
+    description: Confirm the ANT check result is clean.
+    failures: 
+      - index: 1
+        detail: input_files is empty in YAML configuration
+        source_line: N/A
+        source_file: N/A
+        reason: input_files is empty in YAML configuration
+  IMP-12-0-0-14: 
+    executed: true
+    status: fail
+    description: Confirm the MIM_ANT check result is clean. (Fill N/a if no MIMCAP inserted or no MIM related layers)
+    failures: 
+      - index: 1
+        detail: input_files is empty in YAML configuration
+        source_line: N/A
+        source_file: N/A
+        reason: input_files is empty in YAML configuration
+  IMP-12-0-0-15: 
+    executed: true
+    status: fail
+    description: Confirm the LVS check result is match.
+    failures: 
+      - index: 1
+        detail: input_files is empty in YAML configuration
+        source_line: N/A
+        source_file: N/A
+        reason: input_files is empty in YAML configuration
+  IMP-12-0-0-16: 
+    executed: true
+    status: fail
+    description: Confrim there is no issue for lvs.rep and extra pins in lvs.rep.cls even the results shows MATCH(check the Note)
+    failures: 
+      - index: 1
+        detail: input_files is empty in YAML configuration
+        source_line: N/A
+        source_file: N/A
+        reason: input_files is empty in YAML configuration
+  IMP-12-0-0-17: 
+    executed: true
+    status: fail
+    description: Confirm no soft-connect issue.
+    failures: 
+      - index: 1
+        detail: input_files is empty in YAML configuration
+        source_line: N/A
+        source_file: N/A
+        reason: input_files is empty in YAML configuration
+  IMP-12-0-0-18: 
+    executed: true
+    status: fail
+    description: Confirm the ERC check result is clean.
+    failures: 
+      - index: 1
+        detail: input_files is empty in YAML configuration
+        source_line: N/A
+        source_file: N/A
+        reason: input_files is empty in YAML configuration
+  IMP-12-0-0-19: 
+    executed: true
+    status: fail
+    description: Confirm Analog power/gnd labels are correct.
+    failures: 
+      - index: 1
+        detail: input_files is empty in YAML configuration
+        source_line: N/A
+        source_file: N/A
+        reason: input_files is empty in YAML configuration
+  IMP-12-0-0-20: 
+    executed: true
+    status: fail
+    description: Confirm no unknown black boxes are reported.
+    failures: 
+      - index: 1
+        detail: input_files is empty in YAML configuration
+        source_line: N/A
+        source_file: N/A
+        reason: input_files is empty in YAML configuration
+  IMP-12-0-0-21: 
+    executed: true
+    status: fail
+    description: Confirm no ERROR message in PV log files.
+    failures: 
+      - index: 1
+        detail: input_files is empty in YAML configuration
+        source_line: N/A
+        source_file: N/A
+        reason: input_files is empty in YAML configuration
+  IMP-12-0-0-22: 
+    executed: true
+    status: fail
+    description: Confirm all Warning message in PV log files can be waived.
+    failures: 
+      - index: 1
+        detail: input_files is empty in YAML configuration
+        source_line: N/A
+        source_file: N/A
+        reason: input_files is empty in YAML configuration
+  IMP-12-0-0-23: 
+    executed: true
+    status: fail
+    description: 'Confirm set proper LVS bump text files (e.g: not include VDDG/VREF internal pin).'
+    failures: 
+      - index: 1
+        detail: input_files is empty in YAML configuration
+        source_line: N/A
+        source_file: N/A
+        reason: input_files is empty in YAML configuration
+  IMP-12-0-0-24: 
+    executed: true
+    status: fail
+    description: Confirm add the chipBoundary layer to check boundary DRC for test chip.
+    failures: 
+      - index: 1
+        detail: input_files is empty in YAML configuration
+        source_line: N/A
+        source_file: N/A
+        reason: input_files is empty in YAML configuration
+  IMP-12-0-0-25: 
+    executed: true
+    status: fail
+    description: Confirm the BUMP DRC rule deck setting is correct.
+    failures: 
+      - index: 1
+        detail: input_files is empty in YAML configuration
+        source_line: N/A
+        source_file: N/A
+        reason: input_files is empty in YAML configuration
+  IMP-12-0-0-26: 
+    executed: true
+    status: fail
+    description: Confirm BUMP rule DRC result is clean.
+    failures: 
+      - index: 1
+        detail: input_files is empty in YAML configuration
+        source_line: N/A
+        source_file: N/A
+        reason: input_files is empty in YAML configuration
+  IMP-12-0-0-27: 
+    executed: true
+    status: fail
+    description: Confirm Package to Chip comparison passes (bump excel vs bump location in gds/oas)?
+    failures: 
+      - index: 1
+        detail: input_files is empty in YAML configuration
+        source_line: N/A
+        source_file: N/A
+        reason: input_files is empty in YAML configuration
+  IMP-12-0-0-28: 
+    executed: true
+    status: fail
+    description: Confirm ARC check result is clean. (For BRCM project only, for others fill N/A)
+    failures: 
+      - index: 1
+        detail: input_files is empty in YAML configuration
+        source_line: N/A
+        source_file: N/A
+        reason: input_files is empty in YAML configuration
+  IMP-12-0-0-29: 
+    executed: true
+    status: fail
+    description: Confirm all Warning message in ARC log files can be waived. (For BRCM project only, for others fill N/A)
+    failures: 
+      - index: 1
+        detail: input_files is empty in YAML configuration
+        source_line: N/A
+        source_file: N/A
+        reason: input_files is empty in YAML configuration
+  IMP-12-0-0-30: 
+    executed: true
+    status: fail
+    description: Confirm DFM check result is clean. (for SEC process, for others fill N/A)
+    failures: 
+      - index: 1
+        detail: input_files is empty in YAML configuration
+        source_line: N/A
+        source_file: N/A
+        reason: input_files is empty in YAML configuration
+  IMP-12-0-0-31: 
+    executed: true
+    status: fail
+    description: Confirm FLT check result is clean. (for SEC process, for others fill N/A)
+    failures: 
+      - index: 1
+        detail: input_files is empty in YAML configuration
+        source_line: N/A
+        source_file: N/A
+        reason: input_files is empty in YAML configuration
+  IMP-12-0-0-32: 
+    executed: true
+    status: fail
+    description: Confirm no ERROR message in DFM/FLT log files. (for SEC process, for others fill N/A)
+    failures: 
+      - index: 1
+        detail: input_files is empty in YAML configuration
+        source_line: N/A
+        source_file: N/A
+        reason: input_files is empty in YAML configuration
+  IMP-12-0-0-33: 
+    executed: true
+    status: fail
+    description: Confirm all Warning message in DFM/FLT log files can be waived. (for SEC process, for others fill N/A)
+    failures: 
+      - index: 1
+        detail: input_files is empty in YAML configuration
+        source_line: N/A
+        source_file: N/A
+        reason: input_files is empty in YAML configuration
+  IMP-12-0-0-34: 
+    executed: true
+    status: fail
+    description: Confirm all Warning message in RTO DRC log files can be waived. (for SEC process, for others fill N/A)
+    failures: 
+      - index: 1
+        detail: input_files is empty in YAML configuration
+        source_line: N/A
+        source_file: N/A
+        reason: input_files is empty in YAML configuration

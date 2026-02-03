@@ -1,0 +1,18 @@
+description: Confirm ARC check result is clean. (For BRCM project only, for others
+  fill N/A)
+input_files:
+- ${CHECKLIST_ROOT}/IP_project_folder/reports/pv/Calibre_ARC.rep
+requirements:
+  pattern_items:
+  - ARC_probepad_enclosure_by_chip_edge
+  - ARC_metal_density_min
+  - ARC_via_enclosure
+  value: 3
+waivers:
+  value: 2
+  waive_items:
+  - name: ARC_probepad_enclosure_by_chip_edge
+    reason: Waived per BRCM design review - probe pad placement constrained by package
+  - name: ARC_metal_density_min
+    reason: Waived - metal density acceptable for this process corner per foundry
+      approval

@@ -1,0 +1,12 @@
+description: Confirm no VT mixing on clock tree for all modes. For some instances
+  has clock attribute but used as data, please list that into Waiver list.
+input_files:
+- ${CHECKLIST_ROOT}/IP_project_folder/reports/8.0/clock_cells_with_cell_type.txt
+- ${CHECKLIST_ROOT}/IP_project_folder/reports/8.0/IMP-8-0-0-14.rpt
+requirements:
+  pattern_items: []
+  value: N/A
+waivers:
+  value: 0
+  waive_items:
+  - 'Explanation: VT mixing check is informational only for this design phase'

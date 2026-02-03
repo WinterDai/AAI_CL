@@ -1,0 +1,101 @@
+Test Log: IMP-2-0-0-14
+================================================================================
+
+[Test 1/6] Type 1 (requirements.value=N/A, waivers.value=N/A)
+--------------------------------------------------------------------------------
+Test ID: type1_na
+Status: PASS
+
+Checker Log Output:
+PASS:IMP-2-0-0-14:List EM irxc rule deck name. eg: ICT_EM_v1d0p1a/cln3p_1p17m+ut-alrdl_1xa1xb1xc1xd1ya1yb4y2yy2yx2r_shdmim.ictem
+IMP-2-0-0-14-INFO01: EM rule deck information found in Voltus log:
+  Severity: Info Occurrence: 1
+  - ictem_v1d2p1a/cln5_1p16m+ut-alrdl_1x1xb1xe1ya1yb6y2yy2r_shdmim.ictem
+
+
+================================================================================
+
+[Test 2/6] Type 1 (requirements.value=N/A, waivers.value=0)
+--------------------------------------------------------------------------------
+Test ID: type1_0
+Status: PASS
+
+Checker Log Output:
+PASS:IMP-2-0-0-14:List EM irxc rule deck name. eg: ICT_EM_v1d0p1a/cln3p_1p17m+ut-alrdl_1xa1xb1xc1xd1ya1yb4y2yy2yx2r_shdmim.ictem
+IMP-2-0-0-14-INFO01: [WAIVED_INFO]: Waived information:
+  Severity: Info Occurrence: 1
+  - Explanation: This check is informational only - EM rule deck listing for documentation purposes
+IMP-2-0-0-14-INFO02: EM rule deck information found in Voltus log:
+  Severity: Info Occurrence: 1
+  - ictem_v1d2p1a/cln5_1p16m+ut-alrdl_1x1xb1xe1ya1yb6y2yy2r_shdmim.ictem
+
+
+================================================================================
+
+[Test 3/6] Type 2 (requirements.value>0, waivers.value=N/A)
+--------------------------------------------------------------------------------
+Test ID: type2_na
+Status: PASS
+
+Checker Log Output:
+PASS:IMP-2-0-0-14:List EM irxc rule deck name. eg: ICT_EM_v1d0p1a/cln3p_1p17m+ut-alrdl_1xa1xb1xc1xd1ya1yb4y2yy2yx2r_shdmim.ictem
+IMP-2-0-0-14-INFO01: EM rule deck matched expected configuration:
+  Severity: Info Occurrence: 1
+  - ictem_v1d2p1a/cln5_1p16m+ut-alrdl_1x1xb1xe1ya1yb6y2yy2r_shdmim.ictem
+
+
+================================================================================
+
+[Test 4/6] Type 2 (requirements.value>0, waivers.value=0)
+--------------------------------------------------------------------------------
+Test ID: type2_0
+Status: PASS
+
+Checker Log Output:
+PASS:IMP-2-0-0-14:List EM irxc rule deck name. eg: ICT_EM_v1d0p1a/cln3p_1p17m+ut-alrdl_1xa1xb1xc1xd1ya1yb4y2yy2yx2r_shdmim.ictem
+IMP-2-0-0-14-INFO01: [WAIVED_INFO]: Waived information:
+  Severity: Info Occurrence: 1
+  - Explanation: This check is informational only - EM rule deck version tracking for documentation
+IMP-2-0-0-14-INFO02: EM rule deck matched expected configuration:
+  Severity: Info Occurrence: 1
+  - ictem_v1d2p1a/cln5_1p16m+ut-alrdl_1x1xb1xe1ya1yb6y2yy2r_shdmim.ictem
+
+
+================================================================================
+
+[Test 5/6] Type 3
+--------------------------------------------------------------------------------
+Test ID: type3
+Status: PASS
+
+Checker Log Output:
+PASS:IMP-2-0-0-14:List EM irxc rule deck name. eg: ICT_EM_v1d0p1a/cln3p_1p17m+ut-alrdl_1xa1xb1xc1xd1ya1yb4y2yy2yx2r_shdmim.ictem
+IMP-2-0-0-14-WARN01: Unused waivers:
+  Severity: Warn Occurrence: 2
+  - ictem_v1d0p1a/cln3p_1p17m+ut-alrdl_1xa1xb1xc1xd1ya1yb4y2yy2yx2r_shdmim.ictem
+  - ictem_v1d3p0a/cln5_1p16m+alrdl_1x1xb1xe1ya1yb6y2yy2r.ictem
+IMP-2-0-0-14-INFO01: EM rule deck matched expected configuration:
+  Severity: Info Occurrence: 1
+  - ictem_v1d2p1a/cln5_1p16m+ut-alrdl_1x1xb1xe1ya1yb6y2yy2r_shdmim.ictem
+
+
+================================================================================
+
+[Test 6/6] Type 4
+--------------------------------------------------------------------------------
+Test ID: type4
+Status: PASS
+
+Checker Log Output:
+PASS:IMP-2-0-0-14:List EM irxc rule deck name. eg: ICT_EM_v1d0p1a/cln3p_1p17m+ut-alrdl_1xa1xb1xc1xd1ya1yb4y2yy2yx2r_shdmim.ictem
+IMP-2-0-0-14-WARN01: Unused waivers:
+  Severity: Warn Occurrence: 2
+  - ictem_v1d0p1a/cln3p_1p17m+ut-alrdl_1xa1xb1xc1xd1ya1yb4y2yy2yx2r_shdmim.ictem
+  - ictem_v1d3p0a/cln5_1p16m+alrdl_1x1xb1xe1ya1yb6y2yy2r.ictem
+IMP-2-0-0-14-INFO01: EM rule deck information found in Voltus log:
+  Severity: Info Occurrence: 1
+  - ictem_v1d2p1a/cln5_1p16m+ut-alrdl_1x1xb1xe1ya1yb6y2yy2r_shdmim.ictem
+
+
+================================================================================
+

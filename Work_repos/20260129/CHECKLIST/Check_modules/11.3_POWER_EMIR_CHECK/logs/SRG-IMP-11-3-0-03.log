@@ -1,0 +1,5 @@
+FAIL:SRG-IMP-11-3-0-03:Is the missing via check is clean
+SRG-IMP-11-3-0-03-ERROR01: Configuration error:
+  Severity: Fail Occurrence: 1
+  - input_files is empty in YAML configuration
+

@@ -1,0 +1,5 @@
+FAIL:MIG-IMP-10-1-0-01:Confirm there are no unintentional cells in VDDR domain and all cells in VDDR domain are updated to latest STA environment.
+MIG-IMP-10-1-0-01-ERROR01: Configuration error:
+  Severity: Fail Occurrence: 1
+  - input_files is empty in YAML configuration
+

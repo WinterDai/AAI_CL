@@ -1,0 +1,1569 @@
+
+
+  Cadence Quantus Extraction - 64-bit Parasitic Extractor - Version
+21.2.1-p009 Thu Jun 9 11:39:44 PDT 2022
+--------------------------------------------------------------------------------------------------------------
+                                 Copyright 2022 Cadence Design Systems,
+Inc.
+
+
+
+INFO (EXTQRCXLOG-103) : The Command File Options for the current Quantus run are as follows:
+
+extract \
+	 -selection "all" \
+	 -type "rc_coupled"
+extraction_setup \
+	 -gds_layer_map \
+		"PO  17   " \
+		"OD  6   " \
+		"M0  330   " \
+		"M1  331   " \
+		"M2  332   " \
+		"M3  333   " \
+		"M4  334   " \
+		"M5  335   " \
+		"M6  336   " \
+		"M7  337   " \
+		"M8  338   " \
+		"M9  339   " \
+		"M10  340   " \
+		"M11  341   " \
+		"M12  342   " \
+		"M13  343   " \
+		"M14  344   " \
+		"M15  345   " \
+		"AP  74   " \
+		"VIA0  350   " \
+		"VIA1  351   " \
+		"VIA2  352   " \
+		"VIA3  353   " \
+		"VIA4  354   " \
+		"VIA5  355   " \
+		"VIA6  356   " \
+		"VIA7  357   " \
+		"VIA8  358   " \
+		"VIA9  359   " \
+		"VIA10  360   " \
+		"VIA11  361   " \
+		"VIA12  362   " \
+		"VIA13  363   " \
+		"VIA14  364   " \
+		"RV  85   " \
+	 -max_fracture_length 50 \
+	 -technology_layer_map \
+		"PO  poly  " \
+		"PW  none  " \
+		"NW  none  " \
+		"OD  none  " \
+		"M0  M0  " \
+		"M1  M1  " \
+		"M2  M2  " \
+		"M3  M3  " \
+		"M4  M4  " \
+		"M5  M5  " \
+		"M6  M6  " \
+		"M7  M7  " \
+		"M8  M8  " \
+		"M9  M9  " \
+		"M10  M10  " \
+		"M11  M11  " \
+		"M12  M12  " \
+		"M13  M13  " \
+		"M14  M14  " \
+		"M15  M15  " \
+		"AP  AP  " \
+		"BPC  BPC  " \
+		"MPC  MPC  " \
+		"TPC  TPC  " \
+		"VIA0  VIA0  " \
+		"VIA1  VIA1  " \
+		"VIA2  VIA2  " \
+		"VIA3  VIA3  " \
+		"VIA4  VIA4  " \
+		"VIA5  VIA5  " \
+		"VIA6  VIA6  " \
+		"VIA7  VIA7  " \
+		"VIA8  VIA8  " \
+		"VIA9  VIA9  " \
+		"VIA10  VIA10  " \
+		"VIA11  VIA11  " \
+		"VIA12  VIA12  " \
+		"VIA13  VIA13  " \
+		"VIA14  VIA14  " \
+		"RV  RV  "
+filter_coupling_cap \
+	 -cap_filtering_mode "absolute_and_relative" \
+	 -coupling_cap_threshold_absolute 0.1 \
+	 -coupling_cap_threshold_relative 1 \
+	 -total_cap_threshold 0
+global_nets \
+	 -nets \
+		"VDD" \
+		"VDD_PLL" \
+		"VDDG_HM" \
+		"VDDQ" \
+		"VDDQX" \
+		"VSS"
+graybox \
+	 -type "LEF_OBSTRUCTION"
+input_db -type def \
+	 -lef_file_list \
+		"/process/tsmcN4/data/stdcell/n4gp/TSMC/PRTF_Innovus_4nm_014_Cad_V10b/PRTF/PRTF_Innovus_4nm_014_Cad_V10b/PR_tech/Cadence/LefHeader/Standard/VHV/PRTF_Innovus_N4P_15M_1X1Xb1Xe1Ya1Yb5Y2Yy2Z_UTRDL_M1P34_M2P35_M3P42_M4P42_M5P76_M6P76_M7P76_M8P76_M9P76_M10P76_M11P76_H210_M0ROUTE_SHDMIM.10b.tlef" \
+		"/process/tsmcN4/data/stdcell/n4gp/TSMC/tcbn04p_bwph210l6p51cnod_base_lvt_100b/lef/tcbn04p_bwph210l6p51cnod_base_lvt.lef" \
+		"/process/tsmcN4/data/stdcell/n4gp/TSMC/tcbn04p_bwph210l6p51cnod_base_lvt_100b/lef/tcbn04p_bwph210l6p51cnod_base_lvt_par.lef" \
+		"/process/tsmcN4/data/stdcell/n4gp/TSMC/tcbn04p_bwph210l6p51cnod_base_lvtll_100b/lef/tcbn04p_bwph210l6p51cnod_base_lvtll.lef" \
+		"/process/tsmcN4/data/stdcell/n4gp/TSMC/tcbn04p_bwph210l6p51cnod_base_lvtll_100b/lef/tcbn04p_bwph210l6p51cnod_base_lvtll_par.lef" \
+		"/process/tsmcN4/data/stdcell/n4gp/TSMC/tcbn04p_bwph210l6p51cnod_base_svt_100b/lef/tcbn04p_bwph210l6p51cnod_base_svt.lef" \
+		"/process/tsmcN4/data/stdcell/n4gp/TSMC/tcbn04p_bwph210l6p51cnod_base_svt_100b/lef/tcbn04p_bwph210l6p51cnod_base_svt_par.lef" \
+		"/process/tsmcN4/data/stdcell/n4gp/TSMC/tcbn04p_bwph210l6p51cnod_base_ulvt_100b/lef/tcbn04p_bwph210l6p51cnod_base_ulvt.lef" \
+		"/process/tsmcN4/data/stdcell/n4gp/TSMC/tcbn04p_bwph210l6p51cnod_base_ulvt_100b/lef/tcbn04p_bwph210l6p51cnod_base_ulvt_par.lef" \
+		"/process/tsmcN4/data/stdcell/n4gp/TSMC/tcbn04p_bwph210l6p51cnod_base_elvt_100b/lef/tcbn04p_bwph210l6p51cnod_base_elvt.lef" \
+		"/process/tsmcN4/data/stdcell/n4gp/TSMC/tcbn04p_bwph210l6p51cnod_base_elvt_100b/lef/tcbn04p_bwph210l6p51cnod_base_elvt_par.lef" \
+		"/process/tsmcN4/data/stdcell/n4gp/TSMC/tcbn04p_bwph210l6p51cnod_base_ulvtll_100b/lef/tcbn04p_bwph210l6p51cnod_base_ulvtll.lef" \
+		"/process/tsmcN4/data/stdcell/n4gp/TSMC/tcbn04p_bwph210l6p51cnod_base_ulvtll_100b/lef/tcbn04p_bwph210l6p51cnod_base_ulvtll_par.lef" \
+		"/projects/byd_A3_N4P_32bits_LPDDR5_phy/libs/ndr/ndr_10w8s.lef" \
+		"/projects/byd_A3_N4P_32bits_LPDDR5_phy/libs/ndr/ndr_1w2s.lef" \
+		"/projects/byd_A3_N4P_32bits_LPDDR5_phy/libs/ndr/ndr_1w3s.lef" \
+		"/projects/byd_A3_N4P_32bits_LPDDR5_phy/libs/ndr/ndr_2w1s.lef" \
+		"/projects/byd_A3_N4P_32bits_LPDDR5_phy/libs/ndr/ndr_2w2s.lef" \
+		"/projects/byd_A3_N4P_32bits_LPDDR5_phy/libs/ndr/ndr_2w3s.lef" \
+		"/projects/byd_A3_N4P_32bits_LPDDR5_phy/libs/customcell/cdns_ddr_custom_dig_cells_tcbn05_bwph210l6p51cnod_base.antenna.lef" \
+		"/projects/byd_A3_N4P_32bits_LPDDR5_phy/libs/ddrio/cdns_ddr900_h_t5g_x32_15M1X1Xb1Xe1Ya1Yb5Y2Yy2Z_SHDMIM_150P_UBM91.8R_N4_SC_r600_v1p2.20250707/lef/cdns_ddr900_h.lef"
+input_db -type metal_fill \
+	 -gds_file "/projects/byd_A3_N4P_32bits_LPDDR5_phy/work/cdns_lp5x_x32_ew_phy_ds_top/muhanx/signoff/signoff-1217-nuflow/pvs_run/BEOL/BEOL.gds"
+log_file \
+	 -dump_options true \
+	 -file_name "logs/do_qrcrcworst_CCworst_T_125c.log" \
+	 -max_warning_messages 100
+metal_fill \
+	 -type "FLOATING"
+output_db -type spef \
+	 -hierarchy_delimiter "/" \
+	 -output_incomplete_nets true \
+	 -output_unrouted_nets true \
+	 -subtype "EXTENDED"
+output_setup \
+	 -compressed true \
+	 -directory_name "/projects/byd_A3_N4P_32bits_LPDDR5_phy/work/cdns_lp5x_x32_ew_phy_ds_top/muhanx/signoff/signoff-1217-nuflow/spef" \
+	 -file_max_size 20000000000 \
+	 -file_name "cdns_lp5x_x32_ew_phy_ds_top_rcworst_CCworst_T_125c"
+parasitic_reduction \
+	 -enable_reduction "false"
+process_technology \
+	 -technology_library_file "/projects/byd_A3_N4P_32bits_LPDDR5_phy/libs/QRC/15M1X1Xb1Xe1Ya1Yb5Y2Yy2Z_SHDMIM_UT.technology_library_file" \
+	 -technology_name "rcworst_CCworst_T" \
+	 -temperature \
+		"125"
+
+
+
+
+INFO (EXTGRMP-102) : Starting at 2025-Dec-17 13:55:33 (2025-Dec-17 08:25:33 GMT) on host
+nfdpcer017 with pid 3035703.
+Running binary as: 
+ /apps/QUANTUS212/21.21.000/tools.lnx86/extraction/bin/64bit/qrc -mp 4 -cmd
+scr/do_qrcrcworst_CCworst_T_125c.tcl
+dbs/cdns_lp5x_x32_ew_phy_ds_top.innovusOUTwoD0.def.gz  
+
+WARNING (EXTGRMP-635) : The option extraction_setup -density_bounding_box is ignored. For advanced nodes, the tool uses diearea as the only value, any other value if set, will be ignored. Please refer to user manual for more information.
+
+WARNING (EXTGRMP-670) : Command file option parasitic_reduction -enable_reduction is not supported in Quantus Cell Flow.Quantus will continue without using this command file option.
+
+INFO (EXTGRMP-142) : Command line arguments:
+"-cmd"
+"scr/do_qrcrcworst_CCworst_T_125c.tcl"
+"-mp"
+"4"
+"dbs/cdns_lp5x_x32_ew_phy_ds_top.innovusOUTwoD0.def.gz"
+
+INFO (EXTGRMP-143) : Option extraction_setup -copy_port_to_obs = "true"
+
+INFO (EXTGRMP-143) : Option log_file = "logs/do_qrcrcworst_CCworst_T_125c.log"
+
+INFO (EXTGRMP-143) : Option log_file -message_config_file = ""
+
+INFO (EXTGRMP-143) : Option log_file -max_error_messages = "100"
+
+INFO (EXTGRMP-143) : Option log_file -max_warning_messages = "100"
+
+INFO (EXTGRMP-143) : Option log_file -max_info_messages = "1000"
+
+INFO (EXTGRMP-143) : Option process_technology -technology_name =
+"/process/tsmcN4/data/gp/QRC/15M1X1Xb1Xe1Ya1Yb5Y2Yy2Z_SHDMIM_UT/v1d0p1a/rcworst/Tech/rcworst_CCworst_T/qrcTechFile"
+
+INFO (EXTGRMP-143) : Option EM_techname = ""
+
+INFO (EXTGRMP-143) : Option process_technology -EM_WEE_clamping_factor = "0.7"
+
+INFO (EXTGRMP-143) : Option input_db -libgen_library_name = ""
+
+INFO (EXTGRMP-143) : Option oa_default_rule_name = ""
+
+INFO (EXTGRMP-143) : Option graybox -type = "obs"
+
+INFO (EXTGRMP-143) : Option graybox -use_macro_density = "false"
+
+INFO (EXTGRMP-143) : Option comp_prealloc = "0"
+
+INFO (EXTGRMP-143) : Option net_prealloc = "0"
+
+INFO (EXTGRMP-143) : Option output_setup -directory_name =
+"/projects/byd_A3_N4P_32bits_LPDDR5_phy/work/cdns_lp5x_x32_ew_phy_ds_top/muhanx/signoff/signoff-1217-nuflow/spef"
+
+INFO (EXTGRMP-143) : Option output_db -units = "micron"
+
+INFO (EXTGRMP-143) : Option user_comment = ""
+
+INFO (EXTGRMP-143) : Option output_cache_directory_name = "./.qrctemp"
+
+INFO (EXTGRMP-143) : Option keep_temporary_files = "false"
+
+INFO (EXTGRMP-143) : Option output_density_tiles = "false"
+
+INFO (EXTGRMP-143) : Option output_setup -file_name =
+"cdns_lp5x_x32_ew_phy_ds_top_rcworst_CCworst_T_125c"
+
+INFO (EXTGRMP-143) : Option output_db -type spef -predefined_spef_cells_file = ""
+
+INFO (EXTGRMP-143) : Option parasitic_reduction -enable_reduction = "false"
+
+INFO (EXTGRMP-143) : Option debug_log = "false"
+
+INFO (EXTGRMP-143) : Option output_db -type spef -subtype = "extended"
+
+INFO (EXTGRMP-143) : Option output_db -type dspf -subtype = "none"
+
+INFO (EXTGRMP-143) : Option output_sstorm_db_name = ""
+
+INFO (EXTGRMP-143) : Option netlist_output = "none"
+
+INFO (EXTGRMP-143) : Option output_db -type coupling_cap_reports = "false"
+
+INFO (EXTGRMP-143) : Option output_db -type rcdb = "false"
+
+INFO (EXTGRMP-143) : Option output_db -hierarchy_delimiter = "/"
+
+INFO (EXTGRMP-143) : Option output_db -busbit_delimiter = "[]"
+
+INFO (EXTGRMP-143) : Option output_db -pin_delimiter = ":"
+
+INFO (EXTGRMP-143) : Option output_db -output_incomplete_nets_type = "no_pin one_pin
+disconnected_pin multiple_partitions floating_resistors"
+
+INFO (EXTGRMP-143) : Option truncate_regular_wires = "false"
+
+INFO (EXTGRMP-143) : Option extraction_setup -layout_scale = "1.0"
+
+INFO (EXTGRMP-143) : Option output_setup -file_max_size = "20000000000"
+
+INFO (EXTGRMP-143) : Option log_file -dump_options = "true"
+
+INFO (EXTGRMP-143) : Option short_incomplete_net_pins = "false"
+
+INFO (EXTGRMP-143) : Option promote_incomplete_net_pins = "false"
+
+INFO (EXTGRMP-143) : Option output_db -output_incomplete_nets = "true"
+
+INFO (EXTGRMP-143) : Option output_db -output_unrouted_nets = "true"
+
+INFO (EXTGRMP-143) : Option output_db -escape_special_characters = "true"
+
+INFO (EXTGRMP-143) : Option lumped_cc_threshold = "0.0"
+
+INFO (EXTGRMP-143) : Option parasitic_reduction -max_frequency = "1.0e+08"
+
+INFO (EXTGRMP-143) : Option output_setup -compressed = "true"
+
+INFO (EXTGRMP-143) : Option max_resistor_length = "50"
+
+INFO (EXTGRMP-143) : Option promote_feedthru_ports = "none"
+
+INFO (EXTGRMP-143) : Option promote_instance_ports = "none"
+
+INFO (EXTGRMP-143) : Option output_promoted_feedthrus = "false"
+
+INFO (EXTGRMP-143) : Option output_unconnected_pins = "false"
+
+INFO (EXTGRMP-143) : Option remove_floating_metals = "false"
+
+INFO (EXTGRMP-143) : Option promote_pin_pad = "none"
+
+INFO (EXTGRMP-143) : Option eco_compatible_mode = "false"
+
+INFO (EXTGRMP-143) : Option output setup   -max_message_in_shorts_file = "100"
+
+INFO (EXTGRMP-143) : Option cap_mode_2915 = "true"
+
+INFO (EXTGRMP-143) : Option quickcap_file = "false"
+
+INFO (EXTGRMP-143) : Option ict_file = "process.ict"
+
+INFO (EXTGRMP-143) : Option quickcap_netfile = "qapi.net"
+
+INFO (EXTGRMP-143) : Option lefcap_output = "false"
+
+INFO (EXTGRMP-143) : Option lefcap_scale = "1.25"
+
+INFO (EXTGRMP-143) : Option lefres_output = "false"
+
+INFO (EXTGRMP-143) : Option kfactor_file = ""
+
+INFO (EXTGRMP-143) : Option total_c_threshold = "0"
+
+INFO (EXTGRMP-143) : Option relative_c_threshold = "1"
+
+INFO (EXTGRMP-143) : Option output_cap_filtering_mode = "relative_and_coupling"
+
+INFO (EXTGRMP-143) : Option cap_mode = "default"
+
+INFO (EXTGRMP-143) : Option parallel_options = ""
+
+INFO (EXTGRMP-143) : Option load_optimized_views = "true"
+
+INFO (EXTGRMP-143) : Option enable_metal_fill_effects = "true"
+
+INFO (EXTGRMP-143) : Option metal_fill -enable_advanced_virtual_fill = "false"
+
+INFO (EXTGRMP-143) : Option metal_fill -type = "floating"
+
+INFO (EXTGRMP-143) : Option vmf_metal_scheme_file = ""
+
+INFO (EXTGRMP-143) : Option vmf_rule_file = ""
+
+INFO (EXTGRMP-143) : Option extraction_setup -ignore_conn_to_bump = "true"
+
+INFO (EXTGRMP-143) : Option extraction_setup -lic_queue = "0"
+
+INFO (EXTGRMP-143) : Option input_db -type metal_fill -gds_file =
+"/projects/byd_A3_N4P_32bits_LPDDR5_phy/work/cdns_lp5x_x32_ew_phy_ds_top/muhanx/signoff/signoff-1217-nuflow/pvs_run/BEOL/BEOL.gds"
+
+INFO (EXTGRMP-143) : Option density_check_method = "diearea"
+
+INFO (EXTGRMP-143) : Option process_technology -technology_corner = ""
+
+INFO (EXTGRMP-143) : Option process_technology -EM_technology_corner = ""
+
+INFO (EXTGRMP-143) : Option process_technology -temperature = "125"
+
+INFO (EXTGRMP-143) : Option promote_gray_data_pins = "false"
+
+INFO (EXTGRMP-143) : Option extraction_setup -enable_layer_bias = "false"
+
+INFO (EXTGRMP-143) : Option output_db -map_eeq_to_master = "false"
+
+INFO (EXTGRMP-143) : Option output_db -match_res_cap = "false"
+
+INFO (EXTGRMP-143) : Option merge_tile_boundary_data = "true"
+
+INFO (EXTGRMP-143) : Option coupling_c_threshold = "0.1"
+
+INFO (EXTGRMP-143) : Option use_icecaps_models_only = "false"
+
+INFO (EXTGRMP-143) : Option output_db -type spef -use_name_map = "true"
+
+INFO (EXTGRMP-143) : Option output_db -type spef -name_map_start_index = "0"
+
+INFO (EXTGRMP-143) : Option distributed_processing -timeout = "300"
+
+INFO (EXTGRMP-143) : Option distributed_processing -num_of_trials = "0"
+
+INFO (EXTGRMP-143) : Option output_db -type dspf -add_cap_prefix = "false"
+
+INFO (EXTGRMP-143) : Option output_db -type oa = "false"
+
+INFO (EXTGRMP-143) : Option oa_analysis_point = "default"
+
+INFO (EXTGRMP-143) : Option extraction_setup -enable_sensitivity_extraction = "false"
+
+INFO (EXTGRMP-143) : Option report_details = "false"
+
+INFO (EXTGRMP-143) : Option input_db -type metal_fill -offset_x = "0.0"
+
+INFO (EXTGRMP-143) : Option input_db -type metal_fill -offset_y = "0.0"
+
+INFO (EXTGRMP-143) : Option extraction_setup -ignore_pushdown_blockages = "false"
+
+INFO (EXTGRMP-143) : Option output_setup -compress_temporary_files = "true"
+
+INFO (EXTGRMP-143) : Option strong_gray_debug = "false"
+
+INFO (EXTGRMP-143) : Option output_db -disable_instances = "true"
+
+INFO (EXTGRMP-143) : Option output_db -disable_subnodes = "true"
+
+INFO (EXTGRMP-143) : Option output_db -type coupling_cap_reports -dump_erosion_info = ""
+
+INFO (EXTGRMP-143) : Option output_db -include_parasitic_res_width_drawn = "true"
+
+INFO (EXTGRMP-143) : Option output_db -include_parasitic_res_parameters_unscaled = "false"
+
+INFO (EXTGRMP-143) : Option enable_active_fill_via_processing = "false"
+
+INFO (EXTGRMP-143) : Option output_db -add_explicit_vias = "false"
+
+INFO (EXTGRMP-143) : Option output_db -include_parasitic_cap_layers = "false"
+
+INFO (EXTGRMP-143) : Option capacitance -ground_net = "0"
+
+INFO (EXTGRMP-143) : Option output_db -include_parasitic_res_temp_coeff = "false"
+
+INFO (EXTGRMP-143) : Option output_setup -write_coupled_decoupled_files = "false"
+
+INFO (EXTGRMP-143) : Option capacitance_coupling = "default"
+
+INFO (EXTGRMP-143) : Option extraction_setup -gds_top_cell = ""
+
+INFO (EXTGRMP-143) : Option input_db -directory_name = ""
+
+INFO (EXTGRMP-143) : Option binary_input = "false"
+
+INFO (EXTGRMP-143) : Option binary_output = "false"
+
+INFO (EXTGRMP-143) : Option output_setup -enable_ieee_sensitivity = "false"
+
+INFO (EXTGRMP-143) : Option input_db -bump_map_file = ""
+
+INFO (EXTGRMP-143) : Option extraction_setup -enable_bump_instance = "false"
+
+INFO (EXTGRMP-143) : Option extraction_setup -enable_tsv_instance = "false"
+
+INFO (EXTGRMP-143) : Option extraction_setup -enable_TSV_STA_Cc_model = "false"
+
+INFO (EXTGRMP-143) : Option extraction_setup -stitch_bump_model = "false"
+
+INFO (EXTGRMP-143) : Option extraction_setup -stitch_tsv_model = "none"
+
+INFO (EXTGRMP-143) : Option enable_eco_mode = "false"
+
+INFO (EXTGRMP-143) : Option eco_file = ""
+
+INFO (EXTGRMP-143) : Option override_eco_reference = "true"
+
+INFO (EXTGRMP-143) : Option analysis_mode = "timing"
+
+INFO (EXTGRMP-143) : Option use_lef_for_hierarchical_def = "false"
+
+INFO (EXTGRMP-143) : Option enable_ws_r_scaling = "false"
+
+INFO (EXTGRMP-143) : Option include_gate_forming_layers = "false"
+
+INFO (EXTGRMP-143) : Option log_file -strict_error_reporting = "false"
+
+INFO (EXTGRMP-143) : Option log_file -report_outside_die_area_object = "false"
+
+INFO (EXTGRMP-143) : Option report_outside_diearea_object_error_limit = "1"
+
+INFO (EXTGRMP-143) : Option change_overhang_direction = "false"
+
+INFO (EXTGRMP-143) : Option ubump_subckt_file = ""
+
+INFO (EXTGRMP-143) : Option tsv_subckt_file = ""
+
+INFO (EXTGRMP-143) : Option output_setup -write_drc_violations = "false"
+
+INFO (EXTGRMP-143) : Option log_file -max_drc_messages = "1000"
+
+INFO (EXTGRMP-143) : Option LEF files =
+"/process/tsmcN4/data/stdcell/n4gp/TSMC/PRTF_Innovus_4nm_014_Cad_V10b/PRTF/PRTF_Innovus_4nm_014_Cad_V10b/PR_tech/Cadence/LefHeader/Standard/VHV/PRTF_Innovus_N4P_15M_1X1Xb1Xe1Ya1Yb5Y2Yy2Z_UTRDL_M1P34_M2P35_M3P42_M4P42_M5P76_M6P76_M7P76_M8P76_M9P76_M10P76_M11P76_H210_M0ROUTE_SHDMIM.10b.tlef
+/process/tsmcN4/data/stdcell/n4gp/TSMC/tcbn04p_bwph210l6p51cnod_base_lvt_100b/lef/tcbn04p_bwph210l6p51cnod_base_lvt.lef
+/process/tsmcN4/data/stdcell/n4gp/TSMC/tcbn04p_bwph210l6p51cnod_base_lvt_100b/lef/tcbn04p_bwph210l6p51cnod_base_lvt_par.lef
+/process/tsmcN4/data/stdcell/n4gp/TSMC/tcbn04p_bwph210l6p51cnod_base_lvtll_100b/lef/tcbn04p_bwph210l6p51cnod_base_lvtll.lef
+/process/tsmcN4/data/stdcell/n4gp/TSMC/tcbn04p_bwph210l6p51cnod_base_lvtll_100b/lef/tcbn04p_bwph210l6p51cnod_base_lvtll_par.lef
+/process/tsmcN4/data/stdcell/n4gp/TSMC/tcbn04p_bwph210l6p51cnod_base_svt_100b/lef/tcbn04p_bwph210l6p51cnod_base_svt.lef
+/process/tsmcN4/data/stdcell/n4gp/TSMC/tcbn04p_bwph210l6p51cnod_base_svt_100b/lef/tcbn04p_bwph210l6p51cnod_base_svt_par.lef
+/process/tsmcN4/data/stdcell/n4gp/TSMC/tcbn04p_bwph210l6p51cnod_base_ulvt_100b/lef/tcbn04p_bwph210l6p51cnod_base_ulvt.lef
+/process/tsmcN4/data/stdcell/n4gp/TSMC/tcbn04p_bwph210l6p51cnod_base_ulvt_100b/lef/tcbn04p_bwph210l6p51cnod_base_ulvt_par.lef
+/process/tsmcN4/data/stdcell/n4gp/TSMC/tcbn04p_bwph210l6p51cnod_base_elvt_100b/lef/tcbn04p_bwph210l6p51cnod_base_elvt.lef
+/process/tsmcN4/data/stdcell/n4gp/TSMC/tcbn04p_bwph210l6p51cnod_base_elvt_100b/lef/tcbn04p_bwph210l6p51cnod_base_elvt_par.lef
+/process/tsmcN4/data/stdcell/n4gp/TSMC/tcbn04p_bwph210l6p51cnod_base_ulvtll_100b/lef/tcbn04p_bwph210l6p51cnod_base_ulvtll.lef
+/process/tsmcN4/data/stdcell/n4gp/TSMC/tcbn04p_bwph210l6p51cnod_base_ulvtll_100b/lef/tcbn04p_bwph210l6p51cnod_base_ulvtll_par.lef
+/projects/byd_A3_N4P_32bits_LPDDR5_phy/libs/ndr/ndr_10w8s.lef
+/projects/byd_A3_N4P_32bits_LPDDR5_phy/libs/ndr/ndr_1w2s.lef
+/projects/byd_A3_N4P_32bits_LPDDR5_phy/libs/ndr/ndr_1w3s.lef
+/projects/byd_A3_N4P_32bits_LPDDR5_phy/libs/ndr/ndr_2w1s.lef
+/projects/byd_A3_N4P_32bits_LPDDR5_phy/libs/ndr/ndr_2w2s.lef
+/projects/byd_A3_N4P_32bits_LPDDR5_phy/libs/ndr/ndr_2w3s.lef
+/projects/byd_A3_N4P_32bits_LPDDR5_phy/libs/customcell/cdns_ddr_custom_dig_cells_tcbn05_bwph210l6p51cnod_base.antenna.lef
+/projects/byd_A3_N4P_32bits_LPDDR5_phy/libs/ddrio/cdns_ddr900_h_t5g_x32_15M1X1Xb1Xe1Ya1Yb5Y2Yy2Z_SHDMIM_150P_UBM91.8R_N4_SC_r600_v1p2.20250707/lef/cdns_ddr900_h.lef"
+
+INFO (EXTGRMP-143) : Option DEF files = "dbs/cdns_lp5x_x32_ew_phy_ds_top.innovusOUTwoD0.def.gz"
+
+INFO (EXTGRMP-143) : Option GDSII files = ""
+
+INFO (EXTGRMP-143) : Option GDSII/RDL files = ""
+
+INFO (EXTGRMP-143) : Option SPICE files = ""
+
+INFO (EXTGRMP-143) : Option DENSITY cells = ""
+
+INFO (EXTGRMP-143) : Option stitch bump cells = ""
+
+INFO (EXTGRMP-143) : Option ignored macros = ""
+
+INFO (EXTGRMP-143) : Option black macros = ""
+
+INFO (EXTGRMP-156) : Layer mappings from the command file.
+PO --> poly
+PW --> none
+NW --> none
+OD --> none
+M0 --> M0
+M1 --> M1
+M2 --> M2
+M3 --> M3
+M4 --> M4
+M5 --> M5
+M6 --> M6
+M7 --> M7
+M8 --> M8
+M9 --> M9
+M10 --> M10
+M11 --> M11
+M12 --> M12
+M13 --> M13
+M14 --> M14
+M15 --> M15
+AP --> AP
+BPC --> BPC
+MPC --> MPC
+TPC --> TPC
+VIA0 --> VIA0
+VIA1 --> VIA1
+VIA2 --> VIA2
+VIA3 --> VIA3
+VIA4 --> VIA4
+VIA5 --> VIA5
+VIA6 --> VIA6
+VIA7 --> VIA7
+VIA8 --> VIA8
+VIA9 --> VIA9
+VIA10 --> VIA10
+VIA11 --> VIA11
+VIA12 --> VIA12
+VIA13 --> VIA13
+VIA14 --> VIA14
+RV --> RV
+
+INFO (EXTGRMP-156) : Layer mappings from the command file.
+PO --> 17
+OD --> 6
+M0 --> 330
+M1 --> 331
+M2 --> 332
+M3 --> 333
+M4 --> 334
+M5 --> 335
+M6 --> 336
+M7 --> 337
+M8 --> 338
+M9 --> 339
+M10 --> 340
+M11 --> 341
+M12 --> 342
+M13 --> 343
+M14 --> 344
+M15 --> 345
+AP --> 74
+VIA0 --> 350
+VIA1 --> 351
+VIA2 --> 352
+VIA3 --> 353
+VIA4 --> 354
+VIA5 --> 355
+VIA6 --> 356
+VIA7 --> 357
+VIA8 --> 358
+VIA9 --> 359
+VIA10 --> 360
+VIA11 --> 361
+VIA12 --> 362
+VIA13 --> 363
+VIA14 --> 364
+RV --> 85
+
+INFO (EXTGRMP-548) : Gds/Oasis Fill layer Map settings were not specified.
+
+INFO (EXTGRMP-550) : Gds/Oasis Active Fill layer Map settings were not specified.
+
+INFO (EXTGRMP-562) : HPB layer settings were not specified.
+
+INFO (EXTGRMP-623) : Background density layer mappings were not specified.
+
+INFO (EXTGRMP-144) : There were no layer bias commands for R values.
+
+INFO (EXTGRMP-147) : Layer bias settings for C values were not specified.
+
+INFO (EXTGRMP-149) : Lefcap area scale settings were not specified.
+
+INFO (EXTGRMP-153) : Lefcap edge scale settings were not specified.
+
+INFO (EXTGRMP-151) : Parameter name settings were not specified.
+
+INFO (EXTGRMP-260) : Layer cluster settings were not specified.
+
+INFO (EXTHPY-253) : Extraction started at Wed Dec 17 13:55:33 2025.
+
+INFO (EXTHPY-232) : Preprocessing stage started at Wed Dec 17 13:55:33 2025.
+
+INFO (EXTGRMP-103) : Local job on nfdpcer017 obtained for resource 0 at 2025-Dec-17 13:55:33
+(2025-Dec-17 08:25:33 GMT); 
+
+INFO (EXTGRMP-103) : Local job on nfdpcer017 obtained for resource 1 at 2025-Dec-17 13:55:34
+(2025-Dec-17 08:25:34 GMT); 
+
+INFO (EXTGRMP-103) : Local job on nfdpcer017 obtained for resource 2 at 2025-Dec-17 13:55:34
+(2025-Dec-17 08:25:34 GMT); 
+
+INFO (EXTGRMP-103) : Local job on nfdpcer017 obtained for resource 3 at 2025-Dec-17 13:55:34
+(2025-Dec-17 08:25:34 GMT); 
+
+INFO (EXTGRMP-205) : Reading DEF file: dbs/cdns_lp5x_x32_ew_phy_ds_top.innovusOUTwoD0.def.gz
+
+INFO (EXTGRMP-336) : Reading technology data and cell definitions from LEF file:
+
+INFO (EXTGRMP-338) : /process/tsmcN4/data/stdcell/n4gp/TSMC/PRTF_Innovus_4nm_014_Cad_V10b/PRTF/PRTF_Innovus_4nm_014_Cad_V10b/PR_tech/Cadence/LefHeader/Standard/VHV/PRTF_Innovus_N4P_15M_1X1Xb1Xe1Ya1Yb5Y2Yy2Z_UTRDL_M1P34_M2P35_M3P42_M4P42_M5P76_M6P76_M7P76_M8P76_M9P76_M10P76_M11P76_H210_M0ROUTE_SHDMIM.10b.tlef
+
+WARNING (EXTGRMP-330) : LEF layer "LUP_015U" is not mapped with any tech file layer. Ignoring its definition. 
+An error will be issued if its definition is required.
+
+WARNING (EXTGRMP-605) : Layer "LUP_015U" will not be extracted and will be ignored.
+
+WARNING (EXTGRMP-330) : LEF layer "LUP_015U_P" is not mapped with any tech file layer. Ignoring its definition. 
+An error will be issued if its definition is required.
+
+WARNING (EXTGRMP-605) : Layer "LUP_015U_P" will not be extracted and will be ignored.
+
+WARNING (EXTGRMP-330) : LEF layer "LUP_015U_N" is not mapped with any tech file layer. Ignoring its definition. 
+An error will be issued if its definition is required.
+
+WARNING (EXTGRMP-605) : Layer "LUP_015U_N" will not be extracted and will be ignored.
+
+WARNING (EXTGRMP-330) : LEF layer "LUP_045U" is not mapped with any tech file layer. Ignoring its definition. 
+An error will be issued if its definition is required.
+
+WARNING (EXTGRMP-605) : Layer "LUP_045U" will not be extracted and will be ignored.
+
+WARNING (EXTGRMP-330) : LEF layer "LUP_075U" is not mapped with any tech file layer. Ignoring its definition. 
+An error will be issued if its definition is required.
+
+WARNING (EXTGRMP-605) : Layer "LUP_075U" will not be extracted and will be ignored.
+
+WARNING (EXTGRMP-330) : LEF layer "LUP_045U_IHIA" is not mapped with any tech file layer. Ignoring its definition. 
+An error will be issued if its definition is required.
+
+WARNING (EXTGRMP-605) : Layer "LUP_045U_IHIA" will not be extracted and will be ignored.
+
+WARNING (EXTGRMP-330) : LEF layer "LUP_075U_IHIA" is not mapped with any tech file layer. Ignoring its definition. 
+An error will be issued if its definition is required.
+
+WARNING (EXTGRMP-605) : Layer "LUP_075U_IHIA" will not be extracted and will be ignored.
+
+WARNING (EXTGRMP-330) : LEF layer "LUP_045U_15V" is not mapped with any tech file layer. Ignoring its definition. 
+An error will be issued if its definition is required.
+
+WARNING (EXTGRMP-605) : Layer "LUP_045U_15V" will not be extracted and will be ignored.
+
+WARNING (EXTGRMP-330) : LEF layer "LUP_045U_18V" is not mapped with any tech file layer. Ignoring its definition. 
+An error will be issued if its definition is required.
+
+WARNING (EXTGRMP-605) : Layer "LUP_045U_18V" will not be extracted and will be ignored.
+
+WARNING (EXTGRMP-330) : LEF layer "LUP_075U_15V" is not mapped with any tech file layer. Ignoring its definition. 
+An error will be issued if its definition is required.
+
+WARNING (EXTGRMP-605) : Layer "LUP_075U_15V" will not be extracted and will be ignored.
+
+WARNING (EXTGRMP-330) : LEF layer "LUP_045U_15V_IHIA" is not mapped with any tech file layer. Ignoring its definition. 
+An error will be issued if its definition is required.
+
+WARNING (EXTGRMP-605) : Layer "LUP_045U_15V_IHIA" will not be extracted and will be ignored.
+
+WARNING (EXTGRMP-330) : LEF layer "LUP_075U_15V_IHIA" is not mapped with any tech file layer. Ignoring its definition. 
+An error will be issued if its definition is required.
+
+WARNING (EXTGRMP-605) : Layer "LUP_075U_15V_IHIA" will not be extracted and will be ignored.
+
+WARNING (EXTGRMP-330) : LEF layer "LUP_075U_18V" is not mapped with any tech file layer. Ignoring its definition. 
+An error will be issued if its definition is required.
+
+WARNING (EXTGRMP-605) : Layer "LUP_075U_18V" will not be extracted and will be ignored.
+
+WARNING (EXTGRMP-330) : LEF layer "LUP_045U_18V_IHIA" is not mapped with any tech file layer. Ignoring its definition. 
+An error will be issued if its definition is required.
+
+WARNING (EXTGRMP-605) : Layer "LUP_045U_18V_IHIA" will not be extracted and will be ignored.
+
+WARNING (EXTGRMP-330) : LEF layer "LUP_075U_18V_IHIA" is not mapped with any tech file layer. Ignoring its definition. 
+An error will be issued if its definition is required.
+
+WARNING (EXTGRMP-605) : Layer "LUP_075U_18V_IHIA" will not be extracted and will be ignored.
+
+WARNING (EXTGRMP-330) : LEF layer "LUP_SRM" is not mapped with any tech file layer. Ignoring its definition. 
+An error will be issued if its definition is required.
+
+WARNING (EXTGRMP-605) : Layer "LUP_SRM" will not be extracted and will be ignored.
+
+WARNING (EXTGRMP-330) : LEF layer "MATCHING" is not mapped with any tech file layer. Ignoring its definition. 
+An error will be issued if its definition is required.
+
+WARNING (EXTGRMP-605) : Layer "MATCHING" will not be extracted and will be ignored.
+
+WARNING (EXTGRMP-330) : LEF layer "ANARRAY_H" is not mapped with any tech file layer. Ignoring its definition. 
+An error will be issued if its definition is required.
+
+WARNING (EXTGRMP-605) : Layer "ANARRAY_H" will not be extracted and will be ignored.
+
+WARNING (EXTGRMP-330) : LEF layer "ANARRAY_M" is not mapped with any tech file layer. Ignoring its definition. 
+An error will be issued if its definition is required.
+
+WARNING (EXTGRMP-605) : Layer "ANARRAY_M" will not be extracted and will be ignored.
+
+WARNING (EXTGRMP-330) : LEF layer "ANARRAY_HS" is not mapped with any tech file layer. Ignoring its definition. 
+An error will be issued if its definition is required.
+
+WARNING (EXTGRMP-605) : Layer "ANARRAY_HS" will not be extracted and will be ignored.
+
+WARNING (EXTGRMP-330) : LEF layer "ANARRAY_S" is not mapped with any tech file layer. Ignoring its definition. 
+An error will be issued if its definition is required.
+
+WARNING (EXTGRMP-605) : Layer "ANARRAY_S" will not be extracted and will be ignored.
+
+WARNING (EXTGRMP-330) : LEF layer "FB1" is not mapped with any tech file layer. Ignoring its definition. 
+An error will be issued if its definition is required.
+
+WARNING (EXTGRMP-605) : Layer "FB1" will not be extracted and will be ignored.
+
+WARNING (EXTGRMP-330) : LEF layer "TZ" is not mapped with any tech file layer. Ignoring its definition. 
+An error will be issued if its definition is required.
+
+WARNING (EXTGRMP-605) : Layer "TZ" will not be extracted and will be ignored.
+
+WARNING (EXTGRMP-605) : Layer "PO" will not be extracted and will be ignored.
+
+WARNING (EXTGRMP-330) : LEF layer "RH_TN" is not mapped with any tech file layer. Ignoring its definition. 
+An error will be issued if its definition is required.
+
+WARNING (EXTGRMP-605) : Layer "RH_TN" will not be extracted and will be ignored.
+
+WARNING (EXTGRMP-330) : LEF layer "RH_TNE" is not mapped with any tech file layer. Ignoring its definition. 
+An error will be issued if its definition is required.
+
+WARNING (EXTGRMP-605) : Layer "RH_TNE" will not be extracted and will be ignored.
+
+WARNING (EXTGRMP-330) : LEF layer "CM0" is not mapped with any tech file layer. Ignoring its definition. 
+An error will be issued if its definition is required.
+
+WARNING (EXTGRMP-605) : Layer "CM0" will not be extracted and will be ignored.
+
+WARNING (EXTGRMP-330) : LEF layer "VIA0_FB1" is not mapped with any tech file layer. Ignoring its definition. 
+An error will be issued if its definition is required.
+
+INFO (EXTGRMP-338) : /process/tsmcN4/data/stdcell/n4gp/TSMC/tcbn04p_bwph210l6p51cnod_base_lvt_100b/lef/tcbn04p_bwph210l6p51cnod_base_lvt.lef
+
+INFO (EXTGRMP-338) : /process/tsmcN4/data/stdcell/n4gp/TSMC/tcbn04p_bwph210l6p51cnod_base_lvt_100b/lef/tcbn04p_bwph210l6p51cnod_base_lvt_par.lef
+
+WARNING (EXTGRMP-330) : LEF layer "M1_FB1" is not mapped with any tech file layer. Ignoring its definition. 
+An error will be issued if its definition is required.
+
+WARNING (EXTGRMP-330) : LEF layer "VIA1_FB1" is not mapped with any tech file layer. Ignoring its definition. 
+An error will be issued if its definition is required.
+
+WARNING (EXTGRMP-330) : LEF layer "AP_TZ" is not mapped with any tech file layer. Ignoring its definition. 
+An error will be issued if its definition is required.
+
+WARNING (EXTGRMP-768) : BUSBITCHARS missing in /process/tsmcN4/data/stdcell/n4gp/TSMC/tcbn04p_bwph210l6p51cnod_base_lvt_100b/lef/tcbn04p_bwph210l6p51cnod_base_lvt.lef file, therefore taking default value [] for BUSBITCHARS.
+
+WARNING (EXTGRMP-769) : DIVIDECHAR missing in /process/tsmcN4/data/stdcell/n4gp/TSMC/tcbn04p_bwph210l6p51cnod_base_lvt_100b/lef/tcbn04p_bwph210l6p51cnod_base_lvt.lef file, therefore taking default value / for DIVIDECHAR.
+
+INFO (EXTGRMP-338) : /process/tsmcN4/data/stdcell/n4gp/TSMC/tcbn04p_bwph210l6p51cnod_base_lvtll_100b/lef/tcbn04p_bwph210l6p51cnod_base_lvtll.lef
+
+WARNING (EXTGRMP-327) : The LEF parser reported the following warning :
+WARNING (LEFPARS-2001): No VERSION statement found, using the default value 5.8. See file /process/tsmcN4/data/stdcell/n4gp/TSMC/tcbn04p_bwph210l6p51cnod_base_lvt_100b/lef/tcbn04p_bwph210l6p51cnod_base_lvt_par.lef at line 248.
+
+WARNING (EXTGRMP-768) : BUSBITCHARS missing in /process/tsmcN4/data/stdcell/n4gp/TSMC/tcbn04p_bwph210l6p51cnod_base_lvt_100b/lef/tcbn04p_bwph210l6p51cnod_base_lvt_par.lef file, therefore taking default value [] for BUSBITCHARS.
+
+WARNING (EXTGRMP-769) : DIVIDECHAR missing in /process/tsmcN4/data/stdcell/n4gp/TSMC/tcbn04p_bwph210l6p51cnod_base_lvt_100b/lef/tcbn04p_bwph210l6p51cnod_base_lvt_par.lef file, therefore taking default value / for DIVIDECHAR.
+
+INFO (EXTGRMP-338) : /process/tsmcN4/data/stdcell/n4gp/TSMC/tcbn04p_bwph210l6p51cnod_base_lvtll_100b/lef/tcbn04p_bwph210l6p51cnod_base_lvtll_par.lef
+
+WARNING (EXTGRMP-768) : BUSBITCHARS missing in /process/tsmcN4/data/stdcell/n4gp/TSMC/tcbn04p_bwph210l6p51cnod_base_lvtll_100b/lef/tcbn04p_bwph210l6p51cnod_base_lvtll.lef file, therefore taking default value [] for BUSBITCHARS.
+
+WARNING (EXTGRMP-769) : DIVIDECHAR missing in /process/tsmcN4/data/stdcell/n4gp/TSMC/tcbn04p_bwph210l6p51cnod_base_lvtll_100b/lef/tcbn04p_bwph210l6p51cnod_base_lvtll.lef file, therefore taking default value / for DIVIDECHAR.
+
+WARNING (EXTGRMP-327) : The LEF parser reported the following warning :
+WARNING (LEFPARS-2001): No VERSION statement found, using the default value 5.8. See file /process/tsmcN4/data/stdcell/n4gp/TSMC/tcbn04p_bwph210l6p51cnod_base_lvtll_100b/lef/tcbn04p_bwph210l6p51cnod_base_lvtll_par.lef at line 248.
+
+INFO (EXTGRMP-338) : /process/tsmcN4/data/stdcell/n4gp/TSMC/tcbn04p_bwph210l6p51cnod_base_svt_100b/lef/tcbn04p_bwph210l6p51cnod_base_svt.lef
+
+INFO (EXTGRMP-338) : /process/tsmcN4/data/stdcell/n4gp/TSMC/tcbn04p_bwph210l6p51cnod_base_svt_100b/lef/tcbn04p_bwph210l6p51cnod_base_svt_par.lef
+
+WARNING (EXTGRMP-768) : BUSBITCHARS missing in /process/tsmcN4/data/stdcell/n4gp/TSMC/tcbn04p_bwph210l6p51cnod_base_lvtll_100b/lef/tcbn04p_bwph210l6p51cnod_base_lvtll_par.lef file, therefore taking default value [] for BUSBITCHARS.
+
+WARNING (EXTGRMP-769) : DIVIDECHAR missing in /process/tsmcN4/data/stdcell/n4gp/TSMC/tcbn04p_bwph210l6p51cnod_base_lvtll_100b/lef/tcbn04p_bwph210l6p51cnod_base_lvtll_par.lef file, therefore taking default value / for DIVIDECHAR.
+
+WARNING (EXTGRMP-768) : BUSBITCHARS missing in /process/tsmcN4/data/stdcell/n4gp/TSMC/tcbn04p_bwph210l6p51cnod_base_svt_100b/lef/tcbn04p_bwph210l6p51cnod_base_svt.lef file, therefore taking default value [] for BUSBITCHARS.
+
+WARNING (EXTGRMP-769) : DIVIDECHAR missing in /process/tsmcN4/data/stdcell/n4gp/TSMC/tcbn04p_bwph210l6p51cnod_base_svt_100b/lef/tcbn04p_bwph210l6p51cnod_base_svt.lef file, therefore taking default value / for DIVIDECHAR.
+
+INFO (EXTGRMP-338) : /process/tsmcN4/data/stdcell/n4gp/TSMC/tcbn04p_bwph210l6p51cnod_base_ulvt_100b/lef/tcbn04p_bwph210l6p51cnod_base_ulvt.lef
+
+WARNING (EXTGRMP-327) : The LEF parser reported the following warning :
+WARNING (LEFPARS-2001): No VERSION statement found, using the default value 5.8. See file /process/tsmcN4/data/stdcell/n4gp/TSMC/tcbn04p_bwph210l6p51cnod_base_svt_100b/lef/tcbn04p_bwph210l6p51cnod_base_svt_par.lef at line 248.
+
+WARNING (EXTGRMP-768) : BUSBITCHARS missing in /process/tsmcN4/data/stdcell/n4gp/TSMC/tcbn04p_bwph210l6p51cnod_base_svt_100b/lef/tcbn04p_bwph210l6p51cnod_base_svt_par.lef file, therefore taking default value [] for BUSBITCHARS.
+
+WARNING (EXTGRMP-769) : DIVIDECHAR missing in /process/tsmcN4/data/stdcell/n4gp/TSMC/tcbn04p_bwph210l6p51cnod_base_svt_100b/lef/tcbn04p_bwph210l6p51cnod_base_svt_par.lef file, therefore taking default value / for DIVIDECHAR.
+
+INFO (EXTGRMP-338) : /process/tsmcN4/data/stdcell/n4gp/TSMC/tcbn04p_bwph210l6p51cnod_base_ulvt_100b/lef/tcbn04p_bwph210l6p51cnod_base_ulvt_par.lef
+
+WARNING (EXTGRMP-768) : BUSBITCHARS missing in /process/tsmcN4/data/stdcell/n4gp/TSMC/tcbn04p_bwph210l6p51cnod_base_ulvt_100b/lef/tcbn04p_bwph210l6p51cnod_base_ulvt.lef file, therefore taking default value [] for BUSBITCHARS.
+
+WARNING (EXTGRMP-769) : DIVIDECHAR missing in /process/tsmcN4/data/stdcell/n4gp/TSMC/tcbn04p_bwph210l6p51cnod_base_ulvt_100b/lef/tcbn04p_bwph210l6p51cnod_base_ulvt.lef file, therefore taking default value / for DIVIDECHAR.
+
+WARNING (EXTGRMP-327) : The LEF parser reported the following warning :
+WARNING (LEFPARS-2001): No VERSION statement found, using the default value 5.8. See file /process/tsmcN4/data/stdcell/n4gp/TSMC/tcbn04p_bwph210l6p51cnod_base_ulvt_100b/lef/tcbn04p_bwph210l6p51cnod_base_ulvt_par.lef at line 248.
+
+INFO (EXTGRMP-338) : /process/tsmcN4/data/stdcell/n4gp/TSMC/tcbn04p_bwph210l6p51cnod_base_elvt_100b/lef/tcbn04p_bwph210l6p51cnod_base_elvt.lef
+
+INFO (EXTGRMP-338) : /process/tsmcN4/data/stdcell/n4gp/TSMC/tcbn04p_bwph210l6p51cnod_base_elvt_100b/lef/tcbn04p_bwph210l6p51cnod_base_elvt_par.lef
+
+WARNING (EXTGRMP-768) : BUSBITCHARS missing in /process/tsmcN4/data/stdcell/n4gp/TSMC/tcbn04p_bwph210l6p51cnod_base_ulvt_100b/lef/tcbn04p_bwph210l6p51cnod_base_ulvt_par.lef file, therefore taking default value [] for BUSBITCHARS.
+
+WARNING (EXTGRMP-769) : DIVIDECHAR missing in /process/tsmcN4/data/stdcell/n4gp/TSMC/tcbn04p_bwph210l6p51cnod_base_ulvt_100b/lef/tcbn04p_bwph210l6p51cnod_base_ulvt_par.lef file, therefore taking default value / for DIVIDECHAR.
+
+WARNING (EXTGRMP-768) : BUSBITCHARS missing in /process/tsmcN4/data/stdcell/n4gp/TSMC/tcbn04p_bwph210l6p51cnod_base_elvt_100b/lef/tcbn04p_bwph210l6p51cnod_base_elvt.lef file, therefore taking default value [] for BUSBITCHARS.
+
+WARNING (EXTGRMP-769) : DIVIDECHAR missing in /process/tsmcN4/data/stdcell/n4gp/TSMC/tcbn04p_bwph210l6p51cnod_base_elvt_100b/lef/tcbn04p_bwph210l6p51cnod_base_elvt.lef file, therefore taking default value / for DIVIDECHAR.
+
+INFO (EXTGRMP-338) : /process/tsmcN4/data/stdcell/n4gp/TSMC/tcbn04p_bwph210l6p51cnod_base_ulvtll_100b/lef/tcbn04p_bwph210l6p51cnod_base_ulvtll.lef
+
+WARNING (EXTGRMP-327) : The LEF parser reported the following warning :
+WARNING (LEFPARS-2001): No VERSION statement found, using the default value 5.8. See file /process/tsmcN4/data/stdcell/n4gp/TSMC/tcbn04p_bwph210l6p51cnod_base_elvt_100b/lef/tcbn04p_bwph210l6p51cnod_base_elvt_par.lef at line 248.
+
+WARNING (EXTGRMP-768) : BUSBITCHARS missing in /process/tsmcN4/data/stdcell/n4gp/TSMC/tcbn04p_bwph210l6p51cnod_base_elvt_100b/lef/tcbn04p_bwph210l6p51cnod_base_elvt_par.lef file, therefore taking default value [] for BUSBITCHARS.
+
+WARNING (EXTGRMP-769) : DIVIDECHAR missing in /process/tsmcN4/data/stdcell/n4gp/TSMC/tcbn04p_bwph210l6p51cnod_base_elvt_100b/lef/tcbn04p_bwph210l6p51cnod_base_elvt_par.lef file, therefore taking default value / for DIVIDECHAR.
+
+INFO (EXTGRMP-338) : /process/tsmcN4/data/stdcell/n4gp/TSMC/tcbn04p_bwph210l6p51cnod_base_ulvtll_100b/lef/tcbn04p_bwph210l6p51cnod_base_ulvtll_par.lef
+
+WARNING (EXTGRMP-768) : BUSBITCHARS missing in /process/tsmcN4/data/stdcell/n4gp/TSMC/tcbn04p_bwph210l6p51cnod_base_ulvtll_100b/lef/tcbn04p_bwph210l6p51cnod_base_ulvtll.lef file, therefore taking default value [] for BUSBITCHARS.
+
+WARNING (EXTGRMP-769) : DIVIDECHAR missing in /process/tsmcN4/data/stdcell/n4gp/TSMC/tcbn04p_bwph210l6p51cnod_base_ulvtll_100b/lef/tcbn04p_bwph210l6p51cnod_base_ulvtll.lef file, therefore taking default value / for DIVIDECHAR.
+
+WARNING (EXTGRMP-327) : The LEF parser reported the following warning :
+WARNING (LEFPARS-2001): No VERSION statement found, using the default value 5.8. See file /process/tsmcN4/data/stdcell/n4gp/TSMC/tcbn04p_bwph210l6p51cnod_base_ulvtll_100b/lef/tcbn04p_bwph210l6p51cnod_base_ulvtll_par.lef at line 248.
+
+INFO (EXTGRMP-338) : /projects/byd_A3_N4P_32bits_LPDDR5_phy/libs/ndr/ndr_10w8s.lef
+
+INFO (EXTGRMP-338) : /projects/byd_A3_N4P_32bits_LPDDR5_phy/libs/ndr/ndr_1w2s.lef
+
+WARNING (EXTGRMP-768) : BUSBITCHARS missing in /process/tsmcN4/data/stdcell/n4gp/TSMC/tcbn04p_bwph210l6p51cnod_base_ulvtll_100b/lef/tcbn04p_bwph210l6p51cnod_base_ulvtll_par.lef file, therefore taking default value [] for BUSBITCHARS.
+
+WARNING (EXTGRMP-769) : DIVIDECHAR missing in /process/tsmcN4/data/stdcell/n4gp/TSMC/tcbn04p_bwph210l6p51cnod_base_ulvtll_100b/lef/tcbn04p_bwph210l6p51cnod_base_ulvtll_par.lef file, therefore taking default value / for DIVIDECHAR.
+
+WARNING (EXTGRMP-728) : Different version number exists for tech lef "/process/tsmcN4/data/stdcell/n4gp/TSMC/PRTF_Innovus_4nm_014_Cad_V10b/PRTF/PRTF_Innovus_4nm_014_Cad_V10b/PR_tech/Cadence/LefHeader/Standard/VHV/PRTF_Innovus_N4P_15M_1X1Xb1Xe1Ya1Yb5Y2Yy2Z_UTRDL_M1P34_M2P35_M3P42_M4P42_M5P76_M6P76_M7P76_M8P76_M9P76_M10P76_M11P76_H210_M0ROUTE_SHDMIM.10b.tlef" with version 5.8 and macro lef "/projects/byd_A3_N4P_32bits_LPDDR5_phy/libs/ndr/ndr_10w8s.lef" with version 5.6. 
+Check for all macro lefs.
+
+INFO (EXTGRMP-338) : /projects/byd_A3_N4P_32bits_LPDDR5_phy/libs/ndr/ndr_1w3s.lef
+
+WARNING (EXTGRMP-728) : Different version number exists for tech lef "/process/tsmcN4/data/stdcell/n4gp/TSMC/PRTF_Innovus_4nm_014_Cad_V10b/PRTF/PRTF_Innovus_4nm_014_Cad_V10b/PR_tech/Cadence/LefHeader/Standard/VHV/PRTF_Innovus_N4P_15M_1X1Xb1Xe1Ya1Yb5Y2Yy2Z_UTRDL_M1P34_M2P35_M3P42_M4P42_M5P76_M6P76_M7P76_M8P76_M9P76_M10P76_M11P76_H210_M0ROUTE_SHDMIM.10b.tlef" with version 5.8 and macro lef "/projects/byd_A3_N4P_32bits_LPDDR5_phy/libs/ndr/ndr_1w2s.lef" with version 5.6. 
+Check for all macro lefs.
+
+INFO (EXTGRMP-338) : /projects/byd_A3_N4P_32bits_LPDDR5_phy/libs/ndr/ndr_2w1s.lef
+
+WARNING (EXTGRMP-728) : Different version number exists for tech lef "/process/tsmcN4/data/stdcell/n4gp/TSMC/PRTF_Innovus_4nm_014_Cad_V10b/PRTF/PRTF_Innovus_4nm_014_Cad_V10b/PR_tech/Cadence/LefHeader/Standard/VHV/PRTF_Innovus_N4P_15M_1X1Xb1Xe1Ya1Yb5Y2Yy2Z_UTRDL_M1P34_M2P35_M3P42_M4P42_M5P76_M6P76_M7P76_M8P76_M9P76_M10P76_M11P76_H210_M0ROUTE_SHDMIM.10b.tlef" with version 5.8 and macro lef "/projects/byd_A3_N4P_32bits_LPDDR5_phy/libs/ndr/ndr_1w3s.lef" with version 5.6. 
+Check for all macro lefs.
+
+INFO (EXTGRMP-338) : /projects/byd_A3_N4P_32bits_LPDDR5_phy/libs/ndr/ndr_2w2s.lef
+
+WARNING (EXTGRMP-728) : Different version number exists for tech lef "/process/tsmcN4/data/stdcell/n4gp/TSMC/PRTF_Innovus_4nm_014_Cad_V10b/PRTF/PRTF_Innovus_4nm_014_Cad_V10b/PR_tech/Cadence/LefHeader/Standard/VHV/PRTF_Innovus_N4P_15M_1X1Xb1Xe1Ya1Yb5Y2Yy2Z_UTRDL_M1P34_M2P35_M3P42_M4P42_M5P76_M6P76_M7P76_M8P76_M9P76_M10P76_M11P76_H210_M0ROUTE_SHDMIM.10b.tlef" with version 5.8 and macro lef "/projects/byd_A3_N4P_32bits_LPDDR5_phy/libs/ndr/ndr_2w1s.lef" with version 5.6. 
+Check for all macro lefs.
+
+INFO (EXTGRMP-338) : /projects/byd_A3_N4P_32bits_LPDDR5_phy/libs/ndr/ndr_2w3s.lef
+
+WARNING (EXTGRMP-728) : Different version number exists for tech lef "/process/tsmcN4/data/stdcell/n4gp/TSMC/PRTF_Innovus_4nm_014_Cad_V10b/PRTF/PRTF_Innovus_4nm_014_Cad_V10b/PR_tech/Cadence/LefHeader/Standard/VHV/PRTF_Innovus_N4P_15M_1X1Xb1Xe1Ya1Yb5Y2Yy2Z_UTRDL_M1P34_M2P35_M3P42_M4P42_M5P76_M6P76_M7P76_M8P76_M9P76_M10P76_M11P76_H210_M0ROUTE_SHDMIM.10b.tlef" with version 5.8 and macro lef "/projects/byd_A3_N4P_32bits_LPDDR5_phy/libs/ndr/ndr_2w2s.lef" with version 5.6. 
+Check for all macro lefs.
+
+INFO (EXTGRMP-338) : /projects/byd_A3_N4P_32bits_LPDDR5_phy/libs/customcell/cdns_ddr_custom_dig_cells_tcbn05_bwph210l6p51cnod_base.antenna.lef
+
+INFO (EXTGRMP-338) : /projects/byd_A3_N4P_32bits_LPDDR5_phy/libs/ddrio/cdns_ddr900_h_t5g_x32_15M1X1Xb1Xe1Ya1Yb5Y2Yy2Z_SHDMIM_150P_UBM91.8R_N4_SC_r600_v1p2.20250707/lef/cdns_ddr900_h.lef
+
+WARNING (EXTGRMP-728) : Different version number exists for tech lef "/process/tsmcN4/data/stdcell/n4gp/TSMC/PRTF_Innovus_4nm_014_Cad_V10b/PRTF/PRTF_Innovus_4nm_014_Cad_V10b/PR_tech/Cadence/LefHeader/Standard/VHV/PRTF_Innovus_N4P_15M_1X1Xb1Xe1Ya1Yb5Y2Yy2Z_UTRDL_M1P34_M2P35_M3P42_M4P42_M5P76_M6P76_M7P76_M8P76_M9P76_M10P76_M11P76_H210_M0ROUTE_SHDMIM.10b.tlef" with version 5.8 and macro lef "/projects/byd_A3_N4P_32bits_LPDDR5_phy/libs/ndr/ndr_2w3s.lef" with version 5.6. 
+Check for all macro lefs.
+
+WARNING (EXTGRMP-590) : Atleast one shape on PIN: NSLEEP_OUT for Macro: cdns_ddr900_custom_caslice_h defined in Lef: /projects/byd_A3_N4P_32bits_LPDDR5_phy/libs/ddrio/cdns_ddr900_h_t5g_x32_15M1X1Xb1Xe1Ya1Yb5Y2Yy2Z_SHDMIM_150P_UBM91.8R_N4_SC_r600_v1p2.20250707/lef/cdns_ddr900_h.lef lie completely oustide the macro placement boundary.
+Macro Bounding box: 0 0 546.516 534.128  
+Shape Bounding box: 106.13 -11.5085 107.13 -10.5085  (xmin ymin xmax ymax) 
+Please correct the macro definition.
+
+WARNING (EXTGRMP-590) : Atleast one shape on PIN: VDDQ for Macro: cdns_ddr900_custom_caslice_h defined in Lef: /projects/byd_A3_N4P_32bits_LPDDR5_phy/libs/ddrio/cdns_ddr900_h_t5g_x32_15M1X1Xb1Xe1Ya1Yb5Y2Yy2Z_SHDMIM_150P_UBM91.8R_N4_SC_r600_v1p2.20250707/lef/cdns_ddr900_h.lef lie completely oustide the macro placement boundary.
+Macro Bounding box: 0 0 546.516 534.128  
+Shape Bounding box: 542.916 -11.0085 546.516 -1.0085  (xmin ymin xmax ymax) 
+Please correct the macro definition.
+
+WARNING (EXTGRMP-590) : Atleast one shape on PIN: VSS for Macro: cdns_ddr900_custom_caslice_h defined in Lef: /projects/byd_A3_N4P_32bits_LPDDR5_phy/libs/ddrio/cdns_ddr900_h_t5g_x32_15M1X1Xb1Xe1Ya1Yb5Y2Yy2Z_SHDMIM_150P_UBM91.8R_N4_SC_r600_v1p2.20250707/lef/cdns_ddr900_h.lef lie completely oustide the macro placement boundary.
+Macro Bounding box: 0 0 546.516 534.128  
+Shape Bounding box: 694.632 176.52 724.632 206.52  (xmin ymin xmax ymax) 
+Please correct the macro definition.
+
+WARNING (EXTGRMP-590) : Atleast one shape on PIN: PAD_CS1 for Macro: cdns_ddr900_custom_caslice_h defined in Lef: /projects/byd_A3_N4P_32bits_LPDDR5_phy/libs/ddrio/cdns_ddr900_h_t5g_x32_15M1X1Xb1Xe1Ya1Yb5Y2Yy2Z_SHDMIM_150P_UBM91.8R_N4_SC_r600_v1p2.20250707/lef/cdns_ddr900_h.lef lie completely oustide the macro placement boundary.
+Macro Bounding box: 0 0 546.516 534.128  
+Shape Bounding box: 562.032 406.344 592.032 436.344  (xmin ymin xmax ymax) 
+Please correct the macro definition.
+
+WARNING (EXTGRMP-590) : Atleast one shape on PIN: VDD for Macro: cdns_ddr900_custom_caslice_h defined in Lef: /projects/byd_A3_N4P_32bits_LPDDR5_phy/libs/ddrio/cdns_ddr900_h_t5g_x32_15M1X1Xb1Xe1Ya1Yb5Y2Yy2Z_SHDMIM_150P_UBM91.8R_N4_SC_r600_v1p2.20250707/lef/cdns_ddr900_h.lef lie completely oustide the macro placement boundary.
+Macro Bounding box: 0 0 546.516 534.128  
+Shape Bounding box: 562.032 559.56 592.032 589.56  (xmin ymin xmax ymax) 
+Please correct the macro definition.
+
+WARNING (EXTGRMP-590) : Atleast one shape on PIN: NSLEEP_IN for Macro: cdns_ddr900_custom_caslice_h defined in Lef: /projects/byd_A3_N4P_32bits_LPDDR5_phy/libs/ddrio/cdns_ddr900_h_t5g_x32_15M1X1Xb1Xe1Ya1Yb5Y2Yy2Z_SHDMIM_150P_UBM91.8R_N4_SC_r600_v1p2.20250707/lef/cdns_ddr900_h.lef lie completely oustide the macro placement boundary.
+Macro Bounding box: 0 0 546.516 534.128  
+Shape Bounding box: 104.53 -11.5085 105.53 -10.5085  (xmin ymin xmax ymax) 
+Please correct the macro definition.
+
+WARNING (EXTGRMP-590) : Atleast one shape on PIN: PAD_CA1 for Macro: cdns_ddr900_custom_caslice_h defined in Lef: /projects/byd_A3_N4P_32bits_LPDDR5_phy/libs/ddrio/cdns_ddr900_h_t5g_x32_15M1X1Xb1Xe1Ya1Yb5Y2Yy2Z_SHDMIM_150P_UBM91.8R_N4_SC_r600_v1p2.20250707/lef/cdns_ddr900_h.lef lie completely oustide the macro placement boundary.
+Macro Bounding box: 0 0 546.516 534.128  
+Shape Bounding box: 562.032 253.128 592.032 283.128  (xmin ymin xmax ymax) 
+Please correct the macro definition.
+
+WARNING (EXTGRMP-590) : Atleast one shape on PIN: VDDQX for Macro: cdns_ddr900_custom_caslice_h defined in Lef: /projects/byd_A3_N4P_32bits_LPDDR5_phy/libs/ddrio/cdns_ddr900_h_t5g_x32_15M1X1Xb1Xe1Ya1Yb5Y2Yy2Z_SHDMIM_150P_UBM91.8R_N4_SC_r600_v1p2.20250707/lef/cdns_ddr900_h.lef lie completely oustide the macro placement boundary.
+Macro Bounding box: 0 0 546.516 534.128  
+Shape Bounding box: 694.632 482.952 724.632 512.952  (xmin ymin xmax ymax) 
+Please correct the macro definition.
+
+WARNING (EXTGRMP-590) : Atleast one shape on PIN: PADN_CK for Macro: cdns_ddr900_custom_caslice_h defined in Lef: /projects/byd_A3_N4P_32bits_LPDDR5_phy/libs/ddrio/cdns_ddr900_h_t5g_x32_15M1X1Xb1Xe1Ya1Yb5Y2Yy2Z_SHDMIM_150P_UBM91.8R_N4_SC_r600_v1p2.20250707/lef/cdns_ddr900_h.lef lie completely oustide the macro placement boundary.
+Macro Bounding box: 0 0 546.516 534.128  
+Shape Bounding box: 562.032 99.912 592.032 129.912  (xmin ymin xmax ymax) 
+Please correct the macro definition.
+
+INFO (EXTGRMP-195) : Reading VIAS section.
+
+INFO (EXTGRMP-195) : Reading NONDEFAULTRULES section.
+
+INFO (EXTGRMP-195) : Reading COMPONENTS section.
+
+INFO (EXTGRMP-197) :    5%
+
+INFO (EXTGRMP-197) :    10%
+
+INFO (EXTGRMP-197) :    15%
+
+INFO (EXTGRMP-197) :    20%
+
+INFO (EXTGRMP-197) :    25%
+
+INFO (EXTGRMP-197) :    30%
+
+INFO (EXTGRMP-197) :    35%
+
+INFO (EXTGRMP-197) :    40%
+
+INFO (EXTGRMP-197) :    45%
+
+INFO (EXTGRMP-197) :    50%
+
+INFO (EXTGRMP-197) :    55%
+
+INFO (EXTGRMP-197) :    60%
+
+INFO (EXTGRMP-197) :    65%
+
+INFO (EXTGRMP-197) :    70%
+
+INFO (EXTGRMP-197) :    75%
+
+INFO (EXTGRMP-197) :    80%
+
+INFO (EXTGRMP-197) :    85%
+
+INFO (EXTGRMP-197) :    90%
+
+INFO (EXTGRMP-197) :    95%
+
+INFO (EXTGRMP-195) : Reading PINS section.
+
+WARNING (EXTGRMP-590) : Atleast one shape on PIN: PAD_RESET_n for Macro: cdns_ddr900_custom_cmnslice1_h defined in Lef: /projects/byd_A3_N4P_32bits_LPDDR5_phy/libs/ddrio/cdns_ddr900_h_t5g_x32_15M1X1Xb1Xe1Ya1Yb5Y2Yy2Z_SHDMIM_150P_UBM91.8R_N4_SC_r600_v1p2.20250707/lef/cdns_ddr900_h.lef lie completely oustide the macro placement boundary.
+Macro Bounding box: 0 0 162.843 470.288  
+Shape Bounding box: 148.116 -42.664 178.116 -12.664  (xmin ymin xmax ymax) 
+Please correct the macro definition.
+
+WARNING (EXTGRMP-766) : The macro cdns_ddr900_custom_dataslice_h has missing SITE definition. Check macro present in /projects/byd_A3_N4P_32bits_LPDDR5_phy/libs/ddrio/cdns_ddr900_h_t5g_x32_15M1X1Xb1Xe1Ya1Yb5Y2Yy2Z_SHDMIM_150P_UBM91.8R_N4_SC_r600_v1p2.20250707/lef/cdns_ddr900_h.lef file.
+
+WARNING (EXTGRMP-792) : The DEF file dbs/cdns_lp5x_x32_ew_phy_ds_top.innovusOUTwoD0.def.gz cdns_lp5x_x32_ew_phy_ds_top has missing DIVIDERCHAR. Default value "/" is used.
+
+INFO (EXTGRMP-372) : Following GDS/OASIS layer mapping is used :-
+
+INFO (EXTSNZ-131) :     GDS/OASIS layer  :   6	    Layer name       :   none
+
+INFO (EXTSNZ-131) :     GDS/OASIS layer  :   17	    Layer name       :   poly
+
+INFO (EXTSNZ-131) :     GDS/OASIS layer  :   74	    Layer name       :   ap
+
+INFO (EXTSNZ-131) :     GDS/OASIS layer  :   85	    Layer name       :   rv
+
+INFO (EXTSNZ-131) :     GDS/OASIS layer  :   330	    Layer name       :   m0
+
+INFO (EXTSNZ-131) :     GDS/OASIS layer  :   331	    Layer name       :   m1
+
+INFO (EXTSNZ-131) :     GDS/OASIS layer  :   332	    Layer name       :   m2
+
+INFO (EXTSNZ-131) :     GDS/OASIS layer  :   333	    Layer name       :   m3
+
+INFO (EXTSNZ-131) :     GDS/OASIS layer  :   334	    Layer name       :   m4
+
+INFO (EXTSNZ-131) :     GDS/OASIS layer  :   335	    Layer name       :   m5
+
+INFO (EXTSNZ-131) :     GDS/OASIS layer  :   336	    Layer name       :   m6
+
+INFO (EXTSNZ-131) :     GDS/OASIS layer  :   337	    Layer name       :   m7
+
+INFO (EXTSNZ-131) :     GDS/OASIS layer  :   338	    Layer name       :   m8
+
+INFO (EXTSNZ-131) :     GDS/OASIS layer  :   339	    Layer name       :   m9
+
+INFO (EXTSNZ-131) :     GDS/OASIS layer  :   340	    Layer name       :   m10
+
+INFO (EXTSNZ-131) :     GDS/OASIS layer  :   341	    Layer name       :   m11
+
+INFO (EXTSNZ-131) :     GDS/OASIS layer  :   342	    Layer name       :   m12
+
+INFO (EXTSNZ-131) :     GDS/OASIS layer  :   343	    Layer name       :   m13
+
+INFO (EXTSNZ-131) :     GDS/OASIS layer  :   344	    Layer name       :   m14
+
+INFO (EXTSNZ-131) :     GDS/OASIS layer  :   345	    Layer name       :   m15
+
+INFO (EXTSNZ-131) :     GDS/OASIS layer  :   350	    Layer name       :   via0
+
+INFO (EXTSNZ-131) :     GDS/OASIS layer  :   351	    Layer name       :   via1
+
+INFO (EXTSNZ-131) :     GDS/OASIS layer  :   352	    Layer name       :   via2
+
+INFO (EXTSNZ-131) :     GDS/OASIS layer  :   353	    Layer name       :   via3
+
+INFO (EXTSNZ-131) :     GDS/OASIS layer  :   354	    Layer name       :   via4
+
+INFO (EXTSNZ-131) :     GDS/OASIS layer  :   355	    Layer name       :   via5
+
+INFO (EXTSNZ-131) :     GDS/OASIS layer  :   356	    Layer name       :   via6
+
+INFO (EXTSNZ-131) :     GDS/OASIS layer  :   357	    Layer name       :   via7
+
+INFO (EXTSNZ-131) :     GDS/OASIS layer  :   358	    Layer name       :   via8
+
+INFO (EXTSNZ-131) :     GDS/OASIS layer  :   359	    Layer name       :   via9
+
+INFO (EXTSNZ-131) :     GDS/OASIS layer  :   360	    Layer name       :   via10
+
+INFO (EXTSNZ-131) :     GDS/OASIS layer  :   361	    Layer name       :   via11
+
+INFO (EXTSNZ-131) :     GDS/OASIS layer  :   362	    Layer name       :   via12
+
+INFO (EXTGRMP-292) : Checking Command/Tech/License Files.
+
+INFO (EXTGRMP-281) : Manufacturing Data Information :- 
+  DEF/GDS/OASIS/LEF file 
+    does     contain MetalFill data. 
+  Techfile  
+    does     contain WEE data.     
+    does     contain Erosion data t=f( density ,width) 
+    does     contain R(w) data.    
+    does     contain R(w, s) data.  
+    does     contain TC(w) data.    
+    does     contain T/B enlargement data. 
+    does     contain Floating Metal Fill models. 
+    does NOT contain WBE data.
+
+INFO (EXTGRMP-613) : Turbo Reduction is now turned on by default.
+
+INFO (EXTGRMP-195) : Reading BLOCKAGES section.
+
+INFO (EXTGRMP-195) : Reading NETS section.
+
+INFO (EXTGRMP-195) : Reading SPECIALNETS section.
+
+INFO (EXTSNZ-131) :     GDS/OASIS layer  :   363	    Layer name       :   via13
+
+INFO (EXTSNZ-131) :     GDS/OASIS layer  :   364	    Layer name       :   via14
+
+INFO (EXTSNZ-136) : Reading FILL data from GDSII/OASIS file "/projects/byd_A3_N4P_32bits_LPDDR5_phy/work/cdns_lp5x_x32_ew_phy_ds_top/muhanx/signoff/signoff-1217-nuflow/pvs_run/BEOL/BEOL.gds", on host "nfdpcer017:0".
+
+INFO (EXTGRMP-294) : RCs effects computed for this session include :- 
+ MetalFill        : floating 
+ WEE Effects      : rc 
+ Erosion Effects  : Rule-Based Erosion Table: rc t=f(density,width) 
+ T/B Enlargements : ON 
+ R(w) Effects     : ON 
+ R(w,s) Effects   : ON 
+ TC(w) Effects    : ON 
+Some effects indicate n/a because of non-availability of relevant input data (or) requested to be off.
+
+INFO (EXTGRMP-532) : Via R model is applied.
+
+WARNING (EXTSNZ-157) : The non routing layer FB1 is used in the LEF/DEF file or in the OpenAccess (OA) database but the definition for it cannot be found in the tech file.
+
+WARNING (EXTGRMP-647) : Metal FILL from DEF file will be ignored and only GDS/OASIS Metal FILL will be used.
+To use Metal FILL from DEF file along with GDS/OASIS Metal FILL, use retain_def_metal_fill command.
+
+INFO (EXTGRMP-802) : Summary of license(s) checkout :
+	1 of QTS300, 1 of QTS310, 1 of QTS750
+
+WARNING (EXTSNZ-157) : The non routing layer CM0 is used in the LEF/DEF file or in the OpenAccess (OA) database but the definition for it cannot be found in the tech file.
+
+INFO (EXTGRMP-207) : Reading DEF file completed successfully.
+
+INFO (EXTGRMP-368) : The extracted temperature is 125, the reference temperature is 25 for the process !
+
+INFO (EXTSNZ-216) : Top Cell _QrC_FiLl_86996939_cdns_lp5x_x32_ew_phy_ds_top_BEOL  chosen for GDS/OASIS metal fill processing. This is different than Top DEF design name cdns_lp5x_x32_ew_phy_ds_top.
+
+INFO (EXTSNZ-136) : Reading FILL data from GDSII/OASIS file "/projects/byd_A3_N4P_32bits_LPDDR5_phy/work/cdns_lp5x_x32_ew_phy_ds_top/muhanx/signoff/signoff-1217-nuflow/pvs_run/BEOL/BEOL.gds", on host "nfdpcer017:2".
+
+INFO (EXTHPY-101) : Initializing gray data from all cell instances for capacitance extraction.
+
+INFO (EXTHPY-102) : Processing of gray data completed successfully.
+
+INFO (EXTHPY-156) : Gray pins that are touching or overlapping extracted nets will be treated as gray data during extraction.
+
+INFO (EXTSNZ-136) : Reading FILL data from GDSII/OASIS file "/projects/byd_A3_N4P_32bits_LPDDR5_phy/work/cdns_lp5x_x32_ew_phy_ds_top/muhanx/signoff/signoff-1217-nuflow/pvs_run/BEOL/BEOL.gds", on host "nfdpcer017:3".
+
+INFO (EXTSNZ-136) : Reading FILL data from GDSII/OASIS file "/projects/byd_A3_N4P_32bits_LPDDR5_phy/work/cdns_lp5x_x32_ew_phy_ds_top/muhanx/signoff/signoff-1217-nuflow/pvs_run/BEOL/BEOL.gds", on host "nfdpcer017:1".
+
+INFO (EXTHPY-233) : Preprocessing stage completed successfully at Wed Dec 17 13:56:17 2025 with 4 CPU(s).
+
+INFO (EXTHPY-247) : Preprocessing stage:
+ Duration: 00:00:44, Max (Total) memory: 2459 MB
+ Max (CPU) memory: 1933 MB, Max (CPU) time: 00:00:19
+
+INFO (EXTHPY-173) : Capacitance extraction started at Wed Dec 17 13:56:17 2025.
+
+INFO (EXTSNZ-169) : Total number of GDS/OASIS Metal FILL shapes: 3296046
+
+Layer Name          Layer Id      Data Type     Fill Type     Fill Count 
+m0                  330           151           Passive       20021      
+m0                  330           152           Passive       22782      
+m1                  331           171           Passive       358786     
+m1                  331           172           Passive       402434     
+m2                  332           151           Passive       51323      
+m2                  332           152           Passive       161689     
+m3                  333           271           Passive       224224     
+m3                  333           272           Passive       224339     
+m4                  334           401           Passive       39278      
+m4                  334           402           Passive       40810      
+m5                  335           960           Passive       114803     
+m6                  336           800           Passive       161285     
+m7                  337           980           Passive       98905      
+m7                  337           985           Passive       57         
+m8                  338           970           Passive       202596     
+m9                  339           980           Passive       167358     
+m9                  339           985           Passive       95         
+m10                 340           970           Passive       229361     
+m11                 341           980           Passive       322014     
+m12                 342           90            Passive       264680     
+m12                 342           95            Passive       410        
+m13                 343           90            Passive       185767     
+m13                 343           95            Passive       475        
+m14                 344           45            Passive       1390       
+m15                 345           45            Passive       1164
+
+WARNING (EXTSNZ-172) : GDS/OASIS layer m7 having layer id 337 and data type -1 is referenced and mapped in the command file but it does not have any geometries in the GDS/OASIS file.
+
+WARNING (EXTSNZ-172) : GDS/OASIS layer m12 having layer id 342 and data type -1 is referenced and mapped in the command file but it does not have any geometries in the GDS/OASIS file.
+
+WARNING (EXTSNZ-172) : GDS/OASIS layer m14 having layer id 344 and data type -1 is referenced and mapped in the command file but it does not have any geometries in the GDS/OASIS file.
+
+WARNING (EXTSNZ-172) : GDS/OASIS layer m10 having layer id 340 and data type -1 is referenced and mapped in the command file but it does not have any geometries in the GDS/OASIS file.
+
+WARNING (EXTSNZ-172) : GDS/OASIS layer m2 having layer id 332 and data type -1 is referenced and mapped in the command file but it does not have any geometries in the GDS/OASIS file.
+
+WARNING (EXTSNZ-172) : GDS/OASIS layer m4 having layer id 334 and data type -1 is referenced and mapped in the command file but it does not have any geometries in the GDS/OASIS file.
+
+WARNING (EXTSNZ-172) : GDS/OASIS layer m0 having layer id 330 and data type -1 is referenced and mapped in the command file but it does not have any geometries in the GDS/OASIS file.
+
+WARNING (EXTSNZ-172) : GDS/OASIS layer m1 having layer id 331 and data type -1 is referenced and mapped in the command file but it does not have any geometries in the GDS/OASIS file.
+
+WARNING (EXTSNZ-172) : GDS/OASIS layer m9 having layer id 339 and data type -1 is referenced and mapped in the command file but it does not have any geometries in the GDS/OASIS file.
+
+WARNING (EXTSNZ-172) : GDS/OASIS layer m8 having layer id 338 and data type -1 is referenced and mapped in the command file but it does not have any geometries in the GDS/OASIS file.
+
+WARNING (EXTSNZ-172) : GDS/OASIS layer m11 having layer id 341 and data type -1 is referenced and mapped in the command file but it does not have any geometries in the GDS/OASIS file.
+
+WARNING (EXTSNZ-172) : GDS/OASIS layer m3 having layer id 333 and data type -1 is referenced and mapped in the command file but it does not have any geometries in the GDS/OASIS file.
+
+WARNING (EXTSNZ-172) : GDS/OASIS layer m6 having layer id 336 and data type -1 is referenced and mapped in the command file but it does not have any geometries in the GDS/OASIS file.
+
+WARNING (EXTSNZ-172) : GDS/OASIS layer ap having layer id 74 and data type -1 is referenced and mapped in the command file but it does not have any geometries in the GDS/OASIS file.
+
+WARNING (EXTSNZ-172) : GDS/OASIS layer m5 having layer id 335 and data type -1 is referenced and mapped in the command file but it does not have any geometries in the GDS/OASIS file.
+
+INFO (EXTHPY-268) : Optimized single corner processing started
+
+INFO (EXTHPY-262) : Techfile optimized loading enabled.
+
+INFO (EXTHPY-103) : Extracting capacitance values.
+
+INFO (EXTHPY-267) :  
+ DESIGN                       : cdns_lp5x_x32_ew_phy_ds_top
+ DEF/OA DIEAREA BBOX          : 0 0 1092930 1068256
+ DEF/OA UNITS                 : 2000
+ FINAL SCALE FACTOR           : 1
+ 
+ ESTIMATED COMPRESSED DEF SIZE: 118857584
+ TILE SIZE                    : 25x25 squm
+ TILE COUNT                   : 484
+ CLUSTER SIZE                 : 257
+ CAPDB PARTITIONS             : 16
+
+INFO (EXTHPY-104) :    0%
+
+INFO (EXTHPY-104) :    1%
+
+INFO (EXTHPY-104) :    2%
+
+INFO (EXTHPY-104) :    3%
+
+INFO (EXTHPY-104) :    4%
+
+INFO (EXTHPY-104) :    5%
+
+INFO (EXTHPY-104) :    6%
+
+INFO (EXTHPY-104) :    7%
+
+INFO (EXTHPY-104) :    8%
+
+INFO (EXTHPY-104) :    9%
+
+INFO (EXTHPY-104) :    10%
+
+INFO (EXTHPY-104) :    11%
+
+INFO (EXTHPY-104) :    12%
+
+INFO (EXTHPY-104) :    13%
+
+INFO (EXTHPY-104) :    14%
+
+INFO (EXTHPY-104) :    15%
+
+INFO (EXTHPY-104) :    16%
+
+INFO (EXTHPY-104) :    17%
+
+INFO (EXTHPY-104) :    18%
+
+INFO (EXTHPY-104) :    19%
+
+INFO (EXTHPY-104) :    20%
+
+INFO (EXTHPY-104) :    21%
+
+INFO (EXTHPY-104) :    22%
+
+INFO (EXTHPY-104) :    23%
+
+INFO (EXTHPY-104) :    24%
+
+INFO (EXTHPY-104) :    25%
+
+INFO (EXTHPY-104) :    26%
+
+INFO (EXTHPY-104) :    27%
+
+INFO (EXTHPY-104) :    28%
+
+INFO (EXTHPY-104) :    29%
+
+INFO (EXTHPY-104) :    30%
+
+INFO (EXTHPY-104) :    31%
+
+INFO (EXTHPY-104) :    32%
+
+INFO (EXTHPY-104) :    33%
+
+INFO (EXTHPY-104) :    34%
+
+INFO (EXTHPY-104) :    35%
+
+INFO (EXTHPY-104) :    36%
+
+INFO (EXTHPY-104) :    37%
+
+INFO (EXTHPY-104) :    38%
+
+INFO (EXTHPY-104) :    39%
+
+INFO (EXTHPY-104) :    40%
+
+INFO (EXTHPY-104) :    41%
+
+INFO (EXTHPY-104) :    42%
+
+INFO (EXTHPY-104) :    43%
+
+INFO (EXTHPY-104) :    44%
+
+INFO (EXTHPY-104) :    45%
+
+INFO (EXTHPY-104) :    46%
+
+INFO (EXTHPY-104) :    47%
+
+INFO (EXTHPY-104) :    48%
+
+INFO (EXTHPY-104) :    49%
+
+INFO (EXTHPY-104) :    50%
+
+INFO (EXTHPY-104) :    51%
+
+INFO (EXTHPY-104) :    52%
+
+INFO (EXTHPY-104) :    53%
+
+INFO (EXTHPY-104) :    54%
+
+INFO (EXTHPY-104) :    55%
+
+INFO (EXTHPY-104) :    56%
+
+INFO (EXTHPY-104) :    57%
+
+INFO (EXTHPY-104) :    58%
+
+INFO (EXTHPY-104) :    59%
+
+INFO (EXTHPY-104) :    60%
+
+INFO (EXTHPY-104) :    61%
+
+INFO (EXTHPY-104) :    62%
+
+INFO (EXTHPY-104) :    63%
+
+INFO (EXTHPY-104) :    64%
+
+INFO (EXTHPY-104) :    65%
+
+INFO (EXTHPY-104) :    66%
+
+INFO (EXTHPY-104) :    67%
+
+INFO (EXTHPY-104) :    68%
+
+INFO (EXTHPY-104) :    69%
+
+INFO (EXTHPY-104) :    70%
+
+INFO (EXTHPY-104) :    71%
+
+INFO (EXTHPY-104) :    72%
+
+INFO (EXTHPY-104) :    73%
+
+INFO (EXTHPY-104) :    74%
+
+INFO (EXTHPY-104) :    75%
+
+INFO (EXTHPY-104) :    76%
+
+INFO (EXTHPY-104) :    77%
+
+INFO (EXTHPY-104) :    78%
+
+INFO (EXTHPY-104) :    79%
+
+INFO (EXTHPY-104) :    80%
+
+INFO (EXTHPY-104) :    81%
+
+INFO (EXTHPY-104) :    82%
+
+INFO (EXTHPY-104) :    83%
+
+INFO (EXTHPY-104) :    84%
+
+INFO (EXTHPY-104) :    85%
+
+INFO (EXTHPY-104) :    86%
+
+INFO (EXTHPY-104) :    87%
+
+INFO (EXTHPY-104) :    88%
+
+INFO (EXTHPY-104) :    89%
+
+INFO (EXTHPY-104) :    90%
+
+INFO (EXTHPY-104) :    91%
+
+INFO (EXTHPY-104) :    92%
+
+INFO (EXTHPY-104) :    93%
+
+INFO (EXTHPY-104) :    94%
+
+INFO (EXTHPY-104) :    95%
+
+INFO (EXTHPY-104) :    96%
+
+INFO (EXTHPY-104) :    97%
+
+INFO (EXTHPY-104) :    98%
+
+INFO (EXTHPY-104) :    99%
+
+INFO (EXTHPY-104) :    100%
+
+WARNING (EXTSNZ-172) : GDS/OASIS layer m13 having layer id 343 and data type -1 is referenced and mapped in the command file but it does not have any geometries in the GDS/OASIS file.
+
+WARNING (EXTSNZ-172) : GDS/OASIS layer m15 having layer id 345 and data type -1 is referenced and mapped in the command file but it does not have any geometries in the GDS/OASIS file.
+
+INFO (EXTHPY-174) : Capacitance extraction completed successfully at Wed Dec 17 13:57:26 2025 with 4 CPU(s).
+
+INFO (EXTHPY-248) : Capacitance extraction:
+ Duration: 00:01:09, Max (Total) memory: 6195 MB
+ Max (CPU) memory: 7284 MB, Max (CPU) time: 00:01:01
+
+INFO (EXTHPY-175) : Output generation started at Wed Dec 17 13:57:26 2025.
+
+INFO (EXTSNZ-156) :    0%
+
+INFO (EXTSNZ-156) :    10%
+
+INFO (EXTSNZ-156) :    20%
+
+INFO (EXTSNZ-156) :    30%
+
+INFO (EXTSNZ-156) :    40%
+
+INFO (EXTSNZ-156) :    50%
+
+INFO (EXTSNZ-156) :    60%
+
+INFO (EXTSNZ-156) :    70%
+
+INFO (EXTSNZ-156) :    80%
+
+INFO (EXTSNZ-156) :    90%
+
+INFO (EXTHPY-176) : Output generation completed successfully at Wed Dec 17 13:57:34 2025 with 4 CPU(s).
+
+WARNING (EXTGRMP-574) : There are 86 unrouted nets. 
+Please check file *.incompletenets in your output directory for details.
+
+WARNING (EXTGRMP-575) : There are 179 incomplete nets. 
+Please check file *.incompletenets in your output directory for details.
+
+INFO (EXTHPY-249) : Output generation:
+ Duration: 00:00:08, Max (Total) memory: 5983 MB
+ Max (CPU) memory: 7246 MB, Max (CPU) time: 00:00:05
+
+INFO (EXTHPY-143) : ---Summary of Stage Duration
+ Preprocessing stage:
+ Duration: 00:00:44, Max (Total) memory: 2459 MB
+ Max (CPU) memory: 1933 MB, Max (CPU) time: 00:00:19
+ Capacitance extraction:
+ Duration: 00:01:09, Max (Total) memory: 6195 MB
+ Max (CPU) memory: 7284 MB, Max (CPU) time: 00:01:01
+ Output generation:
+ Duration: 00:00:08, Max (Total) memory: 5983 MB
+ Max (CPU) memory: 7246 MB, Max (CPU) time: 00:00:05
+
+INFO (EXTGRMP-103) : NOTE: Using advanced paramter1: 1402
+
+INFO (EXTGRMP-103) : NOTE: Using advanced paramter2: 1.3
+
+INFO (EXTGRMP-103) : NOTE: Using advanced paramter3: YES
+
+INFO (EXTHPY-254) : Extraction completed successfully at Wed Dec 17 13:57:36 2025.
+
+
+Warning message summary: 
+
+Message Code(ID)   Count     Message
+=================|=========|=======================================================================================================================
+EXTGRMP-327       6          The LEF parser reported the following warning :
+WARNING (LEFPARS-2001): No VERSION statement found, using the default value 5.8. See file /process/tsmcN4/data/stdcell/n4gp/TSMC/tcbn04p_bwph210l6p51cnod_base_lvt_100b/lef/tcbn04p_bwph210l6p51cnod_base_lvt_par.lef at line 248.
+---------------------------------------------------------------------------------------------------------------------------------------------------
+EXTGRMP-330       30         LEF layer "LUP_015U" is not mapped with any tech file layer. Ignoring its definition. 
+An error will be issued if its definition is required.
+---------------------------------------------------------------------------------------------------------------------------------------------------
+EXTGRMP-574       1          There are 86 unrouted nets. 
+Please check file *.incompletenets in your output directory for details.
+---------------------------------------------------------------------------------------------------------------------------------------------------
+EXTGRMP-575       1          There are 179 incomplete nets. 
+Please check file *.incompletenets in your output directory for details.
+---------------------------------------------------------------------------------------------------------------------------------------------------
+EXTGRMP-590       10         Atleast one shape on PIN: NSLEEP_OUT for Macro: cdns_ddr900_custom_caslice_h defined in Lef: /projects/byd_A3_N4P_32bits_LPDDR5_phy/libs/ddrio/cdns_ddr900_h_t5g_x32_15M1X1Xb1Xe1Ya1Yb5Y2Yy2Z_SHDMIM_150P_UBM91.8R_N4_SC_r600_v1p2.20250707/lef/cdns_ddr900_h.lef lie completely oustide the macro placement boundary.
+Macro Bounding box: 0 0 546.516 534.128  
+Shape Bounding box: 106.13 -11.5085 107.13 -10.5085  (xmin ymin xmax ymax) 
+Please correct the macro definition.
+---------------------------------------------------------------------------------------------------------------------------------------------------
+EXTGRMP-605       27         Layer "LUP_015U" will not be extracted and will be ignored.
+---------------------------------------------------------------------------------------------------------------------------------------------------
+EXTGRMP-635       1          The option extraction_setup -density_bounding_box is ignored. For advanced nodes, the tool uses diearea as the only value, any other value if set, will be ignored. Please refer to user manual for more information.
+---------------------------------------------------------------------------------------------------------------------------------------------------
+EXTGRMP-647       1          Metal FILL from DEF file will be ignored and only GDS/OASIS Metal FILL will be used.
+To use Metal FILL from DEF file along with GDS/OASIS Metal FILL, use retain_def_metal_fill command.
+---------------------------------------------------------------------------------------------------------------------------------------------------
+EXTGRMP-670       1          Command file option parasitic_reduction -enable_reduction is not supported in Quantus Cell Flow.Quantus will continue without using this command file option.
+---------------------------------------------------------------------------------------------------------------------------------------------------
+EXTGRMP-728       6          Different version number exists for tech lef "/process/tsmcN4/data/stdcell/n4gp/TSMC/PRTF_Innovus_4nm_014_Cad_V10b/PRTF/PRTF_Innovus_4nm_014_Cad_V10b/PR_tech/Cadence/LefHeader/Standard/VHV/PRTF_Innovus_N4P_15M_1X1Xb1Xe1Ya1Yb5Y2Yy2Z_UTRDL_M1P34_M2P35_M3P42_M4P42_M5P76_M6P76_M7P76_M8P76_M9P76_M10P76_M11P76_H210_M0ROUTE_SHDMIM.10b.tlef" with version 5.8 and macro lef "/projects/byd_A3_N4P_32bits_LPDDR5_phy/libs/ndr/ndr_10w8s.lef" with version 5.6. 
+Check for all macro lefs.
+---------------------------------------------------------------------------------------------------------------------------------------------------
+EXTGRMP-766       1          The macro cdns_ddr900_custom_dataslice_h has missing SITE definition. Check macro present in /projects/byd_A3_N4P_32bits_LPDDR5_phy/libs/ddrio/cdns_ddr900_h_t5g_x32_15M1X1Xb1Xe1Ya1Yb5Y2Yy2Z_SHDMIM_150P_UBM91.8R_N4_SC_r600_v1p2.20250707/lef/cdns_ddr900_h.lef file.
+---------------------------------------------------------------------------------------------------------------------------------------------------
+EXTGRMP-768       12         BUSBITCHARS missing in /process/tsmcN4/data/stdcell/n4gp/TSMC/tcbn04p_bwph210l6p51cnod_base_lvt_100b/lef/tcbn04p_bwph210l6p51cnod_base_lvt.lef file, therefore taking default value [] for BUSBITCHARS.
+---------------------------------------------------------------------------------------------------------------------------------------------------
+EXTGRMP-769       12         DIVIDECHAR missing in /process/tsmcN4/data/stdcell/n4gp/TSMC/tcbn04p_bwph210l6p51cnod_base_lvt_100b/lef/tcbn04p_bwph210l6p51cnod_base_lvt.lef file, therefore taking default value / for DIVIDECHAR.
+---------------------------------------------------------------------------------------------------------------------------------------------------
+EXTGRMP-792       1          The DEF file dbs/cdns_lp5x_x32_ew_phy_ds_top.innovusOUTwoD0.def.gz cdns_lp5x_x32_ew_phy_ds_top has missing DIVIDERCHAR. Default value "/" is used.
+---------------------------------------------------------------------------------------------------------------------------------------------------
+EXTSNZ-157        2          The non routing layer FB1 is used in the LEF/DEF file or in the OpenAccess (OA) database but the definition for it cannot be found in the tech file.
+---------------------------------------------------------------------------------------------------------------------------------------------------
+EXTSNZ-172        17         GDS/OASIS layer m7 having layer id 337 and data type -1 is referenced and mapped in the command file but it does not have any geometries in the GDS/OASIS file.
+---------------------------------------------------------------------------------------------------------------------------------------------------
+ 
+
+TOTAL WARNINGS: 129 
+TOTAL ERRORS: 0 
+---------------------------------------------------------------------------------------------------------------------------------------------------
+----
+
+Ending at 2025-Dec-17 13:57:37 (2025-Dec-17 08:27:37 GMT).
+
+ Tool:                    Cadence Quantus Extraction 64-bit
+ Version:                 21.2.1-p009 Thu Jun 9 11:39:44 PDT 2022
+ IR Build No:             009 
+ Techfile:               
+/process/tsmcN4/data/gp/QRC/15M1X1Xb1Xe1Ya1Yb5Y2Yy2Z_SHDMIM_UT/v1d0p1a/rcworst/Tech/rcworst_CCworst_T/qrcTechFile
+; version: 20.1.2-s503 
+ License(s) used:         1 of QTS300, 1 of QTS310, 1 of QTS750 
+ User Name:               muhanx
+ Host Name:               nfdpcer017
+ Host OS Release:         Linux 4.18.0-553.5.1.el8_10.x86_64
+ Host OS Version:         #1 SMP Tue May 21 03:13:04 EDT 2024
+ CPU Model Name:          INTEL(R) XEON(R) PLATINUM 8568Y+
+ L1d Cache:               48K
+ L1i Cache:               32K
+ L2 Cache:                2048K
+ L3 Cache:                307200K
+ Memory:                  2014 GB
+ Run duration:            00:01:23 CPU time, 00:02:04 clock time
+ Max (Total) memory used: 6195 MB
+ Max (CPU) memory used:   7284 MB
+ Max Temp-Directory used: 315 MB
+ Nets/hour:               8520K nets/CPU-hr, 5702K nets/clock-hr
+ Design data:
+    Components:           724799
+    Phy components:       531967
+    Nets:                 196434
+    Unconnected pins:     5
+ Warning messages:        129
+ Error messages:          0
+
+Exit code 0.
+Cadence Quantus Extraction completed successfully at 2025-Dec-17 13:57:38
+(2025-Dec-17 08:27:38 GMT).

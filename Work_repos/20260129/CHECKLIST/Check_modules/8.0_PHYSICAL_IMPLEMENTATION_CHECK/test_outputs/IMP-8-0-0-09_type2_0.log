@@ -1,0 +1,12 @@
+PASS:IMP-8-0-0-09:Confirm we take care of the dynamic power optimization in the whole innovs flow(Check the Note)
+IMP-8-0-0-09-INFO01: [WAIVED_INFO]: Waived information:
+  Severity: Info Occurrence: 1
+  Explanation: Power optimization parameter check is informational during early implementation phases
+IMP-8-0-0-09-INFO02: All required power optimization parameters matched expected configuration (7/7):
+  Severity: Info Occurrence: 2
+  getNanoRouteMode -route_global_with_power_driven true
+  get_default_switching_activity -input_activity 0.15
+IMP-8-0-0-09-INFO03: [WAIVED_AS_INFO]: Required power optimization parameters not satisfied (5/7 correct, 2 missing/incorrect):
+  Severity: Info Occurrence: 1
+  get_default_switching_activity -clip_activity_to_domain_freq {} (expected: true)
+

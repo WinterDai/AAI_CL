@@ -1,0 +1,4 @@
+PASS:IMP-2-0-0-15:List QRC techfile name. eg: 17M1Xa1Xb1Xc1Xd1Ya1Yb4Y2Yy2Yx2R_SHDMIM_UT/fs_v1d0p1a
+Info Occurrence: 2
+1: Info: Explanation: This check is informational only - QRC techfile extraction is for reference purposes: Explanation: This check is informational only - QRC techfile extraction is for reference purposes[WAIVED_INFO]
+2: Info: 16M1X1Xb1Xe1Ya1Yb6Y2Yy2R_SHDMIM_UT/fs_v1d2p4a. In line 404, C:\Users\chenweif\Checker_dev\CHECKLIST\CHECKLIST\IP_project_folder\logs\2.0\do_qrcrcbest_CCbest_125c.log: QRC technology file path successfully extracted from process_technology option

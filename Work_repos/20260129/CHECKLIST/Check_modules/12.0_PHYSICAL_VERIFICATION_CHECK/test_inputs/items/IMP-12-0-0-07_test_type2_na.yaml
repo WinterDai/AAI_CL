@@ -1,0 +1,12 @@
+description: Confirm the ANT rule deck setting is correct.
+input_files:
+- ${CHECKLIST_ROOT}/IP_project_folder/logs/do_pvs_ANT_pvl.log
+- ${CHECKLIST_ROOT}/IP_project_folder/logs/do_cmd_3star_ANT_sourceme
+requirements:
+  pattern_items:
+  - pattern1
+  - pattern2
+  value: 2
+waivers:
+  value: N/A
+  waive_items: []

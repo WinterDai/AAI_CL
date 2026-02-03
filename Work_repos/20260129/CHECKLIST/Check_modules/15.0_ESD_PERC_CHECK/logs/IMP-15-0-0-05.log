@@ -1,0 +1,5 @@
+FAIL:IMP-15-0-0-05:Confirm the RDL and PG structure of final database match to your PERC run pass version. If you made some changes on the RDL and PG structure for DRC/EMIR after you passed PERC run, either you can submit another free run within PERC run cycle or run XOR between PERC pass run gds and your final gds and provide justifications like signal RDL layers and PG layers to IO/ESD/PLL are same betwen the two versions.
+IMP-15-0-0-05-ERROR01: Configuration error:
+  Severity: Fail Occurrence: 1
+  - input_files is empty in YAML configuration
+

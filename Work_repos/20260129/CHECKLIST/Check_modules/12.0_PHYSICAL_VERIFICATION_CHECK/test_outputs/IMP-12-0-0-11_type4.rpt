@@ -1,0 +1,20 @@
+FAIL:IMP-12-0-0-11:Confirm the DRC check result is clean. (fill the confidence level of not touching floorplan again in comment if fill no, for example, 90%~100%)
+Fail Occurrence: 14
+1: Fail: EFP.VIA13.R.1.1: 41: DRC violations found in reports - design requires fixes
+2: Fail: EFP.VIA13.R.1.2: 5: DRC violations found in reports - design requires fixes
+3: Fail: ESD.1g: 1: DRC violations found in reports - design requires fixes
+4: Fail: ESD.1g: 2: DRC violations found in reports - design requires fixes
+5: Fail: HIA.CDM9A.3.1.zg: 20: DRC violations found in reports - design requires fixes
+6: Fail: HIA.CDM9A.3.zg: 20: DRC violations found in reports - design requires fixes
+7: Fail: PO.DN.11: 1: DRC violations found in reports - design requires fixes
+8: Fail: RH_TN.WARN.1: 156: DRC violations found in reports - design requires fixes
+9: Fail: RH_TN.WARN.1: 256: DRC violations found in reports - design requires fixes
+10: Fail: RR:RE:FB1AN.R.5: 12973: DRC violations found in reports - design requires fixes
+11: Fail: RR:RE:FB1AN_OD.R.22: 498: DRC violations found in reports - design requires fixes
+12: Fail: RR:RE:FB1AN_OD.R.23.4: 491: DRC violations found in reports - design requires fixes
+13: Fail: RR:RE:FB1AN_OD.R.24.1.z: 1944: DRC violations found in reports - design requires fixes
+14: Fail: RR:RE:FB1AN_OD.S.27.z: 379: DRC violations found in reports - design requires fixes
+Warn Occurrence: 1
+1: Warn: RH_TN.WARN.1: 300: Waiver entry not matched - no corresponding DRC violation found in reports: Routing hierarchy warnings in legacy blocks - waived per IP vendor approval[WAIVER]
+Info Occurrence: 1
+1: Info: AN.R.20mg: 290. In line 9404, C:\Users\jingyu\OneDrive - Cadence Design Systems Inc\Desktop\checklist_dev\AI_2026_V1\CHECKLIST\CHECKLIST\IP_project_folder\reports\pv\Calibre_DRC.rep: DRC violation waived per design approval: Antenna ratio violations in test structures - waived per design review[WAIVER]

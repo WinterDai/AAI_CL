@@ -1,0 +1,18 @@
+all_items:
+- IMP-11-0-0-14
+- IMP-11-0-0-15
+- IMP-11-0-0-16
+- IMP-11-0-0-17
+- IMP-11-0-0-18
+assignment_date: '2026-01-06'
+developer: Guishuai Huang
+items_by_module:
+  11.0_POWER_EMIR_CHECK:
+  - IMP-11-0-0-14
+  - IMP-11-0-0-15
+  - IMP-11-0-0-16
+  - IMP-11-0-0-17
+  - IMP-11-0-0-18
+modules:
+- 11.0_POWER_EMIR_CHECK
+status: assigned

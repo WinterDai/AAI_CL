@@ -1,0 +1,17 @@
+description: Confirm proper rc/PVT corners were used for IR drop and EM analysis.
+  List rc/PVT corners used in comments field.
+input_files:
+- ${CHECKLIST_ROOT}/IP_project_folder/logs/*static*.log
+- ${CHECKLIST_ROOT}/IP_project_folder/logs/*dynamic*.log
+- ${CHECKLIST_ROOT}/IP_project_folder/logs/*EM*.log
+requirements:
+  pattern_items:
+  - func_ffgnp_0p825v_125c
+  - func_ffgnp_0p825v_m40c
+  - test_ssgnp_0p675v_125c
+  value: 3
+waivers:
+  value: 0
+  waive_items:
+  - 'Explanation: This check is informational only - corner coverage is validated
+    in separate timing signoff checklist'

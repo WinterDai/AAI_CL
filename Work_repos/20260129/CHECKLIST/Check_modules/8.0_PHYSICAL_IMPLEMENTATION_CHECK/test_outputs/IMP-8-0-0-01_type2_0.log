@@ -1,0 +1,10 @@
+PASS:IMP-8-0-0-01:Confirm all ports are assigned on metal track.
+IMP-8-0-0-01-INFO01: [WAIVED_INFO]: Waived information:
+  Severity: Info Occurrence: 1
+  Explanation: Port placement check is informational during floorplanning phase
+IMP-8-0-0-01-INFO02: All ports correctly placed on metal routing tracks:
+  Severity: Info Occurrence: 3
+  e_pi_ctrl[0]
+  rxda_cdrlf_scanmode
+  rxda_cdrlf_scanout[0]
+

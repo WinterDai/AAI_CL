@@ -1,0 +1,22 @@
+description: Confirm you placed the discrete synchronizer flops close to each other
+  (distance <= 10um) for process without dedicated 2/3 stage synchronizer library
+  cell like TSMC. Make sure “no buffering on the Q->D path between sync flops” for
+  the sync_regs falling under same hierarchy. Please fine tune clock tree for hold
+  fixing. Please don't change the VT of synchronizer flops. (Check the Note. Fill
+  N/A for library has 2/3 stages dedicated library cell)
+input_files:
+- ${CHECKLIST_ROOT}/IP_project_folder/reports/8.0/IMP-8-0-0-10.rpt
+requirements:
+  pattern_items:
+  - inst_data_path_top/inst_data_byte_macro/WR_CLK_GEN_0__inst_wr_slice_clk_gen/inst_wr_bit_clk_gen/inst_rst_n_clk4x_sync/inst_hic_dff_out
+  - inst_data_path_top/inst_data_byte_macro/RD_CLK_GEN_0__inst_rd_slice_clk_gen/inst_rd_bit_clk_gen/inst_rst_n_clk2x_sync/inst_hic_dff_out
+  value: 2
+waivers:
+  value: 2
+  waive_items:
+  - name: inst_data_path_top/inst_data_byte_macro/WR_CLK_GEN_0__inst_wr_slice_clk_gen/inst_wr_bit_clk_gen/inst_rst_n_clk4x_sync/inst_hic_dff_out
+    reason: Waived per design review - low-density region constraint, timing analysis
+      confirms acceptable metastability window
+  - name: inst_data_path_top/inst_data_byte_macro/RD_CLK_GEN_0__inst_rd_slice_clk_gen/inst_rd_bit_clk_gen/inst_rst_n_clk2x_sync/inst_hic_dff_out
+    reason: Waived - mux required for test mode switching, CDC functionality verified
+      by simulation

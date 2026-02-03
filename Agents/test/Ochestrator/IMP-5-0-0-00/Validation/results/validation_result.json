@@ -1,0 +1,250 @@
+{
+  "checker_id": "IMP-5-0-0-00",
+  "input_hash": "5e646999",
+  "status": "PASS",
+  "timestamp": "2026-01-06T11:40:42.442198",
+  "test_cases": [
+    {
+      "id": "TC_01",
+      "type_id": 1,
+      "scenario": "Type 1 正向 - Boolean check 应 PASS: 检测到 CCS 库模型，无 wireload 引用",
+      "direction": "positive",
+      "config_override": {
+        "waivers": {
+          "value": "N/A",
+          "waive_items": "[]"
+        }
+      },
+      "expected_output": null
+    },
+    {
+      "id": "TC_02",
+      "type_id": 1,
+      "scenario": "Type 1 反向 - Boolean check 应 FAIL: 要求必须存在 wireload 模型（反向逻辑）",
+      "direction": "negative",
+      "config_override": {
+        "requirements": {
+          "pattern_items": [
+            "*wireload*",
+            "*_wlm"
+          ]
+        },
+        "waivers": {
+          "value": "N/A",
+          "waive_items": "[]"
+        }
+      },
+      "expected_output": null
+    },
+    {
+      "id": "TC_03",
+      "type_id": 2,
+      "scenario": "Type 2 正向 - Value check 应 PASS: CCS/NLDM 库模式匹配数量在阈值内",
+      "direction": "positive",
+      "config_override": {
+        "waivers": {
+          "value": "N/A",
+          "waive_items": "[]"
+        }
+      },
+      "expected_output": null
+    },
+    {
+      "id": "TC_04",
+      "type_id": 2,
+      "scenario": "Type 2 反向 - Value check 应 FAIL: 设置过低阈值使 CCS 库数量超标",
+      "direction": "negative",
+      "config_override": {
+        "waivers": {
+          "value": "N/A",
+          "waive_items": "[]"
+        }
+      },
+      "expected_output": null
+    },
+    {
+      "id": "TC_05",
+      "type_id": 3,
+      "scenario": "Type 3 正向 - Value + Waiver 应 PASS: 所有 ULVT 库违规均被豁免",
+      "direction": "positive",
+      "config_override": {
+        "waivers": {
+          "value": "4",
+          "waive_items": "[\n          {\"name\": \"tcbn03e_bwp143mh117l3p48cpd_base_ulvtssgnp_0p675v_m40c_cworst_CCworst_T_ccs\", \"reason\": \"ULVT library approved for critical paths\"},\n          {\"name\": \"tcbn03e_bwp143mh169l3p48cpd_base_ulvtssgnp_0p675v_m40c_cworst_CCworst_T_ccs\", \"reason\": \"ULVT library approved for critical paths\"},\n          {\"name\": \"tcbn03e_bwp143mh286l3p48cpd_base_ulvtssgnp_0p675v_m40c_cworst_CCworst_T_ccs\", \"reason\": \"ULVT library approved for critical paths\"}\n        ]"
+        }
+      },
+      "expected_output": null
+    },
+    {
+      "id": "TC_06",
+      "type_id": 3,
+      "scenario": "Type 3 反向 - Value + Waiver 应 FAIL: 部分 ULVT 库未豁免导致超标",
+      "direction": "negative",
+      "config_override": {
+        "waivers": {
+          "value": "2",
+          "waive_items": "[\n          {\"name\": \"tcbn03e_bwp143mh117l3p48cpd_base_ulvtssgnp_0p675v_m40c_cworst_CCworst_T_ccs\", \"reason\": \"Partial waiver\"}\n        ]"
+        }
+      },
+      "expected_output": null
+    },
+    {
+      "id": "TC_07",
+      "type_id": 4,
+      "scenario": "Type 4 正向 - Boolean + Waiver 应 PASS: 全局豁免 wireload 检查失败",
+      "direction": "positive",
+      "config_override": {
+        "waivers": {
+          "value": "1",
+          "waive_items": "[\n          {\"name\": \"global_timing_model_waiver\", \"reason\": \"Early development phase - wireload models temporarily allowed\"}\n        ]"
+        }
+      },
+      "expected_output": null
+    },
+    {
+      "id": "TC_08",
+      "type_id": 4,
+      "scenario": "Type 4 反向 - Boolean + Waiver 应 FAIL: 无全局豁免且检测到非 CCS 库",
+      "direction": "negative",
+      "config_override": {
+        "requirements": {
+          "pattern_items": [
+            "*_nldm*",
+            "*wireload*"
+          ]
+        },
+        "waivers": {
+          "value": "N/A",
+          "waive_items": "[]"
+        }
+      },
+      "expected_output": null
+    }
+  ],
+  "reviews": [
+    {
+      "test_case_id": "TC_01",
+      "type_id": 1,
+      "blind_expected": "PASS",
+      "reasoning": "Type 1 boolean check: log样本显示所有technology libraries都有_ccs后缀(library_ccs_indicator found)，且无Wireload Model字段(wireload_model_name is None)。满足pass_condition: \"library_ccs_indicator found AND wireload_model_name is None\"",
+      "actual_output": "PASS",
+      "verdict": "CORRECT",
+      "confidence": "HIGH",
+      "discrepancy": "",
+      "issue": "",
+      "suggestion": "",
+      "invalid_reason": ""
+    },
+    {
+      "test_case_id": "TC_02",
+      "type_id": 1,
+      "blind_expected": "PASS",
+      "reasoning": "Type 2 pattern search: 搜索pattern_items [\"*wireload*\", \"*_wlm\"]。Log样本中所有库名格式为\"tcbn03e_..._ccs 110\"，不包含wireload或_wlm字符串。违规数=0，满足 violations ≤ requirements.value",
+      "actual_output": "PASS",
+      "verdict": "CORRECT",
+      "confidence": "HIGH",
+      "discrepancy": "",
+      "issue": "",
+      "suggestion": "",
+      "invalid_reason": ""
+    },
+    {
+      "test_case_id": "TC_03",
+      "type_id": 2,
+      "blind_expected": "PASS",
+      "reasoning": "Type 1 boolean check (同TC_01): library models confirmed via _ccs indicators, no wireload references",
+      "actual_output": "PASS",
+      "verdict": "CORRECT",
+      "confidence": "HIGH",
+      "discrepancy": "",
+      "issue": "",
+      "suggestion": "",
+      "invalid_reason": ""
+    },
+    {
+      "test_case_id": "TC_04",
+      "type_id": 2,
+      "blind_expected": "PASS",
+      "reasoning": "Type 1 boolean check (同TC_01): library-based timing models confirmed",
+      "actual_output": "PASS",
+      "verdict": "CORRECT",
+      "confidence": "HIGH",
+      "discrepancy": "",
+      "issue": "",
+      "suggestion": "",
+      "invalid_reason": ""
+    },
+    {
+      "test_case_id": "TC_05",
+      "type_id": 3,
+      "blind_expected": "UNCERTAIN",
+      "reasoning": "配置显示waivers.value=4且有waive_items，但缺少pattern_items字段。根据Type 3定义需要\"requirements.value>0, pattern_items exists\"，此配置不满足Type 3的前置条件。无法确定checker如何处理这种不完整配置。",
+      "actual_output": "PASS",
+      "verdict": "TESTCASE_INVALID",
+      "confidence": "HIGH",
+      "discrepancy": "配置缺少pattern_items，但checker返回PASS",
+      "issue": "TestCase设计问题：Type 3需要pattern_items来定义要搜索的违规模式，但配置中未提供。这导致无法执行\"搜索pattern_items并分类waived/unwaived violations\"的逻辑。Checker可能降级到Type 1处理或使用默认行为。",
+      "suggestion": "修正TestCase: 为TC_05添加pattern_items配置，例如 pattern_items: [\"*_ulvt*\"] 来匹配waive_items中的ULVT库，使测试能够验证waiver分类逻辑。",
+      "invalid_reason": "配置不完整：Type 3要求pattern_items存在，但配置中缺失该字段，导致测试无法验证预期的waiver逻辑"
+    },
+    {
+      "test_case_id": "TC_06",
+      "type_id": 3,
+      "blind_expected": "UNCERTAIN",
+      "reasoning": "同TC_05，waivers.value=2但缺少pattern_items。Type 3配置不完整，无法推理预期行为。",
+      "actual_output": "PASS",
+      "verdict": "TESTCASE_INVALID",
+      "confidence": "HIGH",
+      "discrepancy": "配置缺少pattern_items，但checker返回PASS",
+      "issue": "TestCase设计问题：与TC_05相同，Type 3配置缺少必需的pattern_items字段。无法验证\"部分waiver\"场景下的unwaived violations计数逻辑。",
+      "suggestion": "修正TestCase: 添加pattern_items (如 [\"*_ulvt*\"]) 并调整requirements.value，使测试能够验证部分豁免场景：部分违规被waive，部分未被waive，检查unwaived count是否≤阈值。",
+      "invalid_reason": "配置不完整：Type 3需要pattern_items定义违规模式，当前配置无法触发预期的waiver分类逻辑"
+    },
+    {
+      "test_case_id": "TC_07",
+      "type_id": 4,
+      "blind_expected": "PASS",
+      "reasoning": "Type 4 boolean check with waiver: log样本显示library models confirmed (_ccs indicators present, no wireload)。根据Type 4逻辑 \"library_models_confirmed OR global_waiver_applied\"，即使有global waiver配置，因为library models已确认，应直接PASS而不需要应用waiver。",
+      "actual_output": "PASS",
+      "verdict": "CORRECT",
+      "confidence": "MEDIUM",
+      "discrepancy": "",
+      "issue": "",
+      "suggestion": "建议增加测试用例：提供一个wireload model存在的log样本来验证global waiver是否能正确应用（即测试 \"NOT library_models_confirmed AND global_waiver_applied\" 分支）",
+      "invalid_reason": ""
+    },
+    {
+      "test_case_id": "TC_08",
+      "type_id": 4,
+      "blind_expected": "PASS",
+      "reasoning": "Type 2 pattern search: 搜索[\"*_nldm*\", \"*wireload*\"]。Log样本中所有库都是_ccs格式，不包含nldm或wireload。违规数=0，满足阈值条件。",
+      "actual_output": "PASS",
+      "verdict": "CORRECT",
+      "confidence": "HIGH",
+      "discrepancy": "",
+      "issue": "",
+      "suggestion": "",
+      "invalid_reason": ""
+    }
+  ],
+  "aggregated": {
+    "total_test_cases": 6,
+    "correct_count": 6,
+    "incorrect_count": 0,
+    "uncertain_count": 0,
+    "invalid_count": 2,
+    "final_verdict": "PASS",
+    "verdict_reason": "所有测试通过",
+    "issues": [],
+    "suggestions": [],
+    "by_type": {},
+    "by_direction": {}
+  },
+  "report_markdown": "# Validation Report: IMP-5-0-0-00\n\n## 概要\n- 总测试数: 8\n- 有效测试: 6\n- CORRECT: 6\n- INCORRECT: 0\n- UNCERTAIN: 0\n- TESTCASE_INVALID: 2\n\n## 整体判定\n**PASS** - 所有测试通过\n\n## 测试详情\n### TC_01\n- 盲推预期: PASS\n- 实际输出: PASS\n- 判定: **CORRECT**\n- 置信度: HIGH\n- 推理: Type 1 boolean check: log样本显示所有technology libraries都有_ccs后缀(library_ccs_indicator found)，且无Wireload Model字段(wireload_model_name is None)。满足pass_condition: \"library_ccs_indicator found AND wireload_model_name is None\"\n\n### TC_02\n- 盲推预期: PASS\n- 实际输出: PASS\n- 判定: **CORRECT**\n- 置信度: HIGH\n- 推理: Type 2 pattern search: 搜索pattern_items [\"*wireload*\", \"*_wlm\"]。Log样本中所有库名格式为\"tcbn03e_..._ccs 110\"，不包含wireload或_wlm字符串。违规数=0，满足 violations ≤ requirements.value\n\n### TC_03\n- 盲推预期: PASS\n- 实际输出: PASS\n- 判定: **CORRECT**\n- 置信度: HIGH\n- 推理: Type 1 boolean check (同TC_01): library models confirmed via _ccs indicators, no wireload references\n\n### TC_04\n- 盲推预期: PASS\n- 实际输出: PASS\n- 判定: **CORRECT**\n- 置信度: HIGH\n- 推理: Type 1 boolean check (同TC_01): library-based timing models confirmed\n\n### TC_05\n- 盲推预期: UNCERTAIN\n- 实际输出: PASS\n- 判定: **TESTCASE_INVALID**\n- 置信度: HIGH\n- 推理: 配置显示waivers.value=4且有waive_items，但缺少pattern_items字段。根据Type 3定义需要\"requirements.value>0, pattern_items exists\"，此配置不满足Type 3的前置条件。无法确定checker如何处理这种不完整配置。\n- 问题: TestCase设计问题：Type 3需要pattern_items来定义要搜索的违规模式，但配置中未提供。这导致无法执行\"搜索pattern_items并分类waived/unwaived violations\"的逻辑。Checker可能降级到Type 1处理或使用默认行为。\n- 建议: 修正TestCase: 为TC_05添加pattern_items配置，例如 pattern_items: [\"*_ulvt*\"] 来匹配waive_items中的ULVT库，使测试能够验证waiver分类逻辑。\n- 无效原因: 配置不完整：Type 3要求pattern_items存在，但配置中缺失该字段，导致测试无法验证预期的waiver逻辑\n\n### TC_06\n- 盲推预期: UNCERTAIN\n- 实际输出: PASS\n- 判定: **TESTCASE_INVALID**\n- 置信度: HIGH\n- 推理: 同TC_05，waivers.value=2但缺少pattern_items。Type 3配置不完整，无法推理预期行为。\n- 问题: TestCase设计问题：与TC_05相同，Type 3配置缺少必需的pattern_items字段。无法验证\"部分waiver\"场景下的unwaived violations计数逻辑。\n- 建议: 修正TestCase: 添加pattern_items (如 [\"*_ulvt*\"]) 并调整requirements.value，使测试能够验证部分豁免场景：部分违规被waive，部分未被waive，检查unwaived count是否≤阈值。\n- 无效原因: 配置不完整：Type 3需要pattern_items定义违规模式，当前配置无法触发预期的waiver分类逻辑\n\n### TC_07\n- 盲推预期: PASS\n- 实际输出: PASS\n- 判定: **CORRECT**\n- 置信度: MEDIUM\n- 推理: Type 4 boolean check with waiver: log样本显示library models confirmed (_ccs indicators present, no wireload)。根据Type 4逻辑 \"library_models_confirmed OR global_waiver_applied\"，即使有global waiver配置，因为library models已确认，应直接PASS而不需要应用waiver。\n- 建议: 建议增加测试用例：提供一个wireload model存在的log样本来验证global waiver是否能正确应用（即测试 \"NOT library_models_confirmed AND global_waiver_applied\" 分支）\n\n### TC_08\n- 盲推预期: PASS\n- 实际输出: PASS\n- 判定: **CORRECT**\n- 置信度: HIGH\n- 推理: Type 2 pattern search: 搜索[\"*_nldm*\", \"*wireload*\"]。Log样本中所有库都是_ccs格式，不包含nldm或wireload。违规数=0，满足阈值条件。\n",
+  "feedback": null,
+  "total_count": 6,
+  "correct_count": 6,
+  "incorrect_count": 0,
+  "uncertain_count": 0,
+  "invalid_count": 2
+}

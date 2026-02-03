@@ -1,0 +1,3 @@
+FAIL:IMP-12-0-0-10:Confirm turn-off the VIRTUAL_CONNECT in LVS setting.
+Fail Occurrence: 1
+1: Fail: Expected pattern not found, got VIRTUAL CONNECT COLON YES (Line 80 in /home/jingyu/checklist_dev/CHECKLIST/CHECKLIST/IP_project_folder/logs/do_cmd_3star_LVS_sourceme): VIRTUAL_CONNECT setting does not satisfy disabled state requirement

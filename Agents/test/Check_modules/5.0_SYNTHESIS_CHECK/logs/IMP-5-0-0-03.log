@@ -1,0 +1,5 @@
+PASS:IMP-5-0-0-03:Confirm target standard cell library corners are correct?
+IMP-5-0-0-03-INFO01: Library corner detected in synthesis:
+  Severity: Info Occurrence: 1
+  - ssgnp_0p675v_m40c_cworst_CCworst_T
+

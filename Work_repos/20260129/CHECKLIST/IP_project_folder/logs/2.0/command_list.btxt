@@ -1,0 +1,8 @@
+temperature 125
+spice_subckts /process/tsmcN5/data/g/PEGASUS/LVS/current/source.added /process/tsmcN5/data/stdcell/n5/TSMC/tpmn05_12esd_120b/lpe_spice/tpmn05_12esd_lpe_cworst_CCworst_T.spi 
+spice_models /process/tsmcN5/data/g/PDK/tsmc5g.a.12/models/spectre_v1d2_2p5/ir_em.scs 
+extraction_tech_file /process/tsmcN5/data/g/QRC/16M1X1Xb1Xe1Ya1Yb6Y2Yy2R_SHDMIM_UT/fs_v1d2p4a/rcworst/Tech/rcworst_CCworst_T/qrcTechFile
+spice_subckts_xyscaling 1000
+use_powergate_data_from_lib 0
+default_frequency 1e+09
+decap_frequency 1e+09

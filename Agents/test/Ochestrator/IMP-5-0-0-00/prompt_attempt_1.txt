@@ -1,0 +1,1152 @@
+# 📚 学习材料 (Grounding Data)
+
+## 📌 参考选择说明
+
+**推荐参考**: `IMP-10-0-0-00` (匹配度: 🟢 高 90%)
+
+**选择原因**: Similar report parsing pattern for technology library extraction and timing model verification. Both checks analyze synthesis QoR reports to verify configuration compliance.
+
+---
+
+## 🎯 代码参考片段 (来自相似 Item 的验证代码)
+
+以下是从已验证的 Checker 代码中提取的相关片段，请学习其**模式**（不要照抄）：
+
+### ⚡ Type Execution
+
+**type1** (from Unknown):
+```python
+"""
+IMP-10-0-0-00: _execute_type1 (v6.0 三层架构)
+Purpose: Boolean check - verify netlist and SPEF loaded successfully
+
+Complexity: LOW (使用框架方法)
+Techniques: three_layer_architecture, execute_boolean_check
+
+v6.0 更新:
+- 使用 execute_boolean_check() 框架方法
+- 复用 _boolean_check_logic() 共享模块
+- has_waiver=False (Type1 不处理 waiver)
+"""
+
+    def _execute_type1(self, parsed_data: Dict[str, Any]) -> CheckResult:
+        """
+        Type 1: Boolean check - verify netlist and SPEF are loaded successfully
+        
+        Layer 3: 执行层 - 调用框架方法
+        架构：Boolean Logic + 无Waiver
+        Pass Condition: Both files read with Status: Success
+        Fail Condition: Any file read failed
+        """
+        def parse_data():
+            """调用共享的Boolean Check Logic"""
+            return self._boolean_check_logic(parsed_data)
+        
+        return self.execute_boolean_check(
+            parse_data_func=parse_data,
+            has_waiver=False,
+            found_desc=self.FOUND_DESC,
+            missing_desc=self.MISSING_DESC,
+            extra_desc=self.EXTRA_DESC,
+            name_extractor=self._build_name_extractor()
+        )
+```
+
+**type2** (from Unknown):
+```python
+"""
+IMP-10-0-0-00: _execute_type2 (v6.0 三层架构)
+Purpose: Value check - match version info from pattern_items
+
+Complexity: LOW (使用框架方法)
+Techniques: three_layer_architecture, execute_value_check
+
+v6.0 更新:
+- 使用 execute_value_check() 框架方法
+- 复用 _pattern_check_logic() 共享模块
+- has_waiver=False (Type2 不处理 waiver)
+"""
+
+    def _execute_type2(self, parsed_data: Dict[str, Any]) -> CheckResult:
+        """
+        Type 2: Value check - match version info from pattern_items
+        
+        Layer 3: 执行层 - 调用框架方法
+        架构：Pattern Logic + 无Waiver
+        Pass Condition: Pattern items found in output
+        Fail Condition: Pattern items not found
+        """
+        def parse_data():
+            """调用共享的Pattern Check Logic"""
+            return self._pattern_check_logic(parsed_data)
+        
+        return self.execute_value_check(
+            parse_data_func=parse_data,
+            has_waiver=False,
+            found_desc="Netlist/SPEF version is correct",
+            missing_desc="Netlist/SPEF version isn't correct",
+            extra_desc=self.EXTRA_DESC,
+            name_extractor=self._build_name_extractor()
+        )
+```
+
+**type3** (from Unknown):
+```python
+"""
+IMP-10-0-0-00: _execute_type3 (v6.0 三层架构)
+Purpose: Value check with waiver - match pattern_items with waiver handling
+
+Complexity: MEDIUM (需要构建 info_items)
+Techniques: three_layer_architecture, execute_value_check, waiver_control
+
+v6.0 更新:
+- 使用 execute_value_check() 框架方法
+- 复用 _pattern_check_logic() 共享模块 (与Type2相同！)
+- has_waiver=True (Type3 处理 waiver)
+- 可选: info_items 用于展示性INFO项
+"""
+
+    def _execute_type3(self, parsed_data: Dict[str, Any]) -> CheckResult:
+        """
+        Type 3: Value check with waiver - match version info from pattern_items with waiver handling
+        
+        Layer 3: 执行层 - 调用框架方法
+        架构：Pattern Logic (复用Type2) + Waiver过滤
+        Pass Condition: Pattern items found or waived
+        Fail Condition: Pattern items not found and not waived
+        """
+        # Prepare info_items outside parse_data (needs access to parsed_data)
+        netlist_info = parsed_data.get('netlist_info', {})
+        info_items = {}
+        if netlist_info.get('status') == 'Success' or netlist_info.get('relative_path'):
+            metadata = self._metadata.get('netlist_success', {})
+            if netlist_info.get('path'):
+                netlist_path = netlist_info.get('path')
+                info_items[f"Netlist path: {netlist_path}"] = {
+                    'line_number': metadata.get('line_number', 0),
+                    'file_path': metadata.get('file_path', ''),
+                    'reason': 'Status: Success (found in log, file not accessible for version check)'
+                }
+            elif netlist_info.get('relative_path'):
+                netlist_rel_path = netlist_info['relative_path']
+                info_items[f"Netlist path: {netlist_rel_path}"] = {
+                    'line_number': metadata.get('line_number', 0),
+                    'file_path': metadata.get('file_path', ''),
+                    'reason': 'Status: Success (found in log, file not accessible for version check)'
+                }
+        
+        def parse_data():
+            """调用共享的Pattern Check Logic (与Type2相同)"""
+            return self._pattern_check_logic(parsed_data)
+        
+        return self.execute_value_check(
+            parse_data_func=parse_data,
+            has_waiver=True,  # Type3特有: 启用waiver处理
+            info_items=info_items,
+            found_desc="Netlist/SPEF version is correct",
+            missing_desc="Netlist/SPEF version isn't correct",
+            extra_desc=self.EXTRA_DESC,
+            extra_severity=Severity.FAIL,
+            name_extractor=self._build_name_extractor()
+        )
+```
+
+**type4** (from Unknown):
+```python
+"""
+IMP-10-0-0-00: _execute_type4 (v6.0 三层架构)
+Purpose: Boolean check with waiver - verify load success with waiver handling
+
+Complexity: LOW (使用框架方法)
+Techniques: three_layer_architecture, execute_boolean_check, waiver_control
+
+v6.0 更新:
+- 使用 execute_boolean_check() 框架方法
+- 复用 _boolean_check_logic() 共享模块 (与Type1相同！)
+- has_waiver=True (Type4 处理 waiver)
+"""
+
+    def _execute_type4(self, parsed_data: Dict[str, Any]) -> CheckResult:
+        """
+        Type 4: Boolean check with waiver - verify netlist and SPEF loaded successfully with waiver handling
+        
+        Layer 3: 执行层 - 调用框架方法
+        架构：Boolean Logic (复用Type1) + Waiver过滤
+        Pass Condition: Both files read with Status: Success or waived
+        Fail Condition: Any file read failed and not waived
+        """
+        def parse_data():
+            """调用共享的Boolean Check Logic (与Type1相同)"""
+            return self._boolean_check_logic(parsed_data)
+        
+        return self.execute_boolean_check(
+            parse_data_func=parse_data,
+            has_waiver=True,  # Type4特有: 启用waiver处理
+            found_desc=self.FOUND_DESC,
+            missing_desc=self.MISSING_DESC,
+            extra_desc=self.EXTRA_DESC,
+            name_extractor=self._build_name_extractor()
+        )
+```
+
+### 🔧 Helper Methods
+
+**parsing** (from Unknown):
+```python
+"""
+IMP-10-0-0-00: _parse_input_files (v6.0 三层架构)
+Purpose: Confirm the netlist/spef version is correct.
+
+Complexity: MEDIUM
+Techniques: three_layer_architecture
+
+v6.0 更新:
+- 返回 Dict[str, Any] 而非 Tuple
+- 包含 netlist_info, spef_info, errors 三个字段
+"""
+
+    def _parse_input_files(self) -> Dict[str, Any]:
+        """
+        Parse input files to extract netlist and SPEF version information.
+        
+        Layer 1: 解析层 - 4个Type共享，只调用一次
+        
+        Returns:
+            Dict with keys:
+            - netlist_info: Dict with netlist metadata
+            - spef_info: Dict with SPEF metadata
+            - errors: List of error messages
+        """
+        # Initialize metadata storage
+        self._metadata = {}
+        
+        # Parse STA log first
+        sta_log_info = self._parse_sta_log()
+        
+        netlist_info = {}
+        spef_info = {}
+        errors = list(sta_log_info.get('errors', []))
+        
+        # Parse netlist file if found
+        if sta_log_info.get('netlist_path'):
+            netlist_path = sta_log_info['netlist_path']
+            netlist_info = self._parse_netlist_version(netlist_path)
+            netlist_info['path'] = str(netlist_path)
+            netlist_info['status'] = sta_log_info.get('netlist_status', 'Unknown')
+            
+            if not netlist_info.get('version'):
+                errors.append(f"Failed to extract version from netlist: {netlist_path.name}")
+        elif sta_log_info.get('netlist_relative_path'):
+            netlist_info['relative_path'] = sta_log_info['netlist_relative_path']
+            netlist_info['status'] = sta_log_info.get('netlist_status', 'Unknown')
+            netlist_info['note'] = 'File path found in log but actual file not accessible'
+        else:
+            errors.append("Netlist file path not found in STA log")
+        
+        # Parse SPEF file if found
+        if sta_log_info.get('spef_path'):
+            spef_path = sta_log_info['spef_path']
+            spef_info = self._parse_spef_version(spef_path)
+            spef_info['path'] = str(spef_path)
+            spef_info['status'] = sta_log_info.get('spef_status', 'Unknown')
+        else:
+            spef_status = sta_log_info.get('spef_status', 'Not Found')
+            spef_info['status'] = spef_status
+            if spef_status == 'Skipped':
+                metadata = self._metadata.get('spef_skipped', {})
+                skip_reason = metadata.get('reason', 'SPEF reading was skipped')
+                spef_info['skip_reason'] = skip_reason.replace('[INFO] ', '')
+        
+        return {
+            'netlist_info': netlist_info,
+            'spef_info': spef_info,
+            'errors': errors
+        }
+```
+
+**helper** (from Unknown):
+```python
+"""
+IMP-10-0-0-00: Layer 2 共享逻辑模块 (v6.0 三层架构)
+Purpose: Boolean/Pattern Check Logic - 核心业务逻辑
+
+Complexity: MEDIUM
+Techniques: three_layer_architecture, shared_logic
+
+这个文件包含 Layer 2 的两个共享逻辑方法:
+1. _boolean_check_logic() - Type1/4 共享
+2. _pattern_check_logic() - Type2/3 共享
+3. _extract_data() - 辅助方法，从 parsed_data 提取数据
+4. _build_name_extractor() - 输出格式化辅助方法
+"""
+
+    def _extract_data(self, parsed_data: Dict[str, Any]) -> tuple:
+        """Extract common data from parsed_data for all Types"""
+        return (
+            parsed_data.get('netlist_info', {}),
+            parsed_data.get('spef_info', {}),
+            parsed_data.get('errors', [])
+        )
+    
+    def _boolean_check_logic(self, parsed_data: Dict[str, Any]) -> tuple:
+        """
+        Boolean Check Logic (Type1/4 共享)
+        
+        Layer 2: 逻辑层 - 核心业务逻辑
+        核心业务逻辑：检查文件是否存在 (存在性判断)
+        
+        Returns:
+            tuple: (found_items, missing_items, extra_items) - 全部是 Dict
+        """
+        netlist_info, spef_info, errors = self._extract_data(parsed_data)
+        
+        found_items = {}
+        missing_items = {}
+        extra_items = {}
+        
+        # Check netlist
+        netlist_status = netlist_info.get('status', 'Not Found')
+        if netlist_status == 'Success':
+            if netlist_info.get('path'):
+                metadata = self._metadata.get('netlist_success', {})
+                found_items["Netlist File"] = {
+                    'line_number': metadata.get('line_number', 0),
+                    'file_path': metadata.get('file_path', ''),
+                    'version': netlist_info.get('version', 'Unknown'),
+                    'date': netlist_info.get('full_timestamp', netlist_info.get('date', 'Unknown')),
+                    'path': netlist_info.get('path', 'Unknown')
+                }
+            elif netlist_info.get('relative_path'):
+                metadata = self._metadata.get('netlist_success', {})
+                found_items["Netlist File"] = {
+                    'line_number': metadata.get('line_number', 0),
+                    'file_path': metadata.get('file_path', ''),
+                    'note': 'found in log, file not accessible',
+                    'path': netlist_info['relative_path']
+                }
+        else:
+            missing_items["Netlist File"] = {
+                'reason': f"Status: {netlist_status}"
+            }
+        
+        # Check SPEF
+        spef_status = spef_info.get('status', 'Not Found')
+        if spef_status == 'Success':
+            if spef_info.get('path'):
+                metadata = self._metadata.get('spef_step_end', {})
+                found_items["SPEF File"] = {
+                    'line_number': metadata.get('line_number', 0),
+                    'file_path': metadata.get('file_path', ''),
+                    'version': spef_info.get('version', 'Unknown'),
+                    'date': spef_info.get('date', 'Unknown'),
+                    'path': spef_info.get('path', 'Unknown')
+                }
+        elif spef_status == 'Skipped':
+            metadata = self._metadata.get('spef_skipped', {})
+            skip_reason = spef_info.get('skip_reason', 'SPEF reading was skipped')
+            missing_items["SPEF Reading was skipped"] = {
+                'line_number': 0,
+                'file_path': 'N/A',
+                'reason': skip_reason
+            }
+        else:
+            missing_items["SPEF File"] = {
+                'reason': f"Status: {spef_status}"
+            }
+        
+        # Add errors as extra items
+        for error in errors:
+            if "SPEF reading was skipped" not in error:
+                extra_items[f"Error: {error}"] = {
+                    'reason': 'Unexpected error'
+                }
+        
+        return found_items, missing_items, extra_items
+
+    def _pattern_check_logic(self, parsed_data: Dict[str, Any]) -> tuple:
+        """
+        Pattern Check Logic (Type2/3 共享)
+        
+        Layer 2: 逻辑层 - 核心业务逻辑
+        核心业务逻辑：匹配版本信息 pattern (正则匹配)
+        
+        Returns:
+            tuple: (found_items, missing_items, extra_items) - 全部是 Dict
+        """
+        netlist_info, spef_info, errors = self._extract_data(parsed_data)
+        
+        # Get pattern_items from requirements
+        requirements = self.item_data.get('requirements', {})
+        pattern_items = requirements.get('pattern_items', [])
+        
+        found_items = {}
+        missing_items = {}
+        extra_items = {}
+        
+        # Collect all content to search
+        all_content = []
+        if netlist_info.get('tool'):
+            all_content.append(f"Tool: {netlist_info['tool']}")
+        if netlist_info.get('version'):
+            all_content.append(f"Genus Synthesis Solution {netlist_info['version']}")
+        if netlist_info.get('full_timestamp'):
+            all_content.append(f"Generated on: {netlist_info['full_timestamp']}")
+        if spef_info.get('program'):
+            all_content.append(f"Program: {spef_info['program']}")
+        if spef_info.get('version'):
+            all_content.append(f"VERSION {spef_info['version']}")
+        if spef_info.get('date'):
+            all_content.append(f"DATE {spef_info['date']}")
+        
+        # Match patterns
+        matched_patterns = set()
+        for pattern in pattern_items:
+            found = False
+            matched_content = None
+            for content in all_content:
+                if self._match_pattern(content, [pattern]):
+                    found = True
+                    matched_content = content
+                    break
+            
+            if found:
+                matched_patterns.add(pattern)
+                if 'Genus' in pattern or 'Generated on' in pattern:
+                    metadata = self._metadata.get('netlist_success', {})
+                else:
+                    metadata = self._metadata.get('spef_step_end', {})
+                found_items[pattern] = {
+                    'line_number': metadata.get('line_number', 0),
+                    'file_path': metadata.get('file_path', ''),
+                    'matched': matched_content
+                }
+        
+        # Find unmatched patterns
+        for p in pattern_items:
+            if p not in matched_patterns:
+                missing_items[p] = {
+                    'reason': 'Required pattern not found'
+                }
+        
+        # Check SPEF skip status
+        if spef_info.get('status') == 'Skipped':
+            metadata = self._metadata.get('spef_skipped', {})
+            extra_items["SPEF Reading was skipped"] = {
+                'line_number': metadata.get('line_number', 0),
+                'file_path': metadata.get('file_path', ''),
+                'reason': spef_info.get('skip_reason', 'SPEF reading was skipped')
+            }
+        
+        return found_items, missing_items, extra_items
+
+    def _build_name_extractor(self):
+        """Return name_extractor function for formatting output names"""
+        def extract_name(name: str, metadata: Any) -> str:
+            if isinstance(metadata, dict):
+                version = metadata.get('version', '')
+                date = metadata.get('date', '')
+                note = metadata.get('note', '')
+                matched = metadata.get('matched', '')
+                reason = metadata.get('reason', '')
+                
+                if version and date:
+                    return f"{name}, Version: {version}, Date: {date}"
+                elif version:
+                    return f"{name}, Version: {version}"
+                elif note:
+                    return f"{name} ({note})"
+                elif matched:
+                    return f"{name}: {matched}"
+                elif reason:
+                    return f"{name}: {reason}"
+            return name
+        return extract_name
+```
+
+## 📋 Data Structure Rules
+
+⚠️ **CRITICAL**: All items MUST be `Dict[str, Dict]`, NOT List!
+
+```python
+# ✅ Correct
+found_items["Item"] = {"line_number": 10, "file_path": "..."}
+
+# ❌ Wrong
+missing_items.append("Item")  # NO! Must be Dict
+```
+
+## 📋 真实 Log 样本 (正则表达式设计依据)
+
+请基于以下真实日志设计正则表达式：
+
+### main
+```
+Generated by:           Genus(TM) Synthesis Solution 23.14-s090_1
+Generated on:           Sep 08 2025  01:47:15 pm
+Module:                 phy_cmn_phase_align_digtop
+tcbn03e_bwp143mh286l3p48cpd_mb_elvtssgnp_0p675v_m40c_cworst_CCworst_T_ccs 110
+tcbn03e_bwp143mh286l3p48cpd_mb_lvtssgnp_0p675v_m40c_cworst_CCworst_T_ccs 110
+tcbn03e_bwp143mh286l3p48cpd_mb_svtssgnp_0p675v_m40c_cworst_CCworst_T_ccs 110
+Library domain:         tcond_ssgnp_0p675v_m40c_cworst_CCworst_T_cworst_CCworst_T_setup_ideal_virtual
+Domain index:         0
+Technology libraries: tcbn03e_bwp143mh117l3p48cpd_base_elvtssgnp_0p675v_m40c_cworst_CCworst_T_ccs 110
+tcbn03e_bwp143mh117l3p48cpd_base_lvtssgnp_0p675v_m40c_cworst_CCworst_T_ccs 110
+tcbn03e_bwp143mh117l3p48cpd_base_svtssgnp_0p675v_m40c_cworst_CCworst_T_ccs 110
+tcbn03e_bwp143mh117l3p48cpd_base_ulvtssgnp_0p675v_m40c_cworst_CCworst_T_ccs 110
+tcbn03e_bwp143mh169l3p48cpd_base_elvtssgnp_0p675v_m40c_cworst_CCworst_T_ccs 110
+... (truncated)
+```
+
+
+<semantic_intent>
+  <check_target>Verify that synthesis timing analysis is using library models (not wireload models)</check_target>
+  <data_flow>QoR_Report → extract timing model configuration → verify lib model usage</data_flow>
+  <data_sources>
+    <source name="QoR_Report" data_role="direct_source">
+      <role>Direct source containing synthesis timing configuration and model usage information</role>
+    </source>
+  </data_sources>
+  <format_hints>
+    <hint format="QoR_Report">Tool-specific synthesis quality-of-results report, typically contains timing model configuration, operating conditions, and design statistics</hint>
+  </format_hints>
+</semantic_intent>
+
+<context_agent_data>
+  <!-- ============================================ -->
+  <!-- 🚨 MANDATORY: 以下 class_constants 必须原样复制 -->
+  <!-- 绝对禁止: 理解后重新表达、简化、改写              -->
+  <!-- ============================================ -->
+  <class_constants usage="MUST_COPY_VERBATIM">
+    <found_desc>Library-based timing models confirmed in synthesis</found_desc>
+    <missing_desc>Wireload models detected or library timing models not confirmed</missing_desc>
+    <waived_desc>Library timing model check waived</waived_desc>
+    <found_reason>Technology libraries with CCS/NLDM timing models found in QoR report</found_reason>
+    <missing_reason>Wireload model references found or library model indicators absent in QoR report</missing_reason>
+    <waived_base_reason>Library timing model violation waived</waived_base_reason>
+    <extra_reason>Additional context: {detail}</extra_reason>
+    <unused_waiver_reason>Waiver defined but no violations found to apply</unused_waiver_reason>
+  </class_constants>
+  <logic_steps>
+    <step order="1">Parse QoR report to extract timing model configuration sections (Technology libraries, Wireload Model, Timing Model)</step>
+    <step order="2">Search for library-based timing model indicators (CCS/NLDM suffixes in library names)</step>
+    <step order="3">Check for wireload model references in timing configuration sections</step>
+    <step order="4">For Type 2/3: Search pattern_items in library configurations and count violations</step>
+    <step order="5">For Type 3/4: Apply waiver matching logic to classify violations or apply global waiver</step>
+    <step order="6">Determine PASS/FAIL based on library model presence, violation counts, and waiver status</step>
+  </logic_steps>
+  <extraction_chain hint="按此顺序解析可获得最优效果">
+    <parse_step order="1" source="chain">QoR_Report, search for timing model indicators (e.g., 'Timing Model: lib', 'Wireload Model: none/N/A'), verify lib models are active</parse_step>
+  </extraction_chain>
+  <extraction_fields usage="直接使用这些正则模式">
+    <!-- source_type 含义: -->
+    <!-- data_verified: 已验证，直接使用 -->
+    <!-- semantic_inference: 推断的，需要 try-except -->
+    <!-- standard_format: IEEE/EDA 标准，添加格式检查 -->
+    <file name="QoR_Report" data_role="direct_source">
+      <field name="synthesis_tool_name" confidence="100%" source="data_verified">
+        <pattern><![CDATA[Generated by:\s+([^\n]+)]]></pattern>
+        <purpose>Identifies the synthesis tool used, which determines timing model capabilities</purpose>
+      </field>
+      <field name="synthesis_tool_version" confidence="100%" source="data_verified">
+        <pattern><![CDATA[Genus\(TM\) Synthesis Solution\s+([\d._a-z]+)]]></pattern>
+        <purpose>Tool version affects timing model support and configuration options</purpose>
+      </field>
+      <field name="generation_timestamp" confidence="100%" source="data_verified">
+        <pattern><![CDATA[Generated on:\s+([^\n]+)]]></pattern>
+        <purpose>Timestamp for report traceability</purpose>
+      </field>
+      <field name="top_module_name" confidence="100%" source="data_verified">
+        <pattern><![CDATA[Module:\s+(\S+)]]></pattern>
+        <purpose>Top-level design module being analyzed</purpose>
+      </field>
+      <field name="library_domain_name" confidence="100%" source="data_verified">
+        <pattern><![CDATA[Library domain:\s+([^\n]+)]]></pattern>
+        <purpose>Library domain indicates timing corner and operating conditions used for analysis</purpose>
+      </field>
+      <field name="technology_libraries" confidence="100%" source="data_verified">
+        <pattern><![CDATA[Technology libraries:\s+([\s\S]+?)(?=\n\n|\Z)]]></pattern>
+        <purpose>List of technology libraries indicates library-based timing models are in use (not wireload models)</purpose>
+      </field>
+      <field name="timing_model_type" confidence="85%" source="semantic_inference">
+        <pattern><![CDATA[Timing Model:\s+(\S+)]]></pattern>
+        <purpose>Direct indicator of timing model type (lib vs wireload) - expected in QoR reports but not present in</purpose>
+      </field>
+      <field name="wireload_model_name" confidence="85%" source="semantic_inference">
+        <pattern><![CDATA[Wireload Model:\s+(\S+)]]></pattern>
+        <purpose>Presence of wireload model name indicates wireload-based timing (failure condition) - expected in Qo</purpose>
+      </field>
+      <field name="operating_conditions" confidence="80%" source="semantic_inference">
+        <pattern><![CDATA[Operating Conditions:\s+([^\n]+)]]></pattern>
+        <purpose>Operating conditions section typically accompanies timing model configuration in QoR reports</purpose>
+      </field>
+      <field name="library_ccs_indicator" confidence="100%" source="data_verified">
+        <pattern><![CDATA[_ccs\s+\d+]]></pattern>
+        <purpose>CCS (Composite Current Source) suffix in library names confirms advanced library-based timing models</purpose>
+      </field>
+    </file>
+  </extraction_fields>
+</context_agent_data>
+
+# 📋 任务
+
+生成 Checker 的核心方法:
+
+| 属性 | 值 |
+|------|-----|
+| Item ID | `IMP-5-0-0-00` |
+| Class Name | `Check_5_0_0_00` |
+| Module | `5.0_SYNTHESIS_CHECK` |
+| Description | Confirm synthesis is using lib models for timing? |
+
+### 检查上下文
+- **Item**: `IMP-5-0-0-00` (Check_5_0_0_00)
+- **描述**: Confirm synthesis is using lib models for timing?
+- **文件类型**: report
+- **参考正则**: (待设计 - 请根据 Log 样本设计)
+- **提取字段**: {'QoR_Report': [{'field_name': 'synthesis_tool_name', 'search_pattern': 'Generated by:\\s+([^\\n]+)', 'data_type': 'str', 'source_type': 'data_verified', 'confidence': 1.0, 'rationale': 'Identifies the synthesis tool used, which determines timing model capabilities', 'matched_line': 'Generated by:           Genus(TM) Synthesis Solution 23.14-s090_1'}, {'field_name': 'synthesis_tool_version', 'search_pattern': 'Genus\\(TM\\) Synthesis Solution\\s+([\\d._a-z]+)', 'data_type': 'str', 'source_type': 'data_verified', 'confidence': 1.0, 'rationale': 'Tool version affects timing model support and configuration options', 'matched_line': 'Generated by:           Genus(TM) Synthesis Solution 23.14-s090_1'}, {'field_name': 'generation_timestamp', 'search_pattern': 'Generated on:\\s+([^\\n]+)', 'data_type': 'str', 'source_type': 'data_verified', 'confidence': 1.0, 'rationale': 'Timestamp for report traceability', 'matched_line': 'Generated on:           Sep 08 2025  01:47:15 pm'}, {'field_name': 'top_module_name', 'search_pattern': 'Module:\\s+(\\S+)', 'data_type': 'str', 'source_type': 'data_verified', 'confidence': 1.0, 'rationale': 'Top-level design module being analyzed', 'matched_line': 'Module:                 phy_cmn_phase_align_digtop'}, {'field_name': 'library_domain_name', 'search_pattern': 'Library domain:\\s+([^\\n]+)', 'data_type': 'str', 'source_type': 'data_verified', 'confidence': 1.0, 'rationale': 'Library domain indicates timing corner and operating conditions used for analysis', 'matched_line': 'Library domain:         tcond_ssgnp_0p675v_m40c_cworst_CCworst_T_cworst_CCworst_T_setup_ideal_virtual'}, {'field_name': 'technology_libraries', 'search_pattern': 'Technology libraries:\\s+([\\s\\S]+?)(?=\\n\\n|\\Z)', 'data_type': 'list', 'source_type': 'data_verified', 'confidence': 1.0, 'rationale': 'List of technology libraries indicates library-based timing models are in use (not wireload models)', 'matched_line': 'Technology libraries: tcbn03e_bwp143mh117l3p48cpd_base_elvtssgnp_0p675v_m40c_cworst_CCworst_T_ccs 110'}, {'field_name': 'timing_model_type', 'search_pattern': 'Timing Model:\\s+(\\S+)', 'data_type': 'str', 'source_type': 'semantic_inference', 'confidence': 0.85, 'rationale': 'Direct indicator of timing model type (lib vs wireload) - expected in QoR reports but not present in sample', 'matched_line': None}, {'field_name': 'wireload_model_name', 'search_pattern': 'Wireload Model:\\s+(\\S+)', 'data_type': 'str', 'source_type': 'semantic_inference', 'confidence': 0.85, 'rationale': 'Presence of wireload model name indicates wireload-based timing (failure condition) - expected in QoR reports', 'matched_line': None}, {'field_name': 'operating_conditions', 'search_pattern': 'Operating Conditions:\\s+([^\\n]+)', 'data_type': 'str', 'source_type': 'semantic_inference', 'confidence': 0.8, 'rationale': 'Operating conditions section typically accompanies timing model configuration in QoR reports', 'matched_line': None}, {'field_name': 'library_ccs_indicator', 'search_pattern': '_ccs\\s+\\d+', 'data_type': 'str', 'source_type': 'data_verified', 'confidence': 1.0, 'rationale': 'CCS (Composite Current Source) suffix in library names confirms advanced library-based timing models are used', 'matched_line': 'tcbn03e_bwp143mh117l3p48cpd_base_elvtssgnp_0p675v_m40c_cworst_CCworst_T_ccs 110'}]}
+
+<type_specifications hint="运行时根据配置自动选择">
+  <type id="1" needs_waiver="false">
+    <pass_condition>library_ccs_indicator found AND wireload_model_name is None</pass_condition>
+    <fail_condition>wireload_model_name found OR library_ccs_indicator is None</fail_condition>
+  </type>
+  <type id="2" needs_waiver="false">
+    <pass_condition>len(found_violations) <= requirements.value</pass_condition>
+    <fail_condition>len(found_violations) > requirements.value</fail_condition>
+  </type>
+  <type id="3" needs_waiver="true">
+    <pass_condition>len(unwaived_violations) <= requirements.value</pass_condition>
+    <fail_condition>len(unwaived_violations) > requirements.value</fail_condition>
+  </type>
+  <type id="4" needs_waiver="true">
+    <pass_condition>library_models_confirmed OR global_waiver_applied</pass_condition>
+    <fail_condition>NOT library_models_confirmed AND NOT global_waiver_applied</fail_condition>
+  </type>
+</type_specifications>
+
+<runtime_parameters hint="重要：参数从 self.item_data 获取，不是 self.requirements">
+  <pattern_items_usage types="Type2,Type3">
+    <code_template><![CDATA[
+# pattern_items 从 self.item_data 获取 (NOT self.requirements!)
+requirements = self.item_data.get('requirements', {})
+pattern_items = requirements.get('pattern_items', [])
+
+# 遍历匹配示例:
+for item in pattern_items:
+    if isinstance(item, str):
+        pattern = item
+    else:
+        pattern = item.get('pattern', '')
+    if pattern in extracted_value:
+        matched = True
+    ]]></code_template>
+  </pattern_items_usage>
+  <waive_items_usage types="Type3,Type4">
+    <code_template><![CDATA[
+# 使用 WaiverHandlerMixin 提供的方法
+waivers = self.get_waivers()
+waive_items_raw = waivers.get('waive_items', [])
+waive_dict = self.parse_waive_items(waive_items_raw)
+
+# 匹配判断 (在循环中使用):
+for violation in violations:
+    if self.match_waiver_entry(violation, waive_dict):
+        waived_items.append(violation)
+    else:
+        unwaived_items.append(violation)
+    ]]></code_template>
+  </waive_items_usage>
+</runtime_parameters>
+
+# ⚠️ CRITICAL: v2.0 三层架构 - 代码复用模式
+
+> **核心原则: Type3/4 复用 Type2/1 的逻辑，不要重复实现！**
+
+## 架构设计
+
+```
+Layer 1: _parse_input_files()          # 4个Type共享，解析一次
+         ↓
+Layer 2: 共享逻辑模块                   # 核心业务逻辑
+         - _boolean_check_logic()       # Type1/4 共享 (存在性判断)
+         - _pattern_check_logic()       # Type2/3 共享 (正则匹配)
+         ↓
+Layer 3: _execute_typeN()              # 使用框架方法
+         - Type1: execute_boolean_check(parse_data_func, has_waiver=False)
+         - Type2: execute_value_check(parse_data_func, has_waiver=False)
+         - Type3: execute_value_check(parse_data_func, has_waiver=True)
+         - Type4: execute_boolean_check(parse_data_func, has_waiver=True)
+```
+
+## 框架方法 API
+
+> **📖 Full API signatures and parameters: System Prompt Section 2.3**
+
+- `execute_boolean_check()` - Type 1/4 专用
+- `execute_value_check()` - Type 2/3 专用
+
+## 简化调用示例
+
+```python
+def _boolean_check_logic(self, parsed_data: Dict[str, Any]) -> tuple:
+    """
+    Boolean Check Logic (Type1/4 共享)
+    
+    核心业务逻辑: 检查项目是否存在 (存在性判断)
+    
+    Returns:
+        tuple: (found_items, missing_items, extra_items)
+    """
+    # 从 parsed_data 提取数据
+    found_items = {}
+    missing_items = {}
+    extra_items = {}
+    
+    # 业务逻辑: 判断是否存在
+    # ... (具体实现)
+    
+    return found_items, missing_items, extra_items
+
+
+def _pattern_check_logic(self, parsed_data: Dict[str, Any]) -> tuple:
+    """
+    Pattern Check Logic (Type2/3 共享)
+    
+    核心业务逻辑: 匹配 pattern_items (正则匹配)
+    
+    Returns:
+        tuple: (found_items, missing_items, extra_items)
+    """
+    # 获取 pattern_items
+    requirements = self.item_data.get('requirements', {})
+    pattern_items = requirements.get('pattern_items', [])
+    
+    # 从 parsed_data 匹配
+    found_items = {}
+    missing_items = {}
+    extra_items = {}
+    
+    # 业务逻辑: 正则匹配
+    # ... (具体实现)
+    
+    return found_items, missing_items, extra_items
+```
+
+### Layer 3: _execute_typeN() 使用框架方法
+
+## 简化调用示例
+
+```python
+# Type 1: Boolean check
+def _execute_type1(self, parsed_data: Dict[str, Any]) -> CheckResult:
+    return self.execute_boolean_check(
+        parse_data_func=lambda: self._boolean_check_logic(parsed_data),
+        has_waiver=False, found_desc=self.FOUND_DESC, ...
+    )
+
+# Type 3: 复用Type2逻辑，只改has_waiver
+def _execute_type3(self, parsed_data: Dict[str, Any]) -> CheckResult:
+    return self.execute_value_check(
+        parse_data_func=lambda: self._pattern_check_logic(parsed_data),
+        has_waiver=True,  # ⚠️ 唯一区别
+        ...
+    )
+```
+
+> **📖 Complete production examples with edge case handling: System Prompt Section 6**
+>
+> Layer 2 implementation patterns:
+> - `_boolean_check_logic()`: System Prompt §6 Type1 example
+> - `_pattern_check_logic()`: System Prompt §6 Type3 example
+> - `_build_name_extractor()`: System Prompt §2.4
+
+## 实施要求
+
+1. **必须提取共享模块**: 将 Boolean/Pattern 判断逻辑提取到 `_boolean_check_logic()` 和 `_pattern_check_logic()`
+2. **Type3/4 禁止重复实现**: 直接调用对应的共享模块，只改变 `has_waiver` 参数
+3. **使用框架方法**: `execute_boolean_check()` (Type1/4) 和 `execute_value_check()` (Type2/3)
+4. **所有共享模块放在 <helper_methods>**: 确保可以被所有 Type 调用
+
+## 优势
+
+- **代码行数减少**: 357 lines (Golden 1242 → v2.0 885)
+- **逻辑统一**: Type1/4 共享 Boolean 逻辑，Type2/3 共享 Pattern 逻辑
+- **框架自动处理**: waiver处理、found/missing分类、output构建
+- **易于维护**: 修改一次，4个 Type 同步更新
+
+
+================================================================================
+📝 CODE GENERATION TEMPLATES (Fillable Frameworks)
+================================================================================
+
+⚠️ CRITICAL: The following are **fillable frameworks** for methods you need to implement
+
+Framework Instructions:
+- FIXED: These sections MUST remain unchanged (API signatures, parameter passing)
+- TODO: These sections need to be filled based on business logic
+- ⚠️ CRITICAL: Marks key constraints that MUST be followed
+
+Please generate code strictly following the API signatures and parameters in the framework.
+Do NOT omit any parameters or calls from FIXED sections!
+
+======================================================================
+LAYER 1: Input File Parsing
+======================================================================
+
+
+def _parse_input_files(self) -> Dict[str, Any]:
+    """
+    Parse input files to extract data for checking.
+    
+    Returns:
+        Dict[str, Any] with structure:
+        {
+            'items': [...],  # or other business-relevant keys
+            'metadata': {...},
+            'errors': [...]
+        }
+    
+    ⚠️ CRITICAL: Return MUST be Dict, used by subsequent Type methods
+    """
+    # FIXED: Validate input files
+    # IMPORTANT: validate_input_files() returns TUPLE: (valid_files, missing_files)
+    valid_files, missing_files = self.validate_input_files()
+    if not valid_files:
+        raise ConfigurationError("No valid input files found")
+    
+    # TODO: Implement file parsing logic
+    # Available template helpers:
+    # - self.parse_log_with_patterns(file_path, patterns)
+    # - self.normalize_command(text)
+    
+    # Example structure:
+    result = {
+        'items': [],  # TODO: Fill with actual parsed data
+        'metadata': {'total': 0},
+        'errors': []
+    }
+    
+    # TODO: Parse each input file
+    # for file_path in valid_files:
+    #     with open(file_path, 'r', errors='ignore') as f:
+    #         for line_num, line in enumerate(f, 1):
+    #             # Parsing logic...
+    #             pass
+    
+    return result
+
+
+======================================================================
+LAYER 2: Shared Logic Modules
+======================================================================
+
+## Boolean Check Logic (shared by Type1/4)
+
+
+def _boolean_check_logic(self, parsed_data: Dict[str, Any]) -> tuple:
+    """
+    Boolean Check Logic (shared by Type1/4)
+    
+    Core Business Logic: Determine which items exist and which are missing
+    
+    Returns:
+        tuple: (found_items, missing_items, extra_items)
+        - found_items: Dict[str, Dict] - key is item name, value is metadata
+        - missing_items: Dict[str, Dict] - ⚠️ MUST be Dict, NOT List
+        - extra_items: Dict[str, Dict] - additionally discovered items
+    
+    ⚠️ CRITICAL: All items MUST be in Dict[str, Dict] format:
+    {
+        'item_name': {
+            'line_number': 123,  # REQUIRED for source tracking
+            'file_path': '/path/to/file',  # REQUIRED
+            'reason': 'Additional info'  # Optional
+        }
+    }
+    """
+    # TODO: Extract necessary data from parsed_data
+    # Example structure:
+    # items = parsed_data.get('items', [])
+    # or
+    # netlist_info = parsed_data.get('netlist_info', {})
+    # spef_info = parsed_data.get('spef_info', {})
+    
+    found_items = {}
+    missing_items = {}
+    extra_items = {}
+    
+    # TODO: Implement business logic - determine found/missing
+    # Example logic:
+    # for item in items:
+    #     if item['status'] == 'Success':
+    #         found_items[item['name']] = {
+    #             'line_number': item.get('line', 0),
+    #             'file_path': item.get('file', ''),
+    #             'reason': 'Found successfully'
+    #         }
+    #     else:
+    #         missing_items[item['name']] = {
+    #             'reason': f"Status: {item['status']}"
+    #         }
+    
+    # ⚠️ CRITICAL: Ensure returning Dict[str, Dict], not List!
+    return found_items, missing_items, extra_items
+
+
+## Pattern Check Logic (shared by Type2/3)
+
+
+def _pattern_check_logic(self, parsed_data: Dict[str, Any]) -> tuple:
+    """
+    Pattern Check Logic (shared by Type2/3)
+    
+    Core Business Logic: Search for patterns in pattern_items
+    
+    Returns:
+        tuple: (found_items, missing_items, extra_items)
+    """
+    # FIXED: Get pattern_items
+    requirements = self.item_data.get('requirements', {})
+    pattern_items = requirements.get('pattern_items', [])
+    
+    found_items = {}
+    missing_items = {}
+    extra_items = {}
+    
+    # TODO: Extract content from parsed_data for searching
+    # Example:
+    # content = parsed_data.get('extracted_content', [])
+    
+    # TODO: Implement pattern matching logic
+    # Example:
+    # for pattern in pattern_items:
+    #     matched = False
+    #     for line in content:
+    #         if self._match_pattern(line, [pattern]):
+    #             found_items[pattern] = {
+    #                 'line_number': line.get('line_num', 0),
+    #                 'file_path': line.get('file', ''),
+    #                 'matched': line.get('text', '')
+    #             }
+    #             matched = True
+    #             break
+    #     if not matched:
+    #         missing_items[pattern] = {
+    #             'reason': 'Pattern not found in input files'
+    #         }
+    
+    return found_items, missing_items, extra_items
+
+
+======================================================================
+LAYER 3: Type Execution Methods
+======================================================================
+
+## Type 1: Boolean Check (no waiver)
+
+
+def _execute_type1(self, parsed_data: Dict[str, Any]) -> CheckResult:
+    """
+    Type 1: Boolean check - Existence check, no waiver
+    
+    Business Logic: Check if certain items exist (e.g., files loaded successfully)
+    Pass Condition: All required items exist
+    Fail Condition: Any required item is missing
+    """
+    # FIXED: Type1/4 share Boolean Check Logic
+    def parse_data():
+        """Call shared Boolean Check Logic"""
+        return self._boolean_check_logic(parsed_data)
+    
+    # FIXED: Type1 framework call signature
+    return self.execute_boolean_check(
+        parse_data_func=parse_data,
+        has_waiver=False,  # ← Type1 characteristic: no waiver
+        found_desc=self.FOUND_DESC,  # ← Use class constant
+        missing_desc=self.MISSING_DESC,
+        extra_desc=self.EXTRA_DESC,
+        name_extractor=self._build_name_extractor()  # ← Need to implement this helper
+    )
+
+
+## Type 2: Value Check (no waiver)
+
+
+def _execute_type2(self, parsed_data: Dict[str, Any]) -> CheckResult:
+    """
+    Type 2: Value check - Pattern matching, no waiver
+    
+    Business Logic: Search for patterns in pattern_items
+    Pass Condition: All patterns found
+    Fail Condition: Any pattern not found
+    """
+    # FIXED: Type2/3 share Pattern Check Logic
+    def parse_data():
+        """Call shared Pattern Check Logic"""
+        return self._pattern_check_logic(parsed_data)
+    
+    # FIXED: Type2 framework call signature
+    return self.execute_value_check(
+        parse_data_func=parse_data,
+        has_waiver=False,  # ← Type2 characteristic: no waiver
+        found_desc="Pattern found",  # ← Customizable description
+        missing_desc="Pattern not found",
+        extra_desc=self.EXTRA_DESC,
+        name_extractor=self._build_name_extractor()
+    )
+
+
+## Type 3: Value Check with Waiver (has waiver)
+
+⚠️ CRITICAL: Type3 is the MOST error-prone type!
+MUST include info_items parameter, even if it's an empty dict.
+
+
+def _execute_type3(self, parsed_data: Dict[str, Any]) -> CheckResult:
+    """
+    Type 3: Value check with waiver - Pattern matching + waiver support
+    
+    Business Logic: Same as Type2 (pattern search), but with waiver support
+    Pass Condition: Pattern found OR waiver is valid
+    Fail Condition: Pattern not found AND waiver is invalid/expired
+    """
+    # ⚠️ CRITICAL: Type3 MUST prepare info_items (can be empty dict)
+    # info_items are used to display informational entries (don't affect PASS/FAIL)
+    # TODO: Build info_items based on parsed_data (if you need to display information)
+    info_items = {}
+    
+    # Example: If you need to display file path information
+    # netlist_info = parsed_data.get('netlist_info', {})
+    # if netlist_info.get('path'):
+    #     info_items['File Path'] = {
+    #         'line_number': 0,
+    #         'file_path': '',
+    #         'reason': f"Found at: {netlist_info['path']}"
+    #     }
+    
+    # FIXED: Type2/3 share Pattern Check Logic
+    def parse_data():
+        """Call shared Pattern Check Logic (same as Type2)"""
+        return self._pattern_check_logic(parsed_data)
+    
+    # FIXED: Type3 framework call signature
+    # ⚠️ CRITICAL: Note the difference from Type2
+    return self.execute_value_check(
+        parse_data_func=parse_data,
+        has_waiver=True,  # ← Type3 characteristic: enable waiver
+        info_items=info_items,  # ← Type3 characteristic: MUST include (can be empty)
+        found_desc="Pattern found",
+        missing_desc="Pattern not found",
+        extra_desc=self.EXTRA_DESC,
+        extra_severity=Severity.FAIL,  # ← Type3 characteristic: extra errors as FAIL
+        name_extractor=self._build_name_extractor()
+    )
+
+
+## Type 4: Boolean Check with Waiver (has waiver)
+
+
+def _execute_type4(self, parsed_data: Dict[str, Any]) -> CheckResult:
+    """
+    Type 4: Boolean check with waiver - Existence check + waiver support
+    
+    Business Logic: Same as Type1 (existence check), but with waiver support
+    Pass Condition: Item exists OR waiver is valid
+    Fail Condition: Item missing AND waiver is invalid/expired
+    """
+    # FIXED: Type1/4 share Boolean Check Logic
+    def parse_data():
+        """Call shared Boolean Check Logic (same as Type1)"""
+        return self._boolean_check_logic(parsed_data)
+    
+    # FIXED: Type4 framework call signature
+    return self.execute_boolean_check(
+        parse_data_func=parse_data,
+        has_waiver=True,  # ← Type4 characteristic: enable waiver
+        found_desc=self.FOUND_DESC,
+        missing_desc=self.MISSING_DESC,
+        extra_desc=self.EXTRA_DESC,
+        name_extractor=self._build_name_extractor()
+    )
+
+
+================================================================================
+
+
+
+
+## 🚨 Critical Pattern Checklist
+
+Before generating code, confirm the following patterns:
+
+### Layer 1 (Parsing)
+- [ ] `_parse_input_files()` returns `Dict[str, Any]`
+- [ ] Returned Dict contains necessary keys (e.g., items, metadata, errors)
+- [ ] Uses `valid_files, missing_files = self.validate_input_files()` (note: returns TUPLE)
+
+### Layer 2 (Logic)
+- [ ] `_boolean_check_logic(parsed_data)` returns `Tuple[Dict, Dict, Dict]`
+- [ ] `_pattern_check_logic(parsed_data)` returns `Tuple[Dict, Dict, Dict]`
+- [ ] **found_items, missing_items, extra_items MUST ALL be `Dict[str, Dict]`, NOT List**
+- [ ] Each item's value MUST contain `line_number` and `file_path` keys
+
+### Layer 3 (Execution)
+- [ ] Type1: `execute_boolean_check(..., has_waiver=False)`
+- [ ] Type2: `execute_value_check(..., has_waiver=False)`
+- [ ] Type3: `execute_value_check(..., has_waiver=True, info_items={...})` ← **MUST include info_items**
+- [ ] Type4: `execute_boolean_check(..., has_waiver=True)`
+- [ ] All Types use `parse_data_func=lambda: ...` to wrap logic calls
+
+### Common Patterns
+- [ ] Class constants use `self.FOUND_DESC` etc.
+- [ ] name_extractor uses `self._build_name_extractor()`
+- [ ] Type3's extra_severity set to `Severity.FAIL`
+
+### Data Structure Rules
+```python
+# ✅ CORRECT
+missing_items["Item Name"] = {"reason": "..."}
+
+# ❌ WRONG
+missing_items.append("Item Name")
+```
+
+
+⚠️ Before submitting the generated code, please verify each item against the checklist above!
+
+
+# 📤 输出要求
+
+> **📖 Generation boundaries: System Prompt Section 1**  
+> **📖 Full API contracts: System Prompt Section 2**  
+> **📖 Common mistakes to avoid: System Prompt Section 10**
+
+## 输出 XML 格式
+
+```xml
+<thoughts>
+1. 检查目标 2. 数据流 3. 辅助方法(复用Golden) 4. Pass/Fail逻辑 5. Metadata追踪
+</thoughts>
+
+<class_constants>
+FOUND_DESC = "..." / MISSING_DESC = "..." / ...
+</class_constants>
+
+<parse_method>
+def _parse_input_files(self) -> Dict[str, Any]: ...
+</parse_method>
+
+<execute_type1>...<execute_type2>...<execute_type3>...<execute_type4>
+
+<helper_methods>
+# ⚠️ 所有 self._xxx() 调用必须在这里定义!
+# ⚠️ 复用Golden的Helper方法，不要简化!
+</helper_methods>
+```
+
+## ⚠️ CRITICAL Reminders
+
+1. **Method Signature**: `_execute_typeN(self, parsed_data)` - must accept parsed_data
+2. **Helper Methods**: All `self._xxx()` calls must be defined in `<helper_methods>`
+3. **Metadata Format**: Parse as `{'line_number': N, 'file_path': str}`, access as `meta.get('line_number', 0)`
+4. **Waiver (Type3/4)**: Framework methods handle waiver automatically

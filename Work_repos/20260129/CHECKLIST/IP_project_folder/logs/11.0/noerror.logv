@@ -1,0 +1,688 @@
+[01/09 09:22:35      0s] 
+[01/09 09:22:35      0s] Cadence Voltus(TM) IC Power Integrity Solution.
+[01/09 09:22:35      0s] Copyright 2022 Cadence Design Systems, Inc. All rights reserved worldwide.
+[01/09 09:22:35      0s] 
+[01/09 09:22:35      0s] Version:	v22.13-s090_1, built Thu Aug 17 17:02:36 PDT 2023
+[01/09 09:22:35      0s] Options:	-init scr/do_voltusfunc_func_ffgnp_0p825v_125c_cbest_CCbest_T_cworst_CCworst_hold_static.tcl -log logs/func_func_ffgnp_0p825v_125c_cbest_CCbest_T_cworst_CCworst_hold_static.log 
+[01/09 09:22:35      0s] Date:		Fri Jan  9 09:22:35 2026
+[01/09 09:22:35      0s] Host:		nfdpcil022 (x86_64 w/Linux 3.10.0-1160.2.2.el7.x86_64) (24cores*48cpus*Intel(R) Xeon(R) Gold 6342 CPU @ 2.80GHz 36864KB)
+[01/09 09:22:35      0s] OS:		Red Hat Enterprise Linux Workstation 7.9 (Maipo)
+[01/09 09:22:35      0s] LSF:		Interactive job 2582019 in cluster "nflsfdpc01" and queue "pd" on 4 cpus with -R " select[OSREL==EE70 || OSREL==EE80] span[hosts=1]".
+[01/09 09:22:35      0s] 
+[01/09 09:22:35      0s] License:
+[01/09 09:22:35      0s] 		[09:22:35.123822] Configured Lic search path (21.01-s002): 5280@noidpclic-lb1:5280@noidpclic02:5280@noidpclic04:5281@noidpclic-lb1:5281@noidpclic02:5281@noidpclic04
+
+[01/09 09:22:35      0s] 		vtsxl	Voltus Power Integrity Solution XL	22.1	checkout succeeded
+[01/09 09:22:35      0s] 		8 CPU jobs allowed with the current license(s). Use set_multi_cpu_usage to set your required CPU count.
+[01/09 09:22:49     12s] Reset Parastics called with the command setExtractRCMode -reset@(#)CDS: Voltus IC Power Integrity Solution v22.13-s090_1 (64bit) 08/17/2023 17:02 (Linux 3.10.0-693.el7.x86_64)
+[01/09 09:22:56     18s] @(#)CDS: NanoRoute 22.13-s090_1 NR230808-0153/22_13-UB (database version 18.20.615) {superthreading v2.20}
+[01/09 09:22:56     18s] @(#)CDS: AAE 22.13-s029 (64bit) 08/17/2023 (Linux 3.10.0-693.el7.x86_64)
+[01/09 09:22:56     18s] @(#)CDS: CTE 22.13-s029_1 () Aug 16 2023 08:52:01 ( )
+[01/09 09:22:56     18s] @(#)CDS: SYNTECH 22.13-e014_1 () Jul 26 2023 01:34:55 ( )
+[01/09 09:22:56     18s] @(#)CDS: CPE v22.13-s081
+[01/09 09:22:56     18s] @(#)CDS: OA 22.60-p088 Tue Mar 21 03:05:14 2023
+[01/09 09:22:56     18s] @(#)CDS: SGN 22.20-d001 (02-Jan-2023) (64 bit executable, TkQt5.9.1)
+[01/09 09:22:56     18s] @(#)CDS: RCDB 11.15.0
+[01/09 09:22:56     18s] @(#)CDS: STYLUS 22.11-s006_1 (04/03/2023 03:37 PDT)
+[01/09 09:22:56     18s] The soft stacksize limit is either up to the hard limit or larger than 0.2% of RAM. No change is needed.
+[01/09 09:22:56     18s] **INFO: (TMPDIR-1001): The environment variable TMPDIR is not set.
+Create and set the environment variable TMPDIR to '/tmp/ssv_tmpdir_40646_KTKCg7'.
+environment variable TMPDIR is '/tmp/ssv_tmpdir_40646_KTKCg7'.
+[01/09 09:22:58     19s] #@ Processing -files option
+[01/09 09:22:58     19s] Sourcing tcl/tk file 'scr/do_voltusfunc_func_ffgnp_0p825v_125c_cbest_CCbest_T_cworst_CCworst_hold_static.tcl' ...
+[01/09 09:22:58     19s] <CMD> set_library_unit -time 1ns -cap 1pf
+[01/09 09:22:58     19s] <CMD> set_design_mode -process 4
+[01/09 09:22:58     19s] ##  Process: 4             (User Set)               
+[01/09 09:22:58     19s] ##     Node: (not set)                           
+[01/09 09:22:58     19s] 
+##  Check design process and node:  
+##  Design tech node is not set.
+
+[01/09 09:22:58     19s] <CMD> set_multi_cpu_usage -localCpu 16
+[01/09 09:22:58     19s] <CMD> set_message -id VOLTUS_SCHD-0075 -severity error
+[01/09 09:22:58     19s] <CMD> set_message -id IMPVAC-116 -severity error
+[01/09 09:22:58     19s] <CMD> read_lib -lef {/process/tsmcN4/data/stdcell/n4gp/TSMC/PRTF_Innovus_4nm_014_Cad_V10b/PRTF/PRTF_Innovus_4nm_014_Cad_V10b/PR_tech/Cadence/LefHeader/Standard/VHV/PRTF_Innovus_N4P_15M_1X1Xb1Xe1Ya1Yb5Y2Yy2Z_UTRDL_M1P34_M2P35_M3P42_M4P42_M5P76_M6P76_M7P76_M8P76_M9P76_M10P76_M11P76_H210_M0ROUTE_SHDMIM.10b.tlef /process/tsmcN4/data/stdcell/n4gp/TSMC/tcbn04p_bwph210l6p51cnod_base_lvt_100b/lef/tcbn04p_bwph210l6p51cnod_base_lvt.lef /process/tsmcN4/data/stdcell/n4gp/TSMC/tcbn04p_bwph210l6p51cnod_base_lvt_100b/lef/tcbn04p_bwph210l6p51cnod_base_lvt_par.lef /process/tsmcN4/data/stdcell/n4gp/TSMC/tcbn04p_bwph210l6p51cnod_base_lvtll_100b/lef/tcbn04p_bwph210l6p51cnod_base_lvtll.lef /process/tsmcN4/data/stdcell/n4gp/TSMC/tcbn04p_bwph210l6p51cnod_base_lvtll_100b/lef/tcbn04p_bwph210l6p51cnod_base_lvtll_par.lef /process/tsmcN4/data/stdcell/n4gp/TSMC/tcbn04p_bwph210l6p51cnod_base_svt_100b/lef/tcbn04p_bwph210l6p51cnod_base_svt.lef /process/tsmcN4/data/stdcell/n4gp/TSMC/tcbn04p_bwph210l6p51cnod_base_svt_100b/lef/tcbn04p_bwph210l6p51cnod_base_svt_par.lef /process/tsmcN4/data/stdcell/n4gp/TSMC/tcbn04p_bwph210l6p51cnod_base_ulvt_100b/lef/tcbn04p_bwph210l6p51cnod_base_ulvt.lef /process/tsmcN4/data/stdcell/n4gp/TSMC/tcbn04p_bwph210l6p51cnod_base_ulvt_100b/lef/tcbn04p_bwph210l6p51cnod_base_ulvt_par.lef /process/tsmcN4/data/stdcell/n4gp/TSMC/tcbn04p_bwph210l6p51cnod_base_elvt_100b/lef/tcbn04p_bwph210l6p51cnod_base_elvt.lef /process/tsmcN4/data/stdcell/n4gp/TSMC/tcbn04p_bwph210l6p51cnod_base_elvt_100b/lef/tcbn04p_bwph210l6p51cnod_base_elvt_par.lef /process/tsmcN4/data/stdcell/n4gp/TSMC/tcbn04p_bwph210l6p51cnod_base_ulvtll_100b/lef/tcbn04p_bwph210l6p51cnod_base_ulvtll.lef /process/tsmcN4/data/stdcell/n4gp/TSMC/tcbn04p_bwph210l6p51cnod_base_ulvtll_100b/lef/tcbn04p_bwph210l6p51cnod_base_ulvtll_par.lef /projects/byd_A3_N4P_32bits_LPDDR5_phy/libs/ndr/ndr_10w8s.lef /projects/byd_A3_N4P_32bits_LPDDR5_phy/libs/ndr/ndr_1w2s.lef /projects/byd_A3_N4P_32bits_LPDDR5_phy/libs/ndr/ndr_1w3s.lef /projects/byd_A3_N4P_32bits_LPDDR5_phy/libs/ndr/ndr_2w1s.lef /projects/byd_A3_N4P_32bits_LPDDR5_phy/libs/ndr/ndr_2w2s.lef /projects/byd_A3_N4P_32bits_LPDDR5_phy/libs/ndr/ndr_2w3s.lef /projects/byd_A3_N4P_32bits_LPDDR5_phy/libs/customcell/cdns_ddr_custom_dig_cells_tcbn05_bwph210l6p51cnod_base.antenna.lef /projects/byd_A3_N4P_32bits_LPDDR5_phy/libs/ddrio/cdns_ddr900_h_t5g_x32_15M1X1Xb1Xe1Ya1Yb5Y2Yy2Z_SHDMIM_150P_UBM91.8R_N4_SC_r600_v1p2.20250707/lef/cdns_ddr900_h.lef}
+[01/09 09:22:59     20s] <CMD> read_view_definition /projects/byd_A3_N4P_32bits_LPDDR5_phy/work/cdns_lp5x_x32_ew_phy_ds_top/muhanx/signoff/signoff-0109-wb/scr/cdns_lp5x_x32_ew_phy_ds_top_func_func_ffgnp_0p825v_125c_cbest_CCbest_T_cworst_CCworst_hold_static_viewdefinition.tcl
+[01/09 09:22:59     20s] <CMD> read_verilog dbs/cdns_lp5x_x32_ew_phy_ds_top.innovusOUTwD0.enc.dat/cdns_lp5x_x32_ew_phy_ds_top.v.gz
+[01/09 09:22:59     20s] <CMD> set_top_module cdns_lp5x_x32_ew_phy_ds_top
+[01/09 09:22:59     20s] #% Begin Load MMMC data ... (date=01/09 09:22:59, mem=1066.3M)
+[01/09 09:22:59     20s] Number of views requested 1 are allowed with the current licenses... continuing with set_analysis_view.
+[01/09 09:22:59     20s] #% End Load MMMC data ... (date=01/09 09:22:59, total cpu=0:00:00.1, real=0:00:00.0, peak res=1067.4M, current mem=1067.4M)
+[01/09 09:22:59     20s] 
+[01/09 09:22:59     20s] Loading LEF file /process/tsmcN4/data/stdcell/n4gp/TSMC/PRTF_Innovus_4nm_014_Cad_V10b/PRTF/PRTF_Innovus_4nm_014_Cad_V10b/PR_tech/Cadence/LefHeader/Standard/VHV/PRTF_Innovus_N4P_15M_1X1Xb1Xe1Ya1Yb5Y2Yy2Z_UTRDL_M1P34_M2P35_M3P42_M4P42_M5P76_M6P76_M7P76_M8P76_M9P76_M10P76_M11P76_H210_M0ROUTE_SHDMIM.10b.tlef ...
+[01/09 09:22:59     20s] 
+[01/09 09:22:59     20s] Loading LEF file /process/tsmcN4/data/stdcell/n4gp/TSMC/tcbn04p_bwph210l6p51cnod_base_lvt_100b/lef/tcbn04p_bwph210l6p51cnod_base_lvt.lef ...
+[01/09 09:22:59     20s] Set DBUPerIGU to M2 pitch 68.
+[01/09 09:23:00     21s] 
+[01/09 09:23:00     21s] Loading LEF file /process/tsmcN4/data/stdcell/n4gp/TSMC/tcbn04p_bwph210l6p51cnod_base_lvt_100b/lef/tcbn04p_bwph210l6p51cnod_base_lvt_par.lef ...
+[01/09 09:23:00     21s] WARNING (LEFPARS-2001): No VERSION statement found, using the default value 5.8. See file /process/tsmcN4/data/stdcell/n4gp/TSMC/tcbn04p_bwph210l6p51cnod_base_lvt_100b/lef/tcbn04p_bwph210l6p51cnod_base_lvt_par.lef at line 248.
+[01/09 09:23:00     21s] 
+[01/09 09:23:00     21s] Loading LEF file /process/tsmcN4/data/stdcell/n4gp/TSMC/tcbn04p_bwph210l6p51cnod_base_lvtll_100b/lef/tcbn04p_bwph210l6p51cnod_base_lvtll.lef ...
+[01/09 09:23:00     21s] 
+[01/09 09:23:00     21s] Loading LEF file /process/tsmcN4/data/stdcell/n4gp/TSMC/tcbn04p_bwph210l6p51cnod_base_lvtll_100b/lef/tcbn04p_bwph210l6p51cnod_base_lvtll_par.lef ...
+[01/09 09:23:00     21s] **WARN: (IMPLF-378):	The spacing for cell edge type 'NW_0D5' and 'NW_0D5' is already defined. It will be overwritten by the new definition in LEF file '/process/tsmcN4/data/stdcell/n4gp/TSMC/tcbn04p_bwph210l6p51cnod_base_lvtll_100b/lef/tcbn04p_bwph210l6p51cnod_base_lvtll_par.lef'.
+[01/09 09:23:00     21s] If it's defined multiple times for the same pair of types, only the last one
+[01/09 09:23:00     21s] will be kept. Check all definitions in all LEF files to remove any duplicated
+[01/09 09:23:00     21s] definitions to avoid this warning message.
+[01/09 09:23:00     21s] **WARN: (IMPLF-378):	The spacing for cell edge type 'NW_0D5' and 'NW_1D5' is already defined. It will be overwritten by the new definition in LEF file '/process/tsmcN4/data/stdcell/n4gp/TSMC/tcbn04p_bwph210l6p51cnod_base_lvtll_100b/lef/tcbn04p_bwph210l6p51cnod_base_lvtll_par.lef'.
+[01/09 09:23:00     21s] If it's defined multiple times for the same pair of types, only the last one
+[01/09 09:23:00     21s] will be kept. Check all definitions in all LEF files to remove any duplicated
+[01/09 09:23:00     21s] definitions to avoid this warning message.
+[01/09 09:23:00     21s] **WARN: (IMPLF-378):	The spacing for cell edge type 'NW_0D5' and 'NW_2D5' is already defined. It will be overwritten by the new definition in LEF file '/process/tsmcN4/data/stdcell/n4gp/TSMC/tcbn04p_bwph210l6p51cnod_base_lvtll_100b/lef/tcbn04p_bwph210l6p51cnod_base_lvtll_par.lef'.
+[01/09 09:23:00     21s] If it's defined multiple times for the same pair of types, only the last one
+[01/09 09:23:00     21s] will be kept. Check all definitions in all LEF files to remove any duplicated
+[01/09 09:23:00     21s] definitions to avoid this warning message.
+[01/09 09:23:00     21s] **WARN: (IMPLF-378):	The spacing for cell edge type 'NW_0D5' and 'NW_3D5' is already defined. It will be overwritten by the new definition in LEF file '/process/tsmcN4/data/stdcell/n4gp/TSMC/tcbn04p_bwph210l6p51cnod_base_lvtll_100b/lef/tcbn04p_bwph210l6p51cnod_base_lvtll_par.lef'.
+[01/09 09:23:00     21s] If it's defined multiple times for the same pair of types, only the last one
+[01/09 09:23:00     21s] will be kept. Check all definitions in all LEF files to remove any duplicated
+[01/09 09:23:00     21s] definitions to avoid this warning message.
+[01/09 09:23:00     21s] **WARN: (IMPLF-378):	The spacing for cell edge type 'NW_0D5' and 'NW_4D5' is already defined. It will be overwritten by the new definition in LEF file '/process/tsmcN4/data/stdcell/n4gp/TSMC/tcbn04p_bwph210l6p51cnod_base_lvtll_100b/lef/tcbn04p_bwph210l6p51cnod_base_lvtll_par.lef'.
+[01/09 09:23:00     21s] If it's defined multiple times for the same pair of types, only the last one
+[01/09 09:23:00     21s] will be kept. Check all definitions in all LEF files to remove any duplicated
+[01/09 09:23:00     21s] definitions to avoid this warning message.
+[01/09 09:23:00     21s] **WARN: (IMPLF-378):	The spacing for cell edge type 'NW_0D5' and 'NW_5D5' is already defined. It will be overwritten by the new definition in LEF file '/process/tsmcN4/data/stdcell/n4gp/TSMC/tcbn04p_bwph210l6p51cnod_base_lvtll_100b/lef/tcbn04p_bwph210l6p51cnod_base_lvtll_par.lef'.
+[01/09 09:23:00     21s] If it's defined multiple times for the same pair of types, only the last one
+[01/09 09:23:00     21s] will be kept. Check all definitions in all LEF files to remove any duplicated
+[01/09 09:23:00     21s] definitions to avoid this warning message.
+[01/09 09:23:00     21s] **WARN: (IMPLF-378):	The spacing for cell edge type 'NW_0D5' and 'NW_6D5' is already defined. It will be overwritten by the new definition in LEF file '/process/tsmcN4/data/stdcell/n4gp/TSMC/tcbn04p_bwph210l6p51cnod_base_lvtll_100b/lef/tcbn04p_bwph210l6p51cnod_base_lvtll_par.lef'.
+[01/09 09:23:00     21s] If it's defined multiple times for the same pair of types, only the last one
+[01/09 09:23:00     21s] will be kept. Check all definitions in all LEF files to remove any duplicated
+[01/09 09:23:00     21s] definitions to avoid this warning message.
+[01/09 09:23:00     21s] **WARN: (IMPLF-378):	The spacing for cell edge type 'NW_0D5' and 'NW_7D5' is already defined. It will be overwritten by the new definition in LEF file '/process/tsmcN4/data/stdcell/n4gp/TSMC/tcbn04p_bwph210l6p51cnod_base_lvtll_100b/lef/tcbn04p_bwph210l6p51cnod_base_lvtll_par.lef'.
+[01/09 09:23:00     21s] If it's defined multiple times for the same pair of types, only the last one
+[01/09 09:23:00     21s] will be kept. Check all definitions in all LEF files to remove any duplicated
+[01/09 09:23:00     21s] definitions to avoid this warning message.
+[01/09 09:23:00     21s] **WARN: (IMPLF-378):	The spacing for cell edge type 'NW_0D5' and 'NW_8D5' is already defined. It will be overwritten by the new definition in LEF file '/process/tsmcN4/data/stdcell/n4gp/TSMC/tcbn04p_bwph210l6p51cnod_base_lvtll_100b/lef/tcbn04p_bwph210l6p51cnod_base_lvtll_par.lef'.
+[01/09 09:23:00     21s] If it's defined multiple times for the same pair of types, only the last one
+[01/09 09:23:00     21s] will be kept. Check all definitions in all LEF files to remove any duplicated
+[01/09 09:23:00     21s] definitions to avoid this warning message.
+[01/09 09:23:00     21s] **WARN: (IMPLF-378):	The spacing for cell edge type 'NW_0D5' and 'NW_9D5' is already defined. It will be overwritten by the new definition in LEF file '/process/tsmcN4/data/stdcell/n4gp/TSMC/tcbn04p_bwph210l6p51cnod_base_lvtll_100b/lef/tcbn04p_bwph210l6p51cnod_base_lvtll_par.lef'.
+[01/09 09:23:00     21s] If it's defined multiple times for the same pair of types, only the last one
+[01/09 09:23:00     21s] will be kept. Check all definitions in all LEF files to remove any duplicated
+[01/09 09:23:00     21s] definitions to avoid this warning message.
+[01/09 09:23:00     21s] **WARN: (IMPLF-378):	The spacing for cell edge type 'NW_0D5' and 'NW_10D5' is already defined. It will be overwritten by the new definition in LEF file '/process/tsmcN4/data/stdcell/n4gp/TSMC/tcbn04p_bwph210l6p51cnod_base_lvtll_100b/lef/tcbn04p_bwph210l6p51cnod_base_lvtll_par.lef'.
+[01/09 09:23:00     21s] If it's defined multiple times for the same pair of types, only the last one
+[01/09 09:23:00     21s] will be kept. Check all definitions in all LEF files to remove any duplicated
+[01/09 09:23:00     21s] definitions to avoid this warning message.
+[01/09 09:23:00     21s] **WARN: (IMPLF-378):	The spacing for cell edge type 'NW_0D5' and 'NW_11D5' is already defined. It will be overwritten by the new definition in LEF file '/process/tsmcN4/data/stdcell/n4gp/TSMC/tcbn04p_bwph210l6p51cnod_base_lvtll_100b/lef/tcbn04p_bwph210l6p51cnod_base_lvtll_par.lef'.
+[01/09 09:23:00     21s] If it's defined multiple times for the same pair of types, only the last one
+[01/09 09:23:00     21s] will be kept. Check all definitions in all LEF files to remove any duplicated
+[01/09 09:23:00     21s] definitions to avoid this warning message.
+[01/09 09:23:00     21s] **WARN: (IMPLF-378):	The spacing for cell edge type 'NW_0D5' and 'NW_12D5' is already defined. It will be overwritten by the new definition in LEF file '/process/tsmcN4/data/stdcell/n4gp/TSMC/tcbn04p_bwph210l6p51cnod_base_lvtll_100b/lef/tcbn04p_bwph210l6p51cnod_base_lvtll_par.lef'.
+[01/09 09:23:00     21s] If it's defined multiple times for the same pair of types, only the last one
+[01/09 09:23:00     21s] will be kept. Check all definitions in all LEF files to remove any duplicated
+[01/09 09:23:00     21s] definitions to avoid this warning message.
+[01/09 09:23:00     21s] **WARN: (IMPLF-378):	The spacing for cell edge type 'NW_0D5' and 'NW_13D5' is already defined. It will be overwritten by the new definition in LEF file '/process/tsmcN4/data/stdcell/n4gp/TSMC/tcbn04p_bwph210l6p51cnod_base_lvtll_100b/lef/tcbn04p_bwph210l6p51cnod_base_lvtll_par.lef'.
+[01/09 09:23:00     21s] If it's defined multiple times for the same pair of types, only the last one
+[01/09 09:23:00     21s] will be kept. Check all definitions in all LEF files to remove any duplicated
+[01/09 09:23:00     21s] definitions to avoid this warning message.
+[01/09 09:23:00     21s] **WARN: (IMPLF-378):	The spacing for cell edge type 'NW_0D5' and 'NW_14D5' is already defined. It will be overwritten by the new definition in LEF file '/process/tsmcN4/data/stdcell/n4gp/TSMC/tcbn04p_bwph210l6p51cnod_base_lvtll_100b/lef/tcbn04p_bwph210l6p51cnod_base_lvtll_par.lef'.
+[01/09 09:23:00     21s] If it's defined multiple times for the same pair of types, only the last one
+[01/09 09:23:00     21s] will be kept. Check all definitions in all LEF files to remove any duplicated
+[01/09 09:23:00     21s] definitions to avoid this warning message.
+[01/09 09:23:00     21s] **WARN: (IMPLF-378):	The spacing for cell edge type 'NW_0D5' and 'NW_15D5' is already defined. It will be overwritten by the new definition in LEF file '/process/tsmcN4/data/stdcell/n4gp/TSMC/tcbn04p_bwph210l6p51cnod_base_lvtll_100b/lef/tcbn04p_bwph210l6p51cnod_base_lvtll_par.lef'.
+[01/09 09:23:00     21s] If it's defined multiple times for the same pair of types, only the last one
+[01/09 09:23:00     21s] will be kept. Check all definitions in all LEF files to remove any duplicated
+[01/09 09:23:00     21s] definitions to avoid this warning message.
+[01/09 09:23:00     21s] **WARN: (IMPLF-378):	The spacing for cell edge type 'NW_0D5' and 'NW_16D5' is already defined. It will be overwritten by the new definition in LEF file '/process/tsmcN4/data/stdcell/n4gp/TSMC/tcbn04p_bwph210l6p51cnod_base_lvtll_100b/lef/tcbn04p_bwph210l6p51cnod_base_lvtll_par.lef'.
+[01/09 09:23:00     21s] If it's defined multiple times for the same pair of types, only the last one
+[01/09 09:23:00     21s] will be kept. Check all definitions in all LEF files to remove any duplicated
+[01/09 09:23:00     21s] definitions to avoid this warning message.
+[01/09 09:23:00     21s] **WARN: (IMPLF-378):	The spacing for cell edge type 'NW_1D5' and 'NW_1D5' is already defined. It will be overwritten by the new definition in LEF file '/process/tsmcN4/data/stdcell/n4gp/TSMC/tcbn04p_bwph210l6p51cnod_base_lvtll_100b/lef/tcbn04p_bwph210l6p51cnod_base_lvtll_par.lef'.
+[01/09 09:23:00     21s] If it's defined multiple times for the same pair of types, only the last one
+[01/09 09:23:00     21s] will be kept. Check all definitions in all LEF files to remove any duplicated
+[01/09 09:23:00     21s] definitions to avoid this warning message.
+[01/09 09:23:00     21s] **WARN: (IMPLF-378):	The spacing for cell edge type 'NW_1D5' and 'NW_2D5' is already defined. It will be overwritten by the new definition in LEF file '/process/tsmcN4/data/stdcell/n4gp/TSMC/tcbn04p_bwph210l6p51cnod_base_lvtll_100b/lef/tcbn04p_bwph210l6p51cnod_base_lvtll_par.lef'.
+[01/09 09:23:00     21s] If it's defined multiple times for the same pair of types, only the last one
+[01/09 09:23:00     21s] will be kept. Check all definitions in all LEF files to remove any duplicated
+[01/09 09:23:00     21s] definitions to avoid this warning message.
+[01/09 09:23:00     21s] **WARN: (IMPLF-378):	The spacing for cell edge type 'NW_1D5' and 'NW_3D5' is already defined. It will be overwritten by the new definition in LEF file '/process/tsmcN4/data/stdcell/n4gp/TSMC/tcbn04p_bwph210l6p51cnod_base_lvtll_100b/lef/tcbn04p_bwph210l6p51cnod_base_lvtll_par.lef'.
+[01/09 09:23:00     21s] If it's defined multiple times for the same pair of types, only the last one
+[01/09 09:23:00     21s] will be kept. Check all definitions in all LEF files to remove any duplicated
+[01/09 09:23:00     21s] definitions to avoid this warning message.
+[01/09 09:23:00     21s] **WARN: (EMS-62):	Message <IMPLF-378> has exceeded the default message display limit of 20.
+[01/09 09:23:00     21s] To avoid this warning, increase the display limit per unique message by
+[01/09 09:23:00     21s] using the set_message -limit <number> command.
+[01/09 09:23:00     21s] The message limit can be removed by using the set_message -no_limit command.
+[01/09 09:23:00     21s] Note that setting a very large number using the set_message -limit command
+[01/09 09:23:00     21s] or removing the message limit using the set_message -no_limit command can
+[01/09 09:23:00     21s] significantly increase the log file size.
+[01/09 09:23:00     21s] To suppress a message, use the set_message -suppress command.
+[01/09 09:23:00     21s] WARNING (LEFPARS-2001): No VERSION statement found, using the default value 5.8. See file /process/tsmcN4/data/stdcell/n4gp/TSMC/tcbn04p_bwph210l6p51cnod_base_lvtll_100b/lef/tcbn04p_bwph210l6p51cnod_base_lvtll_par.lef at line 248.
+[01/09 09:23:00     21s] 
+[01/09 09:23:00     21s] Loading LEF file /process/tsmcN4/data/stdcell/n4gp/TSMC/tcbn04p_bwph210l6p51cnod_base_svt_100b/lef/tcbn04p_bwph210l6p51cnod_base_svt.lef ...
+[01/09 09:23:00     21s] 
+[01/09 09:23:00     21s] Loading LEF file /process/tsmcN4/data/stdcell/n4gp/TSMC/tcbn04p_bwph210l6p51cnod_base_svt_100b/lef/tcbn04p_bwph210l6p51cnod_base_svt_par.lef ...
+[01/09 09:23:00     21s] WARNING (LEFPARS-2001): No VERSION statement found, using the default value 5.8. See file /process/tsmcN4/data/stdcell/n4gp/TSMC/tcbn04p_bwph210l6p51cnod_base_svt_100b/lef/tcbn04p_bwph210l6p51cnod_base_svt_par.lef at line 248.
+[01/09 09:23:00     21s] 
+[01/09 09:23:00     21s] Loading LEF file /process/tsmcN4/data/stdcell/n4gp/TSMC/tcbn04p_bwph210l6p51cnod_base_ulvt_100b/lef/tcbn04p_bwph210l6p51cnod_base_ulvt.lef ...
+[01/09 09:23:00     21s] 
+[01/09 09:23:00     21s] Loading LEF file /process/tsmcN4/data/stdcell/n4gp/TSMC/tcbn04p_bwph210l6p51cnod_base_ulvt_100b/lef/tcbn04p_bwph210l6p51cnod_base_ulvt_par.lef ...
+[01/09 09:23:00     21s] WARNING (LEFPARS-2001): No VERSION statement found, using the default value 5.8. See file /process/tsmcN4/data/stdcell/n4gp/TSMC/tcbn04p_bwph210l6p51cnod_base_ulvt_100b/lef/tcbn04p_bwph210l6p51cnod_base_ulvt_par.lef at line 248.
+[01/09 09:23:00     21s] 
+[01/09 09:23:00     21s] Loading LEF file /process/tsmcN4/data/stdcell/n4gp/TSMC/tcbn04p_bwph210l6p51cnod_base_elvt_100b/lef/tcbn04p_bwph210l6p51cnod_base_elvt.lef ...
+[01/09 09:23:00     21s] 
+[01/09 09:23:00     21s] Loading LEF file /process/tsmcN4/data/stdcell/n4gp/TSMC/tcbn04p_bwph210l6p51cnod_base_elvt_100b/lef/tcbn04p_bwph210l6p51cnod_base_elvt_par.lef ...
+[01/09 09:23:00     21s] WARNING (LEFPARS-2001): No VERSION statement found, using the default value 5.8. See file /process/tsmcN4/data/stdcell/n4gp/TSMC/tcbn04p_bwph210l6p51cnod_base_elvt_100b/lef/tcbn04p_bwph210l6p51cnod_base_elvt_par.lef at line 248.
+[01/09 09:23:00     21s] 
+[01/09 09:23:00     21s] Loading LEF file /process/tsmcN4/data/stdcell/n4gp/TSMC/tcbn04p_bwph210l6p51cnod_base_ulvtll_100b/lef/tcbn04p_bwph210l6p51cnod_base_ulvtll.lef ...
+[01/09 09:23:01     22s] 
+[01/09 09:23:01     22s] Loading LEF file /process/tsmcN4/data/stdcell/n4gp/TSMC/tcbn04p_bwph210l6p51cnod_base_ulvtll_100b/lef/tcbn04p_bwph210l6p51cnod_base_ulvtll_par.lef ...
+[01/09 09:23:01     22s] WARNING (LEFPARS-2001): No VERSION statement found, using the default value 5.8. See file /process/tsmcN4/data/stdcell/n4gp/TSMC/tcbn04p_bwph210l6p51cnod_base_ulvtll_100b/lef/tcbn04p_bwph210l6p51cnod_base_ulvtll_par.lef at line 248.
+[01/09 09:23:01     22s] 
+[01/09 09:23:01     22s] Loading LEF file /projects/byd_A3_N4P_32bits_LPDDR5_phy/libs/ndr/ndr_10w8s.lef ...
+[01/09 09:23:01     22s] 
+[01/09 09:23:01     22s] Loading LEF file /projects/byd_A3_N4P_32bits_LPDDR5_phy/libs/ndr/ndr_1w2s.lef ...
+[01/09 09:23:01     22s] 
+[01/09 09:23:01     22s] Loading LEF file /projects/byd_A3_N4P_32bits_LPDDR5_phy/libs/ndr/ndr_1w3s.lef ...
+[01/09 09:23:01     22s] 
+[01/09 09:23:01     22s] Loading LEF file /projects/byd_A3_N4P_32bits_LPDDR5_phy/libs/ndr/ndr_2w1s.lef ...
+[01/09 09:23:01     22s] 
+[01/09 09:23:01     22s] Loading LEF file /projects/byd_A3_N4P_32bits_LPDDR5_phy/libs/ndr/ndr_2w2s.lef ...
+[01/09 09:23:01     22s] 
+[01/09 09:23:01     22s] Loading LEF file /projects/byd_A3_N4P_32bits_LPDDR5_phy/libs/ndr/ndr_2w3s.lef ...
+[01/09 09:23:01     22s] 
+[01/09 09:23:01     22s] Loading LEF file /projects/byd_A3_N4P_32bits_LPDDR5_phy/libs/customcell/cdns_ddr_custom_dig_cells_tcbn05_bwph210l6p51cnod_base.antenna.lef ...
+[01/09 09:38:47   3154s] Note: 1 current source are disconnected.
+[01/09 09:38:47   3154s] Ended Preparing Database for Report Generation: (cpu=0:00:01, real=0:00:01, mem(process/total/peak)=713.12MB/17476.71MB/11362.71MB)
+[01/09 09:38:47   3154s] 
+[01/09 09:38:47   3154s] Initializing Report Generation: (cpu=0:00:00, real=0:00:00, mem(process/total/peak)=713.26MB/17476.71MB/11362.71MB)
+[01/09 09:38:47   3154s] 
+[01/09 09:38:47   3154s] Begin IR Drop (Linear) Report Generation
+[01/09 09:38:47   3154s]   Voltage: 0
+[01/09 09:38:47   3154s]   Threshold: 0.015
+[01/09 09:38:47   3154s]   Minimum, Average, Maximum IR Drop: 0.000V, 0.766mV, 11.781mV
+[01/09 09:38:47   3154s]     Range 1(  10.308mV  -    11.782mV ):        13 (  0.00%)
+[01/09 09:38:47   3154s]     Range 2(   8.835mV  -    10.308mV ):         9 (  0.00%)
+[01/09 09:38:47   3154s]     Range 3(   7.363mV  -     8.835mV ):        26 (  0.00%)
+[01/09 09:38:47   3154s]     Range 4(   5.890mV  -     7.363mV ):        63 (  0.00%)
+[01/09 09:38:47   3154s]     Range 5(   4.418mV  -     5.890mV ):       324 (  0.02%)
+[01/09 09:38:47   3154s]     Range 6(   2.945mV  -     4.418mV ):      2615 (  0.18%)
+[01/09 09:38:47   3154s]     Range 7(   1.473mV  -     2.945mV ):     96166 (  6.74%)
+[01/09 09:38:47   3154s]     Range 8(    0.000V  -     1.473mV ):   1326704 ( 93.04%)
+[01/09 09:38:47   3154s] *** Note : 482 disconnected nodes are excluded from the report.
+[01/09 09:38:47   3154s]     Layer with maximum IR Drop:  M0
+[01/09 09:38:47   3154s]       M14: 4.0885e-12 [0 - 0]
+[01/09 09:38:47   3154s]       M13: 0.00011984 [7.2581e-07 - 0.00012056]
+[01/09 09:38:47   3154s]       M12: 0.00015133 [1.5738e-06 - 0.0001529]
+[01/09 09:38:47   3154s]       M11: 0.00066164 [3.0994e-06 - 0.00066474]
+[01/09 09:38:47   3154s]       M10: 0.00067293 [7.4383e-06 - 0.00068037]
+[01/09 09:38:47   3154s]       M9: 0.00069631 [1.1081e-05 - 0.00070739]
+[01/09 09:38:47   3154s]       M8: 0.00073769 [1.3687e-05 - 0.00075138]
+[01/09 09:38:47   3154s]       M7: 0.00090128 [1.7841e-05 - 0.00091912]
+[01/09 09:38:47   3154s]       M6: 0.0011773 [2.1964e-05 - 0.0011993]
+[01/09 09:38:47   3154s]       M5: 0.0016455 [2.6034e-05 - 0.0016715]
+[01/09 09:38:47   3154s]       M4: 0.0024186 [2.6469e-05 - 0.0024451]
+[01/09 09:38:47   3154s]       M3: 0.0030719 [2.6713e-05 - 0.0030986]
+[01/09 09:38:47   3154s]       M2: 0.0066925 [2.6957e-05 - 0.0067194]
+[01/09 09:38:47   3154s]       M1: 0.0086659 [2.7097e-05 - 0.008693]
+[01/09 09:38:47   3154s]       M0: 0.011754 [2.7144e-05 - 0.011781]
+[01/09 09:38:47   3154s]   IR Report: ./dbs/func_func_ffgnp_0p825v_125c_cbest_CCbest_T_cworst_CCworst_hold_static/PD_125C_avg_1/Reports/VSS/VSS.main.rpt
+[01/09 09:38:47   3154s]   GIF plot: ./dbs/func_func_ffgnp_0p825v_125c_cbest_CCbest_T_cworst_CCworst_hold_static/PD_125C_avg_1/Reports/VSS/ir_linear.gif
+[01/09 09:38:47   3154s] Ended IR Drop (Linear) Report Generation: (cpu=0:00:01, real=0:00:01, mem(process/total/peak)=713.87MB/17476.72MB/11362.71MB)
+[01/09 09:38:47   3154s] 
+[01/09 09:38:47   3154s] 
+[01/09 09:38:47   3154s] Begin IR Drop (Limit) Report Generation
+[01/09 09:38:47   3154s]   Voltage: 0
+[01/09 09:38:47   3154s]   Threshold: 0.015
+[01/09 09:38:47   3154s]   Minimum, Average, Maximum IR Drop: 0.000V, 0.766mV, 11.781mV
+[01/09 09:38:47   3154s]     Range 1(  15.000mV  -    15.002mV ):         0 (  0.00%)
+[01/09 09:38:47   3154s]     Range 2(  13.750mV  -    15.000mV ):         0 (  0.00%)
+[01/09 09:38:47   3154s]     Range 3(  12.500mV  -    13.750mV ):         0 (  0.00%)
+[01/09 09:38:47   3154s]     Range 4(  11.250mV  -    12.500mV ):         4 (  0.00%)
+[01/09 09:38:47   3154s]     Range 5(  10.000mV  -    11.250mV ):        10 (  0.00%)
+[01/09 09:38:47   3154s]     Range 6(   8.750mV  -    10.000mV ):         9 (  0.00%)
+[01/09 09:38:47   3154s]     Range 7(   7.500mV  -     8.750mV ):        24 (  0.00%)
+[01/09 09:38:47   3154s]     Range 8(  -1.000uV  -     7.500mV ):   1425873 (100.00%)
+[01/09 09:38:47   3154s] *** Note : 482 disconnected nodes are excluded from the report.
+[01/09 09:38:47   3154s]     Layer with maximum IR Drop:  M0
+[01/09 09:38:47   3154s]       M14: 4.0885e-12 [0 - 0]
+[01/09 09:38:47   3154s]       M13: 0.00011984 [7.2581e-07 - 0.00012056]
+[01/09 09:38:47   3154s]       M12: 0.00015133 [1.5738e-06 - 0.0001529]
+[01/09 09:38:47   3154s]       M11: 0.00066164 [3.0994e-06 - 0.00066474]
+[01/09 09:38:47   3154s]       M10: 0.00067293 [7.4383e-06 - 0.00068037]
+[01/09 09:38:47   3154s]       M9: 0.00069631 [1.1081e-05 - 0.00070739]
+[01/09 09:38:47   3154s]       M8: 0.00073769 [1.3687e-05 - 0.00075138]
+[01/09 09:38:47   3154s]       M7: 0.00090128 [1.7841e-05 - 0.00091912]
+[01/09 09:38:47   3154s]       M6: 0.0011773 [2.1964e-05 - 0.0011993]
+[01/09 09:38:47   3154s]       M5: 0.0016455 [2.6034e-05 - 0.0016715]
+[01/09 09:38:47   3154s]       M4: 0.0024186 [2.6469e-05 - 0.0024451]
+[01/09 09:38:47   3154s]       M3: 0.0030719 [2.6713e-05 - 0.0030986]
+[01/09 09:38:47   3154s]       M2: 0.0066925 [2.6957e-05 - 0.0067194]
+[01/09 09:38:47   3154s]       M1: 0.0086659 [2.7097e-05 - 0.008693]
+[01/09 09:38:47   3154s]       M0: 0.011754 [2.7144e-05 - 0.011781]
+[01/09 09:38:47   3154s]   IR Report: ./dbs/func_func_ffgnp_0p825v_125c_cbest_CCbest_T_cworst_CCworst_hold_static/PD_125C_avg_1/Reports/VSS/VSS.main.rpt
+[01/09 09:38:47   3154s]   GIF plot: ./dbs/func_func_ffgnp_0p825v_125c_cbest_CCbest_T_cworst_CCworst_hold_static/PD_125C_avg_1/Reports/VSS/ir_limit.gif
+[01/09 09:38:47   3154s] Ended IR Drop (Limit) Report Generation: (cpu=0:00:00, real=0:00:00, mem(process/total/peak)=713.88MB/17476.71MB/11362.71MB)
+[01/09 09:38:47   3154s] 
+[01/09 09:38:47   3154s] 
+[01/09 09:38:47   3154s] Begin Tap Current Report Generation
+[01/09 09:38:47   3154s]   Minimum, Average, Maximum Tap Current: -0.119mA, -0.225uA, 0.000A
+[01/09 09:38:47   3154s]   Total Current: -0.122A
+[01/09 09:38:47   3154s]     Range 1(  -1.000GA  -    -1.000mA ):         0 (  0.00%)
+[01/09 09:38:47   3154s]     Range 2(  -1.000mA  -  -100.000uA ):         2 (  0.00%)
+[01/09 09:38:47   3154s]     Range 3(-100.000uA  -   -10.000uA ):      1094 (  0.20%)
+[01/09 09:38:47   3154s]     Range 4( -10.000uA  -    -1.000uA ):     31076 (  5.71%)
+[01/09 09:38:47   3154s]     Range 5(  -1.000uA  -  -100.000nA ):     79274 ( 14.56%)
+[01/09 09:38:47   3154s]     Range 6(-100.000nA  -   -10.000nA ):     91094 ( 16.74%)
+[01/09 09:38:47   3154s]     Range 7( -10.000nA  -    -1.000nA ):      8382 (  1.54%)
+[01/09 09:38:47   3154s]     Range 8(  -1.000nA  -      0.000A ):    333393 ( 61.25%)
+[01/09 09:38:47   3154s] *** Note: 1 disconnected taps (-0.171A) are excluded from the report.
+[01/09 09:38:47   3154s]   GIF plot: ./dbs/func_func_ffgnp_0p825v_125c_cbest_CCbest_T_cworst_CCworst_hold_static/PD_125C_avg_1/Reports/VSS/tc.gif
+[01/09 09:38:47   3154s] Ended Tap Current Report Generation: (cpu=0:00:01, real=0:00:01, mem(process/total/peak)=713.96MB/17476.73MB/11362.71MB)
+[01/09 09:38:47   3154s] 
+[01/09 09:38:47   3154s] 
+[01/09 09:38:47   3154s] Begin Instance Based IR Drop Report Generation
+[01/09 09:38:47   3154s]   Minimum, Average, Maximum Instance Based IR Drop: 27.144uV, 0.951mV, 11.781mV
+[01/09 09:38:47   3154s]     Range 1(  15.000mV  -    15.002mV ):         0 (  0.00%)
+[01/09 09:38:47   3154s]     Range 2(  13.750mV  -    15.000mV ):         0 (  0.00%)
+[01/09 09:38:47   3154s]     Range 3(  12.500mV  -    13.750mV ):         0 (  0.00%)
+[01/09 09:38:47   3154s]     Range 4(  11.250mV  -    12.500mV ):         4 (  0.00%)
+[01/09 09:38:47   3154s]     Range 5(  10.000mV  -    11.250mV ):         8 (  0.00%)
+[01/09 09:38:47   3154s]     Range 6(   8.750mV  -    10.000mV ):         9 (  0.00%)
+[01/09 09:38:47   3154s]     Range 7(   7.500mV  -     8.750mV ):        18 (  0.00%)
+[01/09 09:38:47   3154s]     Range 8(  -1.000uV  -     7.500mV ):    544276 ( 99.99%)
+[01/09 09:38:47   3154s] *** Note : 1 disconnected nodes are excluded from the report.
+[01/09 09:38:47   3154s]   GIF plot: ./dbs/func_func_ffgnp_0p825v_125c_cbest_CCbest_T_cworst_CCworst_hold_static/PD_125C_avg_1/Reports/VSS/iv.gif
+[01/09 09:38:47   3154s] Ended Instance Based IR Drop Report Generation: (cpu=0:00:00, real=0:00:01, mem(process/total/peak)=714.28MB/17476.71MB/11362.71MB)
+[01/09 09:38:47   3154s] 
+[01/09 09:38:47   3154s] 
+[01/09 09:38:47   3154s] Begin Effective Instance Voltage Report Generation
+[01/09 09:38:47   3154s] Ended Effective Instance Voltage Report Generation: (cpu=0:00:00, real=0:00:00, mem(process/total/peak)=714.29MB/17476.71MB/11362.71MB)
+[01/09 09:38:47   3154s] 
+[01/09 09:38:47   3154s] 
+[01/09 09:38:47   3154s] Begin Voltage Source Current Report Generation
+[01/09 09:38:47   3154s]   Minimum, Average, Maximum Voltage Source Current: 20.583uA, 0.168mA, 0.429mA
+[01/09 09:38:47   3154s]   Total Current: 0.122A
+[01/09 09:38:47   3154s]     Range 1(   0.378mA  -     0.429mA ):         6 (  0.82%)
+[01/09 09:38:47   3154s]     Range 2(   0.327mA  -     0.378mA ):        22 (  3.01%)
+[01/09 09:38:47   3154s]     Range 3(   0.276mA  -     0.327mA ):        48 (  6.57%)
+[01/09 09:38:47   3154s]     Range 4(   0.225mA  -     0.276mA ):        79 ( 10.81%)
+[01/09 09:38:47   3154s]     Range 5(   0.174mA  -     0.225mA ):       130 ( 17.78%)
+[01/09 09:38:47   3154s]     Range 6(   0.123mA  -     0.174mA ):       222 ( 30.37%)
+[01/09 09:38:47   3154s]     Range 7(  71.689uA  -     0.123mA ):       168 ( 22.98%)
+[01/09 09:38:47   3154s]     Range 8(  20.581uA  -    71.689uA ):        56 (  7.66%)
+[01/09 09:38:47   3154s]   GIF plot: ./dbs/func_func_ffgnp_0p825v_125c_cbest_CCbest_T_cworst_CCworst_hold_static/PD_125C_avg_1/Reports/VSS/vc.gif
+[01/09 09:38:47   3154s] Ended Voltage Source Current Report Generation: (cpu=0:00:00, real=0:00:00, mem(process/total/peak)=714.36MB/17476.73MB/11362.71MB)
+[01/09 09:38:47   3154s] 
+[01/09 09:38:47   3154s] 
+[01/09 09:38:47   3154s] Begin Resistor Current Report Generation
+[01/09 09:38:47   3154s]   Minimum, Average, Maximum Resistor Current: 0.000A, 2.774uA, 0.429mA
+[01/09 09:38:47   3154s]     Range 1(   1.000mA  -     1.000GA ):         0 (  0.00%)
+[01/09 09:38:47   3154s]     Range 2( 100.000uA  -     1.000mA ):      1854 (  0.11%)
+[01/09 09:38:47   3154s]     Range 3(  10.000uA  -   100.000uA ):    109221 (  6.25%)
+[01/09 09:38:47   3154s]     Range 4(   1.000uA  -    10.000uA ):    640411 ( 36.64%)
+[01/09 09:38:47   3154s]     Range 5(   0.100uA  -     1.000uA ):    702192 ( 40.18%)
+[01/09 09:38:47   3154s]     Range 6(  10.000nA  -     0.100uA ):    112631 (  6.44%)
+[01/09 09:38:47   3154s]     Range 7(   1.000nA  -    10.000nA ):     14686 (  0.84%)
+[01/09 09:38:47   3154s]     Range 8(    0.000A  -     1.000nA ):    166638 (  9.54%)
+[01/09 09:38:47   3154s] *** Note : 260 disconnected resistors are excluded from the report.
+[01/09 09:38:47   3154s]   GIF plot: ./dbs/func_func_ffgnp_0p825v_125c_cbest_CCbest_T_cworst_CCworst_hold_static/PD_125C_avg_1/Reports/VSS/rc.gif
+[01/09 09:38:47   3154s] Ended Resistor Current Report Generation: (cpu=0:00:05, real=0:00:06, mem(process/total/peak)=1594.13MB/19223.73MB/11362.71MB)
+[01/09 09:38:47   3154s] 
+[01/09 09:38:47   3154s] 
+[01/09 09:38:47   3154s] Begin Resistor Voltage Report Generation
+[01/09 09:38:47   3154s]   Minimum, Average, Maximum Resistor Voltage: 0.000V, 26.450uV, 2.782mV
+[01/09 09:38:47   3154s]     Range 1(   2.434mV  -     2.782mV ):         1 (  0.00%)
+[01/09 09:38:47   3154s]     Range 2(   2.087mV  -     2.434mV ):         0 (  0.00%)
+[01/09 09:38:47   3154s]     Range 3(   1.739mV  -     2.087mV ):         5 (  0.00%)
+[01/09 09:38:47   3154s]     Range 4(   1.391mV  -     1.739mV ):         9 (  0.00%)
+[01/09 09:38:47   3154s]     Range 5(   1.043mV  -     1.391mV ):        37 (  0.00%)
+[01/09 09:38:47   3154s]     Range 6(   0.696mV  -     1.043mV ):       158 (  0.01%)
+[01/09 09:38:47   3154s]     Range 7(   0.348mV  -     0.696mV ):      2234 (  0.13%)
+[01/09 09:38:47   3154s]     Range 8(    0.000V  -     0.348mV ):   1745189 ( 99.86%)
+[01/09 09:38:47   3154s] *** Note : 260 disconnected resistors are excluded from the report.
+[01/09 09:38:47   3154s]   GIF plot: ./dbs/func_func_ffgnp_0p825v_125c_cbest_CCbest_T_cworst_CCworst_hold_static/PD_125C_avg_1/Reports/VSS/rv.gif
+[01/09 09:38:47   3154s] Ended Resistor Voltage Report Generation: (cpu=0:00:02, real=0:00:01, mem(process/total/peak)=1609.58MB/19261.32MB/11362.71MB)
+[01/09 09:38:47   3154s] 
+[01/09 09:38:47   3154s] 
+[01/09 09:38:47   3154s] Begin Power Gate I/Idsat Report Generation
+[01/09 09:38:47   3154s]   No data found
+[01/09 09:38:47   3154s] Ended Power Gate I/Idsat Report Generation: (cpu=0:00:00, real=0:00:00, mem(process/total/peak)=1609.61MB/19261.32MB/11362.71MB)
+[01/09 09:38:47   3154s] 
+[01/09 09:38:47   3154s] 
+[01/09 09:38:47   3154s] Begin Power Gate Voltage Report Generation
+[01/09 09:38:47   3154s]   No data found.
+[01/09 09:38:47   3154s] Ended Power Gate Voltage Report Generation: (cpu=0:00:00, real=0:00:00, mem(process/total/peak)=1609.62MB/19261.32MB/11362.71MB)
+[01/09 09:38:47   3154s] 
+[01/09 09:38:47   3154s] 
+[01/09 09:38:47   3154s] Begin Resistance of the Least Resistive Path Report Generation
+[01/09 09:38:47   3154s]   Minimum, Average, Maximum Resistance of the Least Resistive Path: 197.066Ohm, 288.791Ohm, 553.224Ohm
+[01/09 09:38:47   3154s]     Range 1(  508.704Ohm  -    553.279Ohm ):        10 (  0.00%)
+[01/09 09:38:47   3154s]     Range 2(  464.184Ohm  -    508.704Ohm ):        61 (  0.01%)
+[01/09 09:38:47   3154s]     Range 3(  419.665Ohm  -    464.184Ohm ):       147 (  0.03%)
+[01/09 09:38:47   3154s]     Range 4(  375.145Ohm  -    419.665Ohm ):      1738 (  0.31%)
+[01/09 09:38:47   3154s]     Range 5(  330.625Ohm  -    375.145Ohm ):     35653 (  6.28%)
+[01/09 09:38:47   3154s]     Range 6(  286.106Ohm  -    330.625Ohm ):    283994 ( 49.99%)
+[01/09 09:38:47   3154s]     Range 7(  241.586Ohm  -    286.106Ohm ):    199623 ( 35.14%)
+[01/09 09:38:47   3154s]     Range 8(  197.047Ohm  -    241.586Ohm ):     46822 (  8.24%)
+[01/09 09:38:47   3154s] *** Note : 1 disconnected Instances are excluded from the report.
+[01/09 09:38:47   3154s]   GIF plot: ./dbs/func_func_ffgnp_0p825v_125c_cbest_CCbest_T_cworst_CCworst_hold_static/PD_125C_avg_1/Reports/VSS/rlrp.gif
+[01/09 09:38:47   3154s] Ended Resistance of the Least Resistive Path Report Generation: (cpu=0:00:04, real=0:00:04, mem(process/total/peak)=1862.26MB/19952.36MB/11362.71MB)
+[01/09 09:38:47   3154s] 
+[01/09 09:38:47   3154s] Info: Using Layer-stack details from : './work/lib_merged.cl/qrcTechFile_RCgen'
+[01/09 09:38:47   3154s] Info: Using EM Rules from : '/process/tsmcN4/data/gp/QRC/15M1X1Xb1Xe1Ya1Yb5Y2Yy2Z_SHDMIM_UT/ICT_EM_v1d0p1a/cln4p_1p15m+ut-alrdl_1x1xb1xe1ya1yb5y2yy2z_shdmim.ictem'
+[01/09 09:38:47   3154s] Warning: WARNING (EM_MSG-1006): The value of lifetime is not specified. As a result, 87600 hours will be used as the default value of lifetime.
+[01/09 09:38:47   3154s] 
+[01/09 09:38:47   3154s] Begin Current Density (J/JMAX) Report Generation
+[01/09 09:38:47   3154s]   Minimum, Average, Maximum Current Density (J/JMAX): 0.000, 5.037m, 0.505
+[01/09 09:38:47   3154s]     Range 1(    1.000  -     1.000G ):         0 (  0.00%)
+[01/09 09:38:47   3154s]     Range 2(    0.857  -      1.000 ):         0 (  0.00%)
+[01/09 09:38:47   3154s]     Range 3(    0.714  -      0.857 ):         0 (  0.00%)
+[01/09 09:38:47   3154s]     Range 4(    0.571  -      0.714 ):         0 (  0.00%)
+[01/09 09:38:47   3154s]     Range 5(    0.429  -      0.571 ):         1 (  0.00%)
+[01/09 09:38:47   3154s]     Range 6(    0.286  -      0.429 ):         3 (  0.00%)
+[01/09 09:38:47   3154s]     Range 7(    0.143  -      0.286 ):        86 (  0.01%)
+[01/09 09:38:47   3154s]     Range 8(    0.000  -      0.143 ):   1717455 ( 99.99%)
+[01/09 09:38:47   3154s]   GIF plot: ./dbs/func_func_ffgnp_0p825v_125c_cbest_CCbest_T_cworst_CCworst_hold_static/PD_125C_avg_1/Reports/VSS/rj.gif
+[01/09 09:38:47   3154s] Ended Current Density (J/JMAX) Report Generation: (cpu=0:00:07, real=0:00:09, mem(process/total/peak)=1947.31MB/20028.50MB/11362.71MB)
+[01/09 09:38:47   3154s] 
+[01/09 09:38:47   3154s] 
+[01/09 09:38:47   3154s] Begin Voltage Across Vias and Contacts Report Generation
+[01/09 09:38:47   3154s] Ended Voltage Across Vias and Contacts Report Generation: (cpu=0:00:00, real=0:00:00, mem(process/total/peak)=1947.32MB/20028.50MB/11362.71MB)
+[01/09 09:38:47   3154s] 
+[01/09 09:38:47   3154s] 
+[01/09 09:38:47   3154s] Begin Weak Grid Connectivity Report
+[01/09 09:38:47   3154s] Ended Weak Grid Connectivity Report: (cpu=0:00:00, real=0:00:00, mem(process/total/peak)=1947.76MB/20028.49MB/11362.71MB)
+[01/09 09:38:47   3154s] 
+[01/09 09:38:47   3154s] 
+[01/09 09:38:47   3154s] Begin Grid Integrity Report Generation
+[01/09 09:38:47   3154s]   # Missing Cell Power-Grid Views: 0
+[01/09 09:38:47   3154s]   # Physically Disconnected Instances: 1
+[01/09 09:38:47   3154s]   # Instances with Floating Power Pins: 0
+[01/09 09:38:47   3154s]   # Disconnected Wire Segments: 222
+[01/09 09:38:47   3154s]   # Weakly Connected Metal Segments: 151
+[01/09 09:38:47   3154s]   # Dropped Voltage Sources: 0
+[01/09 09:38:47   3154s] Ended Grid Integrity Report Generation: (cpu=0:00:00, real=0:00:00, mem(process/total/peak)=1947.83MB/20028.49MB/11362.71MB)
+[01/09 09:38:47   3154s] 
+[01/09 09:38:47   3154s] 
+[01/09 09:38:47   3154s] 
+[01/09 09:38:47   3154s] Net VDD:
+[01/09 09:38:47   3154s] 
+[01/09 09:38:47   3154s] 
+[01/09 09:38:47   3154s] Begin Preparing Database for Report Generation
+[01/09 09:38:47   3154s] 
+[01/09 09:38:47   3154s] Circuit profile:
+[01/09 09:38:47   3154s]                                                       Current    Voltage
+[01/09 09:38:47   3154s] Layer Name                       Nodes   Resistors    Sources    Sources
+[01/09 09:38:47   3154s] ----- --------------------  ----------  ----------  ---------  ---------
+[01/09 09:38:47   3154s] 0     AP                             5           4          1          0
+[01/09 09:38:47   3154s] 1     M15                          187         146          0          0
+[01/09 09:38:47   3154s] 2     M14                          893         846          0        736
+[01/09 09:38:47   3154s] 3     VIA13                          0         736          0          0
+[01/09 09:38:47   3154s] 4     M13                        15696       15680          0          0
+[01/09 09:38:47   3154s] 5     VIA12                          0       12400          0          0
+[01/09 09:38:47   3154s] 6     M12                        19594       19562          0          0
+[01/09 09:38:47   3154s] 7     VIA11                          0        7130          0          0
+[01/09 09:38:47   3154s] 8     M11                        12920       12867          0          0
+[01/09 09:38:47   3154s] 9     VIA10                          0        5550          0          0
+[01/09 09:38:47   3154s] 10    M10                        11077       10952          0          0
+[01/09 09:38:47   3154s] 11    VIA9                           0        5311          0          0
+[01/09 09:38:47   3154s] 12    M9                          9848        9800          0          0
+[01/09 09:38:47   3154s] 13    VIA8                           0        4344          0          0
+[01/09 09:38:47   3154s] 14    M8                          9447        9345          0          0
+[01/09 09:38:47   3154s] 15    VIA7                           0        4933          0          0
+[01/09 09:38:47   3154s] 16    M7                         10417       10364          0          0
+[01/09 09:38:47   3154s] 17    VIA6                           0        5219          0          0
+[01/09 09:38:47   3154s] 18    M6                         10871       10755          0          0
+[01/09 09:38:47   3154s] 19    VIA5                           0        5430          0          0
+[01/09 09:38:47   3154s] 20    M5                         42967       42899          0          0
+[01/09 09:38:47   3154s] 21    VIA4                           0       37236          0          0
+[01/09 09:38:47   3154s] 22    M4                        113839      113072          0          0
+[01/09 09:38:47   3154s] 23    VIA3                           0       75099          0          0
+[01/09 09:38:47   3154s] 24    M3                        150849      150734          0          0
+[01/09 09:38:47   3154s] 25    VIA2                           0       82661          0          0
+[01/09 09:38:47   3154s] 26    M2                        161458      160647          0          0
+[01/09 09:38:47   3154s] 27    VIA1                           0       77175          0          0
+[01/09 09:38:47   3154s] 28    M1                        231067      153892          0          0
+[01/09 09:38:47   3154s] 29    VIA0                           0       77175          0          0
+[01/09 09:38:47   3154s] 30    M0                        616608      615791     538901          0
+[01/09 09:38:47   3154s]                             ----------  ----------  ---------  ---------
+[01/09 09:38:47   3154s] 31    Circuit total            1417744     1737755     538902        736
+[01/09 09:38:47   3154s] 
+[01/09 09:38:47   3154s] Note: 1 current source are disconnected.
+[01/09 09:38:47   3154s] Ended Preparing Database for Report Generation: (cpu=0:00:01, real=0:00:01, mem(process/total/peak)=713.12MB/17476.70MB/11362.71MB)
+[01/09 09:38:47   3154s] 
+[01/09 09:38:47   3154s] Initializing Report Generation: (cpu=0:00:00, real=0:00:00, mem(process/total/peak)=713.25MB/17476.70MB/11362.71MB)
+[01/09 09:38:47   3154s] 
+[01/09 09:38:47   3154s] Begin IR Drop (Linear) Report Generation
+[01/09 09:38:47   3154s]   Voltage: 0.825
+[01/09 09:38:47   3154s]   Threshold: 0.8085
+[01/09 09:38:47   3154s]   Minimum, Average, Maximum IR Drop: 0.813V, 0.824V, 0.825V
+[01/09 09:38:47   3154s]     Range 1(    0.813V  -      0.814V ):        11 (  0.00%)
+[01/09 09:38:47   3154s]     Range 2(    0.814V  -      0.816V ):         9 (  0.00%)
+[01/09 09:38:47   3154s]     Range 3(    0.816V  -      0.817V ):        29 (  0.00%)
+[01/09 09:38:47   3154s]     Range 4(    0.817V  -      0.819V ):        42 (  0.00%)
+[01/09 09:38:47   3154s]     Range 5(    0.819V  -      0.820V ):       300 (  0.02%)
+[01/09 09:38:47   3154s]     Range 6(    0.820V  -      0.822V ):      2391 (  0.17%)
+[01/09 09:38:47   3154s]     Range 7(    0.822V  -      0.823V ):     86957 (  6.13%)
+[01/09 09:38:47   3154s]     Range 8(    0.823V  -      0.825V ):   1327745 ( 93.67%)
+[01/09 09:38:47   3154s] *** Note : 259 disconnected nodes are excluded from the report.
+[01/09 09:38:47   3154s]     Layer with maximum IR Drop:  M0
+[01/09 09:38:47   3154s]       M14: 0 [0.825 - 0.825]
+[01/09 09:38:47   3154s]       M13: 0.00012112 [0.82488 - 0.825]
+[01/09 09:38:47   3154s]       M12: 0.00023508 [0.82476 - 0.82499]
+[01/09 09:38:47   3154s]       M11: 0.00173 [0.82326 - 0.82499]
+[01/09 09:38:47   3154s]       M10: 0.0017245 [0.82326 - 0.82499]
+[01/09 09:38:47   3154s]       M9: 0.0017168 [0.82326 - 0.82498]
+[01/09 09:38:47   3154s]       M8: 0.0017095 [0.82326 - 0.82497]
+[01/09 09:38:47   3154s]       M7: 0.0017034 [0.82326 - 0.82496]
+[01/09 09:38:47   3154s]       M6: 0.0017054 [0.82326 - 0.82496]
+[01/09 09:38:47   3154s]       M5: 0.0018377 [0.82312 - 0.82496]
+[01/09 09:38:47   3154s]       M4: 0.0032309 [0.82173 - 0.82496]
+[01/09 09:38:47   3154s]       M3: 0.0037979 [0.82116 - 0.82496]
+[01/09 09:38:47   3154s]       M2: 0.0071139 [0.81784 - 0.82496]
+[01/09 09:38:47   3154s]       M1: 0.0090629 [0.81589 - 0.82496]
+[01/09 09:38:47   3154s]       M0: 0.012117 [0.81284 - 0.82496]
+[01/09 09:38:47   3154s]   IR Report: ./dbs/func_func_ffgnp_0p825v_125c_cbest_CCbest_T_cworst_CCworst_hold_static/PD_125C_avg_1/Reports/VDD/VDD.main.rpt
+[01/09 09:38:47   3154s]   GIF plot: ./dbs/func_func_ffgnp_0p825v_125c_cbest_CCbest_T_cworst_CCworst_hold_static/PD_125C_avg_1/Reports/VDD/ir_linear.gif
+[01/09 09:38:47   3154s] Ended IR Drop (Linear) Report Generation: (cpu=0:00:01, real=0:00:01, mem(process/total/peak)=713.74MB/17476.72MB/11362.71MB)
+[01/09 09:38:47   3154s] 
+[01/09 09:38:47   3154s] 
+[01/09 09:38:47   3154s] Begin IR Drop (Limit) Report Generation
+[01/09 09:38:47   3154s]   Voltage: 0.825
+[01/09 09:38:47   3154s]   Threshold: 0.8085
+[01/09 09:38:47   3154s]   Minimum, Average, Maximum IR Drop: 0.813V, 0.824V, 0.825V
+[01/09 09:38:47   3154s]     Range 1(    0.808V  -      0.808V ):         0 (  0.00%)
+[01/09 09:38:47   3154s]     Range 2(    0.808V  -      0.810V ):         0 (  0.00%)
+[01/09 09:38:47   3154s]     Range 3(    0.810V  -      0.811V ):         0 (  0.00%)
+[01/09 09:38:47   3154s]     Range 4(    0.811V  -      0.813V ):         0 (  0.00%)
+[01/09 09:38:47   3154s]     Range 5(    0.813V  -      0.814V ):         4 (  0.00%)
+[01/09 09:38:47   3154s]     Range 6(    0.814V  -      0.815V ):        12 (  0.00%)
+[01/09 09:38:47   3154s]     Range 7(    0.815V  -      0.817V ):        18 (  0.00%)
+[01/09 09:38:47   3154s]     Range 8(    0.817V  -      0.825V ):   1417450 (100.00%)
+[01/09 09:38:47   3154s] *** Note : 259 disconnected nodes are excluded from the report.
+[01/09 09:38:47   3154s]     Layer with maximum IR Drop:  M0
+[01/09 09:38:47   3154s]       M14: 0 [0.825 - 0.825]
+[01/09 09:38:47   3154s]       M13: 0.00012112 [0.82488 - 0.825]
+[01/09 09:38:47   3154s]       M12: 0.00023508 [0.82476 - 0.82499]
+[01/09 09:38:47   3154s]       M11: 0.00173 [0.82326 - 0.82499]
+[01/09 09:38:47   3154s]       M10: 0.0017245 [0.82326 - 0.82499]
+[01/09 09:38:47   3154s]       M9: 0.0017168 [0.82326 - 0.82498]
+[01/09 09:38:47   3154s]       M8: 0.0017095 [0.82326 - 0.82497]
+[01/09 09:38:47   3154s]       M7: 0.0017034 [0.82326 - 0.82496]
+[01/09 09:38:47   3154s]       M6: 0.0017054 [0.82326 - 0.82496]
+[01/09 09:38:47   3154s]       M5: 0.0018377 [0.82312 - 0.82496]
+[01/09 09:38:47   3154s]       M4: 0.0032309 [0.82173 - 0.82496]
+[01/09 09:38:47   3154s]       M3: 0.0037979 [0.82116 - 0.82496]
+[01/09 09:38:47   3154s]       M2: 0.0071139 [0.81784 - 0.82496]
+[01/09 09:38:47   3154s]       M1: 0.0090629 [0.81589 - 0.82496]
+[01/09 09:38:47   3154s]       M0: 0.012117 [0.81284 - 0.82496]
+[01/09 09:38:47   3154s]   IR Report: ./dbs/func_func_ffgnp_0p825v_125c_cbest_CCbest_T_cworst_CCworst_hold_static/PD_125C_avg_1/Reports/VDD/VDD.main.rpt
+[01/09 09:38:47   3154s]   GIF plot: ./dbs/func_func_ffgnp_0p825v_125c_cbest_CCbest_T_cworst_CCworst_hold_static/PD_125C_avg_1/Reports/VDD/ir_limit.gif
+[01/09 09:38:47   3154s] Ended IR Drop (Limit) Report Generation: (cpu=0:00:00, real=0:00:00, mem(process/total/peak)=713.75MB/17476.72MB/11362.71MB)
+[01/09 09:38:47   3154s] 
+[01/09 09:38:47   3154s] 
+[01/09 09:38:47   3154s] Begin Tap Current Report Generation
+[01/09 09:38:47   3154s]   Minimum, Average, Maximum Tap Current: 0.000A, 0.227uA, 0.119mA
+[01/09 09:38:47   3154s]   Total Current: 0.122A
+[01/09 09:38:47   3154s]     Range 1(   1.000mA  -     1.000GA ):         0 (  0.00%)
+[01/09 09:38:47   3154s]     Range 2( 100.000uA  -     1.000mA ):         2 (  0.00%)
+[01/09 09:38:47   3154s]     Range 3(  10.000uA  -   100.000uA ):      1096 (  0.20%)
+[01/09 09:38:47   3154s]     Range 4(   1.000uA  -    10.000uA ):     30676 (  5.69%)
+[01/09 09:38:47   3154s]     Range 5( 100.000nA  -     1.000uA ):     76561 ( 14.21%)
+[01/09 09:38:47   3154s]     Range 6(  10.000nA  -   100.000nA ):     89240 ( 16.56%)
+[01/09 09:38:47   3154s]     Range 7(   1.000nA  -    10.000nA ):     17325 (  3.21%)
+[01/09 09:38:47   3154s]     Range 8(    0.000A  -     1.000nA ):    324001 ( 60.12%)
+[01/09 09:38:47   3154s] *** Note: 1 disconnected taps (0.159A) are excluded from the report.
+[01/09 09:38:47   3154s]   GIF plot: ./dbs/func_func_ffgnp_0p825v_125c_cbest_CCbest_T_cworst_CCworst_hold_static/PD_125C_avg_1/Reports/VDD/tc.gif
+[01/09 09:38:47   3154s] Ended Tap Current Report Generation: (cpu=0:00:01, real=0:00:01, mem(process/total/peak)=713.84MB/17476.71MB/11362.71MB)
+[01/09 09:38:47   3154s] 
+[01/09 09:38:47   3154s] 
+[01/09 09:38:47   3154s] Begin Instance Based IR Drop Report Generation
+[01/09 09:38:47   3154s]   Minimum, Average, Maximum Instance Based IR Drop: 0.813V, 0.824V, 0.825V
+[01/09 09:38:47   3154s]     Range 1(    0.808V  -      0.808V ):         0 (  0.00%)
+[01/09 09:38:47   3154s]     Range 2(    0.808V  -      0.810V ):         0 (  0.00%)
+[01/09 09:38:47   3154s]     Range 3(    0.810V  -      0.811V ):         0 (  0.00%)
+[01/09 09:38:47   3154s]     Range 4(    0.811V  -      0.813V ):         0 (  0.00%)
+[01/09 09:38:47   3154s]     Range 5(    0.813V  -      0.814V ):         4 (  0.00%)
+[01/09 09:38:47   3154s]     Range 6(    0.814V  -      0.815V ):        10 (  0.00%)
+[01/09 09:38:47   3154s]     Range 7(    0.815V  -      0.817V ):        15 (  0.00%)
+[01/09 09:38:47   3154s]     Range 8(    0.817V  -      0.825V ):    538872 ( 99.99%)
+[01/09 09:38:47   3154s] *** Note : 1 disconnected nodes are excluded from the report.
+[01/09 09:38:47   3154s]   GIF plot: ./dbs/func_func_ffgnp_0p825v_125c_cbest_CCbest_T_cworst_CCworst_hold_static/PD_125C_avg_1/Reports/VDD/iv.gif
+[01/09 09:38:47   3154s] Ended Instance Based IR Drop Report Generation: (cpu=0:00:00, real=0:00:00, mem(process/total/peak)=714.16MB/17476.71MB/11362.71MB)
+[01/09 09:38:47   3154s] 
+[01/09 09:38:47   3154s] 
+[01/09 09:38:47   3154s] Begin Effective Instance Voltage Report Generation
+[01/09 09:38:47   3154s] 
+[01/09 09:38:47   3154s]  Avg EIV:
+[01/09 09:38:47   3154s]   Minimum, Average, Maximum Effective Instance Voltage: 0.801V, 0.823V, 0.825V
+[01/09 09:38:47   3154s]     Range 1(    0.801V  -      0.804V ):         2 (  0.00%)
+[01/09 09:38:47   3154s]     Range 2(    0.804V  -      0.807V ):         2 (  0.00%)
+[01/09 09:38:47   3154s]     Range 3(    0.807V  -      0.810V ):         3 (  0.00%)
+[01/09 09:38:47   3154s]     Range 4(    0.810V  -      0.813V ):        19 (  0.01%)
+[01/09 09:38:47   3154s]     Range 5(    0.813V  -      0.816V ):        72 (  0.03%)
+[01/09 09:38:47   3154s]     Range 6(    0.816V  -      0.819V ):       724 (  0.34%)
+[01/09 09:38:47   3154s]     Range 7(    0.819V  -      0.822V ):     25143 ( 11.74%)
+[01/09 09:38:47   3154s]     Range 8(    0.822V  -      0.825V ):    188215 ( 87.88%)
+[01/09 09:38:47   3154s]   *** Note: 1 instance(s) don't have valid elapsed EIV results and they are excluded from histogram and gif file. For more details, please check the EIV report.
+[01/09 09:38:47   3154s]   GIF plot: ./dbs/func_func_ffgnp_0p825v_125c_cbest_CCbest_T_cworst_CCworst_hold_static/PD_125C_avg_1/Reports/VDD_VSS.avg_div.gif
+[01/09 09:38:47   3154s]   GIF Limit plot: ./dbs/func_func_ffgnp_0p825v_125c_cbest_CCbest_T_cworst_CCworst_hold_static/PD_125C_avg_1/Reports/VDD_VSS.avg_limit_div.gif
+[01/09 09:38:47   3154s]   **** Note: Histogram and gif file are generated based on elapsed EIV results.
+[01/09 09:38:47   3154s] Ended Effective Instance Voltage Report Generation: (cpu=0:00:01, real=0:00:01, mem(process/total/peak)=714.30MB/18314.72MB/11362.71MB)
+[01/09 09:38:47   3154s] 
+[01/09 09:38:47   3154s] 
+[01/09 09:38:47   3154s] Begin Voltage Source Current Report Generation
+[01/09 09:38:47   3154s]   Minimum, Average, Maximum Voltage Source Current: -0.751mA, -0.166mA, -2.898uA
+[01/09 09:38:47   3154s]   Total Current: -0.122A
+[01/09 09:38:47   3154s]     Range 1(  -0.751mA  -    -0.657mA ):         1 (  0.14%)
+[01/09 09:38:47   3154s]     Range 2(  -0.657mA  -    -0.564mA ):         0 (  0.00%)
+[01/09 09:38:47   3154s]     Range 3(  -0.564mA  -    -0.470mA ):         4 (  0.54%)
+[01/09 09:38:47   3154s]     Range 4(  -0.470mA  -    -0.377mA ):        12 (  1.63%)
+[01/09 09:38:47   3154s]     Range 5(  -0.377mA  -    -0.283mA ):        61 (  8.29%)
+[01/09 09:38:47   3154s]     Range 6(  -0.283mA  -    -0.190mA ):       198 ( 26.90%)
+[01/09 09:38:47   3154s]     Range 7(  -0.190mA  -   -96.351uA ):       271 ( 36.82%)
+[01/09 09:38:47   3154s]     Range 8( -96.351uA  -    -2.897uA ):       189 ( 25.68%)
+[01/09 09:38:47   3154s]   GIF plot: ./dbs/func_func_ffgnp_0p825v_125c_cbest_CCbest_T_cworst_CCworst_hold_static/PD_125C_avg_1/Reports/VDD/vc.gif
+[01/09 09:38:47   3154s] Ended Voltage Source Current Report Generation: (cpu=0:00:00, real=0:00:00, mem(process/total/peak)=714.37MB/18314.72MB/11362.71MB)
+[01/09 09:38:47   3154s] 
+[01/09 09:38:47   3154s] 
+[01/09 09:38:47   3154s] Begin Resistor Current Report Generation
+[01/09 09:38:47   3154s]   Minimum, Average, Maximum Resistor Current: 0.000A, 2.784uA, 0.751mA
+[01/09 09:38:47   3154s]     Range 1(   1.000mA  -     1.000GA ):         0 (  0.00%)
+[01/09 09:38:47   3154s]     Range 2( 100.000uA  -     1.000mA ):      2272 (  0.13%)
+[01/09 09:38:47   3154s]     Range 3(  10.000uA  -   100.000uA ):     95458 (  5.49%)
+[01/09 09:38:47   3154s]     Range 4(   1.000uA  -    10.000uA ):    630866 ( 36.31%)
+[01/09 09:38:47   3154s]     Range 5(   0.100uA  -     1.000uA ):    697590 ( 40.15%)
+[01/09 09:38:47   3154s]     Range 6(  10.000nA  -     0.100uA ):    108857 (  6.26%)
+[01/09 09:38:47   3154s]     Range 7(   1.000nA  -    10.000nA ):     11207 (  0.64%)
+[01/09 09:38:47   3154s]     Range 8(    0.000A  -     1.000nA ):    191353 ( 11.01%)
+[01/09 09:38:47   3154s] *** Note : 152 disconnected resistors are excluded from the report.
+[01/09 09:38:47   3154s]   GIF plot: ./dbs/func_func_ffgnp_0p825v_125c_cbest_CCbest_T_cworst_CCworst_hold_static/PD_125C_avg_1/Reports/VDD/rc.gif
+[01/09 09:38:47   3154s] Ended Resistor Current Report Generation: (cpu=0:00:05, real=0:00:06, mem(process/total/peak)=1598.30MB/19246.06MB/11362.71MB)
+[01/09 09:38:47   3154s] 
+[01/09 09:38:47   3154s] 
+[01/09 09:38:47   3154s] Begin Resistor Voltage Report Generation
+[01/09 09:38:47   3154s]   Minimum, Average, Maximum Resistor Voltage: 0.000V, 26.414uV, 2.656mV
+[01/09 09:38:47   3154s]     Range 1(   2.324mV  -     2.656mV ):         1 (  0.00%)
+[01/09 09:38:47   3154s]     Range 2(   1.992mV  -     2.324mV ):         1 (  0.00%)
+[01/09 09:38:47   3154s]     Range 3(   1.660mV  -     1.992mV ):         6 (  0.00%)
+[01/09 09:38:47   3154s]     Range 4(   1.328mV  -     1.660mV ):         5 (  0.00%)
+[01/09 09:38:47   3154s]     Range 5(   0.996mV  -     1.328mV ):        44 (  0.00%)
+[01/09 09:38:47   3154s]     Range 6(   0.664mV  -     0.996mV ):       191 (  0.01%)
+[01/09 09:38:47   3154s]     Range 7(   0.332mV  -     0.664mV ):      2683 (  0.15%)
+[01/09 09:38:47   3154s]     Range 8(    0.000V  -     0.332mV ):   1734672 ( 99.83%)
+[01/09 09:38:47   3154s] *** Note : 152 disconnected resistors are excluded from the report.
+[01/09 09:38:47   3154s]   GIF plot: ./dbs/func_func_ffgnp_0p825v_125c_cbest_CCbest_T_cworst_CCworst_hold_static/PD_125C_avg_1/Reports/VDD/rv.gif
+[01/09 09:38:47   3154s] Ended Resistor Voltage Report Generation: (cpu=0:00:01, real=0:00:02, mem(process/total/peak)=1613.71MB/19608.35MB/11362.71MB)
+[01/09 09:38:47   3154s] 
+[01/09 09:38:47   3154s] 
+[01/09 09:38:47   3154s] Begin Power Gate I/Idsat Report Generation
+[01/09 09:38:47   3154s]   No data found
+[01/09 09:38:47   3154s] Ended Power Gate I/Idsat Report Generation: (cpu=0:00:00, real=0:00:00, mem(process/total/peak)=1613.74MB/19608.35MB/11362.71MB)
+[01/09 09:38:47   3154s] 
+[01/09 09:38:47   3154s] 
+[01/09 09:38:47   3154s] Begin Power Gate Voltage Report Generation
+[01/09 09:38:47   3154s]   No data found.
+[01/09 09:38:47   3154s] Ended Power Gate Voltage Report Generation: (cpu=0:00:00, real=0:00:00, mem(process/total/peak)=1613.75MB/19608.35MB/11362.71MB)
+[01/09 09:38:47   3154s] 
+[01/09 09:38:47   3154s] 
+[01/09 09:38:47   3154s] Begin Resistance of the Least Resistive Path Report Generation
+[01/09 09:38:47   3154s]   Minimum, Average, Maximum Resistance of the Least Resistive Path: 195.173Ohm, 287.462Ohm, 533.766Ohm
+[01/09 09:38:47   3154s]     Range 1(  491.442Ohm  -    533.819Ohm ):        54 (  0.01%)
+[01/09 09:38:47   3154s]     Range 2(  449.117Ohm  -    491.442Ohm ):        85 (  0.01%)
+[01/09 09:38:47   3154s]     Range 3(  406.793Ohm  -    449.117Ohm ):       171 (  0.03%)
+[01/09 09:38:47   3154s]     Range 4(  364.469Ohm  -    406.793Ohm ):      1772 (  0.31%)
+[01/09 09:38:47   3154s]     Range 5(  322.145Ohm  -    364.469Ohm ):     63572 ( 11.18%)
+[01/09 09:38:47   3154s]     Range 6(  279.821Ohm  -    322.145Ohm ):    286530 ( 50.37%)
+[01/09 09:38:47   3154s]     Range 7(  237.497Ohm  -    279.821Ohm ):    180275 ( 31.69%)
+[01/09 09:38:47   3154s]     Range 8(  195.153Ohm  -    237.497Ohm ):     36413 (  6.40%)
+[01/09 09:38:47   3154s] *** Note : 1 disconnected Instances are excluded from the report.
+[01/09 09:38:47   3154s]   GIF plot: ./dbs/func_func_ffgnp_0p825v_125c_cbest_CCbest_T_cworst_CCworst_hold_static/PD_125C_avg_1/Reports/VDD/rlrp.gif
+[01/09 09:38:47   3154s] Ended Resistance of the Least Resistive Path Report Generation: (cpu=0:00:04, real=0:00:04, mem(process/total/peak)=1866.27MB/19952.34MB/11362.71MB)
+[01/09 09:38:47   3154s] 
+[01/09 09:38:47   3154s] Info: Using Layer-stack details from : './work/lib_merged.cl/qrcTechFile_RCgen'
+[01/09 09:38:47   3154s] Info: Using EM Rules from : '/process/tsmcN4/data/gp/QRC/15M1X1Xb1Xe1Ya1Yb5Y2Yy2Z_SHDMIM_UT/ICT_EM_v1d0p1a/cln4p_1p15m+ut-alrdl_1x1xb1xe1ya1yb5y2yy2z_shdmim.ictem'
+[01/09 09:38:47   3154s] Warning: WARNING (EM_MSG-1006): The value of lifetime is not specified. As a result, 87600 hours will be used as the default value of lifetime.
+[01/09 09:38:47   3154s] 
+[01/09 09:38:47   3154s] Begin Current Density (J/JMAX) Report Generation
+[01/09 09:38:47   3154s]   Minimum, Average, Maximum Current Density (J/JMAX): 0.000, 5.254m, 0.517
+[01/09 09:38:47   3154s]     Range 1(    1.000  -     1.000G ):         0 (  0.00%)
+[01/09 09:38:47   3154s]     Range 2(    0.857  -      1.000 ):         0 (  0.00%)
+[01/09 09:38:47   3154s]     Range 3(    0.714  -      0.857 ):         0 (  0.00%)
+[01/09 09:38:47   3154s]     Range 4(    0.571  -      0.714 ):         0 (  0.00%)
+[01/09 09:38:47   3154s]     Range 5(    0.429  -      0.571 ):         2 (  0.00%)
+[01/09 09:38:47   3154s]     Range 6(    0.286  -      0.429 ):         9 (  0.00%)
+[01/09 09:38:47   3154s]     Range 7(    0.143  -      0.286 ):       127 (  0.01%)
+[01/09 09:38:47   3154s]     Range 8(    0.000  -      0.143 ):   1707839 ( 99.99%)
+[01/09 09:38:47   3154s]   GIF plot: ./dbs/func_func_ffgnp_0p825v_125c_cbest_CCbest_T_cworst_CCworst_hold_static/PD_125C_avg_1/Reports/VDD/rj.gif
+[01/09 09:38:47   3154s] Ended Current Density (J/JMAX) Report Generation: (cpu=0:00:08, real=0:00:09, mem(process/total/peak)=1951.41MB/20028.46MB/11362.71MB)
+[01/09 09:38:47   3154s] 
+[01/09 09:38:47   3154s] 
+[01/09 09:38:47   3154s] Begin Voltage Across Vias and Contacts Report Generation
+[01/09 09:38:47   3154s] Ended Voltage Across Vias and Contacts Report Generation: (cpu=0:00:00, real=0:00:00, mem(process/total/peak)=1951.42MB/20028.46MB/11362.71MB)
+[01/09 09:38:47   3154s] 
+[01/09 09:38:47   3154s] 
+[01/09 09:38:47   3154s] Begin Weak Grid Connectivity Report
+[01/09 09:38:47   3154s] Ended Weak Grid Connectivity Report: (cpu=0:00:00, real=0:00:00, mem(process/total/peak)=1951.47MB/20028.46MB/11362.71MB)
+[01/09 09:38:47   3154s] 
+[01/09 09:38:47   3154s] 
+[01/09 09:38:47   3154s] Begin Grid Integrity Report Generation
+[01/09 09:38:47   3154s]   # Missing Cell Power-Grid Views: 0
+[01/09 09:38:47   3154s]   # Physically Disconnected Instances: 1
+[01/09 09:38:47   3154s]   # Instances with Floating Power Pins: 0
+[01/09 09:38:47   3154s]   # Disconnected Wire Segments: 107
+[01/09 09:38:47   3154s]   # Weakly Connected Metal Segments: 43
+[01/09 09:38:47   3154s]   # Dropped Voltage Sources: 0
+[01/09 09:38:47   3154s] Ended Grid Integrity Report Generation: (cpu=0:00:00, real=0:00:00, mem(process/total/peak)=1951.54MB/20028.46MB/11362.71MB)
+[01/09 09:38:47   3154s] 
+[01/09 09:38:47   3154s] Ended Report Generation: (cpu=0:00:00, real=0:00:48, mem(process/total/peak)=227.66MB/20028.45MB/11362.71MB)
+[01/09 09:38:47   3154s] 
+[01/09 09:38:49   3154s] 
+[01/09 09:38:49   3154s] Rail Analysis Statistics:
+[01/09 09:38:49   3154s] Warning messages:      0
+[01/09 09:38:49   3154s] Error messages:        0
+[01/09 09:38:49   3154s] 
+[01/09 09:38:49   3154s] Rail Analysis completed successfully.
+[01/09 09:38:49   3154s] 
+[01/09 09:38:49   3154s] Finished Rail Analysis at 09:38:49 01/09/2026 (cpu=0:10:21, real=0:04:00, peak mem=11362.71MB)
+[01/09 09:38:49   3154s] Current Voltus IC Power Integrity Solution resource usage: (total cpu=0:47:20, real=0:16:16, mem=5333.03MB)
+[01/09 09:38:51   3753s] <CMD> exit
+[01/09 09:38:51   3753s] 
+--------------------------------------------------------------------------------
+Exiting Voltus IC Power Integrity Solution on Fri Jan  9 09:38:51 2026
+  Total CPU time:     0:57:44
+  Total real time:    0:16:18
+  Peak memory (main): 11362.71MB
+

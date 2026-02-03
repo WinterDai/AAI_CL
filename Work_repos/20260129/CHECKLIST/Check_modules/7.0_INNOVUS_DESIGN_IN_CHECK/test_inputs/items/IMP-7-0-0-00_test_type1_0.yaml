@@ -1,0 +1,10 @@
+description: 'Block name (e.g: cdn_hs_phy_data_slice)'
+input_files:
+- ${CHECKLIST_ROOT}/IP_project_folder/reports/7.0/IMP-7-0-0-00.rpt
+requirements:
+  pattern_items: []
+  value: N/A
+waivers:
+  value: 0
+  waive_items:
+  - 'Explanation: Block name extraction is informational only for design tracking'

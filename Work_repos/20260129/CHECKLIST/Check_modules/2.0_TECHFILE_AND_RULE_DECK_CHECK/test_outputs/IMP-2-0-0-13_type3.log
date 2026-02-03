@@ -1,0 +1,9 @@
+PASS:IMP-2-0-0-13:List Spice Model used for PGV generation. eg: tsmc3gp.a.4/models/spectre_v1d0_2p6/ir_em.scs
+IMP-2-0-0-13-WARN01: Unused waivers:
+  Severity: Warn Occurrence: 2
+  - tsmc3gp.a.4/models/spectre_v1d0_2p6/ir_em.scs
+  - tsmc5g.a.11/models/spectre_v1d1_2p5/ir_em.scs
+IMP-2-0-0-13-INFO01: SPICE model version matched expected golden value:
+  Severity: Info Occurrence: 1
+  - tsmc5g.a.12/models/spectre_v1d2_2p5/ir_em.scs
+

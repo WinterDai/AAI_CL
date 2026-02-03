@@ -1,0 +1,10 @@
+[2025-12-31T17:13:01.615793] TestCase: TC_03
+Item: IMP-10-0-0-00
+Verdict: CORRECT
+Confidence: HIGH
+
+Expected (Blind): PASS
+Actual Output: PASS
+
+Reasoning:
+Type 2 positive: 根据配置推理预期为 PASS

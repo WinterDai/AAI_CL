@@ -1,0 +1,89 @@
+Test Report: IMP-8-0-0-05
+================================================================================
+
+[Test 1/6] Type 1 (requirements.value=N/A, waivers.value=N/A)
+--------------------------------------------------------------------------------
+Test ID: type1_na
+Status: PASS
+
+Checker Report Output:
+PASS:IMP-8-0-0-05:Confirm the power switches connection is correct . (for non-PSO, please fill N/A)
+Info Occurrence: 2
+1: Info: Database check. In line 20, C:\Users\chenweif\Checker_dev\CHECKLIST\CHECKLIST\IP_project_folder\reports\8.0\check_power_switch_connection.pass.rpt: Power Switch Connection is CORRECT based on db check and LEC result.
+2: Info: LEC verification. In line 2035, C:\Users\chenweif\Checker_dev\CHECKLIST\CHECKLIST\IP_project_folder\logs\8.0\do_fv.log: Power Switch Connection is CORRECT based on db check and LEC result.
+
+================================================================================
+
+[Test 2/6] Type 1 (requirements.value=N/A, waivers.value=0)
+--------------------------------------------------------------------------------
+Test ID: type1_0
+Status: PASS
+
+Checker Report Output:
+PASS:IMP-8-0-0-05:Confirm the power switches connection is correct . (for non-PSO, please fill N/A)
+Info Occurrence: 3
+1: Info: Explanation: Power switch connection check is informational only for this design phase: Explanation: Power switch connection check is informational only for this design phase[WAIVED_INFO]
+2: Info: Database check. In line 20, C:\Users\chenweif\Checker_dev\CHECKLIST\CHECKLIST\IP_project_folder\reports\8.0\check_power_switch_connection.pass.rpt: Power Switch Connection is CORRECT based on db check and LEC result.
+3: Info: LEC verification. In line 2035, C:\Users\chenweif\Checker_dev\CHECKLIST\CHECKLIST\IP_project_folder\logs\8.0\do_fv.log: Power Switch Connection is CORRECT based on db check and LEC result.
+
+================================================================================
+
+[Test 3/6] Type 2 (requirements.value>0, waivers.value=N/A)
+--------------------------------------------------------------------------------
+Test ID: type2_na
+Status: PASS
+
+Checker Report Output:
+PASS:IMP-8-0-0-05:Confirm the power switches connection is correct . (for non-PSO, please fill N/A)
+Info Occurrence: 2
+1: Info: Found no problems or warnings.. In line 20, C:\Users\chenweif\Checker_dev\CHECKLIST\CHECKLIST\IP_project_folder\reports\8.0\check_power_switch_connection.pass.rpt: Power switch connection requirements matched and validated
+2: Info: SUCCEEDED!. In line 2025, C:\Users\chenweif\Checker_dev\CHECKLIST\CHECKLIST\IP_project_folder\logs\8.0\do_fv.log: Power switch connection requirements matched and validated
+
+================================================================================
+
+[Test 4/6] Type 2 (requirements.value>0, waivers.value=0)
+--------------------------------------------------------------------------------
+Test ID: type2_0
+Status: PASS
+
+Checker Report Output:
+PASS:IMP-8-0-0-05:Confirm the power switches connection is correct . (for non-PSO, please fill N/A)
+Info Occurrence: 3
+1: Info: Explanation: Power switch verification is informational during early design phase: Explanation: Power switch verification is informational during early design phase[WAIVED_INFO]
+2: Info: Found no problems or warnings.. In line 20, C:\Users\chenweif\Checker_dev\CHECKLIST\CHECKLIST\IP_project_folder\reports\8.0\check_power_switch_connection.pass.rpt: Power switch connection requirements matched and validated
+3: Info: SUCCEEDED!. In line 2025, C:\Users\chenweif\Checker_dev\CHECKLIST\CHECKLIST\IP_project_folder\logs\8.0\do_fv.log: Power switch connection requirements matched and validated
+
+================================================================================
+
+[Test 5/6] Type 3
+--------------------------------------------------------------------------------
+Test ID: type3
+Status: PASS
+
+Checker Report Output:
+PASS:IMP-8-0-0-05:Confirm the power switches connection is correct . (for non-PSO, please fill N/A)
+Warn Occurrence: 2
+1: Warn: Found no problems or warnings.: Waiver defined but no violation matched: Database check waived - known connectivity issues approved by design team[WAIVER]
+2: Warn: SUCCEEDED!: Waiver defined but no violation matched: LEC verification waived - formal verification not required for this design iteration[WAIVER]
+Info Occurrence: 2
+1: Info: Found no problems or warnings.. In line 20, C:\Users\chenweif\Checker_dev\CHECKLIST\CHECKLIST\IP_project_folder\reports\8.0\check_power_switch_connection.pass.rpt: Power switch connection requirements matched and validated
+2: Info: SUCCEEDED!. In line 2025, C:\Users\chenweif\Checker_dev\CHECKLIST\CHECKLIST\IP_project_folder\logs\8.0\do_fv.log: Power switch connection requirements matched and validated
+
+================================================================================
+
+[Test 6/6] Type 4
+--------------------------------------------------------------------------------
+Test ID: type4
+Status: PASS
+
+Checker Report Output:
+PASS:IMP-8-0-0-05:Confirm the power switches connection is correct . (for non-PSO, please fill N/A)
+Warn Occurrence: 2
+1: Warn: Found no problems or warnings.: Waiver defined but no violation matched: Database check waived - known connectivity issues approved by design team[WAIVER]
+2: Warn: SUCCEEDED!: Waiver defined but no violation matched: LEC verification waived - formal verification not required for this design iteration[WAIVER]
+Info Occurrence: 2
+1: Info: Database check. In line 20, C:\Users\chenweif\Checker_dev\CHECKLIST\CHECKLIST\IP_project_folder\reports\8.0\check_power_switch_connection.pass.rpt: Power Switch Connection is CORRECT based on db check and LEC result.
+2: Info: LEC verification. In line 2035, C:\Users\chenweif\Checker_dev\CHECKLIST\CHECKLIST\IP_project_folder\logs\8.0\do_fv.log: Power Switch Connection is CORRECT based on db check and LEC result.
+
+================================================================================
+

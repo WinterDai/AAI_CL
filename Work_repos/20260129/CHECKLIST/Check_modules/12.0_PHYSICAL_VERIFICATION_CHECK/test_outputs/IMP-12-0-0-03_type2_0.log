@@ -1,0 +1,9 @@
+PASS:IMP-12-0-0-03:Confirm the DRC rule deck setting is correct. Make sure the switch settings match with Foundry CTA (/local/method/CTAF/<process>/production in chamber). Please add justification in Comment if you changed some switching setting in CTA.
+IMP-12-0-0-03-INFO01: [WAIVED_INFO]: Waived information:
+  Severity: Info Occurrence: 1
+  - Explanation: DRC rule deck CTA validation is informational only for this custom IP
+IMP-12-0-0-03-INFO02: [WAIVED_AS_INFO]: DRC rule deck setting does not match CTA requirement:
+  Severity: Info Occurrence: 2
+  - pattern1
+  - pattern2
+

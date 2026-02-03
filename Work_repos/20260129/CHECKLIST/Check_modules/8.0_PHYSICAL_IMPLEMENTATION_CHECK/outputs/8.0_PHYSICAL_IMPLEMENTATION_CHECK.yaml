@@ -1,0 +1,330 @@
+module: 8.0_PHYSICAL_IMPLEMENTATION_CHECK
+stage: Initial
+generated_at: 2025-12-23T18:43:03
+check_items: 
+  IMP-8-0-0-00: 
+    executed: true
+    status: fail
+    description: Confirm block orientation matches to addendum(NS/EW).
+    failures: 
+      - index: 1
+        detail: input_files is empty in YAML configuration
+        source_line: N/A
+        source_file: N/A
+        reason: input_files is empty in YAML configuration
+  IMP-8-0-0-01: 
+    executed: true
+    status: fail
+    description: Confirm all ports are assigned on metal track.
+    failures: 
+      - index: 1
+        detail: input_files is empty in YAML configuration
+        source_line: N/A
+        source_file: N/A
+        reason: input_files is empty in YAML configuration
+  IMP-8-0-0-02: 
+    executed: true
+    status: fail
+    description: Confirm all ports status are Fixed.
+    failures: 
+      - index: 1
+        detail: input_files is empty in YAML configuration
+        source_line: N/A
+        source_file: N/A
+        reason: input_files is empty in YAML configuration
+  IMP-8-0-0-03: 
+    executed: true
+    status: fail
+    description: Confirm routing blockages are created around the block edges.
+    failures: 
+      - index: 1
+        detail: input_files is empty in YAML configuration
+        source_line: N/A
+        source_file: N/A
+        reason: input_files is empty in YAML configuration
+  IMP-8-0-0-04: 
+    executed: true
+    status: fail
+    description: Confirm buffers are attached for all ports and are set as fixed.
+    failures: 
+      - index: 1
+        detail: input_files is empty in YAML configuration
+        source_line: N/A
+        source_file: N/A
+        reason: input_files is empty in YAML configuration
+  IMP-8-0-0-05: 
+    executed: true
+    status: fail
+    description: Confirm the power switches connection is correct . (for non-PSO, please fill N/A)
+    failures: 
+      - index: 1
+        detail: input_files is empty in YAML configuration
+        source_line: N/A
+        source_file: N/A
+        reason: input_files is empty in YAML configuration
+  IMP-8-0-0-06: 
+    executed: true
+    status: fail
+    description: Confirm the switch power pin is not in lef . (for non-PSO, please fill N/A)
+    failures: 
+      - index: 1
+        detail: input_files is empty in YAML configuration
+        source_line: N/A
+        source_file: N/A
+        reason: input_files is empty in YAML configuration
+  IMP-8-0-0-07: 
+    executed: true
+    status: fail
+    description: Confirm no Frontend(base layer) DRC violations.
+    failures: 
+      - index: 1
+        detail: input_files is empty in YAML configuration
+        source_line: N/A
+        source_file: N/A
+        reason: input_files is empty in YAML configuration
+  IMP-8-0-0-08: 
+    executed: true
+    status: fail
+    description: Confirm max routing layer is correct. Provide max routing layer value in comment field.
+    failures: 
+      - index: 1
+        detail: input_files is empty in YAML configuration
+        source_line: N/A
+        source_file: N/A
+        reason: input_files is empty in YAML configuration
+  IMP-8-0-0-09: 
+    executed: true
+    status: fail
+    description: Confirm we take care of the dynamic power optimization in the whole innovs flow(Check the Note)
+    failures: 
+      - index: 1
+        detail: input_files is empty in YAML configuration
+        source_line: N/A
+        source_file: N/A
+        reason: input_files is empty in YAML configuration
+  IMP-8-0-0-10: 
+    executed: true
+    status: fail
+    description: "Confirm you placed the discrete synchronizer flops close to each other (distance <= 10um) for process without dedicated 2/3 stage synchronizer library cell like TSMC. Make sure “no buffering on the Q->D path between sync flops” for the sync_regs falling under same hierarchy. Please fine tune clock tree for hold fixing. Please don't change the VT of synchronizer flops. (Check the Note. Fill N/A for library has 2/3 stages dedicated library cell)"
+    failures: 
+      - index: 1
+        detail: input_files is empty in YAML configuration
+        source_line: N/A
+        source_file: N/A
+        reason: input_files is empty in YAML configuration
+  IMP-8-0-0-11: 
+    executed: true
+    status: fail
+    description: "Confirm the design didn't use any don’t use cell of foundry and don’t_use cell list includes forbidden cells from IMP-1-0-0-02."
+    failures: 
+      - index: 1
+        detail: input_files is empty in YAML configuration
+        source_line: N/A
+        source_file: N/A
+        reason: input_files is empty in YAML configuration
+  IMP-8-0-0-12: 
+    executed: true
+    status: fail
+    description: Confirm no inputs are tied directly to the power rails (VDD/VSS) by using Tiehigh/Tielow cells(check the Note)
+    failures: 
+      - index: 1
+        detail: input_files is empty in YAML configuration
+        source_line: N/A
+        source_file: N/A
+        reason: input_files is empty in YAML configuration
+  IMP-8-0-0-13: 
+    executed: true
+    status: fail
+    description: Confirm proper clock tree buffer/inverter types are used. Provide a list in comment field.
+    failures: 
+      - index: 1
+        detail: input_files is empty in YAML configuration
+        source_line: N/A
+        source_file: N/A
+        reason: input_files is empty in YAML configuration
+  IMP-8-0-0-14: 
+    executed: true
+    status: fail
+    description: Confirm no VT mixing on clock tree for all modes. For some instances has clock attribute but used as data, please list that into Waiver list.
+    failures: 
+      - index: 1
+        detail: input_files is empty in YAML configuration
+        source_line: N/A
+        source_file: N/A
+        reason: input_files is empty in YAML configuration
+  IMP-8-0-0-15: 
+    executed: true
+    status: fail
+    description: Confirm clock tree VT requirements were met.
+    failures: 
+      - index: 1
+        detail: input_files is empty in YAML configuration
+        source_line: N/A
+        source_file: N/A
+        reason: input_files is empty in YAML configuration
+  IMP-8-0-0-16: 
+    executed: true
+    status: fail
+    description: Confirm clock tree transitions meet requirement.
+    failures: 
+      - index: 1
+        detail: input_files is empty in YAML configuration
+        source_line: N/A
+        source_file: N/A
+        reason: input_files is empty in YAML configuration
+  IMP-8-0-0-17: 
+    executed: true
+    status: fail
+    description: Confirm clock tree latency requirements were met across all corners. Provide values in comments field.
+    failures: 
+      - index: 1
+        detail: input_files is empty in YAML configuration
+        source_line: N/A
+        source_file: N/A
+        reason: input_files is empty in YAML configuration
+  IMP-8-0-0-18: 
+    executed: true
+    status: fail
+    description: Confirm clock tree skew requirements are met.
+    failures: 
+      - index: 1
+        detail: input_files is empty in YAML configuration
+        source_line: N/A
+        source_file: N/A
+        reason: input_files is empty in YAML configuration
+  IMP-8-0-0-19: 
+    executed: true
+    status: fail
+    description: Confirm all multiflop synchronizer registers are the intended celltype and VT type upon which MTBF was calculated.
+    failures: 
+      - index: 1
+        detail: input_files is empty in YAML configuration
+        source_line: N/A
+        source_file: N/A
+        reason: input_files is empty in YAML configuration
+  IMP-8-0-0-20: 
+    executed: true
+    status: fail
+    description: Confirm that all the multiflop synchronizer registers are placed close together and their clock pin connected to the same leaf buffer/inverter of the clock tree?
+    failures: 
+      - index: 1
+        detail: input_files is empty in YAML configuration
+        source_line: N/A
+        source_file: N/A
+        reason: input_files is empty in YAML configuration
+  IMP-8-0-0-21: 
+    executed: true
+    status: fail
+    description: If required, antenna diodes were added at the block/IP inputs.
+    failures: 
+      - index: 1
+        detail: input_files is empty in YAML configuration
+        source_line: N/A
+        source_file: N/A
+        reason: input_files is empty in YAML configuration
+  IMP-8-0-0-22: 
+    executed: true
+    status: fail
+    description: Confirm buffers were added close to each I/O and macro port.
+    failures: 
+      - index: 1
+        detail: input_files is empty in YAML configuration
+        source_line: N/A
+        source_file: N/A
+        reason: input_files is empty in YAML configuration
+  IMP-8-0-0-23: 
+    executed: true
+    status: fail
+    description: confirm no unplaced cells in design.
+    failures: 
+      - index: 1
+        detail: input_files is empty in YAML configuration
+        source_line: N/A
+        source_file: N/A
+        reason: input_files is empty in YAML configuration
+  IMP-8-0-0-24: 
+    executed: true
+    status: fail
+    description: Confirm no assign in release netlist.
+    failures: 
+      - index: 1
+        detail: input_files is empty in YAML configuration
+        source_line: N/A
+        source_file: N/A
+        reason: input_files is empty in YAML configuration
+  IMP-8-0-1-00: 
+    executed: true
+    status: fail
+    description: Confirm the BUMP DRC rule deck setting is correct.
+    failures: 
+      - index: 1
+        detail: input_files is empty in YAML configuration
+        source_line: N/A
+        source_file: N/A
+        reason: input_files is empty in YAML configuration
+  IMP-8-0-1-01: 
+    executed: true
+    status: fail
+    description: Confirm no BUMP rule violation or can be waived by the client or internal package team.
+    failures: 
+      - index: 1
+        detail: input_files is empty in YAML configuration
+        source_line: N/A
+        source_file: N/A
+        reason: input_files is empty in YAML configuration
+  IMP-8-0-1-02: 
+    executed: true
+    status: fail
+    description: Confirm no RDL DRC violation.
+    failures: 
+      - index: 1
+        detail: input_files is empty in YAML configuration
+        source_line: N/A
+        source_file: N/A
+        reason: input_files is empty in YAML configuration
+  IMP-8-0-1-03: 
+    executed: true
+    status: fail
+    description: Confirm TCD(FETCD/BETCD) cells are inserted based on foundry requirement.
+    failures: 
+      - index: 1
+        detail: input_files is empty in YAML configuration
+        source_line: N/A
+        source_file: N/A
+        reason: input_files is empty in YAML configuration
+  IMP-8-0-1-04: 
+    executed: true
+    status: fail
+    description: Confirm refer to Fab recommendation and requirement to insert ESD cell for core violtage .
+    failures: 
+      - index: 1
+        detail: input_files is empty in YAML configuration
+        source_line: N/A
+        source_file: N/A
+        reason: input_files is empty in YAML configuration
+  IMP-8-0-1-05: 
+    executed: true
+    status: fail
+    description: "Confirm ESD cell power pins are connected to always on power net. In general, it's not allowed to add ESD clamps to VDDG power gated domain. If customer request that, please review that with ESD experts about the wake-up time requirement etc for this special case and request approval from PD/AMS top management."
+    failures: 
+      - index: 1
+        detail: input_files is empty in YAML configuration
+        source_line: N/A
+        source_file: N/A
+        reason: input_files is empty in YAML configuration
+  IMP-8-0-1-06: 
+    executed: false
+    status: fail
+  IMP-8-0-1-07: 
+    executed: true
+    status: fail
+    description: 'Confirm that proper NDR rule is applied to all high voltage nets inside core power domain to avoid HV spacing DRC violations (ex: VDD*GONE net in DDR PHY)'
+    failures: 
+      - index: 1
+        detail: input_files is empty in YAML configuration
+        source_line: N/A
+        source_file: N/A
+        reason: input_files is empty in YAML configuration
+  IMP-8-0-1-08: 
+    executed: false
+    status: fail

@@ -1,0 +1,5 @@
+PASS:IMP-5-0-0-12:Confirm synthesis Quality Of Results (QOR) meets requirements (timing, area, power)?
+Info Occurrence: 3
+1: Info: TNS:-0.0. In line 50, C:\Users\yuyin\OneDrive - Cadence Design Systems Inc\2025\Checklist\AAI\CHECKLIST_V3\CHECKLIST\IP_project_folder\reports\qor.rpt
+2: Info: Area:225.338. In line 67, C:\Users\yuyin\OneDrive - Cadence Design Systems Inc\2025\Checklist\AAI\CHECKLIST_V3\CHECKLIST\IP_project_folder\reports\qor.rpt
+3: Info: Power:1297805.093. In line 73, C:\Users\yuyin\OneDrive - Cadence Design Systems Inc\2025\Checklist\AAI\CHECKLIST_V3\CHECKLIST\IP_project_folder\reports\qor.rpt

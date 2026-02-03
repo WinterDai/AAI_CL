@@ -1,0 +1,30 @@
+all_items:
+- MIG-IMP-8-1-1-21
+- MIG-IMP-8-1-1-22
+- IMP-11-0-0-10
+- IMP-11-0-0-11
+- IMP-11-0-0-12
+- IMP-11-0-0-13
+- MIG-IMP-11-1-1-00
+- MIG-IMP-11-1-1-01
+- MIG-IMP-11-1-1-02
+assignment_date: '2026-01-06'
+developer: Zhihan Zhen
+items_by_module:
+  11.0_POWER_EMIR_CHECK:
+  - IMP-11-0-0-10
+  - IMP-11-0-0-11
+  - IMP-11-0-0-12
+  - IMP-11-0-0-13
+  11.1_POWER_EMIR_CHECK:
+  - MIG-IMP-11-1-1-00
+  - MIG-IMP-11-1-1-01
+  - MIG-IMP-11-1-1-02
+  8.1_PHYSICAL_IMPLEMENTATION_CHECK:
+  - MIG-IMP-8-1-1-21
+  - MIG-IMP-8-1-1-22
+modules:
+- 8.1_PHYSICAL_IMPLEMENTATION_CHECK
+- 11.0_POWER_EMIR_CHECK
+- 11.1_POWER_EMIR_CHECK
+status: assigned

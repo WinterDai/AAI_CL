@@ -1,0 +1,3 @@
+PASS:IMP-12-0-0-05:Confirm open the IP_TIGHTEN_DENSITY switch in DRC rule deck.
+Info Occurrence: 1
+1: Info: IP_TIGHTEN_DENSITY. In line 119, /home/jingyu/checklist_dev/CHECKLIST/CHECKLIST/IP_project_folder/logs/do_cmd_3star_DRC_sourceme: IP_TIGHTEN_DENSITY switch found enabled (uncommented #DEFINE)

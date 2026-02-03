@@ -1,0 +1,5 @@
+FAIL:HPP-IMP-8-2-0-00:Confirm floorplan has been peer reviewed and agreed?
+HPP-IMP-8-2-0-00-ERROR01: Configuration error:
+  Severity: Fail Occurrence: 1
+  - input_files is empty in YAML configuration
+

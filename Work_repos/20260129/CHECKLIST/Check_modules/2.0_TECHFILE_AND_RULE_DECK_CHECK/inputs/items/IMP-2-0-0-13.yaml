@@ -1,0 +1,9 @@
+description: 'List Spice Model used for PGV generation. eg: tsmc3gp.a.4/models/spectre_v1d0_2p6/ir_em.scs'
+requirements:
+  value: N/A
+  pattern_items: []
+input_files:
+- ${CHECKLIST_ROOT}\IP_project_folder\logs\2.0\command_list.btxt
+waivers:
+  value: N/A
+  waive_items: []

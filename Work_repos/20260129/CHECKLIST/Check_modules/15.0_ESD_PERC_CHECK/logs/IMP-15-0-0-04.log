@@ -1,0 +1,5 @@
+FAIL:IMP-15-0-0-04:Confirm there is no issue about CNOD check if CNOD check is needed.
+IMP-15-0-0-04-ERROR01: CNOD check failed or CHECK(s) PASSED not found:
+  Severity: Fail Occurrence: 1
+  - cnod_perc.rep (CNOD check failed or incomplete)
+

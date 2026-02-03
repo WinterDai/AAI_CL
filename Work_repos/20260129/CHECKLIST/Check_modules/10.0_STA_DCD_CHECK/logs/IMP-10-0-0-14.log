@@ -1,0 +1,6 @@
+PASS:IMP-10-0-0-14:Confirm the noise/glitch check result is clean.
+IMP-10-0-0-14-INFO01: Noise/glitch analysis verification passed:
+  Severity: Info Occurrence: 2
+  - View: func_rcff_0p825v_125c_pcff_cmin_pcff3_hold - CLEAN (DC violations: 0, Peak violations: 0, Total problem nets: 0)
+  - View: func_rcss_0p675v_125c_pcss_cmax_prcs3_hold - CLEAN (DC violations: 0, Peak violations: 0, Total problem nets: 0)
+

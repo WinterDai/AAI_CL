@@ -1,0 +1,5 @@
+FAIL:IMP-4-0-0-05:Confirm clock uncertainties were reviewed for test modes (scan clocks coming from a different source, supported tester specs, etc.)?
+IMP-4-0-0-05-ERROR01: Configuration error:
+  Severity: Fail Occurrence: 1
+  - input_files is empty in YAML configuration
+

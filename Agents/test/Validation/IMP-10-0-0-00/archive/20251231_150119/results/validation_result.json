@@ -1,0 +1,16 @@
+{
+  "item_id": "IMP-10-0-0-00",
+  "status": "success",
+  "timestamp": "2025-12-31T15:00:26.005573",
+  "duration_seconds": 0.02084,
+  "summary": {},
+  "test_case_count": 8,
+  "execution_count": 0,
+  "statistics": {
+    "total": 0,
+    "correct": 0,
+    "incorrect": 0,
+    "uncertain": 0,
+    "invalid": 0
+  }
+}

@@ -1,0 +1,8 @@
+PASS:IMP-12-0-0-10:Confirm turn-off the VIRTUAL_CONNECT in LVS setting.
+IMP-12-0-0-10-INFO01: [WAIVED_INFO]: Waived information:
+  Severity: Info Occurrence: 1
+  - Explanation: VIRTUAL_CONNECT enabled is acceptable for hierarchical LVS verification
+IMP-12-0-0-10-INFO02: [WAIVED_AS_INFO]: VIRTUAL_CONNECT setting does not match expected disabled state:
+  Severity: Info Occurrence: 1
+  - Expected pattern not found, got VIRTUAL CONNECT COLON YES (Line 80 in /home/jingyu/checklist_dev/CHECKLIST/CHECKLIST/IP_project_folder/logs/do_cmd_3star_LVS_sourceme)
+

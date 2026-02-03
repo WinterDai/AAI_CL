@@ -1,0 +1,9 @@
+FAIL:IMP-11-0-0-00:Confirm input database(netlist/def/lef/spef/lib/pgv/etc) are loaded correctly.
+Fail Occurrence: 1
+1: Fail: DEF Loading. In line 1252, C:\dev_workspace\AI-Agent Checklist Automation\CHECKLIST\CHECKLIST\IP_project_folder\logs\ND1_func_ffgnp_0p825v_125c_cbest_CCbest_T_cworst_CCworst_hold_static.log: Unwaived ERROR messages detected during database loading
+Info Occurrence: 5
+1: Info: Cell Libraries for Rail Analysis: Cell libraries for rail analysis processed successfully
+2: Info: LEF Loading: LEF loading completed successfully
+3: Info: SPEF Loading: SPEF files loaded for RC corner 'rcbest_CCbest_m40c' (30 file(s))
+4: Info: Verilog Netlist: Verilog netlist loading completed successfully
+5: Info: View Definition: View definition loaded successfully

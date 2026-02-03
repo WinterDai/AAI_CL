@@ -1,0 +1,14 @@
+FAIL:IMP-10-0-0-06:Confirm the SI setting is correct?
+IMP-10-0-0-06-ERROR01: SI setting isn't correct (missing indicators):
+  Severity: Fail Occurrence: 1
+  - CCS libraries
+IMP-10-0-0-06-INFO01: SI setting is correct (4/5 indicators found):
+  Severity: Info Occurrence: 4
+  - Signoff Settings: SI On
+  - delaycal_enable_si: 1
+  - timing_library_read_ccs_noise_data: 1
+  - report_noise: Not available (parasitics issue)
+IMP-10-0-0-06-WARN01: Waiver not used (2 items):
+  Severity: Warn Occurrence: 2
+  - SI configuration note 1
+  - SI configuration note 2

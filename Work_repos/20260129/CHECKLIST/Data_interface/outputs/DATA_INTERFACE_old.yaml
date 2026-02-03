@@ -1,0 +1,481 @@
+metadata:
+  schema_version: 5.2-optimized
+  total_sections: 30
+  total_items: 356
+  generated: '2025-10-29T16:02:04.483234'
+  description: Optimized DATA_INTERFACE with correct waiver value semantics
+  structure: sections → items → {description, requirements, input_files, waivers}
+  design_philosophy:
+  - Extreme simplicity - only essential fields
+  - 'Requirements value: 0 (YES/pending) | N/A (NO) | pattern count (pattern-based)'
+  - 'Input files: direct paths with ${IP_PROJECT_FOLDER} prefix'
+  - 'Waivers value: N/A (no waiver) | path (waiver file provided with example)'
+  - High readability, maintainability, and extensibility
+sections:
+  1.0_LIBRARY_CHECK:
+    IMP-1-0-0-00:
+      description: Confirm the version of all the libraries used for this project are correct and match to addendum.
+      requirements:
+        value: 1
+        pattern_items:
+        - 110a
+      input_files:
+      - C:\Users\yuyin\Desktop\CHECKLIST\IP_project_folder\reports\qor.rpt
+      waivers:
+        value: 0
+        waive_items:
+        - waive for test
+    IMP-1-0-0-01:
+      description: List standard cell libraries used for implementation and signoff.
+      requirements:
+        value: N/A
+      input_files:
+      - C:\Users\yuyin\Desktop\CHECKLIST\IP_project_folder\reports\qor.rpt
+      waivers:
+        value: N/A
+    IMP-1-0-0-02:
+      description: List any forbidden cells (special request from foundry or customers).
+      requirements:
+        value: 1
+        pattern_items:
+        - '*CKB*'
+      input_files: []
+      waivers:
+        value: N/A
+    IMP-1-0-0-03:
+      description: 'List all other libraries used for implementation and signoff (eg: IO/PLL/DCC/BUMP/PLL/NoiseGen/ProcessMoniter/etc).'
+      requirements:
+        value: N/A
+      input_files:
+      - C:\Users\yuyin\Desktop\CHECKLIST\IP_project_folder\logs\genus.syn_generic.log
+      waivers:
+        value: N/A
+    IMP-1-0-0-04:
+      description: Confirm the versions of analog cells/macros are correct with AMS/Analog team.
+      requirements:
+        value: 0
+      input_files:
+      - C:\Users\yuyin\Desktop\CHECKLIST\IP_project_folder\logs\genus.syn_generic.log
+      waivers:
+        value: N/A
+  5.0_SYNTHESIS_CHECK:
+    IMP-5-0-0-00:
+      description: Confirm synthesis is using lib models for timing?
+      requirements:
+        value: 17
+        pattern_items:
+        - tcbn03e_bwp143mh117l3p48cpd_base_svt
+        - tcbn03e_bwp143mh117l3p48cpd_base_hvt
+        - tcbn03e_bwp143mh169l3p48cpd_base_svt
+        - tcbn03e_bwp143mh286l3p48cpd_base_svt
+        - tcbn03e_bwp143mh286l3p48cpd_base_hvt
+        - tcbn03e_bwp143mh117l3p48cpd_base_lvt
+        - tcbn03e_bwp143mh117l3p48cpd_base_ulvt
+        - tcbn03e_bwp143mh169l3p48cpd_base_elvt
+        - tcbn03e_bwp143mh169l3p48cpd_base_lvt
+        - tcbn03e_bwp143mh169l3p48cpd_base_ulvt
+        - tcbn03e_bwp143mh286l3p48cpd_base_elvt
+        - tcbn03e_bwp143mh286l3p48cpd_base_lvt
+        - tcbn03e_bwp143mh286l3p48cpd_base_ulvt
+        - tcbn03e_bwp143mh286l3p48cpd_mb_svt
+        - tcbn03e_bwp143mh286l3p48cpd_mb_lvt
+        - tcbn03e_bwp143mh286l3p48cpd_mb_ulvt
+        - tcbn03e_bwp143mh286l3p48cpd_mb_elvt        
+      input_files:
+      - C:\Users\yuyin\Desktop\CHECKLIST\IP_project_folder\reports\qor.rpt
+      waivers:
+        value: N/A
+    IMP-5-0-0-01:
+      description: Confirm synthesis is using lef data for PLE optimization?
+      requirements:
+        value: N/A
+      input_files:
+      - C:\Users\yuyin\Desktop\CHECKLIST\IP_project_folder\logs\genus.syn_generic.log
+      - C:\Users\yuyin\Desktop\CHECKLIST\IP_project_folder\reports\check.rpt
+      waivers:
+        value: N/A    
+    IMP-5-0-0-02:
+      description: Confirm synthesis is using qrc tech file for RC data?
+      requirements:
+        value: N/A
+      input_files:
+      - C:\Users\yuyin\Desktop\CHECKLIST\IP_project_folder\logs\genus.syn_generic.log
+      - C:\Users\yuyin\Desktop\CHECKLIST\IP_project_folder\reports\qor.rpt
+      waivers:
+        value: N/A
+    IMP-5-0-0-03:
+      description: Confirm target standard cell library corners are correct?
+      requirements:
+        value: 1
+        pattern_items:
+        - ssgnp_0p675v_m40c_cworst_CCworst
+      input_files:
+      - C:\Users\yuyin\Desktop\CHECKLIST\IP_project_folder\reports\qor.rpt
+      waivers:
+        value: N/A
+    IMP-5-0-0-05:
+      description: Confirm Unresolved References are none?
+      requirements:
+        value: N/A
+      input_files:
+      - C:\Users\yuyin\Desktop\CHECKLIST\IP_project_folder\logs\genus.syn_generic.log
+      waivers:
+        value: N/A
+    IMP-5-0-0-06:
+      description: Confirm Empty Modules are none or explained?
+      requirements:
+        value: N/A
+      input_files:
+      - C:\Users\yuyin\Desktop\CHECKLIST\IP_project_folder\logs\genus.syn_generic.log
+      waivers:
+        value: 1
+        waive_items:
+        - '1111, #testing empty modules check'
+    IMP-5-0-0-07:
+      description: Confirm SDC Read Failures clean?
+      requirements:
+        value: N/A
+      input_files:
+      - C:\Users\yuyin\Desktop\CHECKLIST\IP_project_folder\logs\genus.syn_generic.log
+      waivers: N/A
+    IMP-5-0-0-08:
+      description: Confirm Multidriven Report clean?
+      requirements:
+        value: N/A
+      input_files:
+      - C:\Users\yuyin\Desktop\CHECKLIST\IP_project_folder\reports\multidriven.rpt
+      waivers:
+        value: 0
+        waive_items: 
+        - multidriven pins waived for test
+    IMP-5-0-0-09:
+      description: Confirm Latches Inferred documented?
+      requirements:
+        value: 0
+      input_files:
+      - C:\Users\yuyin\Desktop\CHECKLIST\IP_project_folder\reports\latch.rpt
+      waivers:
+        value: N/A
+    IMP-5-0-0-10:
+      description: Confirm don't use cell list includes forbidden cells specified in IMP-1-0-0-02?
+      requirements:
+        value: 14
+        pattern_items:
+          - "*CKB*"
+          - "*ELVT*"
+          - "*ULVT*"
+          - "*ULVTLL*"
+          - "*LVTLL*"
+          - "*CKN*"
+          - "*CKND2*"
+          - "*CKXOR2*"
+          - "*D0P5BWP*"
+          - "*DEL*"
+          - "*MB4*"
+          - "*MB8*"
+          - "*MB2*"
+          - "*MB6*"
+      input_files:
+      - C:\Users\yuyin\Desktop\CHECKLIST\IP_project_folder\reports\gates.rpt
+      waivers:
+        value: 2
+        waive_items: 
+        - 'SDFSYNC4RPQSXGD1BWP143M286H3P48CPDULVT , #preserve modules'
+        - 'CELL_NAME_PATTERN , #specific design requirement'
+    IMP-5-0-0-11:
+      description: Confirm synthesis log has been peer reviewed and all warnings are understood and annotated with an explanation?
+      requirements:
+        value: N/A
+      input_files:
+      - C:\Users\yuyin\Desktop\CHECKLIST\IP_project_folder\logs\genus.syn_generic.log
+      - C:\Users\yuyin\Desktop\CHECKLIST\IP_project_folder\logs\genus.syn_opt.log
+      waivers:
+        value: N/A
+    IMP-5-0-0-12:
+      description: Confirm synthesis Quality Of Results (QOR) meets requirements (timing, area, power)?
+      requirements:
+        value: 0
+        pattern_items:
+        - TNS: 0
+        - Area: 20000
+        - power: 1000
+      input_files:
+      - C:\Users\yuyin\Desktop\CHECKLIST\IP_project_folder\reports\qor.rpt
+      waivers:
+        value: N/A
+    IMP-5-0-0-13:
+      description: Confirm scan is successfully inserted and non-scannable flops have been peer reviewed and waived?
+      requirements:
+        value: N/A
+      input_files:
+      - C:\Users\yuyin\Desktop\CHECKLIST\IP_project_folder\reports\dft_chainRegs.rpt
+      waivers:
+        value: 4
+        waive_items:
+        - 'fail_dft_rules:111 , #waive for test'
+        - 'misc_non_scan:u_accum/genus_inserted_cg_RC_CG_HIER_INST3/RC_CGIC_INST , #waive for known timing issues'
+        - 'misc_non_scan:111 , #waive for test'
+        - 'pass_not_in_chains:aaaaaa , #waive for test'
+    IMP-5-0-0-14:
+      description: Confirm that there are no SDC violations or errors(max cap, max transition etc)?
+      requirements:
+        value: N/A
+      input_files:
+      - C:\Users\yuyin\Desktop\CHECKLIST\IP_project_folder\reports\design_check_rule.rpt
+      waivers:
+        value: N/A    
+    IMP-5-0-0-15:
+      description: Confirm all DFT checks pass?
+      requirements:
+        value: N/A
+      input_files:
+      - C:\Users\yuyin\Desktop\CHECKLIST\IP_project_folder\logs\dft_check_test.log
+      waivers:
+        value: N/A
+    IMP-5-0-0-16:
+      description: Confirm CPF/UPF file has passed Conformal LP quality checks against RTL prior to synthesis?
+      requirements:
+        value: N/A
+      input_files:
+      - C:\Users\yuyin\Desktop\CHECKLIST\IP_project_folder\reports\nonexistent_file_test.rpt
+      waivers:
+        value: 0
+        waive_items:
+        - '16 checker for test'
+    IMP-5-0-0-17:
+      description: Confirm CPF/UPF file  has passed Conformal LP quality checks against post DFT insertion synthesis netlist?
+      requirements:
+        value: N/A
+      input_files:
+      - C:\Users\yuyin\Desktop\CHECKLIST\IP_project_folder\reports\verify_power_structure_post_dft.rpt
+      waivers:
+        value: N/A
+    IMP-5-0-0-18:
+      description: Document DFT Stuck-At % generated by the DFT flow and confirm this value meets or exceeds the DFT CoE expected value?
+      requirements:
+        value: 1
+        pattern_items:
+        - 95.0
+      input_files:
+      - C:\Users\yuyin\Desktop\CHECKLIST\IP_project_folder\logs\log_create_logic_tests_FULLSCAN_cdn_sd2101_i3p765_vm130_6x2ya2yb2yc2yd1ye1ga1gb_atpg_stuckat
+      waivers:
+        value: N/A
+    IMP-5-0-0-19:
+      description: Document DFT Transition % generated by the DFT flow and confirm this value meets or exceeds the DFT CoE expected value?
+      requirements:
+        value: 1
+        pattern_items:
+        - 90.0
+      input_files:
+      - C:\Users\yuyin\Desktop\CHECKLIST\IP_project_folder\logs\log_create_logic_delay_tests_FULLSCAN_cdn_sd2101_i3p765_vm130_6x2ya2yb2yc2yd1ye1ga1gb_atpg_dynamic
+      waivers:
+        value: N/A
+  6.0_POST_SYNTHESIS_LEC_CHECK:
+    IMP-6-0-0-00:
+      description: Confirm conformal constraints have been peer reviewed and approved?
+      requirements:
+        value: N/A
+      input_files:
+      - C:\Users\yuyin\Desktop\CHECKLIST\IP_project_folder\logs\map_to_final.log
+      waivers:
+        value: N/A
+    IMP-6-0-0-01:
+      description: Confirm conformal log file has been peer reviewed and all warnings have a waiver/explanation?
+      requirements:
+        value: N/A
+      input_files:
+      - C:\Users\yuyin\Desktop\CHECKLIST\IP_project_folder\logs\syn.lec.log
+      waivers:
+        value: 0
+        waive_items:
+        - 'reviewed'
+    IMP-6-0-0-02:
+      description: Confirm all listed black boxes are intended?
+      requirements:
+        value: 2
+        pattern_items:
+        - '1111'
+        - 'cdnsdru_pll_ds_modulator_v3_10_10h0a0(G)'
+      input_files:
+      - C:\Users\yuyin\Desktop\CHECKLIST\IP_project_folder\reports\black_box.rpt
+      waivers:
+        value: N/A
+    IMP-6-0-0-03:
+      description: Confirm all user defined black boxes have port definitions declared? (.lib or verilog stub file)
+      requirements:
+        value: 0
+        pattern_items:
+        - 'cmn_ana'
+        - '1111'
+      input_files:
+      - C:\Users\yuyin\Desktop\CHECKLIST\IP_project_folder\logs\map_to_final.log
+      waivers:
+        value: N/A
+    IMP-6-0-0-04:
+      description: Confirm no aborted compare points exist in log files or reports?
+      requirements:
+        value: N/A
+      input_files:
+      - C:\Users\yuyin\Desktop\CHECKLIST\IP_project_folder\logs\map_to_final.log
+      waivers:
+        value: N/A
+    IMP-6-0-0-05:
+      description: Confirm no non-equivalent points exist?
+      requirements:
+        value: N/A
+      input_files:
+      - C:\Users\yuyin\Desktop\CHECKLIST\IP_project_folder\reports\noneq.rpt
+      waivers: 
+        value: 0
+        waive_items:
+        - 'Current non-equivalent points can be waived'
+    IMP-6-0-0-06:
+      description: Confirm all unmapped compare points have been peer reviewed and annotated with a waiver/explanation?
+      requirements:
+        value: N/A
+      input_files:
+      - C:\Users\yuyin\Desktop\CHECKLIST\IP_project_folder\reports\notmapped_points.rpt
+      waivers: 
+        value: 0
+        waive_items:
+        - 'Current notmapped points waiver for test'
+    IMP-6-0-0-07:
+      description: Confirm "set flatten model -library_pin_verification" in LEC flow.
+      requirements:
+        value: N/A
+      input_files:
+      - C:\Users\yuyin\Desktop\CHECKLIST\IP_project_folder\logs\map_to_final.log
+      waivers: 
+        value: N/A
+  13.0_POST_PD_EQUIVALENCE_CHECK:
+    IMP-13-0-0-00:
+      description: Confirm conformal constraints have been peer reviewed and approved?
+      requirements:
+        value: N/A
+      input_files:
+      - c:\Users\yuyin\Desktop\CHECKLIST\IP_project_folder\reports\post_lec\syn_final_lec.log
+      waivers: 
+        value: N/A    
+    IMP-13-0-0-01:
+      description: Confirm conformal log file has been peer reviewed and all warnings have a waiver/explanation?
+      requirements:
+        value: N/A
+      input_files:
+      - c:\Users\yuyin\Desktop\CHECKLIST\IP_project_folder\reports\post_lec\syn_final_lec.log
+      - c:\Users\yuyin\Desktop\CHECKLIST\IP_project_folder\logs\map_to_final.log
+      waivers:
+        value: N/A
+    IMP-13-0-0-02:
+      description: Confirm all listed black boxes are intended?
+      requirements:
+        value: 2
+        pattern_items:
+        - '1111'
+        - 'cdnsdru_pll_ds_modulator_v3_10_10h0a0(G)'
+      input_files:
+      - c:\Users\yuyin\Desktop\CHECKLIST\IP_project_folder\reports\post_lec\black_box.rpt
+      waivers:
+        value: N/A
+    IMP-13-0-0-03:
+      description: Confirm all user defined black boxes have port definitions declared? (.lib or verilog stub file)
+      requirements:
+        value: 2
+        pattern_items:
+        - 'xcvr_ana'
+        - '1111'
+      input_files:
+      - C:\Users\yuyin\Desktop\CHECKLIST\IP_project_folder\reports\post_lec\syn_final_lec.log
+      waivers:
+        value: N/A
+    IMP-13-0-0-04:
+      description: Confirm no aborted compare points exist in log files or reports?
+      requirements:
+        value: N/A
+      input_files:
+      - C:\Users\yuyin\Desktop\CHECKLIST\IP_project_folder\reports\post_lec\syn_final_lec.log
+      waivers:
+        value: N/A
+    IMP-13-0-0-05:
+      description: Confirm no non-equivalent points exist?
+      requirements:
+        value: N/A
+      input_files:
+      - C:\Users\yuyin\Desktop\CHECKLIST\IP_project_folder\reports\post_lec\syn_final_lec.log
+      waivers: 
+        value: 0
+        waive_items:
+        - 'Current non-equivalent points can be waived'
+    IMP-13-0-0-06:
+      description: Confirm all unmapped compare points have been peer reviewed and annotated with a waiver/explanation?
+      requirements:
+        value: N/A
+      input_files:
+      - C:\Users\yuyin\Desktop\CHECKLIST\IP_project_folder\reports\post_lec\syn_final_lec.log
+      waivers: 
+        value: 0
+        waive_items:
+        - 'Current notmapped points waiver for test'
+    IMP-13-0-0-07:
+      description: Confirm "set flatten model -library_pin_verification" in LEC flow.
+      requirements:
+        value: N/A
+      input_files:
+      - C:\Users\yuyin\Desktop\CHECKLIST\IP_project_folder\reports\post_lec\syn_final_lec.log
+      waivers: 
+        value: N/A
+  10.0_STA_DCD_CHECK:
+    IMP-10-0-0-00:
+      description: Confirm the netlist/spef version is correct.
+      requirements:
+        value: 2
+        pattern_items:
+        - "netlist: v11/17"
+        - "spef: v11/17"
+      input_files:
+      - C:\Users\yuyin\Desktop\CHECKLIST\IP_project_folder\logs\sta_post_syn.log
+      waivers:
+        value: N/A
+        waive_items: []
+  14.0_CLP_CHECK:
+    IMP-14-0-0-00:
+      description: Confirm set the correct golden netlist.
+      requirements:
+        value: N/A
+      input_files:
+      - C:\Users\yuyin\Desktop\CHECKLIST\IP_project_folder\logs\clp.log
+      waivers:
+        value: N/A
+    IMP-14-0-0-02:
+      description: Confirm connect the PSO chain correctly. (Fill N/A if no PSO)
+      requirements:
+        value: N/A
+      input_files:
+      - C:\Users\yuyin\Desktop\CHECKLIST\IP_project_folder\reports\pso_rule_check.rpt
+      waivers:
+        value: N/A
+    IMP-14-0-0-03:
+      description: Confirm the CLP check result is clean. 
+      requirements:
+        value: N/A
+      input_files:
+      - C:\Users\yuyin\Desktop\CHECKLIST\IP_project_folder\reports\syn_opt_clp.rpt
+      waivers:
+        value: N/A
+    IMP-14-0-0-04:
+      description: Confirm no ERROR message in CLP log files.
+      requirements:
+        value: N/A
+      input_files:
+      - C:\Users\yuyin\Desktop\CHECKLIST\IP_project_folder\logs\clp.log
+      waivers:
+        value: 0
+        waive_items:
+        - 'waive for test'
+    IMP-14-0-0-05:
+      description: Confirm all Warning message in CLP log files can be waived.
+      requirements:
+        value: N/A
+      input_files:
+      - C:\Users\yuyin\Desktop\CHECKLIST\IP_project_folder\logs\clp.log
+      waivers:
+        value: N/A

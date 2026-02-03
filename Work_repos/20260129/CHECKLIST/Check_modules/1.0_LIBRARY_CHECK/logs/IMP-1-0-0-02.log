@@ -1,0 +1,8 @@
+PASS:IMP-1-0-0-02:List any forbidden cells (special request from foundry or customers).
+IMP-1-0-0-02-WARN01: Warnings:
+  Severity: Warn Occurrence: 1
+  - Golden value expected but not provided
+IMP-1-0-0-02-INFO01: Items found in check:
+  Severity: Info Occurrence: 1
+  - No forbidden cells found in current DATA_INTERFACE.yaml
+

@@ -1,0 +1,10 @@
+description: Confirm all clocks propegated during STA.
+requirements:
+  value: N/A
+  pattern_items: []
+input_files:
+- ${CHECKLIST_ROOT}/IP_project_folder/reports/clocks.rpt.gz
+waivers:
+  value: 1
+  waive_items:
+  - IO_ASYNC_CLOCK

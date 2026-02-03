@@ -1,0 +1,12 @@
+description: Confirm no issue for check_timing (all modes) in Innovus.
+input_files:
+- ${CHECKLIST_ROOT}/IP_project_folder/reports/7.0/IMP-7-0-0-04*.rpt
+requirements:
+  pattern_items:
+  - 'clock_expected: 0 warnings'
+  - 'ideal_clock_waveform: 0 warnings'
+  - 'no_drive: 0 warnings'
+  value: 3
+waivers:
+  value: N/A
+  waive_items: []

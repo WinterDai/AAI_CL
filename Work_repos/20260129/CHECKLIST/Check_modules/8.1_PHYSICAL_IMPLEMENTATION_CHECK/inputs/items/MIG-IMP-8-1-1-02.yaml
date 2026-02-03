@@ -1,0 +1,9 @@
+description: 'TODO: Confirm NO special VDDCK bump for PAD memory clock domain IO,should
+  share the VDD bump from other core logic.'
+requirements:
+  value: N/A
+  pattern_items: []
+input_files: []
+waivers:
+  value: N/A
+  waive_items: []

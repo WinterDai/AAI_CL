@@ -1,0 +1,6 @@
+FAIL:IMP-2-0-0-07:Confirm LVS rule deck was not modified? If it was, explain in comments field.
+Fail Occurrence: 1
+1: Fail: local_file_missing: LVS rule deck content differs from golden baseline - see diff report for details - see diff file: C:\Users\chenweif\Checker_dev\CHECKLIST\CHECKLIST\Check_modules\2.0_TECHFILE_AND_RULE_DECK_CHECK\reports\IMP-2-0-0-07_diff.txt
+Warn Occurrence: 2
+1: Warn: DFM_LVS_RC_PEGASUS_N5_1p16M_1X1Xb1Xe1Ya1Yb6Y2Yy2R_ALRDL.1.2a: Waiver not matched - no corresponding rule deck modification found: Legacy rule deck version approved for backward compatibility testing[WAIVER]
+2: Warn: DFM_LVS_RC_PEGASUS_N5_1p16M_1X1Xb1Xe1Ya1Yb6Y2Yy2R_ALRDL.1.2b: Waiver not matched - no corresponding rule deck modification found: Modification of this rule deck is acceptable for this project[WAIVER]

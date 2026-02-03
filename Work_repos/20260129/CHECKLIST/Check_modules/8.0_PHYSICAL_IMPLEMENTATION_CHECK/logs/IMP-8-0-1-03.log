@@ -1,0 +1,5 @@
+FAIL:IMP-8-0-1-03:Confirm TCD(FETCD/BETCD) cells are inserted based on foundry requirement.
+IMP-8-0-1-03-ERROR01: Configuration error:
+  Severity: Fail Occurrence: 1
+  - input_files is empty in YAML configuration
+

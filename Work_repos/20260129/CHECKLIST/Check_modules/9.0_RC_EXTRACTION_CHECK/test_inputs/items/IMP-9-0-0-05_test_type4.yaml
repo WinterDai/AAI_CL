@@ -1,0 +1,15 @@
+description: Confirm proper Quantus version is used for RC extraction(match to or
+  mature than Foundry recommended Quantus version)
+input_files:
+- ${CHECKLIST_ROOT}/IP_project_folder/logs/9.0/*.spef.gz
+requirements:
+  pattern_items: []
+  value: N/A
+waivers:
+  value: 2
+  waive_items:
+  - name: 21.1.0-s100
+    reason: Waived - legacy extraction approved by foundry for this design revision
+  - name: 21.1.5-s150
+    reason: Waived - intermediate version used for debug purposes only, not for final
+      signoff

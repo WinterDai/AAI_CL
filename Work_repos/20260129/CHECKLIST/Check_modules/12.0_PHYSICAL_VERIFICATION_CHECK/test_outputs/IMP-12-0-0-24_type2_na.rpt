@@ -1,0 +1,3 @@
+FAIL:IMP-12-0-0-24:Confirm add the chipBoundary layer to check boundary DRC for test chip.
+Fail Occurrence: 1
+1: Fail: Chip_Boundary. In line 851, C:\Users\jingyu\OneDrive - Cadence Design Systems Inc\Desktop\checklist_dev\AI_2026_V1\CHECKLIST\CHECKLIST\IP_project_folder\reports\pv\Calibre_DRC.rep: Expected Chip_Boundary layer not satisfied or missing from DRC report

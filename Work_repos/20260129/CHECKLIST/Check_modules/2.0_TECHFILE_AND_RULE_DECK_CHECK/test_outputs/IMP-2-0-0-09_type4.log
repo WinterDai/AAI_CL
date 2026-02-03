@@ -1,0 +1,9 @@
+PASS:IMP-2-0-0-09:Confirm BUMP rule deck was not modified? If it was, explain in comments field.
+IMP-2-0-0-09-WARN01: Unused waivers:
+  Severity: Warn Occurrence: 2
+  - PN5_CU_BUMP_030.10_1a
+  - PN5_CU_BUMP_030.10_2b
+IMP-2-0-0-09-INFO01: BUMP rule deck path found in PVL log:
+  Severity: Info Occurrence: 1
+  - PN5_CU_BUMP_030.10_1a
+

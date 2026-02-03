@@ -1,0 +1,5 @@
+FAIL:IMP-2-0-0-03:Confirm DRC rule deck was not modified? If it was, explain in comments field.
+IMP-2-0-0-03-ERROR01: Configuration error:
+  Severity: Fail Occurrence: 1
+  - input_files is empty in YAML configuration
+

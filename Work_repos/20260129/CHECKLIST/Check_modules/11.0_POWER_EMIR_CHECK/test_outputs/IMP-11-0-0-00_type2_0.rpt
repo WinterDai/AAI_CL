@@ -1,0 +1,6 @@
+PASS:IMP-11-0-0-00:Confirm input database(netlist/def/lef/spef/lib/pgv/etc) are loaded correctly.
+Info Occurrence: 4
+1: Info: Explanation: Database loading validation is informational during early design stages: Explanation: Database loading validation is informational during early design stages[WAIVED_INFO]
+2: Info: Hierarchical DEF Merge Section: Hierarchical DEF Merge Section completed without errors
+3: Info: LEF Loading Section: LEF Loading Section completed without errors
+4: Info: View Definition Section: View Definition Section completed without errors

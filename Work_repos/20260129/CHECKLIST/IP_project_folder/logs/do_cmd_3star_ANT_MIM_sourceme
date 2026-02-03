@@ -1,0 +1,16 @@
+
+LAYOUT SYSTEM OASIS
+LAYOUT PRIMARY CDN_104V_cdn_hs_phy_data_slice_NS
+
+//========================================
+
+/* SWITCH DEFINITION START */
+//  OPTION SETUP
+//================
+#DEFINE FHDMIM // Turn on for FHDMIM check, turn off for SHDMIM check
+//#DEFINE AIO_GDS   // Turn on to check MIM rules for 2/3-plate MIM AIO GDS
+VARIABLE AP_THICKNESS 2.8	// user value
+
+
+DRC RESULTS DATABASE "DRC_RES.db"
+DRC RESULTS DATABASE PRECISION  2000

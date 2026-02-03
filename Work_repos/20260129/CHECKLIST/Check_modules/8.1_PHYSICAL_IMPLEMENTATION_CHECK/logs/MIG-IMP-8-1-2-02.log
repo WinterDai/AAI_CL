@@ -1,0 +1,5 @@
+FAIL:MIG-IMP-8-1-2-02:[BRCM special] Confirm no issue for the BRCM speical ARC rule check related to AP PAD enclosure (double check the setting in Note). Also check with PM about the latest rule deck version. Below paths are just for your reference. /process/tsmcN5/data/g_brcm/CALIBRE/DRC/23Mar2023/3stars_DRC_BRCM_5nm_AP_PAD_ENCLOSURE/sourceme /process/tsmcN7/data/gp/CALIBRE/DRC/28Mar2023/3stars_DRC_BRCM_7nm_AP_PAD_ENCLOSURE/sourceme
+MIG-IMP-8-1-2-02-ERROR01: Configuration error:
+  Severity: Fail Occurrence: 1
+  - input_files is empty in YAML configuration
+

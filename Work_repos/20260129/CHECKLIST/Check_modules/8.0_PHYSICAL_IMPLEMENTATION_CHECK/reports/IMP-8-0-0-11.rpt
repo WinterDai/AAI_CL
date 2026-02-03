@@ -1,0 +1,3 @@
+FAIL:IMP-8-0-0-11:Confirm the design didn't use any don’t use cell of foundry and don’t_use cell list includes forbidden cells from IMP-1-0-0-02.
+Fail Occurrence: 1
+1: Fail: input_files is empty in YAML configuration

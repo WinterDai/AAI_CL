@@ -1,0 +1,11 @@
+FAIL:IMP-2-0-0-04:Confirm latest Antenna rule deck(s) was used? List DRC rule deck name in Comments. eg: PLN3ELO_17M_1Xa1Xb1Xc1Xd1Ya1Yb4Y2Yy2Yx2R_014_ANT.11_2a.encrypt PLN3ELO_17M_1Xa1Xb1Xc1Xd1Ya1Yb4Y2Yy2Yx2R_014_SHDMIM_ANT.11_2a.encrypt
+IMP-2-0-0-04-ERROR01: Antenna rule deck verification failed:
+  Severity: Fail Occurrence: 1
+  - PLN3ELO_17M_1Xa1Xb1Xc1Xd1Ya1Yb4Y2Yy2Yx2R_014_ANT.11_2a.encrypt
+IMP-2-0-0-04-INFO01: Waived antenna rule deck issues:
+  Severity: Info Occurrence: 1
+  - PLN3ELO_17M_1Xa1Xb1Xc1Xd1Ya1Yb4Y2Yy2Yx2R_014_SHDMIM_ANT.11_2a.encrypt
+IMP-2-0-0-04-INFO02: Antenna rule deck verification passed:
+  Severity: Info Occurrence: 1
+  - PLN6FF_15M_1X1Xa1Ya5Y2Yy2Yx2R_001_ANT.11a.encrypt
+

@@ -1,0 +1,15 @@
+description: Confirm the noise/glitch check result is clean.
+input_files:
+- ${CHECKLIST_ROOT}/IP_project_folder/reports/10.0/noise_1.rpt
+- ${CHECKLIST_ROOT}/IP_project_folder/reports/10.0/noise_2.rpt
+requirements:
+  pattern_items:
+  - func_rcff_0p825v_125c_pcff_cmin_pcff3_hold
+  - func_rcss_0p675v_125c_pcss_cmax_prcs3_hold
+  value: 2
+waivers:
+  value: 1
+  waive_items:
+  - name: func_rcss_0p675v_125c_pcss_cmax_prcs3_setup
+    reason: Waived per design review - violations occur only in non-critical debug
+      paths, approved by design team on 2024-01-15

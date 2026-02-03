@@ -1,0 +1,114 @@
+module: 4.0_CONSTRAINT_CHECK
+stage: Initial
+generated_at: 2025-12-23T18:43:03
+check_items: 
+  IMP-4-0-0-00: 
+    executed: true
+    status: fail
+    description: Confirm clock constraints in the SDC match or exceed the specified requirements?
+    failures: 
+      - index: 1
+        detail: input_files is empty in YAML configuration
+        source_line: N/A
+        source_file: N/A
+        reason: input_files is empty in YAML configuration
+  IMP-4-0-0-01: 
+    executed: true
+    status: fail
+    description: Confirm clock duty cycle constraints were reviewed for each clock and match or exceed specified requirements?
+    failures: 
+      - index: 1
+        detail: input_files is empty in YAML configuration
+        source_line: N/A
+        source_file: N/A
+        reason: input_files is empty in YAML configuration
+  IMP-4-0-0-02: 
+    executed: true
+    status: fail
+    description: Confirm clock uncertainty constraints account for cycle-to-cycle jitter for all clocks?
+    failures: 
+      - index: 1
+        detail: input_files is empty in YAML configuration
+        source_line: N/A
+        source_file: N/A
+        reason: input_files is empty in YAML configuration
+  IMP-4-0-0-03: 
+    executed: true
+    status: fail
+    description: Confirm clock uncertainty constraints account for duty cycle distortion and duty cycle jitter for all clocks?
+    failures: 
+      - index: 1
+        detail: input_files is empty in YAML configuration
+        source_line: N/A
+        source_file: N/A
+        reason: input_files is empty in YAML configuration
+  IMP-4-0-0-04: 
+    executed: true
+    status: fail
+    description: Confirm minimum uncertainty guidelines from foundry were followed and included in constraints?
+    failures: 
+      - index: 1
+        detail: input_files is empty in YAML configuration
+        source_line: N/A
+        source_file: N/A
+        reason: input_files is empty in YAML configuration
+  IMP-4-0-0-05: 
+    executed: true
+    status: fail
+    description: Confirm clock uncertainties were reviewed for test modes (scan clocks coming from a different source, supported tester specs, etc.)?
+    failures: 
+      - index: 1
+        detail: input_files is empty in YAML configuration
+        source_line: N/A
+        source_file: N/A
+        reason: input_files is empty in YAML configuration
+  IMP-4-0-0-06: 
+    executed: true
+    status: fail
+    description: Confirm all I/O constraints meet specified requirements?
+    failures: 
+      - index: 1
+        detail: input_files is empty in YAML configuration
+        source_line: N/A
+        source_file: N/A
+        reason: input_files is empty in YAML configuration
+  IMP-4-0-0-07: 
+    executed: true
+    status: fail
+    description: Confirm all unconstrained paths and IOs have been peer reviewed and approved?
+    failures: 
+      - index: 1
+        detail: input_files is empty in YAML configuration
+        source_line: N/A
+        source_file: N/A
+        reason: input_files is empty in YAML configuration
+  IMP-4-0-0-08: 
+    executed: true
+    status: fail
+    description: Confirm all path exceptions (false paths, multicycle, max delay) have been peer reviewed and approved?
+    failures: 
+      - index: 1
+        detail: input_files is empty in YAML configuration
+        source_line: N/A
+        source_file: N/A
+        reason: input_files is empty in YAML configuration
+  IMP-4-0-0-09: 
+    executed: true
+    status: fail
+    description: Confirm SDC contains all necessary Functional, DFT and power modes (including voltage scaling mode/reduced voltage and/or performance)?
+    failures: 
+      - index: 1
+        detail: input_files is empty in YAML configuration
+        source_line: N/A
+        source_file: N/A
+        reason: input_files is empty in YAML configuration
+  IMP-4-0-0-10: 
+    executed: true
+    status: fail
+    description: Confrim proper clock and data transition limit values were set?
+    failures: 
+      - index: 1
+        detail: input_files is empty in YAML configuration
+        source_line: N/A
+        source_file: N/A
+        reason: input_files is empty in YAML configuration

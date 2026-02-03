@@ -1,0 +1,6 @@
+PASS:IMP-11-0-0-20:Confirm wake-up time meet customer's requirement. (For non-PSO, please fill N/A)
+Info Occurrence: 4
+1: Info: Explanation: Wake-up time check is informational only for early design stages: Explanation: Wake-up time check is informational only for early design stages[WAIVED_INFO]
+2: Info: Wake-up time: 1.11e-07s. In line 9, C:\Users\chudongy\dev_workspace\ai_checklist\CHECKLIST\CHECKLIST\IP_project_folder\reports\11.0\Powerup.rpt: All power switches turned on and wake-up time found in simulation report
+3: Info: Power switches: 28215/28215 activated. In line 11, C:\Users\chudongy\dev_workspace\ai_checklist\CHECKLIST\CHECKLIST\IP_project_folder\reports\11.0\Powerup.rpt: All power switches turned on and wake-up time found in simulation report
+4: Info: Rush current: 0.427297A. In line 8, C:\Users\chudongy\dev_workspace\ai_checklist\CHECKLIST\CHECKLIST\IP_project_folder\reports\11.0\Powerup.rpt: All power switches turned on and wake-up time found in simulation report

@@ -1,0 +1,10 @@
+description: 'TODO: confirm place the DESKEW PLL to the slice notch between two adjacent
+  dataslices for LPDDR5 design with 32 or more bits to make the path delay from deskew
+  pll to DQ/DQS write path smaller (better system budget).'
+requirements:
+  value: N/A
+  pattern_items: []
+input_files: []
+waivers:
+  value: N/A
+  waive_items: []

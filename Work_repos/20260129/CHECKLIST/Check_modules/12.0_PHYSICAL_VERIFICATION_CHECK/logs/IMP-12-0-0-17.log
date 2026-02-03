@@ -1,0 +1,5 @@
+FAIL:IMP-12-0-0-17:Confirm no soft-connect issue.
+IMP-12-0-0-17-ERROR01: Configuration error:
+  Severity: Fail Occurrence: 1
+  - input_files is empty in YAML configuration
+

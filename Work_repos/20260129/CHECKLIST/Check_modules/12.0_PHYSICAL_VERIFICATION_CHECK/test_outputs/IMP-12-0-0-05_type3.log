@@ -1,0 +1,9 @@
+PASS:IMP-12-0-0-05:Confirm open the IP_TIGHTEN_DENSITY switch in DRC rule deck.
+IMP-12-0-0-05-WARN01: Unused waivers:
+  Severity: Warn Occurrence: 2
+  - IP_TIGHTEN_DENSITY
+  - CHECK_HIGH_DENSITY
+IMP-12-0-0-05-INFO01: IP_TIGHTEN_DENSITY switch is enabled in DRC rule deck:
+  Severity: Info Occurrence: 1
+  - IP_TIGHTEN_DENSITY
+

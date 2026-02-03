@@ -1,0 +1,12 @@
+test_case_id: TC_08
+item_id: IMP-5-0-0-00
+type: 4
+direction: negative
+config_override:
+  pattern_items:
+  - '*_nldm*'
+  - '*wireload*'
+  waivers:
+    value: N/A
+    waive_items: '[]'
+generated_at: '2026-01-06T11:40:42.489019'

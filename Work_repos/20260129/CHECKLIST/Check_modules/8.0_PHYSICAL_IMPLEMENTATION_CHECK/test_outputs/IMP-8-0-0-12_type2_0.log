@@ -1,0 +1,9 @@
+PASS:IMP-8-0-0-12:Confirm no inputs are tied directly to the power rails (VDD/VSS) by using Tiehigh/Tielow cells(check the Note)
+IMP-8-0-0-12-INFO01: [WAIVED_INFO]: Waived information:
+  Severity: Info Occurrence: 1
+  Explanation: Monitored pins are informational only - violations expected for PAD cells
+IMP-8-0-0-12-INFO02: All monitored instance pins have no tie cell violations:
+  Severity: Info Occurrence: 2
+  inst_data_path_top/inst_data_byte_macro/cdn_hs_phy_data_asic_pads/data_pad_6/PAD1_HV_IN_XTC
+  inst_data_path_top/inst_data_byte_macro/cdn_hs_phy_data_asic_pads/data_pad_7/PAD1_HV_IN_XTC
+

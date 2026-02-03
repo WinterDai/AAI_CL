@@ -1,0 +1,3 @@
+FAIL:MIG-IMP-8-1-0-08:Confirm you use the same VT and cell type(clock cell) as that on read DQS path to balance read DQ/DQS skew. Treat DQ read path as clock path.
+Fail Occurrence: 1
+1: Fail: input_files is empty in YAML configuration

@@ -1,0 +1,5 @@
+FAIL:IMP-11-0-0-26:List the VT ratio (without physical cells): EG: TSMCN7/N6:SVT(50%)/LVT(40%)/ULVT(10%) TSMCN5/N4/N3/N2:SVT(50%)/LVTLL(20%)/LVT(20%)/ULVTLL(5%)/ULVT(5%)/ELVT(0%) SEC:RVT(50%)/LVT(40%)/SLVT(10%) INTl_I3/18A:ad(HVT 30%)/ac(SVT 20%)/ab(LVT 30%)/aa(ULVT 20%)
+IMP-11-0-0-26-ERROR01: Configuration error:
+  Severity: Fail Occurrence: 1
+  - input_files is empty in YAML configuration
+

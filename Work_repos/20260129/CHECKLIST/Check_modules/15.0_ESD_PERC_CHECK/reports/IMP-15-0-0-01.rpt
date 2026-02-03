@@ -1,0 +1,3 @@
+PASS:IMP-15-0-0-01:Confirm whether CNOD check is needed. For example, we need to check CNOD for TSMCN5 process.
+Info Occurrence: 1
+1: Info: Process: tsmc3 | CNOD Check Required: Yes. In line 2, C:\Users\yuyin\OneDrive - Cadence Design Systems Inc\2025\Checklist\AAI\CHECKLIST_V3\CHECKLIST\IP_project_folder\reports\15.0\setup_vars.tcl: DESIGN_PROCESS variable found in setup configuration

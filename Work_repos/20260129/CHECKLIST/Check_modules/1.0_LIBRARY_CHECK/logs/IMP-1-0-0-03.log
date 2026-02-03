@@ -1,0 +1,5 @@
+PASS:IMP-1-0-0-03:List all other libraries used for implementation and signoff (eg: IO/PLL/DCC/BUMP/NoiseGen/ProcessMonitor/etc).
+IMP-1-0-0-03-INFO01: Other libraries (IO/PLL/DCC/BUMP/etc):
+  Severity: Info Occurrence: 1
+  - No other libraries found
+

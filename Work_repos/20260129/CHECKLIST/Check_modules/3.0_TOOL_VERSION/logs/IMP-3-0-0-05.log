@@ -1,0 +1,6 @@
+PASS:IMP-3-0-0-05:List Pegasus physical signoff tool version (eg. pegasus/232/23.25.000)
+IMP-3-0-0-05-INFO01: Pegasus tool version found in setup configuration:
+  Severity: Info Occurrence: 2
+  - PEGASUS: pegasus/232/23.25.000
+  - PVS: pegasus/232/23.25.000
+

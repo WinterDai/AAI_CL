@@ -1,0 +1,2668 @@
+================================================================================
+CHECKLIST系统目录结构与Agent集成说明
+================================================================================
+
+一、整体架构概览
+================================================================================
+
+本文档详细说明CHECKLIST系统的目录结构、各目录功能职责，以及Agent系统如何与
+CHECKLIST运行环境进行集成。
+
+1.1 核心设计理念
+----------------------------------------
+
+CHECKLIST系统采用"**运行环境与代码生成分离**"的设计：
+- **Latest\CHECKLIST**：运行时环境（执行checker、聚合报告、展示Dashboard）
+- **CHECKLIST\Tool\Agent**：Agent开发环境（生成checker代码）
+- **Golden**：黄金参考库（手工编写的参考实现）
+
+这种分离确保：
+[OK] 生成的checker可以在标准环境中无缝运行
+[OK] Agent系统可以独立迭代和测试
+[OK] 黄金参考保持不可变性（版本控制、回归验证）
+
+
+================================================================================
+二、Latest\CHECKLIST - 运行时环境
+================================================================================
+
+2.1 目录结构详解
+----------------------------------------
+
+Latest\CHECKLIST/
+├── Check_modules/ # 【核心】Checker模块库
+│ ├── common/ # 框架核心（所有checker共享）
+│ │ ├── base_checker.py # BaseChecker基类（Type判定、接口规范）
+│ │ ├── output_formatter.py # 输出格式化（.log/.rpt生成）
+│ │ ├── check_flowtool.py # 执行引擎（调用checker、异常处理）
+│ │ ├── write_summary_yaml.py # YAML摘要生成
+│ │ └── checker_templates/ # Mixin模板库
+│ │ ├── input_file_parser_mixin.py # 7种输入解析模式
+│ │ ├── waiver_handler_mixin.py # 8种豁免处理模式
+│ │ └── output_builder_mixin.py # 6种输出格式化模式
+│ │
+│ ├── 1.0_LIBRARY_CHECK/ # 模块1：库文件检查
+│ │ ├── items/ # 配置文件目录
+│ │ │ ├── IMP-1-0-0-00_item.yaml # Checker配置
+│ │ │ ├── IMP-1-0-0-01_item.yaml
+│ │ │ └── ...
+│ │ └── scripts/ # Checker脚本目录
+│ │ ├── IMP-1-0-0-00_checker.py # 实际执行的checker
+│ │ ├── IMP-1-0-0-01_checker.py
+│ │ └── ...
+│ │
+│ ├── 5.0_SYNTHESIS_CHECK/ # 模块5：综合检查
+│ ├── 10.0_STA_DCD_CHECK/ # 模块10：静态时序分析
+│ ├── 13.0_POST_PD_EQUIVALENCE_CHECK/ # 模块13：后端等价性检查
+│ └── [其他模块]/
+│
+├── Data_interface/ # 【数据接口】全局数据路径配置
+│ └── outputs/
+│ └── DATA_INTERFACE.yaml # 所有工具输出路径的映射表
+│
+├── IP_project_folder/ # 【项目数据】EDA工具实际输出
+│ ├── reports/ # 设计报告（qor.rpt, timing.rpt等）
+│ ├── logs/ # 工具运行日志
+│ └── dbs/ # 数据库文件
+│
+├── Project_config/ # 【项目配置】环境变量和运行脚本
+│ ├── collaterals/ # 配置模板
+│ ├── prep_config/ # 预处理配置
+│ └── scripts/ # 辅助脚本
+│
+└── Work/ # 【执行结果】所有运行输出的聚合目录
+    ├── assignments/ # 任务分配文件
+    │ └── yyin_10.0_STA_DCD_CHECK_*.yaml # 运行时任务配置
+    │
+    ├── Results/ # 【核心输出】每个checker的执行结果
+    │ ├── 1.0_LIBRARY_CHECK/
+    │ │ ├── IMP-1-0-0-00.log # 详细日志（包含所有Info/Warn/Error）
+    │ │ ├── IMP-1-0-0-00.rpt # 简洁报告（只包含PASS/FAIL状态）
+    │ │ ├── IMP-1-0-0-00_summary.yaml # YAML格式摘要
+    │ │ └── ...
+    │ ├── 10.0_STA_DCD_CHECK/
+    │ └── [其他模块]/
+    │
+    ├── Reports/ # 【可视化Dashboard】HTML报告
+    │ ├── signoff_20251231.html # 最新的Dashboard快照
+    │ ├── signoff_20251223.html # 历史快照（用于趋势分析）
+    │ └── ...
+    │
+    ├── CheckList.rpt # 【聚合报告】所有模块的文本报告
+    ├── CheckList.log # 【聚合日志】详细执行日志
+    ├── Checkflow.log # 【流程日志】执行顺序和时间戳
+    └── run.ps1/run.csh # 【启动脚本】一键运行所有checker
+
+
+2.2 各目录功能详解
+----------------------------------------
+
+### 2.2.1 Check_modules/ - Checker模块库
+
+**功能定位**：
+存放所有checker的实现代码和配置文件，是整个系统的核心代码库。
+
+**目录结构规范**：
+```
+Check_modules/
+├── common/ # 框架层（不允许修改，除非升级框架）
+└── X.Y_MODULE_NAME/ # 业务层（每个模块独立）
+    ├── items/ # 配置层（YAML）
+    │ └── IMP-X-Y-Z-NN_item.yaml
+    └── scripts/ # 实现层（Python）
+        └── IMP-X-Y-Z-NN_checker.py
+```
+
+**命名规范**：
+- 模块编号：1.0, 2.0, ..., 17.3（与VLSI流程阶段对应）
+- Checker编号：IMP-X-Y-Z-NN
+  . X: 模块主版本（1~17）
+  . Y: 模块子版本（0~3）
+  . Z: 保留字段（通常为0）
+  . NN: Checker序号（00~99）
+
+**common/目录关键文件**：
+
+1. **base_checker.py**（约800行）
+   - BaseChecker类：所有checker的父类
+   - Type自动判定：根据requirements.value和waivers.value判定Type 1/2/3/4
+   - 接口规范：
+     ```python
+     class BaseChecker:
+         def parse_logic(self): # 子类必须实现
+         def check_logic(self): # 子类必须实现
+         def waiver_logic(self): # 可选实现
+         
+         def run(self): # 框架提供（Type分发逻辑）
+         def output(self): # 框架提供（输出格式化）
+     ```
+   - ${CHECKLIST_ROOT}变量展开：运行时替换所有路径中的占位符
+
+2. **checker_templates/** Mixin库
+   - 提供3大类可复用模板（41-70%代码复用率）
+   - InputFileParserMixin：7种输入解析模式
+     . parse_report_by_sections()：按章节解析报告
+     . parse_log_with_timestamps()：带时间戳的日志解析
+   - WaiverHandlerMixin：8种豁免处理模式
+     . handle_global_waiver()：全局豁免
+     . handle_selective_waiver()：选择性豁免
+   - OutputBuilderMixin：6种输出格式化
+     . build_standard_output()：标准PASS/FAIL输出
+     . build_detailed_report()：详细报告输出
+
+
+### 2.2.2 Data_interface/ - 数据接口层
+
+**功能定位**：
+提供全局数据路径映射，解耦checker实现与实际文件路径。
+
+**DATA_INTERFACE.yaml 示例**：
+```yaml
+synthesis:
+  qor_report: '${CHECKLIST_ROOT}/IP_project_folder/reports/qor.rpt'
+  area_report: '${CHECKLIST_ROOT}/IP_project_folder/reports/area.rpt'
+
+timing:
+  sta_log: '${CHECKLIST_ROOT}/IP_project_folder/logs/sta_post_syn.log'
+  spef_file: '${CHECKLIST_ROOT}/IP_project_folder/reports/post_syn.spef'
+
+physical:
+  innovus_log: '${CHECKLIST_ROOT}/IP_project_folder/logs/innovus.log'
+  gds_file: '${CHECKLIST_ROOT}/IP_project_folder/dbs/final.gds'
+```
+
+**关键设计**：
+- 使用${CHECKLIST_ROOT}变量确保路径可移植
+- checker通过read_interface()读取，不硬编码路径
+- 跨平台兼容（Windows反斜杠自动转换）
+
+
+### 2.2.3 IP_project_folder/ - 项目数据层
+
+**功能定位**：
+存放EDA工具的实际输出文件（报告、日志、数据库）。
+
+**目录结构**：
+```
+IP_project_folder/
+├── reports/ # EDA工具生成的报告
+│ ├── qor.rpt # Quality of Results报告（综合质量）
+│ ├── area.rpt # 面积报告
+│ ├── timing.rpt # 时序报告
+│ └── power.rpt # 功耗报告
+│
+├── logs/ # EDA工具运行日志
+│ ├── genus.log # Cadence Genus综合日志
+│ ├── innovus.log # Cadence Innovus布局布线日志
+│ └── sta_post_syn.log # 静态时序分析日志
+│
+└── dbs/ # 数据库文件
+    ├── final.gds # GDSII版图文件
+    └── netlist.v # 网表文件
+```
+
+**注意事项**：
+- 这些文件由EDA工具生成，CHECKLIST只读不写
+- Checker通过DATA_INTERFACE.yaml间接访问
+
+
+### 2.2.4 Work/ - 执行结果层（最重要）
+
+**功能定位**：
+CHECKLIST系统的"心脏"，存放所有checker的执行结果和可视化Dashboard。
+
+**Work/Results/ - 结果聚合目录**
+
+每个checker运行后会生成3个文件：
+```
+Results/10.0_STA_DCD_CHECK/
+├── IMP-10-0-0-00.log # 详细日志（800-2000行）
+│ 内容示例：
+│ [INFO] Parsing STA log: sta_post_syn.log
+│ [INFO] Found netlist version: Genus 21.1
+│ [INFO] Found SPEF version: 2025-01-01
+│ [PASS] All required versions found
+│ [INFO] No waiver applied
+│
+├── IMP-10-0-0-00.rpt # 简洁报告（10-50行）
+│ 内容示例：
+│ PASS:IMP-10-0-0-00:Check netlist and SPEF version completeness
+│ Info Occurrence: 4
+│ 1: Info: Netlist version found in line 7
+│ 2: Info: SPEF version found in line 42
+│ 3: Info: All fields are complete
+│ 4: Info: No waiver applied
+│
+└── IMP-10-0-0-00_summary.yaml # YAML摘要（机器可读）
+    内容示例：
+    status: PASS
+    requirements:
+      value: 1
+      pattern_items: ["Generated on:*2025*"]
+    waivers:
+      value: 0
+    info_count: 4
+    warn_count: 0
+    error_count: 0
+```
+
+**Work/Reports/ - HTML Dashboard**
+
+这是系统的**可视化前端**，提供交互式Dashboard：
+
+**signoff_20251231.html 的关键特性**：
+
+1. **Executive Summary（执行摘要）**
+   - 项目级状态指示器：Ready/In Progress/Needs Attention
+   - 关键指标卡片：Total Checks, Pass Rate, Waiver Rate, Fail Count
+   - 趋势图表：历史快照对比
+
+2. **模块视图（Module View）**
+   - 30个模块的状态矩阵（1.0~17.3）
+   - 每个模块显示：
+     . Pass/Fail/Waived Count
+     . 进度条（绿色/黄色/红色）
+     . 点击展开详细checker列表
+
+3. **Checker详情（Checker Details）**
+   - 点击任意checker可查看：
+     . 完整的.log内容（带语法高亮）
+     . .rpt格式化展示
+     . YAML结构化数据
+   - 搜索过滤功能（按模块、状态、关键字）
+
+4. **Waiver分析（Waiver Analysis）**
+   - Global Waivers：全局豁免列表
+   - Selective Waivers：选择性豁免详情
+   - Waiver统计：按原因分类
+
+5. **技术实现**：
+   - 纯静态HTML（无需服务器）
+   - 内嵌SheetJS库（支持Excel/CSV预览）
+   - 响应式设计（支持移动端）
+   - 8993行HTML（包含所有数据和样式）
+
+**Work/CheckList.rpt - 聚合文本报告**
+
+所有模块的文本格式汇总（2067行），示例：
+```
+===== CheckList Aggregated Report =====
+Root: C:\Users\wentao\...\Latest\CHECKLIST
+Modules: 1.0_LIBRARY_CHECK, 2.0_TECHFILE_AND_RULE_DECK_CHECK, ...
+
+===== Module: 1.0_LIBRARY_CHECK =====
+
+--- IMP-1-0-0-00.rpt ---
+PASS:IMP-1-0-0-00:Confirm library versions...
+Info Occurrence: 1
+
+--- IMP-1-0-0-01.rpt ---
+PASS:IMP-1-0-0-01:List standard cell libraries...
+Info Occurrence: 16
+...
+```
+
+
+2.3 运行时数据流
+----------------------------------------
+
+**完整的执行流程**：
+
+1. **启动阶段**
+   ```
+   用户执行: Work/run.ps1
+   v
+   check_flowtool.py 读取所有模块配置
+   v
+   遍历 Check_modules/*/items/*.yaml
+   ```
+
+2. **单个Checker执行**
+   ```
+   check_flowtool.py 调用 IMP-X-Y-Z-NN_checker.py
+   v
+   Checker继承BaseChecker
+   v
+   BaseChecker.run() 执行Type分发逻辑：
+     - Type 1/2: parse() -> check()
+     - Type 3/4: parse() -> check() -> waiver()
+   v
+   output_formatter.py 生成3个文件：
+     - Results/MODULE/IMP-X-Y-Z-NN.log
+     - Results/MODULE/IMP-X-Y-Z-NN.rpt
+     - Results/MODULE/IMP-X-Y-Z-NN_summary.yaml
+   ```
+
+3. **聚合阶段**
+   ```
+   write_summary_yaml.py 汇总所有 *_summary.yaml
+   v
+   生成 Work/CheckList.rpt（文本格式）
+   v
+   生成 Work/Reports/signoff_YYYYMMDD.html（Dashboard）
+   ```
+
+4. **可视化展示**
+   ```
+   用户打开浏览器访问：
+   Work/Reports/signoff_20251231.html
+   v
+   查看所有模块的Pass/Fail状态
+   v
+   点击任意checker查看详细日志
+   ```
+
+
+================================================================================
+三、CHECKLIST\Tool\Agent - Agent开发环境
+================================================================================
+
+3.1 目录结构详解
+----------------------------------------
+
+CHECKLIST\Tool\Agent/
+├── agents/ # Agent实现（四大Agent）
+│ ├── orchestrator_agent.py # Pipeline协调Agent
+│ ├── context_agent.py # 语义压缩Agent
+│ ├── codegen_agent.py # 代码生成Agent
+│ └── validation_agent.py # 验证Agent
+│
+├── pipelines/ # Pipeline编排
+│ ├── checker_generation_pipeline.py # 完整生成流程
+│ └── protocols/ # 接口协议
+│
+├── knowledge_base/ # 领域知识库
+│ ├── global_rules.md # Type系统定义（543行）
+│ ├── type_system_spec.md # Type详细规范
+│ └── checker_patterns/ # 常见checker模式
+│
+├── skills_registry/ # LLM可用技能库
+│ ├── file_operations/ # 文件操作技能
+│ ├── text_processing/ # 文本处理技能
+│ └── code_generation/ # 代码生成技能
+│
+├── test/ # 测试与验证
+│ ├── ContextAgent/ # Context Agent测试
+│ │ └── IMP-10-0-0-00/
+│ │ └── IMP-10-0-0-00_ItemSpec.md # 生成的ItemSpec（538行）
+│ │
+│ └── Validation/ # 端到端验证
+│ └── IMP-10-0-0-00/
+│ ├── input/
+│ │ └── item.yaml # 输入配置
+│ ├── output/
+│ │ └── IMP-10-0-0-00_checker.py # 生成的checker
+│ └── archive/ # 历史版本
+│
+├── config/ # Agent配置
+│ ├── llm_config.yaml # LLM参数（模型、温度、token限制）
+│ └── pipeline_config.yaml # Pipeline参数
+│
+└── run_test.py # 测试入口脚本
+
+
+3.2 四大Agent详解
+----------------------------------------
+
+### 3.2.1 Orchestrator Agent - Pipeline协调者
+
+**职责**：
+- 任务调度：协调其他3个Agent的执行顺序
+- 状态管理：跟踪整个生成流程的状态
+- 异常处理：处理任何Agent的失败，决定重试或终止
+
+**输入**：
+```yaml
+task:
+  type: generate_checker
+  item_id: IMP-10-0-0-00
+  input_file: Latest/CHECKLIST/Check_modules/10.0_STA_DCD_CHECK/items/IMP-10-0-0-00_item.yaml
+```
+
+**输出**：
+```yaml
+result:
+  status: success
+  generated_files:
+    - IMP-10-0-0-00_ItemSpec.md
+    - IMP-10-0-0-00_checker.py
+  execution_time: 120.5s
+```
+
+**关键逻辑**：
+```python
+def orchestrate_generation(item_yaml):
+    # Stage 1: Context Agent生成ItemSpec
+    itemspec = context_agent.generate_itemspec(item_yaml, global_rules)
+    
+    # Stage 2: CodeGen Agent生成checker
+    checker_code = codegen_agent.generate_checker(itemspec, item_yaml)
+    
+    # Stage 3: Validation Agent验证
+    validation_result = validation_agent.validate(checker_code, item_yaml)
+    
+    if validation_result.success:
+        return checker_code
+    else:
+        # 重试或终止
+        return retry_or_abort(validation_result)
+```
+
+
+### 3.2.2 Context Agent - 语义压缩专家
+
+**职责**：
+- 读取item.yaml（30-50行）和global_rules.md（543行）
+- 生成ItemSpec.md（400-600行）：
+  . 只保留当前checker需要的Type规范
+  . 提取相关的业务规则和regex
+  . 添加Implementation Guide
+
+**输入**：
+```yaml
+# item.yaml
+requirements:
+  value: 1
+  pattern_items: ["Generated on:*2025*"]
+waivers:
+  value: 0
+input_files:
+  - '${CHECKLIST_ROOT}/IP_project_folder/logs/sta_post_syn.log'
+```
+
+**输出**：
+```markdown
+# IMP-10-0-0-00 ItemSpec
+
+## Section 1: Parsing Logic
+### 1.1 Required Fields
+- netlist.tool_name: Tool that generated netlist
+- netlist.version: Netlist version number
+- spef.tool_name: Tool that generated SPEF
+- spef.version: SPEF version number
+
+### 1.2 Data Structure
+```python
+parsed_fields = {
+    "netlist": {"tool_name": str, "version": str, "loaded": bool},
+    "spef": {"tool_name": str, "version": str, "loaded": bool}
+}
+```
+
+## Section 2: Check Logic
+### 2.1 Validation Items
+1. Netlist loading status
+2. Netlist version completeness
+3. SPEF loading status
+4. SPEF version completeness
+
+### 2.2 Checking Algorithm
+For each validation item:
+- If value == N/A: Boolean check (loaded == True)
+- Else: Pattern matching check (version matches pattern)
+
+## Section 3: Waiver Logic
+### 3.1 Waivable Scenarios
+1. SPEF not required for synthesis stage
+2. Legacy design without version tags
+
+### 3.2 Waiver Keywords
+- "synthesis", "SPEF", "legacy", "ECO"
+
+## Section 4: Implementation Guide
+### 4.1 Regex Patterns
+```python
+tool_name_regex = r"(?i)(generator|created by|tool):\s*(\w+)"
+version_regex = r"version\s+([0-9.]+)"
+```
+
+### 4.2 Multi-stage Extraction Strategy
+Stage 1: Locate file path mentions
+Stage 2: Extract version metadata
+Stage 3: Validate completeness
+Stage 4: Cross-check consistency
+Stage 5: Build final data structure
+```
+
+**关键技术**：
+- CoT v9.0五轮迭代：
+  . Round 1-3: 生成Section 1-3
+  . Round 4: 生成Section 4（Implementation Guide）
+  . Round 5: 全局一致性检查
+- 语义压缩率：543行 -> 538行（但信息密度大幅提升）
+- 只保留"just-enough detail"
+
+
+### 3.2.3 CodeGen Agent - 代码生成专家
+
+**职责**：
+- 读取ItemSpec.md（400-600行）和item.yaml（30-50行）
+- 生成checker.py（300-500行）：
+  . 实现parse_logic()、check_logic()、waiver_logic()
+  . 继承BaseChecker
+  . 包含完整的if-else分支（支持所有Type）
+
+**输入**：
+```python
+# 从ItemSpec读取
+itemspec = ItemSpec.load("IMP-10-0-0-00_ItemSpec.md")
+
+# 从item.yaml读取
+item_config = {
+    "requirements.value": 1,
+    "waivers.value": 0
+}
+```
+
+**输出**：
+```python
+# IMP-10-0-0-00_checker.py
+from Check_modules.common.base_checker import BaseChecker
+
+class IMP_10_0_0_00_Checker(BaseChecker):
+    def parse_logic(self):
+        """
+        ItemSpec Section 1: Parsing Logic
+        5-stage extraction strategy
+        """
+        # Stage 1: Locate file path
+        sta_log = self.read_input_file("sta_post_syn.log")
+        
+        # Stage 2: Extract netlist info
+        netlist_match = re.search(r"(?i)(generator|created by):\s*(\w+)", sta_log)
+        netlist_tool = netlist_match.group(2) if netlist_match else None
+        
+        # Stage 3: Extract SPEF info
+        spef_match = re.search(r"SPEF.*version\s+([0-9.]+)", sta_log)
+        spef_version = spef_match.group(1) if spef_match else None
+        
+        # Stage 4: Validate completeness
+        netlist_loaded = netlist_tool is not None
+        spef_loaded = spef_version is not None
+        
+        # Stage 5: Build data structure
+        return {
+            "netlist": {
+                "tool_name": netlist_tool,
+                "version": "21.1", # 实际会从log提取
+                "loaded": netlist_loaded
+            },
+            "spef": {
+                "tool_name": "Quantus",
+                "version": spef_version,
+                "loaded": spef_loaded
+            }
+        }
+    
+    def check_logic(self, parsed_data, requirements):
+        """
+        ItemSpec Section 2: Check Logic
+        支持2种场景：Boolean check和Pattern check
+        """
+        results = []
+        
+        # 场景1：Boolean check（当requirements.value == N/A）
+        if requirements['value'] == 'N/A':
+            if parsed_data['netlist']['loaded']:
+                results.append(self.build_info("Netlist loaded successfully"))
+            else:
+                results.append(self.build_error("Netlist not found"))
+        
+        # 场景2：Pattern check（当requirements.value > 0）
+        else:
+            patterns = requirements.get('pattern_items', [])
+            for pattern in patterns:
+                # 模式匹配逻辑
+                if self.match_pattern(parsed_data, pattern):
+                    results.append(self.build_info(f"Pattern matched: {pattern}"))
+                else:
+                    results.append(self.build_error(f"Pattern not found: {pattern}"))
+        
+        return results
+    
+    def waiver_logic(self, check_results, waivers):
+        """
+        ItemSpec Section 3: Waiver Logic
+        支持2种模式：Global waiver和Selective waiver
+        """
+        if waivers['value'] == 0:
+            # Global waiver模式
+            waive_keywords = waivers.get('waive_items', [])
+            for result in check_results:
+                for keyword in waive_keywords:
+                    if keyword in result['message']:
+                        result['status'] = 'WAIVED'
+                        result['waiver_reason'] = f"Global waiver: {keyword}"
+        else:
+            # Selective waiver模式
+            waive_count = waivers['value']
+            waived = 0
+            for result in check_results:
+                if result['status'] == 'ERROR' and waived < waive_count:
+                    result['status'] = 'WAIVED'
+                    waived += 1
+        
+        return check_results
+```
+
+**关键技术**：
+- CoT分段生成：
+  . Round 1: 生成parse_logic()（输入：ItemSpec Section 1 + 4）
+  . Round 2: 生成check_logic()（输入：Section 2 + Round 1输出的数据结构）
+  . Round 3: 生成waiver_logic()（输入：Section 3 + Round 2输出）
+- 状态传递：Round N的输出作为Round N+1的输入
+- 数据契约：通过ItemSpec Section 1预定义，保证跨Round一致性
+
+
+### 3.2.4 Validation Agent - 质量保证专家
+
+**职责**：
+- 运行生成的checker（在实际环境中执行）
+- 对比输出与Golden参考
+- 评估质量：语法正确性、功能正确性、输出格式
+
+**输入**：
+```python
+checker_file = "test/Validation/IMP-10-0-0-00/output/IMP-10-0-0-00_checker.py"
+input_yaml = "test/Validation/IMP-10-0-0-00/input/item.yaml"
+golden_log = "Golden/IMP-10-0-0-00.log"
+```
+
+**输出**：
+```yaml
+validation_result:
+  syntax_check:
+    status: PASS
+    errors: []
+  
+  execution_check:
+    status: PASS
+    exit_code: 0
+    execution_time: 2.3s
+  
+  output_comparison:
+    status: PASS
+    diff_lines: 0
+    similarity_score: 100%
+  
+  overall:
+    status: PASS
+    confidence: 95%
+```
+
+**验证步骤**：
+```python
+def validate_checker(checker_file, input_yaml, golden_log):
+    # Step 1: 语法检查
+    syntax_ok = check_python_syntax(checker_file)
+    
+    # Step 2: 静态分析
+    imports_ok = check_required_imports(checker_file)
+    class_ok = check_basechecker_inheritance(checker_file)
+    
+    # Step 3: 实际运行
+    result = run_checker(checker_file, input_yaml)
+    
+    # Step 4: 输出对比
+    diff = compare_outputs(result.log, golden_log)
+    
+    # Step 5: 质量评分
+    score = calculate_quality_score(syntax_ok, imports_ok, class_ok, diff)
+    
+    return ValidationResult(score)
+```
+
+
+3.3 Agent与CHECKLIST的Hookup机制
+----------------------------------------
+
+**关键问题**：Agent生成的checker如何无缝集成到Latest\CHECKLIST运行环境？
+
+### 3.3.1 文件生成与部署
+
+**生成阶段**（在Tool\Agent目录）：
+```
+CodeGen Agent输出：
+test/Validation/IMP-10-0-0-00/output/IMP-10-0-0-00_checker.py
+```
+
+**部署阶段**（复制到Latest\CHECKLIST）：
+```
+cp test/Validation/IMP-10-0-0-00/output/IMP-10-0-0-00_checker.py \
+   Latest/CHECKLIST/Check_modules/10.0_STA_DCD_CHECK/scripts/
+```
+
+**运行阶段**（Latest\CHECKLIST）：
+```
+Work/run.ps1
+v
+check_flowtool.py 发现新文件 IMP-10-0-0-00_checker.py
+v
+执行 IMP-10-0-0-00_checker.py
+v
+生成 Work/Results/10.0_STA_DCD_CHECK/IMP-10-0-0-00.log/.rpt
+```
+
+
+### 3.3.2 配置文件映射
+
+**Agent使用的配置**：
+```yaml
+# Tool/Agent/test/Validation/IMP-10-0-0-00/input/item.yaml
+requirements:
+  value: 1
+input_files:
+  - '${CHECKLIST_ROOT}/IP_project_folder/logs/sta_post_syn.log'
+```
+
+**Latest\CHECKLIST使用的配置**：
+```yaml
+# Latest/CHECKLIST/Check_modules/10.0_STA_DCD_CHECK/items/IMP-10-0-0-00_item.yaml
+requirements:
+  value: 1
+input_files:
+  - '${CHECKLIST_ROOT}/IP_project_folder/logs/sta_post_syn.log'
+```
+
+**关键机制**：
+- 两者配置完全相同（通过复制或符号链接保持同步）
+- ${CHECKLIST_ROOT}变量确保路径在不同环境下可移植
+
+
+### 3.3.3 BaseChecker继承保证兼容性
+
+**Agent生成的代码结构**：
+```python
+from Check_modules.common.base_checker import BaseChecker
+
+class IMP_10_0_0_00_Checker(BaseChecker):
+    def parse_logic(self): ...
+    def check_logic(self): ...
+    def waiver_logic(self): ...
+```
+
+**框架期望的结构**：
+```python
+# Latest/CHECKLIST/Check_modules/common/base_checker.py
+class BaseChecker:
+    def run(self):
+        parsed = self.parse_logic()
+        checked = self.check_logic(parsed)
+        waived = self.waiver_logic(checked)
+        self.output(waived)
+```
+
+**兼容性保证**：
+- Agent生成的checker继承BaseChecker
+- 只需实现3个抽象方法
+- 框架自动调用run()进行Type分发
+
+
+### 3.3.4 输出格式一致性
+
+**Agent生成的输出**：
+```python
+def check_logic(self, parsed_data, requirements):
+    results = []
+    results.append(self.build_info("Netlist version found"))
+    results.append(self.build_error("SPEF version missing"))
+    return results
+```
+
+**框架期望的格式**：
+```python
+# base_checker.py提供的辅助方法
+def build_info(self, message, line_number=None):
+    return {"level": "INFO", "message": message, "line": line_number}
+
+def build_error(self, message, line_number=None):
+    return {"level": "ERROR", "message": message, "line": line_number}
+```
+
+**一致性保证**：
+- Agent学习了base_checker.py的API
+- 使用相同的build_info()/build_error()接口
+- output_formatter.py识别相同的数据结构
+
+
+================================================================================
+四、Golden - 黄金参考库
+================================================================================
+
+4.1 目录结构
+----------------------------------------
+
+Golden/
+├── IMP-10-0-0-00_README.md # Checker功能说明
+├── IMP-10-0-0-00.py # 手工编写的参考实现
+├── IMP-2-0-0-00_README.md
+├── IMP-2-0-0-00.py
+└── [其他50+个参考实现]
+
+
+4.2 Golden的三重角色
+----------------------------------------
+
+### 4.2.1 训练材料（Training Material）
+
+**用途**：
+Context Agent学习如何生成高质量的ItemSpec
+
+**示例**：
+```
+Golden/IMP-10-0-0-00.py (400行手工代码)
+v 分析提取
+Context Agent学习到：
+- 如何结构化描述parsing logic
+- 如何定义数据契约（parsed_fields结构）
+- 如何编写Implementation Guide
+v 应用到新案例
+生成 IMP-10-0-0-02_ItemSpec.md（新的checker规范）
+```
+
+
+### 4.2.2 验证基准（Validation Baseline）
+
+**用途**：
+Validation Agent对比生成代码与Golden的质量差异
+
+**对比维度**：
+```python
+def compare_with_golden(generated_checker, golden_checker):
+    metrics = {
+        "code_structure": compare_class_structure(),
+        "method_signatures": compare_method_signatures(),
+        "logic_correctness": compare_execution_results(),
+        "output_format": compare_output_format(),
+        "error_handling": compare_edge_cases()
+    }
+    return QualityScore(metrics)
+```
+
+
+### 4.2.3 回归基线（Regression Baseline）
+
+**用途**：
+框架升级后，验证所有Golden案例仍能正常运行
+
+**回归测试流程**：
+```python
+# Check_modules/common/regression_testing/run_golden_tests.py
+for golden_file in Golden/*.py:
+    result = run_checker(golden_file)
+    assert result.status == PASS
+    assert output_matches_snapshot(result.log)
+```
+
+
+================================================================================
+五、完整的端到端流程
+================================================================================
+
+5.1 从需求到上线的完整路径
+----------------------------------------
+
+**第一步：需求定义**
+```
+设计工程师提出：需要检查STA log中netlist和SPEF的版本信息
+v
+创建 item.yaml 配置：
+requirements:
+  value: 1
+  pattern_items: ["Generated on:*2025*"]
+waivers:
+  value: 0
+input_files:
+  - '${CHECKLIST_ROOT}/IP_project_folder/logs/sta_post_syn.log'
+```
+
+**第二步：Agent生成（Tool\Agent环境）**
+```
+Orchestrator Agent启动Pipeline
+v
+Context Agent生成ItemSpec（5轮CoT）
+  . 读取：item.yaml + global_rules.md
+  . 输出：IMP-10-0-0-00_ItemSpec.md (538行)
+v
+CodeGen Agent生成checker（3轮CoT）
+  . 读取：ItemSpec + item.yaml
+  . Round 1: 生成parse_logic()
+  . Round 2: 生成check_logic()
+  . Round 3: 生成waiver_logic()
+  . 输出：IMP-10-0-0-00_checker.py (350行)
+v
+Validation Agent验证
+  . 运行checker
+  . 对比Golden
+  . 质量评分：95%
+```
+
+**第三步：部署到Latest\CHECKLIST**
+```
+复制生成的文件：
+cp IMP-10-0-0-00_checker.py -> Latest/CHECKLIST/Check_modules/10.0_STA_DCD_CHECK/scripts/
+cp item.yaml -> Latest/CHECKLIST/Check_modules/10.0_STA_DCD_CHECK/items/
+```
+
+**第四步：执行验证（Latest\CHECKLIST环境）**
+```
+cd Latest/CHECKLIST/Work
+./run.ps1
+v
+check_flowtool.py执行：
+  1. 读取所有模块的item.yaml
+  2. 调用对应的checker.py
+  3. 收集执行结果
+v
+生成输出：
+  Work/Results/10.0_STA_DCD_CHECK/IMP-10-0-0-00.log
+  Work/Results/10.0_STA_DCD_CHECK/IMP-10-0-0-00.rpt
+  Work/Results/10.0_STA_DCD_CHECK/IMP-10-0-0-00_summary.yaml
+```
+
+**第五步：可视化展示**
+```
+write_summary_yaml.py聚合：
+  . 读取所有 *_summary.yaml
+  . 生成 CheckList.rpt（文本）
+  . 生成 signoff_20251231.html（Dashboard）
+v
+设计工程师打开浏览器：
+  Work/Reports/signoff_20251231.html
+  . 查看所有模块的Pass/Fail状态
+  . 点击IMP-10-0-0-00查看详细日志
+  . 分析Waiver情况
+```
+
+
+5.2 数据流向图
+----------------------------------------
+
+```
+┌─────────────────────────────────────────────────────────────────┐
+│ Agent开发环境 │
+│ (CHECKLIST\Tool\Agent) │
+│ │
+│ ┌────────────┐ ┌────────────┐ ┌────────────┐ │
+│ │ Context │ -> │ CodeGen │ -> │ Validation │ │
+│ │ Agent │ │ Agent │ │ Agent │ │
+│ └────────────┘ └────────────┘ └────────────┘ │
+│ v v v │
+│ ItemSpec.md checker.py 质量评分 │
+└─────────────────────────────────────────────────────────────────┘
+                            v
+                      【部署复制】
+                            v
+┌─────────────────────────────────────────────────────────────────┐
+│ 运行时环境 │
+│ (Latest\CHECKLIST) │
+│ │
+│ ┌────────────────────────────────────────────────────────┐ │
+│ │ Check_modules/10.0_STA_DCD_CHECK/ │ │
+│ │ ├── items/IMP-10-0-0-00_item.yaml │ │
+│ │ └── scripts/IMP-10-0-0-00_checker.py <- 生成的代码 │ │
+│ └────────────────────────────────────────────────────────┘ │
+│ v │
+│ ┌────────────────────────────────────────────────────────┐ │
+│ │ check_flowtool.py (执行引擎) │ │
+│ │ ├── 读取item.yaml │ │
+│ │ ├── 调用checker.py │ │
+│ │ └── 收集结果 │ │
+│ └────────────────────────────────────────────────────────┘ │
+│ v │
+│ ┌────────────────────────────────────────────────────────┐ │
+│ │ Work/Results/10.0_STA_DCD_CHECK/ │ │
+│ │ ├── IMP-10-0-0-00.log (详细日志) │ │
+│ │ ├── IMP-10-0-0-00.rpt (简洁报告) │ │
+│ │ └── IMP-10-0-0-00_summary.yaml │ │
+│ └────────────────────────────────────────────────────────┘ │
+│ v │
+│ ┌────────────────────────────────────────────────────────┐ │
+│ │ write_summary_yaml.py (聚合器) │ │
+│ │ ├── 聚合所有summary.yaml │ │
+│ │ ├── 生成CheckList.rpt │ │
+│ │ └── 生成signoff_YYYYMMDD.html │ │
+│ └────────────────────────────────────────────────────────┘ │
+│ v │
+│ ┌────────────────────────────────────────────────────────┐ │
+│ │ Work/Reports/signoff_20251231.html │ │
+│ │ ├── Executive Summary │ │
+│ │ ├── Module Status Matrix │ │
+│ │ ├── Checker Details │ │
+│ │ └── Waiver Analysis │ │
+│ └────────────────────────────────────────────────────────┘ │
+│ v │
+│ 【浏览器可视化】 │
+└─────────────────────────────────────────────────────────────────┘
+```
+
+
+================================================================================
+六、关键设计决策与原理
+================================================================================
+
+6.1 为什么需要两个CHECKLIST目录？
+----------------------------------------
+
+**Latest\CHECKLIST（运行环境）**：
+- 用途：实际项目的验证执行
+- 特点：
+  . 包含真实的项目数据（IP_project_folder）
+  . 存放生成的Work结果
+  . 配置适配具体项目
+- 数据：可变的（每次运行都会更新Results/）
+
+**CHECKLIST\CHECKLIST（框架源码）**：
+- 用途：框架开发和维护
+- 特点：
+  . 包含base_checker.py等核心框架
+  . 包含checker_templates等可复用模板
+  . 配置通用化（使用${CHECKLIST_ROOT}）
+- 数据：相对稳定（只在框架升级时修改）
+
+**类比**：
+```
+Latest\CHECKLIST <--> /usr/local/myapp/（运行实例）
+CHECKLIST\CHECKLIST <--> /usr/share/myapp/（程序包）
+```
+
+
+6.2 为什么Work目录如此重要？
+----------------------------------------
+
+**Work/是整个系统的"心脏"**：
+
+1. **Results/目录**：存放所有checker的执行结果
+   - 每个checker生成3个文件（.log/.rpt/.yaml）
+   - 提供多种格式以满足不同需求：
+     . .log：给开发者看（详细调试信息）
+     . .rpt：给管理者看（简洁状态报告）
+     . .yaml：给自动化工具看（机器可读）
+
+2. **Reports/目录**：可视化Dashboard
+   - signoff_YYYYMMDD.html是"项目仪表盘"
+   - 一页纸展示所有模块状态
+   - 历史快照支持趋势分析
+
+3. **CheckList.rpt**：聚合文本报告
+   - 2000+行的完整报告
+   - 可通过命令行工具解析
+   - 可集成到CI/CD pipeline
+
+**为什么不直接在Results/目录查看？**
+- Results/有30个模块 × 平均8个checker = 240个文件
+- 人工逐个检查效率太低
+- Dashboard提供：
+  . 一键查看所有Pass/Fail
+  . 搜索过滤功能
+  . Waiver统计分析
+
+
+6.3 Agent系统与CHECKLIST的"松耦合"设计
+----------------------------------------
+
+**问题**：如果Agent生成的代码有bug，会影响Latest\CHECKLIST运行吗？
+
+**答案**：不会，因为采用了"松耦合"设计：
+
+1. **文件级隔离**
+   ```
+   Tool\Agent生成：test/Validation/output/checker.py
+   Latest\CHECKLIST运行：Check_modules/scripts/checker.py
+   
+   中间有显式的"复制"步骤，不是自动同步
+   ```
+
+2. **验证后部署**
+   ```
+   Validation Agent先验证 -> 质量评分95% -> 人工审核 -> 部署
+   如果质量评分<80%，则不部署
+   ```
+
+3. **Golden保底**
+   ```
+   如果Agent生成失败，可以回退到Golden参考实现
+   Golden/*.py是人工编写，100%可靠
+   ```
+
+4. **框架保护**
+   ```
+   即使checker代码有bug，base_checker.py也会捕获异常：
+   
+   try:
+       result = checker.run()
+   except Exception as e:
+       return FAIL("Checker execution failed: {e}")
+   ```
+
+
+6.4 ${CHECKLIST_ROOT}变量的妙用
+----------------------------------------
+
+**问题**：Windows和Linux的路径格式不同，如何保证跨平台？
+
+**传统方案的困境**：
+```yaml
+# 硬编码绝对路径（Windows）
+input_files:
+  - 'C:\Users\wentao\AAI_local\AAI\Main_Work\ACL\Latest\CHECKLIST\IP_project_folder\logs\sta.log'
+
+问题：
+1. 无法在Linux运行（路径不存在）
+2. 无法移植到其他机器（路径hardcoded）
+3. Git提交会污染代码库（个人路径）
+```
+
+**${CHECKLIST_ROOT}方案**：
+```yaml
+# 使用变量占位符
+input_files:
+  - '${CHECKLIST_ROOT}/IP_project_folder/logs/sta.log'
+
+运行时自动展开：
+- Windows: C:\Users\wentao\...\Latest\CHECKLIST\IP_project_folder\logs\sta.log
+- Linux: /home/user/workspace/Latest/CHECKLIST/IP_project_folder/logs/sta.log
+```
+
+**展开机制**（在base_checker.py实现）：
+```python
+class BaseChecker:
+    def __init__(self):
+        self.checklist_root = os.environ.get('CHECKLIST_ROOT') or os.getcwd()
+    
+    def expand_path(self, path_with_variable):
+        return path_with_variable.replace('${CHECKLIST_ROOT}', self.checklist_root)
+    
+    def read_input_file(self, relative_path):
+        full_path = self.expand_path(relative_path)
+        return open(full_path).read()
+```
+
+**优势**：
+[OK] 跨平台兼容（Windows/Linux）
+[OK] 可移植（只需设置环境变量）
+[OK] Git友好（不污染代码库）
+
+
+================================================================================
+七、总结与最佳实践
+================================================================================
+
+7.1 目录结构最佳实践
+----------------------------------------
+
+1. **Latest\CHECKLIST（运行环境）**
+   - 用途：实际项目验证
+   - 关注点：Work/目录的结果
+   - 维护：定期清理旧的Reports快照
+
+2. **CHECKLIST\CHECKLIST（框架源码）**
+   - 用途：框架开发
+   - 关注点：common/目录的稳定性
+   - 维护：任何修改需要通过Golden回归测试
+
+3. **CHECKLIST\Tool\Agent（Agent开发）**
+   - 用途：checker自动生成
+   - 关注点：test/Validation的质量评分
+   - 维护：持续优化prompt和CoT策略
+
+4. **Golden（黄金参考）**
+   - 用途：训练、验证、回归
+   - 关注点：代码质量和可读性
+   - 维护：不可轻易修改（版本控制）
+
+
+7.2 Agent集成最佳实践
+----------------------------------------
+
+1. **明确边界**
+   - Agent生成 ≠ 自动部署
+   - 必须经过Validation Agent验证
+   - 人工审核后再部署到Latest\CHECKLIST
+
+2. **质量保证**
+   - 设置质量阈值（如95%）
+   - 低于阈值则触发人工介入
+   - 保留所有生成历史（test/archive/）
+
+3. **持续改进**
+   - 收集失败案例
+   - 分析Common Failure Patterns
+   - 优化ItemSpec生成策略
+
+
+7.3 Dashboard使用最佳实践
+----------------------------------------
+
+1. **日常监控**
+   - 每日检查signoff_YYYYMMDD.html
+   - 关注Pass Rate趋势
+   - 追踪Waiver数量变化
+
+2. **问题定位**
+   - 从Module View找到Fail的模块
+   - 点击Checker Details查看详细日志
+   - 分析错误原因（Info/Warn/Error）
+
+3. **报告生成**
+   - 使用CheckList.rpt生成文本报告
+   - 导出YAML数据进行自动化分析
+   - 历史快照支持趋势图
+
+
+7.4 常见问题与解决方案
+----------------------------------------
+
+**问题1：Agent生成的checker无法运行**
+原因：可能缺少BaseChecker继承
+解决：Validation Agent会提前检测，禁止部署
+
+**问题2：Dashboard显示空白**
+原因：缺少Results/目录的数据
+解决：先运行Work/run.ps1生成结果
+
+**问题3：Waiver不生效**
+原因：waiver_logic()实现错误
+解决：参考Golden案例修正
+
+**问题4：路径找不到文件**
+原因：${CHECKLIST_ROOT}未设置
+解决：在run.ps1中设置环境变量
+
+
+================================================================================
+附录：文件路径快速参考
+================================================================================
+
+A. Latest\CHECKLIST关键路径
+----------------------------------------
+运行环境根目录：C:\Users\wentao\AAI_local\AAI\Main_Work\ACL\Latest\CHECKLIST
+
+框架核心：
+  Check_modules/common/base_checker.py
+  Check_modules/common/output_formatter.py
+  Check_modules/common/check_flowtool.py
+
+Checker存放：
+  Check_modules/X.Y_MODULE_NAME/scripts/IMP-X-Y-Z-NN_checker.py
+
+配置文件：
+  Check_modules/X.Y_MODULE_NAME/items/IMP-X-Y-Z-NN_item.yaml
+
+项目数据：
+  IP_project_folder/reports/*.rpt
+  IP_project_folder/logs/*.log
+
+执行结果：
+  Work/Results/X.Y_MODULE_NAME/IMP-X-Y-Z-NN.log
+  Work/Results/X.Y_MODULE_NAME/IMP-X-Y-Z-NN.rpt
+  Work/Results/X.Y_MODULE_NAME/IMP-X-Y-Z-NN_summary.yaml
+
+Dashboard：
+  Work/Reports/signoff_YYYYMMDD.html
+
+聚合报告：
+  Work/CheckList.rpt
+
+
+B. CHECKLIST\Tool\Agent关键路径
+----------------------------------------
+Agent根目录：C:\Users\wentao\AAI_local\AAI\Main_Work\ACL\CHECKLIST\Tool\Agent
+
+四大Agent：
+  agents/orchestrator_agent.py
+  agents/context_agent.py
+  agents/codegen_agent.py
+  agents/validation_agent.py
+
+知识库：
+  knowledge_base/global_rules.md
+
+测试目录：
+  test/ContextAgent/IMP-10-0-0-00/IMP-10-0-0-00_ItemSpec.md
+  test/Validation/IMP-10-0-0-00/input/item.yaml
+  test/Validation/IMP-10-0-0-00/output/IMP-10-0-0-00_checker.py
+
+历史存档：
+  test/Validation/IMP-10-0-0-00/archive/YYYYMMDD_HHMMSS/
+
+
+C. Golden关键路径
+----------------------------------------
+Golden根目录：C:\Users\wentao\AAI_local\AAI\Main_Work\ACL\Golden
+
+黄金参考：
+  Golden/IMP-10-0-0-00_README.md
+  Golden/IMP-10-0-0-00.py
+
+
+================================================================================
+文档结束
+================================================================================
+版本：v1.0
+更新日期：2026-01-10
+下一步行动：与技术分析文档合并，生成完整的系统文档
+
+
+================================================================================
+配置驱动的Checker自动生成系统 - 技术分析报告
+================================================================================
+报告日期: 2026-01-10
+项目代号: Agentic-AI Context+CodeGen Pipeline
+基于案例: IMP-10-0-0-00 (Netlist/SPEF Version Checker)
+
+================================================================================
+1. 项目概述
+================================================================================
+
+1.1 我们在做什么
+----------------------------------------
+
+本项目构建了一个基于LLM的自动化代码生成系统，用于生成EDA验证checker代码。
+
+**输入**：
+- item.yaml配置文件（定义验证需求、pattern、waiver规则）
+- 领域知识库（global_rules.md定义框架规范）
+
+**输出**：
+- checker.py可执行代码（包含parsing/check/waiver三个功能单元）
+- 该代码可适应运行时配置变化（同一份代码支持4种Type + 2种waiver模式）
+
+**核心流程**：
+1. Context Agent：将配置+领域知识 -> 压缩成ItemSpec（语义规范）
+2. CodeGen Agent：基于ItemSpec -> 分段生成Python代码
+3. Validation Agent：运行测试并验证代码正确性
+
+----------------------------------------
+
+1.2 商业价值与技术优势
+----------------------------------------
+
+**解决的痛点**：
+- 传统开发方式：一个checker需要3-5天人工编写+调试
+- 维护困难：配置改变（如从Type 1升级到Type 3）需要重写代码
+
+**我们的改进**：
+- 自动生成：将开发时间压缩至数小时
+- 配置驱动：同一份代码适应多种配置组合（减少重复开发）
+- 知识复用：领域知识（global_rules）一次定义，所有checker复用
+
+**量化收益**（预期）：
+- 开发效率：提升10-20倍
+- 代码一致性：框架保证规范，减少人为错误
+- 维护成本：配置变化不需要重新生成代码
+
+----------------------------------------
+
+1.3 核心挑战与技术难点
+----------------------------------------
+
+**挑战1：LLM上下文限制**
+- 问题：global_rules (543行) + 案例代码 + 需求 = 超过LLM上下文窗口
+- 后果：信息过载导致生成质量下降
+
+**挑战2：Type系统的复杂性**
+- 问题：4种Type × 2种waiver模式 = 8种组合，如何避免为每种组合生成独立代码？
+- 后果：代码重复，维护困难
+
+**挑战3：代码的"通用性"vs"业务特异性"**
+- 问题：如何让LLM生成既通用（适应配置变化）又特异（符合具体业务逻辑）的代码？
+- 后果：过于通用->失去业务针对性；过于特异->无法复用
+
+**挑战4：分段生成的一致性**
+- 问题：parsing_logic和check_logic分段生成，如何保证数据结构一致？
+- 后果：parsing返回的字段名与check期望的不匹配->运行时错误
+
+
+================================================================================
+2. 整体架构设计
+================================================================================
+
+2.1 四Agent协作架构
+----------------------------------------
+
+系统采用"Pipeline模式"，由4个专门化Agent协作完成代码生成：
+
+┌─────────────────────────────────────────────────────────────┐
+│ Orchestrator Agent │
+│ 职责：Pipeline协调、任务分发、状态管理、错误恢复 │
+└─────────────────────────────────────────────────────────────┘
+                            │
+        ┌───────────────────┼───────────────────┐
+        ▼ ▼ ▼
+┌──────────────┐ ┌──────────────┐ ┌──────────────┐
+│ Context │───▶│ CodeGen │───▶│ Validation │
+│ Agent │ │ Agent │ │ Agent │
+└──────────────┘ └──────────────┘ └──────────────┘
+  输出：ItemSpec 输出：checker.py 输出：Test Report
+  (语义规范) (可执行代码) (质量验证)
+
+
+**数据流向**：
+item.yaml ──▶ Context Agent ──▶ ItemSpec.md ──▶ CodeGen Agent ──▶ checker.py ──▶ Validation Agent ──▶ Pass/Fail Report
+
+----------------------------------------
+
+2.2 Context Agent详解
+----------------------------------------
+
+**角色定位**：
+"语义压缩专家" - 将领域知识和配置需求压缩成可执行的语义规范
+
+**输入**：
+- item.yaml（用户配置）：
+  . description: "Confirm the netlist/spef version is correct."
+  . requirements.value: 1
+  . requirements.pattern_items: ["Generated on:*2025*"]
+  . waivers.value: 0
+  . input_files: ["${CHECKLIST_ROOT}/IP_project_folder/logs/sta_post_syn.log"]
+
+- global_rules.md（框架规范，543行）：
+  . Section 1: Type System定义
+  . Section 2: Parsing/Check/Waiver Logic规范
+  . Section 3: 数据结构标准
+
+**处理流程**（v9.0 - 5轮Chain of Thought）：
+- Round 1: 分析需求，理解item的业务含义
+- Round 2: 生成Section 1 (Parsing Logic) - 定义提取哪些信息、如何提取
+- Round 3: 生成Section 2 (Check Logic) - 定义如何验证、pass/fail条件
+- Round 4: 生成Section 3 (Waiver Logic) - 定义豁免场景、matching keywords
+- Round 5: 生成Section 4 (Implementation Guide) - 提供regex、edge cases处理
+
+**输出**：
+ItemSpec.md（约500-600行）：
+```
+## 1. Parsing Logic
+- Information Categories: Netlist, SPEF
+- Key Fields: tool_name, tool_version, timestamp
+- parsed_fields结构定义
+
+## 2. Check Logic
+- Validation Items: 2.1, 2.2, 2.3, 2.4
+- Completeness Definition（每项的具体判断条件）
+- Pass/Fail Logic
+
+## 3. Waiver Logic
+- Waiver Scenarios（可豁免的场景）
+- Matching Keywords（如"SPEF", "synthesis"）
+
+## 4. Implementation Guide
+- File Format Details（具体的文件格式说明）
+- Regex Patterns（可直接使用的正则表达式）
+- Edge Cases（特殊情况处理）
+```
+
+**关键创新**：
+ItemSpec是"中间表示"（IR）：
+- 不是代码（不能直接执行）
+- 不是纯文档（有结构化的字段定义）
+- 是"可执行的语义规范"（LLM可以据此生成代码）
+
+----------------------------------------
+
+2.3 CodeGen Agent详解
+----------------------------------------
+
+**角色定位**：
+"代码生成专家" - 基于ItemSpec生成运行时配置驱动的checker代码
+
+**输入**：
+- ItemSpec.md（Context Agent的输出）
+- global_rules.md（框架规范，用于理解Type系统）
+- item.yaml的关键字段名（如requirements.value, waivers.value）
+
+**架构设计（三层代码结构）**：
+
+C层（顶层 - Jinja2骨架）：
+  ├─ 读取item.yaml配置
+  ├─ 判断Type（基于requirements.value和waivers.value）
+  │ . requirements.value=N/A & waivers.value=N/A -> Type 1
+  │ . requirements.value>0 & waivers.value=N/A -> Type 2
+  │ . requirements.value>0 & waivers.value>=0 -> Type 3
+  │ . requirements.value=N/A & waivers.value>=0 -> Type 4
+  ├─ 调用对应Type模块
+  └─ 打包输出（status, found_items, missing_items等）
+
+B层（中间层 - Jinja2骨架）：
+  ├─ Type 1模块：parse() -> check() -> 返回结果
+  ├─ Type 2模块：parse() -> check() -> 返回结果
+  ├─ Type 3模块：parse() -> check() -> waiver() -> 返回结果
+  └─ Type 4模块：parse() -> check() -> waiver() -> 返回结果
+
+A层（底层 - LLM生成）：
+  ├─ parse_logic()：具体的文件读取和信息提取代码
+  │ . 基于ItemSpec Section 1 + Section 4.1的regex
+  │ . 返回结构化数据（符合global_rules Section 2.4.1规范）
+  │
+  ├─ check_logic()：具体的验证逻辑代码
+  │ . 基于ItemSpec Section 2的validation items
+  │ . 包含两种场景分支：
+  │ - 场景1：requirements.value=N/A（Boolean check）
+  │ - 场景2：requirements.value>0（Pattern check）
+  │
+  └─ waiver_logic()：具体的豁免匹配代码
+     . 基于ItemSpec Section 3的keywords
+     . 包含两种场景分支：
+       - 场景1：waivers.value=0（Global waiver）
+       - 场景2：waivers.value>0（Selective waiver）
+
+**生成策略（CoT分段注入）**：
+- Round 1: 生成parse_logic()
+  . 注入：ItemSpec Section 1 + Section 4.1
+  . 输出：完整的parsing函数 + 返回数据示例
+  
+- Round 2: 生成check_logic()
+  . 注入：ItemSpec Section 2 + global_rules CR1-CR5 + Round 1的数据结构
+  . 输出：完整的check函数（含两种场景分支）
+  
+- Round 3: 生成waiver_logic()
+  . 注入：ItemSpec Section 3 + global_rules WR0-WR2 + Round 2的输出结构
+  . 输出：完整的waiver函数（含两种场景分支）
+
+**关键创新**：
+1. **Type系统的"去具象化"**：
+   - LLM不需要理解"Type 3是什么"
+   - 只需要知道"check_logic有两种场景，根据requirements.value判断"
+
+2. **配置驱动的通用性**：
+   - 即使当前配置是Type 3，生成的代码包含完整的if-else分支
+   - 未来改成Type 2/4，只需修改item.yaml，无需重新生成代码
+
+----------------------------------------
+
+2.4 Validation Agent详解
+----------------------------------------
+
+**角色定位**：
+"质量保证专家" - 运行测试并验证生成代码的正确性
+
+**输入**：
+- checker.py（CodeGen Agent的输出）
+- item.yaml（测试配置）
+- 预期输出（golden reference）
+
+**验证维度**：
+1. **语法正确性**：
+   - Python语法检查（AST parsing）
+   - Import检查（依赖项是否存在）
+
+2. **功能正确性**：
+   - 运行实际测试数据
+   - 对比输出与预期结果（status, found_items, missing_items等）
+
+3. **Type覆盖度**：
+   - 生成6个测试配置（覆盖所有Type组合）
+   - 验证代码对配置变化的适应性
+
+**输出**：
+- Pass/Fail报告
+- 错误详情（如果失败）
+- 性能数据（执行时间、LLM调用次数等）
+
+----------------------------------------
+
+2.5 Orchestrator Agent详解
+----------------------------------------
+
+**角色定位**：
+"Pipeline协调器" - 管理整个代码生成流程
+
+**核心职责**：
+1. **任务调度**：
+   - 按顺序执行Context -> CodeGen -> Validation
+   - 支持断点恢复（如果Context已完成，可以直接从CodeGen开始）
+
+2. **状态管理**：
+   - 跟踪每个Agent的执行状态
+   - 保存中间结果（ItemSpec, 生成的代码等）
+
+3. **错误恢复**：
+   - 如果CodeGen失败，可以重试（带修改的prompt）
+   - 如果Validation失败，可以触发迭代优化
+
+4. **配置传递**：
+   - 将item.yaml的配置传递给各Agent
+   - 管理输出目录、debug模式等全局设置
+
+**Pipeline示例**：
+```
+Task Input: item.yaml路径
+  v
+Step 1: Context Agent生成ItemSpec
+  ├─ 输出: ItemSpec.md
+  ├─ 状态: completed
+  └─ Checkpoint: context/item_spec.json
+  v
+Step 2: CodeGen Agent生成代码
+  ├─ 输入: ItemSpec.md + global_rules.md
+  ├─ 输出: checker.py
+  ├─ 状态: completed
+  └─ Checkpoint: codegen/checker.py
+  v
+Step 3: Validation Agent运行测试
+  ├─ 输入: checker.py + item.yaml
+  ├─ 输出: test_report.json
+  └─ 状态: completed (PASS)
+  v
+Final Output: checker.py + README.md + test_report.json
+```
+
+
+================================================================================
+3. 关键技术创新点
+================================================================================
+
+（接下一部分...）
+
+
+================================================================================
+配置驱动的Checker自动生成系统 - 技术分析报告（第2部分）
+================================================================================
+
+3. 关键技术创新点
+================================================================================
+
+3.1 创新点1：ItemSpec作为"中间表示"（IR）*****
+----------------------------------------
+
+**业界常见做法**：
+- Approach A: 给LLM喂完整的需求文档 + 代码模板 -> 一步生成
+  . 问题：上下文过载，生成质量不稳定
+  
+- Approach B: 用DSL定义checker逻辑 -> 用代码生成器翻译
+  . 问题：DSL学习成本高，表达能力有限
+
+**我们的创新**：
+ItemSpec是人类可读 + LLM可解析 + 足够抽象 + 足够具体的混合体：
+
+| 特性 | 说明 | 示例 |
+|------|------|------|
+| 人类可读 | Markdown格式，有business justification | Section 3解释为什么SPEF可豁免 |
+| LLM可解析 | 结构化的字段定义、算法描述 | Section 2.1明确列出"parsed_fields.netlist.loaded == True" |
+| 足够抽象 | 不依赖具体实现（不是Python代码） | 不说"用re.search()"，而说"提取tool_name" |
+| 足够具体 | 包含regex、数据结构schema | Section 4.1提供可直接使用的regex |
+
+**技术意义**：
+这类似于编译原理中的LLVM IR：
+- 前端（Context Agent）：高级语言（item.yaml + 领域知识）-> IR（ItemSpec）
+- 后端（CodeGen Agent）：IR（ItemSpec）-> 目标代码（checker.py）
+- **前后端解耦**：改进Context Agent的压缩算法，不影响CodeGen；改进CodeGen的生成策略，不影响Context
+
+**实际证据**（基于IMP-10-0-0-00案例）：
+- ItemSpec Section 1定义了12个字段，但没有重复global_rules的metadata规范
+- ItemSpec Section 4.1提供了5个regex，但没有解释regex原理
+- 这证明了Context Agent成功做到了"just-enough detail"
+
+----------------------------------------
+
+3.2 创新点2：Type系统的"去具象化"****
+----------------------------------------
+
+**传统思路（失败）**：
+告诉LLM "你在生成Type 3的checker"
+-> LLM需要记住Type 3的定义（pattern check + waiver）
+-> 容易混淆，或者生成Type特异的代码（无法复用）
+
+**我们的创新**：
+不告诉LLM Type概念，而是告诉它：
+- "check_logic有两种场景，根据requirements.value判断"
+- "waiver_logic有两种场景，根据waivers.value判断"
+
+**实际案例的证据**：
+item.yaml配置：
+```yaml
+requirements.value: 1 # 暗示Type 2或Type 3
+waivers.value: 0 # 确定是Type 3
+```
+
+但ItemSpec的Section 2中**完全没有提到"Type 3"这个词**：
+- 它只描述了4个validation items（2.1-2.4）
+- 它只说明了pattern matching的规则
+
+**CodeGen如何知道生成两个分支？**
+答案：从global_rules.md的Section 2.2 (CR1)学习：
+> "Type 1/4: Boolean check (requirements.value = N/A)
+> Type 2/3: Pattern-based search (requirements.value > 0)"
+
+**关键洞察**：
+- Type不是ItemSpec的责任 - ItemSpec只描述业务逻辑
+- Type是global_rules的责任 - global_rules定义框架规范
+- CodeGen同时读取两者 - 从global_rules学习框架，从ItemSpec学习业务
+
+**这种分离是反直觉但正确的**：
+传统软件工程：业务逻辑感知框架
+我们的设计：框架和业务逻辑正交
+
+----------------------------------------
+
+3.3 创新点3：配置驱动的代码通用性****
+----------------------------------------
+
+**配置空间的组合爆炸**：
+- 4种Type × 2种waiver模式 = 8种组合
+- 如果每种组合生成独立代码 -> 维护噩梦
+
+**我们的解决方案**：
+生成的check_logic()和waiver_logic()包含**完整的if-else分支**：
+
+```python
+def check_logic(parsed_data, requirements):
+    if requirements['value'] == 'N/A':
+        # 场景1：Boolean check（被Type 1/4调用）
+        return boolean_check(parsed_data)
+    else:
+        # 场景2：Pattern check（被Type 2/3调用）
+        return pattern_check(parsed_data, requirements['pattern_items'])
+
+def waiver_logic(check_result, waivers):
+    if waivers['value'] == 0:
+        # 场景1：Global waiver（Type 3/4可能走这里）
+        return global_waiver(check_result)
+    else:
+        # 场景2：Selective waiver（Type 3/4可能走这里）
+        return selective_waiver(check_result, waivers['waive_items'])
+```
+
+**核心优势**：
+即使当前配置是Type 3，生成的代码也能应对未来改成Type 2/4的情况
+-> 只需修改item.yaml，无需重新生成代码
+
+**技术对比**：
+| 方案 | 代码行数 | 维护成本 | 适应性 |
+|------|----------|----------|--------|
+| 为每种Type生成独立代码 | 8份 × 300行 = 2400行 | 高（8份代码需要同步修改） | 低（配置变化需要重新生成） |
+| 我们的方案 | 1份 × 400行 = 400行 | 低（只维护一份代码） | 高（配置变化无需重新生成） |
+
+----------------------------------------
+
+3.4 创新点4：CoT分段生成的"状态传递"***
+----------------------------------------
+
+**挑战**：
+Round 2生成check_logic时，需要知道Round 1生成的parsing_logic返回的数据结构
+
+**传统CoT的局限**：
+典型的CoT是"推理链"（A->B->C），每步结果是文本
+但代码生成需要"状态链"（函数A的返回值是函数B的输入）
+
+**我们的解决方案**：
+1. **预先定义数据契约**：
+   - ItemSpec Section 1定义parsed_fields的schema
+   - global_rules Section 2.4.1强制规定metadata字段
+
+2. **中间验证机制**（计划中）：
+   - Round 2之前，插入schema validation round
+   - 验证Round 1的输出是否符合ItemSpec定义的契约
+   - 如果不符合，触发Round 1重新生成
+
+**实际案例**：
+ItemSpec Section 1（Lines 45-85）预先定义：
+```python
+parsed_fields = {
+  "netlist": {
+    "loaded": True,
+    "tool_name": "Innovus",
+    "tool_version": "21.10",
+    "timestamp": "2025-01-15"
+  }
+}
+```
+
+Round 2的check_logic可以安全访问：
+```python
+netlist = item['parsed_fields']['netlist']
+if netlist['loaded'] and netlist['tool_name']: # 字段名匹配
+```
+
+**风险与缓解**：
+- 风险：LLM在Round 1生成`tool` instead of `tool_name`
+- 缓解：Schema validation可以检测不匹配并重新生成
+
+
+================================================================================
+4. 基于实际案例的可实现性分析
+================================================================================
+
+4.1 案例背景
+----------------------------------------
+
+**测试案例**：IMP-10-0-0-00 (Netlist/SPEF Version Checker)
+
+**输入配置**（item.yaml）：
+```yaml
+description: Confirm the netlist/spef version is correct.
+requirements:
+  value: 1
+  pattern_items: ["Generated on:*2025*"]
+waivers:
+  value: 0
+  waive_items: ["Current stage is synthesis, SPEF check is not applicable."]
+input_files:
+  - ${CHECKLIST_ROOT}/IP_project_folder/logs/sta_post_syn.log
+```
+
+**Context Agent输出**（ItemSpec.md，538行）：
+- Section 1: 定义提取netlist和SPEF的12个字段
+- Section 2: 定义4个validation items（2.1-2.4）
+- Section 3: 定义4个waivable scenarios
+- Section 4: 提供5个regex和multi-stage extraction strategy
+
+----------------------------------------
+
+4.2 Round 1: parsing_logic的可生成性推导
+----------------------------------------
+
+**LLM接收的上下文**：
+- ItemSpec Section 1（Lines 10-95）：2个信息类别 + 12个字段定义
+- ItemSpec Section 4.1（Lines 260-330）：Regex + Multi-Stage Extraction Strategy
+- global_rules Section 2.1（PR1-PR6）：Parsing职责边界
+
+**LLM需要生成的代码逻辑**：
+```python
+def parse_logic(input_files):
+    """提取netlist和SPEF的版本信息"""
+    # Stage 1: 解析STA log（从item.yaml获得路径）
+    sta_log = read_file(input_files[0])
+    
+    # Stage 2: 提取netlist路径（基于Section 4.1的regex）
+    netlist_pattern = r'(?i)(reading|loaded|read_\w+).*?(netlist|verilog)'
+    netlist_path = extract_with_regex(sta_log, netlist_pattern)
+    
+    # Stage 3: 打开netlist文件，读取header（前50行）
+    netlist_header = read_file_header(netlist_path, lines=50)
+    
+    # Stage 4: 提取tool_name, tool_version, timestamp
+    tool_name = extract_with_regex(
+        netlist_header,
+        r'(?i)(generator|created by|tool):\s*(\w+)'
+    )
+    tool_version = extract_with_regex(
+        netlist_header,
+        r'(version\s+)?([0-9.]+)'
+    )
+    timestamp = extract_with_regex(
+        netlist_header,
+        r'(?i)(date|generated on):\s*(\d{4}[-/]\d{2}[-/]\d{2})'
+    )
+    
+    # Stage 5: 组装结构化输出（符合Section 2.4.1规范）
+    return [{
+        "value": f"Netlist version: {tool_name} {tool_version}",
+        "source_file": netlist_path,
+        "line_number": 3,
+        "matched_content": "// Generator: Genus 21.1...",
+        "parsed_fields": {
+            "netlist": {
+                "loaded": True,
+                "tool_name": tool_name,
+                "tool_version": tool_version,
+                "timestamp": timestamp
+            }
+        }
+    }]
+```
+
+**可实现性评估**：[OK] **高度可行**
+
+**理由**：
+1. **Regex已提供**：ItemSpec Section 4.1包含5个可直接使用的regex
+2. **数据结构已定义**：Section 1的parsed_fields示例明确了输出格式
+3. **输入路径已知**：item.yaml提供input_files，无需猜测
+4. **多阶段策略已说明**：Section 4.1描述了Stage 1->2->3的逻辑
+
+**关键要素**：
+- LLM不需要"创造"regex，只需要"复制"ItemSpec提供的pattern
+- LLM不需要"理解"EDA工具，只需要"按照"Section 4.1的指导提取信息
+
+----------------------------------------
+
+4.3 Round 2: check_logic的可生成性推导
+----------------------------------------
+
+**LLM接收的上下文**：
+- ItemSpec Section 2（Lines 100-200）：4个validation items + completeness definition
+- global_rules Section 2.2（CR1-CR5）：Check Logic的两种场景规范
+- Round 1的输出数据结构（parsed_fields schema）
+- item.yaml的requirements.value=1（指示需要pattern check场景）
+
+**LLM需要生成的代码逻辑**：
+```python
+def check_logic(parsed_data, requirements):
+    """根据requirements.value走不同场景"""
+    
+    if requirements['value'] == 'N/A':
+        # ======== 场景1：Boolean check ========
+        # 基于ItemSpec Section 2的Items 2.1-2.4描述
+        found_items = []
+        missing_items = []
+        
+        for item in parsed_data:
+            netlist = item['parsed_fields']['netlist']
+            
+            # Item 2.1: Netlist loading status
+            if netlist['loaded']:
+                found_items.append({
+                    "description": "Netlist file loading status",
+                    "value": "loaded",
+                    **item # 保留metadata（source_file, line_number等）
+                })
+            else:
+                missing_items.append({
+                    "description": "Netlist file loading status",
+                    "expected": "loaded = True",
+                    "actual": "loaded = False"
+                })
+            
+            # Item 2.2: Netlist version completeness
+            # Section 2的completeness definition：所有字段都存在且非空
+            required_fields = ['tool_name', 'tool_version', 'timestamp', 'format']
+            if all(netlist.get(f) for f in required_fields):
+                found_items.append({
+                    "description": "Netlist version completeness",
+                    **item
+                })
+            else:
+                missing_fields = [f for f in required_fields if not netlist.get(f)]
+                missing_items.append({
+                    "description": "Netlist version completeness",
+                    "expected": "All fields present",
+                    "actual": f"Missing: {missing_fields}"
+                })
+        
+        return {
+            'status': 'PASS' if not missing_items else 'FAIL',
+            'found_items': found_items,
+            'missing_items': missing_items
+        }
+    
+    else:
+        # ======== 场景2：Pattern check ========
+        # 基于global_rules Section 2.2的pattern matching规则
+        pattern_items = requirements['pattern_items'] # ["Generated on:*2025*"]
+        found_items = []
+        missing_items = []
+        extra_items = []
+        
+        # 对每个pattern，在parsed_data中查找匹配
+        for pattern in pattern_items:
+            matched = False
+            for item in parsed_data:
+                # Pattern匹配value字段（global_rules规定）
+                if fnmatch(item['value'], f"*{pattern}*"):
+                    found_items.append({
+                        "description": f"Pattern: {pattern}",
+                        **item # 保留metadata
+                    })
+                    matched = True
+                    break
+            
+            if not matched:
+                missing_items.append({
+                    "description": f"Pattern: {pattern}",
+                    "expected": pattern,
+                    "actual": "not found in parsed data"
+                })
+        
+        # extra_items: parsed_data中不匹配任何pattern的项
+        for item in parsed_data:
+            if not any(fnmatch(item['value'], f"*{p}*") for p in pattern_items):
+                extra_items.append({
+                    "description": "Unexpected item",
+                    **item
+                })
+        
+        return {
+            'status': 'PASS' if not missing_items else 'FAIL',
+            'found_items': found_items,
+            'missing_items': missing_items,
+            'extra_items': extra_items
+        }
+```
+
+**可实现性评估**：[OK] **高度可行**
+
+**理由**：
+1. **场景1的判断条件已明确**：Section 2列出了每个validation item的completeness definition
+2. **场景2的匹配规则已定义**：global_rules Section 2.2说明了如何用fnmatch匹配pattern
+3. **数据结构一致性有保障**：Round 1的输出符合Section 1的schema，Round 2可以安全访问
+4. **LLM只需填充模板**：核心逻辑（两种场景的框架）已由global_rules定义
+
+**关键要素**：
+- LLM不需要"理解"Type系统，只需要"实现"两个if-else分支
+- LLM不需要"设计"数据结构，只需要"访问"parsed_data的固定字段
+
+----------------------------------------
+
+4.4 Round 3: waiver_logic的可生成性推导
+----------------------------------------
+
+**LLM接收的上下文**：
+- ItemSpec Section 3（Lines 195-250）：4个waivable items + matching keywords
+- global_rules Section 2.3（WR0-WR2）：Global和Selective waiver的算法
+- Round 2的输出结构（check_result schema）
+- item.yaml的waivers.value=0（指示当前是Global模式）
+
+**LLM需要生成的代码逻辑**：
+```python
+def waiver_logic(check_result, waivers):
+    """根据waivers.value走不同场景"""
+    
+    if waivers['value'] == 0:
+        # ======== 场景1：Global waiver ========
+        # 基于global_rules WR0：framework自动转换FAIL->INFO
+        
+        # 收集所有violations
+        waived = check_result['missing_items'] + check_result.get('extra_items', [])
+        
+        # 添加[WAIVED_AS_INFO]标签（Section 2.3.1规定）
+        for item in waived:
+            item['severity'] = 'INFO'
+            item['tag'] = '[WAIVED_AS_INFO]'
+        
+        # 输出waive_items的内容作为info（Section 2.3.1规定）
+        waived.append({
+            "description": waivers['waive_items'][0], # "Current stage is synthesis..."
+            "severity": "INFO",
+            "tag": "[WAIVED_INFO]"
+        })
+        
+        return {
+            'status': 'PASS', # 强制PASS
+            'found_items': check_result['found_items'],
+            'missing_items': [], # 清空
+            'extra_items': [], # 清空
+            'waived': waived,
+            'unused_waivers': [] # Global模式不产生unused waivers
+        }
+    
+    else:
+        # ======== 场景2：Selective waiver ========
+        # 基于Section 3的keywords + global_rules Section 2.3.2的三种匹配策略
+        
+        waive_items = waivers['waive_items'] # 如["SPEF", "synthesis"]
+        violations = check_result['missing_items'] + check_result.get('extra_items', [])
+        
+        waived = []
+        unwaived = []
+        unused_waivers = []
+        
+        # 对每个violation，检查是否匹配任一waive_item
+        for v in violations:
+            matched = False
+            for waive_pattern in waive_items:
+                # 三种匹配策略（Section 2.3.2）
+                if (waive_pattern == v['description'] or # Strategy 1: Exact
+                    fnmatch(v['description'], waive_pattern) or # Strategy 2: Wildcard
+                    (waive_pattern.startswith("regex:") and
+                     re.match(waive_pattern.removeprefix("regex:"), v['description']))): # Strategy 3: Regex
+                    
+                    waived.append({
+                        **v,
+                        'waiver_pattern': waive_pattern,
+                        'waiver_reason': f'Matched selective waiver: {waive_pattern}',
+                        'severity': 'INFO',
+                        'tag': '[WAIVER]'
+                    })
+                    matched = True
+                    break
+            
+            if not matched:
+                unwaived.append(v)
+        
+        # 检查unused waivers（Section 2.3.2 WR2）
+        for waive_pattern in waive_items:
+            if not any(matches(v, waive_pattern) for v in violations):
+                unused_waivers.append({
+                    'pattern': waive_pattern,
+                    'reason': 'No violations matched this pattern',
+                    'severity': 'WARN',
+                    'tag': '[WAIVER]'
+                })
+        
+        return {
+            'status': 'PASS' if not unwaived else 'FAIL',
+            'found_items': check_result['found_items'],
+            'missing_items': [v for v in unwaived if v in check_result['missing_items']],
+            'extra_items': [v for v in unwaived if v in check_result.get('extra_items', [])],
+            'waived': waived,
+            'unused_waivers': unused_waivers
+        }
+```
+
+**可实现性评估**：[OK] **高度可行**
+
+**理由**：
+1. **场景1极其简单**：Global waiver只需要"强制PASS + 清空violations + 添加标签"
+2. **场景2的算法已定义**：Section 2.3.2明确了三种匹配策略的实现方式
+3. **Keyword列表已提供**：Section 3列出了每个validation item的matching keywords
+4. **输出结构已规范**：global_rules Section 2.4.3定义了waived和unused_waivers的字段
+
+**关键要素**：
+- LLM不需要"理解"业务语义（为什么SPEF可豁免），只需要"匹配"keywords
+- LLM不需要"设计"匹配算法，只需要"实现"三种策略（exact/wildcard/regex）
+
+
+================================================================================
+5. 解决的核心问题总结
+================================================================================
+
+（接下一部分...）
+
+
+================================================================================
+配置驱动的Checker自动生成系统 - 技术分析报告（第3部分）
+================================================================================
+
+5. 解决的核心问题总结
+================================================================================
+
+5.1 问题1：LLM的"语义理解"vs"代码生成"分离
+----------------------------------------
+
+**传统困境**：
+让LLM直接生成checker代码需要理解：
+- EDA工具的版本格式（Genus vs Innovus vs PrimeTime）
+- SPEF标准（IEEE 1481-1999 vs 1481-2009）
+- STA log格式（不同工具的log格式差异巨大）
+- 业务规则（什么情况可以豁免SPEF检查）
+
+这些知识散落在各种文档中，无法一次性注入LLM的上下文窗口。
+
+**我们的解决方案（已验证）**：
+- **Context Agent做"语义压缩"**：
+  . 将global_rules (543行) + 领域知识库 -> 压缩成ItemSpec (538行)
+  . 只保留当前checker需要的知识
+  
+- **CodeGen Agent只看ItemSpec**：
+  . 不需要理解EDA领域知识
+  . 只需要"照着做"：
+    - Section 1说"提取tool_name" -> 生成`tool_name = extract_with_regex(...)`
+    - Section 4.1说"regex是`(?i)(generator|...)`" -> 直接复制regex
+    - Section 2.2说"completeness = 所有字段都存在" -> 生成`if all([field1, field2, ...])`
+
+**关键洞察**：
+ItemSpec是"可执行的语义规范"：
+- 不是文档（给人看的） - 虽然用Markdown写
+- 不是代码（给机器执行的） - 虽然包含regex
+- 是"给LLM看的代码生成指南" - 人类可读 + LLM可解析 + 足够抽象 + 足够具体
+
+**量化收益**：
+- 上下文压缩率：543行 -> 538行（看似没压缩，但信息密度大幅提升）
+- 信息针对性：100%相关（去除了其他checker的规则）
+- LLM理解难度：从"理解领域知识"降为"照着模板填空"
+
+----------------------------------------
+
+5.2 问题2：配置空间的"组合爆炸"vs"通用代码"
+----------------------------------------
+
+**配置空间**：
+- 4种Type（基于requirements.value和waivers.value的组合）
+- 2种waiver模式（Global vs Selective）
+- N种pattern组合
+- = 4 × 2 × N = 数十种配置组合
+
+**传统方案的困境**：
+- 方案A：为每种组合生成独立代码
+  . 结果：8份基础代码 × 300行 = 2400行需要维护
+  . 维护成本：任何框架改动需要同步修改8份代码
+  . 配置变化：从Type 1改为Type 3需要重新生成代码
+  
+- 方案B：生成完全通用的代码
+  . 结果：代码充满复杂的条件判断，难以维护
+  . LLM生成难度：需要理解所有Type的差异
+
+**我们的解决方案（已验证）**：
+从item.yaml的实际配置看：
+```yaml
+requirements.value: 1 # 暗示pattern check
+waivers.value: 0 # 暗示global waiver
+```
+
+这是Type 3 + Global Waiver模式，但生成的代码包含**完整的if-else分支**：
+
+```python
+def check_logic(parsed_data, requirements):
+    if requirements['value'] == 'N/A':
+        # 场景1：Boolean check（被Type 1/4调用时走这里）
+        return boolean_check(parsed_data)
+    else:
+        # 场景2：Pattern check（被Type 2/3调用时走这里，当前配置走这里）
+        return pattern_check(parsed_data, requirements['pattern_items'])
+```
+
+**核心优势**：
+1. **配置驱动**：即使当前是Type 3，代码也能应对未来改成Type 2/4
+2. **无需重新生成**：只需修改item.yaml，checker.py保持不变
+3. **代码简洁**：1份代码 × 400行，而非8份 × 300行
+
+**技术对比**：
+| 维度 | 传统方案 | 我们的方案 |
+|------|----------|-----------|
+| 代码量 | 8份 × 300行 = 2400行 | 1份 × 400行 = 400行 |
+| 维护成本 | 高（8份需要同步） | 低（只维护1份） |
+| 配置适应性 | 低（需要重新生成） | 高（修改yaml即可） |
+| LLM生成难度 | 高（需要区分Type） | 中（生成两个场景分支） |
+
+----------------------------------------
+
+5.3 问题3：框架代码vs业务逻辑的边界
+----------------------------------------
+
+**困境**：
+- 如果让LLM生成完整的checker（包括Type判定、输出格式化）
+  . 结果：容易生成不符合框架规范的代码
+  . 质量不可控
+  
+- 如果框架过于rigid（固定模板）
+  . 结果：LLM没有足够的表达空间实现复杂的业务逻辑
+  . 灵活性不足
+
+**我们的解决方案（三层架构）**：
+
+C层（顶层 - Jinja2骨架）：框架保证正确性
+  ├─ Type判定逻辑（fixed）
+  ├─ 输出格式化（fixed）
+  └─ 错误处理（fixed）
+
+B层（中间层 - Jinja2骨架）：编排逻辑
+  ├─ Type 1: parse() -> check() （fixed call sequence）
+  ├─ Type 2: parse() -> check() （fixed call sequence）
+  ├─ Type 3: parse() -> check() -> waiver() （fixed call sequence）
+  └─ Type 4: parse() -> check() -> waiver() （fixed call sequence）
+
+A层（底层 - LLM生成）：业务逻辑
+  ├─ parse_logic()：如何提取信息（variable）
+  ├─ check_logic()：如何验证（variable）
+  └─ waiver_logic()：如何豁免（variable）
+
+**关键洞察**：
+"固定的骨架 + 灵活的肉"
+- 框架提供安全边界（Type系统、接口契约、输出格式）
+- LLM在边界内自由发挥（具体的regex、判断逻辑、匹配算法）
+
+**实际证据**：
+从IMP-10-0-0-00案例看：
+- C/B层代码：约100行（Jinja2模板生成，所有checker共享）
+- A层代码：约300行（LLM针对该checker生成）
+- LLM不需要关心Type判定、输出格式，只需专注业务逻辑
+
+
+================================================================================
+6. 为什么这个问题难以解决
+================================================================================
+
+6.1 难点1：ItemSpec的"完备性"vs"简洁性"权衡
+----------------------------------------
+
+**挑战**：
+- 如果ItemSpec太简洁：
+  . 缺少细节 -> LLM生成的代码不正确
+  . 例如：只说"提取版本信息"，不提供regex -> LLM可能生成错误的pattern
+  
+- 如果ItemSpec太详细：
+  . 信息过载 -> LLM理解困难
+  . 例如：把global_rules的所有规则都复制一遍 -> 淹没了核心信息
+
+**实际案例的证据**：
+IMP-10-0-0-00的ItemSpec（538行）：
+- Section 1: 95行 - 定义了12个字段，但没有重复global_rules的metadata规范
+- Section 4.1: 70行 - 提供了5个regex，但没有解释regex原理
+- Section 2: 100行 - 列出了4个validation items，但没有解释Type系统
+- Section 3: 55行 - 列出了4个waivable scenarios，但没有解释waiver算法
+
+**这证明了什么**：
+Context Agent成功做到了"just-enough detail"：
+- 只提供生成代码需要的信息，不多不少
+- 假设LLM已经从global_rules学习了框架知识
+- ItemSpec只提供业务特异的知识（regex、validation items、keywords）
+
+**技术难度**：
+这需要Context Agent具有"全局一致性约束"：
+- 不能只生成各Section的局部最优解
+- 要保证跨Section的接口契约（例如Section 1定义的字段名，Section 2必须使用相同名字）
+
+----------------------------------------
+
+6.2 难点2：数据契约的"跨Round一致性"
+----------------------------------------
+
+**挑战**：
+Round 2的check_logic需要访问Round 1的parsing_logic返回的数据结构：
+```python
+netlist = item['parsed_fields']['netlist']
+if netlist['loaded'] and netlist['tool_name']: # 字段名必须匹配
+```
+
+如果Round 1生成：
+```python
+"parsed_fields": {"netlist": {"tool": "Genus"}} # 错误：tool而非tool_name
+```
+
+Round 2访问时会失败：
+```python
+netlist['tool_name'] # KeyError!
+```
+
+**ItemSpec的解决方案**：
+1. **预先定义schema**：
+   - Section 1（Lines 45-85）预先定义了parsed_fields的完整结构
+   - Section 2.4.1在global_rules中强制规定了metadata字段
+   
+2. **示例驱动**：
+   - Section 1提供了完整的parsed_fields示例（Lines 70-85）
+   - LLM可以直接"复制"这个结构
+
+**实际风险评估**：
+- **理论风险**：LLM可能不遵守schema，使用不同的字段名
+- **实际可控性**：可以通过schema validation检测
+  . 在Round 2之前，插入验证步骤
+  . 检查Round 1的输出是否符合Section 1的定义
+  . 如果不符合，触发Round 1重新生成
+
+**结论**：**不是真问题** - 可以通过中间验证步骤解决
+
+----------------------------------------
+
+6.3 难点3：Regex的"适应性"（新发现的风险）
+----------------------------------------
+
+**挑战**：
+ItemSpec Section 4.1提供的regex基于"常见EDA工具格式"的假设：
+```
+(?i)(generator|created by|tool):\s*(\w+)\s+(version\s+)?([0-9.]+)
+```
+
+这个regex假设版本信息格式是：
+```
+// Generator: Genus version 21.1
+```
+
+但如果遇到非标准格式：
+```
+// Tool=Genus, Ver=21.1, Date=2025-01-01
+```
+
+当前的regex会失败。
+
+**问题的本质**：
+Context Agent生成ItemSpec时，基于有限的样本推断格式
+但实际运行时可能遇到新的格式变体
+
+**潜在解决方案**：
+1. **方案A：多候选regex**
+   - ItemSpec Section 4.1提供多个regex候选
+   - parsing_logic依次尝试，直到匹配成功
+   
+2. **方案B：Adaptive pattern matching**
+   - parsing_logic包含fallback策略
+   - 主regex失败后，尝试更宽松的pattern
+   
+3. **方案C：Online learning**
+   - 记录失败的格式案例
+   - 定期更新ItemSpec的regex库
+
+**结论**：[!] **中风险，但可控**
+- 不是真问题 - 可以通过扩展ItemSpec解决
+- 需要机制支持 - ItemSpec需要支持"fallback patterns"
+
+
+================================================================================
+7. 创新性评估（基于实际案例）
+================================================================================
+
+7.1 评分体系
+----------------------------------------
+
+| 创新点 | 评分 | 业界对比 | 技术意义 |
+|--------|------|----------|----------|
+| ItemSpec作为IR | ***** | 业界罕见 | 前后端解耦，独立优化 |
+| Type系统去具象化 | **** | 反直觉设计 | 降低LLM理解难度 |
+| 配置驱动通用性 | **** | 有类似尝试 | 解决组合爆炸问题 |
+| CoT状态传递 | *** | 改进已有方法 | 保证数据一致性 |
+| 三层架构分离 | *** | 传统软件工程 | LLM时代的应用 |
+
+**综合创新性**：**** (4.2/5)
+
+----------------------------------------
+
+7.2 对比业界方案
+----------------------------------------
+
+**方案A：GitHub Copilot + 手工调整**
+- 优点：快速原型
+- 缺点：需要大量手工调整，无法保证框架一致性
+- 效率：3-5天 -> 2-3天
+
+**方案B：DSL + Code Generator**
+- 优点：严格的类型安全
+- 缺点：DSL学习成本高，表达能力有限
+- 效率：编写DSL + 维护生成器 = 高前期成本
+
+**我们的方案：Context Agent + CodeGen Agent**
+- 优点：
+  . 无需学习DSL（直接用YAML配置）
+  . 框架保证一致性（C/B层骨架）
+  . 配置驱动的灵活性（A层业务逻辑）
+- 缺点：
+  . 需要维护ItemSpec质量（Context Agent的责任）
+- 效率：3-5天 -> 数小时（预期）
+
+----------------------------------------
+
+7.3 可复制性评估
+----------------------------------------
+
+**当前方案是否可复制到其他场景？**
+
+[OK] **适合的场景**：
+1. **API Wrapper生成**：
+   - Context Agent：分析API文档 -> 生成APISpec
+   - CodeGen Agent：基于APISpec -> 生成wrapper代码
+   
+2. **Data Pipeline生成**：
+   - Context Agent：分析数据schema -> 生成PipelineSpec
+   - CodeGen Agent：基于PipelineSpec -> 生成ETL代码
+   
+3. **Test Case生成**：
+   - Context Agent：分析功能需求 -> 生成TestSpec
+   - CodeGen Agent：基于TestSpec -> 生成test代码
+
+[X] **不适合的场景**：
+1. **需要复杂算法设计的代码**（如优化算法、机器学习模型）
+2. **高度交互的UI代码**（状态管理复杂）
+3. **实时系统代码**（性能要求极高）
+
+**关键判断标准**：
+能否将业务逻辑"压缩"成结构化的规范文档（类似ItemSpec）？
+- 如果可以 -> 适合我们的方案
+- 如果不可以 -> 可能不适合
+
+
+================================================================================
+8. 真正无法解决的问题（重新评估）
+================================================================================
+
+8.1 问题1：复杂业务逻辑的"分段割裂"
+----------------------------------------
+
+**之前的担忧**：
+某些checker的parsing和check高度耦合，强行分段可能不自然
+
+**实际案例的反驳**：
+IMP-10-0-0-00的逻辑：
+1. parsing_logic: 从STA log提取file paths -> 打开files -> 提取version info
+2. check_logic: 检查version fields是否complete -> pattern matching
+
+这两个步骤完全解耦 - parsing只管提取，不管validation
+
+**结论**：[OK] **已解决（对于信息提取->验证类checker）**
+- 至少对于"信息提取->信息验证"类的checker，三段式架构是自然的
+- 除非遇到"streaming processing"或"online algorithm"类的checker
+- 风险等级：[!] 低风险
+
+----------------------------------------
+
+8.2 问题2：Regex的"适应性"
+----------------------------------------
+
+**新发现的挑战**：
+ItemSpec提供的regex基于常见格式假设，可能无法覆盖所有变体
+
+**评估**：[!][!] **中风险，但可控**
+- 解决方案：ItemSpec支持多候选regex + fallback策略
+- 需要机制支持，但不是根本性障碍
+
+----------------------------------------
+
+8.3 问题3：NONE - 没有发现真正无法解决的问题
+----------------------------------------
+
+**结论**：
+基于实际案例推导，我**没有发现**无法通过架构或prompt优化解决的根本性问题
+
+**最大的风险是"ItemSpec质量"**：
+- 如果Context Agent生成的ItemSpec不完备或不一致
+- CodeGen会生成错误代码
+- **但这是Context Agent的质量问题，不是架构问题**
+
+**验证策略**：
+- 用Golden案例库（50+个checker）统计Context Agent的成功率
+- 分析失败案例的共性
+- 迭代优化Context Agent的prompt和算法
+
+
+================================================================================
+9. 最终评估
+================================================================================
+
+9.1 技术成熟度
+----------------------------------------
+
+| 维度 | 评分 | 说明 |
+|------|------|------|
+| 核心架构 | **** | 已验证可行（基于实际案例） |
+| ItemSpec作为IR | ***** | 已有完整案例（IMP-10-0-0-00） |
+| 功能单元可生成性 | **** | 理论上可行，实际验证pending |
+| 配置驱动通用性 | ****½ | 设计已验证，实际测试pending |
+
+**综合成熟度**：****¼ (4.25/5)
+
+----------------------------------------
+
+9.2 创新性
+----------------------------------------
+
+**核心创新**：***** (5/5)
+- ItemSpec作为"可执行语义规范"：业界罕见
+- Type系统的去具象化：反直觉但正确
+- 配置驱动的代码通用性：解决了组合爆炸问题
+
+**最值得肯定的设计决策**：
+不让LLM理解Type系统 - 这是反直觉但正确的选择
+- 人类需要Type来组织思维
+- 但代码不需要 - 代码只需要响应配置
+
+----------------------------------------
+
+9.3 商业价值
+----------------------------------------
+
+**如果成功**：***** (5/5)
+- 可以将checker开发时间从数天降至数小时
+- 减少人为错误，提升代码质量
+- 知识复用，降低维护成本
+
+**如果可复制**：***** (5/5)
+- 可以应用到其他代码生成场景
+- API wrapper, data pipeline, test case generation等
+
+**风险因素**：
+- ItemSpec质量依赖Context Agent
+- 需要Golden案例库来验证覆盖度
+- LLM的实际生成质量需要实测
+
+----------------------------------------
+
+9.4 最大的未知数
+----------------------------------------
+
+**CodeGen Agent的实际生成质量**：
+- 理论上可行（基于ItemSpec推导）
+- 但LLM是否真的能按照ItemSpec生成正确的Python代码？
+- 需要实际验证
+
+**建议的验证策略**：
+1. 用IMP-10-0-0-00的ItemSpec作为测试用例
+2. 手工模拟CodeGen的3轮generation
+3. 对比生成的代码与预期的逻辑
+4. 统计"首次生成正确率"和"修复迭代次数"
+
+**成功标准**：
+- 首次生成正确率 > 70%
+- 平均修复迭代次数 < 2次
+- 总开发时间 < 传统方式的20%
+
+----------------------------------------
+
+9.5 Reviewer评价
+----------------------------------------
+
+如果我是技术评审专家，我会给这个设计：
+
+**评级**：**Approve with Minor Concerns** [OK]
+
+**理由**：
+- [OK] 核心思路扎实，创新性强
+- [OK] 基于实际案例验证了可行性
+- [OK] 识别了主要风险并提供缓解方案
+- [!] 但需要在实际落地中验证边界条件
+
+**建议**：
+1. 优先完成CodeGen Agent的原型实现
+2. 用IMP-10-0-0-00案例进行端到端测试
+3. 扩展到5-10个不同类型的checker验证通用性
+4. 记录失败案例，迭代优化ItemSpec规范
+
+
+================================================================================
+10. 附录：技术术语表
+================================================================================
+
+**ItemSpec**：
+由Context Agent生成的"可执行语义规范"文档（Markdown格式）
+作为Context Agent和CodeGen Agent之间的接口契约
+
+**Type系统**：
+基于requirements.value和waivers.value的4种checker分类：
+- Type 1: Boolean check, no waiver
+- Type 2: Pattern check, no waiver
+- Type 3: Pattern check, with waiver
+- Type 4: Boolean check, with waiver
+
+**三层架构**：
+- C层（顶层）：Type判定 + 输出格式化（Jinja2骨架）
+- B层（中间层）：Type模块的编排逻辑（Jinja2骨架）
+- A层（底层）：具体的业务逻辑（LLM生成）
+
+**CoT（Chain of Thought）**：
+分段生成策略，将复杂任务拆解为多个小步骤
+- Round 1: 生成parsing_logic
+- Round 2: 生成check_logic
+- Round 3: 生成waiver_logic
+
+**IR（Intermediate Representation）**：
+编译原理中的"中间表示"，连接前端和后端
+在本项目中，ItemSpec扮演IR的角色
+
+**配置驱动**：
+代码的行为由运行时配置（item.yaml）决定，而非编译时硬编码
+同一份代码可以适应多种配置组合
+
+
+================================================================================
+报告结束
+================================================================================
+审查日期: 2026-01-10
+下一步行动: CodeGen Agent原型实现 + IMP-10-0-0-00端到端测试
+预期完成时间: 2周内

@@ -1,0 +1,3 @@
+FAIL:MIG-IMP-10-1-0-02:Confirm have provided DCD analysis team the DCD path to set DCD analysis environment in stable stage and provide final DCD paths 2 weeks before final delivery.
+Fail Occurrence: 1
+1: Fail: input_files is empty in YAML configuration

@@ -1,0 +1,83 @@
+Test Report: IMP-2-0-0-05
+================================================================================
+
+[Test 1/6] Type 1 (requirements.value=N/A, waivers.value=N/A)
+--------------------------------------------------------------------------------
+Test ID: type1_na
+Status: PASS
+
+Checker Report Output:
+PASS:IMP-2-0-0-05:Confirm ANT rule deck was not modified? If it was, explain in comments field.
+Info Occurrence: 1
+1: Info: PLN5LO_16M_1X1Xb1Xe1Ya1Yb6Y2Yy2R_014_ANT.13_1a.encrypt. In line 24, C:\Users\chenweif\Checker_dev\CHECKLIST\CHECKLIST\IP_project_folder\ruledeck\2.0\PLN5LO_16M_1X1Xb1Xe1Ya1Yb6Y2Yy2R_014_ANT.13_1a.encrypt: Rule deck path successfully extracted from ANT_pvl.log
+
+================================================================================
+
+[Test 2/6] Type 1 (requirements.value=N/A, waivers.value=0)
+--------------------------------------------------------------------------------
+Test ID: type1_0
+Status: PASS
+
+Checker Report Output:
+PASS:IMP-2-0-0-05:Confirm ANT rule deck was not modified? If it was, explain in comments field.
+Info Occurrence: 2
+1: Info: Explanation: ANT rule deck modification check is informational only for this project phase: Explanation: ANT rule deck modification check is informational only for this project phase[WAIVED_INFO]
+2: Info: PLN5LO_16M_1X1Xb1Xe1Ya1Yb6Y2Yy2R_014_ANT.13_1a.encrypt. In line 24, C:\Users\chenweif\Checker_dev\CHECKLIST\CHECKLIST\IP_project_folder\ruledeck\2.0\PLN5LO_16M_1X1Xb1Xe1Ya1Yb6Y2Yy2R_014_ANT.13_1a.encrypt: Rule deck path successfully extracted from ANT_pvl.log
+
+================================================================================
+
+[Test 3/6] Type 2 (requirements.value>0, waivers.value=N/A)
+--------------------------------------------------------------------------------
+Test ID: type2_na
+Status: ERROR
+
+Checker Report Output:
+FAIL:IMP-2-0-0-05:Confirm ANT rule deck was not modified? If it was, explain in comments field.
+Fail Occurrence: 1
+1: Fail: IMP-2-0-0-05_diff_20260121_145608.txt: Rule deck content differs from golden reference - see diff file for details - see diff file: C:\Users\chenweif\Checker_dev\CHECKLIST\CHECKLIST\Check_modules\2.0_TECHFILE_AND_RULE_DECK_CHECK\reports\IMP-2-0-0-05_diff.txt
+
+================================================================================
+
+[Test 4/6] Type 2 (requirements.value>0, waivers.value=0)
+--------------------------------------------------------------------------------
+Test ID: type2_0
+Status: PASS
+
+Checker Report Output:
+PASS:IMP-2-0-0-05:Confirm ANT rule deck was not modified? If it was, explain in comments field.
+Info Occurrence: 2
+1: Info: Explanation: Rule deck modifications are acceptable during development phase: Explanation: Rule deck modifications are acceptable during development phase[WAIVED_INFO]
+2: Info: IMP-2-0-0-05_diff_20260121_145608.txt: Rule deck content differs from golden reference - see diff file for details - see diff file: C:\Users\chenweif\Checker_dev\CHECKLIST\CHECKLIST\Check_modules\2.0_TECHFILE_AND_RULE_DECK_CHECK\reports\IMP-2-0-0-05_diff.txt[WAIVED_AS_INFO]
+
+================================================================================
+
+[Test 5/6] Type 3
+--------------------------------------------------------------------------------
+Test ID: type3
+Status: ERROR
+
+Checker Report Output:
+FAIL:IMP-2-0-0-05:Confirm ANT rule deck was not modified? If it was, explain in comments field.
+Fail Occurrence: 1
+1: Fail: IMP-2-0-0-05_diff_20260121_145609.txt: Rule deck content differs from golden reference - see diff file for details - see diff file: C:\Users\chenweif\Checker_dev\CHECKLIST\CHECKLIST\Check_modules\2.0_TECHFILE_AND_RULE_DECK_CHECK\reports\IMP-2-0-0-05_diff_20260121_145609.txt
+Warn Occurrence: 2
+1: Warn: PLN5LO_16M_054_PATCH_ANT.13_1a.encrypt: Waiver entry not matched - specified rule deck not found or not modified: Waived - patch file with approved customizations for metal stack optimization[WAIVER]
+2: Warn: PLN5LO_16M_1X1Xb1Xe1Ya1Yb6Y2Yy2R_014_ANT.13_1a.encrypt: Waiver entry not matched - specified rule deck not found or not modified: Approved modification for project-specific antenna rules per design review DR-2024-001[WAIVER]
+
+================================================================================
+
+[Test 6/6] Type 4
+--------------------------------------------------------------------------------
+Test ID: type4
+Status: PASS
+
+Checker Report Output:
+PASS:IMP-2-0-0-05:Confirm ANT rule deck was not modified? If it was, explain in comments field.
+Warn Occurrence: 2
+1: Warn: PLN5LO_16M_054_PATCH_ANT.13_1a.encrypt: Waiver entry not matched - specified rule deck not found or not modified: Waived - patch file with approved customizations for metal stack optimization[WAIVER]
+2: Warn: PLN5LO_16M_1X1Xb1Xe1Ya1Yb6Y2Yy2R_014_ANT.13_1a.encrypt: Waiver entry not matched - specified rule deck not found or not modified: Approved modification for project-specific antenna rules per design review DR-2024-001[WAIVER]
+Info Occurrence: 1
+1: Info: PLN5LO_16M_1X1Xb1Xe1Ya1Yb6Y2Yy2R_014_ANT.13_1a.encrypt. In line 24, C:\Users\chenweif\Checker_dev\CHECKLIST\CHECKLIST\IP_project_folder\ruledeck\2.0\PLN5LO_16M_1X1Xb1Xe1Ya1Yb6Y2Yy2R_014_ANT.13_1a.encrypt: Rule deck path successfully extracted from ANT_pvl.log
+
+================================================================================
+

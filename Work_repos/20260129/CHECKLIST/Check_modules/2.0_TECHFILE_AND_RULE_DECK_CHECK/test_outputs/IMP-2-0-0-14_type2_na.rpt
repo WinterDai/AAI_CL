@@ -1,0 +1,3 @@
+PASS:IMP-2-0-0-14:List EM irxc rule deck name. eg: ICT_EM_v1d0p1a/cln3p_1p17m+ut-alrdl_1xa1xb1xc1xd1ya1yb4y2yy2yx2r_shdmim.ictem
+Info Occurrence: 1
+1: Info: ictem_v1d2p1a/cln5_1p16m+ut-alrdl_1x1xb1xe1ya1yb6y2yy2r_shdmim.ictem. In line 4725, C:\Users\chenweif\Checker_dev\CHECKLIST\CHECKLIST\IP_project_folder\logs\2.0\func_func_ssgnp_0p675v_125c_cworst_CCworst_T_cworst_CCworst_hold_static.log: EM rule deck identifier matched expected golden value and validated

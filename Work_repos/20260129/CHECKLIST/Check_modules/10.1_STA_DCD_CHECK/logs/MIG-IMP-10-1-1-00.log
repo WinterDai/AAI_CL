@@ -1,0 +1,5 @@
+FAIL:MIG-IMP-10-1-1-00:[DCD check] Confirm the spice used for DCD run is lpe based spice netlist with RC information. Otherwise the DCD results are not accurate. (Check the Notes)
+MIG-IMP-10-1-1-00-ERROR01: Configuration error:
+  Severity: Fail Occurrence: 1
+  - input_files is empty in YAML configuration
+

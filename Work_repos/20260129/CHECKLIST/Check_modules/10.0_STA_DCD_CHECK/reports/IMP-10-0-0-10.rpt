@@ -1,0 +1,9 @@
+FAIL:IMP-10-0-0-10:Confirm check full path group timing reports (in2out/in2reg/reg2out/reg2reg/default/cgdefault).
+Fail Occurrence: 4
+1: Fail: in2out: Path group timing reports NOT found in log (not waived)
+2: Fail: in2reg: Path group timing reports NOT found in log (not waived)
+3: Fail: reg2out: Path group timing reports NOT found in log (not waived)
+4: Fail: reg2reg: Path group timing reports NOT found in log (not waived)
+Info Occurrence: 2
+1: Info: cgdefault: Path group timing reports NOT found in log: Design has no clock gating cells - cgdefault not applicable[WAIVER]
+2: Info: default: Path group timing reports NOT found in log: Default path group not used in this design[WAIVER]

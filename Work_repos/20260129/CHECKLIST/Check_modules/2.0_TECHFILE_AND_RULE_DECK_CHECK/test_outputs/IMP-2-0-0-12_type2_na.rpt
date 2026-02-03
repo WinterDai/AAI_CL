@@ -1,0 +1,3 @@
+PASS:IMP-2-0-0-12:List COD dummy rule deck name (fill N/A if no COD). eg: PLN16FFP_FINcut_AutoGen.11b.encrypt
+Info Occurrence: 1
+1: Info: PLN12FFC_FINcut_AutoGen.09_1a.COD. In line 22, C:\Users\chenweif\Checker_dev\CHECKLIST\CHECKLIST\IP_project_folder\logs\2.0\COD_pvl.log: COD rule deck filename matched expected golden value

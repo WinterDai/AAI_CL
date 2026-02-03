@@ -1,0 +1,4 @@
+PASS:IMP-10-0-0-08:Confirm set the correct clock transition and data transition?
+Info Occurrence: 2
+1: Info: IO_ASYNC_CLOCK. In line 12, C:\Users\yuyin\OneDrive - Cadence Design Systems Inc\2025\Checklist\AAI\CHECKLIST_V3\CHECKLIST\IP_project_folder\reports\constr.rpt: Missing data_path[WAIVER]
+2: Info: PHASE_ALIGN_CLOCK. In line 9, C:\Users\yuyin\OneDrive - Cadence Design Systems Inc\2025\Checklist\AAI\CHECKLIST_V3\CHECKLIST\IP_project_folder\reports\constr.rpt: Transition settings found (clock_path=0.0833333, data_path=0.166667)

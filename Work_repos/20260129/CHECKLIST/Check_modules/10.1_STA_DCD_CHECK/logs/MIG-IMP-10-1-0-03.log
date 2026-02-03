@@ -1,0 +1,5 @@
+FAIL:MIG-IMP-10-1-0-03:Confirm the library version is correct. STA signoff environment may not use the correct library paths. Please do local update when needed.
+MIG-IMP-10-1-0-03-ERROR01: Configuration error:
+  Severity: Fail Occurrence: 1
+  - input_files is empty in YAML configuration
+

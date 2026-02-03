@@ -1,0 +1,3 @@
+FAIL:MIG-IMP-8-1-0-12:Confirm there is no buffers/inverters inserted on the VDDR_OBS/VDDR_1UI_OBS/VDDR_6UI_OBS/ATB0_REG_OBS/ATB1_REG_OBS nets from regulator to feedback IO. And make sure the net resistance less than 500ohms. For 1UI+6UI case, if the 1UI or 6UI connected to two FBIOs, make sure the path from the regulator to the near FBIO resistance less than 500ohms. For regulator to the far FBIO path, the resistance can be relaxed. Check with AMS team if you have further questions.
+Fail Occurrence: 1
+1: Fail: input_files is empty in YAML configuration

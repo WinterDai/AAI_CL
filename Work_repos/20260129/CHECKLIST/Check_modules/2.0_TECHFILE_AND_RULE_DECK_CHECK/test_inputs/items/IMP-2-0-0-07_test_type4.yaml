@@ -1,0 +1,14 @@
+description: Confirm LVS rule deck was not modified? If it was, explain in comments
+  field.
+input_files:
+- ${CHECKLIST_ROOT}\IP_project_folder\logs\2.0\LVS_pvl.log
+requirements:
+  pattern_items: []
+  value: N/A
+waivers:
+  value: 2
+  waive_items:
+  - name: DFM_LVS_RC_PEGASUS_N5_1p16M_1X1Xb1Xe1Ya1Yb6Y2Yy2R_ALRDL.1.2b
+    reason: Modification of this rule deck is acceptable for this project
+  - name: DFM_LVS_RC_PEGASUS_N5_1p16M_1X1Xb1Xe1Ya1Yb6Y2Yy2R_ALRDL.1.2a
+    reason: Legacy rule deck version approved for backward compatibility testing

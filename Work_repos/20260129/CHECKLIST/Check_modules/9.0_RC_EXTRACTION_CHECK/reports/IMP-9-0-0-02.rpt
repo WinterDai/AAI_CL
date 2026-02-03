@@ -1,0 +1,19 @@
+FAIL:IMP-9-0-0-02:Confirm SPEF extraction includes NDR rule lef file.
+Fail Occurrence: 3
+1: Fail: /projects/yunbao_N6_80bits_EW_PHY_OD_6400/libs/ndr/ndr_10w10s.lef (v5.6. vs tech v5.8): NDR LEF file not found in extraction log
+2: Fail: /projects/yunbao_N6_80bits_EW_PHY_OD_6400/libs/ndr/ndr_2w2s.lef (v5.6. vs tech v5.8): NDR LEF file not found in extraction log
+3: Fail: /projects/yunbao_N6_80bits_EW_PHY_OD_6400/libs/ndr/ndr_2w3s_em.lef (v5.6. vs tech v5.8): NDR LEF file not found in extraction log
+Warn Occurrence: 2
+1: Warn: /projects/yunbao_N6_80bits_EW_PHY_OD_6400/libs/ndr/ndr_1w2s.lef: Waiver defined but no violation matched: Waived - NDR LEF v5.6 approved for this design despite tech LEF v5.8[WAIVER]
+2: Warn: /projects/yunbao_N6_80bits_EW_PHY_OD_6400/libs/ndr/ndr_2w3s.lef: Waiver defined but no violation matched: Waived - legacy NDR file used per design team agreement[WAIVER]
+Info Occurrence: 10
+1: Info: /projects/yunbao_N6_80bits_EW_PHY_OD_6400/libs/ndr/ndr_1w2s.lef (v5.6. vs tech v5.8): NDR LEF warning waived per design approval[WAIVER]
+2: Info: /projects/yunbao_N6_80bits_EW_PHY_OD_6400/libs/ndr/ndr_2w3s.lef (v5.6. vs tech v5.8): NDR LEF warning waived per design approval[WAIVER]
+3: Info: /projects/yunbao_N6_80bits_EW_PHY_OD_6400/libs/ndr/ndr_10w10s.lef. In line 67, C:\Users\yuyin\OneDrive - Cadence Design Systems Inc\2025\Checklist\AAI\CHECKLIST_V3\CHECKLIST\IP_project_folder\logs\9.0\do_qrccworst_CCworst_m40c.log: NDR LEF file loaded successfully
+4: Info: /projects/yunbao_N6_80bits_EW_PHY_OD_6400/libs/ndr/ndr_1w2s.lef. In line 46, C:\Users\yuyin\OneDrive - Cadence Design Systems Inc\2025\Checklist\AAI\CHECKLIST_V3\CHECKLIST\IP_project_folder\logs\9.0\do_qrccworst_CCworst_m40c.log: NDR LEF file loaded successfully
+5: Info: /projects/yunbao_N6_80bits_EW_PHY_OD_6400/libs/ndr/ndr_1w2s_M4.lef. In line 69, C:\Users\yuyin\OneDrive - Cadence Design Systems Inc\2025\Checklist\AAI\CHECKLIST_V3\CHECKLIST\IP_project_folder\logs\9.0\do_qrccworst_CCworst_m40c.log: NDR LEF file loaded successfully
+6: Info: /projects/yunbao_N6_80bits_EW_PHY_OD_6400/libs/ndr/ndr_2w1s.lef. In line 48, C:\Users\yuyin\OneDrive - Cadence Design Systems Inc\2025\Checklist\AAI\CHECKLIST_V3\CHECKLIST\IP_project_folder\logs\9.0\do_qrccworst_CCworst_m40c.log: NDR LEF file loaded successfully
+7: Info: /projects/yunbao_N6_80bits_EW_PHY_OD_6400/libs/ndr/ndr_2w2s.lef. In line 57, C:\Users\yuyin\OneDrive - Cadence Design Systems Inc\2025\Checklist\AAI\CHECKLIST_V3\CHECKLIST\IP_project_folder\logs\9.0\do_qrccworst_CCworst_m40c.log: NDR LEF file loaded successfully
+8: Info: /projects/yunbao_N6_80bits_EW_PHY_OD_6400/libs/ndr/ndr_2w2s_M4.lef. In line 77, C:\Users\yuyin\OneDrive - Cadence Design Systems Inc\2025\Checklist\AAI\CHECKLIST_V3\CHECKLIST\IP_project_folder\logs\9.0\do_qrccworst_CCworst_m40c.log: NDR LEF file loaded successfully
+9: Info: /projects/yunbao_N6_80bits_EW_PHY_OD_6400/libs/ndr/ndr_2w2s_em.lef. In line 55, C:\Users\yuyin\OneDrive - Cadence Design Systems Inc\2025\Checklist\AAI\CHECKLIST_V3\CHECKLIST\IP_project_folder\logs\9.0\do_qrccworst_CCworst_m40c.log: NDR LEF file loaded successfully
+10: Info: /projects/yunbao_N6_80bits_EW_PHY_OD_6400/libs/ndr/ndr_2w3s.lef. In line 59, C:\Users\yuyin\OneDrive - Cadence Design Systems Inc\2025\Checklist\AAI\CHECKLIST_V3\CHECKLIST\IP_project_folder\logs\9.0\do_qrccworst_CCworst_m40c.log: NDR LEF file loaded successfully

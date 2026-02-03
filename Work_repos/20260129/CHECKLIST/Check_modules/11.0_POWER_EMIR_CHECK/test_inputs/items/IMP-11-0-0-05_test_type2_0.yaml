@@ -1,0 +1,13 @@
+description: Confirm generate all the power library with detail view correctly.
+input_files:
+- ${CHECKLIST_ROOT}/IP_project_folder/logs/*LibGen.log
+requirements:
+  pattern_items:
+  - ffgnp_0p825v_125c_cbest_CCbest_T
+  - ssgnp_0p675v_m40c_cworst_CCworst_T
+  - ffgnp_0p825v_m40c_cbest_CCbest_T
+  value: 3
+waivers:
+  value: 0
+  waive_items:
+  - 'Informational check: GDS file paths printed for user verification'

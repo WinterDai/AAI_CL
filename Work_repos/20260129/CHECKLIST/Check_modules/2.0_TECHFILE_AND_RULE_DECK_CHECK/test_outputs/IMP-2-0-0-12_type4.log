@@ -1,0 +1,9 @@
+PASS:IMP-2-0-0-12:List COD dummy rule deck name (fill N/A if no COD). eg: PLN16FFP_FINcut_AutoGen.11b.encrypt
+IMP-2-0-0-12-WARN01: Unused waivers:
+  Severity: Warn Occurrence: 2
+  - PLN12FFC_FINcut_AutoGen.09_1a.COD
+  - PLN16FFP_FINcut_AutoGen.10a.COD
+IMP-2-0-0-12-INFO01: COD rule deck found in PVL log file:
+  Severity: Info Occurrence: 1
+  - PLN12FFC_FINcut_AutoGen.09_1a.COD
+

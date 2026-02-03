@@ -1,0 +1,3 @@
+FAIL:MIG-IMP-8-1-1-10:Confirm the IO order and IO orientation are same as that in the IO order excel table which was reviewed by AMS team or specified by Customer (Like Renesas FIRM PHY project). If you changed the IO order or IO orientation due to DRC or design closure, please make sure review and confirm that with AMS or customer again.
+Fail Occurrence: 1
+1: Fail: input_files is empty in YAML configuration

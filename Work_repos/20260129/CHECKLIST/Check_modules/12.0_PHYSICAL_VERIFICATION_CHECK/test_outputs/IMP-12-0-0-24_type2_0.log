@@ -1,0 +1,8 @@
+PASS:IMP-12-0-0-24:Confirm add the chipBoundary layer to check boundary DRC for test chip.
+IMP-12-0-0-24-INFO01: [WAIVED_INFO]: Waived information:
+  Severity: Info Occurrence: 1
+  - Explanation: Chip_Boundary layer check is informational during pre-layout phase
+IMP-12-0-0-24-INFO02: [WAIVED_AS_INFO]: Expected Chip_Boundary layer not satisfied (0/1 missing):
+  Severity: Info Occurrence: 1
+  - Chip_Boundary
+

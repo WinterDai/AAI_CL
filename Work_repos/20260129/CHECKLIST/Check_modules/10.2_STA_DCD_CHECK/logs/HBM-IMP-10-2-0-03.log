@@ -1,0 +1,5 @@
+FAIL:HBM-IMP-10-2-0-03:Were appropriate lifetime deratings defined for use in STA/HSTA analysis? (frequency or uncertainty deratings) describe in Comments section
+HBM-IMP-10-2-0-03-ERROR01: Configuration error:
+  Severity: Fail Occurrence: 1
+  - input_files is empty in YAML configuration
+

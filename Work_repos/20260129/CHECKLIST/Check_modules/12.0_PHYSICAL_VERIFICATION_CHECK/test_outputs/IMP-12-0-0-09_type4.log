@@ -1,0 +1,6 @@
+PASS:IMP-12-0-0-09:Confirm the LVS rule deck setting is correct.
+IMP-12-0-0-09-WARN01: Unused waivers:
+  Severity: Warn Occurrence: 2
+  - GATE_TO_PG_CHECK
+  - RC_DFM_RULE
+

@@ -1,0 +1,19 @@
+description: Confirm the DRC rule deck setting is correct. Make sure the switch settings
+  match with Foundry CTA (/local/method/CTAF/<process>/production in chamber). Please
+  add justification in Comment if you changed some switching setting in CTA.
+input_files:
+- ${CHECKLIST_ROOT}/IP_project_folder/logs/do_pvs_DRC_pvl.log
+- ${CHECKLIST_ROOT}/IP_project_folder/logs/do_cmd_3star_DRC_sourceme
+requirements:
+  pattern_items:
+  - pattern1
+  value: 1
+waivers:
+  value: 2
+  waive_items:
+  - name: FULL_CHIP
+    reason: Waived - IP-level design does not require full chip mode per design team
+      approval
+  - name: DEBUG_VOLTAGE_RULE
+    reason: Waived - voltage debugging disabled for production release per foundry
+      recommendation

@@ -1,0 +1,45 @@
+PASS:IMP-8-0-0-15:Confirm clock tree VT requirements were met.
+IMP-8-0-0-15-INFO01: Clock tree cells with compliant VT types found:
+  Severity: Info Occurrence: 41
+  - cdn_hs_phy/inst_adrctl_slice_core/inst_acm_slice_num_0/inst_acs_ctrl_top/inst_acs_dcc/CDN_1ACH_LP_CLKG_RC_CG_HIER_INST0/RC_CGIC_INST : CKLNQD4BWP300H8P64PDULVT
+  - cdn_hs_phy/inst_adrctl_slice_core/inst_acm_slice_num_0/inst_acs_ctrl_top/inst_acs_dcc/CDN_1ACH_LP_CLKG_RC_CG_HIER_INST1/RC_CGIC_INST : CKLNQD4BWP300H8P64PDULVT
+  - cdn_hs_phy/inst_adrctl_slice_core/inst_acm_slice_num_0/inst_acs_ctrl_top/inst_acs_dcc/CDN_1ACH_LP_CLKG_RC_CG_HIER_INST2/RC_CGIC_INST : CKLNQD4BWP300H8P64PDULVT
+  - cdn_hs_phy/inst_adrctl_slice_core/inst_acm_slice_num_0/inst_acs_ctrl_top/inst_acs_dcc/CDN_1ACH_LP_CLKG_RC_CG_HIER_INST3/RC_CGIC_INST : CKLNQD4BWP300H8P64PDULVT
+  - cdn_hs_phy/inst_adrctl_slice_core/inst_acm_slice_num_0/inst_acs_ctrl_top/inst_acs_dcc/CDN_1ACH_LP_CLKG_RC_CG_HIER_INST4/RC_CGIC_INST : CKLNQD4BWP300H8P64PDULVT
+  - cdn_hs_phy/inst_adrctl_slice_core/inst_acm_slice_num_0/inst_acs_ctrl_top/inst_acs_dcc/CDN_1ACH_LP_CLKG_RC_CG_HIER_INST5/RC_CGIC_INST : CKLNQD4BWP300H8P64PDULVT
+  - cdn_hs_phy/inst_adrctl_slice_core/inst_acm_slice_num_0/inst_acs_ctrl_top/inst_acs_dcc/CDN_1ACH_LP_CLKG_RC_CG_HIER_INST6/RC_CGIC_INST : CKLNQD4BWP300H8P64PDULVT
+  - cdn_hs_phy/inst_adrctl_slice_core/inst_acm_slice_num_0/inst_acs_ctrl_top/inst_acs_dcc/CDN_1ACH_LP_CLKG_RC_CG_HIER_INST7/RC_CGIC_INST : CKLNQD4BWP300H8P64PDULVT
+  - cdn_hs_phy/inst_adrctl_slice_core/inst_acm_slice_num_0/inst_acs_ctrl_top/inst_acs_dcc/CDN_1ACH_LP_CLKG_RC_CG_HIER_INST8/RC_CGIC_INST : CKLNQD4BWP300H8P64PDULVT
+  - cdn_hs_phy/inst_adrctl_slice_core/inst_acm_slice_num_0/inst_acs_ctrl_top/inst_acs_dcc/CTS_cci_inv_00277 : DCCKND8BWP300H8P64PDULVT
+  - cdn_hs_phy/inst_adrctl_slice_core/inst_acm_slice_num_0/inst_acs_ctrl_top/inst_acs_dcc/CTS_ccl_a_inv_00116 : DCCKND8BWP300H8P64PDULVT
+  - cdn_hs_phy/inst_adrctl_slice_core/inst_acm_slice_num_0/inst_acs_ctrl_top/inst_acs_dcc/CTS_ccl_a_inv_00117 : DCCKND8BWP300H8P64PDULVT
+  - cdn_hs_phy/inst_adrctl_slice_core/inst_acm_slice_num_0/inst_acs_ctrl_top/inst_acs_dcc/CTS_ccl_a_inv_00118 : DCCKND8BWP300H8P64PDULVT
+  - cdn_hs_phy/inst_adrctl_slice_core/inst_acm_slice_num_0/inst_acs_ctrl_top/inst_acs_dcc/CTS_ccl_a_inv_00119 : DCCKND8BWP300H8P64PDULVT
+  - cdn_hs_phy/inst_adrctl_slice_core/inst_acm_slice_num_0/inst_acs_ctrl_top/inst_acs_dcc/CTS_ccl_a_inv_00120 : DCCKND8BWP300H8P64PDULVT
+  - cdn_hs_phy/inst_adrctl_slice_core/inst_acm_slice_num_0/inst_acs_ctrl_top/inst_acs_dcc/CTS_ccl_a_inv_00121 : DCCKND8BWP300H8P64PDULVT
+  - cdn_hs_phy/inst_adrctl_slice_core/inst_acm_slice_num_0/inst_acs_ctrl_top/inst_acs_dcc/CTS_ccl_a_inv_00228 : DCCKND10BWP300H8P64PDULVT
+  - cdn_hs_phy/inst_adrctl_slice_core/inst_acm_slice_num_0/inst_acs_ctrl_top/inst_acs_dcc/CTS_ccl_a_inv_00229 : DCCKND8BWP300H8P64PDULVT
+  - cdn_hs_phy/inst_adrctl_slice_core/inst_acm_slice_num_0/inst_acs_ctrl_top/inst_acs_dcc/CTS_ccl_a_inv_00257 : DCCKND12BWP300H8P64PDULVT
+  - clk_ctlr_phase_0_1dto4: CTS_ccl_a_inv_01251 (L11)
+  - clk_ctlr_phase_0_1dto4: CTS_ccl_a_inv_01377 (L8)
+  - clk_ctlr_phase_0_1dto4: CTS_cdb_inv_01920 (L9)
+  - clk_ctlr_phase_0_1dto4: CTS_cdb_inv_01921 (L10)
+  - clk_ctlr_phase_0_1dto4: CTS_cdb_inv_01922 (L12)
+  - clk_ctlr_phase_0_1dto4: CTS_cdb_inv_01923 (L15)
+  - clk_ctlr_phase_0_1dto4: CTS_cdb_inv_01924 (L13)
+  - clk_ctlr_phase_0_1dto4: CTS_cdb_inv_01925 (L14)
+  - clk_ctlr_phase_0_1dto4: clk4x_I1CLK_IOBUF (L2)
+  - clk_ctlr_phase_0_1dto4: clk4x_ICLK_IOBUF (L3)
+  - clk_ctlr_phase_0_1dto4: clk4x_pre_split (L4)
+  - clk_ctlr_phase_0_1dto4: clk4x_rest_path_offload (L5)
+  - clk_ctlr_phase_0_1dto4: clk4x_rest_path_split_1 (L6)
+  - clk_ctlr_phase_0_1dto4: clk4x_rest_path_split_2 (L7)
+  - x4_read_mem_dqs_phase_0_1dto4<6>: CTS_ccl_a_inv_01376 (L7)
+  - x4_read_mem_dqs_phase_0_1dto4<6>: CTS_ccl_inv_01468 (L6)
+  - x4_read_mem_dqs_phase_0_1dto4<6>: CTS_ccl_inv_01512 (L5)
+  - x4_read_mem_dqs_phase_0_1dto4<6>: CTS_ccl_inv_01549 (L4)
+  - x4_read_mem_dqs_phase_0_1dto4<6>: CTS_csf_inv_01659 (L3)
+  - x4_read_mem_dqs_phase_0_1dto4<6>: CTS_csf_inv_01661 (L2)
+  - x4_read_mem_dqs_phase_0_1dto4<6>: jtag_datain_dm_I1CLK_IOBUF (L9)
+  - x4_read_mem_dqs_phase_0_1dto4<6>: jtag_datain_dm_ICLK_IOBUF (L8)
+

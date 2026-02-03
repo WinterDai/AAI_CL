@@ -1,0 +1,4 @@
+PASS:IMP-12-0-0-10:Confirm turn-off the VIRTUAL_CONNECT in LVS setting.
+Info Occurrence: 2
+1: Info: Explanation: VIRTUAL_CONNECT enabled is acceptable for this design because hierarchical LVS is required: Explanation: VIRTUAL_CONNECT enabled is acceptable for this design because hierarchical LVS is required[WAIVED_INFO]
+2: Info: VIRTUAL_CONNECT is YES (should be NO) (Line 80 in /home/jingyu/checklist_dev/CHECKLIST/CHECKLIST/IP_project_folder/logs/do_cmd_3star_LVS_sourceme): VIRTUAL_CONNECT is enabled or setting not found in file[WAIVED_AS_INFO]

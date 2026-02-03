@@ -1,0 +1,7 @@
+PASS:IMP-12-0-0-06:Confirm the MIM related check setting is correct. (Fill N/A if no MIMCAP inserted or no MIM related layers)
+Info Occurrence: 5
+1: Info: Explanation: MIM configuration check is informational only for designs without MIMCAP: Explanation: MIM configuration check is informational only for designs without MIMCAP[WAIVED_INFO]
+2: Info: FHDMIM: Required MIM switches not found in PVL log or sourceme file[WAIVED_AS_INFO]
+3: Info: KOZ_HIGH_SUBST_LAYER: Required MIM switches not found in PVL log or sourceme file[WAIVED_AS_INFO]
+4: Info: SHDMIM: Required MIM switches not found in PVL log or sourceme file[WAIVED_AS_INFO]
+5: Info: SHDMIM_KOZ_AP_SPACE_5UM: Required MIM switches not found in PVL log or sourceme file[WAIVED_AS_INFO]

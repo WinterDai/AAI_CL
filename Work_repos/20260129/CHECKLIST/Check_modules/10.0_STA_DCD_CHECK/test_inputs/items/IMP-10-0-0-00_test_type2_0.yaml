@@ -1,0 +1,12 @@
+description: Confirm the netlist/spef version is correct.
+input_files:
+- ${CHECKLIST_ROOT}/IP_project_folder/logs/sta_post_syn.log
+requirements:
+  pattern_items:
+  - Nov 18 2025 10:28:15 UTC
+  - 'SPEF: Skipped'
+  value: 2
+waivers:
+  value: 0
+  waive_items:
+  - 'Explanation: Timestamp check is informational for post-synthesis flow'

@@ -1,0 +1,5 @@
+PASS:IMP-5-0-0-10:Confirm don't use cell list includes forbidden cells specified in IMP-1-0-0-02?
+IMP-5-0-0-10-INFO01: Items found in check:
+  Severity: Info Occurrence: 1
+  - No forbidden cells configured in IMP-1-0-0-02, check passed
+

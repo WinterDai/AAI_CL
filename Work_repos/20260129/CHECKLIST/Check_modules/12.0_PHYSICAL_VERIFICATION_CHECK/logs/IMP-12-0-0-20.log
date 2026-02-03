@@ -1,0 +1,5 @@
+FAIL:IMP-12-0-0-20:Confirm no unknown black boxes are reported.
+IMP-12-0-0-20-ERROR01: Configuration error:
+  Severity: Fail Occurrence: 1
+  - input_files is empty in YAML configuration
+

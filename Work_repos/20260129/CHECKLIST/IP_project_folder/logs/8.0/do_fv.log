@@ -1,0 +1,2041 @@
+                          CONFORMAL (R)
+                   Version 24.10-p100 (30-May-2024) (64 bit executable)
+   Copyright (c) Cadence Design Systems, Inc., 1997-2024. All Rights Reserved
+
+
+This program is proprietary and confidential information belonging to
+Cadence Design Systems, Inc., and may be used and disclosed only as authorized
+in a license agreement controlling such use and disclosure.
+
+// Warning: This version is 270 days old. You can download the latest version from http://downloads.cadence.com.
+
+// Command: set system mode setup
+// Command: read library -statetable -both -Sensitive -Liberty    /process/tsmcN4/data/stdcell/n4gp/TSMC/tcbn04p_bwph210l6p51cnod_base_lvt_100b/lvf/ccs/tcbn04p_bwph210l6p51cnod_base_lvtssgnp_0p675v_0c_cworst_CCworst_T_hm_lvf_p_ccs.lib.gz
+// Parsing file /process/tsmcN4/data/stdcell/n4gp/TSMC/tcbn04p_bwph210l6p51cnod_base_lvt_100b/lvf/ccs/tcbn04p_bwph210l6p51cnod_base_lvtssgnp_0p675v_0c_cworst_CCworst_T_hm_lvf_p_ccs.lib.gz ...
+// Warning: (RTL9.17) Cell doesn't have any output pins or all output pins are undriven (blackboxed) (occurrence:94)
+// Note: (RTL9.26) Liberty pin with internal_node use default input_map (occurrence:39)
+// Note: Read Liberty library successfully
+CPU time     : 8.21    seconds
+Elapse time  : 9       seconds
+Memory usage : 159.64  M bytes
+// Command: read library -statetable -both -Sensitive -Liberty -append   /process/tsmcN4/data/stdcell/n4gp/TSMC/tcbn04p_bwph210l6p51cnod_base_lvtll_100b/lvf/ccs/tcbn04p_bwph210l6p51cnod_base_lvtllssgnp_0p675v_0c_cworst_CCworst_T_hm_lvf_p_ccs.lib.gz
+// Parsing file /process/tsmcN4/data/stdcell/n4gp/TSMC/tcbn04p_bwph210l6p51cnod_base_lvtll_100b/lvf/ccs/tcbn04p_bwph210l6p51cnod_base_lvtllssgnp_0p675v_0c_cworst_CCworst_T_hm_lvf_p_ccs.lib.gz ...
+// Warning: (RTL9.17) Cell doesn't have any output pins or all output pins are undriven (blackboxed) (occurrence:188)
+// Note: (RTL9.26) Liberty pin with internal_node use default input_map (occurrence:78)
+// Note: Read Liberty library successfully
+CPU time     : 23.90   seconds
+Elapse time  : 25      seconds
+Memory usage : 290.03  M bytes
+// Command: read library -statetable -both -Sensitive -Liberty -append   /process/tsmcN4/data/stdcell/n4gp/TSMC/tcbn04p_bwph210l6p51cnod_base_svt_100b/lvf/ccs/tcbn04p_bwph210l6p51cnod_base_svtssgnp_0p675v_0c_cworst_CCworst_T_hm_lvf_p_ccs.lib.gz
+// Parsing file /process/tsmcN4/data/stdcell/n4gp/TSMC/tcbn04p_bwph210l6p51cnod_base_svt_100b/lvf/ccs/tcbn04p_bwph210l6p51cnod_base_svtssgnp_0p675v_0c_cworst_CCworst_T_hm_lvf_p_ccs.lib.gz ...
+// Warning: (RTL9.17) Cell doesn't have any output pins or all output pins are undriven (blackboxed) (occurrence:282)
+// Note: (RTL9.26) Liberty pin with internal_node use default input_map (occurrence:117)
+// Note: Read Liberty library successfully
+CPU time     : 39.30   seconds
+Elapse time  : 40      seconds
+Memory usage : 420.68  M bytes
+// Command: read library -statetable -both -Sensitive -Liberty -append   /process/tsmcN4/data/stdcell/n4gp/TSMC/tcbn04p_bwph210l6p51cnod_base_ulvt_100b/lvf/ccs/tcbn04p_bwph210l6p51cnod_base_ulvtssgnp_0p675v_0c_cworst_CCworst_T_hm_lvf_p_ccs.lib.gz
+// Parsing file /process/tsmcN4/data/stdcell/n4gp/TSMC/tcbn04p_bwph210l6p51cnod_base_ulvt_100b/lvf/ccs/tcbn04p_bwph210l6p51cnod_base_ulvtssgnp_0p675v_0c_cworst_CCworst_T_hm_lvf_p_ccs.lib.gz ...
+// Warning: (RTL9.17) Cell doesn't have any output pins or all output pins are undriven (blackboxed) (occurrence:366)
+// Note: (RTL9.26) Liberty pin with internal_node use default input_map (occurrence:156)
+// Note: Read Liberty library successfully
+CPU time     : 55.47   seconds
+Elapse time  : 56      seconds
+Memory usage : 549.79  M bytes
+// Command: read library -statetable -both -Sensitive -Liberty -append   /process/tsmcN4/data/stdcell/n4gp/TSMC/tcbn04p_bwph210l6p51cnod_base_elvt_100b/lvf/ccs/tcbn04p_bwph210l6p51cnod_base_elvtssgnp_0p675v_0c_cworst_CCworst_T_hm_lvf_p_ccs.lib.gz
+// Parsing file /process/tsmcN4/data/stdcell/n4gp/TSMC/tcbn04p_bwph210l6p51cnod_base_elvt_100b/lvf/ccs/tcbn04p_bwph210l6p51cnod_base_elvtssgnp_0p675v_0c_cworst_CCworst_T_hm_lvf_p_ccs.lib.gz ...
+// Warning: (RTL9.17) Cell doesn't have any output pins or all output pins are undriven (blackboxed) (occurrence:450)
+// Note: (RTL9.26) Liberty pin with internal_node use default input_map (occurrence:195)
+// Note: Read Liberty library successfully
+CPU time     : 71.14   seconds
+Elapse time  : 72      seconds
+Memory usage : 674.45  M bytes
+// Command: read library -statetable -both -Sensitive -Liberty -append   /process/tsmcN4/data/stdcell/n4gp/TSMC/tcbn04p_bwph210l6p51cnod_base_ulvtll_100b/lvf/ccs/tcbn04p_bwph210l6p51cnod_base_ulvtllssgnp_0p675v_0c_cworst_CCworst_T_hm_lvf_p_ccs.lib.gz
+// Parsing file /process/tsmcN4/data/stdcell/n4gp/TSMC/tcbn04p_bwph210l6p51cnod_base_ulvtll_100b/lvf/ccs/tcbn04p_bwph210l6p51cnod_base_ulvtllssgnp_0p675v_0c_cworst_CCworst_T_hm_lvf_p_ccs.lib.gz ...
+// Warning: (RTL9.17) Cell doesn't have any output pins or all output pins are undriven (blackboxed) (occurrence:534)
+// Note: (RTL9.26) Liberty pin with internal_node use default input_map (occurrence:234)
+// Note: Read Liberty library successfully
+CPU time     : 87.06   seconds
+Elapse time  : 88      seconds
+Memory usage : 805.07  M bytes
+// Command: read library -statetable -both -Sensitive -Liberty -append   /process/tsmcN4/data/stdcell/n4gp/TSMC/tcbn04p_bwph210l6p51cnod_pm_svt_100b/lvf/ccs/tcbn04p_bwph210l6p51cnod_pm_svtssgnp_0p675v_0c_cworst_CCworst_T_hm_lvf_p_ccs.lib.gz
+// Parsing file /process/tsmcN4/data/stdcell/n4gp/TSMC/tcbn04p_bwph210l6p51cnod_pm_svt_100b/lvf/ccs/tcbn04p_bwph210l6p51cnod_pm_svtssgnp_0p675v_0c_cworst_CCworst_T_hm_lvf_p_ccs.lib.gz ...
+// Warning: (RTL9.17) Cell doesn't have any output pins or all output pins are undriven (blackboxed) (occurrence:534)
+// Note: (RTL9.26) Liberty pin with internal_node use default input_map (occurrence:234)
+// Note: Read Liberty library successfully
+CPU time     : 88.11   seconds
+Elapse time  : 89      seconds
+Memory usage : 816.09  M bytes
+// Command: read library -statetable -both -Sensitive -Liberty -append   /process/tsmcN4/data/stdcell/n4gp/TSMC/tcbn04p_bwph210l6p51cnod_pm_ulvt_100b/lvf/ccs/tcbn04p_bwph210l6p51cnod_pm_ulvtssgnp_0p675v_0c_cworst_CCworst_T_hm_lvf_p_ccs.lib.gz
+// Parsing file /process/tsmcN4/data/stdcell/n4gp/TSMC/tcbn04p_bwph210l6p51cnod_pm_ulvt_100b/lvf/ccs/tcbn04p_bwph210l6p51cnod_pm_ulvtssgnp_0p675v_0c_cworst_CCworst_T_hm_lvf_p_ccs.lib.gz ...
+// Warning: (RTL9.17) Cell doesn't have any output pins or all output pins are undriven (blackboxed) (occurrence:534)
+// Note: (RTL9.26) Liberty pin with internal_node use default input_map (occurrence:234)
+// Note: Read Liberty library successfully
+CPU time     : 89.17   seconds
+Elapse time  : 90      seconds
+Memory usage : 827.02  M bytes
+// Command: read library -statetable -both -Sensitive -Liberty -append   /process/tsmcN4/data/stdcell/n4gp/CDNS/cdns_gddr200_macro_h_t4gp_17M_1X1Xb1Xe1Ya1Yb5Y2Yy2Yx2R_SHDMIM_r100.20250221/lib/cdns_gddr200_t4gp_gddr7_ss_0p675v_1p164v_0c.lib
+// Parsing file /process/tsmcN4/data/stdcell/n4gp/CDNS/cdns_gddr200_macro_h_t4gp_17M_1X1Xb1Xe1Ya1Yb5Y2Yy2Yx2R_SHDMIM_r100.20250221/lib/cdns_gddr200_t4gp_gddr7_ss_0p675v_1p164v_0c.lib ...
+// Warning: (RTL9.17) Cell doesn't have any output pins or all output pins are undriven (blackboxed) (occurrence:536)
+// Note: (RTL9.26) Liberty pin with internal_node use default input_map (occurrence:234)
+// Warning: (RTL14) Signal has input but it has no output (occurrence:2088)
+// Note: Read Liberty library successfully
+// Command: read library -statetable -both -Sensitive -Liberty -append   /process/tsmcN5/data/stdcell/n5/CDNS/cdns_ddr_custom_dig_cells_tcbn05_bwph210l6p51cnod_base_t5g_17M_1X_h_1Xb_v_1Xe_h_1Ya_v_1Yb_h_5Y_vhvhv_2Yy2Yx2R_r200.20230606/lib/spectre_v1d2_2p5/lib_dfly/cdns_ddr_custom_dig_cells_tcbn05_bwph210l6p51cnod_base_ssgnp_cworst_CCworst_T_0p675v_m40c.lib
+// Parsing file /process/tsmcN5/data/stdcell/n5/CDNS/cdns_ddr_custom_dig_cells_tcbn05_bwph210l6p51cnod_base_t5g_17M_1X_h_1Xb_v_1Xe_h_1Ya_v_1Yb_h_5Y_vhvhv_2Yy2Yx2R_r200.20230606/lib/spectre_v1d2_2p5/lib_dfly/cdns_ddr_custom_dig_cells_tcbn05_bwph210l6p51cnod_base_ssgnp_cworst_CCworst_T_0p675v_m40c.lib ...
+// Warning: (RTL9.17) Cell doesn't have any output pins or all output pins are undriven (blackboxed) (occurrence:536)
+// Note: (RTL9.26) Liberty pin with internal_node use default input_map (occurrence:234)
+// Warning: (RTL14) Signal has input but it has no output (occurrence:2088)
+// Note: Read Liberty library successfully
+// Command: read library -statetable -both -Sensitive -Liberty -append   /process/tsmcN4/data/stdcell/n4gp/CDNS/cdns_phy_decap_unit_17M_1X1Xb1Xe1Ya1Yb5Y2Yy2Yx2R_SHDMIM_r100.20240814/lib/cdns_phy_decap_unit_gddr7_ss_0p675v_1p164v_0c.lib
+// Parsing file /process/tsmcN4/data/stdcell/n4gp/CDNS/cdns_phy_decap_unit_17M_1X1Xb1Xe1Ya1Yb5Y2Yy2Yx2R_SHDMIM_r100.20240814/lib/cdns_phy_decap_unit_gddr7_ss_0p675v_1p164v_0c.lib ...
+// Warning: (RTL9.17) Cell doesn't have any output pins or all output pins are undriven (blackboxed) (occurrence:537)
+// Note: (RTL9.26) Liberty pin with internal_node use default input_map (occurrence:234)
+// Warning: (RTL14) Signal has input but it has no output (occurrence:2088)
+// Note: Read Liberty library successfully
+// Command: read library -statetable -both -Sensitive -Liberty -append   /projects/GTC9_N5_GDDR7/output/gddr36_ew_cdn_ghs_phy_channel/prlib/gddr36_ew_cdn_ghs_phy_channel.func.ssgnp_0p675v_m40c_cworst_CCworst_T_cworst_CCworst_T_setup.ideal.lib
+// Parsing file /projects/GTC9_N5_GDDR7/output/gddr36_ew_cdn_ghs_phy_channel/prlib/gddr36_ew_cdn_ghs_phy_channel.func.ssgnp_0p675v_m40c_cworst_CCworst_T_cworst_CCworst_T_setup.ideal.lib ...
+// Warning: (RTL9.17) Cell doesn't have any output pins or all output pins are undriven (blackboxed) (occurrence:537)
+// Note: (RTL9.26) Liberty pin with internal_node use default input_map (occurrence:234)
+// Warning: (RTL14) Signal has input but it has no output (occurrence:3477)
+// Note: Read Liberty library successfully
+CPU time     : 90.86   seconds
+Elapse time  : 92      seconds
+Memory usage : 854.72  M bytes
+// Command: read design -Verilog2K -Golden  -Sensitive \
+//           /projects/GTC9_N5_GDDR7/input/latest/netlists/gddr36_ew_cdn_ghs_phy_top.vg.data_slice_stub \
+//          -Root    gddr36_ew_cdn_ghs_phy_top -lastmod
+// Parsing file /projects/GTC9_N5_GDDR7/input/latest/netlists/gddr36_ew_cdn_ghs_phy_top.vg.data_slice_stub ...
+// Golden root module is set to 'gddr36_ew_cdn_ghs_phy_top'
+// Warning: (RTL1.2a) Variable/signal on instance INOUT port might have multiple drivers (occurrence:10)
+// Warning: (RTL2.5) Net is referenced without an assignment. Design verification will be based on set_undriven_signal setting (occurrence:36220)
+// Warning: (RTL2.13) Undriven pin is detected (occurrence:41116)
+// Warning: (RTL2.13a) Undriven pin is detected. Module is empty (occurrence:20)
+// Warning: (RTL14) Signal has input but it has no output (occurrence:18178)
+// Warning: (RTL14.1) Fanout load of the signal is removed (occurrence:2151)
+// Warning: (HRC3.2) Component is instantiated without any specified port connections (occurrence:20)
+// Warning: (HRC3.5a) Open input/inout port connection is detected (occurrence:2389)
+// Note: (HRC3.5b) Open output port connection is detected (occurrence:787)
+// Warning: (HRC3.10a) An input port is declared, but it is not completely used in the module (occurrence:260046)
+// Warning: (HRC3.10b) An input port is declared, but it is not used. Module is empty (occurrence:27)
+// Warning: (HRC3.16) A wire is declared, but not used in the module (occurrence:1677)
+// Warning: Total black box modules referenced in Golden = 1
+// Warning: There are 42197 undriven nets in Golden
+// Warning: There are 42197 undriven pins in Golden
+// Note: Read VERILOG design successfully
+CPU time     : 107.14  seconds
+Elapse time  : 108     seconds
+Memory usage : 1471.00 M bytes
+// Command: read design -Revised -Sensitive dbs/gddr36_ew_cdn_ghs_phy_top.innovusOUTwoD0.enc.dat/gddr36_ew_cdn_ghs_phy_top.v.gz -Root gddr36_ew_cdn_ghs_phy_top
+// Parsing file dbs/gddr36_ew_cdn_ghs_phy_top.innovusOUTwoD0.enc.dat/gddr36_ew_cdn_ghs_phy_top.v.gz ...
+// Revised root module is set to 'gddr36_ew_cdn_ghs_phy_top'
+// Warning: (RTL1.2a) Variable/signal on instance INOUT port might have multiple drivers (occurrence:10)
+// Warning: (RTL2.5) Net is referenced without an assignment. Design verification will be based on set_undriven_signal setting (occurrence:41560)
+// Warning: (RTL2.13) Undriven pin is detected (occurrence:41191)
+// Warning: (RTL14) Signal has input but it has no output (occurrence:18204)
+// Warning: (RTL14.1) Fanout load of the signal is removed (occurrence:2143)
+// Warning: (HRC3.2) Component is instantiated without any specified port connections (occurrence:20)
+// Warning: (HRC3.5a) Open input/inout port connection is detected (occurrence:2406)
+// Note: (HRC3.5b) Open output port connection is detected (occurrence:779)
+// Warning: (HRC3.10a) An input port is declared, but it is not completely used in the module (occurrence:277614)
+// Warning: (HRC3.16) A wire is declared, but not used in the module (occurrence:24419)
+// Warning: Total black box modules referenced in Revised = 2
+// Warning: There are 45366 undriven nets in Revised
+// Warning: There are 42252 undriven pins in Revised
+// Note: Read VERILOG design successfully
+CPU time     : 146.73  seconds
+Elapse time  : 148     seconds
+Memory usage : 2310.09 M bytes
+// Command: report design data
+============================================
+Summary           Golden         Revised
+============================================
+Design-modules     14386           14360
+Library-cells     348316          703250
+============================================
+Primitives      Golden              Revised
+============================================
+INPUT             3170                 3170
+OUTPUT            2731                 2731
+INOUT               92                   92
+--------------------------------------------
+AND        *    422451               421337
+BUF        *      5755               215632
+DFF        *    105483               105475
+DLAT       *      9966                 9937
+INV        *    173022               317182
+NAND       *     32287                34156
+NOR        *     40497                41158
+OR         *    229935               230349
+TIE0       *        28                  156
+TIE1       *         0                   56
+XNOR       *      5736                 5214
+XOR        *      5022                 5504
+------ word-level --------------------------
+BBOX       *         1                   10
+--------------------------------------------
+Total          1030183              1386166
+
+CPU time     : 146.96  seconds
+Elapse time  : 148     seconds
+Memory usage : 2310.18 M bytes
+// Command: report black box > blackbox
+// Command: uniquify -all -nolib
+Uniquified 1 instance(s) referring to module 'phy_gddr36_ew_cdn_ghs_phy_hic_hs_sync_dff_ASYNCRESET1_RSTVALUE1h0_91' in Golden
+Uniquified 1 instance(s) referring to module 'phy_gddr36_ew_cdn_ghs_phy_hic_clkgate_46' in Golden
+Uniquified 1 instance(s) referring to module 'phy_gddr36_ew_cdn_ghs_phy_hic_clkgate_42' in Golden
+Uniquified 1 instance(s) referring to module 'phy_gddr36_ew_cdn_ghs_phy_hic_clkgate_43' in Golden
+Uniquified 1 instance(s) referring to module 'phy_gddr36_ew_cdn_ghs_phy_hic_clkgate_44' in Golden
+Uniquified 1 instance(s) referring to module 'phy_gddr36_ew_cdn_ghs_phy_hic_clkgate_45' in Golden
+Uniquified 1 instance(s) referring to module 'phy_gddr36_ew_cdn_ghs_phy_hic_hs_sync_dff_ASYNCRESET1_RSTVALUE1h0_90' in Golden
+Uniquified 1 instance(s) referring to module 'phy_gddr36_ew_cdn_ghs_phy_hic_hs_sync_dff_ASYNCRESET1_RSTVALUE1h0_88' in Golden
+Uniquified 1 instance(s) referring to module 'phy_gddr36_ew_cdn_ghs_phy_hic_hs_sync_dff_ASYNCRESET1_RSTVALUE1h0_89' in Golden
+Uniquified 1 instance(s) referring to module 'phy_gddr36_ew_cdn_ghs_phy_hic_hs_sync_dff_ASYNCRESET1_RSTVALUE1h0_86' in Golden
+Uniquified 1 instance(s) referring to module 'phy_gddr36_ew_cdn_ghs_phy_hic_hs_sync_dff_ASYNCRESET1_RSTVALUE1h0_87' in Golden
+Uniquified 1 instance(s) referring to module 'phy_gddr36_ew_cdn_ghs_phy_hic_hs_sync_dff_ASYNCRESET1_RSTVALUE1h0_84' in Golden
+Uniquified 1 instance(s) referring to module 'phy_gddr36_ew_cdn_ghs_phy_hic_hs_sync_dff_ASYNCRESET1_RSTVALUE1h0_85' in Golden
+Uniquified 1 instance(s) referring to module 'phy_LP_CLKG_RC_CG_MOD_21_65543' in Golden
+Uniquified 1 instance(s) referring to module 'phy_LP_CLKG_RC_CG_MOD_20_65542' in Golden
+Uniquified 1 instance(s) referring to module 'phy_LP_CLKG_RC_CG_MOD_19_65541' in Golden
+Uniquified 1 instance(s) referring to module 'phy_LP_CLKG_RC_CG_MOD_18_65540' in Golden
+Uniquified 1 instance(s) referring to module 'phy_LP_CLKG_RC_CG_MOD_17_65539' in Golden
+Uniquified 1 instance(s) referring to module 'phy_LP_CLKG_RC_CG_MOD_16_65538' in Golden
+Uniquified 1 instance(s) referring to module 'phy_LP_CLKG_RC_CG_MOD_15_65537' in Golden
+Uniquified 1 instance(s) referring to module 'phy_LP_CLKG_RC_CG_MOD_14_65536' in Golden
+Uniquified 1 instance(s) referring to module 'phy_LP_CLKG_RC_CG_MOD_13_65535' in Golden
+Uniquified 1 instance(s) referring to module 'phy_LP_CLKG_RC_CG_MOD_12_65533' in Golden
+Uniquified 1 instance(s) referring to module 'phy_LP_CLKG_RC_CG_MOD_11_65532' in Golden
+Uniquified 1 instance(s) referring to module 'phy_LP_CLKG_RC_CG_MOD_10_65531' in Golden
+Uniquified 1 instance(s) referring to module 'phy_LP_CLKG_RC_CG_MOD_9_65530' in Golden
+Uniquified 1 instance(s) referring to module 'phy_LP_CLKG_RC_CG_MOD_8_65529' in Golden
+Uniquified 1 instance(s) referring to module 'phy_gddr36_ew_cdn_ghs_phy_hic_clkgate_27' in Golden
+Uniquified 1 instance(s) referring to module 'phy_LP_CLKG_RC_CG_MOD_7_65521' in Golden
+Uniquified 1 instance(s) referring to module 'phy_LP_CLKG_RC_CG_MOD_6_65520' in Golden
+Uniquified 1 instance(s) referring to module 'phy_LP_CLKG_RC_CG_MOD_5_65519' in Golden
+Uniquified 1 instance(s) referring to module 'phy_LP_CLKG_RC_CG_MOD_4_65516' in Golden
+Uniquified 1 instance(s) referring to module 'phy_LP_CLKG_RC_CG_MOD_3_65515' in Golden
+Uniquified 1 instance(s) referring to module 'phy_LP_CLKG_RC_CG_MOD_2_65514' in Golden
+Uniquified 1 instance(s) referring to module 'phy_LP_CLKG_RC_CG_MOD_1_65513' in Golden
+Uniquified 1 instance(s) referring to module 'phy_LP_CLKG_RC_CG_MOD_65512' in Golden
+Uniquified 1 instance(s) referring to module 'phy_gddr36_ew_cdn_ghs_phy_sync_rst_59' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtgated_tmode_clock_340' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtgated_clock_340' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtclock_gate_and_340' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtclock_gate_nlatch_340' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtgated_tmode_clock_339' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtgated_clock_339' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtclock_gate_and_339' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtclock_gate_nlatch_339' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtgated_tmode_clock_336' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtgated_clock_336' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtclock_gate_and_336' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtclock_gate_nlatch_336' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtgated_tmode_clock_334' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtgated_clock_334' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtclock_gate_and_334' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtclock_gate_nlatch_334' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtgated_tmode_clock_333' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtgated_clock_333' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtclock_gate_and_333' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtclock_gate_nlatch_333' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtgated_tmode_clock_332' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtgated_clock_332' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtclock_gate_and_332' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtclock_gate_nlatch_332' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtgated_tmode_clock_331' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtgated_clock_331' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtclock_gate_and_331' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtclock_gate_nlatch_331' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtgated_tmode_clock_330' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtgated_clock_330' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtclock_gate_and_330' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtclock_gate_nlatch_330' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtgated_tmode_clock_329' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtgated_clock_329' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtclock_gate_and_329' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtclock_gate_nlatch_329' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtgated_tmode_clock_328' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtgated_clock_328' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtclock_gate_and_328' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtclock_gate_nlatch_328' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtgated_tmode_clock_327' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtgated_clock_327' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtclock_gate_and_327' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtclock_gate_nlatch_327' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtgated_tmode_clock_233' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtgated_clock_233' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtclock_gate_and_233' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtclock_gate_nlatch_233' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtgated_tmode_clock_232' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtgated_clock_232' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtclock_gate_and_232' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtclock_gate_nlatch_232' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtgated_tmode_clock_222' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtgated_clock_222' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtclock_gate_and_222' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtclock_gate_nlatch_222' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtgated_tmode_clock_231' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtgated_clock_231' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtclock_gate_and_231' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtclock_gate_nlatch_231' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtgated_tmode_clock_230' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtgated_clock_230' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtclock_gate_and_230' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtclock_gate_nlatch_230' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtgated_tmode_clock_241' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtgated_clock_241' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtclock_gate_and_241' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtclock_gate_nlatch_241' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtgated_tmode_clock_240' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtgated_clock_240' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtclock_gate_and_240' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtclock_gate_nlatch_240' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtgated_tmode_clock_247' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtgated_clock_247' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtclock_gate_and_247' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtclock_gate_nlatch_247' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtgated_tmode_clock_246' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtgated_clock_246' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtclock_gate_and_246' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtclock_gate_nlatch_246' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtgated_tmode_clock_255' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtgated_clock_255' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtclock_gate_and_255' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtclock_gate_nlatch_255' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtgated_tmode_clock_254' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtgated_clock_254' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtclock_gate_and_254' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtclock_gate_nlatch_254' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtgated_tmode_clock_253' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtgated_clock_253' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtclock_gate_and_253' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtclock_gate_nlatch_253' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtgated_tmode_clock_244' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtgated_clock_244' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtclock_gate_and_244' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtclock_gate_nlatch_244' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtgated_tmode_clock_243' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtgated_clock_243' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtclock_gate_and_243' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtclock_gate_nlatch_243' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtgated_tmode_clock_242' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtgated_clock_242' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtclock_gate_and_242' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtclock_gate_nlatch_242' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtgated_tmode_clock_250' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtgated_clock_250' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtclock_gate_and_250' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtclock_gate_nlatch_250' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtgated_tmode_clock_224' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtgated_clock_224' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtclock_gate_and_224' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtclock_gate_nlatch_224' in Golden
+Uniquified 1 instance(s) referring to module 'phy_LP_CLKG_RC_CG_MOD_129_62494' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtgated_tmode_clock_237' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtgated_clock_237' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtclock_gate_and_237' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtclock_gate_nlatch_237' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtgated_tmode_clock_223' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtgated_clock_223' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtclock_gate_and_223' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtclock_gate_nlatch_223' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtgated_tmode_clock_239' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtgated_clock_239' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtclock_gate_and_239' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtclock_gate_nlatch_239' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtgated_tmode_clock_238' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtgated_clock_238' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtclock_gate_and_238' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtclock_gate_nlatch_238' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtgated_tmode_clock_236' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtgated_clock_236' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtclock_gate_and_236' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtclock_gate_nlatch_236' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtgated_tmode_clock_249' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtgated_clock_249' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtclock_gate_and_249' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtclock_gate_nlatch_249' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtgated_tmode_clock_248' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtgated_clock_248' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtclock_gate_and_248' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtclock_gate_nlatch_248' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtgated_tmode_clock_297' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtgated_clock_297' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtclock_gate_and_297' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtclock_gate_nlatch_297' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtgated_tmode_clock_296' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtgated_clock_296' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtclock_gate_and_296' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtclock_gate_nlatch_296' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtgated_tmode_clock_284' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtgated_clock_284' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtclock_gate_and_284' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtclock_gate_nlatch_284' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtgated_tmode_clock_283' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtgated_clock_283' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtclock_gate_and_283' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtclock_gate_nlatch_283' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtgated_tmode_clock_295' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtgated_clock_295' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtclock_gate_and_295' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtclock_gate_nlatch_295' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtgated_tmode_clock_294' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtgated_clock_294' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtclock_gate_and_294' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtclock_gate_nlatch_294' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtgated_tmode_clock_293' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtgated_clock_293' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtclock_gate_and_293' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtclock_gate_nlatch_293' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtgated_tmode_clock_308' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtgated_clock_308' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtclock_gate_and_308' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtclock_gate_nlatch_308' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtgated_tmode_clock_261' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtgated_clock_261' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtclock_gate_and_261' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtclock_gate_nlatch_261' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtgated_tmode_clock_304' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtgated_clock_304' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtclock_gate_and_304' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtclock_gate_nlatch_304' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtgated_tmode_clock_259' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtgated_clock_259' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtclock_gate_and_259' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtclock_gate_nlatch_259' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtascflop_size1_435' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtgated_tmode_clock_51' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtgated_clock_51' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtclock_gate_and_51' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtclock_gate_nlatch_51' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtgated_tmode_clock_84' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtgated_clock_84' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtclock_gate_and_84' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtclock_gate_nlatch_84' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtgated_tmode_clock_83' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtgated_clock_83' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtclock_gate_and_83' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtclock_gate_nlatch_83' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtgated_tmode_clock_82' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtgated_clock_82' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtclock_gate_and_82' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtclock_gate_nlatch_82' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtgated_tmode_clock_81' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtgated_clock_81' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtclock_gate_and_81' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtclock_gate_nlatch_81' in Golden
+Uniquified 1 instance(s) referring to module 'phy_LP_CLKG_RC_CG_MOD_128_62251' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtgated_tmode_clock_80' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtgated_clock_80' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtclock_gate_and_80' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtclock_gate_nlatch_80' in Golden
+Uniquified 1 instance(s) referring to module 'phy_LP_CLKG_RC_CG_MOD_127_62242' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtgated_tmode_clock_53' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtgated_clock_53' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtclock_gate_and_53' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtclock_gate_nlatch_53' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtgated_tmode_clock_52' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtgated_clock_52' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtclock_gate_and_52' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtclock_gate_nlatch_52' in Golden
+Uniquified 1 instance(s) referring to module 'phy_LP_CLKG_RC_CG_MOD_126_62225' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtgated_tmode_clock_142' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtgated_clock_142' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtclock_gate_and_142' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtclock_gate_nlatch_142' in Golden
+Uniquified 1 instance(s) referring to module 'phy_LP_CLKG_RC_CG_MOD_125_62216' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtgated_tmode_clock_126' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtgated_clock_126' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtclock_gate_and_126' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtclock_gate_nlatch_126' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtgated_tmode_clock_125' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtgated_clock_125' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtclock_gate_and_125' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtclock_gate_nlatch_125' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtgated_tmode_clock_124' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtgated_clock_124' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtclock_gate_and_124' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtclock_gate_nlatch_124' in Golden
+Uniquified 1 instance(s) referring to module 'phy_LP_CLKG_RC_CG_MOD_124_62199' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtgated_tmode_clock_76' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtgated_clock_76' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtclock_gate_and_76' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtclock_gate_nlatch_76' in Golden
+Uniquified 1 instance(s) referring to module 'phy_LP_CLKG_RC_CG_MOD_123_62190' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtgated_tmode_clock_75' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtgated_clock_75' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtclock_gate_and_75' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtclock_gate_nlatch_75' in Golden
+Uniquified 1 instance(s) referring to module 'phy_LP_CLKG_RC_CG_MOD_122_62181' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtgated_tmode_clock_88' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtgated_clock_88' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtclock_gate_and_88' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtclock_gate_nlatch_88' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtgated_tmode_clock_87' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtgated_clock_87' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtclock_gate_and_87' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtclock_gate_nlatch_87' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtgated_tmode_clock_86' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtgated_clock_86' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtclock_gate_and_86' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtclock_gate_nlatch_86' in Golden
+Uniquified 1 instance(s) referring to module 'phy_LP_CLKG_RC_CG_MOD_121_62164' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtgated_tmode_clock_74' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtgated_clock_74' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtclock_gate_and_74' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtclock_gate_nlatch_74' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtgated_tmode_clock_73' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtgated_clock_73' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtclock_gate_and_73' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtclock_gate_nlatch_73' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtgated_tmode_clock_72' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtgated_clock_72' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtclock_gate_and_72' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtclock_gate_nlatch_72' in Golden
+Uniquified 1 instance(s) referring to module 'phy_LP_CLKG_RC_CG_MOD_120_62147' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtgated_tmode_clock_77' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtgated_clock_77' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtclock_gate_and_77' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtclock_gate_nlatch_77' in Golden
+Uniquified 1 instance(s) referring to module 'phy_LP_CLKG_RC_CG_MOD_119_62138' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtgated_tmode_clock_85' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtgated_clock_85' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtclock_gate_and_85' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtclock_gate_nlatch_85' in Golden
+Uniquified 1 instance(s) referring to module 'phy_LP_CLKG_RC_CG_MOD_118_62129' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtgated_tmode_clock_127' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtgated_clock_127' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtclock_gate_and_127' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtclock_gate_nlatch_127' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtgated_tmode_clock_103' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtgated_clock_103' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtclock_gate_and_103' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtclock_gate_nlatch_103' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtgated_tmode_clock_102' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtgated_clock_102' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtclock_gate_and_102' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtclock_gate_nlatch_102' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtgated_tmode_clock_101' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtgated_clock_101' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtclock_gate_and_101' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtclock_gate_nlatch_101' in Golden
+Uniquified 1 instance(s) referring to module 'phy_LP_CLKG_RC_CG_MOD_117_62104' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtgated_tmode_clock_115' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtgated_clock_115' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtclock_gate_and_115' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtclock_gate_nlatch_115' in Golden
+Uniquified 1 instance(s) referring to module 'phy_LP_CLKG_RC_CG_MOD_116_62096' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtgated_tmode_clock_110' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtgated_clock_110' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtclock_gate_and_110' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtclock_gate_nlatch_110' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtgated_tmode_clock_109' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtgated_clock_109' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtclock_gate_and_109' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtclock_gate_nlatch_109' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtgated_tmode_clock_108' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtgated_clock_108' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtclock_gate_and_108' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtclock_gate_nlatch_108' in Golden
+Uniquified 1 instance(s) referring to module 'phy_LP_CLKG_RC_CG_MOD_115_62080' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtgated_tmode_clock_106' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtgated_clock_106' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtclock_gate_and_106' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtclock_gate_nlatch_106' in Golden
+Uniquified 1 instance(s) referring to module 'phy_LP_CLKG_RC_CG_MOD_114_62071' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtgated_tmode_clock_117' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtgated_clock_117' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtclock_gate_and_117' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtclock_gate_nlatch_117' in Golden
+Uniquified 1 instance(s) referring to module 'phy_LP_CLKG_RC_CG_MOD_113_62063' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtgated_tmode_clock_112' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtgated_clock_112' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtclock_gate_and_112' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtclock_gate_nlatch_112' in Golden
+Uniquified 1 instance(s) referring to module 'phy_LP_CLKG_RC_CG_MOD_112_62055' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtgated_tmode_clock_105' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtgated_clock_105' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtclock_gate_and_105' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtclock_gate_nlatch_105' in Golden
+Uniquified 1 instance(s) referring to module 'phy_LP_CLKG_RC_CG_MOD_111_62046' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtgated_tmode_clock_104' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtgated_clock_104' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtclock_gate_and_104' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtclock_gate_nlatch_104' in Golden
+Uniquified 1 instance(s) referring to module 'phy_LP_CLKG_RC_CG_MOD_110_62038' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtgated_tmode_clock_113' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtgated_clock_113' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtclock_gate_and_113' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtclock_gate_nlatch_113' in Golden
+Uniquified 1 instance(s) referring to module 'phy_LP_CLKG_RC_CG_MOD_109_62029' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtgated_tmode_clock_107' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtgated_clock_107' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtclock_gate_and_107' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtclock_gate_nlatch_107' in Golden
+Uniquified 1 instance(s) referring to module 'phy_LP_CLKG_RC_CG_MOD_108_62021' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtgated_tmode_clock_116' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtgated_clock_116' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtclock_gate_and_116' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtclock_gate_nlatch_116' in Golden
+Uniquified 1 instance(s) referring to module 'phy_LP_CLKG_RC_CG_MOD_107_62013' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtgated_tmode_clock_111' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtgated_clock_111' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtclock_gate_and_111' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtclock_gate_nlatch_111' in Golden
+Uniquified 1 instance(s) referring to module 'phy_LP_CLKG_RC_CG_MOD_106_62004' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtgated_tmode_clock_100' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtgated_clock_100' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtclock_gate_and_100' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtclock_gate_nlatch_100' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtgated_tmode_clock_99' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtgated_clock_99' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtclock_gate_and_99' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtclock_gate_nlatch_99' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtgated_tmode_clock_98' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtgated_clock_98' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtclock_gate_and_98' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtclock_gate_nlatch_98' in Golden
+Uniquified 1 instance(s) referring to module 'phy_LP_CLKG_RC_CG_MOD_105_61987' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtgated_tmode_clock_97' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtgated_clock_97' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtclock_gate_and_97' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtclock_gate_nlatch_97' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtgated_tmode_clock_96' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtgated_clock_96' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtclock_gate_and_96' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtclock_gate_nlatch_96' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtgated_tmode_clock_95' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtgated_clock_95' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtclock_gate_and_95' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtclock_gate_nlatch_95' in Golden
+Uniquified 1 instance(s) referring to module 'phy_LP_CLKG_RC_CG_MOD_104_61970' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtgated_tmode_clock_94' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtgated_clock_94' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtclock_gate_and_94' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtclock_gate_nlatch_94' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtgated_tmode_clock_93' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtgated_clock_93' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtclock_gate_and_93' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtclock_gate_nlatch_93' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtgated_tmode_clock_92' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtgated_clock_92' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtclock_gate_and_92' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtclock_gate_nlatch_92' in Golden
+Uniquified 1 instance(s) referring to module 'phy_LP_CLKG_RC_CG_MOD_103_61953' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtgated_tmode_clock_91' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtgated_clock_91' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtclock_gate_and_91' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtclock_gate_nlatch_91' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtgated_tmode_clock_90' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtgated_clock_90' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtclock_gate_and_90' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtclock_gate_nlatch_90' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtgated_tmode_clock_89' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtgated_clock_89' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtclock_gate_and_89' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtclock_gate_nlatch_89' in Golden
+Uniquified 1 instance(s) referring to module 'phy_LP_CLKG_RC_CG_MOD_102_61936' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtgated_tmode_clock_123' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtgated_clock_123' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtclock_gate_and_123' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtclock_gate_nlatch_123' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtgated_tmode_clock_122' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtgated_clock_122' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtclock_gate_and_122' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtclock_gate_nlatch_122' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtgated_tmode_clock_121' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtgated_clock_121' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtclock_gate_and_121' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtclock_gate_nlatch_121' in Golden
+Uniquified 1 instance(s) referring to module 'phy_LP_CLKG_RC_CG_MOD_101_61919' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtgated_tmode_clock_120' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtgated_clock_120' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtclock_gate_and_120' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtclock_gate_nlatch_120' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtgated_tmode_clock_119' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtgated_clock_119' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtclock_gate_and_119' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtclock_gate_nlatch_119' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtgated_tmode_clock_118' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtgated_clock_118' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtclock_gate_and_118' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtclock_gate_nlatch_118' in Golden
+Uniquified 1 instance(s) referring to module 'phy_LP_CLKG_RC_CG_MOD_100_61902' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtgated_tmode_clock_128' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtgated_clock_128' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtclock_gate_and_128' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtclock_gate_nlatch_128' in Golden
+Uniquified 1 instance(s) referring to module 'phy_LP_CLKG_RC_CG_MOD_99_61893' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtgated_tmode_clock_130' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtgated_clock_130' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtclock_gate_and_130' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtclock_gate_nlatch_130' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtgated_tmode_clock_129' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtgated_clock_129' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtclock_gate_and_129' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtclock_gate_nlatch_129' in Golden
+Uniquified 1 instance(s) referring to module 'phy_LP_CLKG_RC_CG_MOD_98_61880' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtgated_tmode_clock_136' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtgated_clock_136' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtclock_gate_and_136' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtclock_gate_nlatch_136' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtgated_tmode_clock_135' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtgated_clock_135' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtclock_gate_and_135' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtclock_gate_nlatch_135' in Golden
+Uniquified 1 instance(s) referring to module 'phy_LP_CLKG_RC_CG_MOD_97_61867' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtgated_tmode_clock_134' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtgated_clock_134' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtclock_gate_and_134' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtclock_gate_nlatch_134' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtgated_tmode_clock_133' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtgated_clock_133' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtclock_gate_and_133' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtclock_gate_nlatch_133' in Golden
+Uniquified 1 instance(s) referring to module 'phy_LP_CLKG_RC_CG_MOD_96_61850' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtgated_tmode_clock_79' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtgated_clock_79' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtclock_gate_and_79' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtclock_gate_nlatch_79' in Golden
+Uniquified 1 instance(s) referring to module 'phy_LP_CLKG_RC_CG_MOD_95_61841' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtgated_tmode_clock_65' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtgated_clock_65' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtclock_gate_and_65' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtclock_gate_nlatch_65' in Golden
+Uniquified 1 instance(s) referring to module 'phy_LP_CLKG_RC_CG_MOD_94_61832' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtgated_tmode_clock_64' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtgated_clock_64' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtclock_gate_and_64' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtclock_gate_nlatch_64' in Golden
+Uniquified 1 instance(s) referring to module 'phy_LP_CLKG_RC_CG_MOD_93_61823' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtgated_tmode_clock_63' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtgated_clock_63' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtclock_gate_and_63' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtclock_gate_nlatch_63' in Golden
+Uniquified 1 instance(s) referring to module 'phy_LP_CLKG_RC_CG_MOD_92_61814' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtgated_tmode_clock_62' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtgated_clock_62' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtclock_gate_and_62' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtclock_gate_nlatch_62' in Golden
+Uniquified 1 instance(s) referring to module 'phy_LP_CLKG_RC_CG_MOD_91_61805' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtgated_tmode_clock_61' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtgated_clock_61' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtclock_gate_and_61' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtclock_gate_nlatch_61' in Golden
+Uniquified 1 instance(s) referring to module 'phy_LP_CLKG_RC_CG_MOD_90_61796' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtgated_tmode_clock_60' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtgated_clock_60' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtclock_gate_and_60' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtclock_gate_nlatch_60' in Golden
+Uniquified 1 instance(s) referring to module 'phy_LP_CLKG_RC_CG_MOD_89_61787' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtgated_tmode_clock_71' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtgated_clock_71' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtclock_gate_and_71' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtclock_gate_nlatch_71' in Golden
+Uniquified 1 instance(s) referring to module 'phy_LP_CLKG_RC_CG_MOD_88_61778' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtgated_tmode_clock_70' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtgated_clock_70' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtclock_gate_and_70' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtclock_gate_nlatch_70' in Golden
+Uniquified 1 instance(s) referring to module 'phy_LP_CLKG_RC_CG_MOD_87_61768' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtgated_tmode_clock_69' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtgated_clock_69' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtclock_gate_and_69' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtclock_gate_nlatch_69' in Golden
+Uniquified 1 instance(s) referring to module 'phy_LP_CLKG_RC_CG_MOD_86_61759' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtgated_tmode_clock_68' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtgated_clock_68' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtclock_gate_and_68' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtclock_gate_nlatch_68' in Golden
+Uniquified 1 instance(s) referring to module 'phy_LP_CLKG_RC_CG_MOD_85_61750' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtgated_tmode_clock_67' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtgated_clock_67' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtclock_gate_and_67' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtclock_gate_nlatch_67' in Golden
+Uniquified 1 instance(s) referring to module 'phy_LP_CLKG_RC_CG_MOD_84_61741' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtgated_tmode_clock_66' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtgated_clock_66' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtclock_gate_and_66' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtclock_gate_nlatch_66' in Golden
+Uniquified 1 instance(s) referring to module 'phy_LP_CLKG_RC_CG_MOD_83_61732' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtgated_tmode_clock_59' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtgated_clock_59' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtclock_gate_and_59' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtclock_gate_nlatch_59' in Golden
+Uniquified 1 instance(s) referring to module 'phy_LP_CLKG_RC_CG_MOD_82_61723' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtgated_tmode_clock_58' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtgated_clock_58' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtclock_gate_and_58' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtclock_gate_nlatch_58' in Golden
+Uniquified 1 instance(s) referring to module 'phy_LP_CLKG_RC_CG_MOD_81_61714' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtgated_tmode_clock_57' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtgated_clock_57' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtclock_gate_and_57' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtclock_gate_nlatch_57' in Golden
+Uniquified 1 instance(s) referring to module 'phy_LP_CLKG_RC_CG_MOD_80_61705' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtgated_tmode_clock_56' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtgated_clock_56' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtclock_gate_and_56' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtclock_gate_nlatch_56' in Golden
+Uniquified 1 instance(s) referring to module 'phy_LP_CLKG_RC_CG_MOD_79_61696' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtgated_tmode_clock_55' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtgated_clock_55' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtclock_gate_and_55' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtclock_gate_nlatch_55' in Golden
+Uniquified 1 instance(s) referring to module 'phy_LP_CLKG_RC_CG_MOD_78_61687' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtgated_tmode_clock_54' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtgated_clock_54' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtclock_gate_and_54' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtclock_gate_nlatch_54' in Golden
+Uniquified 1 instance(s) referring to module 'phy_LP_CLKG_RC_CG_MOD_77_61678' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtgated_tmode_clock_78' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtgated_clock_78' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtclock_gate_and_78' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtclock_gate_nlatch_78' in Golden
+Uniquified 1 instance(s) referring to module 'phy_LP_CLKG_RC_CG_MOD_76_61669' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtgated_tmode_clock_137' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtgated_clock_137' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtclock_gate_and_137' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtclock_gate_nlatch_137' in Golden
+Uniquified 1 instance(s) referring to module 'phy_LP_CLKG_RC_CG_MOD_75_61660' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtgated_tmode_clock_132' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtgated_clock_132' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtclock_gate_and_132' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtclock_gate_nlatch_132' in Golden
+Uniquified 1 instance(s) referring to module 'phy_LP_CLKG_RC_CG_MOD_74_61651' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtgated_tmode_clock_131' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtgated_clock_131' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtclock_gate_and_131' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtclock_gate_nlatch_131' in Golden
+Uniquified 1 instance(s) referring to module 'phy_LP_CLKG_RC_CG_MOD_73_61642' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtgated_tmode_clock_138' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtgated_clock_138' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtclock_gate_and_138' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtclock_gate_nlatch_138' in Golden
+Uniquified 1 instance(s) referring to module 'phy_LP_CLKG_RC_CG_MOD_72_61633' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtgated_tmode_clock_141' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtgated_clock_141' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtclock_gate_and_141' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtclock_gate_nlatch_141' in Golden
+Uniquified 1 instance(s) referring to module 'phy_LP_CLKG_RC_CG_MOD_71_61624' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtgated_tmode_clock_140' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtgated_clock_140' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtclock_gate_and_140' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtclock_gate_nlatch_140' in Golden
+Uniquified 1 instance(s) referring to module 'phy_LP_CLKG_RC_CG_MOD_70_61615' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtgated_tmode_clock_139' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtgated_clock_139' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtclock_gate_and_139' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtclock_gate_nlatch_139' in Golden
+Uniquified 1 instance(s) referring to module 'phy_LP_CLKG_RC_CG_MOD_69_61606' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtgated_tmode_clock_143' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtgated_clock_143' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtclock_gate_and_143' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtclock_gate_nlatch_143' in Golden
+Uniquified 1 instance(s) referring to module 'phy_LP_CLKG_RC_CG_MOD_68_61597' in Golden
+Uniquified 1 instance(s) referring to module 'phy_LP_CLKG_RC_CG_MOD_67_61562' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtascflop_size1_434' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtgated_tmode_clock_212' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtgated_clock_212' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtclock_gate_and_212' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtclock_gate_nlatch_212' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtgated_tmode_clock_211' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtgated_clock_211' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtclock_gate_and_211' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtclock_gate_nlatch_211' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtgated_tmode_clock_219' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtgated_clock_219' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtclock_gate_and_219' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtclock_gate_nlatch_219' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtgated_tmode_clock_218' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtgated_clock_218' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtclock_gate_and_218' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtclock_gate_nlatch_218' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtgated_tmode_clock_217' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtgated_clock_217' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtclock_gate_and_217' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtclock_gate_nlatch_217' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtgated_tmode_clock_214' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtgated_clock_214' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtclock_gate_and_214' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtclock_gate_nlatch_214' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtgated_tmode_clock_209' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtgated_clock_209' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtclock_gate_and_209' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtclock_gate_nlatch_209' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtgated_tmode_clock_207' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtgated_clock_207' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtclock_gate_and_207' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtclock_gate_nlatch_207' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtgated_tmode_clock_205' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtgated_clock_205' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtclock_gate_and_205' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtclock_gate_nlatch_205' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtgated_tmode_clock_203' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtgated_clock_203' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtclock_gate_and_203' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtclock_gate_nlatch_203' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtgated_tmode_clock_201' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtgated_clock_201' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtclock_gate_and_201' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtclock_gate_nlatch_201' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtgated_tmode_clock_199' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtgated_clock_199' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtclock_gate_and_199' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtclock_gate_nlatch_199' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtgated_tmode_clock_197' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtgated_clock_197' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtclock_gate_and_197' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtclock_gate_nlatch_197' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtgated_tmode_clock_195' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtgated_clock_195' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtclock_gate_and_195' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtclock_gate_nlatch_195' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtgated_tmode_clock_193' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtgated_clock_193' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtclock_gate_and_193' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtclock_gate_nlatch_193' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtgated_tmode_clock_191' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtgated_clock_191' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtclock_gate_and_191' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtclock_gate_nlatch_191' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtgated_tmode_clock_189' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtgated_clock_189' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtclock_gate_and_189' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtclock_gate_nlatch_189' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtgated_tmode_clock_187' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtgated_clock_187' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtclock_gate_and_187' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtclock_gate_nlatch_187' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtgated_tmode_clock_185' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtgated_clock_185' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtclock_gate_and_185' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtclock_gate_nlatch_185' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtgated_tmode_clock_183' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtgated_clock_183' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtclock_gate_and_183' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtclock_gate_nlatch_183' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtgated_tmode_clock_181' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtgated_clock_181' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtclock_gate_and_181' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtclock_gate_nlatch_181' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtgated_tmode_clock_179' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtgated_clock_179' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtclock_gate_and_179' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtclock_gate_nlatch_179' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtgated_tmode_clock_177' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtgated_clock_177' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtclock_gate_and_177' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtclock_gate_nlatch_177' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtgated_tmode_clock_175' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtgated_clock_175' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtclock_gate_and_175' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtclock_gate_nlatch_175' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtgated_tmode_clock_173' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtgated_clock_173' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtclock_gate_and_173' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtclock_gate_nlatch_173' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtgated_tmode_clock_171' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtgated_clock_171' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtclock_gate_and_171' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtclock_gate_nlatch_171' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtgated_tmode_clock_169' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtgated_clock_169' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtclock_gate_and_169' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtclock_gate_nlatch_169' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtgated_tmode_clock_167' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtgated_clock_167' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtclock_gate_and_167' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtclock_gate_nlatch_167' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtgated_tmode_clock_165' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtgated_clock_165' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtclock_gate_and_165' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtclock_gate_nlatch_165' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtgated_tmode_clock_163' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtgated_clock_163' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtclock_gate_and_163' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtclock_gate_nlatch_163' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtgated_tmode_clock_161' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtgated_clock_161' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtclock_gate_and_161' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtclock_gate_nlatch_161' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtgated_tmode_clock_159' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtgated_clock_159' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtclock_gate_and_159' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtclock_gate_nlatch_159' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtgated_tmode_clock_157' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtgated_clock_157' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtclock_gate_and_157' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtclock_gate_nlatch_157' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtgated_tmode_clock_155' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtgated_clock_155' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtclock_gate_and_155' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtclock_gate_nlatch_155' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtgated_tmode_clock_153' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtgated_clock_153' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtclock_gate_and_153' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtclock_gate_nlatch_153' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtgated_tmode_clock_151' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtgated_clock_151' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtclock_gate_and_151' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtclock_gate_nlatch_151' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtgated_tmode_clock_149' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtgated_clock_149' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtclock_gate_and_149' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtclock_gate_nlatch_149' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtgated_tmode_clock_147' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtgated_clock_147' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtclock_gate_and_147' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtclock_gate_nlatch_147' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtgated_tmode_clock_210' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtgated_clock_210' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtclock_gate_and_210' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtclock_gate_nlatch_210' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtgated_tmode_clock_208' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtgated_clock_208' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtclock_gate_and_208' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtclock_gate_nlatch_208' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtgated_tmode_clock_206' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtgated_clock_206' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtclock_gate_and_206' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtclock_gate_nlatch_206' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtgated_tmode_clock_204' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtgated_clock_204' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtclock_gate_and_204' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtclock_gate_nlatch_204' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtgated_tmode_clock_202' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtgated_clock_202' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtclock_gate_and_202' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtclock_gate_nlatch_202' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtgated_tmode_clock_200' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtgated_clock_200' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtclock_gate_and_200' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtclock_gate_nlatch_200' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtgated_tmode_clock_198' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtgated_clock_198' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtclock_gate_and_198' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtclock_gate_nlatch_198' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtgated_tmode_clock_196' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtgated_clock_196' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtclock_gate_and_196' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtclock_gate_nlatch_196' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtgated_tmode_clock_194' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtgated_clock_194' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtclock_gate_and_194' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtclock_gate_nlatch_194' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtgated_tmode_clock_192' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtgated_clock_192' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtclock_gate_and_192' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtclock_gate_nlatch_192' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtgated_tmode_clock_190' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtgated_clock_190' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtclock_gate_and_190' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtclock_gate_nlatch_190' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtgated_tmode_clock_188' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtgated_clock_188' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtclock_gate_and_188' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtclock_gate_nlatch_188' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtgated_tmode_clock_186' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtgated_clock_186' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtclock_gate_and_186' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtclock_gate_nlatch_186' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtgated_tmode_clock_184' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtgated_clock_184' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtclock_gate_and_184' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtclock_gate_nlatch_184' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtgated_tmode_clock_182' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtgated_clock_182' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtclock_gate_and_182' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtclock_gate_nlatch_182' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtgated_tmode_clock_180' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtgated_clock_180' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtclock_gate_and_180' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtclock_gate_nlatch_180' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtgated_tmode_clock_178' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtgated_clock_178' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtclock_gate_and_178' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtclock_gate_nlatch_178' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtgated_tmode_clock_176' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtgated_clock_176' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtclock_gate_and_176' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtclock_gate_nlatch_176' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtgated_tmode_clock_174' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtgated_clock_174' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtclock_gate_and_174' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtclock_gate_nlatch_174' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtgated_tmode_clock_172' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtgated_clock_172' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtclock_gate_and_172' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtclock_gate_nlatch_172' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtgated_tmode_clock_170' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtgated_clock_170' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtclock_gate_and_170' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtclock_gate_nlatch_170' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtgated_tmode_clock_168' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtgated_clock_168' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtclock_gate_and_168' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtclock_gate_nlatch_168' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtgated_tmode_clock_166' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtgated_clock_166' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtclock_gate_and_166' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtclock_gate_nlatch_166' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtgated_tmode_clock_164' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtgated_clock_164' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtclock_gate_and_164' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtclock_gate_nlatch_164' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtgated_tmode_clock_162' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtgated_clock_162' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtclock_gate_and_162' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtclock_gate_nlatch_162' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtgated_tmode_clock_160' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtgated_clock_160' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtclock_gate_and_160' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtclock_gate_nlatch_160' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtgated_tmode_clock_158' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtgated_clock_158' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtclock_gate_and_158' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtclock_gate_nlatch_158' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtgated_tmode_clock_156' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtgated_clock_156' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtclock_gate_and_156' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtclock_gate_nlatch_156' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtgated_tmode_clock_154' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtgated_clock_154' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtclock_gate_and_154' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtclock_gate_nlatch_154' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtgated_tmode_clock_152' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtgated_clock_152' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtclock_gate_and_152' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtclock_gate_nlatch_152' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtgated_tmode_clock_150' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtgated_clock_150' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtclock_gate_and_150' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtclock_gate_nlatch_150' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtgated_tmode_clock_148' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtgated_clock_148' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtclock_gate_and_148' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtclock_gate_nlatch_148' in Golden
+Uniquified 1 instance(s) referring to module 'phy_LP_CLKG_RC_CG_MOD_66_61274' in Golden
+Uniquified 1 instance(s) referring to module 'phy_LP_CLKG_RC_CG_MOD_65_61273' in Golden
+Uniquified 1 instance(s) referring to module 'phy_LP_CLKG_RC_CG_MOD_64_61272' in Golden
+Uniquified 1 instance(s) referring to module 'phy_LP_CLKG_RC_CG_MOD_63_61271' in Golden
+Uniquified 1 instance(s) referring to module 'phy_LP_CLKG_RC_CG_MOD_62_61270' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtascflop_size1_56' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtascflop_size1_34' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtascflop_size1_29' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtascflop_size1_30' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtascflop_size1_90' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtascflop_size1_53' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtascflop_size1_51' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtascflop_size1_80' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtascflop_size1_79' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtascflop_size1_58' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtascflop_size1_61' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtascflop_size1_11' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtascflop_size1_72' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtascflop_size1_71' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtascflop_size1_46' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtascflop_size1_41' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtascflop_size1_9' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtascflop_size1_8' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtascflop_size1_31' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtascflop_size1_35' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtascflop_size1_36' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtascflop_size1_37' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtascflop_size1_57' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtascflop_size1_107' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtascflop_size1_106' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtascflop_size1_33' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtascflop_size1_10' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtascflop_size1_17' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtascflop_size1_93' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtascflop_size1_92' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtascflop_size1_7' in Golden
+Uniquified 1 instance(s) referring to module 'phy_LP_CLKG_RC_CG_MOD_61_61212' in Golden
+Uniquified 1 instance(s) referring to module 'phy_LP_CLKG_RC_CG_MOD_60_61209' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtascflop_size1_86' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtascflop_size1_85' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtascflop_size1_44' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtascflop_size1_19' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtascflop_size1_60' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtascflop_size1_76' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtascflop_size1_75' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtascflop_size1_95' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtascflop_size1_94' in Golden
+Uniquified 1 instance(s) referring to module 'phy_LP_CLKG_RC_CG_MOD_59_61197' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtascflop_size1_38' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtascflop_size1_39' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtascflop_size1_45' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtascflop_size1_110' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtascflop_size1_82' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtascflop_size1_84' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtascflop_size1_83' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtascflop_size1_49' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtascflop_size1_65' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtascflop_size1_32' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtascflop_size1_1' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtascflop_size1_48' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtascflop_size1_89' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtascflop_size1_88' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtascflop_size1_87' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtascflop_size1_111' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtascflop_size1_112' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtascflop_size1_101' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtascflop_size1_64' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtascflop_size1_55' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtascflop_size1_69' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtascflop_size1_70' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtascflop_size1_74' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtascflop_size1_97' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtascflop_size1_81' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtascflop_size1_40' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtascflop_size1' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtascflop_size1_54' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtascflop_size1_3' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtascflop_size1_18' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtascflop_size1_63' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtascflop_size1_43' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtascflop_size1_6' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtascflop_size1_13' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtascflop_size1_4' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtascflop_size1_22' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtascflop_size1_2' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtascflop_size1_50' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtascflop_size1_12' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtascflop_size1_5' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtascflop_size1_20' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtascflop_size1_23' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtascflop_size1_21' in Golden
+Uniquified 1 instance(s) referring to module 'phy_LP_CLKG_RC_CG_MOD_58_61125' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtascflop_size1_73' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtascflop_size1_47' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtascflop_size1_59' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtascflop_size1_25' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtascflop_size1_103' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtascflop_size1_108' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtascflop_size1_14' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtascflop_size1_42' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtascflop_size1_66' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtascflop_size1_27' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtascflop_size1_67' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtascflop_size1_15' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtascflop_size1_91' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtascflop_size1_78' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtascflop_size1_77' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtascflop_size1_62' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtascflop_size1_99' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtascflop_size1_68' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtascflop_size1_100' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtascflop_size1_98' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtascflop_size1_102' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtascflop_size1_109' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtascflop_size1_26' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtascflop_size1_104' in Golden
+Uniquified 1 instance(s) referring to module 'phy_LP_CLKG_RC_CG_MOD_57_61056' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtascflop_size1_96' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtascflop_size1_182' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtascflop_size1_164' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtascflop_size1_165' in Golden
+Uniquified 1 instance(s) referring to module 'phy_LP_CLKG_RC_CG_MOD_56_61048' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtascflop_size1_189' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtascflop_size1_126' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtascflop_size1_147' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtascflop_size1_178' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtascflop_size1_122' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtascflop_size1_119' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtascflop_size1_194' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtascflop_size1_185' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtascflop_size1_149' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtascflop_size1_148' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtascflop_size1_121' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtascflop_size1_197' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtascflop_size1_198' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtascflop_size1_154' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtascflop_size1_127' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtascflop_size1_132' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtascflop_size1_131' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtascflop_size1_117' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtascflop_size1_115' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtascflop_size1_116' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtascflop_size1_133' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtascflop_size1_155' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtascflop_size1_156' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtascflop_size1_157' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtascflop_size1_114' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtascflop_size1_158' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtascflop_size1_208' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtascflop_size1_215' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtascflop_size1_186' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtascflop_size1_207' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtascflop_size1_142' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtascflop_size1_172' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtascflop_size1_174' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtascflop_size1_169' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtascflop_size1_188' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtascflop_size1_166' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtascflop_size1_167' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtascflop_size1_135' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtascflop_size1_138' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtascflop_size1_139' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtascflop_size1_195' in Golden
+Uniquified 1 instance(s) referring to module 'phy_LP_CLKG_RC_CG_MOD_55_60980' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtascflop_size1_124' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtascflop_size1_213' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtascflop_size1_143' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtascflop_size1_214' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtascflop_size1_161' in Golden
+Uniquified 1 instance(s) referring to module 'phy_LP_CLKG_RC_CG_MOD_54_60967' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtascflop_size1_179' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtascflop_size1_184' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtascflop_size1_210' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtascflop_size1_209' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtascflop_size1_191' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtascflop_size1_200' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtascflop_size1_146' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtascflop_size1_144' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtascflop_size1_145' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtascflop_size1_140' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtascflop_size1_141' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtascflop_size1_113' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtascflop_size1_152' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtascflop_size1_125' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtascflop_size1_199' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtascflop_size1_196' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtascflop_size1_120' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtascflop_size1_181' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtascflop_size1_136' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtascflop_size1_183' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtascflop_size1_170' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtascflop_size1_129' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtascflop_size1_134' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtascflop_size1_180' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtascflop_size1_187' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtascflop_size1_130' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtascflop_size1_123' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtascflop_size1_160' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtascflop_size1_159' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtascflop_size1_211' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtascflop_size1_177' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtascflop_size1_201' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtascflop_size1_204' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtascflop_size1_202' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtascflop_size1_205' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtascflop_size1_203' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtascflop_size1_206' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtascflop_size1_168' in Golden
+Uniquified 1 instance(s) referring to module 'phy_LP_CLKG_RC_CG_MOD_53_60918' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtascflop_size1_192' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtascflop_size1_193' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtascflop_size1_176' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtascflop_size1_118' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtascflop_size1_175' in Golden
+Uniquified 1 instance(s) referring to module 'phy_gddr36_ew_cdn_ghs_phy_hic_clkgate_24' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtascflop_size1_171' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtascflop_size1_153' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtascflop_size1_212' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtascflop_size1_429' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtascflop_size1_428' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtascflop_size1_427' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtascflop_size1_430' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtascflop_size1_433' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtascflop_size1_432' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtascflop_size1_431' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtascflop_size1_394' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtascflop_size1_398' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtascflop_size1_396' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtascflop_size1_395' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtascflop_size1_393' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtgated_tmode_clock_14' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtgated_clock_14' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtclock_gate_and_14' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtclock_gate_nlatch_14' in Golden
+Uniquified 1 instance(s) referring to module 'phy_gddr36_ew_cdn_ghs_phy_hic_clkgate_26' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtascflop_size1_311' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtascflop_size1_331' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtascflop_size1_343' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtascflop_size1_388' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtascflop_size1_389' in Golden
+Uniquified 1 instance(s) referring to module 'phy_LP_CLKG_RC_CG_MOD_52_60784' in Golden
+Uniquified 1 instance(s) referring to module 'phy_LP_CLKG_RC_CG_MOD_48_60770' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtascflop_size1_321' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtascflop_size1_340' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtascflop_size1_339' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtascflop_size1_338' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtascflop_size1_348' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtascflop_size1_347' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtascflop_size1_370' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtascflop_size1_377' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtascflop_size1_376' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtascflop_size1_372' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtascflop_size1_373' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtascflop_size1_355' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtascflop_size1_356' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtascflop_size1_342' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtascflop_size1_387' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtascflop_size1_361' in Golden
+Uniquified 1 instance(s) referring to module 'phy_LP_CLKG_RC_CG_MOD_44_60736' in Golden
+Uniquified 1 instance(s) referring to module 'phy_LP_CLKG_RC_CG_MOD_41_60729' in Golden
+Uniquified 1 instance(s) referring to module 'phy_LP_CLKG_RC_CG_MOD_40_60720' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtascflop_size1_367' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtascflop_size1_353' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtascflop_size1_319' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtascflop_size1_318' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtascflop_size1_383' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtascflop_size1_382' in Golden
+Uniquified 1 instance(s) referring to module 'phy_LP_CLKG_RC_CG_MOD_39_60686' in Golden
+Uniquified 1 instance(s) referring to module 'phy_LP_CLKG_RC_CG_MOD_38_60684' in Golden
+Uniquified 1 instance(s) referring to module 'phy_LP_CLKG_RC_CG_MOD_37_60682' in Golden
+Uniquified 1 instance(s) referring to module 'phy_LP_CLKG_RC_CG_MOD_36_60680' in Golden
+Uniquified 1 instance(s) referring to module 'phy_LP_CLKG_RC_CG_MOD_35_60678' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtascflop_size1_324' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtascflop_size1_312' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtascflop_size1_359' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtascflop_size1_327' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtascflop_size1_315' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtascflop_size1_317' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtascflop_size1_386' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtascflop_size1_323' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtascflop_size1_329' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtascflop_size1_325' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtascflop_size1_391' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtascflop_size1_390' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtascflop_size1_381' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtascflop_size1_314' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtascflop_size1_313' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtascflop_size1_375' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtascflop_size1_380' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtascflop_size1_365' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtascflop_size1_364' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtascflop_size1_368' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtascflop_size1_354' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtgated_tmode_clock_29' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtgated_clock_29' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtclock_gate_and_29' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtclock_gate_nlatch_29' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtgated_tmode_clock_28' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtgated_clock_28' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtclock_gate_and_28' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtclock_gate_nlatch_28' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtgated_tmode_clock_16' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtgated_clock_16' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtclock_gate_and_16' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtclock_gate_nlatch_16' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtgated_tmode_clock_15' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtgated_clock_15' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtclock_gate_and_15' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtclock_gate_nlatch_15' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtgated_tmode_clock_23' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtgated_clock_23' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtclock_gate_and_23' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtclock_gate_nlatch_23' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtgated_tmode_clock_22' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtgated_clock_22' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtclock_gate_and_22' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtclock_gate_nlatch_22' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtascflop_size1_320' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtgated_tmode_clock_19' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtgated_clock_19' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtclock_gate_and_19' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtclock_gate_nlatch_19' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtgated_tmode_clock_17' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtgated_clock_17' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtclock_gate_and_17' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtclock_gate_nlatch_17' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtgated_tmode_clock_27' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtgated_clock_27' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtclock_gate_and_27' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtclock_gate_nlatch_27' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtgated_tmode_clock_26' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtgated_clock_26' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtclock_gate_and_26' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtclock_gate_nlatch_26' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtascflop_size1_385' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtascflop_size1_384' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtascflop_size1_448' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtascflop_size1_452' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtascflop_size1_451' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtascflop_size1_450' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtascflop_size1_449' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtascflop_size1_454' in Golden
+Uniquified 1 instance(s) referring to module 'phy_LP_CLKG_RC_CG_MOD_33_60552' in Golden
+Uniquified 1 instance(s) referring to module 'phy_LP_CLKG_RC_CG_MOD_32_60549' in Golden
+Uniquified 1 instance(s) referring to module 'phy_LP_CLKG_RC_CG_MOD_31_60546' in Golden
+Uniquified 1 instance(s) referring to module 'phy_LP_CLKG_RC_CG_MOD_30_60543' in Golden
+Uniquified 1 instance(s) referring to module 'phy_LP_CLKG_RC_CG_MOD_29_60540' in Golden
+Uniquified 1 instance(s) referring to module 'phy_LP_CLKG_RC_CG_MOD_28_60537' in Golden
+Uniquified 1 instance(s) referring to module 'phy_LP_CLKG_RC_CG_MOD_27_60534' in Golden
+Uniquified 1 instance(s) referring to module 'phy_LP_CLKG_RC_CG_MOD_26_60531' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtascflop_size1_444' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtascflop_size1_443' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtascflop_size1_437' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtascflop_size1_446' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtascflop_size1_442' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtascflop_size1_441' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtascflop_size1_440' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtascflop_size1_439' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtgated_tmode_clock_343' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtgated_clock_343' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtclock_gate_and_343' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtclock_gate_nlatch_343' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtgated_tmode_clock_342' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtgated_clock_342' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtclock_gate_and_342' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtclock_gate_nlatch_342' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtgated_tmode_clock_341' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtgated_clock_341' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtclock_gate_and_341' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtclock_gate_nlatch_341' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtascflop_size1_402' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtascflop_size1_403' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtascflop_size1_404' in Golden
+Uniquified 1 instance(s) referring to module 'phy_LP_CLKG_RC_CG_MOD_25_60492' in Golden
+Uniquified 1 instance(s) referring to module 'phy_LP_CLKG_RC_CG_MOD_24_60489' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtgated_tmode_clock_34' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtgated_clock_34' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtclock_gate_and_34' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtclock_gate_nlatch_34' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtgated_tmode_clock_33' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtgated_clock_33' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtclock_gate_and_33' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtclock_gate_nlatch_33' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtgated_tmode_clock_32' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtgated_clock_32' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtclock_gate_and_32' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtclock_gate_nlatch_32' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtgated_tmode_clock_31' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtgated_clock_31' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtclock_gate_and_31' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtclock_gate_nlatch_31' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtascflop_size1_422' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtascflop_size1_425' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtascflop_size1_424' in Golden
+Uniquified 1 instance(s) referring to module 'phy_LP_CLKG_RC_CG_MOD_23_60452' in Golden
+Uniquified 1 instance(s) referring to module 'phy_LP_CLKG_RC_CG_MOD_22_60450' in Golden
+Uniquified 1 instance(s) referring to module 'phy_LP_CLKG_RC_CG_MOD_21_60447' in Golden
+Uniquified 1 instance(s) referring to module 'phy_LP_CLKG_RC_CG_MOD_19_60442' in Golden
+Uniquified 1 instance(s) referring to module 'phy_LP_CLKG_RC_CG_MOD_18_60438' in Golden
+Uniquified 1 instance(s) referring to module 'phy_LP_CLKG_RC_CG_MOD_17_60436' in Golden
+Uniquified 1 instance(s) referring to module 'phy_LP_CLKG_RC_CG_MOD_16_60426' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtgated_tmode_clock_44' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtgated_clock_44' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtclock_gate_and_44' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtclock_gate_nlatch_44' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtascflop_size1_420' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtascflop_size1_415' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtascflop_size1_414' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtascflop_size1_419' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtgated_tmode_clock_43' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtgated_clock_43' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtclock_gate_and_43' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtclock_gate_nlatch_43' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtgated_tmode_clock_40' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtgated_clock_40' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtclock_gate_and_40' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtclock_gate_nlatch_40' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtgated_tmode_clock_41' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtgated_clock_41' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtclock_gate_and_41' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtclock_gate_nlatch_41' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtgated_tmode_clock_42' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtgated_clock_42' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtclock_gate_and_42' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtclock_gate_nlatch_42' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtascflop_size1_409' in Golden
+Uniquified 1 instance(s) referring to module 'phy_LP_CLKG_RC_CG_MOD_15_60393' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtgated_tmode_clock_35' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtgated_clock_35' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtclock_gate_and_35' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtclock_gate_nlatch_35' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtascflop_size1_407' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtascflop_size1_408' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtascflop_size1_406' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtascflop_size1_405' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtascflop_size1_412' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtgated_tmode_clock_39' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtgated_clock_39' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtclock_gate_and_39' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtclock_gate_nlatch_39' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtgated_tmode_clock_36' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtgated_clock_36' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtclock_gate_and_36' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtclock_gate_nlatch_36' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtgated_tmode_clock_37' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtgated_clock_37' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtclock_gate_and_37' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtclock_gate_nlatch_37' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtgated_tmode_clock_38' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtgated_clock_38' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtclock_gate_and_38' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtclock_gate_nlatch_38' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtascflop_size1_421' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtgated_tmode_clock_45' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtgated_clock_45' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtclock_gate_and_45' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtclock_gate_nlatch_45' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtgated_tmode_clock_46' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtgated_clock_46' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtclock_gate_and_46' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtclock_gate_nlatch_46' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtgated_tmode_clock_47' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtgated_clock_47' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtclock_gate_and_47' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtclock_gate_nlatch_47' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtgated_tmode_clock_48' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtgated_clock_48' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtclock_gate_and_48' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtclock_gate_nlatch_48' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtascflop_size1_224' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtascflop_size1_226' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtascflop_size1_238' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtascflop_size1_237' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtascflop_size1_236' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtascflop_size1_246' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtascflop_size1_243' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtascflop_size1_245' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtascflop_size1_233' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtascflop_size1_229' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtascflop_size1_228' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtascflop_size1_235' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtascflop_size1_261' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtascflop_size1_225' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtascflop_size1_232' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtascflop_size1_218' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtascflop_size1_219' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtascflop_size1_220' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtascflop_size1_230' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtascflop_size1_252' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtascflop_size1_253' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtascflop_size1_256' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtascflop_size1_257' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtascflop_size1_254' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtascflop_size1_255' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtascflop_size1_221' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtascflop_size1_222' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtascflop_size1_240' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtascflop_size1_217' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtascflop_size1_216' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtascflop_size1_239' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtascflop_size1_263' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtascflop_size1_262' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtascflop_size1_248' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtascflop_size1_242' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtascflop_size1_241' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtascflop_size1_231' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtascflop_size1_251' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtascflop_size1_260' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtascflop_size1_259' in Golden
+Uniquified 1 instance(s) referring to module 'phy_LP_CLKG_RC_CG_MOD_13_60289' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtgated_tmode_clock_10' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtgated_clock_10' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtclock_gate_and_10' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtclock_gate_nlatch_10' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtgated_tmode_clock_9' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtgated_clock_9' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtclock_gate_and_9' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtclock_gate_nlatch_9' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtascflop_size1_250' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtascflop_size1_249' in Golden
+Uniquified 1 instance(s) referring to module 'phy_LP_CLKG_RC_CG_MOD_11_60274' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtascflop_size1_471' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtascflop_size1_475' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtascflop_size1_474' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtascflop_size1_473' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtascflop_size1_472' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtascflop_size1_470' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtascflop_size1_468' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtascflop_size1_469' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtascflop_size1_467' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtascflop_size1_477' in Golden
+Uniquified 1 instance(s) referring to module 'phy_LP_CLKG_RC_CG_MOD_10_60257' in Golden
+Uniquified 1 instance(s) referring to module 'phy_LP_CLKG_RC_CG_MOD_9_60254' in Golden
+Uniquified 1 instance(s) referring to module 'phy_LP_CLKG_RC_CG_MOD_8_60251' in Golden
+Uniquified 1 instance(s) referring to module 'phy_LP_CLKG_RC_CG_MOD_7_60248' in Golden
+Uniquified 1 instance(s) referring to module 'phy_LP_CLKG_RC_CG_MOD_6_60245' in Golden
+Uniquified 1 instance(s) referring to module 'phy_LP_CLKG_RC_CG_MOD_5_60242' in Golden
+Uniquified 1 instance(s) referring to module 'phy_LP_CLKG_RC_CG_MOD_4_60239' in Golden
+Uniquified 1 instance(s) referring to module 'phy_LP_CLKG_RC_CG_MOD_3_60236' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtascflop_size1_463' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtascflop_size1_462' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtascflop_size1_455' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtascflop_size1_465' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtascflop_size1_461' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtascflop_size1_460' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtascflop_size1_459' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtascflop_size1_457' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtgated_tmode_clock_346' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtgated_clock_346' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtclock_gate_and_346' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtclock_gate_nlatch_346' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtgated_tmode_clock_345' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtgated_clock_345' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtclock_gate_and_345' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtclock_gate_nlatch_345' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtgated_tmode_clock_344' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtgated_clock_344' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtclock_gate_and_344' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtclock_gate_nlatch_344' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtascflop_size1_307' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtascflop_size1_301' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtascflop_size1_300' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtascflop_size1_272' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtascflop_size1_271' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtascflop_size1_309' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtascflop_size1_273' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtascflop_size1_275' in Golden
+Uniquified 1 instance(s) referring to module 'phy_LP_CLKG_RC_CG_MOD_2_60187' in Golden
+Uniquified 1 instance(s) referring to module 'phy_LP_CLKG_RC_CG_MOD_1_60185' in Golden
+Uniquified 1 instance(s) referring to module 'phy_LP_CLKG_RC_CG_MOD_60183' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtascflop_size1_268' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtascflop_size1_302' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtascflop_size1_287' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtascflop_size1_297' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtascflop_size1_288' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtascflop_size1_298' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtascflop_size1_293' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtascflop_size1_291' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtascflop_size1_294' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtascflop_size1_292' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtascflop_size1_310' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtascflop_size1_276' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtascflop_size1_267' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtascflop_size1_266' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtascflop_size1_265' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtascflop_size1_305' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtascflop_size1_306' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtascflop_size1_282' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtascflop_size1_286' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtascflop_size1_264' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtascflop_size1_274' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtascflop_size1_270' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtascflop_size1_304' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtascflop_size1_284' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtascflop_size1_281' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtascflop_size1_303' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtgated_tmode_clock_11' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtgated_clock_11' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtclock_gate_and_11' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtclock_gate_nlatch_11' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtgated_tmode_clock_12' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtgated_clock_12' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtclock_gate_and_12' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtclock_gate_nlatch_12' in Golden
+Uniquified 1 instance(s) referring to module 'phy_gddr36_ew_cdn_ghs_phy_hic_clkgate_25' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtgated_tmode_clock_13' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtgated_clock_13' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtclock_gate_and_13' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtclock_gate_nlatch_13' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtascflop_size1_285' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtascflop_size1_283' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtgated_tmode_clock_49' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtgated_clock_49' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtclock_gate_and_49' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtclock_gate_nlatch_49' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtgated_tmode_clock_50' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtgated_clock_50' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtclock_gate_and_50' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtclock_gate_nlatch_50' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtgated_tmode_clock_347' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtgated_clock_347' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtclock_gate_and_347' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtclock_gate_nlatch_347' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtascflop_size1_509' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtascflop_size1_498' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtascflop_size1_505' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtascflop_size1_506' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtascflop_size1_497' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtascflop_size1_502' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtascflop_size1_501' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtascflop_size1_500' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtascflop_size1_496' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtascflop_size1_508' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtascflop_size1_495' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtascflop_size1_499' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtascflop_size1_507' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtascflop_size1_503' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtascflop_size1_504' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtgated_tmode_clock_350' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtgated_clock_350' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtclock_gate_and_350' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtclock_gate_nlatch_350' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtgated_tmode_clock_349' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtgated_clock_349' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtclock_gate_and_349' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtclock_gate_nlatch_349' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtascflop_size1_478' in Golden
+Uniquified 1 instance(s) referring to module 'phy_gddr36_ew_cdn_ghs_phy_sync_rst_53' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtascflop_size1_479' in Golden
+Uniquified 1 instance(s) referring to module 'phy_gddr36_ew_cdn_ghs_phy_sync_rst_54' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtascflop_size1_481' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtascflop_size1_492' in Golden
+Uniquified 1 instance(s) referring to module 'phy_LP_CLKG_RC_CG_MOD_11_65293' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtascflop_size1_487' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtascflop_size1_488' in Golden
+Uniquified 1 instance(s) referring to module 'phy_gddr36_ew_cdn_ghs_phy_sync_rst_57' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtascflop_size1_493' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtascflop_size1_484' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtascflop_size1_485' in Golden
+Uniquified 1 instance(s) referring to module 'phy_gddr36_ew_cdn_ghs_phy_sync_rst_56' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtascflop_size1_490' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtascflop_size1_491' in Golden
+Uniquified 1 instance(s) referring to module 'phy_gddr36_ew_cdn_ghs_phy_sync_rst_58' in Golden
+Uniquified 1 instance(s) referring to module 'phy_LP_CLKG_RC_CG_MOD_10_65272' in Golden
+Uniquified 1 instance(s) referring to module 'phy_LP_CLKG_RC_CG_MOD_9_65270' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtascflop_size1_482' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtascflop_size1_483' in Golden
+Uniquified 1 instance(s) referring to module 'phy_gddr36_ew_cdn_ghs_phy_sync_rst_48' in Golden
+Uniquified 1 instance(s) referring to module 'phy_gddr36_ew_cdn_ghs_phy_sync_rst_52' in Golden
+Uniquified 1 instance(s) referring to module 'phy_gddr36_ew_cdn_ghs_phy_sync_rst_51' in Golden
+Uniquified 1 instance(s) referring to module 'phy_gddr36_ew_cdn_ghs_phy_sync_rst_50' in Golden
+Uniquified 1 instance(s) referring to module 'phy_LP_CLKG_RC_CG_MOD_8_65241' in Golden
+Uniquified 1 instance(s) referring to module 'phy_LP_CLKG_RC_CG_MOD_7_65238' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtascflop_size1_489' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtascflop_size1_486' in Golden
+Uniquified 1 instance(s) referring to module 'phy_LP_CLKG_RC_CG_MOD_6_65233' in Golden
+Uniquified 1 instance(s) referring to module 'phy_LP_CLKG_RC_CG_MOD_5_65230' in Golden
+Uniquified 1 instance(s) referring to module 'phy_LP_CLKG_RC_CG_MOD_4_65228' in Golden
+Uniquified 1 instance(s) referring to module 'phy_LP_CLKG_RC_CG_MOD_3_65226' in Golden
+Uniquified 1 instance(s) referring to module 'phy_LP_CLKG_RC_CG_MOD_2_65224' in Golden
+Uniquified 1 instance(s) referring to module 'phy_LP_CLKG_RC_CG_MOD_117_65220' in Golden
+Uniquified 1 instance(s) referring to module 'phy_LP_CLKG_RC_CG_MOD_1_65218' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtgated_tmode_clock_348' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtgated_clock_348' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtclock_gate_and_348' in Golden
+Uniquified 1 instance(s) referring to module 'phy_xtclock_gate_nlatch_348' in Golden
+Uniquified 1 instance(s) referring to module 'phy_LP_CLKG_RC_CG_MOD_65208' in Golden
+Uniquified 1 instance(s) referring to module 'phy_LP_CLKG_RC_CG_MOD_1_65140' in Golden
+Uniquified 1 instance(s) referring to module 'phy_LP_CLKG_RC_CG_MOD_7_65191' in Golden
+Uniquified 1 instance(s) referring to module 'phy_LP_CLKG_RC_CG_MOD_6_65189' in Golden
+Uniquified 1 instance(s) referring to module 'phy_LP_CLKG_RC_CG_MOD_5_65148' in Golden
+Uniquified 1 instance(s) referring to module 'phy_LP_CLKG_RC_CG_MOD_4_65147' in Golden
+Uniquified 1 instance(s) referring to module 'phy_LP_CLKG_RC_CG_MOD_3_65146' in Golden
+Uniquified 1 instance(s) referring to module 'phy_LP_CLKG_RC_CG_MOD_2_65145' in Golden
+Uniquified 1 instance(s) referring to module 'phy_LP_CLKG_RC_CG_MOD_65131' in Golden
+Uniquified 1 instance(s) referring to module 'phy_LP_CLKG_RC_CG_MOD_29_65128' in Golden
+Uniquified 1 instance(s) referring to module 'phy_LP_CLKG_RC_CG_MOD_28_65127' in Golden
+Uniquified 1 instance(s) referring to module 'phy_LP_CLKG_RC_CG_MOD_27_65126' in Golden
+Uniquified 1 instance(s) referring to module 'phy_LP_CLKG_RC_CG_MOD_26_65125' in Golden
+Uniquified 1 instance(s) referring to module 'phy_LP_CLKG_RC_CG_MOD_25_65124' in Golden
+Uniquified 1 instance(s) referring to module 'phy_LP_CLKG_RC_CG_MOD_24_65123' in Golden
+Uniquified 1 instance(s) referring to module 'phy_LP_CLKG_RC_CG_MOD_23_65122' in Golden
+Uniquified 1 instance(s) referring to module 'phy_LP_CLKG_RC_CG_MOD_22_65121' in Golden
+Uniquified 1 instance(s) referring to module 'phy_LP_CLKG_RC_CG_MOD_21_65120' in Golden
+Uniquified 1 instance(s) referring to module 'phy_LP_CLKG_RC_CG_MOD_20_65119' in Golden
+Uniquified 1 instance(s) referring to module 'phy_LP_CLKG_RC_CG_MOD_19_65118' in Golden
+Uniquified 1 instance(s) referring to module 'phy_LP_CLKG_RC_CG_MOD_18_65117' in Golden
+Uniquified 1 instance(s) referring to module 'phy_LP_CLKG_RC_CG_MOD_17_65116' in Golden
+Uniquified 1 instance(s) referring to module 'phy_LP_CLKG_RC_CG_MOD_16_65115' in Golden
+Uniquified 1 instance(s) referring to module 'phy_LP_CLKG_RC_CG_MOD_15_65114' in Golden
+Uniquified 1 instance(s) referring to module 'phy_LP_CLKG_RC_CG_MOD_14_65113' in Golden
+Uniquified 1 instance(s) referring to module 'phy_LP_CLKG_RC_CG_MOD_13_65112' in Golden
+Uniquified 1 instance(s) referring to module 'phy_LP_CLKG_RC_CG_MOD_12_65111' in Golden
+Uniquified 1 instance(s) referring to module 'phy_LP_CLKG_RC_CG_MOD_11_65110' in Golden
+Uniquified 1 instance(s) referring to module 'phy_LP_CLKG_RC_CG_MOD_10_65109' in Golden
+Uniquified 1 instance(s) referring to module 'phy_LP_CLKG_RC_CG_MOD_9_65108' in Golden
+Uniquified 1 instance(s) referring to module 'phy_LP_CLKG_RC_CG_MOD_8_65107' in Golden
+Uniquified 1 instance(s) referring to module 'phy_LP_CLKG_RC_CG_MOD_7_65106' in Golden
+Uniquified 1 instance(s) referring to module 'phy_LP_CLKG_RC_CG_MOD_6_65105' in Golden
+Uniquified 1 instance(s) referring to module 'phy_LP_CLKG_RC_CG_MOD_5_65104' in Golden
+Uniquified 1 instance(s) referring to module 'phy_LP_CLKG_RC_CG_MOD_4_65103' in Golden
+Uniquified 1 instance(s) referring to module 'phy_LP_CLKG_RC_CG_MOD_3_65102' in Golden
+Uniquified 1 instance(s) referring to module 'phy_LP_CLKG_RC_CG_MOD_2_65101' in Golden
+Uniquified 1 instance(s) referring to module 'phy_LP_CLKG_RC_CG_MOD_1_65100' in Golden
+Uniquified 1 instance(s) referring to module 'phy_LP_CLKG_RC_CG_MOD_65099' in Golden
+Uniquified 1 instance(s) referring to module 'phy_gddr36_ew_cdn_ghs_phy_hic_clkgate_40' in Golden
+Uniquified 1 instance(s) referring to module 'phy_gddr36_ew_cdn_ghs_phy_hic_clkgate_39' in Golden
+Uniquified 1 instance(s) referring to module 'phy_gddr36_ew_cdn_ghs_phy_hic_clkgate_41' in Golden
+Uniquified 1 instance(s) referring to module 'phy_gddr36_ew_cdn_ghs_phy_hic_clkgate_47' in Golden
+Uniquified 1 instance(s) referring to module 'phy_gddr36_ew_cdn_ghs_phy_hic_clkgate_29' in Golden
+Uniquified 1 instance(s) referring to module 'phy_gddr36_ew_cdn_ghs_phy_sync_rst_60' in Golden
+Uniquified 1 instance(s) referring to module 'phy_gddr36_ew_cdn_ghs_phy_hic_hs_sync_dff_ASYNCRESET1_RSTVALUE1h0_75' in Golden
+Uniquified 1 instance(s) referring to module 'phy_gddr36_ew_cdn_ghs_phy_sync_rst_61' in Golden
+Uniquified 1 instance(s) referring to module 'phy_gddr36_ew_cdn_ghs_phy_hic_hs_sync_dff_ASYNCRESET1_RSTVALUE1h0_76' in Golden
+Uniquified 1 instance(s) referring to module 'phy_gddr36_ew_cdn_ghs_phy_hic_clkgate_28' in Golden
+Uniquified 1 instance(s) referring to module 'phy_gddr36_ew_cdn_ghs_phy_hic_clkgate_34' in Golden
+Uniquified 1 instance(s) referring to module 'phy_gddr36_ew_cdn_ghs_phy_hic_clkgate_33' in Golden
+Uniquified 1 instance(s) referring to module 'phy_gddr36_ew_cdn_ghs_phy_hic_clkgate_38' in Golden
+Uniquified 1 instance(s) referring to module 'phy_gddr36_ew_cdn_ghs_phy_hic_clkgate_37' in Golden
+Uniquified 1 instance(s) referring to module 'phy_gddr36_ew_cdn_ghs_phy_hic_clkgate_31' in Golden
+Uniquified 1 instance(s) referring to module 'phy_gddr36_ew_cdn_ghs_phy_hic_clkgate_32' in Golden
+Uniquified 1 instance(s) referring to module 'phy_gddr36_ew_cdn_ghs_phy_hic_hs_sync_dff_ASYNCRESET1_RSTVALUE1h0_77' in Golden
+Uniquified 1 instance(s) referring to module 'phy_gddr36_ew_cdn_ghs_phy_hic_clkgate_30' in Golden
+Uniquified 1 instance(s) referring to module 'phy_gddr36_ew_cdn_ghs_phy_sync_rst_67' in Golden
+Uniquified 1 instance(s) referring to module 'phy_gddr36_ew_cdn_ghs_phy_hic_hs_sync_dff_ASYNCRESET1_RSTVALUE1h0_83' in Golden
+Uniquified 1 instance(s) referring to module 'phy_gddr36_ew_cdn_ghs_phy_hic_clkgate_36' in Golden
+Uniquified 1 instance(s) referring to module 'phy_gddr36_ew_cdn_ghs_phy_sync_rst_66' in Golden
+Uniquified 1 instance(s) referring to module 'phy_gddr36_ew_cdn_ghs_phy_hic_hs_sync_dff_ASYNCRESET1_RSTVALUE1h0_82' in Golden
+Uniquified 1 instance(s) referring to module 'phy_gddr36_ew_cdn_ghs_phy_sync_rst_63' in Golden
+Uniquified 1 instance(s) referring to module 'phy_gddr36_ew_cdn_ghs_phy_hic_hs_sync_dff_ASYNCRESET1_RSTVALUE1h0_79' in Golden
+Uniquified 1 instance(s) referring to module 'phy_gddr36_ew_cdn_ghs_phy_hic_clkgate_35' in Golden
+Uniquified 1 instance(s) referring to module 'phy_gddr36_ew_cdn_ghs_phy_sync_rst_65' in Golden
+Uniquified 1 instance(s) referring to module 'phy_gddr36_ew_cdn_ghs_phy_hic_hs_sync_dff_ASYNCRESET1_RSTVALUE1h0_81' in Golden
+Uniquified 1 instance(s) referring to module 'phy_gddr36_ew_cdn_ghs_phy_sync_rst_62' in Golden
+Uniquified 1 instance(s) referring to module 'phy_gddr36_ew_cdn_ghs_phy_hic_hs_sync_dff_ASYNCRESET1_RSTVALUE1h0_78' in Golden
+Uniquified 1 instance(s) referring to module 'phy_gddr36_ew_cdn_ghs_phy_sync_rst_64' in Golden
+Uniquified 1 instance(s) referring to module 'phy_gddr36_ew_cdn_ghs_phy_hic_hs_sync_dff_ASYNCRESET1_RSTVALUE1h0_80' in Golden
+// Note: Added renaming rule 'LEC_UNIQUIFY_RULE' to match uniquified modules between Golden and Revised.
+Uniquified 1691 module(s)
+CPU time     : 148.83  seconds
+Elapse time  : 150     seconds
+Memory usage : 2324.06 M bytes
+// Command: add ignored inputs NSLEEP_IN_SM -module gddr36_ew_cdn_ghs_phy_*  -revised
+// Warning: 'NSLEEP_IN_SM' is not a primary input in module 'gddr36_ew_cdn_ghs_phy_top_SW_MODULE' in Revised
+// Warning: 'NSLEEP_IN_SM' is not a primary input in module 'gddr36_ew_cdn_ghs_phy_top' in Revised
+// Command: add pin constraints 0 scan_en -both
+// Command: add ignored outputs  *scan_out* -both
+// Command: set flatten model -seq_constant -seq_constant_x_to 0
+// Command: set flatten model -nodff_to_dlat_zero -nodff_to_dlat_feedback
+// Command: set flatten model -gated_clock
+// Command: set flatten model -library_pin_verification
+// Command: set analyze option -auto
+// Command: set datapath option -auto -verbose
+// Command: set compare option -threads 8
+Set computing threads of compare to 8,8.
+// Command: set system mode lec
+// Processing Golden ...
+// Modeling Golden ...
+// (F1) Created 107 wire resolution gate(s) due to multiple-driven net(s)
+// Processing Revised ...
+// Modeling Revised ...
+// (F1) Created 291 wire resolution gate(s) due to multiple-driven net(s)
+// Balanced modeling (auto) mapped 230644 out of 230861 DFF/DLATs
+// (F18) Converted 3 DFF/DLAT(s) in (G) to ZERO/ONE
+// (F14) Remodeled 95694 gated-clock DFF/DLAT(s)
+// (F32) Created 4053 Z gate(s) for floating net(s) and floating pin(s)
+// (F28) Converted 41136 internal output port(s) to inout port(s)
+// (F14) Remodeled 95689 gated-clock DFF/DLAT(s)
+// (F32) Created 4049 Z gate(s) for floating net(s) and floating pin(s)
+// (F28) Converted 41348 internal output port(s) to inout port(s)
+// (F30) Ignored 184 weak device(s) due to the existence of strong device(s)
+// (F3.1) Added 10323 cut points for partially modeled library module pins in Golden
+// (F3.1) Added 10319 cut points for partially modeled library module pins in Revised
+CPU time     : 268.60  seconds
+Elapse time  : 270     seconds
+Memory usage : 3157.04 M bytes
+// Warning: Golden and Revised have different numbers of key points:
+// Golden  key points = 135060
+// Revised key points = 135024
+// Mapping key points ...
+// Warning: Golden has 9 unmapped key points
+// Warning: Revised has 1 unmapped key points
+================================================================================
+Mapped points: SYSTEM class
+--------------------------------------------------------------------------------
+Mapped points     PI     PO     DFF    DLAT   Z      BBOX   CUT       Total   
+--------------------------------------------------------------------------------
+Golden            3353   1881   104182 643    4049   1      10319     124428  
+--------------------------------------------------------------------------------
+Revised           3353   1881   104182 643    4049   1      10319     124428  
+================================================================================
+Unmapped points:
+================================================================================
+Golden:
+--------------------------------------------------------------------------------
+Unmapped points   DFF    DLAT   Z      CUT       Total   
+--------------------------------------------------------------------------------
+Unreachable       1300   9323   0      0         10623   
+Not-mapped        1      0      4      4         9       
+================================================================================
+Revised:
+--------------------------------------------------------------------------------
+Unmapped points   DFF    DLAT   BBOX      Total   
+--------------------------------------------------------------------------------
+Unreachable       1293   9293   9         10595   
+Not-mapped        0      1      0         1       
+================================================================================
+// Warning: Key point mapping is incomplete
+CPU time     : 454.74  seconds
+Elapse time  : 457     seconds
+Memory usage : 3249.27 M bytes
+// Running automatic setup...
+// Merged 1 DFF/DLAT(s) in (R)
+// Converted 2 DFF/DLAT(s) in (G) to ZERO/ONE
+// Converted 2 DFF/DLAT(s) in (R) to ZERO/ONE
+// Remodeled the clock port for 616 SEQ(s) in (G).
+// Remodeled the clock port for 616 SEQ(s) in (R).
+// Automatic setup finished.
+CPU time     : 588.77  seconds
+Elapse time  : 591     seconds
+Memory usage : 3307.86 M bytes
+CPU time     : 598.90  seconds
+Elapse time  : 601     seconds
+Memory usage : 3527.15 M bytes
+// Command: report unmapped points                   > compare.unmapped.0
+CPU time     : 599.09  seconds
+Elapse time  : 601     seconds
+Memory usage : 3527.21 M bytes
+// Command: add compared points -all
+// Warning: Golden has 5 unmapped key points which will not be compared
+// 117024 compared points added to compare list
+CPU time     : 599.56  seconds
+Elapse time  : 602     seconds
+Memory usage : 3527.21 M bytes
+// Command: compare
+================================================================================
+Compared points      PO     DFF    DLAT   BBOX   CUT       Total   
+--------------------------------------------------------------------------------
+Equivalent           1881   104180 643    1      10319     117024  
+================================================================================
+Compare results of merged compare points                            
+================================================================================
+Compared points      DLAT      Total   
+--------------------------------------------------------------------------------
+Equivalent           1         1       
+================================================================================
+Compare results of instance/output/pin equivalences and/or sequential merge      
+================================================================================
+Compared points      DLAT      Total   
+--------------------------------------------------------------------------------
+Equivalent           1         1       
+================================================================================
+// Warning: (COMP1) 616 DFFs/DLATs have 1 disabled clock port: skipped data cone comparison
+CPU time     : 1242.39 seconds
+Elapse time  : 975     seconds
+Memory usage : 3527.86 M bytes
+// Command: report statistics                        > compare.stats
+// Command: report mapped points                     > compare.mapped
+CPU time     : 1243.73 seconds
+Elapse time  : 976     seconds
+Memory usage : 3527.90 M bytes
+// Command: report unmapped points                   > compare.unmapped
+CPU time     : 1243.94 seconds
+Elapse time  : 976     seconds
+Memory usage : 3527.90 M bytes
+// Command: report modules                           > compare.modules
+CPU time     : 1244.16 seconds
+Elapse time  : 976     seconds
+Memory usage : 3527.93 M bytes
+// Command: report compare data -class nonequivalent > compare.non_equivalent
+// Command: report compare data -class abort         > compare.abort
+// Command: report compare data -class notcompared   > compare.uncompared
+// Command: report statistics                        > compare.stats
+// Command: report mapped points                     > compare.mapped
+CPU time     : 1245.72 seconds
+Elapse time  : 978     seconds
+Memory usage : 3527.95 M bytes
+// Command: report unmapped points                   > compare.unmapped
+CPU time     : 1245.92 seconds
+Elapse time  : 978     seconds
+Memory usage : 3527.95 M bytes
+// Command: report modules                           > compare.modules
+CPU time     : 1246.12 seconds
+Elapse time  : 978     seconds
+Memory usage : 3527.95 M bytes
+// Command: tclmode
+// Command: if { [expr [get_compare_points -unknown -count]+[get_compare_points -diff -count]+[get_compare_points -abort -count]+[get_compare_points -NOtcompared -count]] == 0 } {
+//               puts "------------------------------------"
+//               puts "SUCCEEDED!"
+//               puts "------------------------------------"
+//               touch match
+//          } else {
+//               puts "------------------------------------"
+//               puts "LEC Failed!"
+//               puts "------------------------------------"
+//               touch failed
+//          }
+------------------------------------
+SUCCEEDED!
+------------------------------------
+CPU time     : 1246.46 seconds
+Elapse time  : 979     seconds
+Memory usage : 3527.97 M bytes
+// Command: vpxmode
+// Command: exit -f

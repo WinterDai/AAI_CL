@@ -1,0 +1,284 @@
+module: 11.0_POWER_EMIR_CHECK
+stage: Initial
+generated_at: 2025-12-23T18:43:03
+check_items: 
+  IMP-11-0-0-00: 
+    executed: true
+    status: fail
+    description: Confirm input database(netlist/def/lef/spef/lib/pgv/etc) are loaded correctly.
+    failures: 
+      - index: 1
+        detail: input_files is empty in YAML configuration
+        source_line: N/A
+        source_file: N/A
+        reason: input_files is empty in YAML configuration
+  IMP-11-0-0-01: 
+    executed: true
+    status: fail
+    description: Confirm the design has no power open/short and all instances are physically connected.
+    failures: 
+      - index: 1
+        detail: input_files is empty in YAML configuration
+        source_line: N/A
+        source_file: N/A
+        reason: input_files is empty in YAML configuration
+  IMP-11-0-0-02: 
+    executed: true
+    status: fail
+    description: Confirm EMIR signoff criteria follows addendum or SOW, otherwise follow internal spec (design rule with IP specific margin)
+    failures: 
+      - index: 1
+        detail: input_files is empty in YAML configuration
+        source_line: N/A
+        source_file: N/A
+        reason: input_files is empty in YAML configuration
+  IMP-11-0-0-03: 
+    executed: true
+    status: fail
+    description: Confirm activity file was used? If not, provide default switching activity values in comments field.
+    failures: 
+      - index: 1
+        detail: input_files is empty in YAML configuration
+        source_line: N/A
+        source_file: N/A
+        reason: input_files is empty in YAML configuration
+  IMP-11-0-0-04: 
+    executed: true
+    status: fail
+    description: Confirm proper rc/PVT corners were used for IR drop and EM analysis. List rc/PVT corners used in comments field.
+    failures: 
+      - index: 1
+        detail: input_files is empty in YAML configuration
+        source_line: N/A
+        source_file: N/A
+        reason: input_files is empty in YAML configuration
+  IMP-11-0-0-05: 
+    executed: true
+    status: fail
+    description: Confirm generate all the power library with detail view correctly.
+    failures: 
+      - index: 1
+        detail: input_files is empty in YAML configuration
+        source_line: N/A
+        source_file: N/A
+        reason: input_files is empty in YAML configuration
+  IMP-11-0-0-06: 
+    executed: true
+    status: fail
+    description: Confirm use the proper spice model and spice netlist to generate the PGV views.(check the Note)
+    failures: 
+      - index: 1
+        detail: input_files is empty in YAML configuration
+        source_line: N/A
+        source_file: N/A
+        reason: input_files is empty in YAML configuration
+  IMP-11-0-0-07: 
+    executed: true
+    status: fail
+    description: Confirm all the PGV views are present in the EMIR scripts.
+    failures: 
+      - index: 1
+        detail: input_files is empty in YAML configuration
+        source_line: N/A
+        source_file: N/A
+        reason: input_files is empty in YAML configuration
+  IMP-11-0-0-08: 
+    executed: true
+    status: fail
+    description: Confirm full PG connection information are included in def to run PA.
+    failures: 
+      - index: 1
+        detail: input_files is empty in YAML configuration
+        source_line: N/A
+        source_file: N/A
+        reason: input_files is empty in YAML configuration
+  IMP-11-0-0-09: 
+    executed: true
+    status: fail
+    description: 'Confirm Power pad locations correctly defined. Note: voltage sources need to be defined on the input side (VDDG) of power switches to all tool to calculate IR drop through power switch.'
+    failures: 
+      - index: 1
+        detail: input_files is empty in YAML configuration
+        source_line: N/A
+        source_file: N/A
+        reason: input_files is empty in YAML configuration
+  IMP-11-0-0-10: 
+    executed: true
+    status: fail
+    description: Confirm static power analysis results matches the requirement.
+    failures: 
+      - index: 1
+        detail: input_files is empty in YAML configuration
+        source_line: N/A
+        source_file: N/A
+        reason: input_files is empty in YAML configuration
+  IMP-11-0-0-11: 
+    executed: true
+    status: fail
+    description: Confirm the power number can meet the power target in addendum if addendum has the power spec.
+    failures: 
+      - index: 1
+        detail: input_files is empty in YAML configuration
+        source_line: N/A
+        source_file: N/A
+        reason: input_files is empty in YAML configuration
+  IMP-11-0-0-12: 
+    executed: true
+    status: fail
+    description: Confirm the power number between EW and NS is similiar if this program has both NS and EW orientations.(< 10% at least. fill N/A in case only one orientation)
+    failures: 
+      - index: 1
+        detail: input_files is empty in YAML configuration
+        source_line: N/A
+        source_file: N/A
+        reason: input_files is empty in YAML configuration
+  IMP-11-0-0-13: 
+    executed: true
+    status: fail
+    description: Confirm dynamic power results matches the requirement.
+    failures: 
+      - index: 1
+        detail: input_files is empty in YAML configuration
+        source_line: N/A
+        source_file: N/A
+        reason: input_files is empty in YAML configuration
+  IMP-11-0-0-14: 
+    executed: true
+    status: fail
+    description: 'List default continous operation years in design rule. (eg: 10 years)'
+    failures: 
+      - index: 1
+        detail: input_files is empty in YAML configuration
+        source_line: N/A
+        source_file: N/A
+        reason: input_files is empty in YAML configuration
+  IMP-11-0-0-15: 
+    executed: true
+    status: fail
+    description: List default EM temperature in design rule. (eg. 105C/110C)
+    failures: 
+      - index: 1
+        detail: input_files is empty in YAML configuration
+        source_line: N/A
+        source_file: N/A
+        reason: input_files is empty in YAML configuration
+  IMP-11-0-0-16: 
+    executed: true
+    status: fail
+    description: List continous operation years in your check.
+    failures: 
+      - index: 1
+        detail: input_files is empty in YAML configuration
+        source_line: N/A
+        source_file: N/A
+        reason: input_files is empty in YAML configuration
+  IMP-11-0-0-17: 
+    executed: true
+    status: fail
+    description: List EM temperature in your check.
+    failures: 
+      - index: 1
+        detail: input_files is empty in YAML configuration
+        source_line: N/A
+        source_file: N/A
+        reason: input_files is empty in YAML configuration
+  IMP-11-0-0-18: 
+    executed: true
+    status: fail
+    description: Confirm signalEM analysis results matches the requirement.
+    failures: 
+      - index: 1
+        detail: input_files is empty in YAML configuration
+        source_line: N/A
+        source_file: N/A
+        reason: input_files is empty in YAML configuration
+  IMP-11-0-0-19: 
+    executed: true
+    status: fail
+    description: "Confirm you are aware of and follow the customers' requirement about wake-up/rush-current if they have.(For non-PSO, please fill N/A)"
+    failures: 
+      - index: 1
+        detail: input_files is empty in YAML configuration
+        source_line: N/A
+        source_file: N/A
+        reason: input_files is empty in YAML configuration
+  IMP-11-0-0-20: 
+    executed: true
+    status: fail
+    description: "Confirm wake-up time meet customer's requirement. (For non-PSO, please fill N/A)"
+    failures: 
+      - index: 1
+        detail: input_files is empty in YAML configuration
+        source_line: N/A
+        source_file: N/A
+        reason: input_files is empty in YAML configuration
+  IMP-11-0-0-21: 
+    executed: true
+    status: fail
+    description: Confirm rush-current meet the requirement. (For non-PSO, please fill N/A)
+    failures: 
+      - index: 1
+        detail: input_files is empty in YAML configuration
+        source_line: N/A
+        source_file: N/A
+        reason: input_files is empty in YAML configuration
+  IMP-11-0-0-22: 
+    executed: true
+    status: fail
+    description: Confirm no ERROR message in power analysis log files.
+    failures: 
+      - index: 1
+        detail: input_files is empty in YAML configuration
+        source_line: N/A
+        source_file: N/A
+        reason: input_files is empty in YAML configuration
+  IMP-11-0-0-23: 
+    executed: true
+    status: fail
+    description: Confirm all Warning message in power analysis log files can be waived.
+    failures: 
+      - index: 1
+        detail: input_files is empty in YAML configuration
+        source_line: N/A
+        source_file: N/A
+        reason: input_files is empty in YAML configuration
+  IMP-11-0-0-24: 
+    executed: true
+    status: fail
+    description: Confirm the VT ratio calculation excludes physical cells(Filler/DCAP/Tap etc).
+    failures: 
+      - index: 1
+        detail: input_files is empty in YAML configuration
+        source_line: N/A
+        source_file: N/A
+        reason: input_files is empty in YAML configuration
+  IMP-11-0-0-25: 
+    executed: true
+    status: fail
+    description: Confirm use TSO to run power opt including leakage opt
+    failures: 
+      - index: 1
+        detail: input_files is empty in YAML configuration
+        source_line: N/A
+        source_file: N/A
+        reason: input_files is empty in YAML configuration
+  IMP-11-0-0-26: 
+    executed: true
+    status: fail
+    description: 'List the VT ratio (without physical cells): EG: TSMCN7/N6:SVT(50%)/LVT(40%)/ULVT(10%) TSMCN5/N4/N3/N2:SVT(50%)/LVTLL(20%)/LVT(20%)/ULVTLL(5%)/ULVT(5%)/ELVT(0%) SEC:RVT(50%)/LVT(40%)/SLVT(10%) INTl_I3/18A:ad(HVT 30%)/ac(SVT 20%)/ab(LVT 30%)/aa(ULVT 20%)'
+    failures: 
+      - index: 1
+        detail: input_files is empty in YAML configuration
+        source_line: N/A
+        source_file: N/A
+        reason: input_files is empty in YAML configuration
+  IMP-11-0-0-27: 
+    executed: true
+    status: fail
+    description: Confirm adequate decaps were added to meet design requirements?
+    failures: 
+      - index: 1
+        detail: input_files is empty in YAML configuration
+        source_line: N/A
+        source_file: N/A
+        reason: input_files is empty in YAML configuration

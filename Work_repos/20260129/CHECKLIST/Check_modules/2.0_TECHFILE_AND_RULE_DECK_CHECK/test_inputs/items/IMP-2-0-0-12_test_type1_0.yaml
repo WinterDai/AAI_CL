@@ -1,0 +1,10 @@
+description: 'List COD dummy rule deck name (fill N/A if no COD). eg: PLN16FFP_FINcut_AutoGen.11b.encrypt'
+input_files:
+- ${CHECKLIST_ROOT}\IP_project_folder\logs\2.0\COD_pvl.log
+requirements:
+  pattern_items: []
+  value: N/A
+waivers:
+  value: 0
+  waive_items:
+  - 'Explanation: COD check is not applicable for this project.'

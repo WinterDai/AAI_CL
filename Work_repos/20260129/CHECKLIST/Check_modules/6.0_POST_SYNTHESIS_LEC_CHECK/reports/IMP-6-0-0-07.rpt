@@ -1,0 +1,3 @@
+FAIL:IMP-6-0-0-07:Confirm "set flatten model -library_pin_verification" in LEC flow.
+Fail Occurrence: 1
+1: Fail: Missing 'set flatten model -library_pin_verification': 'set flatten model -library_pin_verification' isn't found in C:\Users\yuyin\OneDrive - Cadence Design Systems Inc\2025\Checklist\AAI\CHECKLIST_V3\CHECKLIST\IP_project_folder\logs\map_to_final.log

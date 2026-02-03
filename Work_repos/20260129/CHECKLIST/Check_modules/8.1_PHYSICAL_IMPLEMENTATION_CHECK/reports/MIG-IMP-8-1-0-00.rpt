@@ -1,0 +1,3 @@
+FAIL:MIG-IMP-8-1-0-00:Confirm followed the general slice top metal and top routing layer spec. (check the Note)
+Fail Occurrence: 1
+1: Fail: Top routing layer M12 (M12) is 3 layers from top metal M15 (M15): Top routing layer does not meet specification requirements

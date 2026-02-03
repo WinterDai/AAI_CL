@@ -1,0 +1,296 @@
+## Task: Generate Functional Unit Specifications (Layer 2)
+
+Your task is to generate detailed functional unit specifications that will be used to fill ItemSpec_Template.md.
+
+## Input Context
+
+### Semantic Intent (Layer 0)
+```json
+{
+  "check_target": "Verification that the netlist and SPEF files use the correct version specification",
+  "involved_formats": [
+    {
+      "name": "SPEF",
+      "role": "Target file containing parasitic data with version header",
+      "expected_sections": [
+        "*SPEF",
+        "*DESIGN",
+        "*DATE",
+        "*VENDOR",
+        "*PROGRAM",
+        "*VERSION"
+      ],
+      "criticality": "required",
+      "data_role": "direct_source"
+    },
+    {
+      "name": "Netlist_Verilog",
+      "role": "Target file containing synthesized netlist with version comment",
+      "expected_sections": [
+        "// Version:",
+        "module",
+        "endmodule"
+      ],
+      "criticality": "required",
+      "data_role": "direct_source"
+    }
+  ],
+  "data_flow": "Parse SPEF *VERSION field → verify format compliance; Parse Netlist version comment → verify format compliance",
+  "extraction_chain": "SPEF → locate *VERSION header → extract version string → validate against IEEE 1481 standard; Netlist_Verilog → locate version comment → extract version identifier → validate against tool specification",
+  "success_criteria": "SPEF *VERSION field matches expected IEEE 1481 version format (e.g., \"IEEE 1481-1999\") AND Netlist version comment matches expected tool version pattern",
+  "failure_criteria": "SPEF *VERSION field is missing, malformed, or incorrect version number OR Netlist version comment is missing, malformed, or incorrect version identifier",
+  "format_hints": {
+    "SPEF": "IEEE 1481 standard format; *VERSION appears in header section before *DESIGN",
+    "Netlist_Verilog": "Tool-generated Verilog; version typically in header comment block"
+  }
+}
+```
+
+### Extraction Fields (Layer 1)
+```json
+{}
+```
+
+### Configuration
+Item ID: IMP-10-0-0-00
+Description: Confirm the netlist/spef version is correct.
+File Count: 0
+Requirements: {"value": "N/A", "pattern_items": []}
+
+### Type Rules Reference
+{
+  "Type 1": {
+    "name": "Boolean Check",
+    "description": "Boolean check - PASS/FAIL only, no pattern search, no waiver",
+    "needs_pattern_search": false,
+    "needs_waiver_logic": false
+  },
+  "Type 2": {
+    "name": "Value Check",
+    "description": "Value check - search pattern_items, no waiver support",
+    "needs_pattern_search": true,
+    "needs_waiver_logic": false
+  },
+  "Type 3": {
+    "name": "Value Check + Waiver",
+    "description": "Value check with waiver - search patterns, apply waivers",
+    "needs_pattern_search": true,
+    "needs_waiver_logic": true
+  },
+  "Type 4": {
+    "name": "Boolean Check + Waiver",
+    "description": "Boolean check with waiver - no pattern search, apply waivers",
+    "needs_pattern_search": false,
+    "needs_waiver_logic": true
+  }
+}
+
+## Output Requirements
+
+Generate JSON with the following structure. Focus on FUNCTIONAL UNITS (Parsing Logic, Check Logic, Waiver Logic).
+
+```json
+{
+  "functional_units": {
+    "parsing_logic": {
+      "purpose": "从description推导：需要提取什么信息来验证正确性",
+      "extraction_targets": [
+        {
+          "object_name": "从check_target推导的验证对象",
+          "key_information": [
+            {
+              "field_name": "具体字段名",
+              "usage": "用于什么验证",
+              "extraction_hint": "从哪里提取，如何识别"
+            }
+          ]
+        }
+      ],
+      "data_source": "从involved_formats推导：应该读取什么文件/日志",
+      "extraction_strategy": "multi_stage | single_file | structured_parsing",
+      "implementation_guidance": "具体实现指导：如何从data_source提取extraction_targets"
+    },
+    
+    "check_logic": {
+      "verification_items": [
+        {
+          "item_name": "从extraction_targets推导的验证项",
+          "item_description": "该项验证什么",
+          "existence_check": {
+            "found_condition": "什么情况算找到",
+            "missing_condition": "什么情况算缺失",
+            "expected_fields": ["parsed_data中应包含的字段"]
+          },
+          "pattern_check": {
+            "applicable": true or false,
+            "pattern_matching_rule": "如果applicable=true，如何匹配pattern_items",
+            "mismatch_handling": "不匹配如何处理"
+          }
+        }
+      ],
+      "pass_condition": "整体PASS的条件（布尔表达式）",
+      "fail_condition": "整体FAIL的条件（布尔表达式）"
+    },
+    
+    "waiver_logic": {
+      "waivable_items": [
+        {
+          "item_name": "可豁免的验证项",
+          "waiver_scenario": "什么情况下需要豁免",
+          "typical_waiver_reason": "典型的豁免原因示例",
+          "matching_keywords": ["用于匹配waive_items的关键词"]
+        }
+      ],
+      "force_pass_mode": {
+        "applicable_types": [1, 2, 3, 4],
+        "behavior": "waivers.value=0时的处理方式"
+      },
+      "selective_waiver_mode": {
+        "matching_strategy": "waivers.value>0时如何匹配waive_items",
+        "unmatched_handling": "不匹配的violation如何处理"
+      }
+    }
+  },
+  
+  "type_specifications": {
+    "type1": {
+      "functional_composition": "Parsing Logic + Check Logic (Boolean)",
+      "parameters": "无参数",
+      "behavior": "调用parsing logic → 存在性检查 → 输出",
+      "output_format": "found items → INFO, missing items → FAIL"
+    },
+    "type2": {
+      "functional_composition": "Parsing Logic + Check Logic (Pattern)",
+      "parameters": "requirements.pattern_items",
+      "behavior": "调用parsing logic → pattern检查 → 输出",
+      "output_format": "matched → INFO, mismatched/missing → FAIL"
+    },
+    "type3": {
+      "functional_composition": "Type 2 + Waiver Control",
+      "parameters": "requirements.pattern_items, waivers.waive_items, waivers.value",
+      "behavior": "调用Type 2 → 应用waiver logic → 输出",
+      "waiver_modes": {
+        "value_0": "强制PASS，标记[WAIVED_AS_INFO]",
+        "value_gt_0": "选择性豁免，匹配项标记[WAIVER]"
+      }
+    },
+    "type4": {
+      "functional_composition": "Type 1 + Waiver Control",
+      "parameters": "waivers.waive_items, waivers.value",
+      "behavior": "调用Type 1 → 应用waiver logic → 输出",
+      "waiver_modes": {
+        "value_0": "强制PASS，标记[WAIVED_AS_INFO]",
+        "value_gt_0": "选择性豁免，匹配项标记[WAIVER]"
+      }
+    }
+  },
+  
+  "output_messages": {
+    "console_format": {
+      "structure": "[PASS/FAIL]:ITEM_ID:DESCRIPTION
+ITEM_ID-[级别][序号]: [标签]: [标题]:
+  Severity: [级别] Occurrence: [数量]
+  - [详细项]",
+      "severity_mapping": {
+        "found_items_no_waiver": "INFO",
+        "missing_items_no_waiver": "ERROR",
+        "waived_items_value_0": "INFO with [WAIVED_AS_INFO]",
+        "waived_items_value_gt_0": "INFO with [WAIVER]"
+      }
+    },
+    "report_format": {
+      "structure": "[PASS/FAIL]:ITEM_ID:DESCRIPTION
+[级别] Occurrence: [总数]
+[序号]: [级别]: [描述]: [详情][标签]",
+      "item_templates": {
+        "found_item": "Item found: [详情]",
+        "missing_item": "Item missing: [原因]",
+        "waived_item": "Item waived: [原因][WAIVER]"
+      }
+    }
+  }
+}
+```
+
+## Critical Generation Rules
+
+### 1. Parsing Logic Generation
+
+**From semantic_intent, derive:**
+- **extraction_targets**: Based on check_target, what objects need verification?
+  - Extract object names from check_target (e.g., "netlist", "SPEF")
+  - For each object, determine what key information validates "correctness"
+  - Map "correctness" dimensions to specific fields (e.g., "完整性" → file path + load status + version info)
+
+**From involved_formats, derive:**
+- **data_source**: Which files to read?
+  - If data_role="direct_source" → parse this file directly
+  - If data_role="indirect_reference" → extract paths from this file, then parse targets
+  - Use extraction_chain to determine multi-stage flow
+
+**Key Rule**: extraction_targets MUST align with verification_items in check_logic
+
+### 2. Check Logic Generation
+
+**From extraction_targets, derive verification_items:**
+- Each extraction_target generates 1-N verification items
+- Example: "Netlist版本信息" target → verification items:
+  1. "Netlist文件加载状态" (existence)
+  2. "Netlist版本信息" (existence + optional pattern)
+
+**For each verification_item:**
+- **existence_check**: Always define
+  - found_condition: Which parsed_data fields indicate "found"?
+  - missing_condition: What indicates "missing"?
+- **pattern_check**: Only if requirements.pattern_items exists
+  - applicable: true only for items that need pattern matching
+  - pattern_matching_rule: How to match against pattern_items?
+
+**Key Rule**: verification_items count should be explicit (e.g., "4个验证项目")
+
+### 3. Waiver Logic Generation
+
+**From verification_items, derive waivable_items:**
+- Not all verification_items are waivable
+- Typically waivable: optional files, version mismatches, legacy formats
+- Not waivable: critical structural errors, data corruption
+
+**For each waivable_item:**
+- **waiver_scenario**: Business context where waiver makes sense
+  - Example: "综合阶段不需要SPEF文件"
+- **matching_keywords**: Extract from waiver_scenario
+  - Example: ["SPEF", "synthesis", "stage"]
+
+**Key Rule**: matching_keywords used in selective_waiver_mode for waive_items matching
+
+### 4. Type Specifications
+
+**Functional Composition** (most important):
+- Type 1: Parsing Logic + Check Logic (Boolean only)
+- Type 2: Parsing Logic + Check Logic (Boolean + Pattern)
+- Type 3: Type 2 result + Waiver Control
+- Type 4: Type 1 result + Waiver Control
+
+**Key Rule**: Type 3/4 do NOT re-implement check logic, they REUSE Type 2/1 results
+
+### 5. Output Messages
+
+**Severity Mapping** (critical for output):
+- found_items (no waiver) → INFO
+- missing_items (no waiver) → ERROR
+- missing_items (waiver value=0) → INFO + [WAIVED_AS_INFO]
+- missing_items (waiver value>0, matched) → INFO + [WAIVER]
+- missing_items (waiver value>0, not matched) → ERROR
+
+## Quality Checklist
+
+Before outputting, verify:
+
+1. ✅ parsing_logic.extraction_targets count明确（如"2个对象：Netlist和SPEF"）
+2. ✅ check_logic.verification_items count明确（如"4个验证项目"）
+3. ✅ 每个verification_item都有明确的found/missing条件
+4. ✅ waivable_items包含具体的waiver_scenario和matching_keywords
+5. ✅ type3/type4明确说明"复用Type 2/1结果"
+6. ✅ output_messages包含完整的severity_mapping
+
+Output the complete JSON specification following the structure above.

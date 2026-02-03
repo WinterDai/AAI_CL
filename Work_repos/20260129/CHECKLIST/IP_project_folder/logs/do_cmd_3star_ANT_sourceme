@@ -1,0 +1,27 @@
+//File Edited with the following command: /home/sleclerc/perl/calibredrcDeckExtractSourceme.pl CLN5LO_16M_014_ANT.12a.encrypt.enc
+
+// 1) Provide the top cell name and LAYOUT SYSTEM OASIS
+// 2) Review the switches below, especially the BUMP_PITCH
+
+LAYOUT SYSTEM OASIS
+LAYOUT PRIMARY CDN_104V_cdn_hs_phy_data_slice_NS
+
+//========================================
+
+/* SWITCH DEFINITION START */
+// OPTION SETUP
+//================
+//#DEFINE WITH_4MZ      // Turn on for run metal scheme with 4Mz
+//#DEFINE WITH_2MR      // Turn on for run metal scheme with 2Mr
+//#DEFINE TSV_RULES	// Turn on option TSV_RULES to enable TSV related rules
+//#DEFINE DEBUG_MX     // Turn on if you want to get more information for debugging 
+//#DEFINE DEBUG_VIA    // Turn on if you want to get more information for debugging
+//#DEFINE ACC_DEBUG    // Turn on if you want to get more information for debugging
+// ENVIRONMENT SETUP
+//==================
+
+
+LAYOUT ERROR ON INPUT YES
+
+DRC RESULTS DATABASE "DRC_RES.db"
+DRC RESULTS DATABASE PRECISION  2000

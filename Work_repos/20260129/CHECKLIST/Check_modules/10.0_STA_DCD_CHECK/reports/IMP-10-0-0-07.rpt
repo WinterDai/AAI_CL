@@ -1,0 +1,11 @@
+PASS:IMP-10-0-0-07:Confirm the OCV setting is correct?
+Warn Occurrence: 2
+1: Warn: Some waived item: Waiver item (unused)[WAIVER]
+2: Warn: Another waived item: Waiver item (unused)[WAIVER]
+Info Occurrence: 6
+1: Info: Analysis Mode: MMMC OCV. In line 61, C:\Users\yuyin\OneDrive - Cadence Design Systems Inc\2025\Checklist\AAI\CHECKLIST_V3\CHECKLIST\IP_project_folder\logs\sta_post_syn.log: OCV setting found
+2: Info: timing_enable_spatial_derate_mode to 1. In line 71, C:\Users\yuyin\OneDrive - Cadence Design Systems Inc\2025\Checklist\AAI\CHECKLIST_V3\CHECKLIST\IP_project_folder\logs\sta_post_syn.log: OCV setting found
+3: Info: timing_spatial_derate_distance_mode to chip_size. In line 72, C:\Users\yuyin\OneDrive - Cadence Design Systems Inc\2025\Checklist\AAI\CHECKLIST_V3\CHECKLIST\IP_project_folder\logs\sta_post_syn.log: OCV setting found
+4: Info: SOCV RC Variation Factors. In line 82, C:\Users\yuyin\OneDrive - Cadence Design Systems Inc\2025\Checklist\AAI\CHECKLIST_V3\CHECKLIST\IP_project_folder\logs\sta_post_syn.log: OCV setting found
+5: Info: Wire Derate SOCV Factors. In line 89, C:\Users\yuyin\OneDrive - Cadence Design Systems Inc\2025\Checklist\AAI\CHECKLIST_V3\CHECKLIST\IP_project_folder\logs\sta_post_syn.log: OCV setting found
+6: Info: SOCV Files. In line 103, C:\Users\yuyin\OneDrive - Cadence Design Systems Inc\2025\Checklist\AAI\CHECKLIST_V3\CHECKLIST\IP_project_folder\logs\sta_post_syn.log: OCV setting found

@@ -1,0 +1,120 @@
+Test Report: IMP-12-0-0-32
+================================================================================
+
+[Test 1/6] Type 1 (requirements.value=N/A, waivers.value=N/A)
+--------------------------------------------------------------------------------
+Test ID: type1_na
+Status: ERROR
+
+Checker Report Output:
+FAIL:IMP-12-0-0-32:Confirm no ERROR message in DFM/FLT log files. (for SEC process, for others fill N/A)
+Fail Occurrence: 12
+1: Fail: Assertion exception during computation (Worker 2) (Source: Worker 2). In line 285, C:\Users\jingyu\OneDrive - Cadence Design Systems Inc\Desktop\checklist_dev\AI_2026_V1\CHECKLIST\CHECKLIST\IP_project_folder\logs\do_pvsFLTwD.log: Pegasus DFM/FLT verification encountered critical errors
+2: Fail: Cell pm26 is referenced, but does not exist. (Source: do_pvsFLTwD.log:line 279). In line 279, C:\Users\jingyu\OneDrive - Cadence Design Systems Inc\Desktop\checklist_dev\AI_2026_V1\CHECKLIST\CHECKLIST\IP_project_folder\logs\do_pvsFLTwD.log: Pegasus DFM/FLT verification encountered critical errors
+3: Fail: File system exception during memory reduction (Worker 11) (Source: Worker 11). In line 566, C:\Users\jingyu\OneDrive - Cadence Design Systems Inc\Desktop\checklist_dev\AI_2026_V1\CHECKLIST\CHECKLIST\IP_project_folder\logs\Pegasus_DFM.log: Pegasus DFM/FLT verification encountered critical errors
+4: Fail: Invalid option. (Source: Pegasus_DFM.log:line 562). In line 562, C:\Users\jingyu\OneDrive - Cadence Design Systems Inc\Desktop\checklist_dev\AI_2026_V1\CHECKLIST\CHECKLIST\IP_project_folder\logs\Pegasus_DFM.log: Pegasus DFM/FLT verification encountered critical errors
+5: Fail: Invalid option. (Source: do_pvsFLTwD.log:line 281). In line 281, C:\Users\jingyu\OneDrive - Cadence Design Systems Inc\Desktop\checklist_dev\AI_2026_V1\CHECKLIST\CHECKLIST\IP_project_folder\logs\do_pvsFLTwD.log: Pegasus DFM/FLT verification encountered critical errors
+6: Fail: Out of temporary storage disk space, please check -tmp_dirs setting (Worker 11) (Source: Worker 11). In line 567, C:\Users\jingyu\OneDrive - Cadence Design Systems Inc\Desktop\checklist_dev\AI_2026_V1\CHECKLIST\CHECKLIST\IP_project_folder\logs\Pegasus_DFM.log: Pegasus DFM/FLT verification encountered critical errors
+7: Fail: Pegasus exception during compilation (Worker 1) (Source: Worker 1). In line 564, C:\Users\jingyu\OneDrive - Cadence Design Systems Inc\Desktop\checklist_dev\AI_2026_V1\CHECKLIST\CHECKLIST\IP_project_folder\logs\Pegasus_DFM.log: Pegasus DFM/FLT verification encountered critical errors
+8: Fail: Run completed with errors due to worker failures (Source: do_pvsFLTwD.log:line 283). In line 283, C:\Users\jingyu\OneDrive - Cadence Design Systems Inc\Desktop\checklist_dev\AI_2026_V1\CHECKLIST\CHECKLIST\IP_project_folder\logs\do_pvsFLTwD.log: Pegasus DFM/FLT verification encountered critical errors
+9: Fail: Terminating run, encountered unrecoverable error on Worker 2 (Source: do_pvsFLTwD.log:line 282). In line 282, C:\Users\jingyu\OneDrive - Cadence Design Systems Inc\Desktop\checklist_dev\AI_2026_V1\CHECKLIST\CHECKLIST\IP_project_folder\logs\do_pvsFLTwD.log: Pegasus DFM/FLT verification encountered critical errors
+10: Fail: Terminating run, encountered unrecoverable layer loss (Source: do_pvsFLTwD.log:line 284). In line 284, C:\Users\jingyu\OneDrive - Cadence Design Systems Inc\Desktop\checklist_dev\AI_2026_V1\CHECKLIST\CHECKLIST\IP_project_folder\logs\do_pvsFLTwD.log: Pegasus DFM/FLT verification encountered critical errors
+11: Fail: The difference between the numbers of schematic and layout instances (Source: NVN-7090). In line 568, C:\Users\jingyu\OneDrive - Cadence Design Systems Inc\Desktop\checklist_dev\AI_2026_V1\CHECKLIST\CHECKLIST\IP_project_folder\logs\Pegasus_DFM.log: Pegasus DFM/FLT verification encountered critical errors
+12: Fail: missing_reference exception for cell "pm26" in parent cell "pm100" (Worker 1) (Source: Worker 1). In line 565, C:\Users\jingyu\OneDrive - Cadence Design Systems Inc\Desktop\checklist_dev\AI_2026_V1\CHECKLIST\CHECKLIST\IP_project_folder\logs\Pegasus_DFM.log: Pegasus DFM/FLT verification encountered critical errors
+
+================================================================================
+
+[Test 2/6] Type 1 (requirements.value=N/A, waivers.value=0)
+--------------------------------------------------------------------------------
+Test ID: type1_0
+Status: PASS
+
+Checker Report Output:
+PASS:IMP-12-0-0-32:Confirm no ERROR message in DFM/FLT log files. (for SEC process, for others fill N/A)
+Info Occurrence: 13
+1: Info: Explanation: DFM/FLT verification errors are informational for SEC process: Explanation: DFM/FLT verification errors are informational for SEC process[WAIVED_INFO]
+2: Info: Assertion exception during computation (Worker 2) (Source: Worker 2). In line 285, C:\Users\jingyu\OneDrive - Cadence Design Systems Inc\Desktop\checklist_dev\AI_2026_V1\CHECKLIST\CHECKLIST\IP_project_folder\logs\do_pvsFLTwD.log: Pegasus DFM/FLT verification encountered critical errors[WAIVED_AS_INFO]
+3: Info: Cell pm26 is referenced, but does not exist. (Source: do_pvsFLTwD.log:line 279). In line 279, C:\Users\jingyu\OneDrive - Cadence Design Systems Inc\Desktop\checklist_dev\AI_2026_V1\CHECKLIST\CHECKLIST\IP_project_folder\logs\do_pvsFLTwD.log: Pegasus DFM/FLT verification encountered critical errors[WAIVED_AS_INFO]
+4: Info: File system exception during memory reduction (Worker 11) (Source: Worker 11). In line 566, C:\Users\jingyu\OneDrive - Cadence Design Systems Inc\Desktop\checklist_dev\AI_2026_V1\CHECKLIST\CHECKLIST\IP_project_folder\logs\Pegasus_DFM.log: Pegasus DFM/FLT verification encountered critical errors[WAIVED_AS_INFO]
+5: Info: Invalid option. (Source: Pegasus_DFM.log:line 562). In line 562, C:\Users\jingyu\OneDrive - Cadence Design Systems Inc\Desktop\checklist_dev\AI_2026_V1\CHECKLIST\CHECKLIST\IP_project_folder\logs\Pegasus_DFM.log: Pegasus DFM/FLT verification encountered critical errors[WAIVED_AS_INFO]
+6: Info: Invalid option. (Source: do_pvsFLTwD.log:line 281). In line 281, C:\Users\jingyu\OneDrive - Cadence Design Systems Inc\Desktop\checklist_dev\AI_2026_V1\CHECKLIST\CHECKLIST\IP_project_folder\logs\do_pvsFLTwD.log: Pegasus DFM/FLT verification encountered critical errors[WAIVED_AS_INFO]
+7: Info: Out of temporary storage disk space, please check -tmp_dirs setting (Worker 11) (Source: Worker 11). In line 567, C:\Users\jingyu\OneDrive - Cadence Design Systems Inc\Desktop\checklist_dev\AI_2026_V1\CHECKLIST\CHECKLIST\IP_project_folder\logs\Pegasus_DFM.log: Pegasus DFM/FLT verification encountered critical errors[WAIVED_AS_INFO]
+8: Info: Pegasus exception during compilation (Worker 1) (Source: Worker 1). In line 564, C:\Users\jingyu\OneDrive - Cadence Design Systems Inc\Desktop\checklist_dev\AI_2026_V1\CHECKLIST\CHECKLIST\IP_project_folder\logs\Pegasus_DFM.log: Pegasus DFM/FLT verification encountered critical errors[WAIVED_AS_INFO]
+9: Info: Run completed with errors due to worker failures (Source: do_pvsFLTwD.log:line 283). In line 283, C:\Users\jingyu\OneDrive - Cadence Design Systems Inc\Desktop\checklist_dev\AI_2026_V1\CHECKLIST\CHECKLIST\IP_project_folder\logs\do_pvsFLTwD.log: Pegasus DFM/FLT verification encountered critical errors[WAIVED_AS_INFO]
+10: Info: Terminating run, encountered unrecoverable error on Worker 2 (Source: do_pvsFLTwD.log:line 282). In line 282, C:\Users\jingyu\OneDrive - Cadence Design Systems Inc\Desktop\checklist_dev\AI_2026_V1\CHECKLIST\CHECKLIST\IP_project_folder\logs\do_pvsFLTwD.log: Pegasus DFM/FLT verification encountered critical errors[WAIVED_AS_INFO]
+11: Info: Terminating run, encountered unrecoverable layer loss (Source: do_pvsFLTwD.log:line 284). In line 284, C:\Users\jingyu\OneDrive - Cadence Design Systems Inc\Desktop\checklist_dev\AI_2026_V1\CHECKLIST\CHECKLIST\IP_project_folder\logs\do_pvsFLTwD.log: Pegasus DFM/FLT verification encountered critical errors[WAIVED_AS_INFO]
+12: Info: The difference between the numbers of schematic and layout instances (Source: NVN-7090). In line 568, C:\Users\jingyu\OneDrive - Cadence Design Systems Inc\Desktop\checklist_dev\AI_2026_V1\CHECKLIST\CHECKLIST\IP_project_folder\logs\Pegasus_DFM.log: Pegasus DFM/FLT verification encountered critical errors[WAIVED_AS_INFO]
+13: Info: missing_reference exception for cell "pm26" in parent cell "pm100" (Worker 1) (Source: Worker 1). In line 565, C:\Users\jingyu\OneDrive - Cadence Design Systems Inc\Desktop\checklist_dev\AI_2026_V1\CHECKLIST\CHECKLIST\IP_project_folder\logs\Pegasus_DFM.log: Pegasus DFM/FLT verification encountered critical errors[WAIVED_AS_INFO]
+
+================================================================================
+
+[Test 3/6] Type 2 (requirements.value>0, waivers.value=N/A)
+--------------------------------------------------------------------------------
+Test ID: type2_na
+Status: ERROR
+
+Checker Report Output:
+FAIL:IMP-12-0-0-32:Confirm no ERROR message in DFM/FLT log files. (for SEC process, for others fill N/A)
+Fail Occurrence: 1
+1: Fail: Worker.*killed: Monitored ERROR patterns found in verification logs
+Info Occurrence: 2
+1: Info: Out of temporary storage disk space, please check -tmp_dirs setting (Worker 11) (Source: Worker 11). In line 567, C:\Users\jingyu\OneDrive - Cadence Design Systems Inc\Desktop\checklist_dev\AI_2026_V1\CHECKLIST\CHECKLIST\IP_project_folder\logs\Pegasus_DFM.log: Monitored ERROR patterns not detected in verification logs
+2: Info: missing_reference exception for cell "pm26" in parent cell "pm100" (Worker 1) (Source: Worker 1). In line 565, C:\Users\jingyu\OneDrive - Cadence Design Systems Inc\Desktop\checklist_dev\AI_2026_V1\CHECKLIST\CHECKLIST\IP_project_folder\logs\Pegasus_DFM.log: Monitored ERROR patterns not detected in verification logs
+
+================================================================================
+
+[Test 4/6] Type 2 (requirements.value>0, waivers.value=0)
+--------------------------------------------------------------------------------
+Test ID: type2_0
+Status: PASS
+
+Checker Report Output:
+PASS:IMP-12-0-0-32:Confirm no ERROR message in DFM/FLT log files. (for SEC process, for others fill N/A)
+Info Occurrence: 4
+1: Info: Explanation: Monitored ERROR patterns are informational for SEC process: Explanation: Monitored ERROR patterns are informational for SEC process[WAIVED_INFO]
+2: Info: Out of temporary storage disk space, please check -tmp_dirs setting (Worker 11) (Source: Worker 11). In line 567, C:\Users\jingyu\OneDrive - Cadence Design Systems Inc\Desktop\checklist_dev\AI_2026_V1\CHECKLIST\CHECKLIST\IP_project_folder\logs\Pegasus_DFM.log: Monitored ERROR patterns not detected in verification logs
+3: Info: missing_reference exception for cell "pm26" in parent cell "pm100" (Worker 1) (Source: Worker 1). In line 565, C:\Users\jingyu\OneDrive - Cadence Design Systems Inc\Desktop\checklist_dev\AI_2026_V1\CHECKLIST\CHECKLIST\IP_project_folder\logs\Pegasus_DFM.log: Monitored ERROR patterns not detected in verification logs
+4: Info: Worker.*killed: Monitored ERROR patterns found in verification logs[WAIVED_AS_INFO]
+
+================================================================================
+
+[Test 5/6] Type 3 (requirements.value>0, waivers.value>0)
+--------------------------------------------------------------------------------
+Test ID: type3
+Status: PASS
+
+Checker Report Output:
+PASS:IMP-12-0-0-32:Confirm no ERROR message in DFM/FLT log files. (for SEC process, for others fill N/A)
+Warn Occurrence: 1
+1: Warn: pm26: Waiver not matched - no corresponding ERROR found in logs[WAIVER]
+Info Occurrence: 3
+1: Info: Out of temporary storage disk space, please check -tmp_dirs setting (Worker 11) (Source: Worker 11). In line 567, C:\Users\jingyu\OneDrive - Cadence Design Systems Inc\Desktop\checklist_dev\AI_2026_V1\CHECKLIST\CHECKLIST\IP_project_folder\logs\Pegasus_DFM.log: Pegasus verification errors waived as known issues: Waived - Worker 11 disk space handled by storage team[WAIVER]
+2: Info: missing_reference exception for cell "pm26" in parent cell "pm100" (Worker 1) (Source: Worker 1). In line 565, C:\Users\jingyu\OneDrive - Cadence Design Systems Inc\Desktop\checklist_dev\AI_2026_V1\CHECKLIST\CHECKLIST\IP_project_folder\logs\Pegasus_DFM.log: Pegasus verification errors waived as known issues: Waived - Worker 1 crash is known infrastructure issue (ticket #12345)[WAIVER]
+3: Info: Worker.*killed: Monitored ERROR patterns not detected in verification logs
+
+================================================================================
+
+[Test 6/6] Type 4 (requirements.value=N/A, waivers.value>0)
+--------------------------------------------------------------------------------
+Test ID: type4
+Status: ERROR
+
+Checker Report Output:
+FAIL:IMP-12-0-0-32:Confirm no ERROR message in DFM/FLT log files. (for SEC process, for others fill N/A)
+Fail Occurrence: 7
+1: Fail: Assertion exception during computation (Worker 2) (Source: Worker 2). In line 285, C:\Users\jingyu\OneDrive - Cadence Design Systems Inc\Desktop\checklist_dev\AI_2026_V1\CHECKLIST\CHECKLIST\IP_project_folder\logs\do_pvsFLTwD.log: Pegasus DFM/FLT verification encountered critical errors
+2: Fail: Invalid option. (Source: Pegasus_DFM.log:line 562). In line 562, C:\Users\jingyu\OneDrive - Cadence Design Systems Inc\Desktop\checklist_dev\AI_2026_V1\CHECKLIST\CHECKLIST\IP_project_folder\logs\Pegasus_DFM.log: Pegasus DFM/FLT verification encountered critical errors
+3: Fail: Invalid option. (Source: do_pvsFLTwD.log:line 281). In line 281, C:\Users\jingyu\OneDrive - Cadence Design Systems Inc\Desktop\checklist_dev\AI_2026_V1\CHECKLIST\CHECKLIST\IP_project_folder\logs\do_pvsFLTwD.log: Pegasus DFM/FLT verification encountered critical errors
+4: Fail: Run completed with errors due to worker failures (Source: do_pvsFLTwD.log:line 283). In line 283, C:\Users\jingyu\OneDrive - Cadence Design Systems Inc\Desktop\checklist_dev\AI_2026_V1\CHECKLIST\CHECKLIST\IP_project_folder\logs\do_pvsFLTwD.log: Pegasus DFM/FLT verification encountered critical errors
+5: Fail: Terminating run, encountered unrecoverable error on Worker 2 (Source: do_pvsFLTwD.log:line 282). In line 282, C:\Users\jingyu\OneDrive - Cadence Design Systems Inc\Desktop\checklist_dev\AI_2026_V1\CHECKLIST\CHECKLIST\IP_project_folder\logs\do_pvsFLTwD.log: Pegasus DFM/FLT verification encountered critical errors
+6: Fail: Terminating run, encountered unrecoverable layer loss (Source: do_pvsFLTwD.log:line 284). In line 284, C:\Users\jingyu\OneDrive - Cadence Design Systems Inc\Desktop\checklist_dev\AI_2026_V1\CHECKLIST\CHECKLIST\IP_project_folder\logs\do_pvsFLTwD.log: Pegasus DFM/FLT verification encountered critical errors
+7: Fail: The difference between the numbers of schematic and layout instances (Source: NVN-7090). In line 568, C:\Users\jingyu\OneDrive - Cadence Design Systems Inc\Desktop\checklist_dev\AI_2026_V1\CHECKLIST\CHECKLIST\IP_project_folder\logs\Pegasus_DFM.log: Pegasus DFM/FLT verification encountered critical errors
+Info Occurrence: 5
+1: Info: Cell pm26 is referenced, but does not exist. (Source: do_pvsFLTwD.log:line 279). In line 279, C:\Users\jingyu\OneDrive - Cadence Design Systems Inc\Desktop\checklist_dev\AI_2026_V1\CHECKLIST\CHECKLIST\IP_project_folder\logs\do_pvsFLTwD.log: Pegasus verification errors waived as known issues: Waived - Cell pm26 reference error is expected in SEC flow[WAIVER]
+2: Info: File system exception during memory reduction (Worker 11) (Source: Worker 11). In line 566, C:\Users\jingyu\OneDrive - Cadence Design Systems Inc\Desktop\checklist_dev\AI_2026_V1\CHECKLIST\CHECKLIST\IP_project_folder\logs\Pegasus_DFM.log: Pegasus verification errors waived as known issues: Waived - Worker 11 disk space handled by storage team[WAIVER]
+3: Info: Out of temporary storage disk space, please check -tmp_dirs setting (Worker 11) (Source: Worker 11). In line 567, C:\Users\jingyu\OneDrive - Cadence Design Systems Inc\Desktop\checklist_dev\AI_2026_V1\CHECKLIST\CHECKLIST\IP_project_folder\logs\Pegasus_DFM.log: Pegasus verification errors waived as known issues: Waived - Worker 11 disk space handled by storage team[WAIVER]
+4: Info: Pegasus exception during compilation (Worker 1) (Source: Worker 1). In line 564, C:\Users\jingyu\OneDrive - Cadence Design Systems Inc\Desktop\checklist_dev\AI_2026_V1\CHECKLIST\CHECKLIST\IP_project_folder\logs\Pegasus_DFM.log: Pegasus verification errors waived as known issues: Waived - Worker 1 crash is known infrastructure issue (ticket #12345)[WAIVER]
+5: Info: missing_reference exception for cell "pm26" in parent cell "pm100" (Worker 1) (Source: Worker 1). In line 565, C:\Users\jingyu\OneDrive - Cadence Design Systems Inc\Desktop\checklist_dev\AI_2026_V1\CHECKLIST\CHECKLIST\IP_project_folder\logs\Pegasus_DFM.log: Pegasus verification errors waived as known issues: Waived - Worker 1 crash is known infrastructure issue (ticket #12345)[WAIVER]
+
+================================================================================
+

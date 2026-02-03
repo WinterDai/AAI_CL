@@ -1,0 +1,5 @@
+FAIL:MIG-IMP-8-1-0-07:Confirm placed the mimic delay cell related paths (from delay line output to DL IE/IL pins) carefully. (check the Note)
+MIG-IMP-8-1-0-07-ERROR01: Configuration error:
+  Severity: Fail Occurrence: 1
+  - input_files is empty in YAML configuration
+

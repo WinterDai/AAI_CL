@@ -1,0 +1,14 @@
+FAIL:IMP-10-0-0-13:Confirm the max_capacitance check result is clean.
+IMP-10-0-0-13-ERROR01: Max_capacitance violations detected:
+  Severity: Fail Occurrence: 10
+  - Pin 'atb_0': Required=0.0830, Actual=0.1375, Slack=-0.0545 (View: func_rcff_0p825v_125c_pcff_cmin_pcff3_hold)
+  - Pin 'atb_0': Required=0.0830, Actual=0.1417, Slack=-0.0587 (View: func_rcff_0p825v_125c_pcff_cmin_pcss3_hold)
+  - Pin 'atb_1': Required=0.0830, Actual=0.1376, Slack=-0.0547 (View: func_rcff_0p825v_125c_pcff_cmin_pcff3_hold)
+  - Pin 'atb_1': Required=0.0830, Actual=0.1417, Slack=-0.0587 (View: func_rcff_0p825v_125c_pcff_cmin_pcss3_hold)
+  - Pin 'cmnda_rext': Required=0.0830, Actual=0.1273, Slack=-0.0444 (View: func_rcff_0p825v_125c_pcff_cmin_pcff3_hold)
+  - Pin 'cmnda_rext': Required=0.0830, Actual=0.1275, Slack=-0.0445 (View: func_rcff_0p825v_125c_pcff_cmin_pcss3_hold)
+  - Pin 'u_pma_top/u_pma_ana_wrapper/u_pma_ana/cmnda_atb_core_0': Required=0.1000, Actual=0.1375, Slack=-0.0375 (View: func_rcff_0p825v_125c_pcff_cmin_pcff3_hold)
+  - Pin 'u_pma_top/u_pma_ana_wrapper/u_pma_ana/cmnda_atb_core_0': Required=0.1000, Actual=0.1417, Slack=-0.0417 (View: func_rcff_0p825v_125c_pcff_cmin_pcss3_hold)
+  - Pin 'u_pma_top/u_pma_ana_wrapper/u_pma_ana/cmnda_atb_core_1': Required=0.1000, Actual=0.1376, Slack=-0.0376 (View: func_rcff_0p825v_125c_pcff_cmin_pcff3_hold)
+  - Pin 'u_pma_top/u_pma_ana_wrapper/u_pma_ana/cmnda_atb_core_1': Required=0.1000, Actual=0.1417, Slack=-0.0417 (View: func_rcff_0p825v_125c_pcff_cmin_pcss3_hold)
+

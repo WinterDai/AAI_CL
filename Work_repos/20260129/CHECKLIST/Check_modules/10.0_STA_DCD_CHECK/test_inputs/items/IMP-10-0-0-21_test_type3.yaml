@@ -1,0 +1,17 @@
+description: Confirm all Warning message in the STA log files can be waived.
+input_files:
+- ${CHECKLIST_ROOT}/IP_project_folder/reports/10.0/tempus_1.log
+- ${CHECKLIST_ROOT}/IP_project_folder/reports/10.0/tempus_2.log
+requirements:
+  pattern_items:
+  - TECHLIB-302
+  - TECHLIB-1320
+  value: 2
+waivers:
+  value: 2
+  waive_items:
+  - name: TECHLIB-302
+    reason: Known library limitation - cells are functional primitives without boolean
+      functions
+  - name: IMPDBTCL-321
+    reason: Deprecated attribute usage - will be updated in next tool version

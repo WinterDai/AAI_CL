@@ -1,0 +1,5 @@
+FAIL:IMP-11-0-0-21:Confirm rush-current meet the requirement. (For non-PSO, please fill N/A)
+IMP-11-0-0-21-ERROR01: Configuration error:
+  Severity: Fail Occurrence: 1
+  - input_files is empty in YAML configuration
+

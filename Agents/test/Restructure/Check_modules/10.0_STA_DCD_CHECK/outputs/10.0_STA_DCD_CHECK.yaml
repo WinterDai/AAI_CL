@@ -1,0 +1,24 @@
+module: 10.0_STA_DCD_CHECK
+stage: Initial
+generated_at: 2026-01-03T09:51:52
+check_items: 
+  IMP-10-0-0-00: 
+    executed: true
+    status: pass
+    description: Confirm the netlist/spef version is correct
+    infos: 
+      - index: 1
+        detail: Current stage is synthesis, SPEF check is not applicable.
+        source_line: N/A
+        source_file: N/A
+        reason: Item not found[WAIVED_INFO]
+      - index: 2
+        detail: Generated on:*2025*
+        source_line: N/A
+        source_file: N/A
+        reason: Required pattern not found[WAIVED_AS_INFO]
+      - index: 3
+        detail: SPEF Reading was skipped
+        source_line: 22
+        source_file: 'c:\Users\wentao\AAI_local\AAI\Main_Work\ACL\Latest\CHECKLIST\IP_project_folder\logs\sta_post_syn.log'
+        reason: Design has no spef/netlist file or unexpected error[WAIVED_AS_INFO]

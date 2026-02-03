@@ -1,0 +1,5 @@
+FAIL:IMP-10-0-0-27:Confirm final timing review was held and all open items closed (capture the review and waiver in JIRA ticket).
+IMP-10-0-0-27-ERROR01: Configuration error:
+  Severity: Fail Occurrence: 1
+  - input_files is empty in YAML configuration
+

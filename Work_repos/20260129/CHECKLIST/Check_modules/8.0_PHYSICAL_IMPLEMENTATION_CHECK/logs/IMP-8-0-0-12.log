@@ -1,0 +1,19 @@
+FAIL:IMP-8-0-0-12:Confirm no inputs are tied directly to the power rails (VDD/VSS) by using Tiehigh/Tielow cells(check the Note)
+IMP-8-0-0-12-ERROR01: Tie cell violations detected:
+  Severity: Fail Occurrence: 9
+  - inst_data_path_top/inst_data_byte_macro/cdn_hs_phy_data_asic_pads/data_pad_0 | Pin: PAD2_HV_IN_XTC | Location: (162.031, 507.375)
+  - inst_data_path_top/inst_data_byte_macro/cdn_hs_phy_data_asic_pads/data_pad_4 | Pin: PAD1_HV_IN_XTC | Location: (158.688, 118.788)
+  - inst_data_path_top/inst_data_byte_macro/cdn_hs_phy_data_asic_pads/data_pad_4 | Pin: PAD2_HV_IN_XTC | Location: (162.031, 91.276)
+  - inst_data_path_top/inst_data_byte_macro/cdn_hs_phy_data_asic_pads/data_pad_5 | Pin: PAD1_HV_IN_XTC | Location: (158.688, 89.148)
+  - inst_data_path_top/inst_data_byte_macro/cdn_hs_phy_data_asic_pads/data_pad_5 | Pin: PAD2_HV_IN_XTC | Location: (162.031, 61.636)
+  - inst_data_path_top/inst_data_byte_macro/cdn_hs_phy_data_asic_pads/dm_pad | Pin: PAD1_HV_IN_XTC | Location: (158.688, 266.690)
+  - inst_data_path_top/inst_data_byte_macro/cdn_hs_phy_data_asic_pads/dm_pad | Pin: PAD2_HV_IN_XTC | Location: (162.031, 209.841)
+  - inst_data_path_top/inst_data_byte_macro/cdn_hs_phy_data_asic_pads/dqs_pad | Pin: PAD1_HV_IN_XTC | Location: (158.688, 327.110)
+  - inst_data_path_top/inst_data_byte_macro/cdn_hs_phy_data_asic_pads/dqs_pad | Pin: PAD2_HV_IN_XTC | Location: (162.031, 270.262)
+IMP-8-0-0-12-INFO01: Waived tie cell violations:
+  Severity: Info Occurrence: 4
+  - inst_data_path_top/inst_data_byte_macro/cdn_hs_phy_data_asic_pads/data_pad_6 | Pin: PAD1_HV_IN_XTC | Location: (158.688, 59.508)
+  - inst_data_path_top/inst_data_byte_macro/cdn_hs_phy_data_asic_pads/data_pad_6 | Pin: PAD2_HV_IN_XTC | Location: (162.031, 31.995)
+  - inst_data_path_top/inst_data_byte_macro/cdn_hs_phy_data_asic_pads/data_pad_7 | Pin: PAD1_HV_IN_XTC | Location: (158.688, 29.867)
+  - inst_data_path_top/inst_data_byte_macro/cdn_hs_phy_data_asic_pads/data_pad_7 | Pin: PAD2_HV_IN_XTC | Location: (162.031, 2.356)
+

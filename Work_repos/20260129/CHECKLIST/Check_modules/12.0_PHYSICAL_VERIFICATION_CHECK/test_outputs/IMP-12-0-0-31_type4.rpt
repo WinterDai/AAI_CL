@@ -1,0 +1,7 @@
+FAIL:IMP-12-0-0-31:Confirm FLT check result is clean. (for SEC process, for others fill N/A)
+Fail Occurrence: 1
+1: Fail: FLT rule: FLTM.Hx.S.1_H1 - 10 violations. In line 346, C:\Users\jingyu\OneDrive - Cadence Design Systems Inc\Desktop\checklist_dev\AI_2026_V1\CHECKLIST\CHECKLIST\IP_project_folder\reports\pv\Pegasus_FLT.sum: FLT rule violations detected in Pegasus_FLT.sum
+Warn Occurrence: 1
+1: Warn: FLTM.Mx.S.2_M2: Waiver not matched - no corresponding FLT rule violation found[WAIVER]
+Info Occurrence: 1
+1: Info: FLT rule: FLTM.Mx.S.1_M1 - 12 violations. In line 348, C:\Users\jingyu\OneDrive - Cadence Design Systems Inc\Desktop\checklist_dev\AI_2026_V1\CHECKLIST\CHECKLIST\IP_project_folder\reports\pv\Pegasus_FLT.sum: FLT rule violation waived per design team approval: Waived - Known issue in legacy IP block, approved by design team[WAIVER]

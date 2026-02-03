@@ -1,0 +1,14 @@
+description: Confirm you placed the discrete synchronizer flops close to each other
+  (distance <= 10um) for process without dedicated 2/3 stage synchronizer library
+  cell like TSMC. Make sure “no buffering on the Q->D path between sync flops” for
+  the sync_regs falling under same hierarchy. Please fine tune clock tree for hold
+  fixing. Please don't change the VT of synchronizer flops. (Check the Note. Fill
+  N/A for library has 2/3 stages dedicated library cell)
+input_files:
+- ${CHECKLIST_ROOT}/IP_project_folder/reports/8.0/IMP-8-0-0-10.rpt
+requirements:
+  pattern_items: []
+  value: N/A
+waivers:
+  value: N/A
+  waive_items: []

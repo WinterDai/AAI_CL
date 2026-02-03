@@ -1,0 +1,66 @@
+
+Cadence Voltus(TM) IC Power Integrity Solution.
+Copyright 2024 Cadence Design Systems, Inc. All rights reserved worldwide.
+
+Version:	v23.12-s092_1, built Wed Aug 14 10:37:24 PDT 2024
+Options:	-init scr/ffgnp_0p825v_125c_cbest_CCbest_T.LibGen.tcl -log logs/ffgnp_0p825v_125c_cbest_CCbest_T.LibGen.log 
+Date:		Mon Nov 24 10:59:21 2025
+Host:		nfdpcsr311 (x86_64 w/Linux 4.18.0-372.26.1.el8_6.x86_64) (32cores*64cpus*Intel(R) Xeon(R) Platinum 8462Y+ 61440KB)
+OS:		Red Hat Enterprise Linux 8.6 (Ootpa)
+LSF:		Interactive job 5048463 in cluster "nflsfdpc01" and queue "pd" on 1 cpu with -R " select[OSREL==EE70 || OSREL==EE80] span[hosts=1]".
+
+License:
+		[10:59:22.172958] Configured Lic search path (23.02-s005): 5280@noidpclic-lb1:5280@noidpclic02:5280@noidpclic04:5281@noidpclic-lb1:5281@noidpclic02:5281@noidpclic04
+
+		vtsxl	Voltus Power Integrity Solution XL	23.1	checkout succeeded
+		8 CPU jobs allowed with the current license(s). Use set_multi_cpu_usage to set your required CPU count.
+The soft stacksize limit is either up to the hard limit or larger than 0.2% of RAM. No change is needed.
+environment variable TMPDIR is '/tmp/ssv_tmpdir_1681373_26763ff5-41e4-468d-9b15-b76cd50f9a36_7i1n5G'.
+#@ Processing -files option
+Sourcing tcl/tk file 'scr/ffgnp_0p825v_125c_cbest_CCbest_T.LibGen.tcl' ...
+<CMD> read_lib -lef /process/tsmcN5/data/stdcell/n5/TSMC/PRTF_Innovus_5nm_014_Cad_V13a/PRTF/PRTF_Innovus_5nm_014_Cad_V13a/PR_tech/Cadence/LefHeader/Standard/VHV/PRTF_Innovus_N5_15M_1X1Xb1Xe1Ya1Yb5Y2Yy2Z_UTRDL_M1P34_M2P35_M3P42_M4P42_M5P76_M6P76_M7P76_M8P76_M9P76_M10P76_M11P76_H210_SHDMIM.13a.tlef /projects/TC70_LPDDR6_N5P/libs/ndr/ndr_10w10s.lef /projects/TC70_LPDDR6_N5P/libs/ndr/ndr_1w2s.lef /projects/TC70_LPDDR6_N5P/libs/ndr/ndr_2w1s.lef /projects/TC70_LPDDR6_N5P/libs/ndr/ndr_2w2s_em.lef /projects/TC70_LPDDR6_N5P/libs/ndr/ndr_2w2s.lef /projects/TC70_LPDDR6_N5P/libs/ndr/ndr_2w3s_em.lef /projects/TC70_LPDDR6_N5P/libs/ndr/ndr_2w3s.lef /projects/TC70_LPDDR6_N5P/libs/ndr/ndr_8w5s.lef
+<CMD> set_advanced_pg_library_mode -decap_frequency 1e9
+<CMD> set_advanced_pg_library_mode -default_frequency 1e9
+<CMD> set_pg_library_mode -celltype techonly -ground_pins VSS -power_pins {VDD 0.825} -extraction_tech_file /process/tsmcN5/data/g/QRC/15M1X1Xb1Xe1Ya1Yb5Y2Yy2Z_SHDMIM_UT/fs_v1d2p4a/rcworst/Tech/rcworst_CCworst_T/qrcTechFile -temperature 125 -lef_layermap /projects/TC70_LPDDR6_N5P/libs/map/N5_15M_voltus_lefdef.layermap
+<CMD> generate_pg_library -output dbs/ffgnp_0p825v_125c_cbest_CCbest_T
+[10:59:47.201913] Periodic Lic check successful
+[10:59:47.726227] Feature usage summary:
+[10:59:47.726227] Voltus_Power_Integrity_XL
+[10:59:47.726227] Voltus_Power_Integrity_AA
+
+(#112) This command "generate_pg_library -output dbs/ffgnp_0p825v_125c_cbest_CCbest_T" required an extra checkout of license vtsaa.
+Additional license(s) checked out: 1 'Voltus_Power_Integrity_AA' license(s)
+Started PGV Library Generator at 10:59:46 11/24/2025
+
+** INFO:  (VOLTUS_LGEN-3599): Library generation settings: 
+	Mode: TECH 
+	Capacitance: area_cap 
+	Current Distribution: estimation 
+	Grid Port Definition: LEF 
+	Grid Current Sinks: LEF pin 
+	Power Gate: no
+
+
+** INFO:  (VOLTUS_LGEN-3598): Processing LEF files: 
+/process/tsmcN5/data/stdcell/n5/TSMC/PRTF_Innovus_5nm_014_Cad_V13a/PRTF/PRTF_Innovus_5nm_014_Cad_V13a/PR_tech/Cadence/LefHeader/Standard/VHV/PRTF_Innovus_N5_15M_1X1Xb1Xe1Ya1Yb5Y2Yy2Z_UTRDL_M1P34_M2P35_M3P42_M4P42_M5P76_M6P76_M7P76_M8P76_M9P76_M10P76_M11P76_H210_SHDMIM.13a.tlef
+/projects/TC70_LPDDR6_N5P/libs/ndr/ndr_10w10s.lef
+/projects/TC70_LPDDR6_N5P/libs/ndr/ndr_1w2s.lef
+/projects/TC70_LPDDR6_N5P/libs/ndr/ndr_2w1s.lef
+/projects/TC70_LPDDR6_N5P/libs/ndr/ndr_2w2s_em.lef
+/projects/TC70_LPDDR6_N5P/libs/ndr/ndr_2w2s.lef
+/projects/TC70_LPDDR6_N5P/libs/ndr/ndr_2w3s_em.lef
+/projects/TC70_LPDDR6_N5P/libs/ndr/ndr_2w3s.lef
+/projects/TC70_LPDDR6_N5P/libs/ndr/ndr_8w5s.lef
+
+** INFO:  (VOLTUS_LGEN-3606): 
+Power Grid View Generation Statistics:
+        # Total number of cells: 0 
+        # TECH view created: 0 (0%)
+Finished PGV Library Generator at 10:59:53 11/24/2025 (cpu=0:00:01, real=0:00:07)
+<CMD> exit
+
+--------------------------------------------------------------------------------
+Exiting Voltus IC Power Integrity Solution on Mon Nov 24 10:59:53 2025
+  Total CPU time:     0:00:21
+  Total real time:    0:00:38
+  Peak memory (main): 1794.01MB

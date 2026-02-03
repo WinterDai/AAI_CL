@@ -1,0 +1,3 @@
+FAIL:IMP-12-0-0-10:Confirm turn-off the VIRTUAL_CONNECT in LVS setting.
+Fail Occurrence: 1
+1: Fail: VIRTUAL_CONNECT is YES (should be NO) (Line 80 in /home/jingyu/checklist_dev/CHECKLIST/CHECKLIST/IP_project_folder/logs/do_cmd_3star_LVS_sourceme): VIRTUAL_CONNECT is enabled or setting not found in file

@@ -1,0 +1,10 @@
+PASS:IMP-8-0-0-05:Confirm the power switches connection is correct . (for non-PSO, please fill N/A)
+IMP-8-0-0-05-WARN01: Unused waivers:
+  Severity: Warn Occurrence: 2
+  - Found no problems or warnings.
+  - SUCCEEDED!
+IMP-8-0-0-05-INFO01: Power switch connection patterns validated successfully:
+  Severity: Info Occurrence: 2
+  - Found no problems or warnings.
+  - SUCCEEDED!
+

@@ -1,0 +1,5 @@
+PASS:IMP-12-0-0-25:Confirm the BUMP DRC rule deck setting is correct.
+IMP-12-0-0-25-INFO01: [WAIVED_INFO]: Waived information:
+  Severity: Info Occurrence: 1
+  - Explanation: BUMP DRC rule deck configuration check is informational only for early design stages
+

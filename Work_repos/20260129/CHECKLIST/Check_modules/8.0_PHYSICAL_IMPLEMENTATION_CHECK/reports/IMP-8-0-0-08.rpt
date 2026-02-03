@@ -1,0 +1,8 @@
+PASS:IMP-8-0-0-08:Confirm max routing layer is correct. Provide max routing layer value in comment field.
+Warn Occurrence: 2
+1: Warn: PGNetLayerList: M13: Waiver defined but no violation matched: Waived - PG layer list uses alternative configuration file per team agreement[WAIVER]
+2: Warn: SignalNetLayerList: M12: Waiver defined but no violation matched: Waived - signal layer list intentionally omitted for analog-only design per design review[WAIVER]
+Info Occurrence: 3
+1: Info: PGNetLayerList: M13. In line 3, C:\Users\yuyin\OneDrive - Cadence Design Systems Inc\2025\Checklist\AAI\CHECKLIST_V3\CHECKLIST\IP_project_folder\reports\8.0\IMP-8-0-0-08.rpt: Max routing layer matched and validated against expected configuration
+2: Info: SignalNetLayerList: M12. In line 2, C:\Users\yuyin\OneDrive - Cadence Design Systems Inc\2025\Checklist\AAI\CHECKLIST_V3\CHECKLIST\IP_project_folder\reports\8.0\IMP-8-0-0-08.rpt: Max routing layer matched and validated against expected configuration
+3: Info: techLayerList: M15. In line 1, C:\Users\yuyin\OneDrive - Cadence Design Systems Inc\2025\Checklist\AAI\CHECKLIST_V3\CHECKLIST\IP_project_folder\reports\8.0\IMP-8-0-0-08.rpt: Max routing layer matched and validated against expected configuration

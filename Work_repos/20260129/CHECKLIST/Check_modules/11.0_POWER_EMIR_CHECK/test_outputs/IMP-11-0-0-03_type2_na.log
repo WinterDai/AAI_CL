@@ -1,0 +1,6 @@
+FAIL:IMP-11-0-0-03:Confirm activity file was used? If not, provide default switching activity values in comments field.
+IMP-11-0-0-03-ERROR01: No activity configuration detected (neither activity file nor defaults):
+  Severity: Fail Occurrence: 2
+  - 'read_activity_file' finished successfully
+  - 'set_default_switching_activity' finished successfully
+

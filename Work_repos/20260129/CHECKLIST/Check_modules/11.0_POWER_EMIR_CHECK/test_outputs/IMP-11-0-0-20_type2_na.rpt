@@ -1,0 +1,3 @@
+FAIL:IMP-11-0-0-20:Confirm wake-up time meet customer's requirement. (For non-PSO, please fill N/A)
+Fail Occurrence: 1
+1: Fail: Wake-up time: 1.11e-07s exceeds requirement 1.00e-07s by 1.10e-08s. In line 9, C:\Users\chudongy\dev_workspace\ai_checklist\CHECKLIST\CHECKLIST\IP_project_folder\reports\11.0\Powerup.rpt: Measured wake-up time exceeds customer requirement threshold

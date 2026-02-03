@@ -1,0 +1,13 @@
+description: Confirm no issue for check_design in Innovus.
+input_files:
+- ${CHECKLIST_ROOT}/IP_project_folder/reports/7.0/IMP-7-0-0-05.rpt
+requirements:
+  pattern_items:
+  - IMPMSMV-8623
+  - CHKNETLIST-1
+  value: 2
+waivers:
+  value: 0
+  waive_items:
+  - 'Explanation: This check is informational only - design is in pre-tapeout validation
+    phase'

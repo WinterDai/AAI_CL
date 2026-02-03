@@ -1,0 +1,7 @@
+FAIL:IMP-12-0-0-11:Confirm the DRC check result is clean. (fill the confidence level of not touching floorplan again in comment if fill no, for example, 90%~100%)
+IMP-12-0-0-11-ERROR01: DRC rule violations detected - requirements not satisfied:
+  Severity: Fail Occurrence: 3
+  - AN.R.20mg: 290
+  - EFP.VIA13.R.1.1: 41
+  - RH_TN.WARN.1: 256
+

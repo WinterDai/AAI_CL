@@ -1,0 +1,20 @@
+description: Confirm SPEF extaction includes dummy metal gds.
+input_files:
+- ${CHECKLIST_ROOT}/IP_project_folder/logs/9.0/do_qrcrcworst_CCworst_T_125c.log
+- ${CHECKLIST_ROOT}/IP_project_folder/logs/9.0/do_qrccbest_CCbest_125c.log
+- ${CHECKLIST_ROOT}/IP_project_folder/logs/9.0/do_qrccbest_CCbest_m40c.log
+- ${CHECKLIST_ROOT}/IP_project_folder/logs/9.0/do_qrccworst_CCworst_m40c.log
+requirements:
+  pattern_items:
+  - do_qrcrcworst_CCworst_T_125c.log
+  - do_qrccbest_CCbest_125c.log
+  value: 2
+waivers:
+  value: 2
+  waive_items:
+  - name: do_qrccbest_CCbest_125c.log
+    reason: Waived - CC best corner uses simplified extraction without metal fill
+      per design team approval
+  - name: do_qrcrcworst_CCworst_T_125c.log
+    reason: Waived - RC worst corner metal fill GDS path updated in next extraction
+      run

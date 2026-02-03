@@ -1,0 +1,9 @@
+description: 'TODO: Confirm reset_n_pad (cdns_ddr_se_r_txrx_h) IO VDD_AO pin must
+  be connected to always-on VDD.'
+requirements:
+  value: N/A
+  pattern_items: []
+input_files: []
+waivers:
+  value: N/A
+  waive_items: []

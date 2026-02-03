@@ -1,0 +1,553 @@
+```xml
+<thoughts>
+1. 检查目标: 验证 netlist 和 SPEF 文件的版本信息是否正确
+2. 数据流: STA log → 提取 netlist/SPEF 路径 → 解析实际文件 → 提取版本信息
+3. 辅助方法: _parse_sta_log (解析STA日志), _parse_netlist_version (提取netlist版本), _parse_spef_version (提取SPEF版本)
+4. Pass/Fail逻辑:
+   - Type1: netlist和SPEF都成功读取 → PASS
+   - Type2: pattern_items中的版本信息都找到 → PASS
+   - Type3: pattern_items找到或waived → PASS
+   - Type4: 文件读取成功或waived → PASS
+5. Metadata追踪: 记录每个成功/失败项的行号和文件路径
+</thoughts>
+
+<class_name>
+NetlistSpefVersionChecker
+</class_name>
+
+<class_constants>
+FOUND_DESC = "File successfully read with version information"
+MISSING_DESC = "File not found or version information missing"
+EXTRA_DESC = "Additional information or warnings"
+NETLIST_SUCCESS_REASON = "Netlist file read successfully"
+SPEF_SUCCESS_REASON = "SPEF file read successfully"
+NETLIST_MISSING_REASON = "Netlist file not found or read failed"
+SPEF_MISSING_REASON = "SPEF file not found or read failed"
+</class_constants>
+
+<name_extractor_method>
+def _build_name_extractor(self):
+    """返回 name_extractor 函数，用于格式化输出"""
+    def extract_name(name: str, metadata: Any) -> str:
+        if isinstance(metadata, dict):
+            version = metadata.get('version', '')
+            date = metadata.get('date', '')
+            path = metadata.get('path', '')
+            
+            parts = [name]
+            if path:
+                parts.append(f"Path: {path}")
+            if version:
+                parts.append(f"Version: {version}")
+            if date:
+                parts.append(f"Date: {date}")
+            
+            return ", ".join(parts)
+        return name
+    return extract_name
+</name_extractor_method>
+
+<parse_method>
+def _parse_input_files(self) -> Dict[str, Any]:
+    """
+    Parse input files to extract netlist and SPEF version information.
+    
+    Returns:
+        Dict[str, Any] with structure:
+        {
+            'netlist_info': {
+                'status': 'Success'/'Not Found'/'Failed',
+                'path': '/absolute/path/to/netlist.v.gz',
+                'relative_path': '/path/from/log',  # if file not accessible
+                'version': '23.15-s099_1',
+                'date': 'Nov 18 2025'
+            },
+            'spef_info': {
+                'status': 'Success'/'Not Found'/'Skipped',
+                'path': '/absolute/path/to/spef.spef.gz',
+                'relative_path': '/path/from/log',
+                'version': '23.1.0-p075',
+                'date': 'Tue Jun 10 14:16:48 2025',
+                'skip_reason': 'reason if skipped'
+            },
+            'errors': []
+        }
+    """
+    valid_files, missing_files = self.validate_input_files()
+    if not valid_files:
+        raise ConfigurationError("No valid input files found")
+    
+    result = {
+        'netlist_info': {'status': 'Not Found'},
+        'spef_info': {'status': 'Not Found'},
+        'errors': []
+    }
+    
+    # Initialize metadata storage
+    self._metadata = {
+        'netlist_success': {},
+        'spef_step_end': {},
+        'spef_skipped': {}
+    }
+    
+    # Parse STA log to get file paths
+    for file_path in valid_files:
+        if file_path.suffix == '.log' or 'sta' in file_path.name.lower():
+            sta_result = self._parse_sta_log(file_path)
+            result['netlist_info'].update(sta_result.get('netlist_info', {}))
+            result['spef_info'].update(sta_result.get('spef_info', {}))
+            result['errors'].extend(sta_result.get('errors', []))
+    
+    # Parse actual netlist file if path found
+    netlist_info = result['netlist_info']
+    if netlist_info.get('path'):
+        netlist_path = Path(netlist_info['path'])
+        if netlist_path.exists():
+            version_info = self._parse_netlist_version(netlist_path)
+            netlist_info.update(version_info)
+    
+    # Parse actual SPEF file if path found
+    spef_info = result['spef_info']
+    if spef_info.get('path'):
+        spef_path = Path(spef_info['path'])
+        if spef_path.exists():
+            version_info = self._parse_spef_version(spef_path)
+            spef_info.update(version_info)
+    
+    return result
+</parse_method>
+
+<execute_type1>
+def _execute_type1(self, parsed_data: Dict[str, Any]) -> CheckResult:
+    """Type 1: Boolean check - 存在即 PASS"""
+    def parse_data():
+        """调用共享的Boolean Check Logic"""
+        return self._boolean_check_logic(parsed_data)
+    
+    return self.execute_boolean_check(
+        parse_data_func=parse_data,
+        has_waiver=False,
+        found_desc=self.FOUND_DESC,
+        missing_desc=self.MISSING_DESC,
+        extra_desc=self.EXTRA_DESC,
+        name_extractor=self._build_name_extractor()
+    )
+</execute_type1>
+
+<execute_type2>
+def _execute_type2(self, parsed_data: Dict[str, Any]) -> CheckResult:
+    """Type 2: Value check - Pattern matching, no waiver"""
+    def parse_data():
+        """调用共享的Pattern Check Logic"""
+        return self._pattern_check_logic(parsed_data)
+    
+    return self.execute_value_check(
+        parse_data_func=parse_data,
+        has_waiver=False,
+        found_desc="Pattern matched in version information",
+        missing_desc="Pattern not found in version information",
+        extra_desc=self.EXTRA_DESC,
+        name_extractor=self._build_name_extractor()
+    )
+</execute_type2>
+
+<execute_type3>
+def _execute_type3(self, parsed_data: Dict[str, Any]) -> CheckResult:
+    """Type 3: Value check with waiver - Pattern matching + waiver support"""
+    # Prepare info_items for display
+    info_items = {}
+    netlist_info = parsed_data.get('netlist_info', {})
+    spef_info = parsed_data.get('spef_info', {})
+    
+    if netlist_info.get('path'):
+        info_items['Netlist File Path'] = {
+            'line_number': 0,
+            'file_path': '',
+            'reason': f"Found at: {netlist_info['path']}"
+        }
+    
+    if spef_info.get('path'):
+        info_items['SPEF File Path'] = {
+            'line_number': 0,
+            'file_path': '',
+            'reason': f"Found at: {spef_info['path']}"
+        }
+    
+    def parse_data():
+        """调用共享的Pattern Check Logic"""
+        return self._pattern_check_logic(parsed_data)
+    
+    return self.execute_value_check(
+        parse_data_func=parse_data,
+        has_waiver=True,
+        info_items=info_items,
+        found_desc="Pattern matched in version information",
+        missing_desc="Pattern not found in version information",
+        extra_desc=self.EXTRA_DESC,
+        extra_severity=Severity.FAIL,
+        name_extractor=self._build_name_extractor()
+    )
+</execute_type3>
+
+<execute_type4>
+def _execute_type4(self, parsed_data: Dict[str, Any]) -> CheckResult:
+    """Type 4: Boolean check with waiver - Existence check + waiver support"""
+    def parse_data():
+        """调用共享的Boolean Check Logic"""
+        return self._boolean_check_logic(parsed_data)
+    
+    return self.execute_boolean_check(
+        parse_data_func=parse_data,
+        has_waiver=True,
+        found_desc=self.FOUND_DESC,
+        missing_desc=self.MISSING_DESC,
+        extra_desc=self.EXTRA_DESC,
+        name_extractor=self._build_name_extractor()
+    )
+</execute_type4>
+
+<helper_methods>
+def _boolean_check_logic(self, parsed_data: Dict[str, Any]) -> tuple:
+    """
+    Boolean Check Logic (Type1/4 共享)
+    
+    核心业务逻辑：检查 netlist 和 SPEF 文件是否成功读取
+    
+    Returns:
+        tuple: (found_items, missing_items, extra_items)
+    """
+    netlist_info = parsed_data.get('netlist_info', {})
+    spef_info = parsed_data.get('spef_info', {})
+    errors = parsed_data.get('errors', [])
+    
+    found_items = {}
+    missing_items = {}
+    extra_items = {}
+    
+    # Check netlist
+    netlist_status = netlist_info.get('status', 'Not Found')
+    if netlist_status == 'Success':
+        if netlist_info.get('path'):
+            # 文件存在且可读
+            metadata = self._metadata.get('netlist_success', {})
+            found_items["Netlist File"] = {
+                'line_number': metadata.get('line_number', 0),
+                'file_path': metadata.get('file_path', ''),
+                'version': netlist_info.get('version', 'Unknown'),
+                'date': netlist_info.get('date', ''),
+                'path': netlist_info.get('path', 'Unknown')
+            }
+        elif netlist_info.get('relative_path'):
+            # 路径存在但文件不可访问 → 仍算found（因为status='Success'）
+            metadata = self._metadata.get('netlist_success', {})
+            found_items["Netlist File"] = {
+                'line_number': metadata.get('line_number', 0),
+                'file_path': metadata.get('file_path', ''),
+                'note': 'found in log, file not accessible',
+                'path': netlist_info['relative_path']
+            }
+    else:
+        missing_items["Netlist File"] = {
+            'line_number': 0,
+            'file_path': '',
+            'reason': f"Status: {netlist_status}"
+        }
+    
+    # Check SPEF
+    spef_status = spef_info.get('status', 'Not Found')
+    if spef_status == 'Success':
+        if spef_info.get('path'):
+            metadata = self._metadata.get('spef_step_end', {})
+            found_items["SPEF File"] = {
+                'line_number': metadata.get('line_number', 0),
+                'file_path': metadata.get('file_path', ''),
+                'version': spef_info.get('version', 'Unknown'),
+                'date': spef_info.get('date', ''),
+                'path': spef_info.get('path', 'Unknown')
+            }
+        elif spef_info.get('relative_path'):
+            metadata = self._metadata.get('spef_step_end', {})
+            found_items["SPEF File"] = {
+                'line_number': metadata.get('line_number', 0),
+                'file_path': metadata.get('file_path', ''),
+                'note': 'found in log, file not accessible',
+                'path': spef_info['relative_path']
+            }
+    elif spef_status == 'Skipped':
+        # SPEF跳过 → missing_items (影响is_pass)
+        metadata = self._metadata.get('spef_skipped', {})
+        skip_reason = spef_info.get('skip_reason', 'SPEF reading was skipped')
+        missing_items["SPEF Reading was skipped"] = {
+            'line_number': metadata.get('line_number', 0),
+            'file_path': metadata.get('file_path', ''),
+            'reason': skip_reason
+        }
+    else:
+        missing_items["SPEF File"] = {
+            'line_number': 0,
+            'file_path': '',
+            'reason': f"Status: {spef_status}"
+        }
+    
+    # 错误作为extra_items (不影响is_pass)
+    for error in errors:
+        if not any(e in error for e in ["SPEF reading was skipped"]):
+            extra_items[f"Error: {error}"] = {
+                'line_number': 0,
+                'file_path': '',
+                'reason': 'Unexpected error during parsing'
+            }
+    
+    return found_items, missing_items, extra_items
+
+
+def _pattern_check_logic(self, parsed_data: Dict[str, Any]) -> tuple:
+    """
+    Pattern Check Logic (Type2/3 共享)
+    
+    核心业务逻辑：在版本信息中匹配 pattern_items
+    
+    Returns:
+        tuple: (found_items, missing_items, extra_items)
+    """
+    requirements = self.item_data.get('requirements', {})
+    pattern_items = requirements.get('pattern_items', [])
+    
+    netlist_info = parsed_data.get('netlist_info', {})
+    spef_info = parsed_data.get('spef_info', {})
+    
+    found_items = {}
+    missing_items = {}
+    extra_items = {}
+    
+    # Build searchable content
+    searchable_content = []
+    
+    # Add netlist version info
+    if netlist_info.get('version'):
+        searchable_content.append({
+            'text': f"Netlist Version: {netlist_info['version']}",
+            'source': 'netlist',
+            'metadata': netlist_info
+        })
+    if netlist_info.get('date'):
+        searchable_content.append({
+            'text': f"Netlist Date: {netlist_info['date']}",
+            'source': 'netlist',
+            'metadata': netlist_info
+        })
+    
+    # Add SPEF version info
+    if spef_info.get('version'):
+        searchable_content.append({
+            'text': f"SPEF Version: {spef_info['version']}",
+            'source': 'spef',
+            'metadata': spef_info
+        })
+    if spef_info.get('date'):
+        searchable_content.append({
+            'text': f"SPEF Date: {spef_info['date']}",
+            'source': 'spef',
+            'metadata': spef_info
+        })
+    
+    # Match patterns
+    for pattern in pattern_items:
+        if isinstance(pattern, dict):
+            pattern_str = pattern.get('pattern', '')
+        else:
+            pattern_str = str(pattern)
+        
+        matched = False
+        for content_item in searchable_content:
+            if pattern_str.lower() in content_item['text'].lower():
+                source = content_item['source']
+                metadata = content_item['metadata']
+                
+                found_items[pattern_str] = {
+                    'line_number': 0,
+                    'file_path': metadata.get('path', ''),
+                    'matched': content_item['text'],
+                    'source': source,
+                    'version': metadata.get('version', ''),
+                    'date': metadata.get('date', '')
+                }
+                matched = True
+                break
+        
+        if not matched:
+            missing_items[pattern_str] = {
+                'line_number': 0,
+                'file_path': '',
+                'reason': 'Pattern not found in version information'
+            }
+    
+    # Check SPEF skip status - add as extra_item if skipped (Type2/3)
+    if spef_info.get('status') == 'Skipped':
+        metadata = self._metadata.get('spef_skipped', {})
+        skip_reason = spef_info.get('skip_reason', 'SPEF reading was skipped')
+        extra_items["SPEF Reading was skipped"] = {
+            'line_number': metadata.get('line_number', 0),
+            'file_path': metadata.get('file_path', ''),
+            'reason': skip_reason
+        }
+    
+    return found_items, missing_items, extra_items
+
+
+def _parse_sta_log(self, sta_log: Path) -> Dict[str, Any]:
+    """
+    解析 STA log 文件，提取 netlist 和 SPEF 路径及状态
+    
+    Returns:
+        Dict with netlist_info, spef_info, errors
+    """
+    result = {
+        'netlist_info': {'status': 'Not Found'},
+        'spef_info': {'status': 'Not Found'},
+        'errors': []
+    }
+    
+    try:
+        with open(sta_log, 'r', errors='ignore') as f:
+            for line_num, line in enumerate(f, 1):
+                line = line.strip()
+                
+                # Extract netlist path
+                if 'read_netlist' in line.lower() or 'reading verilog netlist' in line.lower():
+                    match = re.search(r"['\"]([^'\"]+\.v(?:\.gz)?)['\"]", line)
+                    if not match:
+                        match = re.search(r'(\S+\.v(?:\.gz)?)', line)
+                    
+                    if match:
+                        netlist_path_str = match.group(1)
+                        netlist_path = Path(netlist_path_str)
+                        if netlist_path.exists():
+                            result['netlist_info']['path'] = str(netlist_path.resolve())
+                        else:
+                            # Path found but file doesn't exist → save as relative_path
+                            result['netlist_info']['relative_path'] = netlist_path_str
+                
+                # Netlist success indicator
+                elif '*** netlist is unique' in line.lower() or 'netlist is unique' in line.lower():
+                    result['netlist_info']['status'] = 'Success'
+                    self._metadata['netlist_success'] = {
+                        'line_number': line_num,
+                        'file_path': str(sta_log)
+                    }
+                
+                # Extract SPEF path
+                elif 'read spef' in line.lower() or 'read_parasitics' in line.lower():
+                    match = re.search(r"['\"]([^'\"]+\.spef(?:\.gz)?)['\"]", line)
+                    if not match:
+                        match = re.search(r'(\S+\.spef(?:\.gz)?)', line)
+                    
+                    if match:
+                        spef_path_str = match.group(1)
+                        spef_path = Path(spef_path_str)
+                        if spef_path.exists():
+                            result['spef_info']['path'] = str(spef_path.resolve())
+                        else:
+                            result['spef_info']['relative_path'] = spef_path_str
+                
+                # SPEF success indicator
+                elif 'end flow_step read_parasitics' in line.lower():
+                    result['spef_info']['status'] = 'Success'
+                    self._metadata['spef_step_end'] = {
+                        'line_number': line_num,
+                        'file_path': str(sta_log)
+                    }
+                
+                # SPEF skip indicator
+                elif 'skipping spef reading' in line.lower():
+                    result['spef_info']['status'] = 'Skipped'
+                    result['spef_info']['skip_reason'] = line
+                    self._metadata['spef_skipped'] = {
+                        'line_number': line_num,
+                        'file_path': str(sta_log)
+                    }
+    
+    except Exception as e:
+        result['errors'].append(f"Error parsing STA log: {str(e)}")
+    
+    return result
+
+
+def _parse_netlist_version(self, netlist_path: Path) -> Dict[str, str]:
+    """
+    解析 netlist 文件提取版本信息
+    
+    Returns:
+        Dict with 'version' and 'date' keys
+    """
+    version_info = {}
+    
+    try:
+        # Read first 100 lines for version info
+        with open(netlist_path, 'r', errors='ignore') as f:
+            for i, line in enumerate(f):
+                if i >= 100:
+                    break
+                
+                # Match: Generated by Cadence Genus(TM) Synthesis Solution 23.15-s099_1
+                if 'genus' in line.lower() and 'synthesis' in line.lower():
+                    match = re.search(r'(\d+\.\d+[-\w]+)', line)
+                    if match:
+                        version_info['version'] = match.group(1)
+                
+                # Match: Generated on: Nov 18 2025 15:58:15
+                if 'generated on' in line.lower():
+                    match = re.search(r':\s*([A-Za-z]+\s+\d+\s+\d{4})', line)
+                    if match:
+                        version_info['date'] = match.group(1)
+                
+                if 'version' in version_info and 'date' in version_info:
+                    break
+    
+    except Exception as e:
+        pass
+    
+    return version_info
+
+
+def _parse_spef_version(self, spef_path: Path) -> Dict[str, str]:
+    """
+    解析 SPEF 文件提取版本信息
+    
+    Returns:
+        Dict with 'version' and 'date' keys
+    """
+    version_info = {}
+    
+    try:
+        # Read first 50 lines for header info
+        with open(spef_path, 'r', errors='ignore') as f:
+            for i, line in enumerate(f):
+                if i >= 50:
+                    break
+                
+                # Match: *DATE "Tue Jun 10 14:16:48 2025"
+                if line.startswith('*DATE'):
+                    match = re.search(r'"([^"]+)"', line)
+                    if match:
+                        version_info['date'] = match.group(1)
+                
+                # Match: *VERSION "23.1.0-p075 Tue Sep 26 09:27:40 PDT 2023"
+                if line.startswith('*VERSION'):
+                    match = re.search(r'"([^"]+)"', line)
+                    if match:
+                        full_version = match.group(1)
+                        # Extract version number
+                        version_match = re.search(r'(\d+\.\d+\.\d+[-\w]+)', full_version)
+                        if version_match:
+                            version_info['version'] = version_match.group(1)
+                
+                if 'version' in version_info and 'date' in version_info:
+                    break
+    
+    except Exception as e:
+        pass
+    
+    return version_info
+</helper_methods>
+```

@@ -1,0 +1,12 @@
+description: 'Confirm all the PGV views are present in the EMIR scripts.'
+requirements:
+  value: N/A
+  pattern_items: []
+input_files: 
+- ${CHECKLIST_ROOT}/IP_project_folder/reports/11.0/missingLibModelCell.out
+waivers:
+  value: 3
+  waive_items:
+  - cdn_hs_phy_top_BEOL
+  - cdn_hs_phy_top_FEOL
+  - N05_DTCD_ALL_M12_170928

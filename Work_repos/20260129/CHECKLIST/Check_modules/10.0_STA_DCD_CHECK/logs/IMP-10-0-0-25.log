@@ -1,0 +1,10 @@
+FAIL:IMP-10-0-0-25:Confirm check_timing report has no issue.
+IMP-10-0-0-25-ERROR01: Check_timing verification failed - constraint issues require resolution:
+  Severity: Fail Occurrence: 6
+  - clock_expected (1 occurrences) | View: func_rcff_0p825v_125c_pcff_cmin_pcff3_hold
+  - clock_expected (1 occurrences) | View: scan_shift_rcff_0p825v_125c_pcff_cmin_pcff3_hold
+  - ideal_clock_waveform (1 occurrences) | View: scan_shift_rcff_0p825v_125c_pcff_cmin_pcff3_hold
+  - ideal_clock_waveform (3 occurrences) | View: func_rcff_0p825v_125c_pcff_cmin_pcff3_hold
+  - no_drive (2 occurrences) | View: func_rcff_0p825v_125c_pcff_cmin_pcff3_hold
+  - no_drive (2 occurrences) | View: scan_shift_rcff_0p825v_125c_pcff_cmin_pcff3_hold
+

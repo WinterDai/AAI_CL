@@ -1,0 +1,16 @@
+description: Confirm EMIR signoff criteria follows addendum or SOW, otherwise follow
+  internal spec (design rule with IP specific margin)
+input_files: []
+requirements:
+  pattern_items:
+  - EM_TEMPERATURE=105
+  - EM_LIFETIME=87600
+  - STATIC_IR_TARGET=3%
+  value: 3
+waivers:
+  value: 2
+  waive_items:
+  - name: STATIC_IR_TARGET=5%
+    reason: Waived per addendum - 5% static IR acceptable for low-power domains
+  - name: DYNAMIC_IR_TARGET=20%
+    reason: Waived per SOW - 20% dynamic IR acceptable for test mode operation

@@ -1,0 +1,24 @@
+FAIL:IMP-12-0-0-11:Confirm the DRC check result is clean. (fill the confidence level of not touching floorplan again in comment if fill no, for example, 90%~100%)
+IMP-12-0-0-11-ERROR01: DRC violations detected - design not clean:
+  Severity: Fail Occurrence: 14
+  - EFP.VIA13.R.1.1: 41
+  - EFP.VIA13.R.1.2: 5
+  - ESD.1g: 1
+  - ESD.1g: 2
+  - HIA.CDM9A.3.1.zg: 20
+  - HIA.CDM9A.3.zg: 20
+  - PO.DN.11: 1
+  - RH_TN.WARN.1: 156
+  - RH_TN.WARN.1: 256
+  - RR:RE:FB1AN.R.5: 12973
+  - RR:RE:FB1AN_OD.R.22: 498
+  - RR:RE:FB1AN_OD.R.23.4: 491
+  - RR:RE:FB1AN_OD.R.24.1.z: 1944
+  - RR:RE:FB1AN_OD.S.27.z: 379
+IMP-12-0-0-11-WARN01: Unused waivers:
+  Severity: Warn Occurrence: 1
+  - RH_TN.WARN.1: 300
+IMP-12-0-0-11-INFO01: Waived DRC violations:
+  Severity: Info Occurrence: 1
+  - AN.R.20mg: 290
+

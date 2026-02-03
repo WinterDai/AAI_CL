@@ -1,0 +1,4 @@
+PASS:IMP-8-0-0-05:Confirm the power switches connection is correct . (for non-PSO, please fill N/A)
+Info Occurrence: 2
+1: Info: Found no problems or warnings.. In line 20, C:\Users\chenweif\Checker_dev\CHECKLIST\CHECKLIST\IP_project_folder\reports\8.0\check_power_switch_connection.pass.rpt: Power switch connection requirements matched and validated
+2: Info: SUCCEEDED!. In line 2025, C:\Users\chenweif\Checker_dev\CHECKLIST\CHECKLIST\IP_project_folder\logs\8.0\do_fv.log: Power switch connection requirements matched and validated

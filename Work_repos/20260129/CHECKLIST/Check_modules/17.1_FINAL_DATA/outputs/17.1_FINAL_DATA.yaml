@@ -1,0 +1,14 @@
+module: 17.1_FINAL_DATA
+stage: Initial
+generated_at: 2025-12-23T18:43:03
+check_items: 
+  HPP-IMP-17-1-0-00: 
+    executed: true
+    status: fail
+    description: If IP under DR3 review implements a register containing the revision/version of the IP, please confirm that this register contains the correct revision/version of the IP w.r.t this DR3 Review?
+    failures: 
+      - index: 1
+        detail: input_files is empty in YAML configuration
+        source_line: N/A
+        source_file: N/A
+        reason: input_files is empty in YAML configuration

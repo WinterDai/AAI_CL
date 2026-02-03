@@ -1,0 +1,5 @@
+FAIL:IMP-9-0-0-06:Confirm the reuse block spef generation QRC version is same as your top level QRC version. If there is qrcTech file version update with new tool version after slices were built and released, block level spef may need to be regenerated. You can get the slice QRC version in BE checklist or RELEASE_NOTES.
+IMP-9-0-0-06-ERROR01: Configuration error:
+  Severity: Fail Occurrence: 1
+  - input_files is empty in YAML configuration
+

@@ -1,0 +1,5 @@
+FAIL:IMP-12-0-0-24:Confirm add the chipBoundary layer to check boundary DRC for test chip.
+IMP-12-0-0-24-ERROR01: Expected Chip_Boundary layer not satisfied (0/1 missing):
+  Severity: Fail Occurrence: 1
+  - Chip_Boundary
+

@@ -1,0 +1,9 @@
+FAIL:IMP-5-0-0-13:Confirm scan is successfully inserted and non-scannable flops have been peer reviewed and waived?
+Fail Occurrence: 7
+1: Fail: fail_dft_rules:ttttt. In line 4, C:\Users\wentao\AAI_local\AAI\Main_Work\ACL\CHECKLIST\CHECKLIST\IP_project_folder\reports\dft_chainRegs.rpt: Registers fail DFT rules
+2: Fail: misc_non_scan:u_accum/genus_inserted_cg_RC_CG_HIER_INST3/RC_CGIC_INST. In line 11, C:\Users\wentao\AAI_local\AAI\Main_Work\ACL\CHECKLIST\CHECKLIST\IP_project_folder\reports\dft_chainRegs.rpt: Registers are misc. non-scan
+3: Fail: misc_non_scan:u_cmn_cpi_sreg_if/genus_inserted_cg_RC_CG_HIER_INST1/RC_CGIC_INST. In line 11, C:\Users\wentao\AAI_local\AAI\Main_Work\ACL\CHECKLIST\CHECKLIST\IP_project_folder\reports\dft_chainRegs.rpt: Registers are misc. non-scan
+4: Fail: misc_non_scan:u_cmn_dpi_sreg_if/genus_inserted_cg_RC_CG_HIER_INST0/RC_CGIC_INST. In line 11, C:\Users\wentao\AAI_local\AAI\Main_Work\ACL\CHECKLIST\CHECKLIST\IP_project_folder\reports\dft_chainRegs.rpt: Registers are misc. non-scan
+5: Fail: misc_non_scan:u_phalign_fsm/u_counter/genus_inserted_cg_RC_CG_HIER_INST2/RC_CGIC_INST. In line 11, C:\Users\wentao\AAI_local\AAI\Main_Work\ACL\CHECKLIST\CHECKLIST\IP_project_folder\reports\dft_chainRegs.rpt: Registers are misc. non-scan
+6: Fail: pass_not_in_chains:aaaaaa. In line 16, C:\Users\wentao\AAI_local\AAI\Main_Work\ACL\CHECKLIST\CHECKLIST\IP_project_folder\reports\dft_chainRegs.rpt: Registers pass dft rule checks but are not a part of scan chains
+7: Fail: pass_not_in_chains:bbbbbb. In line 16, C:\Users\wentao\AAI_local\AAI\Main_Work\ACL\CHECKLIST\CHECKLIST\IP_project_folder\reports\dft_chainRegs.rpt: Registers pass dft rule checks but are not a part of scan chains

@@ -1,0 +1,6 @@
+FAIL:IMP-10-0-0-00:Confirm the netlist/spef version is correct.
+Fail Occurrence: 4
+1: Fail: Error: Netlist file path not found in STA log: Item not found
+2: Fail: Error: SPEF file path not found in STA log: Item not found
+3: Fail: Netlist (Status: Not Found): Item not found
+4: Fail: SPEF (Status: Not Found): Item not found

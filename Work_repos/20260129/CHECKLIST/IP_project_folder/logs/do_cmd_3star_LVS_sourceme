@@ -1,0 +1,105 @@
+//LAYOUT PATH --Defined in cmd.txt and only there.
+LAYOUT PRIMARY CDN_104V_cdn_hs_phy_data_slice_NS
+LAYOUT SYSTEM OASIS
+
+SOURCE PRIMARY CDN_104V_cdn_hs_phy_data_slice_NS
+SOURCE PATH CDN_104V_cdn_hs_phy_data_slice_NS.cdl
+SOURCE SYSTEM SPICE
+
+
+
+
+
+
+
+DRC RESULTS DATABASE "calibre_drc.db" ASCII // ASCII or GDSII
+ERC RESULTS DATABASE "calibre_erc.db" ASCII // ASCII or GDSII
+LVS REPORT MAXIMUM 1000 // ALL
+
+
+
+#define LVS_DECK   //uncomment this line when this deck would be used as a LVS command file
+//#define CCI_DFM_RULE   //uncomment this line when this deck would be used as a DFM CCI command file
+//#define SKIP_ODSE  //uncomment this line to skip od_space_effect
+//#define FILTER_DGS_TIED_MOS // uncomment this line to filter MOS with D, G and S tied together (default filter MOS with all pins tied)
+
+
+
+#define WELL_TO_PG_CHECK 
+// Default is on. Turn on to highlight if nwell connects to ground or psub connects to power.
+
+
+#define GATE_TO_PG_CHECK 
+// Default is off. Turn on to highlight if a mos gate directly connects to power or ground.
+//#define PATH_CHECK 
+// Default is off. Turn on to highlight if
+//(1) nodes have a path to power but no path to ground
+//(2) nodes have a path to ground but no path to power
+//(3) nodes have no path to power or ground
+//(4) nodes have no path to any label net
+#define DS_TO_PG_CHECK 
+// Default is on. Turn on to highlight if drain connects to power and source connects to ground.
+#define FLOATING_WELL_CHECK 
+// Default is on. Turn on to highlight if well does not connect to power or ground. 
+//The nwell of moscaps and nwell-resistor are excluded.
+#define LVSDMY4_CHECK   
+// Default is on. Turn on to highlight if LVSDMY4 without DNW region interact NMOS.
+
+#define NW_RING	//uncomment this line to enable the NW ring to separate the node from BULK
+
+// POWER and GROUND name string variable setting
+VARIABLE POWER_NAME "VDD" "VDDPLL_MCB" "VDDPLL_TOP" "VDDQ" "VDDQ_CK"
+VARIABLE GROUND_NAME "VSS"
+
+
+//#define unrecognized_device_checking // uncomment this line to do unrecognized device checking
+#define unexpected_layer_checking_INDDMY   // comment this line to disable unexpected INDDMY layer checking
+#define PICKUP_CHECK            // comment this line to disable dummy pickup checking
+#define PSUB2_ERC_CHECK         // comment this line to disable SR_DOD cut PSUB2 checking
+//#define MNPP_MPGG_VIRT_PWR_ENABLE	// Default is off. Uncomment this line to enable virtual power recognition for mnpp and mpgg related check
+#define REGMOS_MNPP_MPGG_CHECK		// Default is on. Perform mnpp and mpgg related check for all devices except MPODE/FLRMOS devices
+#define MPODE_MNPP_MPGG_CHECK		// Default is on. Perform mnpp and mpgg related check for MPODE device which is covered by PODE_GATE(206;28) layer
+#define FLRMOS_MNPP_MPGG_CHECK		// Default is on. Perform mnpp and mpgg related check for FLRMOS device which is covered by FILLER_MOS(206;30) layer
+//#define MNPP_MPGG_LAYER_WAIVER_ENABLE	// Default is off. Uncomment this line to enable LUPVTWDMY cad layer waiver for mnpp and mpgg    
+#define WELL_TEXT             // uncomment this line to enable well pin, nxwell_text and psub_text  
+//#define SKIP_PLE              // uncomment this line to skip DFM PLE effect( only valid when turn on DFM_LPE )
+//#define SKIP_XVTMBE          // uncomment this line to skip Mixed VT MBE effect
+//#define SKIP_CPO             // uncomment this line to skip LDE CPO effect
+//#define SKIP_PODG            // uncomment this line to skip LDE PODG effect
+//#define SKIP_VGP             // uncomment this line to skip VGP effect
+//#define SKIP_CODH            // uncomment this line to skip CODH effect
+//#define SEALRING_CHECK     // uncomment this line to enable SEALRING check
+#define FILTER_PODE               // comment this line to compare pode device, default will filter both layout and source pode device at LVS comparison stage
+#define FILTER_MPODE              // comment this line to compare mpode device, default will filter both layout and source mpode device at LVS comparison stage
+#define FILTER_FLRMOS             // comment this line to compare flrmos device, default will filter both layout and source flrmos device at LVS comparison stage
+#define MATCHFLAG               // Turn on to extract matchingflag and edgeflag for high sensitivity mismatching design
+#define METAL_MAIN_CHECK		// Default is on. Turn on to highlight if the layout has non-color M0,M1,MX,MXb,MXd,MXe metal layers
+
+
+ERC MAXIMUM RESULTS ALL
+VIRTUAL CONNECT COLON YES
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#define extract_dnwpsub  // Turn on to extract parasitic dnw/psub diode
+#define extract_pwdnw    // Turn on to extract parasitic pwell/dnw diode
+#define extract_pnwdio   // Turn on to extract parasitic nw-psub diode
+//#define VDRC_LVS_CHECK   // Turn on to extract vtag/vtagmin/vtagmax/vtagsync/vtagdelta devices
+#define LVS_REDUCE_PARALLEL_MOS       // Turn on this switch to enable MOS parallel reduction
+//#define LVS_REDUCE_PARALLEL_MIMCAP    // Turn on this switch to enable SHDMIMCAP parallel reduction
+#define LVS_REDUCE_SPLIT_GATES        // Turn on this switch to enable MOS SPLIT GATE reduction
+#define SELF_HEATING_EFFECT_EXTRACTION   // uncomment this line to enable self heating effect extraction.
+
+
+INCLUDE ./hcell 

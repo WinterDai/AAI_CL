@@ -1,0 +1,5 @@
+FAIL:IMP-11-0-0-08:Confirm full PG connection information are included in def to run PA.
+IMP-11-0-0-08-ERROR01: Configuration error:
+  Severity: Fail Occurrence: 1
+  - input_files is empty in YAML configuration
+

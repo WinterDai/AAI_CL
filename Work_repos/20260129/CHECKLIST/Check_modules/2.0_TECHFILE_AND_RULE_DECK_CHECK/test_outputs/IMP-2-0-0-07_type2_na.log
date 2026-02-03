@@ -1,0 +1,5 @@
+FAIL:IMP-2-0-0-07:Confirm LVS rule deck was not modified? If it was, explain in comments field.
+IMP-2-0-0-07-ERROR01: LVS rule deck modified - differences detected from golden baseline:
+  Severity: Fail Occurrence: 1
+  - local_file_missing
+

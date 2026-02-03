@@ -1,0 +1,5 @@
+PASS:IMP-8-0-0-02:Confirm all ports status are Fixed.
+IMP-8-0-0-02-INFO01: [WAIVED_INFO]: Waived information:
+  Severity: Info Occurrence: 1
+  Explanation: Monitoring specific critical ports for placement status tracking
+

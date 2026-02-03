@@ -1,0 +1,10 @@
+Check_modules,Item,Info
+5.0_SYNTHESIS_CHECK,IMP-5-0-0-10-INFO01,Problematic cells are waived
+5.0_SYNTHESIS_CHECK,IMP-5-0-0-10-WARN01,Waived cell not used
+5.0_SYNTHESIS_CHECK,IMP-5-0-0-10-ERROR01:,Problematic cells are NOT waived
+5.0_SYNTHESIS_CHECK,IMP-5-0-0-00-ERROR01,"not found ""Technology libraries""/do not contain any timing model indicators/cant define stdcell_list"
+5.0_SYNTHESIS_CHECK,IMP-5-0-0-00-ERROR02,Missing libraries in design
+5.0_SYNTHESIS_CHECK,IMP-5-0-0-00-WARN01,Extra libraries used in design
+5.0_SYNTHESIS_CHECK,IMP-5-0-0-01-ERROR01,LEF files defined in design_config but not used in synthesis
+5.0_SYNTHESIS_CHECK,IMP-5-0-0-01-ERROR02,LEF files used in synthesis but not defined in design_config
+5.0_SYNTHESIS_CHECK,IMP-5-0-0-01-WARN01,Synthesis isn't using lef data for PLE optimization

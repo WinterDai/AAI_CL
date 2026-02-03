@@ -1,0 +1,12 @@
+description: Confirm the netlist/spef version is correct.
+input_files:
+- ${CHECKLIST_ROOT}/IP_project_folder/logs/sta_post_syn.log
+item_id: IMP-10-0-0-00
+requirements:
+  pattern_items: []
+  value: '1'
+source_path: C:\Users\wentao\AAI_local\AAI\Main_Work\ACL\CHECKLIST\Tool\Agent\test\Check_modules\10.0_STA_DCD_CHECK\inputs\items\IMP-10-0-0-00.yaml
+waivers:
+  value: 0
+  waive_items:
+  - Current stage is synthesis, SPEF check is not applicable.

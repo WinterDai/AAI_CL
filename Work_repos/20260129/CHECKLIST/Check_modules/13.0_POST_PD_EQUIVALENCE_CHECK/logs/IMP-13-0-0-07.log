@@ -1,0 +1,5 @@
+FAIL:IMP-13-0-0-07:Confirm "set flatten model -library_pin_verification" in LEC flow.
+IMP-13-0-0-07-ERROR01: LEC Flatten Model Check:
+  Severity: Fail Occurrence: 1
+  - Missing 'set flatten model -library_pin_verification'
+

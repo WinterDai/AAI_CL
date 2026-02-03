@@ -1,0 +1,82 @@
+Test Report: IMP-12-0-0-05
+================================================================================
+
+[Test 1/6] Type 1 (requirements.value=N/A, waivers.value=N/A)
+--------------------------------------------------------------------------------
+Test ID: type1_na
+Status: PASS
+
+Checker Report Output:
+PASS:IMP-12-0-0-05:Confirm open the IP_TIGHTEN_DENSITY switch in DRC rule deck.
+Info Occurrence: 1
+1: Info: IP_TIGHTEN_DENSITY. In line 119, /home/jingyu/checklist_dev/CHECKLIST/CHECKLIST/IP_project_folder/logs/do_cmd_3star_DRC_sourceme: IP_TIGHTEN_DENSITY switch found enabled (uncommented #DEFINE)
+
+================================================================================
+
+[Test 2/6] Type 1 (requirements.value=N/A, waivers.value=0)
+--------------------------------------------------------------------------------
+Test ID: type1_0
+Status: PASS
+
+Checker Report Output:
+PASS:IMP-12-0-0-05:Confirm open the IP_TIGHTEN_DENSITY switch in DRC rule deck.
+Info Occurrence: 2
+1: Info: Explanation: IP_TIGHTEN_DENSITY switch check is informational for legacy designs: Explanation: IP_TIGHTEN_DENSITY switch check is informational for legacy designs[WAIVED_INFO]
+2: Info: IP_TIGHTEN_DENSITY. In line 119, /home/jingyu/checklist_dev/CHECKLIST/CHECKLIST/IP_project_folder/logs/do_cmd_3star_DRC_sourceme: IP_TIGHTEN_DENSITY switch found enabled (uncommented #DEFINE)
+
+================================================================================
+
+[Test 3/6] Type 2 (requirements.value>0, waivers.value=N/A)
+--------------------------------------------------------------------------------
+Test ID: type2_na
+Status: PASS
+
+Checker Report Output:
+PASS:IMP-12-0-0-05:Confirm open the IP_TIGHTEN_DENSITY switch in DRC rule deck.
+Info Occurrence: 1
+1: Info: IP_TIGHTEN_DENSITY. In line 119, /home/jingyu/checklist_dev/CHECKLIST/CHECKLIST/IP_project_folder/logs/do_cmd_3star_DRC_sourceme: IP_TIGHTEN_DENSITY switch matched and validated as enabled
+
+================================================================================
+
+[Test 4/6] Type 2 (requirements.value>0, waivers.value=0)
+--------------------------------------------------------------------------------
+Test ID: type2_0
+Status: PASS
+
+Checker Report Output:
+PASS:IMP-12-0-0-05:Confirm open the IP_TIGHTEN_DENSITY switch in DRC rule deck.
+Info Occurrence: 2
+1: Info: Explanation: IP_TIGHTEN_DENSITY requirement is informational for this design phase: Explanation: IP_TIGHTEN_DENSITY requirement is informational for this design phase[WAIVED_INFO]
+2: Info: IP_TIGHTEN_DENSITY. In line 119, /home/jingyu/checklist_dev/CHECKLIST/CHECKLIST/IP_project_folder/logs/do_cmd_3star_DRC_sourceme: IP_TIGHTEN_DENSITY switch matched and validated as enabled
+
+================================================================================
+
+[Test 5/6] Type 3
+--------------------------------------------------------------------------------
+Test ID: type3
+Status: PASS
+
+Checker Report Output:
+PASS:IMP-12-0-0-05:Confirm open the IP_TIGHTEN_DENSITY switch in DRC rule deck.
+Warn Occurrence: 2
+1: Warn: CHECK_HIGH_DENSITY: Waiver defined but no violation matched: Waived - high density check not required for this IP block[WAIVER]
+2: Warn: IP_TIGHTEN_DENSITY: Waiver defined but no violation matched: Waived - legacy design uses chip-level density rules instead of IP-level[WAIVER]
+Info Occurrence: 1
+1: Info: IP_TIGHTEN_DENSITY. In line 119, /home/jingyu/checklist_dev/CHECKLIST/CHECKLIST/IP_project_folder/logs/do_cmd_3star_DRC_sourceme: IP_TIGHTEN_DENSITY switch matched and validated as enabled
+
+================================================================================
+
+[Test 6/6] Type 4
+--------------------------------------------------------------------------------
+Test ID: type4
+Status: PASS
+
+Checker Report Output:
+PASS:IMP-12-0-0-05:Confirm open the IP_TIGHTEN_DENSITY switch in DRC rule deck.
+Warn Occurrence: 1
+1: Warn: CHECK_HIGH_DENSITY: Waiver defined but no violation matched: Waived - high density check not required for this IP block[WAIVER]
+Info Occurrence: 1
+1: Info: IP_TIGHTEN_DENSITY. In line 119, /home/jingyu/checklist_dev/CHECKLIST/CHECKLIST/IP_project_folder/logs/do_cmd_3star_DRC_sourceme: IP_TIGHTEN_DENSITY switch found enabled (uncommented #DEFINE)
+
+================================================================================
+

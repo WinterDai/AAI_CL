@@ -1,0 +1,5 @@
+FAIL:IMP-11-0-0-20:Confirm wake-up time meet customer's requirement. (For non-PSO, please fill N/A)
+IMP-11-0-0-20-ERROR01: Configuration error:
+  Severity: Fail Occurrence: 1
+  - input_files is empty in YAML configuration
+

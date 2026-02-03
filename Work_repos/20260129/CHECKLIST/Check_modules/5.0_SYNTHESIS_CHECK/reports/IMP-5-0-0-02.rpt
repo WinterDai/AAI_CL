@@ -1,0 +1,3 @@
+PASS:IMP-5-0-0-02:Confirm synthesis is using qrc tech file for RC data?
+Info Occurrence: 1
+1: Info: /process/tsmcN3/data/ge/QRC/15M1Xa1Xb1Xc1Xd1Ya1Yb4Y2Yy2Z_SHDMIM_UT/fs_v1d1p1a/cworst/Tech/cworst_CCworst_T/qrcTechFile. In line 3614, C:\Users\yuyin\OneDrive - Cadence Design Systems Inc\2025\Checklist\AAI\CHECKLIST_V3\CHECKLIST\IP_project_folder\logs\genus.syn_generic.log: synthesis is using qrc tech file for RC data

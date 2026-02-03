@@ -1,0 +1,11 @@
+[
+  {
+    "test": "Type 1: Boolean Check (no waiver)",
+    "config": "TC01_Type1.yaml",
+    "status": "PASS",
+    "reference": {
+      "is_pass": false,
+      "value": 1,
+      "details_count": 2,
+      "severity_counts": {
+        

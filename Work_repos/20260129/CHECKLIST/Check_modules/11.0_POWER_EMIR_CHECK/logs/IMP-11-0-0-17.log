@@ -1,0 +1,5 @@
+FAIL:IMP-11-0-0-17:List EM temperature in your check.
+IMP-11-0-0-17-ERROR01: Configuration error:
+  Severity: Fail Occurrence: 1
+  - input_files is empty in YAML configuration
+

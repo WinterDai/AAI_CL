@@ -1,0 +1,5 @@
+PASS:IMP-11-0-0-01:Confirm the design has no power open/short and all instances are physically connected.
+IMP-11-0-0-01-INFO01: LVS comparison matched - all power connectivity requirements satisfied:
+  Severity: Info Occurrence: 1
+  - Overall_Run_Result
+

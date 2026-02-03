@@ -1,0 +1,11 @@
+description: Confirm no ERROR message in the QRC log files.
+input_files:
+- ${CHECKLIST_ROOT}/IP_project_folder/logs/9.0/do_qrc*.log
+requirements:
+  pattern_items: []
+  value: N/A
+waivers:
+  value: 1
+  waive_items:
+  - name: item1
+    reason: Test waiver

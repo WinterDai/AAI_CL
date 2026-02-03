@@ -1,0 +1,12 @@
+description: Confirm proper clock tree buffer/inverter types are used. Provide a list
+  in comment field.
+input_files:
+- ${CHECKLIST_ROOT}/IP_project_folder/reports/8.0/IMP-8-0-0-13.rpt
+requirements:
+  pattern_items: []
+  value: N/A
+waivers:
+  value: 0
+  waive_items:
+  - 'Explanation: This check is informational only - CTS cell inventory for design
+    reference'

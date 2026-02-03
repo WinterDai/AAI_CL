@@ -1,0 +1,13 @@
+PASS(Waive):IMP-10-0-0-07:Confirm the OCV setting is correct?
+IMP-10-0-0-07-INFO01: OCV setting is correct (6/6 indicators found):
+  Severity: Info Occurrence: 6
+  - Analysis Mode: MMMC OCV (SOCV)
+  - timing_enable_spatial_derate_mode: 1
+  - timing_spatial_derate_distance_mode: chip_size
+  - SOCV RC Variation: Early 0.100, Late 0.100
+  - Wire derate: SOCV factors enabled
+  - SOCV files: Standard SOCV (16 files)
+IMP-10-0-0-07-WARN01: Waiver not used (2 items):
+  Severity: Warn Occurrence: 2
+  - Some waived item
+  - Another waived item

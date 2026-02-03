@@ -1,0 +1,18 @@
+description: Confirm the MIM_ANT rule deck setting is correct. (For MIG,please check
+  with AMS team about the MIM cell type (MIM or SHDMIM) because the MIM_ANT rule will
+  be different).
+input_files:
+- ${CHECKLIST_ROOT}/IP_project_folder/logs/do_pvs_ANT_MIM_pvl.log
+- ${CHECKLIST_ROOT}/IP_project_folder/logs/do_cmd_3star_ANT_MIM_sourceme
+requirements:
+  pattern_items:
+  - pattern1
+  value: 1
+waivers:
+  value: 2
+  waive_items:
+  - name: FHDMIM
+    reason: Waived for MIG project using SHDMIM cell type - FHDMIM enabled state is
+      required per AMS team guidance
+  - name: SHDMIM
+    reason: Waived - alternative MIM configuration approved for this technology node

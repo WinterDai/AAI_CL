@@ -1,0 +1,5 @@
+FAIL:IMP-11-0-0-15:List default EM temperature in design rule. (eg. 105C/110C)
+IMP-11-0-0-15-ERROR01: Configuration error:
+  Severity: Fail Occurrence: 1
+  - input_files is empty in YAML configuration
+

@@ -1,0 +1,118 @@
+Test Log: IMP-11-0-0-04
+================================================================================
+
+[Test 1/6] Type 1 (requirements.value=N/A, waivers.value=N/A)
+--------------------------------------------------------------------------------
+Test ID: type1_na
+Status: ERROR
+
+Checker Log Output:
+FAIL:IMP-11-0-0-04:Confirm proper rc/PVT corners were used for IR drop and EM analysis. List rc/PVT corners used in comments field.
+IMP-11-0-0-04-ERROR01: RC/PVT corner specifications not found or incomplete in Voltus analysis logs:
+  Severity: Fail Occurrence: 3
+  - func_ffgnp_0p825v_125c
+  - func_ffgnp_0p825v_m40c
+  - func_ssgnp_0p675v_125c
+
+
+================================================================================
+
+[Test 2/6] Type 1 (requirements.value=N/A, waivers.value=0)
+--------------------------------------------------------------------------------
+Test ID: type1_0
+Status: PASS
+
+Checker Log Output:
+PASS:IMP-11-0-0-04:Confirm proper rc/PVT corners were used for IR drop and EM analysis. List rc/PVT corners used in comments field.
+IMP-11-0-0-04-INFO01: [WAIVED_INFO]: Waived information:
+  Severity: Info Occurrence: 1
+  - Explanation: This check is informational only - corner specifications are validated separately in timing signoff
+IMP-11-0-0-04-INFO02: [WAIVED_AS_INFO]: RC/PVT corner specifications not found or incomplete in Voltus analysis logs:
+  Severity: Info Occurrence: 3
+  - func_ffgnp_0p825v_125c
+  - func_ffgnp_0p825v_m40c
+  - func_ssgnp_0p675v_125c
+
+
+================================================================================
+
+[Test 3/6] Type 2 (requirements.value>0, waivers.value=N/A)
+--------------------------------------------------------------------------------
+Test ID: type2_na
+Status: ERROR
+
+Checker Log Output:
+FAIL:IMP-11-0-0-04:Confirm proper rc/PVT corners were used for IR drop and EM analysis. List rc/PVT corners used in comments field.
+IMP-11-0-0-04-ERROR01: RC/PVT corner configuration not satisfied - missing or incorrect specification:
+  Severity: Fail Occurrence: 1
+  - test_ssgnp_0p675v_125c
+IMP-11-0-0-04-INFO01: RC/PVT corner configuration validated and matched expected specification:
+  Severity: Info Occurrence: 2
+  - func_ffgnp_0p825v_125c
+  - func_ffgnp_0p825v_m40c
+
+
+================================================================================
+
+[Test 4/6] Type 2 (requirements.value>0, waivers.value=0)
+--------------------------------------------------------------------------------
+Test ID: type2_0
+Status: PASS
+
+Checker Log Output:
+PASS:IMP-11-0-0-04:Confirm proper rc/PVT corners were used for IR drop and EM analysis. List rc/PVT corners used in comments field.
+IMP-11-0-0-04-INFO01: [WAIVED_INFO]: Waived information:
+  Severity: Info Occurrence: 1
+  - Explanation: This check is informational only - corner coverage is validated in separate timing signoff checklist
+IMP-11-0-0-04-INFO02: RC/PVT corner configuration validated and matched expected specification:
+  Severity: Info Occurrence: 2
+  - func_ffgnp_0p825v_125c
+  - func_ffgnp_0p825v_m40c
+IMP-11-0-0-04-INFO03: [WAIVED_AS_INFO]: RC/PVT corner configuration not satisfied - missing or incorrect specification:
+  Severity: Info Occurrence: 1
+  - test_ssgnp_0p675v_125c
+
+
+================================================================================
+
+[Test 5/6] Type 3 (requirements.value>0, waivers.value>0)
+--------------------------------------------------------------------------------
+Test ID: type3
+Status: PASS
+
+Checker Log Output:
+PASS:IMP-11-0-0-04:Confirm proper rc/PVT corners were used for IR drop and EM analysis. List rc/PVT corners used in comments field.
+IMP-11-0-0-04-WARN01: Unused waivers:
+  Severity: Warn Occurrence: 1
+  - ND1_func_rcss_0p675v_m40c_dynamic
+IMP-11-0-0-04-INFO01: RC/PVT corner specification waived for this analysis:
+  Severity: Info Occurrence: 1
+  - test_ssgnp_0p675v_125c
+IMP-11-0-0-04-INFO02: RC/PVT corner configuration validated and matched expected specification:
+  Severity: Info Occurrence: 2
+  - func_ffgnp_0p825v_125c
+  - func_ffgnp_0p825v_m40c
+
+
+================================================================================
+
+[Test 6/6] Type 4 (requirements.value=N/A, waivers.value>0)
+--------------------------------------------------------------------------------
+Test ID: type4
+Status: ERROR
+
+Checker Log Output:
+FAIL:IMP-11-0-0-04:Confirm proper rc/PVT corners were used for IR drop and EM analysis. List rc/PVT corners used in comments field.
+IMP-11-0-0-04-ERROR01: RC/PVT corner specifications not found or incomplete in Voltus analysis logs:
+  Severity: Fail Occurrence: 3
+  - func_ffgnp_0p825v_125c
+  - func_ffgnp_0p825v_m40c
+  - func_ssgnp_0p675v_125c
+IMP-11-0-0-04-WARN01: Unused waivers:
+  Severity: Warn Occurrence: 2
+  - ND1_func_rcss_0p675v_m40c_dynamic
+  - ND1_test_ssgnp_0p675v_125c_setup
+
+
+================================================================================
+

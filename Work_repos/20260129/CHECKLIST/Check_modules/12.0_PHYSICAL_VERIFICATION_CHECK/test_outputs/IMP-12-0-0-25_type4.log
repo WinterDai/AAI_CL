@@ -1,0 +1,6 @@
+PASS:IMP-12-0-0-25:Confirm the BUMP DRC rule deck setting is correct.
+IMP-12-0-0-25-WARN01: Unused waivers:
+  Severity: Warn Occurrence: 2
+  - ChipWindowUsed
+  - UBM_DN_4_Average_Density
+

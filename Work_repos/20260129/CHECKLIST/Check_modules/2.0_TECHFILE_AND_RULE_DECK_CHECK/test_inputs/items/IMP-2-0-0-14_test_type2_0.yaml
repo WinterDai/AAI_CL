@@ -1,0 +1,13 @@
+description: 'List EM irxc rule deck name. eg: ICT_EM_v1d0p1a/cln3p_1p17m+ut-alrdl_1xa1xb1xc1xd1ya1yb4y2yy2yx2r_shdmim.ictem'
+input_files:
+- ${CHECKLIST_ROOT}\IP_project_folder\logs\2.0\func_func_ssgnp_0p675v_125c_cworst_CCworst_T_cworst_CCworst_hold_static.log
+requirements:
+  pattern_items:
+  - ictem_v1d2p1a/cln5_1p16m+ut-alrdl_1x1xb1xe1ya1yb6y2yy2r_shdmim.ictem
+  - ictem_v1d0p1a/cln3p_1p17m+ut-alrdl_1xa1xb1xc1xd1ya1yb4y2yy2yx2r_shdmim.ictem
+  value: 2
+waivers:
+  value: 0
+  waive_items:
+  - 'Explanation: This check is informational only - EM rule deck version tracking
+    for documentation'

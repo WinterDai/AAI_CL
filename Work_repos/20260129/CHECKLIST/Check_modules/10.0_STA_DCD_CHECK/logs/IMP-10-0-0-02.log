@@ -1,0 +1,10 @@
+PASS:IMP-10-0-0-02:Confirm the clock uncertainty setting is correct.
+IMP-10-0-0-02-WARN01: Configured waivers not applied:
+  Severity: Warn Occurrence: 2
+  - set_clock_uncertainty 0.02 -hold -from [get_clocks {PHASE_ALIGN_CLOCK}] -to [get_clocks {PHASE_ALIGN_CLOCK}]
+  - set_clock_uncertainty 0.01 -hold -from [get_clocks {PHASE_ALIGN_CLOCK}] -to [get_clocks {PHASE_ALIGN_CLOCK}]
+IMP-10-0-0-02-INFO01: Clock uncertainty settings found:
+  Severity: Info Occurrence: 2
+  - set_clock_uncertainty 0.02 -hold -from [get_clocks {PHASE_ALIGN_CLOCK}] -to [get_clocks {PHASE_ALIGN_CLOCK}]
+  - set_clock_uncertainty 0.055 -setup -from [get_clocks {PHASE_ALIGN_CLOCK}] -to [get_clocks {PHASE_ALIGN_CLOCK}]
+

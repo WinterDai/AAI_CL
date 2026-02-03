@@ -1,0 +1,5 @@
+FAIL:IMP-8-0-0-01:Confirm all ports are assigned on metal track.
+IMP-8-0-0-01-ERROR01: Configuration error:
+  Severity: Fail Occurrence: 1
+  - input_files is empty in YAML configuration
+

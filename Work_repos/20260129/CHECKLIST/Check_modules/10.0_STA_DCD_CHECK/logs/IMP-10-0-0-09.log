@@ -1,0 +1,11 @@
+PASS:IMP-10-0-0-09:Confirm no SPEF annotation issue in STA.
+IMP-10-0-0-09-INFO01: [WAIVED_INFO]: Waived SPEF annotation issues:
+  Severity: Info Occurrence: 1
+  - I have confirmed that the SPEF annotation issue is acceptable for this implementation phase.
+IMP-10-0-0-09-INFO02: No SPEF annotation issue in STA:
+  Severity: Info Occurrence: 1
+  - func_rcss_0p675v_m40c_pcss_cmax_pcss3_setup
+IMP-10-0-0-09-INFO03: [WAIVED_AS_INFO]: SPEF annotation issues found in STA:
+  Severity: Info Occurrence: 1
+  - [[u_pcs_top/u_phy_pcs_reg_ctrl/u_pcs_cdb_reg/UNCONNECTED_HIER_Z314]] (view: func_rcss_0p675v_125c_pcss_cmax_pcff3_setup)
+

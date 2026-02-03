@@ -1,0 +1,5 @@
+FAIL:MIG-IMP-8-1-1-28:Confirm the scan pins are assigned to be interleaved for PHY_TOP delivery. (check the Note)
+MIG-IMP-8-1-1-28-ERROR01: Configuration error:
+  Severity: Fail Occurrence: 1
+  - input_files is empty in YAML configuration
+

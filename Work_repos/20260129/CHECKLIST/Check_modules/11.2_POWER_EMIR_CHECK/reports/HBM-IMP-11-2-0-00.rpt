@@ -1,0 +1,3 @@
+FAIL:HBM-IMP-11-2-0-00:Was the final typical and worst case power computed using a simulation based VCD dump and provided to the design teams?
+Fail Occurrence: 1
+1: Fail: input_files is empty in YAML configuration

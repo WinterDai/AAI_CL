@@ -1,0 +1,169 @@
+Test Log: IMP-12-0-0-12
+================================================================================
+
+[Test 1/6] Type 1 (requirements.value=N/A, waivers.value=N/A)
+--------------------------------------------------------------------------------
+Test ID: type1_na
+Status: ERROR
+
+Checker Log Output:
+FAIL:IMP-12-0-0-12:Confirm the MIM related check is clean. (Need to check and Fill N/A if no MIMCAP inserted or no MIM related layers in PHY or SOC level) - If PHY needs to insert MIMCAP. 1. Need to pay attention to the MIMCAP KOZ rule during MIMCAP insertion after check with customer about the SOC die size, substrate layer number and PHY placement/location in SOC level. 2. Pay attention to the option setting related to MIM DRC check like KOZ_High_subst_layer, SHDMIM_KOZ_AP_SPACE_5um(on/off will impact the checking rule) etc in TSMC rule deck(need to align these settings with customer). -If PHY doesn't insert MIMCAP but SOC level inserts MIMCAP. 1. Need to open SHDMIM switching in DRC rule deck. 2. Need to check with customer whether PHY need to meet SHDMIM_KOZ_AP_SPACE_5um rule (if SOC level this DRC switching setting is ON) in PHY area which falls into SOC KOZ area for TSMC process. 3. May need to insert MIM dummy in PHY level to meet SOC level MIM dummy density rule (you can sync with customer whether PHY MIM dummy is needed and the KOZ information on PHY to make sure there is no dummy added in KOZ area on PHY by adding MIM EXCL layer).
+IMP-12-0-0-12-ERROR01: MIM DRC violations detected in physical verification reports:
+  Severity: Fail Occurrence: 1
+  - MIM.A.R.7:TPC_BPC
+IMP-12-0-0-12-INFO01: All MIM DRC checks are clean - no violations found in physical verification reports:
+  Severity: Info Occurrence: 17
+  - MIM.A.R.1
+  - MIM.A.R.1.1
+  - MIM.A.R.6.1:BPC
+  - MIM.A.R.6.1:MPC
+  - MIM.A.R.6:MPC
+  - MIM.A.R.6:TPC_BPC
+  - MIM.A.R.7.1:BPC
+  - MIM.A.R.7.1:MPC
+  - MIM.A.R.7:MPC
+  - MIM.A.R.8.1:BPC
+  - MIM.A.R.8.1:MPC
+  - MIM.A.R.8:MPC
+  - MIM.A.R.8:TPC_BPC
+  - MIM.A.R.9.1:BPC
+  - MIM.A.R.9.1:MPC
+  - MIM.A.R.9:MPC
+  - MIM.A.R.9:TPC_BPC
+
+
+================================================================================
+
+[Test 2/6] Type 1 (requirements.value=N/A, waivers.value=0)
+--------------------------------------------------------------------------------
+Test ID: type1_0
+Status: PASS
+
+Checker Log Output:
+PASS:IMP-12-0-0-12:Confirm the MIM related check is clean. (Need to check and Fill N/A if no MIMCAP inserted or no MIM related layers in PHY or SOC level) - If PHY needs to insert MIMCAP. 1. Need to pay attention to the MIMCAP KOZ rule during MIMCAP insertion after check with customer about the SOC die size, substrate layer number and PHY placement/location in SOC level. 2. Pay attention to the option setting related to MIM DRC check like KOZ_High_subst_layer, SHDMIM_KOZ_AP_SPACE_5um(on/off will impact the checking rule) etc in TSMC rule deck(need to align these settings with customer). -If PHY doesn't insert MIMCAP but SOC level inserts MIMCAP. 1. Need to open SHDMIM switching in DRC rule deck. 2. Need to check with customer whether PHY need to meet SHDMIM_KOZ_AP_SPACE_5um rule (if SOC level this DRC switching setting is ON) in PHY area which falls into SOC KOZ area for TSMC process. 3. May need to insert MIM dummy in PHY level to meet SOC level MIM dummy density rule (you can sync with customer whether PHY MIM dummy is needed and the KOZ information on PHY to make sure there is no dummy added in KOZ area on PHY by adding MIM EXCL layer).
+IMP-12-0-0-12-INFO01: [WAIVED_INFO]: Waived information:
+  Severity: Info Occurrence: 1
+  - Explanation: MIM violations are informational only during early design phase
+IMP-12-0-0-12-INFO02: All MIM DRC checks are clean - no violations found in physical verification reports:
+  Severity: Info Occurrence: 17
+  - MIM.A.R.1
+  - MIM.A.R.1.1
+  - MIM.A.R.6.1:BPC
+  - MIM.A.R.6.1:MPC
+  - MIM.A.R.6:MPC
+  - MIM.A.R.6:TPC_BPC
+  - MIM.A.R.7.1:BPC
+  - MIM.A.R.7.1:MPC
+  - MIM.A.R.7:MPC
+  - MIM.A.R.8.1:BPC
+  - MIM.A.R.8.1:MPC
+  - MIM.A.R.8:MPC
+  - MIM.A.R.8:TPC_BPC
+  - MIM.A.R.9.1:BPC
+  - MIM.A.R.9.1:MPC
+  - MIM.A.R.9:MPC
+  - MIM.A.R.9:TPC_BPC
+IMP-12-0-0-12-INFO03: [WAIVED_AS_INFO]: MIM DRC violations detected in physical verification reports:
+  Severity: Info Occurrence: 1
+  - MIM.A.R.7:TPC_BPC
+
+
+================================================================================
+
+[Test 3/6] Type 2 (requirements.value>0, waivers.value=N/A)
+--------------------------------------------------------------------------------
+Test ID: type2_na
+Status: ERROR
+
+Checker Log Output:
+FAIL:IMP-12-0-0-12:Confirm the MIM related check is clean. (Need to check and Fill N/A if no MIMCAP inserted or no MIM related layers in PHY or SOC level) - If PHY needs to insert MIMCAP. 1. Need to pay attention to the MIMCAP KOZ rule during MIMCAP insertion after check with customer about the SOC die size, substrate layer number and PHY placement/location in SOC level. 2. Pay attention to the option setting related to MIM DRC check like KOZ_High_subst_layer, SHDMIM_KOZ_AP_SPACE_5um(on/off will impact the checking rule) etc in TSMC rule deck(need to align these settings with customer). -If PHY doesn't insert MIMCAP but SOC level inserts MIMCAP. 1. Need to open SHDMIM switching in DRC rule deck. 2. Need to check with customer whether PHY need to meet SHDMIM_KOZ_AP_SPACE_5um rule (if SOC level this DRC switching setting is ON) in PHY area which falls into SOC KOZ area for TSMC process. 3. May need to insert MIM dummy in PHY level to meet SOC level MIM dummy density rule (you can sync with customer whether PHY MIM dummy is needed and the KOZ information on PHY to make sure there is no dummy added in KOZ area on PHY by adding MIM EXCL layer).
+IMP-12-0-0-12-ERROR01: MIM rule violations found - specified rules not satisfied:
+  Severity: Fail Occurrence: 1
+  - A.R.18.2:VIA4
+IMP-12-0-0-12-INFO01: All specified MIM rules are clean - no violations detected:
+  Severity: Info Occurrence: 2
+  - MIM.A.R.1.1
+  - MIM.A.R.6.1:BPC
+
+
+================================================================================
+
+[Test 4/6] Type 2 (requirements.value>0, waivers.value=0)
+--------------------------------------------------------------------------------
+Test ID: type2_0
+Status: PASS
+
+Checker Log Output:
+PASS:IMP-12-0-0-12:Confirm the MIM related check is clean. (Need to check and Fill N/A if no MIMCAP inserted or no MIM related layers in PHY or SOC level) - If PHY needs to insert MIMCAP. 1. Need to pay attention to the MIMCAP KOZ rule during MIMCAP insertion after check with customer about the SOC die size, substrate layer number and PHY placement/location in SOC level. 2. Pay attention to the option setting related to MIM DRC check like KOZ_High_subst_layer, SHDMIM_KOZ_AP_SPACE_5um(on/off will impact the checking rule) etc in TSMC rule deck(need to align these settings with customer). -If PHY doesn't insert MIMCAP but SOC level inserts MIMCAP. 1. Need to open SHDMIM switching in DRC rule deck. 2. Need to check with customer whether PHY need to meet SHDMIM_KOZ_AP_SPACE_5um rule (if SOC level this DRC switching setting is ON) in PHY area which falls into SOC KOZ area for TSMC process. 3. May need to insert MIM dummy in PHY level to meet SOC level MIM dummy density rule (you can sync with customer whether PHY MIM dummy is needed and the KOZ information on PHY to make sure there is no dummy added in KOZ area on PHY by adding MIM EXCL layer).
+IMP-12-0-0-12-INFO01: [WAIVED_INFO]: Waived information:
+  Severity: Info Occurrence: 1
+  - Explanation: MIM rule violations are informational during pre-tapeout verification
+IMP-12-0-0-12-INFO02: All specified MIM rules are clean - no violations detected:
+  Severity: Info Occurrence: 2
+  - MIM.A.R.1.1
+  - MIM.A.R.6.1:BPC
+IMP-12-0-0-12-INFO03: [WAIVED_AS_INFO]: MIM rule violations found - specified rules not satisfied:
+  Severity: Info Occurrence: 1
+  - A.R.18.2:VIA4
+
+
+================================================================================
+
+[Test 5/6] Type 3
+--------------------------------------------------------------------------------
+Test ID: type3
+Status: PASS
+
+Checker Log Output:
+PASS:IMP-12-0-0-12:Confirm the MIM related check is clean. (Need to check and Fill N/A if no MIMCAP inserted or no MIM related layers in PHY or SOC level) - If PHY needs to insert MIMCAP. 1. Need to pay attention to the MIMCAP KOZ rule during MIMCAP insertion after check with customer about the SOC die size, substrate layer number and PHY placement/location in SOC level. 2. Pay attention to the option setting related to MIM DRC check like KOZ_High_subst_layer, SHDMIM_KOZ_AP_SPACE_5um(on/off will impact the checking rule) etc in TSMC rule deck(need to align these settings with customer). -If PHY doesn't insert MIMCAP but SOC level inserts MIMCAP. 1. Need to open SHDMIM switching in DRC rule deck. 2. Need to check with customer whether PHY need to meet SHDMIM_KOZ_AP_SPACE_5um rule (if SOC level this DRC switching setting is ON) in PHY area which falls into SOC KOZ area for TSMC process. 3. May need to insert MIM dummy in PHY level to meet SOC level MIM dummy density rule (you can sync with customer whether PHY MIM dummy is needed and the KOZ information on PHY to make sure there is no dummy added in KOZ area on PHY by adding MIM EXCL layer).
+IMP-12-0-0-12-WARN01: Unused waivers:
+  Severity: Warn Occurrence: 1
+  - MIM.A.R.6.1:BPC
+IMP-12-0-0-12-INFO01: MIM DRC violations waived per design team approval:
+  Severity: Info Occurrence: 1
+  - A.R.18.2:VIA4
+IMP-12-0-0-12-INFO02: All specified MIM rules are clean - no violations detected:
+  Severity: Info Occurrence: 2
+  - MIM.A.R.1.1
+  - MIM.A.R.6.1:BPC
+
+
+================================================================================
+
+[Test 6/6] Type 4
+--------------------------------------------------------------------------------
+Test ID: type4
+Status: ERROR
+
+Checker Log Output:
+FAIL:IMP-12-0-0-12:Confirm the MIM related check is clean. (Need to check and Fill N/A if no MIMCAP inserted or no MIM related layers in PHY or SOC level) - If PHY needs to insert MIMCAP. 1. Need to pay attention to the MIMCAP KOZ rule during MIMCAP insertion after check with customer about the SOC die size, substrate layer number and PHY placement/location in SOC level. 2. Pay attention to the option setting related to MIM DRC check like KOZ_High_subst_layer, SHDMIM_KOZ_AP_SPACE_5um(on/off will impact the checking rule) etc in TSMC rule deck(need to align these settings with customer). -If PHY doesn't insert MIMCAP but SOC level inserts MIMCAP. 1. Need to open SHDMIM switching in DRC rule deck. 2. Need to check with customer whether PHY need to meet SHDMIM_KOZ_AP_SPACE_5um rule (if SOC level this DRC switching setting is ON) in PHY area which falls into SOC KOZ area for TSMC process. 3. May need to insert MIM dummy in PHY level to meet SOC level MIM dummy density rule (you can sync with customer whether PHY MIM dummy is needed and the KOZ information on PHY to make sure there is no dummy added in KOZ area on PHY by adding MIM EXCL layer).
+IMP-12-0-0-12-ERROR01: MIM DRC violations detected in physical verification reports:
+  Severity: Fail Occurrence: 1
+  - MIM.A.R.7:TPC_BPC
+IMP-12-0-0-12-WARN01: Unused waivers:
+  Severity: Warn Occurrence: 2
+  - MIM.A.R.6.1:BPC
+  - A.R.18.2:VIA4
+IMP-12-0-0-12-INFO01: All MIM DRC checks are clean - no violations found in physical verification reports:
+  Severity: Info Occurrence: 17
+  - MIM.A.R.1
+  - MIM.A.R.1.1
+  - MIM.A.R.6.1:BPC
+  - MIM.A.R.6.1:MPC
+  - MIM.A.R.6:MPC
+  - MIM.A.R.6:TPC_BPC
+  - MIM.A.R.7.1:BPC
+  - MIM.A.R.7.1:MPC
+  - MIM.A.R.7:MPC
+  - MIM.A.R.8.1:BPC
+  - MIM.A.R.8.1:MPC
+  - MIM.A.R.8:MPC
+  - MIM.A.R.8:TPC_BPC
+  - MIM.A.R.9.1:BPC
+  - MIM.A.R.9.1:MPC
+  - MIM.A.R.9:MPC
+  - MIM.A.R.9:TPC_BPC
+
+
+================================================================================
+

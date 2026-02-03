@@ -1,0 +1,15 @@
+description: 'List Spice Model used for PGV generation. eg: tsmc3gp.a.4/models/spectre_v1d0_2p6/ir_em.scs'
+input_files:
+- ${CHECKLIST_ROOT}\IP_project_folder\logs\2.0\command_list.btxt
+requirements:
+  pattern_items:
+  - tsmc5g.a.12/models/spectre_v1d2_2p5/ir_em.scs
+  value: 1
+waivers:
+  value: 2
+  waive_items:
+  - name: tsmc5g.a.11/models/spectre_v1d1_2p5/ir_em.scs
+    reason: Waived - legacy SPICE model approved for this design per foundry team
+  - name: tsmc3gp.a.4/models/spectre_v1d0_2p6/ir_em.scs
+    reason: Waived - alternative SPICE model validated for PGV in this technology
+      node

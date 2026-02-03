@@ -1,0 +1,5 @@
+FAIL:IMP-2-0-0-08:Confirm latest BUMP rule deck(s) was used? List BUMP rule deck name in Comments. eg: PN3_CU_ROUND_BUMP_ON_PAD_17M_1Xa1Xb1Xc1Xd1Ya1Yb4Y2Yy2Yx2R_003.10a
+IMP-2-0-0-08-ERROR01: Configuration error:
+  Severity: Fail Occurrence: 1
+  - input_files is empty in YAML configuration
+

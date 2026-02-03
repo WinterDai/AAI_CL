@@ -1,0 +1,26 @@
+is_pass: True
+value: yes
+has_pattern_items: False
+has_waiver_value: True
+
+Details (2 items):
+--------------------------------------------------------------------------------
+
+[1] INFO
+    name: Netlist path: C:\Users\yuyin\Desktop\CHECKLIST\IP_project_folder\dbs\phy_cmn_phase_align_digtop.v.gz
+    line_number: 17
+    file_path: c:\Users\wentao\AAI_local\AAI\Main_Work\ACL\Latest\CHECKLIST\IP_project_folder\logs\sta_post_syn.log
+    reason: Status: Success (found in log, file not accessible)
+
+[2] INFO
+    name: SPEF Reading was skipped
+    line_number: 22
+    file_path: c:\Users\wentao\AAI_local\AAI\Main_Work\ACL\Latest\CHECKLIST\IP_project_folder\logs\sta_post_syn.log
+    reason: Skipping SPEF reading as we are writing post-synthesis SDF files[WAIVER]
+
+
+Info Groups (1 groups):
+--------------------------------------------------------------------------------
+
+INFO01: Netlist/SPEF files loaded successfully
+  Items: ['Netlist path: C:\\Users\\yuyin\\Desktop\\CHECKLIST\\IP_project_folder\\dbs\\phy_cmn_phase_align_digtop.v.gz', 'SPEF Reading was skipped']

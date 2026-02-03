@@ -1,0 +1,4 @@
+PASS:IMP-8-0-0-02:Confirm all ports status are Fixed.
+Warn Occurrence: 2
+1: Warn: debug_scan_chain[0]: Waiver entry not matched - no corresponding port violation found: Debug port - non-critical path, placement flexibility allowed[WAIVER]
+2: Warn: test_mode_port: Waiver entry not matched - no corresponding port violation found: Test mode port - placement deferred to post-layout optimization[WAIVER]

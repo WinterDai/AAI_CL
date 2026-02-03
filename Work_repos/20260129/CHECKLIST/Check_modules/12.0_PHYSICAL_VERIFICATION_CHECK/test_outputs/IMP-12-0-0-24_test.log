@@ -1,0 +1,96 @@
+Test Log: IMP-12-0-0-24
+================================================================================
+
+[Test 1/6] Type 1 (requirements.value=N/A, waivers.value=N/A)
+--------------------------------------------------------------------------------
+Test ID: type1_na
+Status: ERROR
+
+Checker Log Output:
+FAIL:IMP-12-0-0-24:Confirm add the chipBoundary layer to check boundary DRC for test chip.
+IMP-12-0-0-24-ERROR01: Chip_Boundary layer not found in DRC report or incorrect geometry count:
+  Severity: Fail Occurrence: 1
+  - Invalid_Geometry_Count_Calibre_C:\Users\jingyu\OneDrive - Cadence Design Systems Inc\Desktop\checklist_dev\AI_2026_V1\CHECKLIST\CHECKLIST\IP_project_folder\reports\pv\Calibre_DRC.rep
+
+
+================================================================================
+
+[Test 2/6] Type 1 (requirements.value=N/A, waivers.value=0)
+--------------------------------------------------------------------------------
+Test ID: type1_0
+Status: PASS
+
+Checker Log Output:
+PASS:IMP-12-0-0-24:Confirm add the chipBoundary layer to check boundary DRC for test chip.
+IMP-12-0-0-24-INFO01: [WAIVED_INFO]: Waived information:
+  Severity: Info Occurrence: 1
+  - Explanation: Chip_Boundary layer check is informational for early design stages
+IMP-12-0-0-24-INFO02: [WAIVED_AS_INFO]: Chip_Boundary layer not found in DRC report or incorrect geometry count:
+  Severity: Info Occurrence: 1
+  - Invalid_Geometry_Count_Calibre_C:\Users\jingyu\OneDrive - Cadence Design Systems Inc\Desktop\checklist_dev\AI_2026_V1\CHECKLIST\CHECKLIST\IP_project_folder\reports\pv\Calibre_DRC.rep
+
+
+================================================================================
+
+[Test 3/6] Type 2 (requirements.value>0, waivers.value=N/A)
+--------------------------------------------------------------------------------
+Test ID: type2_na
+Status: ERROR
+
+Checker Log Output:
+FAIL:IMP-12-0-0-24:Confirm add the chipBoundary layer to check boundary DRC for test chip.
+IMP-12-0-0-24-ERROR01: Expected Chip_Boundary layer not satisfied (0/1 missing):
+  Severity: Fail Occurrence: 1
+  - Chip_Boundary
+
+
+================================================================================
+
+[Test 4/6] Type 2 (requirements.value>0, waivers.value=0)
+--------------------------------------------------------------------------------
+Test ID: type2_0
+Status: PASS
+
+Checker Log Output:
+PASS:IMP-12-0-0-24:Confirm add the chipBoundary layer to check boundary DRC for test chip.
+IMP-12-0-0-24-INFO01: [WAIVED_INFO]: Waived information:
+  Severity: Info Occurrence: 1
+  - Explanation: Chip_Boundary layer check is informational during pre-layout phase
+IMP-12-0-0-24-INFO02: [WAIVED_AS_INFO]: Expected Chip_Boundary layer not satisfied (0/1 missing):
+  Severity: Info Occurrence: 1
+  - Chip_Boundary
+
+
+================================================================================
+
+[Test 5/6] Type 3
+--------------------------------------------------------------------------------
+Test ID: type3
+Status: PASS
+
+Checker Log Output:
+PASS:IMP-12-0-0-24:Confirm add the chipBoundary layer to check boundary DRC for test chip.
+IMP-12-0-0-24-INFO01: Chip_Boundary layer requirement waived:
+  Severity: Info Occurrence: 1
+  - Chip_Boundary
+
+
+================================================================================
+
+[Test 6/6] Type 4
+--------------------------------------------------------------------------------
+Test ID: type4
+Status: ERROR
+
+Checker Log Output:
+FAIL:IMP-12-0-0-24:Confirm add the chipBoundary layer to check boundary DRC for test chip.
+IMP-12-0-0-24-ERROR01: Chip_Boundary layer not found in DRC report or incorrect geometry count:
+  Severity: Fail Occurrence: 1
+  - Invalid_Geometry_Count_Calibre_C:\Users\jingyu\OneDrive - Cadence Design Systems Inc\Desktop\checklist_dev\AI_2026_V1\CHECKLIST\CHECKLIST\IP_project_folder\reports\pv\Calibre_DRC.rep
+IMP-12-0-0-24-WARN01: Unused waivers:
+  Severity: Warn Occurrence: 1
+  - Chip_Boundary
+
+
+================================================================================
+

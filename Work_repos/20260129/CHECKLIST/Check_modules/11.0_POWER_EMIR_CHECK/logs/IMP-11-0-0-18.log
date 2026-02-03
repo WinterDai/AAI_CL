@@ -1,0 +1,5 @@
+FAIL:IMP-11-0-0-18:Confirm signalEM analysis results matches the requirement.
+IMP-11-0-0-18-ERROR01: Configuration error:
+  Severity: Fail Occurrence: 1
+  - input_files is empty in YAML configuration
+

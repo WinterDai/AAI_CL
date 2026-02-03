@@ -1,0 +1,13 @@
+description: 'Confirm latest LVS rule deck(s) was used? List LVS rule deck name in
+  Comments. eg: DFM_LVS_RC_PEGASUS_N3P_1p17M_1Xa1Xb1Xc1Xd1Ya1Yb4Y2Yy2Yx2R_ALRDL.1.0a'
+input_files:
+- ${CHECKLIST_ROOT}\IP_project_folder\logs\2.0\LVS_pvl.log
+requirements:
+  pattern_items:
+  - T-N05-CL-LS-007-N1
+  - 1.2b
+  value: 2
+waivers:
+  value: 0
+  waive_items:
+  - 'Explanation: Rule deck version check is informational during development phase'

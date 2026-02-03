@@ -1,0 +1,9 @@
+FAIL:IMP-12-0-0-03:Confirm the DRC rule deck setting is correct. Make sure the switch settings match with Foundry CTA (/local/method/CTAF/<process>/production in chamber). Please add justification in Comment if you changed some switching setting in CTA.
+IMP-12-0-0-03-ERROR01: DRC rule deck setting does not match CTA requirement:
+  Severity: Fail Occurrence: 1
+  - pattern1
+IMP-12-0-0-03-WARN01: Unused waivers:
+  Severity: Warn Occurrence: 2
+  - DEBUG_VOLTAGE_RULE
+  - FULL_CHIP
+

@@ -1,0 +1,24 @@
+PASS:IMP-5-0-0-01:Confirm synthesis is using lef data for PLE optimization?
+IMP-5-0-0-01-INFO01: LEF files detected (design IS using LEF for PLE optimization):
+  Severity: Info Occurrence: 20
+  - /process/tsmcN3/data/stdcell/n3ge/TSMC/PRTF_Innovus_3nm_014_Cad_V11s1b/PRTF/PRTF_Innovus_3nm_014_Cad_V11_1b/PR_tech/Cadence/LefHeader/Standard/VHV/PRTF_Innovus_N3E_15M_1Xa1Xb1Xc1Xd1Ya1Yb4Y2Yy2Z_UTRDL_M1P48_M2P26_M3P35_M4P35_M5P42_M6P76_M7P76_M8P76_M9P76_M10P76_M11P76_143H_SHDMIM.11_1b.tlef
+  - /process/tsmcN3/data/stdcell/n3ge/TSMC/tcbn03e_bwp143mh117l3p48cpd_base_elvt_110b/lef/tcbn03e_bwp143mh117l3p48cpd_base_elvt_par.lef
+  - /process/tsmcN3/data/stdcell/n3ge/TSMC/tcbn03e_bwp143mh117l3p48cpd_base_elvt_110b/lef/tcbn03e_bwp143mh117l3p48cpd_base_elvt.lef
+  - /process/tsmcN3/data/stdcell/n3ge/TSMC/tcbn03e_bwp143mh117l3p48cpd_base_lvt_110b/lef/tcbn03e_bwp143mh117l3p48cpd_base_lvt.lef
+  - /process/tsmcN3/data/stdcell/n3ge/TSMC/tcbn03e_bwp143mh117l3p48cpd_base_svt_110b/lef/tcbn03e_bwp143mh117l3p48cpd_base_svt.lef
+  - /process/tsmcN3/data/stdcell/n3ge/TSMC/tcbn03e_bwp143mh117l3p48cpd_base_ulvt_110b/lef/tcbn03e_bwp143mh117l3p48cpd_base_ulvt.lef
+  - /process/tsmcN3/data/stdcell/n3ge/TSMC/tcbn03e_bwp143mh169l3p48cpd_base_elvt_110b/lef/tcbn03e_bwp143mh169l3p48cpd_base_elvt.lef
+  - /process/tsmcN3/data/stdcell/n3ge/TSMC/tcbn03e_bwp143mh169l3p48cpd_base_lvt_110b/lef/tcbn03e_bwp143mh169l3p48cpd_base_lvt.lef
+  - /process/tsmcN3/data/stdcell/n3ge/TSMC/tcbn03e_bwp143mh169l3p48cpd_base_svt_110b/lef/tcbn03e_bwp143mh169l3p48cpd_base_svt.lef
+  - /process/tsmcN3/data/stdcell/n3ge/TSMC/tcbn03e_bwp143mh169l3p48cpd_base_ulvt_110b/lef/tcbn03e_bwp143mh169l3p48cpd_base_ulvt.lef
+  - /process/tsmcN3/data/stdcell/n3ge/TSMC/tcbn03e_bwp143mh286l3p48cpd_base_elvt_110b/lef/tcbn03e_bwp143mh286l3p48cpd_base_elvt.lef
+  - /process/tsmcN3/data/stdcell/n3ge/TSMC/tcbn03e_bwp143mh286l3p48cpd_base_lvt_110b/lef/tcbn03e_bwp143mh286l3p48cpd_base_lvt.lef
+  - /process/tsmcN3/data/stdcell/n3ge/TSMC/tcbn03e_bwp143mh286l3p48cpd_base_svt_110b/lef/tcbn03e_bwp143mh286l3p48cpd_base_svt.lef
+  - /process/tsmcN3/data/stdcell/n3ge/TSMC/tcbn03e_bwp143mh286l3p48cpd_base_ulvt_110b/lef/tcbn03e_bwp143mh286l3p48cpd_base_ulvt.lef
+  - /process/tsmcN3/data/stdcell/n3ge/TSMC/tcbn03e_bwp143mh286l3p48cpd_mb_elvt_110b/lef/tcbn03e_bwp143mh286l3p48cpd_mb_elvt.lef
+  - /process/tsmcN3/data/stdcell/n3ge/TSMC/tcbn03e_bwp143mh286l3p48cpd_mb_lvt_110b/lef/tcbn03e_bwp143mh286l3p48cpd_mb_lvt.lef
+  - /process/tsmcN3/data/stdcell/n3ge/TSMC/tcbn03e_bwp143mh286l3p48cpd_mb_svt_110b/lef/tcbn03e_bwp143mh286l3p48cpd_mb_svt.lef
+  - /process/tsmcN3/data/stdcell/n3ge/TSMC/tcbn03e_bwp143mh286l3p48cpd_mb_ulvt_110b/lef/tcbn03e_bwp143mh286l3p48cpd_mb_ulvt.lef
+  - /process/tsmcN3/data/stdcell/n3v/TSMC/tpbn03_tn03bpdr003_100a/lef/fc/fc_lf_bu/APRDL/lef/tpbn03_tn03bpdr003.lef
+  - /process/tsmcN3/data/stdcell/n3ge/TSMC/N3E_DTCD_library_kit_general_v0d9.1.230327/lef/N3E_DTCD_M11/N3E_DTCD_v0d9_1.lef
+

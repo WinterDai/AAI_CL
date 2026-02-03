@@ -1,0 +1,5 @@
+FAIL:SRG-IMP-17-3-0-04:Is the Delivery Package contains all the PV report files
+SRG-IMP-17-3-0-04-ERROR01: Configuration error:
+  Severity: Fail Occurrence: 1
+  - input_files is empty in YAML configuration
+

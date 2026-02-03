@@ -1,0 +1,8 @@
+PASS:IMP-11-0-0-20:Confirm wake-up time meet customer's requirement. (For non-PSO, please fill N/A)
+Warn Occurrence: 2
+1: Warn: Power switches: Waiver not matched - no corresponding wake-up time violation found: Power switch activation check waived - incomplete simulation acceptable for early verification stage[WAIVER]
+2: Warn: Wake-up time: Waiver not matched - no corresponding wake-up time violation found: Wake-up time measurement waived - report format differs for legacy tool version[WAIVER]
+Info Occurrence: 3
+1: Info: Wake-up time: 1.11e-07s. In line 9, C:\Users\chudongy\dev_workspace\ai_checklist\CHECKLIST\CHECKLIST\IP_project_folder\reports\11.0\Powerup.rpt: All power switches turned on and wake-up time found in simulation report
+2: Info: Power switches: 28215/28215 activated. In line 11, C:\Users\chudongy\dev_workspace\ai_checklist\CHECKLIST\CHECKLIST\IP_project_folder\reports\11.0\Powerup.rpt: All power switches turned on and wake-up time found in simulation report
+3: Info: Rush current: 0.427297A. In line 8, C:\Users\chudongy\dev_workspace\ai_checklist\CHECKLIST\CHECKLIST\IP_project_folder\reports\11.0\Powerup.rpt: All power switches turned on and wake-up time found in simulation report

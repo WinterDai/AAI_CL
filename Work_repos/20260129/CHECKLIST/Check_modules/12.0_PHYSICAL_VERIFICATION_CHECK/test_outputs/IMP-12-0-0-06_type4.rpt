@@ -1,0 +1,9 @@
+FAIL:IMP-12-0-0-06:Confirm the MIM related check setting is correct. (Fill N/A if no MIMCAP inserted or no MIM related layers)
+Fail Occurrence: 3
+1: Fail: KOZ_HIGH_SUBST_LAYER: Required MIM switches not found in PVL log or sourceme file
+2: Fail: SHDMIM: Required MIM switches not found in PVL log or sourceme file
+3: Fail: SHDMIM_KOZ_AP_SPACE_5UM: Required MIM switches not found in PVL log or sourceme file
+Warn Occurrence: 1
+1: Warn: FHDMIM_KOZ_AP_SPACE_5um_IP: Waiver entry not matched - no corresponding MIM switch mismatch found in actual configuration: Waived - IP-level KOZ spacing not required for this integration per foundry waiver[WAIVER]
+Info Occurrence: 1
+1: Info: FHDMIM: MIM switch configuration mismatch waived per design team approval: Waived - Test chip uses FHDMIM for characterization purposes per design team approval[WAIVER]

@@ -1,0 +1,33 @@
+is_pass: False
+value: 0
+has_pattern_items: True
+has_waiver_value: False
+
+Details (2 items):
+--------------------------------------------------------------------------------
+
+[1] WARN
+    name: SPEF Reading was skipped
+    line_number: 22
+    file_path: c:\Users\wentao\AAI_local\AAI\Main_Work\ACL\Latest\CHECKLIST\IP_project_folder\logs\sta_post_syn.log
+    reason: Unexpected item found
+
+[2] FAIL
+    name: Generated on:*2025*: Required pattern not found
+    line_number: 0
+    file_path: N/A
+    reason: Item not found
+
+
+Error Groups (1 groups):
+--------------------------------------------------------------------------------
+
+ERROR01: Netlist/SPEF version isn't correct
+  Items: ['Generated on:*2025*']
+
+
+Warn Groups (1 groups):
+--------------------------------------------------------------------------------
+
+WARN01: Design has no spef/netlist file
+  Items: ['SPEF Reading was skipped']

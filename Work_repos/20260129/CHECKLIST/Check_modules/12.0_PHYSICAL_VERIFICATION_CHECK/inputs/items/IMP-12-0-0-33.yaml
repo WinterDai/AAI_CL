@@ -1,0 +1,13 @@
+description: 'Confirm all Warning message in DFM/FLT log files can be waived.
+  (for SEC process, for others fill N/A)'
+requirements:
+  value: N/A
+  pattern_items: []
+input_files:
+  - ${CHECKLIST_ROOT}/IP_project_folder/logs/do_pvsFLTwD.log
+  - ${CHECKLIST_ROOT}/IP_project_folder/logs/Pegasus_DFM.log
+waivers:
+  value: 1
+  waive_items:
+      - name: "regex:Worker [0-9]+ killed by external signal"
+        reason: "Waived - Terminating run errors are expected during stress testing"

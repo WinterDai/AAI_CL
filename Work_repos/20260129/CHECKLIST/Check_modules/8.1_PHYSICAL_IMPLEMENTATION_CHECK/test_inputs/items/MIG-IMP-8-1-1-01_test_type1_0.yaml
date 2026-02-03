@@ -1,0 +1,11 @@
+description: Confirm meet a resistance less than 0.5Ω(not exceed 0.8Ω) and a capacitance
+  less than 350fF from pad opening to signal bump. (check the Note)
+input_files:
+- ${CHECKLIST_ROOT}/IP_project_folder/reports/8.1/MIG-IMP-8-1-1-01.rpt
+requirements:
+  pattern_items: []
+  value: N/A
+waivers:
+  value: 0
+  waive_items:
+  - 'Explanation: RC violations are informational only for this design phase'

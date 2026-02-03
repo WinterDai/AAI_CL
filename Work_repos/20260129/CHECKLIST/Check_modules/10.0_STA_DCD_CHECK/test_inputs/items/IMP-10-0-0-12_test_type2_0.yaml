@@ -1,0 +1,15 @@
+description: Confirm the max_transition check result is clean.
+input_files:
+- ${CHECKLIST_ROOT}/IP_project_folder/reports/10.0/maxtran_1.rpt
+- ${CHECKLIST_ROOT}/IP_project_folder/reports/10.0/maxtran_2.rpt
+requirements:
+  pattern_items:
+  - 'Pin ''cmn_ref_clk_int'': Required=0.4000ns, Actual=0.4306ns, Slack=-0.0306ns
+    (View: at_speed_rcff_0p825v_125c_pcff_cmin_pcff3_hold)'
+  - 'Pin ''cmnda_rext'': Required=0.3000ns, Actual=0.7666ns, Slack=-0.4666ns (View:
+    func_rcff_0p825v_125c_pcff_cmin_pcff3_hold)'
+  value: 2
+waivers:
+  value: 0
+  waive_items:
+  - Debug mode - tracking known violations for analysis

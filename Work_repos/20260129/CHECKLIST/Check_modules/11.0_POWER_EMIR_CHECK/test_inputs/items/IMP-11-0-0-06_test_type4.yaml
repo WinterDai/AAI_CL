@@ -1,0 +1,15 @@
+description: Confirm use the proper spice model and spice netlist to generate the
+  PGV views.(check the Note)
+input_files:
+- ${CHECKLIST_ROOT}/IP_project_folder/logs/*LibGen.log
+requirements:
+  pattern_items: []
+  value: N/A
+waivers:
+  value: 2
+  waive_items:
+  - name: ffgnp_0p825v_125c_cbest_CCbest_T
+    reason: Waived - using alternative SPICE model for fast corner per design team
+      approval
+  - name: rcss_0p675v_m40c_cworst_CCworst_T
+    reason: Waived - legacy SPICE netlist approved for low voltage corner

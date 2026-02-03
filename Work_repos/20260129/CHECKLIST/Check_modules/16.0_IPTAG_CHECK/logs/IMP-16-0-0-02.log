@@ -1,0 +1,5 @@
+PASS:IMP-16-0-0-02:Confirm PHY has the IPTAG for Hard PHY delivery and Slices have the IPTAG for FIRM PHY delivery. (Can skip slice level IPTAG for Hard PHY delivery)
+IMP-16-0-0-02-INFO01: IPTAG verification completed with valid delivery type configuration:
+  Severity: Info Occurrence: 1
+  - Hard PHY delivery - IPTAG: HPCFSC_D5D4_T5G$C202209262108$17M1X1Xb1Xe1Ya1Yb5Y2Yy2Yx2R (Instance: cdn_hs_phy_top)
+

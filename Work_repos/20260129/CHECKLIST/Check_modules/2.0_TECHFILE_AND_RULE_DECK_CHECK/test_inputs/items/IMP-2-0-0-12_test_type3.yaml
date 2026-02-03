@@ -1,0 +1,14 @@
+description: 'List COD dummy rule deck name (fill N/A if no COD). eg: PLN16FFP_FINcut_AutoGen.11b.encrypt'
+input_files:
+- ${CHECKLIST_ROOT}\IP_project_folder\logs\2.0\COD_pvl.log
+requirements:
+  pattern_items:
+  - PLN16FFP_FINcut_AutoGen.11b.encrypt.COD
+  value: 1
+waivers:
+  value: 2
+  waive_items:
+  - name: PLN12FFC_FINcut_AutoGen.09_1a.COD
+    reason: Waived - legacy COD deck approved for this design phase
+  - name: PLN16FFP_FINcut_AutoGen.10a.COD
+    reason: Waived - intermediate COD deck version used for debug runs

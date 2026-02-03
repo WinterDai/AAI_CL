@@ -1,0 +1,12 @@
+description: Confirm no ERROR message in the QRC log files.
+input_files:
+- ${CHECKLIST_ROOT}/IP_project_folder/logs/9.0/do_qrc*.log
+requirements:
+  pattern_items:
+  - EXTGRMP-456
+  - EXTSNZ-789
+  value: 2
+waivers:
+  value: 0
+  waive_items:
+  - 'Explanation: QRC ERROR pattern check is informational only for debug builds'

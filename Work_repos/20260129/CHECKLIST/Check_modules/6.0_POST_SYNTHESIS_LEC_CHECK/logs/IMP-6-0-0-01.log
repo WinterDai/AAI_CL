@@ -1,0 +1,10 @@
+PASS:IMP-6-0-0-01:Confirm conformal log file has been peer reviewed and all warnings have a waiver/explanation?
+IMP-6-0-0-01-WARN01: Warnings found in conformal log:
+  Severity: Warn Occurrence: 6
+  - Warning: 'test_so1' is not a primary output in module 'phy_cmn_phase_align_digtop' in Golden
+  - Warning: No ignored pin is added in Golden
+  - Warning: (RTL9.17) Cell doesn't have any output pins or all output pins are undriven (blackboxed) (occurrence:210)
+  - Warning: (RTL9.21) Liberty cell with interface_timing attribute set to true was not an empty cell (occurrence:2)
+  - Warning: (LIB_LINT_068) PG_PIN direction is changed to "input", which is compatible with the defined PG_TYPE. (occurrence:1)
+  - Warning: (LIB_LINT_121) Data pin of cell has antenna_diode_related_power_pins attribute or antenna_diode_related_ground_pins attribute, but also has related_power_pin or related_ground_pin (occurrence:6)
+

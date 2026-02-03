@@ -1,0 +1,5 @@
+FAIL:IMP-10-0-0-00:Confirm the netlist/spef version is correct.
+Fail Occurrence: 1
+1: Fail: Generated on:*2025*: Required pattern not found: Item not found
+Warn Occurrence: 1
+1: Warn: SPEF Reading was skipped. In line 22, c:\Users\wentao\AAI_local\AAI\Main_Work\ACL\Latest\CHECKLIST\IP_project_folder\logs\sta_post_syn.log: Unexpected item found

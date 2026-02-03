@@ -1,0 +1,17 @@
+FAIL:IMP-12-0-0-07:Confirm the ANT rule deck setting is correct.
+IMP-12-0-0-07-ERROR01: Required ANT rule deck settings not found or incorrectly configured:
+  Severity: Fail Occurrence: 1
+  - warning_102
+IMP-12-0-0-07-WARN01: Unused waivers:
+  Severity: Warn Occurrence: 2
+  - ACC_DEBUG
+  - FHDMIM
+IMP-12-0-0-07-INFO01: ANT rule deck configuration validated successfully:
+  Severity: Info Occurrence: 6
+  - ACC_DEBUG
+  - DEBUG_MX
+  - DEBUG_VIA
+  - TSV_RULES
+  - WITH_2MR
+  - WITH_4MZ
+

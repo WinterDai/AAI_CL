@@ -1,0 +1,5 @@
+FAIL:IMP-11-0-0-06:Confirm use the proper spice model and spice netlist to generate the PGV views.(check the Note)
+IMP-11-0-0-06-ERROR01: Configuration error:
+  Severity: Fail Occurrence: 1
+  - input_files is empty in YAML configuration
+

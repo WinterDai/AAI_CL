@@ -1,0 +1,99 @@
+Test Log: IMP-12-0-0-10
+================================================================================
+
+[Test 1/6] Type 1 (requirements.value=N/A, waivers.value=N/A)
+--------------------------------------------------------------------------------
+Test ID: type1_na
+Status: ERROR
+
+Checker Log Output:
+FAIL:IMP-12-0-0-10:Confirm turn-off the VIRTUAL_CONNECT in LVS setting.
+IMP-12-0-0-10-ERROR01: VIRTUAL_CONNECT is enabled or not found in LVS settings:
+  Severity: Fail Occurrence: 1
+  - VIRTUAL_CONNECT is YES (should be NO) (Line 80 in /home/jingyu/checklist_dev/CHECKLIST/CHECKLIST/IP_project_folder/logs/do_cmd_3star_LVS_sourceme)
+
+
+================================================================================
+
+[Test 2/6] Type 1 (requirements.value=N/A, waivers.value=0)
+--------------------------------------------------------------------------------
+Test ID: type1_0
+Status: PASS
+
+Checker Log Output:
+PASS:IMP-12-0-0-10:Confirm turn-off the VIRTUAL_CONNECT in LVS setting.
+IMP-12-0-0-10-INFO01: [WAIVED_INFO]: Waived information:
+  Severity: Info Occurrence: 1
+  - Explanation: VIRTUAL_CONNECT enabled is acceptable for this design because hierarchical LVS is required
+IMP-12-0-0-10-INFO02: [WAIVED_AS_INFO]: VIRTUAL_CONNECT is enabled or not found in LVS settings:
+  Severity: Info Occurrence: 1
+  - VIRTUAL_CONNECT is YES (should be NO) (Line 80 in /home/jingyu/checklist_dev/CHECKLIST/CHECKLIST/IP_project_folder/logs/do_cmd_3star_LVS_sourceme)
+
+
+================================================================================
+
+[Test 3/6] Type 2 (requirements.value>0, waivers.value=N/A)
+--------------------------------------------------------------------------------
+Test ID: type2_na
+Status: ERROR
+
+Checker Log Output:
+FAIL:IMP-12-0-0-10:Confirm turn-off the VIRTUAL_CONNECT in LVS setting.
+IMP-12-0-0-10-ERROR01: VIRTUAL_CONNECT setting does not match expected disabled state:
+  Severity: Fail Occurrence: 1
+  - Expected pattern not found, got VIRTUAL CONNECT COLON YES (Line 80 in /home/jingyu/checklist_dev/CHECKLIST/CHECKLIST/IP_project_folder/logs/do_cmd_3star_LVS_sourceme)
+
+
+================================================================================
+
+[Test 4/6] Type 2 (requirements.value>0, waivers.value=0)
+--------------------------------------------------------------------------------
+Test ID: type2_0
+Status: PASS
+
+Checker Log Output:
+PASS:IMP-12-0-0-10:Confirm turn-off the VIRTUAL_CONNECT in LVS setting.
+IMP-12-0-0-10-INFO01: [WAIVED_INFO]: Waived information:
+  Severity: Info Occurrence: 1
+  - Explanation: VIRTUAL_CONNECT enabled is acceptable for hierarchical LVS verification
+IMP-12-0-0-10-INFO02: [WAIVED_AS_INFO]: VIRTUAL_CONNECT setting does not match expected disabled state:
+  Severity: Info Occurrence: 1
+  - Expected pattern not found, got VIRTUAL CONNECT COLON YES (Line 80 in /home/jingyu/checklist_dev/CHECKLIST/CHECKLIST/IP_project_folder/logs/do_cmd_3star_LVS_sourceme)
+
+
+================================================================================
+
+[Test 5/6] Type 3 (requirements.value>0, waivers.value>0)
+--------------------------------------------------------------------------------
+Test ID: type3
+Status: PASS
+
+Checker Log Output:
+PASS:IMP-12-0-0-10:Confirm turn-off the VIRTUAL_CONNECT in LVS setting.
+IMP-12-0-0-10-WARN01: Unused waivers:
+  Severity: Warn Occurrence: 1
+  - VIRTUAL_CONNECT enabled
+IMP-12-0-0-10-INFO01: VIRTUAL_CONNECT violations waived by configuration:
+  Severity: Info Occurrence: 1
+  - VIRTUAL CONNECT COLON YES
+
+
+================================================================================
+
+[Test 6/6] Type 4 (requirements.value=N/A, waivers.value>0)
+--------------------------------------------------------------------------------
+Test ID: type4
+Status: PASS
+
+Checker Log Output:
+PASS:IMP-12-0-0-10:Confirm turn-off the VIRTUAL_CONNECT in LVS setting.
+IMP-12-0-0-10-WARN01: Unused waivers:
+  Severity: Warn Occurrence: 1
+  - VIRTUAL_CONNECT enabled
+IMP-12-0-0-10-INFO01: VIRTUAL_CONNECT violations waived by configuration:
+  Severity: Info Occurrence: 1
+  - VIRTUAL CONNECT COLON YES
+
+
+================================================================================
+

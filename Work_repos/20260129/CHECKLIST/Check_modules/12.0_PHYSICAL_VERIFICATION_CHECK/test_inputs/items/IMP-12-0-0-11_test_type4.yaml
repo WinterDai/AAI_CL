@@ -1,0 +1,15 @@
+description: Confirm the DRC check result is clean. (fill the confidence level of
+  not touching floorplan again in comment if fill no, for example, 90%~100%)
+input_files:
+- ${CHECKLIST_ROOT}/IP_project_folder/reports/pv/Calibre_DRC.rep
+- ${CHECKLIST_ROOT}/IP_project_folder/reports/pv/Pegasus_DRC.rep
+requirements:
+  pattern_items: []
+  value: N/A
+waivers:
+  value: 2
+  waive_items:
+  - name: 'RH_TN.WARN.1: 300'
+    reason: Routing hierarchy warnings in legacy blocks - waived per IP vendor approval
+  - name: 'AN.R.20mg: 290'
+    reason: Antenna ratio violations in test structures - waived per design review

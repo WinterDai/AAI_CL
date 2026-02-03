@@ -1,0 +1,5 @@
+PASS:IMP-16-0-0-05:Confirm remove the FIRM PHY slices IPTAG if FIRM PHY slices are reused in Hard PHY project.
+IMP-16-0-0-05-INFO01: PHY and Block IPTAGs are consistent:
+  Severity: Info Occurrence: 1
+  - Check N/A - PHY: HPCFSC_D5D4_T5G$C202..., Block: NOT FOUND...
+

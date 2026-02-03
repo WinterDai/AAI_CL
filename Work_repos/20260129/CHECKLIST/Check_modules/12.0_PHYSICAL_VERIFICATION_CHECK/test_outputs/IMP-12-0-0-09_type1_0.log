@@ -1,0 +1,5 @@
+PASS:IMP-12-0-0-09:Confirm the LVS rule deck setting is correct.
+IMP-12-0-0-09-INFO01: [WAIVED_INFO]: Waived information:
+  Severity: Info Occurrence: 1
+  - Explanation: LVS rule deck validation is informational only for this design phase
+

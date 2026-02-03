@@ -1,0 +1,6 @@
+FAIL:IMP-5-0-0-11:Confirm synthesis log has been peer reviewed and all warnings are understood and annotated with an explanation?
+IMP-5-0-0-11-ERROR01: Missing or unreadable input files - configuration error:
+  Severity: Fail Occurrence: 2
+  - C:\Users\wentao\AAI_local\AAI\Main_Work\ACL\CHECKLIST\CHECKLIST\IP_project_folder\logs\genus.syn_generic.log
+  - C:\Users\wentao\AAI_local\AAI\Main_Work\ACL\CHECKLIST\CHECKLIST\IP_project_folder\logs\genus.syn_opt.log
+

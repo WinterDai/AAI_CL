@@ -1,0 +1,10 @@
+description: 'TODO: [BRCM special] Confirm use pin blockage def for pin assignment
+  for BRCM projects (for non-BRCM projects, please fill N/A) The pin def information
+  is in /projects/workbench/versions/BRCM/pin_blockage_def/BRCM_Pin_Placement_DEF_release_notes.pdf'
+requirements:
+  value: N/A
+  pattern_items: []
+input_files: []
+waivers:
+  value: N/A
+  waive_items: []

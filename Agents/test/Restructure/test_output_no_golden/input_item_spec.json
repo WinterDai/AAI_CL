@@ -1,0 +1,170 @@
+{
+  "item_id": "IMP-10-0-0-00",
+  "description": "Confirm the netlist/spef version is correct.",
+  "check_module": "IMP",
+  "detected_type": 1,
+  "requirements": {
+    "value": "N/A",
+    "pattern_items": []
+  },
+  "input_files": "logs/sta_post_syn.log",
+  "waivers": {
+    "value": "N/A",
+    "waive_items": []
+  },
+  "parse_logic": {
+    "file_type": "log",
+    "parsing_method": "Parse STA log to extract netlist/SPEF file paths and version info",
+    "key_patterns": [
+      "Read Netlist: <path>",
+      "Read SPEF: <path>",
+      "Status: Success/Failed",
+      "Skipping SPEF reading"
+    ]
+  },
+  "semantic_intent": {
+    "check_target": "Verify netlist and SPEF file version information",
+    "data_flow": "STA log → netlist/spef paths → actual files → version extraction",
+    "involved_formats": [
+      {
+        "name": "STA_Log",
+        "data_role": "indirect_reference",
+        "role": "Provides file paths to SPEF/Netlist files"
+      },
+      {
+        "name": "Verilog_Netlist",
+        "data_role": "direct_source",
+        "role": "Contains Genus tool version"
+      },
+      {
+        "name": "SPEF",
+        "data_role": "direct_source",
+        "role": "Contains SPEF version and program info"
+      }
+    ]
+  },
+  "extraction_fields": {
+    "sta_log": [
+      {
+        "field_name": "netlist_path",
+        "regex_template": "Read Netlist:\\s*(.+)",
+        "description": "Extract netlist file path"
+      },
+      {
+        "field_name": "spef_path",
+        "regex_template": "Read SPEF:\\s*(.+)",
+        "description": "Extract SPEF file path"
+      },
+      {
+        "field_name": "status",
+        "regex_template": "Status:\\s*(Success|Failed)",
+        "description": "Extract read status"
+      },
+      {
+        "field_name": "spef_skip",
+        "regex_template": "Skipping SPEF reading",
+        "description": "Detect SPEF skip"
+      }
+    ],
+    "netlist": [
+      {
+        "field_name": "tool_version",
+        "regex_template": "Synthesis Solution\\s+([\\d\\.\\-\\w]+)",
+        "description": "Extract Genus version"
+      },
+      {
+        "field_name": "gen_date",
+        "regex_template": "Generated on:\\s+(\\w+\\s+\\d+\\s+\\d+)\\s+([\\d:]+)",
+        "description": "Extract generation date/time"
+      }
+    ],
+    "spef": [
+      {
+        "field_name": "spef_version",
+        "regex_template": "\\*VERSION\\s+\"([^\"]+)\"",
+        "description": "Extract SPEF version"
+      },
+      {
+        "field_name": "spef_date",
+        "regex_template": "\\*DATE\\s+\"([^\"]+)\"",
+        "description": "Extract SPEF date"
+      },
+      {
+        "field_name": "spef_program",
+        "regex_template": "\\*PROGRAM\\s+\"([^\"]+)\"",
+        "description": "Extract SPEF program name"
+      }
+    ]
+  },
+  "type_execution_specs": [
+    {
+      "type_id": 1,
+      "description": "Boolean check - verify netlist and SPEF loaded successfully",
+      "pass_condition": "Both files read with Status: Success",
+      "fail_condition": "Any file read failed",
+      "needs_pattern_search": false,
+      "needs_waiver_logic": false,
+      "framework_method": "execute_boolean_check(parse_data_func, has_waiver=False, ...)"
+    },
+    {
+      "type_id": 2,
+      "description": "Value check - match version info from pattern_items",
+      "pass_condition": "Pattern items found in output",
+      "fail_condition": "Pattern items not found",
+      "needs_pattern_search": true,
+      "needs_waiver_logic": false,
+      "framework_method": "execute_value_check(parse_data_func, has_waiver=False, ...)"
+    },
+    {
+      "type_id": 3,
+      "description": "Value check with waiver - match pattern_items with waiver handling",
+      "pass_condition": "Pattern items found or waived",
+      "fail_condition": "Pattern items not found and not waived",
+      "needs_pattern_search": true,
+      "needs_waiver_logic": true,
+      "framework_method": "execute_value_check(parse_data_func, has_waiver=True, info_items=..., ...)"
+    },
+    {
+      "type_id": 4,
+      "description": "Boolean check with waiver - verify load success with waiver handling",
+      "pass_condition": "Both files read successfully or waived",
+      "fail_condition": "Any file read failed and not waived",
+      "needs_pattern_search": false,
+      "needs_waiver_logic": true,
+      "framework_method": "execute_boolean_check(parse_data_func, has_waiver=True, ...)"
+    }
+  ],
+  "class_constants": {
+    "FOUND_DESC": "Netlist/SPEF files loaded successfully",
+    "MISSING_DESC": "Netlist/SPEF loading issues",
+    "FOUND_REASON": "Status: Success",
+    "MISSING_REASON": "File loading failed",
+    "EXTRA_DESC": "Design has no spef/netlist file",
+    "EXTRA_REASON": "Design has no spef/netlist file or unexpected error"
+  },
+  "logic_steps": [
+    "Layer 1 (_parse_input_files): Parse STA log → get netlist/spef paths → parse actual files → return Dict with netlist_info, spef_info, errors",
+    "Layer 2a (_boolean_check_logic): Type1/4 shared - check file existence, return (found_items, missing_items, extra_items) as Dicts",
+    "Layer 2b (_pattern_check_logic): Type2/3 shared - match pattern_items, return (found_items, missing_items, extra_items) as Dicts",
+    "Layer 3 (_execute_typeN): Call framework methods execute_boolean_check or execute_value_check with appropriate parameters"
+  ],
+  "architecture_guidance": {
+    "three_layer_design": true,
+    "layer1_method": "_parse_input_files() -> Dict[str, Any]",
+    "layer2_methods": [
+      "_boolean_check_logic(parsed_data) -> Tuple[Dict, Dict, Dict]",
+      "_pattern_check_logic(parsed_data) -> Tuple[Dict, Dict, Dict]"
+    ],
+    "layer3_methods": [
+      "_execute_type1: call execute_boolean_check with has_waiver=False",
+      "_execute_type2: call execute_value_check with has_waiver=False",
+      "_execute_type3: call execute_value_check with has_waiver=True, info_items",
+      "_execute_type4: call execute_boolean_check with has_waiver=True"
+    ],
+    "data_structure_rules": [
+      "found_items: Dict[str, Dict] - key is item name, value is metadata",
+      "missing_items: Dict[str, Dict] - MUST be Dict, not List",
+      "extra_items: Dict[str, Dict] - for SPEF skip or errors"
+    ]
+  }
+}

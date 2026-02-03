@@ -1,0 +1,5 @@
+FAIL:IMP-11-0-0-04:Confirm proper rc/PVT corners were used for IR drop and EM analysis. List rc/PVT corners used in comments field.
+IMP-11-0-0-04-ERROR01: Configuration error:
+  Severity: Fail Occurrence: 1
+  - input_files is empty in YAML configuration
+

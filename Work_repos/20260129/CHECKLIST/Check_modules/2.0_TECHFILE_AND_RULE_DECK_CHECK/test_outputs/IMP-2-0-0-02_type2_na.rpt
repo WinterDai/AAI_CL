@@ -1,0 +1,3 @@
+FAIL:IMP-2-0-0-02:Confirm latest DRC rule deck(s) was used? List DRC rule deck name in Comments. eg: PLN3ELO_17M_1Xa1Xb1Xc1Xd1Ya1Yb4Y2Yy2Yx2R_014.11_2a.encrypt PLN3ELO_17M_1Xa1Xb1Xc1Xd1Ya1Yb4Y2Yy2Yx2R_054_PATCH.11_2a.encrypt
+Fail Occurrence: 1
+1: Fail: C:\Users\chenweif\Checker_dev\CHECKLIST\CHECKLIST\IP_project_folder\ruledeck\2.0\PLN5LO_16M_1X1Xb1Xe1Ya1Yb6Y2Yy2R_014.13_1a.encrypt.phy (T-N05-CL-DR-014-N1, 1.3_1a), Expect (T-N05-CL-DR-014-N1, 014.11_2a). In line 302, C:\Users\chenweif\Checker_dev\CHECKLIST\CHECKLIST\IP_project_folder\logs\2.0\DRC_pvl.log: Current rule deck document or version does not satisfy expected configuration - version mismatch detected

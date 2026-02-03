@@ -1,0 +1,67 @@
+====================================================================================================
+DETAILED COMPARISON REPORT
+====================================================================================================
+
+====================================================================================================
+HIGH-LEVEL COMPARISON
+====================================================================================================
+
+is_pass:
+  Golden:    False
+  CodeGen:   False
+  Match:     ✓ YES
+
+value:
+  Golden:    0
+  CodeGen:   0
+  Match:     ✓ YES
+
+Detail Count:
+  Golden:    2
+  CodeGen:   2
+  Match:     ✓ YES
+
+Severity Breakdown:
+  FAIL    : Golden= 1, CodeGen= 1  ✓
+  WARN    : Golden= 1, CodeGen= 1  ✓
+
+====================================================================================================
+DETAILS COMPARISON
+====================================================================================================
+
+--- Detail #1 ---
+  Golden:  [WARN] SPEF Reading was skipped
+           Reason: Design has no spef/netlist file or unexpected error...
+  CodeGen: [WARN] SPEF Reading was skipped
+           Reason: Unexpected item found...
+  Match:   ✗ NO
+
+--- Detail #2 ---
+  Golden:  [FAIL] Generated on:*2025*
+           Reason: Required pattern not found...
+  CodeGen: [FAIL] Generated on:*2025*: Required pattern not found
+           Reason: Item not found...
+  Match:   ✗ NO
+
+====================================================================================================
+GROUPS COMPARISON
+====================================================================================================
+
+Info Groups:
+  Golden:    0 groups
+  CodeGen:   0 groups
+
+Error Groups:
+  Golden:    1 groups
+  CodeGen:   1 groups
+
+Warn Groups:
+  Golden:    1 groups
+  CodeGen:   1 groups
+
+====================================================================================================
+VERDICT
+====================================================================================================
+
+✓✓✓ PASS - Results are IDENTICAL ✓✓✓
+====================================================================================================

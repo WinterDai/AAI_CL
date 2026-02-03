@@ -1,0 +1,14 @@
+description: Confirm EMIR signoff criteria follows addendum or SOW, otherwise follow
+  internal spec (design rule with IP specific margin)
+input_files: []
+requirements:
+  pattern_items:
+  - EM_TEMPERATURE=105
+  - EM_LIFETIME=87600
+  - STATIC_IR_TARGET=3%
+  value: 3
+waivers:
+  value: 0
+  waive_items:
+  - 'Explanation: EMIR criteria deviations are acceptable for pre-silicon validation
+    phase'

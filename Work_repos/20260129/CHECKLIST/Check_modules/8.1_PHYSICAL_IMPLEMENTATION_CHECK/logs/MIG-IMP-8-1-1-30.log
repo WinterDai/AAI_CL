@@ -1,0 +1,5 @@
+FAIL:MIG-IMP-8-1-1-30:Confrim add VDDQ/VDD decaps for DDRIO in test chip tv_chip level(Follow same decap insertion guidance in PHY implementation guide).
+MIG-IMP-8-1-1-30-ERROR01: Configuration error:
+  Severity: Fail Occurrence: 1
+  - input_files is empty in YAML configuration
+

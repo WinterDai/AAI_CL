@@ -1,0 +1,11 @@
+FAIL:IMP-11-0-0-04:Confirm proper rc/PVT corners were used for IR drop and EM analysis. List rc/PVT corners used in comments field.
+IMP-11-0-0-04-ERROR01: RC/PVT corner specifications not found or incomplete in Voltus analysis logs:
+  Severity: Fail Occurrence: 3
+  - func_ffgnp_0p825v_125c
+  - func_ffgnp_0p825v_m40c
+  - func_ssgnp_0p675v_125c
+IMP-11-0-0-04-WARN01: Unused waivers:
+  Severity: Warn Occurrence: 2
+  - ND1_func_rcss_0p675v_m40c_dynamic
+  - ND1_test_ssgnp_0p675v_125c_setup
+

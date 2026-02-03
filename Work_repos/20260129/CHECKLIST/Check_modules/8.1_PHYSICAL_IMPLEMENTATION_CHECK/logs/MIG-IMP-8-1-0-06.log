@@ -1,0 +1,5 @@
+FAIL:MIG-IMP-8-1-0-06:Confirm NO analog module (such as DA) is put in the middle of manual added inverter pairs in DCD path improvement activities.
+MIG-IMP-8-1-0-06-ERROR01: Configuration error:
+  Severity: Fail Occurrence: 1
+  - input_files is empty in YAML configuration
+

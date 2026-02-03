@@ -1,0 +1,6 @@
+FAIL:IMP-6-0-0-02:Confirm all listed black boxes are intended?
+IMP-6-0-0-02-ERROR01: Black box modules in design:
+  Severity: Fail Occurrence: 2
+  - SYSTEM: (R) ANTENNA_DX_L_S6P25TR_C54L06
+  - SYSTEM: (G R) xcvr_ana
+

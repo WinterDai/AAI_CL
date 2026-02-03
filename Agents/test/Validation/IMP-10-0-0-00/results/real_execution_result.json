@@ -1,0 +1,274 @@
+{
+  "timestamp": "2025-12-31T19:50:44.708715",
+  "executions": [
+    {
+      "test_case_id": "TC_01",
+      "type_id": 1,
+      "scenario": "Type 1 正向 - version 存在应 PASS",
+      "direction": "positive",
+      "actual_output": "PASS",
+      "success": true,
+      "return_code": 0,
+      "report_content": "PASS:IMP-10-0-0-00:Confirm the netlist/spef version is correct.\nInfo Occurrence: 4\n1: Info: Error: Netlist file path not found in STA log: Item not found[WAIVED_AS_INFO]\n2: Info: Error: SPEF file path",
+      "config_override": {
+        "requirements": {
+          "pattern_items": []
+        },
+        "waivers": {
+          "value": 0,
+          "waive_items": []
+        }
+      }
+    },
+    {
+      "test_case_id": "TC_02",
+      "type_id": 1,
+      "scenario": "Type 1 反向 - 无法测试 (无法删除 version)",
+      "direction": "negative",
+      "actual_output": "PASS",
+      "success": true,
+      "return_code": 0,
+      "report_content": "PASS:IMP-10-0-0-00:Confirm the netlist/spef version is correct.\nInfo Occurrence: 4\n1: Info: Error: Netlist file path not found in STA log: Item not found[WAIVED_AS_INFO]\n2: Info: Error: SPEF file path",
+      "config_override": {
+        "requirements": {
+          "pattern_items": []
+        },
+        "waivers": {
+          "value": 0,
+          "waive_items": []
+        }
+      }
+    },
+    {
+      "test_case_id": "TC_03",
+      "type_id": 2,
+      "scenario": "Type 2 正向 - pattern 匹配应 PASS",
+      "direction": "positive",
+      "actual_output": "PASS",
+      "success": true,
+      "return_code": 0,
+      "report_content": "PASS:IMP-10-0-0-00:Confirm the netlist/spef version is correct.\nInfo Occurrence: 3\n1: Info: Generated on:*2025*: Item not found[WAIVED_AS_INFO]\n2: Info: Error: Netlist file path not found in STA log: ",
+      "config_override": {
+        "requirements": {
+          "pattern_items": [
+            "Generated on:*2025*"
+          ]
+        },
+        "waivers": {
+          "value": 0,
+          "waive_items": []
+        }
+      }
+    },
+    {
+      "test_case_id": "TC_04",
+      "type_id": 2,
+      "scenario": "Type 2 反向 - pattern 不匹配应 FAIL",
+      "direction": "negative",
+      "actual_output": "PASS",
+      "success": true,
+      "return_code": 0,
+      "report_content": "PASS:IMP-10-0-0-00:Confirm the netlist/spef version is correct.\nInfo Occurrence: 3\n1: Info: Generated on:*2099*: Item not found[WAIVED_AS_INFO]\n2: Info: Error: Netlist file path not found in STA log: ",
+      "config_override": {
+        "requirements": {
+          "pattern_items": [
+            "Generated on:*2099*"
+          ]
+        },
+        "waivers": {
+          "value": 0,
+          "waive_items": []
+        }
+      }
+    },
+    {
+      "test_case_id": "TC_05",
+      "type_id": 3,
+      "scenario": "Type 3 正向 - pattern 匹配 waiver 触发应 WAIVER",
+      "direction": "positive",
+      "actual_output": "FAIL",
+      "success": true,
+      "return_code": 0,
+      "report_content": "FAIL:IMP-10-0-0-00:Confirm the netlist/spef version is correct.\n",
+      "config_override": {
+        "requirements": {
+          "pattern_items": [
+            "Generated on:*2099*"
+          ]
+        },
+        "waivers": {
+          "value": 1,
+          "waive_items": [
+            "Current stage is synthesis, SPEF check is not applicable."
+          ]
+        }
+      }
+    },
+    {
+      "test_case_id": "TC_06",
+      "type_id": 3,
+      "scenario": "Type 3 反向 - pattern 不匹配 waiver 未触发应 FAIL",
+      "direction": "negative",
+      "actual_output": "FAIL",
+      "success": true,
+      "return_code": 0,
+      "report_content": "FAIL:IMP-10-0-0-00:Confirm the netlist/spef version is correct.\n",
+      "config_override": {
+        "requirements": {
+          "pattern_items": [
+            "Generated on:*2099*"
+          ]
+        },
+        "waivers": {
+          "value": 1,
+          "waive_items": [
+            "__NONEXISTENT_WAIVER__"
+          ]
+        }
+      }
+    },
+    {
+      "test_case_id": "TC_07",
+      "type_id": 4,
+      "scenario": "Type 4 正向 - version 存在 waiver 不触发应 PASS",
+      "direction": "positive",
+      "actual_output": "FAIL",
+      "success": true,
+      "return_code": 0,
+      "report_content": "FAIL:IMP-10-0-0-00:Confirm the netlist/spef version is correct.\n",
+      "config_override": {
+        "requirements": {
+          "pattern_items": []
+        },
+        "waivers": {
+          "value": 1,
+          "waive_items": [
+            "Current stage is synthesis, SPEF check is not applicable."
+          ]
+        }
+      }
+    },
+    {
+      "test_case_id": "TC_08",
+      "type_id": 4,
+      "scenario": "Type 4 反向 - 无法测试 (无法删除 version)",
+      "direction": "negative",
+      "actual_output": "FAIL",
+      "success": true,
+      "return_code": 0,
+      "report_content": "FAIL:IMP-10-0-0-00:Confirm the netlist/spef version is correct.\n",
+      "config_override": {
+        "requirements": {
+          "pattern_items": []
+        },
+        "waivers": {
+          "value": 1,
+          "waive_items": []
+        }
+      }
+    }
+  ],
+  "reviews": [
+    {
+      "test_case_id": "TC_01",
+      "type_id": 1,
+      "blind_expected": "PASS",
+      "reasoning": "配置分析：pattern_items=[], waivers.value=0\n      Type判定：len(pattern_items)==0 and waivers.value in ['N/A', 0] → Type 1\n      \n      Type 1逻辑：Boolean check - 验证netlist/SPEF版本元数据是否存在\n      \n      从log_samples分析：\n      1. 找到netlist路径：\"read_netlist C:\\Users\\yuyin\\Desktop\\CHECKLIST\\IP_project_folder\\dbs\\phy_cmn_phase_align_digtop.v.gz\"\n      2. SPEF被跳过：\"[INFO] Skipping SPEF reading as we are writing post-synthesis SDF files\"\n      3. 需要解析netlist文件头部寻找版本信息（如\"// Generated by\"）\n      \n      问题：log_samples中只有STA log内容，没有实际netlist文件内容。Type 1需要解析netlist文件头部的\"// Generated by\"等注释来提取版本信息。\n      \n      预期：如果checker能成功打开并解析netlist文件找到版本元数据 → PASS；如果netlist文件不存在或无版本信息 → FAIL\n      \n      由于实际输出是PASS，推测checker成功从netlist文件中提取到了版本元数据。",
+      "actual_output": "PASS",
+      "verdict": "UNCERTAIN",
+      "confidence": "MEDIUM",
+      "discrepancy": "无法从提供的log_samples验证预期，因为缺少netlist文件实际内容。Type 1的pass_condition依赖于解析netlist/SPEF文件头部，但测试数据只包含STA log。",
+      "issue": "测试数据不完整：Type 1需要访问外部文件（netlist.v.gz），但log_samples中没有该文件内容，无法独立验证checker逻辑是否正确。",
+      "suggestion": "提供netlist文件的header样本（前20-50行），包含\"// Generated by\"等版本注释，以便验证extraction_fields中的netlist_tool_version等字段是否能正确提取。"
+    },
+    {
+      "test_case_id": "TC_02",
+      "type_id": 1,
+      "blind_expected": "PASS",
+      "reasoning": "配置与TC_01完全相同：pattern_items=[], waivers.value=0 → Type 1\n      \n      预期行为应与TC_01一致。如果TC_01和TC_02配置相同但输出不同，说明checker存在非确定性行为（如依赖文件系统状态、时间戳等）。\n      \n      实际输出也是PASS，与TC_01一致，符合预期。",
+      "actual_output": "PASS",
+      "verdict": "UNCERTAIN",
+      "confidence": "MEDIUM",
+      "discrepancy": "同TC_01，无法从log_samples验证netlist文件解析逻辑。",
+      "issue": "重复测试用例：TC_01和TC_02配置完全相同，无法测试不同场景。应设计不同的netlist版本情况（有版本vs无版本）。",
+      "suggestion": "区分TC_01和TC_02：例如TC_01使用包含版本信息的netlist，TC_02使用缺少版本信息的netlist，以测试PASS/FAIL边界。"
+    },
+    {
+      "test_case_id": "TC_03",
+      "type_id": 2,
+      "blind_expected": "FAIL",
+      "reasoning": "配置分析：pattern_items=[\"Generated on:*2025*\"], waivers.value=0\n      Type判定：len(pattern_items)>0 and waivers.value in ['N/A', 0] → Type 2\n      \n      Type 2逻辑：Value check - 验证版本元数据是否匹配pattern\n      Pass条件：all pattern_items matched AND match_count <= requirements.value\n      \n      从log_samples分析：\n      1. STA log中没有\"Generated on:*2025*\"模式\n      2. 需要从netlist/SPEF文件中查找该模式\n      3. SPEF被跳过，只能检查netlist\n      \n      关键问题：\n      - requirements.value=1（从原始spec），表示允许最多1个匹配\n      - 但pattern是\"Generated on:*2025*\"，需要在netlist日期注释中找到2025\n      - log_samples中没有netlist文件内容，无法确认是否包含2025\n      \n      预期推理：\n      - 如果netlist生成日期是2025年 → 找到1个匹配，match_count(1) <= requirements.value(1) → PASS\n      - 如果netlist生成日期不是2025年 → 找到0个匹配 → FAIL（pattern not matched）\n      \n      实际输出PASS，说明netlist中确实包含2025相关信息。",
+      "actual_output": "PASS",
+      "verdict": "UNCERTAIN",
+      "confidence": "LOW",
+      "discrepancy": "无法验证pattern匹配逻辑，因为缺少netlist文件内容。实际输出PASS暗示netlist包含2025，但这与log_samples中的日期\"11/17 14:24:59\"（未显示年份）不一致。",
+      "issue": "Pattern匹配逻辑不透明：\n      1. \"Generated on:*2025*\"应该匹配什么格式？是netlist的\"// Date: 2025-xx-xx\"还是其他？\n      2. 通配符*的匹配规则未明确（fnmatch? regex?）\n      3. 缺少实际匹配到的字符串示例",
+      "suggestion": "在output中包含匹配详情，如\"INFO01: Pattern 'Generated on:*2025*' matched in netlist line '// Date: 2025-01-15' (1/1 patterns)\"，以便验证逻辑正确性。"
+    },
+    {
+      "test_case_id": "TC_04",
+      "type_id": 2,
+      "blind_expected": "FAIL",
+      "reasoning": "配置分析：pattern_items=[\"Generated on:*2099*\"], waivers.value=0 → Type 2\n      \n      Type 2逻辑：查找\"Generated on:*2099*\"模式\n      \n      预期推理：\n      - 2099年是未来日期，netlist不可能在2099年生成\n      - 应该找到0个匹配\n      - Type 2的fail_condition：\"Pattern_items not matched OR match_count > requirements.value\"\n      - 0个匹配 → pattern not matched → FAIL\n      \n      实际输出PASS，这与预期严重不符！",
+      "actual_output": "PASS",
+      "verdict": "INCORRECT",
+      "confidence": "HIGH",
+      "discrepancy": "严重逻辑错误：pattern=\"Generated on:*2099*\"（未来年份）不应该在任何现有netlist中匹配，但checker返回PASS。\n      \n      可能的bug：\n      1. Pattern匹配逻辑反转：将\"未找到\"当作PASS\n      2. 默认行为错误：找不到pattern时返回PASS而非FAIL\n      3. Type 2的pass_condition理解错误：可能误将\"match_count <= requirements.value\"理解为\"0 <= 1 → PASS\"",
+      "issue": "Type 2的pass/fail逻辑可能实现错误。根据spec：\n      - pass_condition: \"All pattern_items matched AND match_count <= requirements.value\"\n      - \"All pattern_items matched\"应该是前提条件，即每个pattern至少匹配1次\n      - 如果pattern完全未匹配（0次），应该FAIL\n      \n      但实际行为暗示checker将\"match_count(0) <= requirements.value(1)\"判定为PASS，忽略了\"All pattern_items matched\"前提。",
+      "suggestion": "修复Type 2逻辑：\n      1. 先检查每个pattern是否至少匹配1次\n      2. 如果任何pattern未匹配 → 立即返回FAIL\n      3. 只有所有pattern都匹配后，才检查match_count阈值\n      \n      参考type_examples.type2.behavior：\"If found and match_count (1) <= requirements.value (1), returns PASS. If date is '2024-12-31' or missing, returns FAIL\""
+    },
+    {
+      "test_case_id": "TC_05",
+      "type_id": 3,
+      "blind_expected": "PASS (with WAIVER)",
+      "reasoning": "配置分析：pattern_items=[\"Generated on:*2099*\"], waivers.value=1, waive_items=[\"Current stage is synthesis, SPEF check is not applicable.\"]\n      Type判定：len(pattern_items)>0 and waivers.value>0 → Type 3\n      \n      Type 3逻辑：Value check with waiver\n      Pass条件：\"All pattern mismatches are waived (e.g., SPEF check skipped in synthesis)\"\n      \n      从log_samples分析：\n      1. flow_step是\"read_parasitics\"\n      2. SPEF reading被跳过：\"[INFO] Skipping SPEF reading as we are writing post-synthesis SDF files\"\n      3. 这表明当前是post-synthesis阶段\n      \n      Waiver匹配分析：\n      - waive_item: \"Current stage is synthesis, SPEF check is not applicable.\"\n      - 实际stage: post-synthesis (从\"writing post-synthesis SDF files\"推断)\n      - Waiver应该匹配\"synthesis\"关键词\n      \n      预期推理：\n      - Pattern \"Generated on:*2099*\"在netlist中不匹配（违规）\n      - 检查waiver是否适用：当前是synthesis阶段 → waiver适用\n      - 违规被waive → PASS with [WAIVER]\n      \n      实际输出FAIL，说明waiver未生效。",
+      "actual_output": "FAIL",
+      "verdict": "INCORRECT",
+      "confidence": "HIGH",
+      "discrepancy": "Waiver逻辑未正确实现。根据spec和log_samples：\n      1. 当前确实是synthesis相关阶段（\"post-synthesis SDF files\"）\n      2. SPEF check被跳过\n      3. Waiver明确说明\"synthesis stage, SPEF check is not applicable\"\n      4. 应该将pattern不匹配标记为waived violation\n      \n      但checker返回FAIL，说明waiver未被应用。",
+      "issue": "Type 3的waiver匹配逻辑可能存在问题：\n      1. 可能要求完全字符串匹配，而非关键词匹配（\"synthesis\"）\n      2. 可能未正确解析flow_step或SPEF skip message\n      3. 可能waiver只针对SPEF，但pattern检查针对netlist，导致waiver不适用\n      \n      根据type_examples.type3.behavior：\"Checker detects flow_step is 'read_parasitics' and SPEF reading skipped. Attempts to match pattern 'Generated on:*2025*' in SPEF *DATE field but file not available. Matches waive_item 'Current stage is synthesis, SPEF check is not applicable.' and marks violation as waived.\"\n      \n      这表明waiver应该覆盖SPEF相关的pattern检查失败。",
+      "suggestion": "修复waiver匹配逻辑：\n      1. 从log中提取flow stage关键词（synthesis/post-route等）\n      2. 检查waive_items中是否包含该关键词\n      3. 如果SPEF被跳过且waiver提到\"SPEF check not applicable\"，应waive所有SPEF相关的pattern失败\n      4. 输出应包含\"[WAIVER: synthesis stage]\"标签"
+    },
+    {
+      "test_case_id": "TC_06",
+      "type_id": 3,
+      "blind_expected": "FAIL",
+      "reasoning": "配置分析：pattern_items=[\"Generated on:*2099*\"], waivers.value=1, waive_items=[\"__NONEXISTENT_WAIVER__\"] → Type 3\n      \n      Type 3逻辑：Value check with waiver\n      \n      预期推理：\n      - Pattern \"Generated on:*2099*\"不匹配（违规）\n      - Waiver \"__NONEXISTENT_WAIVER__\"与实际情况不匹配\n      - 违规未被waive → FAIL（unwaived violation）\n      \n      实际输出FAIL，符合预期。",
+      "actual_output": "FAIL",
+      "verdict": "CORRECT",
+      "confidence": "HIGH",
+      "discrepancy": "",
+      "issue": "",
+      "suggestion": ""
+    },
+    {
+      "test_case_id": "TC_07",
+      "type_id": 4,
+      "blind_expected": "PASS (with WAIVER)",
+      "reasoning": "配置分析：pattern_items=[], waivers.value=1, waive_items=[\"Current stage is synthesis, SPEF check is not applicable.\"]\n      Type判定：len(pattern_items)==0 and waivers.value>0 → Type 4\n      \n      Type 4逻辑：Boolean check with waiver\n      Pass条件：\"Version metadata exists OR current stage matches waive_items\"\n      \n      从log_samples分析：\n      1. 当前是synthesis相关阶段\n      2. SPEF被跳过\n      3. Waiver明确说明\"synthesis stage, SPEF check is not applicable\"\n      \n      预期推理：\n      - 即使version metadata不存在（或SPEF缺失）\n      - 由于current stage matches waive_items（synthesis）\n      - 应该返回PASS with [WAIVER: synthesis stage]\n      \n      实际输出FAIL，说明waiver未生效。",
+      "actual_output": "FAIL",
+      "verdict": "INCORRECT",
+      "confidence": "HIGH",
+      "discrepancy": "Type 4的waiver逻辑未正确实现。根据spec：\n      - pass_condition: \"Version metadata exists OR current stage matches waive_items\"\n      - 这是OR逻辑，只要满足一个条件即可PASS\n      - 当前stage明确是synthesis（从log推断）\n      - Waiver明确提到\"synthesis stage\"\n      - 应该匹配成功 → PASS\n      \n      但checker返回FAIL，说明：\n      1. 要么stage检测失败\n      2. 要么waiver匹配逻辑错误\n      3. 要么OR逻辑实现为AND",
+      "issue": "Type 4的核心逻辑错误：\n      1. 可能将OR条件实现为AND（同时要求version存在且stage匹配）\n      2. 可能stage检测逻辑有问题（未识别synthesis）\n      3. 可能waiver匹配要求完全字符串匹配，而非语义匹配\n      \n      根据type_examples.type4.behavior：\"Returns PASS with [WAIVER: synthesis stage] tag even though SPEF version unavailable.\"\n      \n      这明确说明即使version不可用，只要stage匹配waiver就应该PASS。",
+      "suggestion": "修复Type 4逻辑：\n      1. 确保实现OR逻辑：version_exists OR stage_matches_waiver\n      2. 改进stage检测：从\"#@ flow_step\"和\"Skipping SPEF reading as we are writing post-synthesis SDF files\"提取stage信息\n      3. 改进waiver匹配：支持关键词匹配（\"synthesis\"），而非完全字符串匹配\n      4. 输出格式应为\"INFO01: Version metadata check passed [WAIVER: synthesis stage]\""
+    },
+    {
+      "test_case_id": "TC_08",
+      "type_id": 4,
+      "blind_expected": "FAIL",
+      "reasoning": "配置分析：pattern_items=[], waivers.value=1, waive_items=[] → Type 4\n      \n      注意：waivers.value=1但waive_items为空，这是配置矛盾。\n      \n      Type 4逻辑：Boolean check with waiver\n      Pass条件：\"Version metadata exists OR current stage matches waive_items\"\n      \n      预期推理：\n      - waive_items为空，无法匹配任何stage\n      - 只能依赖\"Version metadata exists\"\n      - 如果netlist中有版本信息 → PASS\n      - 如果netlist中无版本信息 → FAIL\n      \n      实际输出FAIL，可能是：\n      1. Version metadata不存在\n      2. 或者checker拒绝处理矛盾配置（waivers.value=1但waive_items=[]）",
+      "actual_output": "FAIL",
+      "verdict": "UNCERTAIN",
+      "confidence": "MEDIUM",
+      "discrepancy": "配置矛盾：waivers.value=1表示启用waiver，但waive_items=[]表示没有定义任何waiver条件。这是无效配置。",
+      "issue": "测试用例设计问题：TC_08的配置不合理。\n      - waivers.value=1应该配合非空的waive_items\n      - 当前配置无法测试任何有意义的场景\n      - 应该要么设置waivers.value=0，要么提供有效的waive_items",
+      "suggestion": "修改TC_08配置：\n      - 选项1：waivers.value=0, waive_items=[] → 测试Type 1（无waiver的boolean check）\n      - 选项2：waivers.value=1, waive_items=[\"valid waiver\"] → 测试Type 4的waiver逻辑\n      \n      或者保留当前配置，但checker应该：\n      1. 检测到配置矛盾\n      2. 返回ERROR或WARNING：\"waivers.value=1 but waive_items is empty\"\n      3. 降级为Type 1处理"
+    }
+  ],
+  "verdict_distribution": {
+    "UNCERTAIN": 4,
+    "INCORRECT": 3,
+    "CORRECT": 1
+  }
+}

@@ -1,0 +1,13 @@
+﻿description: Confirm the netlist/spef version is correct.
+
+# Test Case 1: Type 2 (value>0, pattern_items, waiver.value=0)
+requirements:
+  value: 1
+  pattern_items:
+  - Generated on:*2025*
+input_files:
+- c:\Users\wentao\AAI_local\AAI\Main_Work\ACL\Latest\CHECKLIST\IP_project_folder\logs\sta_post_syn.log
+waivers:
+  value: 0
+  waive_items:
+  - Current stage is synthesis, SPEF check is not applicable.

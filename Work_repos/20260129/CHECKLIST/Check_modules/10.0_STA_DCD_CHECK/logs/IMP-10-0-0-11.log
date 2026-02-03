@@ -1,0 +1,26 @@
+FAIL:IMP-10-0-0-11:Confirm the timing of all path groups is clean.
+IMP-10-0-0-11-ERROR01: Timing violations detected:
+  Severity: Fail Occurrence: 7
+  - View 'func_rcff_0p825v_125c_pcff_cmin_pcff3_hold' path_group 'default' hold: WNS=-0.0002ns (3 violations)
+  - View 'func_rcff_0p825v_125c_pcff_cmin_pcss3_hold' path_group 'default' hold: WNS=-0.0013ns (14 violations)
+  - View 'func_rcss_0p675v_125c_pcss_cmax_pcss3_setup' path_group 'default' setup: WNS=-0.2464ns (40 violations)
+  - View 'func_rcss_0p675v_125c_pcss_cmax_prcf3_setup' path_group 'default' setup: WNS=-0.2300ns (40 violations)
+  - View 'func_rcss_0p675v_125c_pcss_cmax_prcs3_setup' path_group 'default' setup: WNS=-0.2454ns (40 violations)
+  - View 'func_rcss_0p675v_m40c_pcss_cmax_pcff3_setup' path_group 'default' setup: WNS=-0.2618ns (40 violations)
+  - View 'func_rcss_0p675v_m40c_pcss_cmax_pcss3_setup' path_group 'default' setup: WNS=-0.2760ns (42 violations)
+IMP-10-0-0-11-INFO01: Waived timing violations:
+  Severity: Info Occurrence: 1
+  - View 'func_rcss_0p675v_125c_pcss_cmax_pcff3_setup' path_group 'default' setup: WNS=-0.2318ns (40 violations)
+IMP-10-0-0-11-INFO02: Clean timing path groups:
+  Severity: Info Occurrence: 10
+  - func_rcff_0p825v_125c_pcff_cmin_pcff3_hold: cgdefault (hold)
+  - func_rcff_0p825v_125c_pcff_cmin_pcff3_hold: reg2reg (hold)
+  - func_rcff_0p825v_125c_pcff_cmin_pcss3_hold: cgdefault (hold)
+  - func_rcff_0p825v_125c_pcff_cmin_pcss3_hold: reg2reg (hold)
+  - func_rcss_0p675v_125c_pcss_cmax_pcff3_setup: reg2reg (setup)
+  - func_rcss_0p675v_125c_pcss_cmax_pcss3_setup: reg2reg (setup)
+  - func_rcss_0p675v_125c_pcss_cmax_prcf3_setup: reg2reg (setup)
+  - func_rcss_0p675v_125c_pcss_cmax_prcs3_setup: reg2reg (setup)
+  - func_rcss_0p675v_m40c_pcss_cmax_pcff3_setup: reg2reg (setup)
+  - func_rcss_0p675v_m40c_pcss_cmax_pcss3_setup: reg2reg (setup)
+

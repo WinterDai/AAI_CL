@@ -1,0 +1,5 @@
+FAIL:MIG-IMP-8-1-0-17:Confirm there is no dummy metal/via added inside DDRIO. For furture programs, DDRIO will include the dummy metal/via EXCL layers inside IO so PD don't need to do anything. For currrent ongoing project, please check whether there are EXCL layers in DDRIO and create dummy EXCL on IO area if IO cells don't have EXCL layers in gds.
+MIG-IMP-8-1-0-17-ERROR01: Configuration error:
+  Severity: Fail Occurrence: 1
+  - input_files is empty in YAML configuration
+

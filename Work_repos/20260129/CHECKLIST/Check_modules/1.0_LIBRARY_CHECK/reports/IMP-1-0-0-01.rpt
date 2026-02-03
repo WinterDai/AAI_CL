@@ -1,0 +1,18 @@
+PASS:IMP-1-0-0-01:List standard cell libraries used for implementation and signoff.
+Info Occurrence: 16
+1: Info: tcbn03e_bwp143mh117l3p48cpd_base_elvtssgnp_0p675v_m40c_cworst_CCworst_T_ccs. In line 7, C:\Users\yuyin\Desktop\CHECKLIST_V4\CHECKLIST\IP_project_folder\reports\qor.rpt: Standard cell library used for implementation
+2: Info: tcbn03e_bwp143mh117l3p48cpd_base_lvtssgnp_0p675v_m40c_cworst_CCworst_T_ccs. In line 8, C:\Users\yuyin\Desktop\CHECKLIST_V4\CHECKLIST\IP_project_folder\reports\qor.rpt: Standard cell library used for implementation
+3: Info: tcbn03e_bwp143mh117l3p48cpd_base_svtssgnp_0p675v_m40c_cworst_CCworst_T_ccs. In line 9, C:\Users\yuyin\Desktop\CHECKLIST_V4\CHECKLIST\IP_project_folder\reports\qor.rpt: Standard cell library used for implementation
+4: Info: tcbn03e_bwp143mh117l3p48cpd_base_ulvtssgnp_0p675v_m40c_cworst_CCworst_T_ccs. In line 10, C:\Users\yuyin\Desktop\CHECKLIST_V4\CHECKLIST\IP_project_folder\reports\qor.rpt: Standard cell library used for implementation
+5: Info: tcbn03e_bwp143mh169l3p48cpd_base_elvtssgnp_0p675v_m40c_cworst_CCworst_T_ccs. In line 11, C:\Users\yuyin\Desktop\CHECKLIST_V4\CHECKLIST\IP_project_folder\reports\qor.rpt: Standard cell library used for implementation
+6: Info: tcbn03e_bwp143mh169l3p48cpd_base_lvtssgnp_0p675v_m40c_cworst_CCworst_T_ccs. In line 12, C:\Users\yuyin\Desktop\CHECKLIST_V4\CHECKLIST\IP_project_folder\reports\qor.rpt: Standard cell library used for implementation
+7: Info: tcbn03e_bwp143mh169l3p48cpd_base_svtssgnp_0p675v_m40c_cworst_CCworst_T_ccs. In line 13, C:\Users\yuyin\Desktop\CHECKLIST_V4\CHECKLIST\IP_project_folder\reports\qor.rpt: Standard cell library used for implementation
+8: Info: tcbn03e_bwp143mh169l3p48cpd_base_ulvtssgnp_0p675v_m40c_cworst_CCworst_T_ccs. In line 14, C:\Users\yuyin\Desktop\CHECKLIST_V4\CHECKLIST\IP_project_folder\reports\qor.rpt: Standard cell library used for implementation
+9: Info: tcbn03e_bwp143mh286l3p48cpd_base_elvtssgnp_0p675v_m40c_cworst_CCworst_T_ccs. In line 15, C:\Users\yuyin\Desktop\CHECKLIST_V4\CHECKLIST\IP_project_folder\reports\qor.rpt: Standard cell library used for implementation
+10: Info: tcbn03e_bwp143mh286l3p48cpd_base_lvtssgnp_0p675v_m40c_cworst_CCworst_T_ccs. In line 16, C:\Users\yuyin\Desktop\CHECKLIST_V4\CHECKLIST\IP_project_folder\reports\qor.rpt: Standard cell library used for implementation
+11: Info: tcbn03e_bwp143mh286l3p48cpd_base_svtssgnp_0p675v_m40c_cworst_CCworst_T_ccs. In line 17, C:\Users\yuyin\Desktop\CHECKLIST_V4\CHECKLIST\IP_project_folder\reports\qor.rpt: Standard cell library used for implementation
+12: Info: tcbn03e_bwp143mh286l3p48cpd_base_ulvtssgnp_0p675v_m40c_cworst_CCworst_T_ccs. In line 18, C:\Users\yuyin\Desktop\CHECKLIST_V4\CHECKLIST\IP_project_folder\reports\qor.rpt: Standard cell library used for implementation
+13: Info: tcbn03e_bwp143mh286l3p48cpd_mb_elvtssgnp_0p675v_m40c_cworst_CCworst_T_ccs. In line 19, C:\Users\yuyin\Desktop\CHECKLIST_V4\CHECKLIST\IP_project_folder\reports\qor.rpt: Standard cell library used for implementation
+14: Info: tcbn03e_bwp143mh286l3p48cpd_mb_lvtssgnp_0p675v_m40c_cworst_CCworst_T_ccs. In line 20, C:\Users\yuyin\Desktop\CHECKLIST_V4\CHECKLIST\IP_project_folder\reports\qor.rpt: Standard cell library used for implementation
+15: Info: tcbn03e_bwp143mh286l3p48cpd_mb_svtssgnp_0p675v_m40c_cworst_CCworst_T_ccs. In line 21, C:\Users\yuyin\Desktop\CHECKLIST_V4\CHECKLIST\IP_project_folder\reports\qor.rpt: Standard cell library used for implementation
+16: Info: tcbn03e_bwp143mh286l3p48cpd_mb_ulvtssgnp_0p675v_m40c_cworst_CCworst_T_ccs. In line 22, C:\Users\yuyin\Desktop\CHECKLIST_V4\CHECKLIST\IP_project_folder\reports\qor.rpt: Standard cell library used for implementation

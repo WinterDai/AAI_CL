@@ -1,0 +1,8 @@
+PASS:IMP-2-0-0-14:List EM irxc rule deck name. eg: ICT_EM_v1d0p1a/cln3p_1p17m+ut-alrdl_1xa1xb1xc1xd1ya1yb4y2yy2yx2r_shdmim.ictem
+IMP-2-0-0-14-INFO01: [WAIVED_INFO]: Waived information:
+  Severity: Info Occurrence: 1
+  - Explanation: This check is informational only - EM rule deck listing for documentation purposes
+IMP-2-0-0-14-INFO02: EM rule deck information found in Voltus log:
+  Severity: Info Occurrence: 1
+  - ictem_v1d2p1a/cln5_1p16m+ut-alrdl_1x1xb1xe1ya1yb6y2yy2r_shdmim.ictem
+

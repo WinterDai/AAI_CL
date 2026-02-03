@@ -1,0 +1,182 @@
+
+
+==================================================================================
+=== CALIBRE::DRC-H SUMMARY REPORT
+===
+Execution Date/Time:       Thu Aug 31 18:18:04 2023
+Calibre Version:           v2022.2_15.10    Thu Apr 7 16:51:04 PDT 2022
+Rule File Pathname:        TSMC_top.cal
+Rule File Title:           
+Layout System:             OASIS
+Layout Path(s):            cadence_phy_cdn_hs_phy_top.oas
+Layout Primary Cell:       cadence_phy_cdn_hs_phy_top
+Current Directory:         /proj/work/Amr/V2_2/pkg_2023_08_31_18_16_51_39441/3stars_T000BPDR031C1_0_1_1A_N4_01Sep0334
+User Name:                 moe
+Maximum Results/RuleCheck: ALL
+Maximum Result Vertices:   4096
+DRC Results Database:      DRC_RES.db (ASCII)
+Layout Depth:              ALL
+Text Depth:                PRIMARY
+Summary Report File:       summary.rep (REPLACE)
+Geometry Flagging:         ACUTE = YES  SKEW = YES  ANGLED = NO  OFFGRID = YES
+                           NONSIMPLE POLYGON = YES  NONSIMPLE PATH = NO
+Excluded Cells:           
+CheckText Mapping:         ALL TEXT
+Layers:                    MEMORY-BASED
+Keep Empty Checks:         NO
+----------------------------------------------------------------------------------
+--- RUNTIME WARNINGS
+---
+SKEW edge on layer CB2Fi from location (20,0) to location (19.9035,1.9605) in cell cdn_ddr_T4GP_15M1X1Xb1Xe1Ya1Yb5Y2Yy2Z_cadence_phy_cdn_hs_phy_top_BUMP_N5.
+SKEW edge on layer CB2Fi from location (19.9035,1.9605) to location (19.6155,3.902) in cell cdn_ddr_T4GP_15M1X1Xb1Xe1Ya1Yb5Y2Yy2Z_cadence_phy_cdn_hs_phy_top_BUMP_N5.
+SKEW edge on layer CB2Fi from location (19.6155,3.902) to location (19.139,5.8055) in cell cdn_ddr_T4GP_15M1X1Xb1Xe1Ya1Yb5Y2Yy2Z_cadence_phy_cdn_hs_phy_top_BUMP_N5.
+SKEW edge on layer CB2Fi from location (19.139,5.8055) to location (18.4775,7.6535) in cell cdn_ddr_T4GP_15M1X1Xb1Xe1Ya1Yb5Y2Yy2Z_cadence_phy_cdn_hs_phy_top_BUMP_N5.
+SKEW edge on layer CB2Fi from location (18.4775,7.6535) to location (17.6385,9.428) in cell cdn_ddr_T4GP_15M1X1Xb1Xe1Ya1Yb5Y2Yy2Z_cadence_phy_cdn_hs_phy_top_BUMP_N5.
+SKEW edge on layer CB2Fi from location (17.6385,9.428) to location (16.6295,11.1115) in cell cdn_ddr_T4GP_15M1X1Xb1Xe1Ya1Yb5Y2Yy2Z_cadence_phy_cdn_hs_phy_top_BUMP_N5.
+SKEW edge on layer CB2Fi from location (16.6295,11.1115) to location (15.46,12.688) in cell cdn_ddr_T4GP_15M1X1Xb1Xe1Ya1Yb5Y2Yy2Z_cadence_phy_cdn_hs_phy_top_BUMP_N5.
+SKEW edge on layer CB2Fi from location (15.46,12.688) to location (14.142,14.142) in cell cdn_ddr_T4GP_15M1X1Xb1Xe1Ya1Yb5Y2Yy2Z_cadence_phy_cdn_hs_phy_top_BUMP_N5.
+SKEW edge on layer CB2Fi from location (14.142,14.142) to location (12.688,15.46) in cell cdn_ddr_T4GP_15M1X1Xb1Xe1Ya1Yb5Y2Yy2Z_cadence_phy_cdn_hs_phy_top_BUMP_N5.
+SKEW edge on layer CB2Fi from location (12.688,15.46) to location (11.1115,16.6295) in cell cdn_ddr_T4GP_15M1X1Xb1Xe1Ya1Yb5Y2Yy2Z_cadence_phy_cdn_hs_phy_top_BUMP_N5.
+SKEW edge on layer CB2Fi from location (11.1115,16.6295) to location (9.428,17.6385) in cell cdn_ddr_T4GP_15M1X1Xb1Xe1Ya1Yb5Y2Yy2Z_cadence_phy_cdn_hs_phy_top_BUMP_N5.
+SKEW edge on layer CB2Fi from location (9.428,17.6385) to location (7.6535,18.4775) in cell cdn_ddr_T4GP_15M1X1Xb1Xe1Ya1Yb5Y2Yy2Z_cadence_phy_cdn_hs_phy_top_BUMP_N5.
+SKEW edge on layer CB2Fi from location (7.6535,18.4775) to location (5.8055,19.139) in cell cdn_ddr_T4GP_15M1X1Xb1Xe1Ya1Yb5Y2Yy2Z_cadence_phy_cdn_hs_phy_top_BUMP_N5.
+SKEW edge on layer CB2Fi from location (5.8055,19.139) to location (3.902,19.6155) in cell cdn_ddr_T4GP_15M1X1Xb1Xe1Ya1Yb5Y2Yy2Z_cadence_phy_cdn_hs_phy_top_BUMP_N5.
+SKEW edge on layer CB2Fi from location (3.902,19.6155) to location (1.9605,19.9035) in cell cdn_ddr_T4GP_15M1X1Xb1Xe1Ya1Yb5Y2Yy2Z_cadence_phy_cdn_hs_phy_top_BUMP_N5.
+SKEW edge on layer CB2Fi from location (1.9605,19.9035) to location (0,20) in cell cdn_ddr_T4GP_15M1X1Xb1Xe1Ya1Yb5Y2Yy2Z_cadence_phy_cdn_hs_phy_top_BUMP_N5.
+SKEW edge on layer CB2Fi from location (0,20) to location (-1.9605,19.9035) in cell cdn_ddr_T4GP_15M1X1Xb1Xe1Ya1Yb5Y2Yy2Z_cadence_phy_cdn_hs_phy_top_BUMP_N5.
+SKEW edge on layer CB2Fi from location (-1.9605,19.9035) to location (-3.902,19.6155) in cell cdn_ddr_T4GP_15M1X1Xb1Xe1Ya1Yb5Y2Yy2Z_cadence_phy_cdn_hs_phy_top_BUMP_N5.
+SKEW edge on layer CB2Fi from location (-3.902,19.6155) to location (-5.8055,19.139) in cell cdn_ddr_T4GP_15M1X1Xb1Xe1Ya1Yb5Y2Yy2Z_cadence_phy_cdn_hs_phy_top_BUMP_N5.
+SKEW edge on layer CB2Fi from location (-5.8055,19.139) to location (-7.6535,18.4775) in cell cdn_ddr_T4GP_15M1X1Xb1Xe1Ya1Yb5Y2Yy2Z_cadence_phy_cdn_hs_phy_top_BUMP_N5.
+SKEW edge on layer CB2Fi from location (-7.6535,18.4775) to location (-9.428,17.6385) in cell cdn_ddr_T4GP_15M1X1Xb1Xe1Ya1Yb5Y2Yy2Z_cadence_phy_cdn_hs_phy_top_BUMP_N5.
+SKEW edge on layer CB2Fi from location (-9.428,17.6385) to location (-11.1115,16.6295) in cell cdn_ddr_T4GP_15M1X1Xb1Xe1Ya1Yb5Y2Yy2Z_cadence_phy_cdn_hs_phy_top_BUMP_N5.
+SKEW edge on layer CB2Fi from location (-11.1115,16.6295) to location (-12.688,15.46) in cell cdn_ddr_T4GP_15M1X1Xb1Xe1Ya1Yb5Y2Yy2Z_cadence_phy_cdn_hs_phy_top_BUMP_N5.
+SKEW edge on layer CB2Fi from location (-12.688,15.46) to location (-14.142,14.142) in cell cdn_ddr_T4GP_15M1X1Xb1Xe1Ya1Yb5Y2Yy2Z_cadence_phy_cdn_hs_phy_top_BUMP_N5.
+SKEW edge on layer CB2Fi from location (-14.142,14.142) to location (-15.46,12.688) in cell cdn_ddr_T4GP_15M1X1Xb1Xe1Ya1Yb5Y2Yy2Z_cadence_phy_cdn_hs_phy_top_BUMP_N5.
+SKEW edge on layer CB2Fi from location (-15.46,12.688) to location (-16.6295,11.1115) in cell cdn_ddr_T4GP_15M1X1Xb1Xe1Ya1Yb5Y2Yy2Z_cadence_phy_cdn_hs_phy_top_BUMP_N5.
+SKEW edge on layer CB2Fi from location (-16.6295,11.1115) to location (-17.6385,9.428) in cell cdn_ddr_T4GP_15M1X1Xb1Xe1Ya1Yb5Y2Yy2Z_cadence_phy_cdn_hs_phy_top_BUMP_N5.
+SKEW edge on layer CB2Fi from location (-17.6385,9.428) to location (-18.4775,7.6535) in cell cdn_ddr_T4GP_15M1X1Xb1Xe1Ya1Yb5Y2Yy2Z_cadence_phy_cdn_hs_phy_top_BUMP_N5.
+SKEW edge on layer CB2Fi from location (-18.4775,7.6535) to location (-19.139,5.8055) in cell cdn_ddr_T4GP_15M1X1Xb1Xe1Ya1Yb5Y2Yy2Z_cadence_phy_cdn_hs_phy_top_BUMP_N5.
+SKEW edge on layer CB2Fi from location (-19.139,5.8055) to location (-19.6155,3.902) in cell cdn_ddr_T4GP_15M1X1Xb1Xe1Ya1Yb5Y2Yy2Z_cadence_phy_cdn_hs_phy_top_BUMP_N5.
+SKEW edge on layer CB2Fi from location (-19.6155,3.902) to location (-19.9035,1.9605) in cell cdn_ddr_T4GP_15M1X1Xb1Xe1Ya1Yb5Y2Yy2Z_cadence_phy_cdn_hs_phy_top_BUMP_N5.
+SKEW edge on layer CB2Fi from location (-19.9035,1.9605) to location (-20,0) in cell cdn_ddr_T4GP_15M1X1Xb1Xe1Ya1Yb5Y2Yy2Z_cadence_phy_cdn_hs_phy_top_BUMP_N5.
+SKEW edge on layer CB2Fi from location (-20,0) to location (-19.9035,-1.9605) in cell cdn_ddr_T4GP_15M1X1Xb1Xe1Ya1Yb5Y2Yy2Z_cadence_phy_cdn_hs_phy_top_BUMP_N5.
+SKEW edge on layer CB2Fi from location (-19.9035,-1.9605) to location (-19.6155,-3.902) in cell cdn_ddr_T4GP_15M1X1Xb1Xe1Ya1Yb5Y2Yy2Z_cadence_phy_cdn_hs_phy_top_BUMP_N5.
+SKEW edge on layer CB2Fi from location (-19.6155,-3.902) to location (-19.139,-5.8055) in cell cdn_ddr_T4GP_15M1X1Xb1Xe1Ya1Yb5Y2Yy2Z_cadence_phy_cdn_hs_phy_top_BUMP_N5.
+SKEW edge on layer CB2Fi from location (-19.139,-5.8055) to location (-18.4775,-7.6535) in cell cdn_ddr_T4GP_15M1X1Xb1Xe1Ya1Yb5Y2Yy2Z_cadence_phy_cdn_hs_phy_top_BUMP_N5.
+SKEW edge on layer CB2Fi from location (-18.4775,-7.6535) to location (-17.6385,-9.428) in cell cdn_ddr_T4GP_15M1X1Xb1Xe1Ya1Yb5Y2Yy2Z_cadence_phy_cdn_hs_phy_top_BUMP_N5.
+SKEW edge on layer CB2Fi from location (-17.6385,-9.428) to location (-16.6295,-11.1115) in cell cdn_ddr_T4GP_15M1X1Xb1Xe1Ya1Yb5Y2Yy2Z_cadence_phy_cdn_hs_phy_top_BUMP_N5.
+SKEW edge on layer CB2Fi from location (-16.6295,-11.1115) to location (-15.46,-12.688) in cell cdn_ddr_T4GP_15M1X1Xb1Xe1Ya1Yb5Y2Yy2Z_cadence_phy_cdn_hs_phy_top_BUMP_N5.
+SKEW edge on layer CB2Fi from location (-15.46,-12.688) to location (-14.142,-14.142) in cell cdn_ddr_T4GP_15M1X1Xb1Xe1Ya1Yb5Y2Yy2Z_cadence_phy_cdn_hs_phy_top_BUMP_N5.
+SKEW edge on layer CB2Fi from location (-14.142,-14.142) to location (-12.688,-15.46) in cell cdn_ddr_T4GP_15M1X1Xb1Xe1Ya1Yb5Y2Yy2Z_cadence_phy_cdn_hs_phy_top_BUMP_N5.
+SKEW edge on layer CB2Fi from location (-12.688,-15.46) to location (-11.1115,-16.6295) in cell cdn_ddr_T4GP_15M1X1Xb1Xe1Ya1Yb5Y2Yy2Z_cadence_phy_cdn_hs_phy_top_BUMP_N5.
+SKEW edge on layer CB2Fi from location (-11.1115,-16.6295) to location (-9.428,-17.6385) in cell cdn_ddr_T4GP_15M1X1Xb1Xe1Ya1Yb5Y2Yy2Z_cadence_phy_cdn_hs_phy_top_BUMP_N5.
+SKEW edge on layer CB2Fi from location (-9.428,-17.6385) to location (-7.6535,-18.4775) in cell cdn_ddr_T4GP_15M1X1Xb1Xe1Ya1Yb5Y2Yy2Z_cadence_phy_cdn_hs_phy_top_BUMP_N5.
+SKEW edge on layer CB2Fi from location (-7.6535,-18.4775) to location (-5.8055,-19.139) in cell cdn_ddr_T4GP_15M1X1Xb1Xe1Ya1Yb5Y2Yy2Z_cadence_phy_cdn_hs_phy_top_BUMP_N5.
+SKEW edge on layer CB2Fi from location (-5.8055,-19.139) to location (-3.902,-19.6155) in cell cdn_ddr_T4GP_15M1X1Xb1Xe1Ya1Yb5Y2Yy2Z_cadence_phy_cdn_hs_phy_top_BUMP_N5.
+SKEW edge on layer CB2Fi from location (-3.902,-19.6155) to location (-1.9605,-19.9035) in cell cdn_ddr_T4GP_15M1X1Xb1Xe1Ya1Yb5Y2Yy2Z_cadence_phy_cdn_hs_phy_top_BUMP_N5.
+SKEW edge on layer CB2Fi from location (-1.9605,-19.9035) to location (0,-20) in cell cdn_ddr_T4GP_15M1X1Xb1Xe1Ya1Yb5Y2Yy2Z_cadence_phy_cdn_hs_phy_top_BUMP_N5.
+SKEW edge on layer CB2Fi from location (0,-20) to location (1.9605,-19.9035) in cell cdn_ddr_T4GP_15M1X1Xb1Xe1Ya1Yb5Y2Yy2Z_cadence_phy_cdn_hs_phy_top_BUMP_N5.
+SKEW edge on layer CB2Fi from location (1.9605,-19.9035) to location (3.902,-19.6155) in cell cdn_ddr_T4GP_15M1X1Xb1Xe1Ya1Yb5Y2Yy2Z_cadence_phy_cdn_hs_phy_top_BUMP_N5.
+SKEW edge on layer CB2Fi from location (3.902,-19.6155) to location (5.8055,-19.139) in cell cdn_ddr_T4GP_15M1X1Xb1Xe1Ya1Yb5Y2Yy2Z_cadence_phy_cdn_hs_phy_top_BUMP_N5.
+SKEW edge on layer CB2Fi from location (5.8055,-19.139) to location (7.6535,-18.4775) in cell cdn_ddr_T4GP_15M1X1Xb1Xe1Ya1Yb5Y2Yy2Z_cadence_phy_cdn_hs_phy_top_BUMP_N5.
+SKEW edge on layer CB2Fi from location (7.6535,-18.4775) to location (9.428,-17.6385) in cell cdn_ddr_T4GP_15M1X1Xb1Xe1Ya1Yb5Y2Yy2Z_cadence_phy_cdn_hs_phy_top_BUMP_N5.
+SKEW edge on layer CB2Fi from location (9.428,-17.6385) to location (11.1115,-16.6295) in cell cdn_ddr_T4GP_15M1X1Xb1Xe1Ya1Yb5Y2Yy2Z_cadence_phy_cdn_hs_phy_top_BUMP_N5.
+SKEW edge on layer CB2Fi from location (11.1115,-16.6295) to location (12.688,-15.46) in cell cdn_ddr_T4GP_15M1X1Xb1Xe1Ya1Yb5Y2Yy2Z_cadence_phy_cdn_hs_phy_top_BUMP_N5.
+SKEW edge on layer CB2Fi from location (12.688,-15.46) to location (14.142,-14.142) in cell cdn_ddr_T4GP_15M1X1Xb1Xe1Ya1Yb5Y2Yy2Z_cadence_phy_cdn_hs_phy_top_BUMP_N5.
+SKEW edge on layer CB2Fi from location (14.142,-14.142) to location (15.46,-12.688) in cell cdn_ddr_T4GP_15M1X1Xb1Xe1Ya1Yb5Y2Yy2Z_cadence_phy_cdn_hs_phy_top_BUMP_N5.
+SKEW edge on layer CB2Fi from location (15.46,-12.688) to location (16.6295,-11.1115) in cell cdn_ddr_T4GP_15M1X1Xb1Xe1Ya1Yb5Y2Yy2Z_cadence_phy_cdn_hs_phy_top_BUMP_N5.
+SKEW edge on layer CB2Fi from location (16.6295,-11.1115) to location (17.6385,-9.428) in cell cdn_ddr_T4GP_15M1X1Xb1Xe1Ya1Yb5Y2Yy2Z_cadence_phy_cdn_hs_phy_top_BUMP_N5.
+SKEW edge on layer CB2Fi from location (17.6385,-9.428) to location (18.4775,-7.6535) in cell cdn_ddr_T4GP_15M1X1Xb1Xe1Ya1Yb5Y2Yy2Z_cadence_phy_cdn_hs_phy_top_BUMP_N5.
+SKEW edge on layer CB2Fi from location (18.4775,-7.6535) to location (19.139,-5.8055) in cell cdn_ddr_T4GP_15M1X1Xb1Xe1Ya1Yb5Y2Yy2Z_cadence_phy_cdn_hs_phy_top_BUMP_N5.
+SKEW edge on layer CB2Fi from location (19.139,-5.8055) to location (19.6155,-3.902) in cell cdn_ddr_T4GP_15M1X1Xb1Xe1Ya1Yb5Y2Yy2Z_cadence_phy_cdn_hs_phy_top_BUMP_N5.
+SKEW edge on layer CB2Fi from location (19.6155,-3.902) to location (19.9035,-1.9605) in cell cdn_ddr_T4GP_15M1X1Xb1Xe1Ya1Yb5Y2Yy2Z_cadence_phy_cdn_hs_phy_top_BUMP_N5.
+SKEW edge on layer CB2Fi from location (19.9035,-1.9605) to location (20,0) in cell cdn_ddr_T4GP_15M1X1Xb1Xe1Ya1Yb5Y2Yy2Z_cadence_phy_cdn_hs_phy_top_BUMP_N5.
+SKEW edge on layer UBMi from location (40,0) to location (39.8075,3.9205) in cell cdn_ddr_T4GP_15M1X1Xb1Xe1Ya1Yb5Y2Yy2Z_cadence_phy_cdn_hs_phy_top_BUMP_N5.
+SKEW edge on layer UBMi from location (39.8075,3.9205) to location (39.2315,7.8035) in cell cdn_ddr_T4GP_15M1X1Xb1Xe1Ya1Yb5Y2Yy2Z_cadence_phy_cdn_hs_phy_top_BUMP_N5.
+SKEW edge on layer UBMi from location (39.2315,7.8035) to location (38.2775,11.6115) in cell cdn_ddr_T4GP_15M1X1Xb1Xe1Ya1Yb5Y2Yy2Z_cadence_phy_cdn_hs_phy_top_BUMP_N5.
+SKEW edge on layer UBMi from location (38.2775,11.6115) to location (36.955,15.3075) in cell cdn_ddr_T4GP_15M1X1Xb1Xe1Ya1Yb5Y2Yy2Z_cadence_phy_cdn_hs_phy_top_BUMP_N5.
+SKEW edge on layer UBMi from location (36.955,15.3075) to location (35.277,18.856) in cell cdn_ddr_T4GP_15M1X1Xb1Xe1Ya1Yb5Y2Yy2Z_cadence_phy_cdn_hs_phy_top_BUMP_N5.
+SKEW edge on layer UBMi from location (35.277,18.856) to location (33.259,22.223) in cell cdn_ddr_T4GP_15M1X1Xb1Xe1Ya1Yb5Y2Yy2Z_cadence_phy_cdn_hs_phy_top_BUMP_N5.
+SKEW edge on layer UBMi from location (33.259,22.223) to location (30.9205,25.3755) in cell cdn_ddr_T4GP_15M1X1Xb1Xe1Ya1Yb5Y2Yy2Z_cadence_phy_cdn_hs_phy_top_BUMP_N5.
+SKEW edge on layer UBMi from location (30.9205,25.3755) to location (28.2845,28.2845) in cell cdn_ddr_T4GP_15M1X1Xb1Xe1Ya1Yb5Y2Yy2Z_cadence_phy_cdn_hs_phy_top_BUMP_N5.
+SKEW edge on layer UBMi from location (28.2845,28.2845) to location (25.3755,30.9205) in cell cdn_ddr_T4GP_15M1X1Xb1Xe1Ya1Yb5Y2Yy2Z_cadence_phy_cdn_hs_phy_top_BUMP_N5.
+SKEW edge on layer UBMi from location (25.3755,30.9205) to location (22.223,33.259) in cell cdn_ddr_T4GP_15M1X1Xb1Xe1Ya1Yb5Y2Yy2Z_cadence_phy_cdn_hs_phy_top_BUMP_N5.
+SKEW edge on layer UBMi from location (22.223,33.259) to location (18.856,35.277) in cell cdn_ddr_T4GP_15M1X1Xb1Xe1Ya1Yb5Y2Yy2Z_cadence_phy_cdn_hs_phy_top_BUMP_N5.
+SKEW edge on layer UBMi from location (18.856,35.277) to location (15.3075,36.955) in cell cdn_ddr_T4GP_15M1X1Xb1Xe1Ya1Yb5Y2Yy2Z_cadence_phy_cdn_hs_phy_top_BUMP_N5.
+SKEW edge on layer UBMi from location (15.3075,36.955) to location (11.6115,38.2775) in cell cdn_ddr_T4GP_15M1X1Xb1Xe1Ya1Yb5Y2Yy2Z_cadence_phy_cdn_hs_phy_top_BUMP_N5.
+SKEW edge on layer UBMi from location (11.6115,38.2775) to location (7.8035,39.2315) in cell cdn_ddr_T4GP_15M1X1Xb1Xe1Ya1Yb5Y2Yy2Z_cadence_phy_cdn_hs_phy_top_BUMP_N5.
+SKEW edge on layer UBMi from location (7.8035,39.2315) to location (3.9205,39.8075) in cell cdn_ddr_T4GP_15M1X1Xb1Xe1Ya1Yb5Y2Yy2Z_cadence_phy_cdn_hs_phy_top_BUMP_N5.
+SKEW edge on layer UBMi from location (3.9205,39.8075) to location (0,40) in cell cdn_ddr_T4GP_15M1X1Xb1Xe1Ya1Yb5Y2Yy2Z_cadence_phy_cdn_hs_phy_top_BUMP_N5.
+SKEW edge on layer UBMi from location (0,40) to location (-3.9205,39.8075) in cell cdn_ddr_T4GP_15M1X1Xb1Xe1Ya1Yb5Y2Yy2Z_cadence_phy_cdn_hs_phy_top_BUMP_N5.
+SKEW edge on layer UBMi from location (-3.9205,39.8075) to location (-7.8035,39.2315) in cell cdn_ddr_T4GP_15M1X1Xb1Xe1Ya1Yb5Y2Yy2Z_cadence_phy_cdn_hs_phy_top_BUMP_N5.
+SKEW edge on layer UBMi from location (-7.8035,39.2315) to location (-11.6115,38.2775) in cell cdn_ddr_T4GP_15M1X1Xb1Xe1Ya1Yb5Y2Yy2Z_cadence_phy_cdn_hs_phy_top_BUMP_N5.
+SKEW edge on layer UBMi from location (-11.6115,38.2775) to location (-15.3075,36.955) in cell cdn_ddr_T4GP_15M1X1Xb1Xe1Ya1Yb5Y2Yy2Z_cadence_phy_cdn_hs_phy_top_BUMP_N5.
+SKEW edge on layer UBMi from location (-15.3075,36.955) to location (-18.856,35.277) in cell cdn_ddr_T4GP_15M1X1Xb1Xe1Ya1Yb5Y2Yy2Z_cadence_phy_cdn_hs_phy_top_BUMP_N5.
+SKEW edge on layer UBMi from location (-18.856,35.277) to location (-22.223,33.259) in cell cdn_ddr_T4GP_15M1X1Xb1Xe1Ya1Yb5Y2Yy2Z_cadence_phy_cdn_hs_phy_top_BUMP_N5.
+SKEW edge on layer UBMi from location (-22.223,33.259) to location (-25.3755,30.9205) in cell cdn_ddr_T4GP_15M1X1Xb1Xe1Ya1Yb5Y2Yy2Z_cadence_phy_cdn_hs_phy_top_BUMP_N5.
+SKEW edge on layer UBMi from location (-25.3755,30.9205) to location (-28.2845,28.2845) in cell cdn_ddr_T4GP_15M1X1Xb1Xe1Ya1Yb5Y2Yy2Z_cadence_phy_cdn_hs_phy_top_BUMP_N5.
+SKEW edge on layer UBMi from location (-28.2845,28.2845) to location (-30.9205,25.3755) in cell cdn_ddr_T4GP_15M1X1Xb1Xe1Ya1Yb5Y2Yy2Z_cadence_phy_cdn_hs_phy_top_BUMP_N5.
+SKEW edge on layer UBMi from location (-30.9205,25.3755) to location (-33.259,22.223) in cell cdn_ddr_T4GP_15M1X1Xb1Xe1Ya1Yb5Y2Yy2Z_cadence_phy_cdn_hs_phy_top_BUMP_N5.
+SKEW edge on layer UBMi from location (-33.259,22.223) to location (-35.277,18.856) in cell cdn_ddr_T4GP_15M1X1Xb1Xe1Ya1Yb5Y2Yy2Z_cadence_phy_cdn_hs_phy_top_BUMP_N5.
+SKEW edge on layer UBMi from location (-35.277,18.856) to location (-36.955,15.3075) in cell cdn_ddr_T4GP_15M1X1Xb1Xe1Ya1Yb5Y2Yy2Z_cadence_phy_cdn_hs_phy_top_BUMP_N5.
+SKEW edge on layer UBMi from location (-36.955,15.3075) to location (-38.2775,11.6115) in cell cdn_ddr_T4GP_15M1X1Xb1Xe1Ya1Yb5Y2Yy2Z_cadence_phy_cdn_hs_phy_top_BUMP_N5.
+SKEW edge on layer UBMi from location (-38.2775,11.6115) to location (-39.2315,7.8035) in cell cdn_ddr_T4GP_15M1X1Xb1Xe1Ya1Yb5Y2Yy2Z_cadence_phy_cdn_hs_phy_top_BUMP_N5.
+SKEW edge on layer UBMi from location (-39.2315,7.8035) to location (-39.8075,3.9205) in cell cdn_ddr_T4GP_15M1X1Xb1Xe1Ya1Yb5Y2Yy2Z_cadence_phy_cdn_hs_phy_top_BUMP_N5.
+SKEW edge on layer UBMi from location (-39.8075,3.9205) to location (-40,0) in cell cdn_ddr_T4GP_15M1X1Xb1Xe1Ya1Yb5Y2Yy2Z_cadence_phy_cdn_hs_phy_top_BUMP_N5.
+SKEW edge on layer UBMi from location (-40,0) to location (-39.8075,-3.9205) in cell cdn_ddr_T4GP_15M1X1Xb1Xe1Ya1Yb5Y2Yy2Z_cadence_phy_cdn_hs_phy_top_BUMP_N5.
+SKEW edge on layer UBMi from location (-39.8075,-3.9205) to location (-39.2315,-7.8035) in cell cdn_ddr_T4GP_15M1X1Xb1Xe1Ya1Yb5Y2Yy2Z_cadence_phy_cdn_hs_phy_top_BUMP_N5.
+SKEW edge on layer UBMi from location (-39.2315,-7.8035) to location (-38.2775,-11.6115) in cell cdn_ddr_T4GP_15M1X1Xb1Xe1Ya1Yb5Y2Yy2Z_cadence_phy_cdn_hs_phy_top_BUMP_N5.
+SKEW edge on layer UBMi from location (-38.2775,-11.6115) to location (-36.955,-15.3075) in cell cdn_ddr_T4GP_15M1X1Xb1Xe1Ya1Yb5Y2Yy2Z_cadence_phy_cdn_hs_phy_top_BUMP_N5.
+Maximum SKEW edge warning count of 100 has been reached.
+----------------------------------------------------------------------------------
+--- ORIGINAL LAYER STATISTICS
+---
+LAYER CB2Fi ........... TOTAL Original Geometry Count = 489   (489)
+LAYER CBi ............. TOTAL Original Geometry Count = 0     (0)
+LAYER CBDi ............ TOTAL Original Geometry Count = 0     (0)
+LAYER APi ............. TOTAL Original Geometry Count = 20789 (20789)
+LAYER RVi ............. TOTAL Original Geometry Count = 74271 (74271)
+LAYER UBMi ............ TOTAL Original Geometry Count = 489   (489)
+LAYER PMi ............. TOTAL Original Geometry Count = 489   (489)
+LAYER LMARK ........... TOTAL Original Geometry Count = 0     (0)
+LAYER Chip_Boundary ... TOTAL Original Geometry Count = 0     (0)
+LAYER SEALRING_ALL .... TOTAL Original Geometry Count = 0     (0)
+LAYER LOGO ............ TOTAL Original Geometry Count = 0     (0)
+----------------------------------------------------------------------------------
+--- RULECHECK RESULTS STATISTICS
+---
+RULECHECK UBM_CB:WARNING ... TOTAL Result Count = 0 (0)
+RULECHECK Area.R.1 ......... TOTAL Result Count = 0 (0)
+RULECHECK UBM.P.1:a ........ TOTAL Result Count = 0 (0)
+RULECHECK UBM.P.1:b ........ TOTAL Result Count = 0 (0)
+RULECHECK RR:RE:UBM.S.4 .... TOTAL Result Count = 0 (0)
+RULECHECK UBM.EN.1 ......... TOTAL Result Count = 0 (0)
+RULECHECK RR:RE:UBM.EN.1 ... TOTAL Result Count = 0 (0)
+RULECHECK UBM.DN.1 ......... TOTAL Result Count = 0 (0)
+RULECHECK UBM.R.1 .......... TOTAL Result Count = 0 (0)
+RULECHECK UBM.DN.3 ......... TOTAL Result Count = 0 (0)
+RULECHECK UBM.DN.4 ......... TOTAL Result Count = 0 (0)
+RULECHECK UBM.R.3:a ........ TOTAL Result Count = 0 (0)
+RULECHECK UBM.R.3:b ........ TOTAL Result Count = 0 (0)
+RULECHECK UBM.R.5 .......... TOTAL Result Count = 2 (2)
+RULECHECK UBM.R.9 .......... TOTAL Result Count = 0 (0)
+RULECHECK UBM.R.14 ......... TOTAL Result Count = 0 (0)
+RULECHECK BP.W.4 ........... TOTAL Result Count = 0 (0)
+RULECHECK BP.W.6 ........... TOTAL Result Count = 0 (0)
+RULECHECK BP.R.3 ........... TOTAL Result Count = 0 (0)
+RULECHECK BP.R.1 ........... TOTAL Result Count = 0 (0)
+RULECHECK BP.R.2 ........... TOTAL Result Count = 0 (0)
+RULECHECK BP.P.1 ........... TOTAL Result Count = 0 (0)
+RULECHECK PM.W.3 ........... TOTAL Result Count = 0 (0)
+RULECHECK PM.R.1 ........... TOTAL Result Count = 0 (0)
+RULECHECK RV.S.5 ........... TOTAL Result Count = 0 (0)
+RULECHECK RV.S.7 ........... TOTAL Result Count = 0 (0)
+RULECHECK AP.EN.2 .......... TOTAL Result Count = 0 (0)
+----------------------------------------------------------------------------------
+--- SUMMARY
+---
+TOTAL CPU Time:                  41
+TOTAL REAL Time:                 35
+TOTAL Original Layer Geometries: 96527 (96527)
+TOTAL DRC RuleChecks Executed:   27
+TOTAL DRC Results Generated:     2 (2)

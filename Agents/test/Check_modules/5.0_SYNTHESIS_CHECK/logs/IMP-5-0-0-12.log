@@ -1,0 +1,7 @@
+PASS:IMP-5-0-0-12:Confirm synthesis Quality Of Results (QOR) meets requirements (timing, area, power)?
+IMP-5-0-0-12-INFO01: Check result:
+  Severity: Info Occurrence: 3
+  - TNS:-0.0
+  - Area:225.338
+  - Power:1297805.093
+

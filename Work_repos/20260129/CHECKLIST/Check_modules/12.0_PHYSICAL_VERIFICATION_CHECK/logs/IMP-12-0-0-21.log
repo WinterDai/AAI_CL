@@ -1,0 +1,5 @@
+FAIL:IMP-12-0-0-21:Confirm no ERROR message in PV log files.
+IMP-12-0-0-21-ERROR01: Configuration error:
+  Severity: Fail Occurrence: 1
+  - input_files is empty in YAML configuration
+

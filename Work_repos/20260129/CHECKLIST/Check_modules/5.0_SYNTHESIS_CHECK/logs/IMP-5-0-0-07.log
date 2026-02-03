@@ -1,0 +1,6 @@
+PASS:IMP-5-0-0-07:Confirm that there are no other violations or errors (max cap, max transition etc)?
+IMP-5-0-0-07-INFO01: Check result:
+  Severity: Info Occurrence: 2
+  - set_false_path -hold -from [all_clocks] -to [remove_from_collection [get_pins -hier *reset_sync_synth_*/D] [get_pins -hier *reset_sync_synth_*1/D]] set_false_path -hold -from [all_clocks] -to [remove_from_collection [get_pins -hier *data_sync_synth_*/D] [get_pins -hier *data_sync_synth_*1/D]]
+  - set_false_path -hold -from [all_clocks] -to [remove_from_collection [get_pins -hier *reset_sync_synth_*/D] [get_pins -hier *reset_sync_synth_*1/D]] set_false_path -hold -from [all_clocks] -to [remove_from_collection [get_pins -hier *data_sync_synth_*/D] [get_pins -hier *data_sync_synth_*1/D]]
+

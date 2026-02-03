@@ -1,0 +1,5 @@
+FAIL:MIG-IMP-8-1-1-18:Confirm the correct bump naming rule VDDAPLL_* for high voltage pin VDDA of dual rail Deskew PLL (check the Note)
+MIG-IMP-8-1-1-18-ERROR01: Configuration error:
+  Severity: Fail Occurrence: 1
+  - input_files is empty in YAML configuration
+

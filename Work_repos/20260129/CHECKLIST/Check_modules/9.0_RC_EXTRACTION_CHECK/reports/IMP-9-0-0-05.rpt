@@ -1,0 +1,3 @@
+PASS:IMP-9-0-0-05:Confirm proper Quantus version is used for RC extraction(match to or mature than Foundry recommended Quantus version)
+Info Occurrence: 1
+1: Info: All RC extraction is used Quantus version 22.1.1-s233 (Foundry: TSMC_N6)

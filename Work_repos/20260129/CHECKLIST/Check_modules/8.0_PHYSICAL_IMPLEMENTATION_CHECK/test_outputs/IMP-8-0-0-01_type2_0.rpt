@@ -1,0 +1,6 @@
+PASS:IMP-8-0-0-01:Confirm all ports are assigned on metal track.
+Info Occurrence: 4
+1: Info: Explanation: Port placement check is informational during floorplanning phase: Explanation: Port placement check is informational during floorplanning phase[WAIVED_INFO]
+2: Info: e_pi_ctrl[0]: Port placement validated: all ports matched routing track requirements
+3: Info: rxda_cdrlf_scanmode: Port placement validated: all ports matched routing track requirements
+4: Info: rxda_cdrlf_scanout[0]: Port placement validated: all ports matched routing track requirements

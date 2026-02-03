@@ -1,0 +1,5 @@
+PASS:IMP-8-0-0-04:Confirm buffers are attached for all ports and are set as fixed.
+IMP-8-0-0-04-INFO01: [WAIVED_INFO]: Waived information:
+  Severity: Info Occurrence: 1
+  Explanation: Port buffer check is informational during floorplan stage
+

@@ -1,0 +1,3 @@
+PASS:IMP-2-0-0-06:Confirm latest LVS rule deck(s) was used? List LVS rule deck name in Comments. eg: DFM_LVS_RC_PEGASUS_N3P_1p17M_1Xa1Xb1Xc1Xd1Ya1Yb4Y2Yy2Yx2R_ALRDL.1.0a
+Info Occurrence: 1
+1: Info: CDN_104H_cdn_hs_phy_data_slice_EW: DFM_LVS_RC_PEGASUS_N6_1p15M_1X1Xa1Ya5Y2Yy2Yx2R_ALRDL.1.0b.DS. In line 11, C:\Users\yuyin\OneDrive - Cadence Design Systems Inc\2025\Checklist\AAI\CHECKLIST_V3\CHECKLIST\IP_project_folder\tcl\2.0\CDN_104H_cdn_hs_phy_data_slice_EW.LVSwD.pvl: LVS rule deck found and version verified

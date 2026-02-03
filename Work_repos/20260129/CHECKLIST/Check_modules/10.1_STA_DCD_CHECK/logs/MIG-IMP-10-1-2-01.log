@@ -1,0 +1,5 @@
+FAIL:MIG-IMP-10-1-2-01:[ETMQA check] Confirm there is no issue for ETMQA flow. You can refer to /projects/workbench/versions/workbench_v0.8/workbench/kits/wrapper/etmQA_review_guide about how to check the results. Please contact ipg_mig_arch_pd if you run into any issue for the flow. （Fill N/A if customer will not run ETM based STA)
+MIG-IMP-10-1-2-01-ERROR01: Configuration error:
+  Severity: Fail Occurrence: 1
+  - input_files is empty in YAML configuration
+

@@ -1,0 +1,9 @@
+description: Confirm there is no issue about CNOD check if CNOD check is needed.
+input_files:
+- ${CHECKLIST_ROOT}/IP_project_folder/reports/15.0/cnod_perc.rep
+requirements:
+  pattern_items: []
+  value: N/A
+waivers:
+  value: N/A
+  waive_items: []

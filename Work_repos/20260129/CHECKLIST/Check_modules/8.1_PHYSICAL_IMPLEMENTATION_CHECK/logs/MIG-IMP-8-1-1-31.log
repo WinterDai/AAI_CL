@@ -1,0 +1,5 @@
+FAIL:MIG-IMP-8-1-1-31:Confirm data retention IO VDD_AO pin must be connected to always-on VDD (mark N/A only when data_retention pad doesn't exist)”
+MIG-IMP-8-1-1-31-ERROR01: Configuration error:
+  Severity: Fail Occurrence: 1
+  - input_files is empty in YAML configuration
+

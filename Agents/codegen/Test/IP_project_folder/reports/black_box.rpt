@@ -1,0 +1,7 @@
+HIER: (G) cdnsdru_pll_ds_modulator_v3_10_10h0a0
+SYSTEM: (G R) cmn_ana
+HIER: (R) cmn_cdnsdru_pll_ds_modulator_v3_10_10h0a0
+HIER: (R) cmn_cmn_func
+HIER: (G) cmn_func
+HIER: (R) cmn_pll_ctrl_8h50_16h0068_16h0030
+HIER: (G) pll_ctrl_8h50_16h0068_16h0030

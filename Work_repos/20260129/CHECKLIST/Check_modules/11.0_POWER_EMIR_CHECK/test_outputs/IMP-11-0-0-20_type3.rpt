@@ -1,0 +1,5 @@
+PASS:IMP-11-0-0-20:Confirm wake-up time meet customer's requirement. (For non-PSO, please fill N/A)
+Warn Occurrence: 1
+1: Warn: 2.0e-07: Waiver not matched - no corresponding wake-up time violation found: Wake-up time up to 200ns waived - acceptable for deep sleep recovery scenario[WAIVER]
+Info Occurrence: 1
+1: Info: Wake-up time: 1.11e-07s exceeds requirement 1.00e-07s by 1.10e-08s. In line 9, C:\Users\chudongy\dev_workspace\ai_checklist\CHECKLIST\CHECKLIST\IP_project_folder\reports\11.0\Powerup.rpt: : Wake-up time up to 150ns waived - customer approved for low-power mode operation[WAIVER]

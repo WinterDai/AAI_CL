@@ -1,0 +1,3 @@
+PASS:IMP-16-0-0-02:Confirm PHY has the IPTAG for Hard PHY delivery and Slices have the IPTAG for FIRM PHY delivery. (Can skip slice level IPTAG for Hard PHY delivery)
+Info Occurrence: 1
+1: Info: Hard PHY delivery - IPTAG: HPCFSC_D5D4_T5G$C202209262108$17M1X1Xb1Xe1Ya1Yb5Y2Yy2Yx2R (Instance: cdn_hs_phy_top). In line 16, C:\Users\yuyin\OneDrive - Cadence Design Systems Inc\2025\Checklist\AAI\CHECKLIST_V3\CHECKLIST\IP_project_folder\reports\16.0\cdn_hs_phy_top.csv: IPTAG found and delivery type verified

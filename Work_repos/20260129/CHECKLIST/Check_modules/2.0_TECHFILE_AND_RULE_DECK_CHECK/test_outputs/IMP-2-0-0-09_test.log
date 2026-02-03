@@ -1,0 +1,130 @@
+Test Log: IMP-2-0-0-09
+================================================================================
+
+[Test 1/6] Type 1 (requirements.value=N/A, waivers.value=N/A)
+--------------------------------------------------------------------------------
+Test ID: type1_na
+Status: PASS
+
+Checker Log Output:
+PASS:IMP-2-0-0-09:Confirm BUMP rule deck was not modified? If it was, explain in comments field.
+IMP-2-0-0-09-INFO01: BUMP rule deck path found in PVL log:
+  Severity: Info Occurrence: 1
+  - PN5_CU_BUMP_030.10_1a
+
+
+
+STDERR:
+C:\Users\chenweif\Checker_dev\CHECKLIST\CHECKLIST\Check_modules\2.0_TECHFILE_AND_RULE_DECK_CHECK\scripts\checker\IMP-2-0-0-09.py:161: SyntaxWarning: "\p" is an invalid escape sequence. Such sequences will not work in the future. Did you mean "\\p"? A raw string is also an option.
+  Pattern: include "C:\path\to\ruledeck\PN5_CU_BUMP_030.10_1a"
+
+================================================================================
+
+[Test 2/6] Type 1 (requirements.value=N/A, waivers.value=0)
+--------------------------------------------------------------------------------
+Test ID: type1_0
+Status: PASS
+
+Checker Log Output:
+PASS:IMP-2-0-0-09:Confirm BUMP rule deck was not modified? If it was, explain in comments field.
+IMP-2-0-0-09-INFO01: [WAIVED_INFO]: Waived information:
+  Severity: Info Occurrence: 1
+  - Explanation: Rule deck path extraction is informational only for this project phase
+IMP-2-0-0-09-INFO02: BUMP rule deck path found in PVL log:
+  Severity: Info Occurrence: 1
+  - PN5_CU_BUMP_030.10_1a
+
+
+
+STDERR:
+C:\Users\chenweif\Checker_dev\CHECKLIST\CHECKLIST\Check_modules\2.0_TECHFILE_AND_RULE_DECK_CHECK\scripts\checker\IMP-2-0-0-09.py:161: SyntaxWarning: "\p" is an invalid escape sequence. Such sequences will not work in the future. Did you mean "\\p"? A raw string is also an option.
+  Pattern: include "C:\path\to\ruledeck\PN5_CU_BUMP_030.10_1a"
+
+================================================================================
+
+[Test 3/6] Type 2 (requirements.value>0, waivers.value=N/A)
+--------------------------------------------------------------------------------
+Test ID: type2_na
+Status: ERROR
+
+Checker Log Output:
+FAIL:IMP-2-0-0-09:Confirm BUMP rule deck was not modified? If it was, explain in comments field.
+IMP-2-0-0-09-ERROR01: BUMP rule deck has been modified from golden reference:
+  Severity: Fail Occurrence: 1
+  - PN5_CU_BUMP_030.10_1a
+
+
+
+STDERR:
+C:\Users\chenweif\Checker_dev\CHECKLIST\CHECKLIST\Check_modules\2.0_TECHFILE_AND_RULE_DECK_CHECK\scripts\checker\IMP-2-0-0-09.py:161: SyntaxWarning: "\p" is an invalid escape sequence. Such sequences will not work in the future. Did you mean "\\p"? A raw string is also an option.
+  Pattern: include "C:\path\to\ruledeck\PN5_CU_BUMP_030.10_1a"
+
+================================================================================
+
+[Test 4/6] Type 2 (requirements.value>0, waivers.value=0)
+--------------------------------------------------------------------------------
+Test ID: type2_0
+Status: PASS
+
+Checker Log Output:
+PASS:IMP-2-0-0-09:Confirm BUMP rule deck was not modified? If it was, explain in comments field.
+IMP-2-0-0-09-INFO01: [WAIVED_INFO]: Waived information:
+  Severity: Info Occurrence: 1
+  - Explanation: Rule deck modifications are acceptable for this experimental design
+IMP-2-0-0-09-INFO02: [WAIVED_AS_INFO]: BUMP rule deck has been modified from golden reference:
+  Severity: Info Occurrence: 1
+  - PN5_CU_BUMP_030.10_1a
+
+
+
+STDERR:
+C:\Users\chenweif\Checker_dev\CHECKLIST\CHECKLIST\Check_modules\2.0_TECHFILE_AND_RULE_DECK_CHECK\scripts\checker\IMP-2-0-0-09.py:161: SyntaxWarning: "\p" is an invalid escape sequence. Such sequences will not work in the future. Did you mean "\\p"? A raw string is also an option.
+  Pattern: include "C:\path\to\ruledeck\PN5_CU_BUMP_030.10_1a"
+
+================================================================================
+
+[Test 5/6] Type 3
+--------------------------------------------------------------------------------
+Test ID: type3
+Status: PASS
+
+Checker Log Output:
+PASS:IMP-2-0-0-09:Confirm BUMP rule deck was not modified? If it was, explain in comments field.
+IMP-2-0-0-09-WARN01: Unused waivers:
+  Severity: Warn Occurrence: 1
+  - PN5_CU_BUMP_030.10_2b
+IMP-2-0-0-09-INFO01: BUMP rule deck modification waived:
+  Severity: Info Occurrence: 1
+  - PN5_CU_BUMP_030.10_1a
+
+
+
+STDERR:
+C:\Users\chenweif\Checker_dev\CHECKLIST\CHECKLIST\Check_modules\2.0_TECHFILE_AND_RULE_DECK_CHECK\scripts\checker\IMP-2-0-0-09.py:161: SyntaxWarning: "\p" is an invalid escape sequence. Such sequences will not work in the future. Did you mean "\\p"? A raw string is also an option.
+  Pattern: include "C:\path\to\ruledeck\PN5_CU_BUMP_030.10_1a"
+
+================================================================================
+
+[Test 6/6] Type 4
+--------------------------------------------------------------------------------
+Test ID: type4
+Status: PASS
+
+Checker Log Output:
+PASS:IMP-2-0-0-09:Confirm BUMP rule deck was not modified? If it was, explain in comments field.
+IMP-2-0-0-09-WARN01: Unused waivers:
+  Severity: Warn Occurrence: 2
+  - PN5_CU_BUMP_030.10_1a
+  - PN5_CU_BUMP_030.10_2b
+IMP-2-0-0-09-INFO01: BUMP rule deck path found in PVL log:
+  Severity: Info Occurrence: 1
+  - PN5_CU_BUMP_030.10_1a
+
+
+
+STDERR:
+C:\Users\chenweif\Checker_dev\CHECKLIST\CHECKLIST\Check_modules\2.0_TECHFILE_AND_RULE_DECK_CHECK\scripts\checker\IMP-2-0-0-09.py:161: SyntaxWarning: "\p" is an invalid escape sequence. Such sequences will not work in the future. Did you mean "\\p"? A raw string is also an option.
+  Pattern: include "C:\path\to\ruledeck\PN5_CU_BUMP_030.10_1a"
+
+================================================================================
+

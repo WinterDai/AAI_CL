@@ -1,0 +1,5 @@
+FAIL:SRG-IMP-7-1-0-00:Are the initial checks at block level of Functional and DFT modes are reviewed with respective stakeholders?
+SRG-IMP-7-1-0-00-ERROR01: Configuration error:
+  Severity: Fail Occurrence: 1
+  - input_files is empty in YAML configuration
+

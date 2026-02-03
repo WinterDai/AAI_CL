@@ -1,0 +1,7 @@
+FAIL:IMP-11-0-0-05:Confirm generate all the power library with detail view correctly.
+IMP-11-0-0-05-ERROR01: GDS file paths not found for library:
+  Severity: Fail Occurrence: 3
+  - ffgnp_0p825v_125c_cbest_CCbest_T
+  - ffgnp_0p825v_m40c_cbest_CCbest_T
+  - ssgnp_0p675v_m40c_cworst_CCworst_T
+

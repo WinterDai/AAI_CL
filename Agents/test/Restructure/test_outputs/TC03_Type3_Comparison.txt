@@ -1,0 +1,81 @@
+====================================================================================================
+DETAILED COMPARISON REPORT
+====================================================================================================
+
+====================================================================================================
+HIGH-LEVEL COMPARISON
+====================================================================================================
+
+is_pass:
+  Golden:    False
+  CodeGen:   False
+  Match:     ✓ YES
+
+value:
+  Golden:    0
+  CodeGen:   0
+  Match:     ✓ YES
+
+Detail Count:
+  Golden:    4
+  CodeGen:   4
+  Match:     ✓ YES
+
+Severity Breakdown:
+  FAIL    : Golden= 2, CodeGen= 2  ✓
+  INFO    : Golden= 2, CodeGen= 2  ✓
+
+====================================================================================================
+DETAILS COMPARISON
+====================================================================================================
+
+--- Detail #1 ---
+  Golden:  [FAIL] The required netlist's version is generated on Generated on:*2025*
+           Reason: Version mismatch...
+  CodeGen: [INFO] Tool:*Quantus*
+           Reason: Item not found[WAIVER]...
+  Match:   ✗ NO
+
+--- Detail #2 ---
+  Golden:  [INFO] Tool:*Quantus*
+           Reason: Waived missing item[WAIVER]...
+  CodeGen: [INFO] Netlist path: C:\Users\yuyin\Desktop\CHECKLIST\IP_project_folder\dbs\phy_cmn_phase_align_digtop.v.gz: Status: Success (found in log, file not accessible for version check)
+           Reason: Item found...
+  Match:   ✗ NO
+
+--- Detail #3 ---
+  Golden:  [FAIL] SPEF Reading was skipped
+           Reason: Skipping SPEF reading as we are writing post-synthesis SDF files...
+  CodeGen: [FAIL] SPEF Reading was skipped
+           Reason: Unexpected item found...
+  Match:   ✗ NO
+
+--- Detail #4 ---
+  Golden:  [INFO] Netlist path: C:\Users\yuyin\Desktop\CHECKLIST\IP_project_folder\dbs\phy_cmn_phase_align_digtop.v.gz
+           Reason: Status: Success (found in log, file not accessible for version check)...
+  CodeGen: [FAIL] Generated on:*2025*: Required pattern not found
+           Reason: Item not found...
+  Match:   ✗ NO
+
+====================================================================================================
+GROUPS COMPARISON
+====================================================================================================
+
+Info Groups:
+  Golden:    1 groups
+  CodeGen:   2 groups
+
+Error Groups:
+  Golden:    2 groups
+  CodeGen:   1 groups
+
+Warn Groups:
+  Golden:    0 groups
+  CodeGen:   0 groups
+
+====================================================================================================
+VERDICT
+====================================================================================================
+
+✓✓✓ PASS - Results are IDENTICAL ✓✓✓
+====================================================================================================

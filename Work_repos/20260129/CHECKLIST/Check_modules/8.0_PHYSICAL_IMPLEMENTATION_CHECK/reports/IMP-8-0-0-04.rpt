@@ -1,0 +1,19 @@
+PASS:IMP-8-0-0-04:Confirm buffers are attached for all ports and are set as fixed.
+Warn Occurrence: 2
+1: Warn: clk4x: Waiver defined but no violation matched: Waived - clock buffer placement will be optimized in CTS phase[WAIVER]
+2: Warn: rst_n: Waiver defined but no violation matched: Waived - reset port uses direct connection per design specification[WAIVER]
+Info Occurrence: 14
+1: Info: atb0_int. In line 10, C:\Users\yuyin\OneDrive - Cadence Design Systems Inc\2025\Checklist\AAI\CHECKLIST_V3\CHECKLIST\IP_project_folder\reports\8.0\IMP-8-0-0-04.rpt: Port has buffer attached and buffer is fixed
+2: Info: atb1_int. In line 11, C:\Users\yuyin\OneDrive - Cadence Design Systems Inc\2025\Checklist\AAI\CHECKLIST_V3\CHECKLIST\IP_project_folder\reports\8.0\IMP-8-0-0-04.rpt: Port has buffer attached and buffer is fixed
+3: Info: clk4x. In line 4, C:\Users\yuyin\OneDrive - Cadence Design Systems Inc\2025\Checklist\AAI\CHECKLIST_V3\CHECKLIST\IP_project_folder\reports\8.0\IMP-8-0-0-04.rpt: Port has buffer attached and buffer is fixed
+4: Info: clk_ctlr_1x_mode. In line 6, C:\Users\yuyin\OneDrive - Cadence Design Systems Inc\2025\Checklist\AAI\CHECKLIST_V3\CHECKLIST\IP_project_folder\reports\8.0\IMP-8-0-0-04.rpt: Port has buffer attached and buffer is fixed
+5: Info: clk_phy_bypass. In line 7, C:\Users\yuyin\OneDrive - Cadence Design Systems Inc\2025\Checklist\AAI\CHECKLIST_V3\CHECKLIST\IP_project_folder\reports\8.0\IMP-8-0-0-04.rpt: Port has buffer attached and buffer is fixed
+6: Info: clk_switch_is_done. In line 8, C:\Users\yuyin\OneDrive - Cadence Design Systems Inc\2025\Checklist\AAI\CHECKLIST_V3\CHECKLIST\IP_project_folder\reports\8.0\IMP-8-0-0-04.rpt: Port has buffer attached and buffer is fixed
+7: Info: pad_mem_data[7]. In line 3, C:\Users\yuyin\OneDrive - Cadence Design Systems Inc\2025\Checklist\AAI\CHECKLIST_V3\CHECKLIST\IP_project_folder\reports\8.0\IMP-8-0-0-04.rpt: Port has buffer attached and buffer is fixed
+8: Info: pad_mem_dqs_m. In line 2, C:\Users\yuyin\OneDrive - Cadence Design Systems Inc\2025\Checklist\AAI\CHECKLIST_V3\CHECKLIST\IP_project_folder\reports\8.0\IMP-8-0-0-04.rpt: Port has buffer attached and buffer is fixed
+9: Info: pad_mem_dqs_p. In line 1, C:\Users\yuyin\OneDrive - Cadence Design Systems Inc\2025\Checklist\AAI\CHECKLIST_V3\CHECKLIST\IP_project_folder\reports\8.0\IMP-8-0-0-04.rpt: Port has buffer attached and buffer is fixed
+10: Info: pll_clk_mode. In line 5, C:\Users\yuyin\OneDrive - Cadence Design Systems Inc\2025\Checklist\AAI\CHECKLIST_V3\CHECKLIST\IP_project_folder\reports\8.0\IMP-8-0-0-04.rpt: Port has buffer attached and buffer is fixed
+11: Info: regout_accept_slice. In line 13, C:\Users\yuyin\OneDrive - Cadence Design Systems Inc\2025\Checklist\AAI\CHECKLIST_V3\CHECKLIST\IP_project_folder\reports\8.0\IMP-8-0-0-04.rpt: Port has buffer attached and buffer is fixed
+12: Info: regout_slice[0]. In line 12, C:\Users\yuyin\OneDrive - Cadence Design Systems Inc\2025\Checklist\AAI\CHECKLIST_V3\CHECKLIST\IP_project_folder\reports\8.0\IMP-8-0-0-04.rpt: Port has buffer attached and buffer is fixed
+13: Info: regout_valid_slice. In line 14, C:\Users\yuyin\OneDrive - Cadence Design Systems Inc\2025\Checklist\AAI\CHECKLIST_V3\CHECKLIST\IP_project_folder\reports\8.0\IMP-8-0-0-04.rpt: Port has buffer attached and buffer is fixed
+14: Info: reset_clk_div. In line 9, C:\Users\yuyin\OneDrive - Cadence Design Systems Inc\2025\Checklist\AAI\CHECKLIST_V3\CHECKLIST\IP_project_folder\reports\8.0\IMP-8-0-0-04.rpt: Port has buffer attached and buffer is fixed

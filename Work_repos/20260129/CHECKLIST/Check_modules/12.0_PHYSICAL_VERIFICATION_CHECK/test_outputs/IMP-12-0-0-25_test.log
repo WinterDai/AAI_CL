@@ -1,0 +1,133 @@
+Test Log: IMP-12-0-0-25
+================================================================================
+
+[Test 1/6] Type 1 (requirements.value=N/A, waivers.value=N/A)
+--------------------------------------------------------------------------------
+Test ID: type1_na
+Status: PASS
+
+Checker Log Output:
+PASS:IMP-12-0-0-25:Confirm the BUMP DRC rule deck setting is correct.
+
+
+================================================================================
+
+[Test 2/6] Type 1 (requirements.value=N/A, waivers.value=0)
+--------------------------------------------------------------------------------
+Test ID: type1_0
+Status: PASS
+
+Checker Log Output:
+PASS:IMP-12-0-0-25:Confirm the BUMP DRC rule deck setting is correct.
+IMP-12-0-0-25-INFO01: [WAIVED_INFO]: Waived information:
+  Severity: Info Occurrence: 1
+  - Explanation: BUMP DRC rule deck configuration check is informational only for early design stages
+
+
+================================================================================
+
+[Test 3/6] Type 2 (requirements.value>0, waivers.value=N/A)
+--------------------------------------------------------------------------------
+Test ID: type2_na
+Status: ERROR
+
+(No log output)
+
+
+STDERR:
+Traceback (most recent call last):
+  File "C:\Users\jingyu\OneDrive - Cadence Design Systems Inc\Desktop\checklist_dev\AI_2026_V1\CHECKLIST\CHECKLIST\Check_modules\12.0_PHYSICAL_VERIFICATION_CHECK\scripts\checker\IMP-12-0-0-25.py", line 669, in <module>
+    sys.exit(main())
+             ~~~~^^
+  File "C:\Users\jingyu\OneDrive - Cadence Design Systems Inc\Desktop\checklist_dev\AI_2026_V1\CHECKLIST\CHECKLIST\Check_modules\12.0_PHYSICAL_VERIFICATION_CHECK\scripts\checker\IMP-12-0-0-25.py", line 662, in main
+    result = checker.execute_check()
+  File "C:\Users\jingyu\OneDrive - Cadence Design Systems Inc\Desktop\checklist_dev\AI_2026_V1\CHECKLIST\CHECKLIST\Check_modules\12.0_PHYSICAL_VERIFICATION_CHECK\scripts\checker\IMP-12-0-0-25.py", line 141, in execute_check
+    return self._execute_type2()
+           ~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\jingyu\OneDrive - Cadence Design Systems Inc\Desktop\checklist_dev\AI_2026_V1\CHECKLIST\CHECKLIST\Check_modules\12.0_PHYSICAL_VERIFICATION_CHECK\scripts\checker\IMP-12-0-0-25.py", line 502, in _execute_type2
+    found_items, missing_items = self._type2_core_logic()
+                                 ~~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\jingyu\OneDrive - Cadence Design Systems Inc\Desktop\checklist_dev\AI_2026_V1\CHECKLIST\CHECKLIST\Check_modules\12.0_PHYSICAL_VERIFICATION_CHECK\scripts\checker\IMP-12-0-0-25.py", line 523, in _type2_core_logic
+    data = self._parse_input_files()
+  File "C:\Users\jingyu\OneDrive - Cadence Design Systems Inc\Desktop\checklist_dev\AI_2026_V1\CHECKLIST\CHECKLIST\Check_modules\12.0_PHYSICAL_VERIFICATION_CHECK\scripts\checker\IMP-12-0-0-25.py", line 273, in _parse_input_files
+    for config_name, expected_value in pattern_dict.items():
+                                       ^^^^^^^^^^^^^^^^^^
+AttributeError: 'str' object has no attribute 'items'
+
+================================================================================
+
+[Test 4/6] Type 2 (requirements.value>0, waivers.value=0)
+--------------------------------------------------------------------------------
+Test ID: type2_0
+Status: ERROR
+
+(No log output)
+
+
+STDERR:
+Traceback (most recent call last):
+  File "C:\Users\jingyu\OneDrive - Cadence Design Systems Inc\Desktop\checklist_dev\AI_2026_V1\CHECKLIST\CHECKLIST\Check_modules\12.0_PHYSICAL_VERIFICATION_CHECK\scripts\checker\IMP-12-0-0-25.py", line 669, in <module>
+    sys.exit(main())
+             ~~~~^^
+  File "C:\Users\jingyu\OneDrive - Cadence Design Systems Inc\Desktop\checklist_dev\AI_2026_V1\CHECKLIST\CHECKLIST\Check_modules\12.0_PHYSICAL_VERIFICATION_CHECK\scripts\checker\IMP-12-0-0-25.py", line 662, in main
+    result = checker.execute_check()
+  File "C:\Users\jingyu\OneDrive - Cadence Design Systems Inc\Desktop\checklist_dev\AI_2026_V1\CHECKLIST\CHECKLIST\Check_modules\12.0_PHYSICAL_VERIFICATION_CHECK\scripts\checker\IMP-12-0-0-25.py", line 141, in execute_check
+    return self._execute_type2()
+           ~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\jingyu\OneDrive - Cadence Design Systems Inc\Desktop\checklist_dev\AI_2026_V1\CHECKLIST\CHECKLIST\Check_modules\12.0_PHYSICAL_VERIFICATION_CHECK\scripts\checker\IMP-12-0-0-25.py", line 502, in _execute_type2
+    found_items, missing_items = self._type2_core_logic()
+                                 ~~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\jingyu\OneDrive - Cadence Design Systems Inc\Desktop\checklist_dev\AI_2026_V1\CHECKLIST\CHECKLIST\Check_modules\12.0_PHYSICAL_VERIFICATION_CHECK\scripts\checker\IMP-12-0-0-25.py", line 523, in _type2_core_logic
+    data = self._parse_input_files()
+  File "C:\Users\jingyu\OneDrive - Cadence Design Systems Inc\Desktop\checklist_dev\AI_2026_V1\CHECKLIST\CHECKLIST\Check_modules\12.0_PHYSICAL_VERIFICATION_CHECK\scripts\checker\IMP-12-0-0-25.py", line 273, in _parse_input_files
+    for config_name, expected_value in pattern_dict.items():
+                                       ^^^^^^^^^^^^^^^^^^
+AttributeError: 'str' object has no attribute 'items'
+
+================================================================================
+
+[Test 5/6] Type 3
+--------------------------------------------------------------------------------
+Test ID: type3
+Status: ERROR
+
+(No log output)
+
+
+STDERR:
+Traceback (most recent call last):
+  File "C:\Users\jingyu\OneDrive - Cadence Design Systems Inc\Desktop\checklist_dev\AI_2026_V1\CHECKLIST\CHECKLIST\Check_modules\12.0_PHYSICAL_VERIFICATION_CHECK\scripts\checker\IMP-12-0-0-25.py", line 669, in <module>
+    sys.exit(main())
+             ~~~~^^
+  File "C:\Users\jingyu\OneDrive - Cadence Design Systems Inc\Desktop\checklist_dev\AI_2026_V1\CHECKLIST\CHECKLIST\Check_modules\12.0_PHYSICAL_VERIFICATION_CHECK\scripts\checker\IMP-12-0-0-25.py", line 662, in main
+    result = checker.execute_check()
+  File "C:\Users\jingyu\OneDrive - Cadence Design Systems Inc\Desktop\checklist_dev\AI_2026_V1\CHECKLIST\CHECKLIST\Check_modules\12.0_PHYSICAL_VERIFICATION_CHECK\scripts\checker\IMP-12-0-0-25.py", line 143, in execute_check
+    return self._execute_type3()
+           ~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\jingyu\OneDrive - Cadence Design Systems Inc\Desktop\checklist_dev\AI_2026_V1\CHECKLIST\CHECKLIST\Check_modules\12.0_PHYSICAL_VERIFICATION_CHECK\scripts\checker\IMP-12-0-0-25.py", line 608, in _execute_type3
+    found_items_base, violations = self._type2_core_logic()
+                                   ~~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\jingyu\OneDrive - Cadence Design Systems Inc\Desktop\checklist_dev\AI_2026_V1\CHECKLIST\CHECKLIST\Check_modules\12.0_PHYSICAL_VERIFICATION_CHECK\scripts\checker\IMP-12-0-0-25.py", line 523, in _type2_core_logic
+    data = self._parse_input_files()
+  File "C:\Users\jingyu\OneDrive - Cadence Design Systems Inc\Desktop\checklist_dev\AI_2026_V1\CHECKLIST\CHECKLIST\Check_modules\12.0_PHYSICAL_VERIFICATION_CHECK\scripts\checker\IMP-12-0-0-25.py", line 273, in _parse_input_files
+    for config_name, expected_value in pattern_dict.items():
+                                       ^^^^^^^^^^^^^^^^^^
+AttributeError: 'str' object has no attribute 'items'
+
+================================================================================
+
+[Test 6/6] Type 4
+--------------------------------------------------------------------------------
+Test ID: type4
+Status: PASS
+
+Checker Log Output:
+PASS:IMP-12-0-0-25:Confirm the BUMP DRC rule deck setting is correct.
+IMP-12-0-0-25-WARN01: Unused waivers:
+  Severity: Warn Occurrence: 2
+  - ChipWindowUsed
+  - UBM_DN_4_Average_Density
+
+
+================================================================================
+

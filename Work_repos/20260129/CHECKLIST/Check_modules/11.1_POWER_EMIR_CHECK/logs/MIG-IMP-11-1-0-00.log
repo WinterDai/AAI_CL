@@ -1,0 +1,5 @@
+FAIL:MIG-IMP-11-1-0-00:Confirm enable the full delay line to check the PG weak points related to delay line in EMIR analysis.
+MIG-IMP-11-1-0-00-ERROR01: Configuration error:
+  Severity: Fail Occurrence: 1
+  - input_files is empty in YAML configuration
+

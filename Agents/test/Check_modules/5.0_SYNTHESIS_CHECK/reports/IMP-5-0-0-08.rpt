@@ -1,0 +1,6 @@
+PASS:IMP-5-0-0-08:Confirm Multidriven Report clean?
+Info Occurrence: 4
+1: Info: pin:111. In line 12, C:\Users\wentao\AAI_local\AAI\Main_Work\ACL\CHECKLIST\CHECKLIST\IP_project_folder\reports\multidriven.rpt: Multidriven sequential pin
+2: Info: pin:222. In line 12, C:\Users\wentao\AAI_local\AAI\Main_Work\ACL\CHECKLIST\CHECKLIST\IP_project_folder\reports\multidriven.rpt: Multidriven sequential pin
+3: Info: hpin:333. In line 17, C:\Users\wentao\AAI_local\AAI\Main_Work\ACL\CHECKLIST\CHECKLIST\IP_project_folder\reports\multidriven.rpt: Multidriven hierarchical pin
+4: Info: hpin:444. In line 17, C:\Users\wentao\AAI_local\AAI\Main_Work\ACL\CHECKLIST\CHECKLIST\IP_project_folder\reports\multidriven.rpt: Multidriven hierarchical pin

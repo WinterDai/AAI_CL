@@ -1,0 +1,3 @@
+FAIL:IMP-2-0-0-13:List Spice Model used for PGV generation. eg: tsmc3gp.a.4/models/spectre_v1d0_2p6/ir_em.scs
+Fail Occurrence: 1
+1: Fail: input_files is empty in YAML configuration

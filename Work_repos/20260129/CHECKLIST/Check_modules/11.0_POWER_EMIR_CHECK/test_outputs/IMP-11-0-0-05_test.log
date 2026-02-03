@@ -1,0 +1,110 @@
+Test Log: IMP-11-0-0-05
+================================================================================
+
+[Test 1/6] Type 1 (requirements.value=N/A, waivers.value=N/A)
+--------------------------------------------------------------------------------
+Test ID: type1_na
+Status: PASS
+
+Checker Log Output:
+PASS:IMP-11-0-0-05:Confirm generate all the power library with detail view correctly.
+IMP-11-0-0-05-INFO01: GDS files found in library generation logs:
+  Severity: Info Occurrence: 3
+  - gpio_ffgnp_0p825v_125c_cbest_CCbest_T
+  - sram_ffgnp_0p825v_125c_cbest_CCbest_T
+  - tech_ffgnp_0p825v_125c_cbest_CCbest_T
+
+
+================================================================================
+
+[Test 2/6] Type 1 (requirements.value=N/A, waivers.value=0)
+--------------------------------------------------------------------------------
+Test ID: type1_0
+Status: PASS
+
+Checker Log Output:
+PASS:IMP-11-0-0-05:Confirm generate all the power library with detail view correctly.
+IMP-11-0-0-05-INFO01: [WAIVED_INFO]: Waived information:
+  Severity: Info Occurrence: 1
+  - Violations are acceptable for this check
+IMP-11-0-0-05-INFO02: GDS files found in library generation logs:
+  Severity: Info Occurrence: 3
+  - gpio_ffgnp_0p825v_125c_cbest_CCbest_T
+  - sram_ffgnp_0p825v_125c_cbest_CCbest_T
+  - tech_ffgnp_0p825v_125c_cbest_CCbest_T
+
+
+================================================================================
+
+[Test 3/6] Type 2 (requirements.value>0, waivers.value=N/A)
+--------------------------------------------------------------------------------
+Test ID: type2_na
+Status: ERROR
+
+Checker Log Output:
+FAIL:IMP-11-0-0-05:Confirm generate all the power library with detail view correctly.
+IMP-11-0-0-05-ERROR01: GDS file paths not found for library:
+  Severity: Fail Occurrence: 3
+  - ffgnp_0p825v_125c_cbest_CCbest_T
+  - ffgnp_0p825v_m40c_cbest_CCbest_T
+  - ssgnp_0p675v_m40c_cworst_CCworst_T
+
+
+================================================================================
+
+[Test 4/6] Type 2 (requirements.value>0, waivers.value=0)
+--------------------------------------------------------------------------------
+Test ID: type2_0
+Status: PASS
+
+Checker Log Output:
+PASS:IMP-11-0-0-05:Confirm generate all the power library with detail view correctly.
+IMP-11-0-0-05-INFO01: [WAIVED_INFO]: Waived information:
+  Severity: Info Occurrence: 1
+  - Informational check: GDS file paths printed for user verification
+IMP-11-0-0-05-INFO02: [WAIVED_AS_INFO]: GDS file paths not found for library:
+  Severity: Info Occurrence: 3
+  - ffgnp_0p825v_125c_cbest_CCbest_T
+  - ffgnp_0p825v_m40c_cbest_CCbest_T
+  - ssgnp_0p675v_m40c_cworst_CCworst_T
+
+
+================================================================================
+
+[Test 5/6] Type 3 (requirements.value>0, waivers.value>0)
+--------------------------------------------------------------------------------
+Test ID: type3
+Status: ERROR
+
+Checker Log Output:
+FAIL:IMP-11-0-0-05:Confirm generate all the power library with detail view correctly.
+IMP-11-0-0-05-ERROR01: GDS file paths not found for library:
+  Severity: Fail Occurrence: 1
+  - pattern1
+IMP-11-0-0-05-WARN01: Unused waivers:
+  Severity: Warn Occurrence: 2
+  - item1
+  - item2
+
+
+================================================================================
+
+[Test 6/6] Type 4 (requirements.value=N/A, waivers.value>0)
+--------------------------------------------------------------------------------
+Test ID: type4
+Status: PASS
+
+Checker Log Output:
+PASS:IMP-11-0-0-05:Confirm generate all the power library with detail view correctly.
+IMP-11-0-0-05-WARN01: Unused waivers:
+  Severity: Warn Occurrence: 1
+  - item1
+IMP-11-0-0-05-INFO01: GDS files found in library generation logs:
+  Severity: Info Occurrence: 3
+  - gpio_ffgnp_0p825v_125c_cbest_CCbest_T
+  - sram_ffgnp_0p825v_125c_cbest_CCbest_T
+  - tech_ffgnp_0p825v_125c_cbest_CCbest_T
+
+
+================================================================================
+

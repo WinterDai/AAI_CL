@@ -1,0 +1,9 @@
+PASS:IMP-2-0-0-14:List EM irxc rule deck name. eg: ICT_EM_v1d0p1a/cln3p_1p17m+ut-alrdl_1xa1xb1xc1xd1ya1yb4y2yy2yx2r_shdmim.ictem
+IMP-2-0-0-14-WARN01: Unused waivers:
+  Severity: Warn Occurrence: 2
+  - ictem_v1d0p1a/cln3p_1p17m+ut-alrdl_1xa1xb1xc1xd1ya1yb4y2yy2yx2r_shdmim.ictem
+  - ictem_v1d3p0a/cln5_1p16m+alrdl_1x1xb1xe1ya1yb6y2yy2r.ictem
+IMP-2-0-0-14-INFO01: EM rule deck matched expected configuration:
+  Severity: Info Occurrence: 1
+  - ictem_v1d2p1a/cln5_1p16m+ut-alrdl_1x1xb1xe1ya1yb6y2yy2r_shdmim.ictem
+

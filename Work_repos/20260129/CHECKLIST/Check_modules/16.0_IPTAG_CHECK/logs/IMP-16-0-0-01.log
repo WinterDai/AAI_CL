@@ -1,0 +1,5 @@
+FAIL:IMP-16-0-0-01:Confirm add TAG information to PHY.(TC/Controller don't need IPTAG)
+IMP-16-0-0-01-ERROR01: IPTAG mismatch detected between golden and check IPTAGs:
+  Severity: Fail Occurrence: 1
+  - Golden: HPCFSC_D5D4_T5G$CTIME$17M1X1Xb1Xe1Ya1Yb5Y2Yy2Yx2R | Check: HPCFSC_D5D4_T5G$C202209262108$17M1X1Xb1Xe1Ya1Yb5Y2Yy2Yx2R
+

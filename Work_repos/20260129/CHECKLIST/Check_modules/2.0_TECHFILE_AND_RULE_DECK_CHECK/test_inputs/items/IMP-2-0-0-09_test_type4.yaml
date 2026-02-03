@@ -1,0 +1,15 @@
+description: Confirm BUMP rule deck was not modified? If it was, explain in comments
+  field.
+input_files:
+- ${CHECKLIST_ROOT}\IP_project_folder\logs\2.0\BUMP_pvl.log
+requirements:
+  pattern_items: []
+  value: N/A
+waivers:
+  value: 2
+  waive_items:
+  - name: PN5_CU_BUMP_030.10_1a
+    reason: Modification of this rule deck is acceptable for this project per design
+      team approval
+  - name: PN5_CU_BUMP_030.10_2b
+    reason: Custom rule deck variant approved for advanced node testing

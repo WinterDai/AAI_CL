@@ -1,0 +1,11 @@
+description: Confirm whether ESD PERC check is needed.
+input_files:
+- ${CHECKLIST_ROOT}/IP_project_folder/reports/7.0/IMP-7-0-0-00.rpt
+requirements:
+  pattern_items: []
+  value: N/A
+waivers:
+  value: 0
+  waive_items:
+  - 'Explanation: ESD PERC check requirement is informational only for this design
+    phase'

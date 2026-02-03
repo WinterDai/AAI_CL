@@ -1,0 +1,82 @@
+Test Report: IMP-2-0-0-03
+================================================================================
+
+[Test 1/6] Type 1 (requirements.value=N/A, waivers.value=N/A)
+--------------------------------------------------------------------------------
+Test ID: type1_na
+Status: PASS
+
+Checker Report Output:
+PASS:IMP-2-0-0-03:Confirm DRC rule deck was not modified? If it was, explain in comments field.
+Info Occurrence: 1
+1: Info: C:\Users\chenweif\Checker_dev\CHECKLIST\CHECKLIST\IP_project_folder\ruledeck\2.0\PLN5LO_16M_1X1Xb1Xe1Ya1Yb6Y2Yy2R_014.13_1a.encrypt.phy. In line 302, C:\Users\chenweif\Checker_dev\CHECKLIST\CHECKLIST\IP_project_folder\logs\2.0\DRC_pvl.log: Rule deck path successfully extracted from DRC log
+
+================================================================================
+
+[Test 2/6] Type 1 (requirements.value=N/A, waivers.value=0)
+--------------------------------------------------------------------------------
+Test ID: type1_0
+Status: PASS
+
+Checker Report Output:
+PASS:IMP-2-0-0-03:Confirm DRC rule deck was not modified? If it was, explain in comments field.
+Info Occurrence: 2
+1: Info: Explanation: Rule deck path extraction is informational only for this project phase: Explanation: Rule deck path extraction is informational only for this project phase[WAIVED_INFO]
+2: Info: C:\Users\chenweif\Checker_dev\CHECKLIST\CHECKLIST\IP_project_folder\ruledeck\2.0\PLN5LO_16M_1X1Xb1Xe1Ya1Yb6Y2Yy2R_014.13_1a.encrypt.phy. In line 302, C:\Users\chenweif\Checker_dev\CHECKLIST\CHECKLIST\IP_project_folder\logs\2.0\DRC_pvl.log: Rule deck path successfully extracted from DRC log
+
+================================================================================
+
+[Test 3/6] Type 2 (requirements.value>0, waivers.value=N/A)
+--------------------------------------------------------------------------------
+Test ID: type2_na
+Status: ERROR
+
+Checker Report Output:
+FAIL:IMP-2-0-0-03:Confirm DRC rule deck was not modified? If it was, explain in comments field.
+Fail Occurrence: 1
+1: Fail: C:\Users\chenweif\Checker_dev\CHECKLIST\CHECKLIST\IP_project_folder\ruledeck\2.0\PLN5LO_16M_1X1Xb1Xe1Ya1Yb6Y2Yy2R_014.13_1a.encrypt.phy. In line 302, C:\Users\chenweif\Checker_dev\CHECKLIST\CHECKLIST\IP_project_folder\logs\2.0\DRC_pvl.log: Rule deck content differs from golden baseline - modifications detected - see diff file: C:\Users\chenweif\Checker_dev\CHECKLIST\CHECKLIST\Check_modules\2.0_TECHFILE_AND_RULE_DECK_CHECK\reports\IMP-2-0-0-03_diff.txt
+
+================================================================================
+
+[Test 4/6] Type 2 (requirements.value>0, waivers.value=0)
+--------------------------------------------------------------------------------
+Test ID: type2_0
+Status: PASS
+
+Checker Report Output:
+PASS:IMP-2-0-0-03:Confirm DRC rule deck was not modified? If it was, explain in comments field.
+Info Occurrence: 2
+1: Info: Explanation: Rule deck modifications are acceptable during development phase: Explanation: Rule deck modifications are acceptable during development phase[WAIVED_INFO]
+2: Info: C:\Users\chenweif\Checker_dev\CHECKLIST\CHECKLIST\IP_project_folder\ruledeck\2.0\PLN5LO_16M_1X1Xb1Xe1Ya1Yb6Y2Yy2R_014.13_1a.encrypt.phy. In line 302, C:\Users\chenweif\Checker_dev\CHECKLIST\CHECKLIST\IP_project_folder\logs\2.0\DRC_pvl.log: Rule deck content differs from golden baseline - modifications detected - see diff file: C:\Users\chenweif\Checker_dev\CHECKLIST\CHECKLIST\Check_modules\2.0_TECHFILE_AND_RULE_DECK_CHECK\reports\IMP-2-0-0-03_diff.txt[WAIVED_AS_INFO]
+
+================================================================================
+
+[Test 5/6] Type 3
+--------------------------------------------------------------------------------
+Test ID: type3
+Status: PASS
+
+Checker Report Output:
+PASS:IMP-2-0-0-03:Confirm DRC rule deck was not modified? If it was, explain in comments field.
+Warn Occurrence: 1
+1: Warn: cdn_hs_phy_top.DRCwD.pvl: Waiver entry not matched - no corresponding rule deck modification found: Project-specific rule deck customization approved by design team[WAIVER]
+Info Occurrence: 1
+1: Info: C:\Users\chenweif\Checker_dev\CHECKLIST\CHECKLIST\IP_project_folder\ruledeck\2.0\PLN5LO_16M_1X1Xb1Xe1Ya1Yb6Y2Yy2R_014.13_1a.encrypt.phy. In line 302, C:\Users\chenweif\Checker_dev\CHECKLIST\CHECKLIST\IP_project_folder\logs\2.0\DRC_pvl.log: Rule deck modification waived per project approval[WAIVER]
+
+================================================================================
+
+[Test 6/6] Type 4
+--------------------------------------------------------------------------------
+Test ID: type4
+Status: PASS
+
+Checker Report Output:
+PASS:IMP-2-0-0-03:Confirm DRC rule deck was not modified? If it was, explain in comments field.
+Warn Occurrence: 2
+1: Warn: PLN5LO_16M_1X1Xb1Xe1Ya1Yb6Y2Yy2R_014.13_1a.encrypt: Waiver entry not matched - no corresponding rule deck modification found: Modification of this rule deck is acceptable for this project[WAIVER]
+2: Warn: cdn_hs_phy_top.DRCwD.pvl: Waiver entry not matched - no corresponding rule deck modification found: Project-specific rule deck customization approved by design team[WAIVER]
+Info Occurrence: 1
+1: Info: C:\Users\chenweif\Checker_dev\CHECKLIST\CHECKLIST\IP_project_folder\ruledeck\2.0\PLN5LO_16M_1X1Xb1Xe1Ya1Yb6Y2Yy2R_014.13_1a.encrypt.phy. In line 302, C:\Users\chenweif\Checker_dev\CHECKLIST\CHECKLIST\IP_project_folder\logs\2.0\DRC_pvl.log: Rule deck path successfully extracted from DRC log
+
+================================================================================
+

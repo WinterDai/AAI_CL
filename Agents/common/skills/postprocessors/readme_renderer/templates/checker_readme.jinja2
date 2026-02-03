@@ -1,0 +1,73 @@
+# {{ item_id }}: {{ description }}
+
+## Overview
+
+**Category**: {{ category | default('Checker') }}  
+**Check Type**: Type {{ detected_type }} - {{ type_description }}  
+**Files**: {{ file_count }} input file(s){% if aggregation_needed %} (aggregation required){% endif %}
+
+## Check Logic
+
+### Parsing Method
+
+{{ check_logic.parsing_method }}
+
+### Key Patterns
+
+{% if check_logic.regex_patterns %}
+```python
+# Regex patterns used for extraction
+{% for pattern in check_logic.regex_patterns %}
+{{ pattern }}
+{% endfor %}
+```
+{% else %}
+No specific regex patterns - file content is checked as a whole.
+{% endif %}
+
+### Pass/Fail Criteria
+
+{{ check_logic.pass_fail_logic }}
+
+## Type Configuration Examples
+
+{% for type_id, example in type_examples.items() %}
+### {{ type_id | replace('type', 'Type ') }}
+
+**YAML Configuration:**
+```yaml
+{{ example.yaml }}
+```
+
+**Behavior:** {{ example.behavior }}
+
+**Expected Output:**
+```
+{{ example.output }}
+```
+
+{% endfor %}
+
+## Output Descriptions
+
+### INFO01 (Success)
+{{ output_info01_format | default('SUCCESS: Check passed') }}
+
+### ERROR01 (Failure)
+{{ output_error01_format | default('ERROR: Check failed') }}
+
+## Testing
+
+### Prerequisites
+```bash
+cd {{ module_path | default('Check_modules/<module>') }}
+```
+
+### Run Commands
+{{ testing_commands | default('python -m checker --item ' + item_id) }}
+
+## References
+
+- Configuration: `inputs/items/{{ item_id }}.yaml`
+- Script: `scripts/{{ item_id }}_checker.py`
+- Documentation: `scripts/doc/{{ item_id }}_README.md`

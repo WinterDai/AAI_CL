@@ -1,0 +1,14 @@
+description: List Innovus Tech Lef name. eg:N16_Encounter_11M_2Xa1Xd3Xe2Y2R_UTRDL_9T_PODE_1.2a.tlef
+input_files:
+- ${CHECKLIST_ROOT}\IP_project_folder\logs\2.0\do_innovusOUTwoD.logv
+requirements:
+  pattern_items:
+  - PRTF_Innovus_N5_16M_1X1Xb1Xe1Ya1Yb6Y2Yy2R_UTRDL_M1P34_M2P35_M3P42_M4P42_M5P76_M6P76_M7P76_M8P76_M9P76_M10P76_M11P76_M12P76_H210_SHDMIM.13a.tlef
+  value: 1
+waivers:
+  value: 2
+  waive_items:
+  - name: PRTF_Innovus_N5_16M_1X1Xb1Xe1Ya1Yb6Y2Yy2R_UTRDL_M1P34_M2P35_M3P42_M4P42_M5P76_M6P76_M7P76_M8P76_M9P76_M10P76_M11P76_M12P76_H210_SHDMIM.12b.tlef
+    reason: Waived - using previous tech LEF version for legacy block compatibility
+  - name: PRTF_Innovus_N5_8M_1X1Xb1Xe1Ya1Yb6Y2Yy2R_UTRDL_M1P34_M2P35_M3P42_M4P42_M5P76_M6P76_M7P76_M8P76_H210_SHDMIM.13a.tlef
+    reason: Waived - using 8M stack variant for low-power design

@@ -1,0 +1,67 @@
+====================================================================================================
+DETAILED COMPARISON REPORT
+====================================================================================================
+
+====================================================================================================
+HIGH-LEVEL COMPARISON
+====================================================================================================
+
+is_pass:
+  Golden:    False
+  CodeGen:   False
+  Match:     ✓ YES
+
+value:
+  Golden:    1
+  CodeGen:   1
+  Match:     ✓ YES
+
+Detail Count:
+  Golden:    2
+  CodeGen:   2
+  Match:     ✓ YES
+
+Severity Breakdown:
+  FAIL    : Golden= 1, CodeGen= 1  ✓
+  INFO    : Golden= 1, CodeGen= 1  ✓
+
+====================================================================================================
+DETAILS COMPARISON
+====================================================================================================
+
+--- Detail #1 ---
+  Golden:  [INFO] Netlist: C:\Users\yuyin\Desktop\CHECKLIST\IP_project_folder\dbs\phy_cmn_phase_align_digtop.v.gz (found in log, file not accessible)
+           Reason: Status: Success...
+  CodeGen: [INFO] Netlist File (found in log, file not accessible)
+           Reason: Item found...
+  Match:   ✗ NO
+
+--- Detail #2 ---
+  Golden:  [FAIL] SPEF Reading was skipped (Skipping SPEF reading as we are writing post-synthesis SDF files)
+           Reason: File loading failed...
+  CodeGen: [FAIL] SPEF Reading was skipped: Skipping SPEF reading as we are writing post-synthesis SDF files
+           Reason: Item not found...
+  Match:   ✗ NO
+
+====================================================================================================
+GROUPS COMPARISON
+====================================================================================================
+
+Info Groups:
+  Golden:    1 groups
+  CodeGen:   1 groups
+
+Error Groups:
+  Golden:    1 groups
+  CodeGen:   1 groups
+
+Warn Groups:
+  Golden:    0 groups
+  CodeGen:   0 groups
+
+====================================================================================================
+VERDICT
+====================================================================================================
+
+✓✓✓ PASS - Results are IDENTICAL ✓✓✓
+====================================================================================================

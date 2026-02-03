@@ -1,0 +1,101 @@
+Test Log: IMP-2-0-0-07
+================================================================================
+
+[Test 1/6] Type 1 (requirements.value=N/A, waivers.value=N/A)
+--------------------------------------------------------------------------------
+Test ID: type1_na
+Status: PASS
+
+Checker Log Output:
+PASS:IMP-2-0-0-07:Confirm LVS rule deck was not modified? If it was, explain in comments field.
+IMP-2-0-0-07-INFO01: LVS rule deck path found in log file:
+  Severity: Info Occurrence: 1
+  - /process/tsmcN5/data/g/PEGASUS/LVS/v1d2b/MAIN_DECK/PEGASUS_FLOW/DFM/PEGASUS.logic_operation2.enc
+
+
+================================================================================
+
+[Test 2/6] Type 1 (requirements.value=N/A, waivers.value=0)
+--------------------------------------------------------------------------------
+Test ID: type1_0
+Status: PASS
+
+Checker Log Output:
+PASS:IMP-2-0-0-07:Confirm LVS rule deck was not modified? If it was, explain in comments field.
+IMP-2-0-0-07-INFO01: [WAIVED_INFO]: Waived information:
+  Severity: Info Occurrence: 1
+  - Explanation: LVS rule deck path extraction is informational only for this project
+IMP-2-0-0-07-INFO02: LVS rule deck path found in log file:
+  Severity: Info Occurrence: 1
+  - /process/tsmcN5/data/g/PEGASUS/LVS/v1d2b/MAIN_DECK/PEGASUS_FLOW/DFM/PEGASUS.logic_operation2.enc
+
+
+================================================================================
+
+[Test 3/6] Type 2 (requirements.value>0, waivers.value=N/A)
+--------------------------------------------------------------------------------
+Test ID: type2_na
+Status: ERROR
+
+Checker Log Output:
+FAIL:IMP-2-0-0-07:Confirm LVS rule deck was not modified? If it was, explain in comments field.
+IMP-2-0-0-07-ERROR01: LVS rule deck modified - differences detected from golden baseline:
+  Severity: Fail Occurrence: 1
+  - local_file_missing
+
+
+================================================================================
+
+[Test 4/6] Type 2 (requirements.value>0, waivers.value=0)
+--------------------------------------------------------------------------------
+Test ID: type2_0
+Status: PASS
+
+Checker Log Output:
+PASS:IMP-2-0-0-07:Confirm LVS rule deck was not modified? If it was, explain in comments field.
+IMP-2-0-0-07-INFO01: [WAIVED_INFO]: Waived information:
+  Severity: Info Occurrence: 1
+  - Explanation: LVS rule deck modifications are acceptable for this project phase
+IMP-2-0-0-07-INFO02: [WAIVED_AS_INFO]: LVS rule deck modified - differences detected from golden baseline:
+  Severity: Info Occurrence: 1
+  - local_file_missing
+
+
+================================================================================
+
+[Test 5/6] Type 3
+--------------------------------------------------------------------------------
+Test ID: type3
+Status: ERROR
+
+Checker Log Output:
+FAIL:IMP-2-0-0-07:Confirm LVS rule deck was not modified? If it was, explain in comments field.
+IMP-2-0-0-07-ERROR01: LVS rule deck modified - differences detected from golden baseline:
+  Severity: Fail Occurrence: 1
+  - local_file_missing
+IMP-2-0-0-07-WARN01: Unused waivers:
+  Severity: Warn Occurrence: 2
+  - DFM_LVS_RC_PEGASUS_N5_1p16M_1X1Xb1Xe1Ya1Yb6Y2Yy2R_ALRDL.1.2a
+  - DFM_LVS_RC_PEGASUS_N5_1p16M_1X1Xb1Xe1Ya1Yb6Y2Yy2R_ALRDL.1.2b
+
+
+================================================================================
+
+[Test 6/6] Type 4
+--------------------------------------------------------------------------------
+Test ID: type4
+Status: PASS
+
+Checker Log Output:
+PASS:IMP-2-0-0-07:Confirm LVS rule deck was not modified? If it was, explain in comments field.
+IMP-2-0-0-07-WARN01: Unused waivers:
+  Severity: Warn Occurrence: 2
+  - DFM_LVS_RC_PEGASUS_N5_1p16M_1X1Xb1Xe1Ya1Yb6Y2Yy2R_ALRDL.1.2a
+  - DFM_LVS_RC_PEGASUS_N5_1p16M_1X1Xb1Xe1Ya1Yb6Y2Yy2R_ALRDL.1.2b
+IMP-2-0-0-07-INFO01: LVS rule deck path found in log file:
+  Severity: Info Occurrence: 1
+  - /process/tsmcN5/data/g/PEGASUS/LVS/v1d2b/MAIN_DECK/PEGASUS_FLOW/DFM/PEGASUS.logic_operation2.enc
+
+
+================================================================================
+

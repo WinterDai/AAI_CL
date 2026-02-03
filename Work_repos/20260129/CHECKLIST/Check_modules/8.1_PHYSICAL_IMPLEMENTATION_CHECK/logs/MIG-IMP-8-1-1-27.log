@@ -1,0 +1,5 @@
+FAIL:MIG-IMP-8-1-1-27:Confirm meet the decap requirement in die model checklist. (Check the Notes)
+MIG-IMP-8-1-1-27-ERROR01: Configuration error:
+  Severity: Fail Occurrence: 1
+  - input_files is empty in YAML configuration
+

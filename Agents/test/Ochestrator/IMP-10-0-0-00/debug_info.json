@@ -1,0 +1,14 @@
+{
+  "timestamp": "2026-01-02T19:16:49.479299",
+  "duration_seconds": 107.304359,
+  "status": "partial",
+  "errors": [
+    "ValidationAgent failed: []"
+  ],
+  "config": {
+    "run_context_agent": false,
+    "run_codegen_agent": true,
+    "run_validation_agent": true,
+    "validation_use_mock_llm": true
+  }
+}

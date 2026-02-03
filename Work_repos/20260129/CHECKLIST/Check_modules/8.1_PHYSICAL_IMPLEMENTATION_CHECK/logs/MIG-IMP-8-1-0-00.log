@@ -1,0 +1,5 @@
+FAIL:MIG-IMP-8-1-0-00:Confirm followed the general slice top metal and top routing layer spec. (check the Note)
+MIG-IMP-8-1-0-00-ERROR01: Routing layer specification violations detected:
+  Severity: Fail Occurrence: 1
+  - Top routing layer M12 (M12) is 3 layers from top metal M15 (M15)
+

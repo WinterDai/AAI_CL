@@ -1,0 +1,5 @@
+FAIL:IMP-11-0-0-25:Confirm use TSO to run power opt including leakage opt
+IMP-11-0-0-25-ERROR01: Configuration error:
+  Severity: Fail Occurrence: 1
+  - input_files is empty in YAML configuration
+

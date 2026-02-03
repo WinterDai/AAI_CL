@@ -1,0 +1,149 @@
+Test Log: IMP-8-0-0-23
+================================================================================
+
+[Test 1/6] Type 1 (requirements.value=N/A, waivers.value=N/A)
+--------------------------------------------------------------------------------
+Test ID: type1_na
+Status: ERROR
+
+Checker Log Output:
+FAIL:IMP-8-0-0-23:confirm no unplaced cells in design.
+IMP-8-0-0-23-ERROR01: Unplaced cells detected in design:
+  Severity: Fail Occurrence: 9
+  inst_data_ctrl_top/inst_ctrl_gen/g26516__9945
+  inst_data_ctrl_top/inst_ctrl_gen/g26625__4733
+  inst_data_param_top/inst_data_slice_param/FE_OFC54006_n
+  inst_data_param_top/inst_data_slice_param/inst_param_regout/g99009
+  inst_data_param_top/inst_data_slice_param/inst_phy_x4_dq_tsel_rd_timing/g1106
+  inst_data_param_top/inst_data_slice_param/inst_phy_x4_dq_tsel_rd_timing/g1147
+  inst_data_param_top/inst_data_slice_param/inst_phy_x4_dqs_tsel_rd_timing/g1105
+  inst_data_param_top/inst_data_slice_param/inst_phy_x4_dqs_tsel_rd_timing/g1106
+  inst_data_param_top/inst_data_slice_param/inst_phy_x4_dqs_tsel_rd_timing/g1107
+
+
+================================================================================
+
+[Test 2/6] Type 1 (requirements.value=N/A, waivers.value=0)
+--------------------------------------------------------------------------------
+Test ID: type1_0
+Status: PASS
+
+Checker Log Output:
+PASS:IMP-8-0-0-23:confirm no unplaced cells in design.
+IMP-8-0-0-23-INFO01: [WAIVED_INFO]: Waived information:
+  Severity: Info Occurrence: 1
+  Explanation: Unplaced cells are acceptable during early placement exploration phase
+IMP-8-0-0-23-INFO02: [WAIVED_AS_INFO]: Unplaced cells detected in design:
+  Severity: Info Occurrence: 9
+  inst_data_ctrl_top/inst_ctrl_gen/g26516__9945
+  inst_data_ctrl_top/inst_ctrl_gen/g26625__4733
+  inst_data_param_top/inst_data_slice_param/FE_OFC54006_n
+  inst_data_param_top/inst_data_slice_param/inst_param_regout/g99009
+  inst_data_param_top/inst_data_slice_param/inst_phy_x4_dq_tsel_rd_timing/g1106
+  inst_data_param_top/inst_data_slice_param/inst_phy_x4_dq_tsel_rd_timing/g1147
+  inst_data_param_top/inst_data_slice_param/inst_phy_x4_dqs_tsel_rd_timing/g1105
+  inst_data_param_top/inst_data_slice_param/inst_phy_x4_dqs_tsel_rd_timing/g1106
+  inst_data_param_top/inst_data_slice_param/inst_phy_x4_dqs_tsel_rd_timing/g1107
+
+
+================================================================================
+
+[Test 3/6] Type 2 (requirements.value>0, waivers.value=N/A)
+--------------------------------------------------------------------------------
+Test ID: type2_na
+Status: ERROR
+
+Checker Log Output:
+FAIL:IMP-8-0-0-23:confirm no unplaced cells in design.
+IMP-8-0-0-23-ERROR01: Placement incomplete - unplaced cells found in design:
+  Severity: Fail Occurrence: 9
+  inst_data_ctrl_top/inst_ctrl_gen/g26516__9945
+  inst_data_ctrl_top/inst_ctrl_gen/g26625__4733
+  inst_data_param_top/inst_data_slice_param/FE_OFC54006_n
+  inst_data_param_top/inst_data_slice_param/inst_param_regout/g99009
+  inst_data_param_top/inst_data_slice_param/inst_phy_x4_dq_tsel_rd_timing/g1106
+  inst_data_param_top/inst_data_slice_param/inst_phy_x4_dq_tsel_rd_timing/g1147
+  inst_data_param_top/inst_data_slice_param/inst_phy_x4_dqs_tsel_rd_timing/g1105
+  inst_data_param_top/inst_data_slice_param/inst_phy_x4_dqs_tsel_rd_timing/g1106
+  inst_data_param_top/inst_data_slice_param/inst_phy_x4_dqs_tsel_rd_timing/g1107
+
+
+================================================================================
+
+[Test 4/6] Type 2 (requirements.value>0, waivers.value=0)
+--------------------------------------------------------------------------------
+Test ID: type2_0
+Status: PASS
+
+Checker Log Output:
+PASS:IMP-8-0-0-23:confirm no unplaced cells in design.
+IMP-8-0-0-23-INFO01: [WAIVED_INFO]: Waived information:
+  Severity: Info Occurrence: 1
+  Explanation: Unplaced cells are acceptable during incremental placement optimization
+IMP-8-0-0-23-INFO02: [WAIVED_AS_INFO]: Placement incomplete - unplaced cells found in design:
+  Severity: Info Occurrence: 9
+  inst_data_ctrl_top/inst_ctrl_gen/g26516__9945
+  inst_data_ctrl_top/inst_ctrl_gen/g26625__4733
+  inst_data_param_top/inst_data_slice_param/FE_OFC54006_n
+  inst_data_param_top/inst_data_slice_param/inst_param_regout/g99009
+  inst_data_param_top/inst_data_slice_param/inst_phy_x4_dq_tsel_rd_timing/g1106
+  inst_data_param_top/inst_data_slice_param/inst_phy_x4_dq_tsel_rd_timing/g1147
+  inst_data_param_top/inst_data_slice_param/inst_phy_x4_dqs_tsel_rd_timing/g1105
+  inst_data_param_top/inst_data_slice_param/inst_phy_x4_dqs_tsel_rd_timing/g1106
+  inst_data_param_top/inst_data_slice_param/inst_phy_x4_dqs_tsel_rd_timing/g1107
+
+
+================================================================================
+
+[Test 5/6] Type 3 (requirements.value>0, waivers.value>0)
+--------------------------------------------------------------------------------
+Test ID: type3
+Status: ERROR
+
+Checker Log Output:
+FAIL:IMP-8-0-0-23:confirm no unplaced cells in design.
+IMP-8-0-0-23-ERROR01: Placement incomplete - unplaced cells found in design:
+  Severity: Fail Occurrence: 9
+  inst_data_ctrl_top/inst_ctrl_gen/g26516__9945
+  inst_data_ctrl_top/inst_ctrl_gen/g26625__4733
+  inst_data_param_top/inst_data_slice_param/FE_OFC54006_n
+  inst_data_param_top/inst_data_slice_param/inst_param_regout/g99009
+  inst_data_param_top/inst_data_slice_param/inst_phy_x4_dq_tsel_rd_timing/g1106
+  inst_data_param_top/inst_data_slice_param/inst_phy_x4_dq_tsel_rd_timing/g1147
+  inst_data_param_top/inst_data_slice_param/inst_phy_x4_dqs_tsel_rd_timing/g1105
+  inst_data_param_top/inst_data_slice_param/inst_phy_x4_dqs_tsel_rd_timing/g1106
+  inst_data_param_top/inst_data_slice_param/inst_phy_x4_dqs_tsel_rd_timing/g1107
+IMP-8-0-0-23-WARN01: Unused waivers:
+  Severity: Warn Occurrence: 2
+  design/memory_ctrl/buffer_inst/flop_23
+  top/cpu_core/alu/adder_cell
+
+
+================================================================================
+
+[Test 6/6] Type 4 (requirements.value=N/A, waivers.value>0)
+--------------------------------------------------------------------------------
+Test ID: type4
+Status: ERROR
+
+Checker Log Output:
+FAIL:IMP-8-0-0-23:confirm no unplaced cells in design.
+IMP-8-0-0-23-ERROR01: Unplaced cells detected in design:
+  Severity: Fail Occurrence: 9
+  inst_data_ctrl_top/inst_ctrl_gen/g26516__9945
+  inst_data_ctrl_top/inst_ctrl_gen/g26625__4733
+  inst_data_param_top/inst_data_slice_param/FE_OFC54006_n
+  inst_data_param_top/inst_data_slice_param/inst_param_regout/g99009
+  inst_data_param_top/inst_data_slice_param/inst_phy_x4_dq_tsel_rd_timing/g1106
+  inst_data_param_top/inst_data_slice_param/inst_phy_x4_dq_tsel_rd_timing/g1147
+  inst_data_param_top/inst_data_slice_param/inst_phy_x4_dqs_tsel_rd_timing/g1105
+  inst_data_param_top/inst_data_slice_param/inst_phy_x4_dqs_tsel_rd_timing/g1106
+  inst_data_param_top/inst_data_slice_param/inst_phy_x4_dqs_tsel_rd_timing/g1107
+IMP-8-0-0-23-WARN01: Unused waivers:
+  Severity: Warn Occurrence: 2
+  design/memory_ctrl/buffer_inst/flop_23
+  top/cpu_core/alu/adder_cell
+
+
+================================================================================
+

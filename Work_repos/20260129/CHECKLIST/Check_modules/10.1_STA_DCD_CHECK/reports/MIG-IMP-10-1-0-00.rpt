@@ -1,0 +1,3 @@
+FAIL:MIG-IMP-10-1-0-00:Confirm the the cel list specified in library_setup/set_instance_voltage.tcl in STA environment matches to the real physical implemention for projects with regulator. Please do local update for VDDR domain cell list in the file when needed.
+Fail Occurrence: 1
+1: Fail: input_files is empty in YAML configuration

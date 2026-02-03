@@ -1,0 +1,6 @@
+PASS:IMP-10-0-0-15:Confirm the double_clock check result is clean.
+IMP-10-0-0-15-INFO01: Clean timing views with no double clocking violations:
+  Severity: Info Occurrence: 2
+  - at_speed_rcff_0p825v_125c_pcff_cmin_pcff3_hold
+  - func_rcff_0p825v_125c_pcff_cmin_pcff3_hold
+

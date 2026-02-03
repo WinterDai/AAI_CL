@@ -1,0 +1,31 @@
+description: 'Confirm the MIM related check setting is correct. (Fill N/A if
+  no MIMCAP inserted or no MIM related layers)'
+requirements:
+  value: 8
+  pattern_items:
+    - CoWoS_S: disabled
+      # Turn on for CoWoS-S SHDMIM / FHDMIM KOZ Check
+    - SHDMIM: enabled
+      # Turn on to check related MIM.AP.* rules
+    - FHDMIM: disabled
+      # Turn on to check FHDMIM related rules
+    - KOZ_High_subst_layer: disabled
+      # Turn on to check KOZ for package substrate layer >14
+    - SHDMIM_KOZ_AP_SPACE_5um: disabled
+      # Turn on to check related MIM rules
+    - SHDMIM_KOZ_AP_SPACE_5um_IP: disabled
+      # Turn on to check related MIM rules
+    - FHDMIM_KOZ_AP_SPACE_5um: disabled
+      # Turn on to check related MIM rules
+    - FHDMIM_KOZ_AP_SPACE_5um_IP: disabled
+      # Turn on to check related MIM rules
+      
+input_files:
+  - ${CHECKLIST_ROOT}/IP_project_folder/logs/do_pvs_ANT_MIM_pvl.log
+  - ${CHECKLIST_ROOT}/IP_project_folder/logs/do_cmd_3star_ANT_MIM_sourceme
+
+waivers:
+  value: 1
+  waive_items:
+    - name: CoWoS_S
+      reason: "test for waiver"

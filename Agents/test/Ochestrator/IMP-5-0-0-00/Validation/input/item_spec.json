@@ -1,0 +1,1089 @@
+{
+  "item_id": "IMP-5-0-0-00",
+  "module": "5.0_SYNTHESIS_CHECK",
+  "description": "Confirm synthesis is using lib models for timing?",
+  "type_scenarios": {
+    "type1": {
+      "type_id": 1,
+      "condition": "requirements.value=N/A, waivers.value=N/A, pattern_items=[]",
+      "check_logic": {
+        "description": "Boolean check - verify synthesis QoR report indicates library-based timing models are used (not wireload models)",
+        "steps": [
+          "Parse QoR report to extract timing model configuration indicators",
+          "Check for presence of technology libraries with CCS/NLDM timing models",
+          "Verify absence of wireload model references in timing configuration",
+          "Return PASS if library models confirmed, FAIL if wireload models detected or timing model type unclear"
+        ],
+        "pass_condition": "Technology libraries with CCS/NLDM models found AND no wireload model references detected",
+        "fail_condition": "Wireload model references found OR no clear library model indicators present"
+      },
+      "parse_logic": {
+        "file_type": "report",
+        "parsing_strategy": "section-based with regex extraction",
+        "extraction_fields": [
+          {
+            "field_name": "technology_libraries",
+            "description": "List of technology libraries indicating library-based timing",
+            "file_format": "QoR_Report",
+            "source_type": "data_verified",
+            "confidence": 1.0,
+            "rationale": "CCS suffix confirms advanced library timing models",
+            "regex_templates": [
+              {
+                "pattern": "Technology libraries:\\s+([\\s\\S]+?)(?=\\n\\n|\\Z)",
+                "group": 1,
+                "description": "Extract technology library list from QoR report"
+              }
+            ],
+            "matched_samples": [
+              "tcbn03e_bwp143mh117l3p48cpd_base_elvtssgnp_0p675v_m40c_cworst_CCworst_T_ccs 110"
+            ],
+            "data_type": "list",
+            "required": true
+          },
+          {
+            "field_name": "library_ccs_indicator",
+            "description": "CCS timing model indicator in library names",
+            "file_format": "QoR_Report",
+            "source_type": "data_verified",
+            "confidence": 1.0,
+            "rationale": "CCS suffix proves library-based timing models are active",
+            "regex_templates": [
+              {
+                "pattern": "_ccs\\s+\\d+",
+                "group": 0,
+                "description": "Match CCS timing model suffix in library names"
+              }
+            ],
+            "matched_samples": [
+              "_ccs 110"
+            ],
+            "data_type": "str",
+            "required": true
+          },
+          {
+            "field_name": "wireload_model_name",
+            "description": "Wireload model name if present (failure indicator)",
+            "file_format": "QoR_Report",
+            "source_type": "semantic_inference",
+            "confidence": 0.85,
+            "rationale": "Expected in QoR reports when wireload models are used - absence suggests library models",
+            "regex_templates": [
+              {
+                "pattern": "Wireload Model:\\s+(\\S+)",
+                "group": 1,
+                "description": "Extract wireload model name from timing configuration"
+              }
+            ],
+            "matched_samples": null,
+            "data_type": "str",
+            "required": false
+          },
+          {
+            "field_name": "timing_model_type",
+            "description": "Explicit timing model type declaration",
+            "file_format": "QoR_Report",
+            "source_type": "semantic_inference",
+            "confidence": 0.85,
+            "rationale": "Some QoR reports explicitly state timing model type (lib vs wireload)",
+            "regex_templates": [
+              {
+                "pattern": "Timing Model:\\s+(\\S+)",
+                "group": 1,
+                "description": "Extract timing model type from QoR report"
+              }
+            ],
+            "matched_samples": null,
+            "data_type": "str",
+            "required": false
+          }
+        ]
+      },
+      "output_format": {
+        "pass": "INFO01: Library-based timing models confirmed in synthesis QoR report",
+        "fail": "ERROR01: Wireload models detected or library timing models not confirmed in QoR report"
+      },
+      "example_config": {
+        "item_id": "IMP-5-0-0-00",
+        "description": "Confirm synthesis is using lib models for timing?",
+        "input_files": [
+          "reports/qor_report.rpt"
+        ],
+        "requirements": {
+          "value": "N/A",
+          "pattern_items": []
+        },
+        "waivers": {
+          "value": "N/A",
+          "waive_items": []
+        }
+      }
+    },
+    "type2": {
+      "type_id": 2,
+      "condition": "requirements.value>0, pattern_items exists, waivers.value=N/A",
+      "check_logic": {
+        "description": "Value check - search for specific library model patterns in QoR report and verify match count meets requirements",
+        "steps": [
+          "Parse QoR report to extract technology library entries",
+          "Search for pattern_items in library names and timing model configurations",
+          "Count matched patterns and compare against requirements.value threshold",
+          "Return PASS if violations ≤ threshold, FAIL if violations > threshold"
+        ],
+        "pass_condition": "Number of library model violations ≤ requirements.value threshold",
+        "fail_condition": "Number of library model violations > requirements.value threshold"
+      },
+      "parse_logic": {
+        "file_type": "report",
+        "parsing_strategy": "pattern matching with threshold validation",
+        "extraction_fields": [
+          {
+            "field_name": "technology_libraries",
+            "description": "Technology library list for pattern matching",
+            "file_format": "QoR_Report",
+            "source_type": "data_verified",
+            "confidence": 1.0,
+            "rationale": "Direct source for library model verification",
+            "regex_templates": [
+              {
+                "pattern": "Technology libraries:\\s+([\\s\\S]+?)(?=\\n\\n|\\Z)",
+                "group": 1,
+                "description": "Extract library list for pattern search"
+              }
+            ],
+            "matched_samples": [
+              "tcbn03e_bwp143mh117l3p48cpd_base_elvtssgnp_0p675v_m40c_cworst_CCworst_T_ccs 110"
+            ],
+            "data_type": "list",
+            "required": true
+          }
+        ]
+      },
+      "output_format": {
+        "pass": "INFO01: Library model patterns satisfied in QoR report (violations ≤ threshold)",
+        "fail": "ERROR01: Library model pattern violations exceed threshold in QoR report"
+      },
+      "example_config": {
+        "item_id": "IMP-5-0-0-00",
+        "description": "Confirm synthesis is using lib models for timing?",
+        "input_files": [
+          "reports/qor_report.rpt"
+        ],
+        "requirements": {
+          "value": 2,
+          "pattern_items": [
+            "*_ccs*",
+            "*_nldm*"
+          ]
+        },
+        "waivers": {
+          "value": "N/A",
+          "waive_items": []
+        }
+      }
+    },
+    "type3": {
+      "type_id": 3,
+      "condition": "requirements.value>0, pattern_items exists, waivers.value>0",
+      "check_logic": {
+        "description": "Value check with waiver - search library model patterns, classify violations as waived/unwaived, verify unwaived count meets threshold",
+        "steps": [
+          "Parse QoR report to extract technology library entries",
+          "Search for pattern_items in library configurations",
+          "Match found violations against waive_items list",
+          "Classify violations as waived (with [WAIVER] tag) or unwaived",
+          "Return PASS if unwaived violations ≤ threshold, FAIL otherwise"
+        ],
+        "pass_condition": "Unwaived library model violations ≤ requirements.value threshold",
+        "fail_condition": "Unwaived library model violations > requirements.value threshold"
+      },
+      "parse_logic": {
+        "file_type": "report",
+        "parsing_strategy": "pattern matching with waiver classification",
+        "extraction_fields": [
+          {
+            "field_name": "technology_libraries",
+            "description": "Technology library list for pattern matching and waiver classification",
+            "file_format": "QoR_Report",
+            "source_type": "data_verified",
+            "confidence": 1.0,
+            "rationale": "Source for library model verification with waiver support",
+            "regex_templates": [
+              {
+                "pattern": "Technology libraries:\\s+([\\s\\S]+?)(?=\\n\\n|\\Z)",
+                "group": 1,
+                "description": "Extract library list for pattern search and waiver matching"
+              }
+            ],
+            "matched_samples": [
+              "tcbn03e_bwp143mh117l3p48cpd_base_elvtssgnp_0p675v_m40c_cworst_CCworst_T_ccs 110"
+            ],
+            "data_type": "list",
+            "required": true
+          }
+        ]
+      },
+      "output_format": {
+        "pass": "INFO01: Library model violations within acceptable range (unwaived ≤ threshold)",
+        "fail": "ERROR01: Unwaived library model violations exceed threshold"
+      },
+      "example_config": {
+        "item_id": "IMP-5-0-0-00",
+        "description": "Confirm synthesis is using lib models for timing?",
+        "input_files": [
+          "reports/qor_report.rpt"
+        ],
+        "requirements": {
+          "value": 2,
+          "pattern_items": [
+            "wireload_*",
+            "*_wlm"
+          ]
+        },
+        "waivers": {
+          "value": 1,
+          "waive_items": [
+            {
+              "name": "wireload_small",
+              "reason": "Legacy block exemption"
+            }
+          ]
+        }
+      }
+    },
+    "type4": {
+      "type_id": 4,
+      "condition": "requirements.value=N/A, waivers.value>0",
+      "check_logic": {
+        "description": "Boolean check with waiver - verify library timing models, apply global waiver if check fails",
+        "steps": [
+          "Parse QoR report to extract timing model configuration",
+          "Perform boolean check for library model usage",
+          "If check fails, apply global waiver based on waive_items configuration",
+          "Return PASS with [WAIVER] tag if waived, FAIL if not waived"
+        ],
+        "pass_condition": "Library models confirmed OR check failure is globally waived",
+        "fail_condition": "Library models not confirmed AND no applicable waiver"
+      },
+      "parse_logic": {
+        "file_type": "report",
+        "parsing_strategy": "boolean check with global waiver support",
+        "extraction_fields": [
+          {
+            "field_name": "technology_libraries",
+            "description": "Technology library indicators for boolean check",
+            "file_format": "QoR_Report",
+            "source_type": "data_verified",
+            "confidence": 1.0,
+            "rationale": "Primary indicator for library model verification",
+            "regex_templates": [
+              {
+                "pattern": "Technology libraries:\\s+([\\s\\S]+?)(?=\\n\\n|\\Z)",
+                "group": 1,
+                "description": "Extract library list for boolean verification"
+              }
+            ],
+            "matched_samples": [
+              "tcbn03e_bwp143mh117l3p48cpd_base_elvtssgnp_0p675v_m40c_cworst_CCworst_T_ccs 110"
+            ],
+            "data_type": "list",
+            "required": true
+          },
+          {
+            "field_name": "wireload_model_name",
+            "description": "Wireload model presence check (failure indicator)",
+            "file_format": "QoR_Report",
+            "source_type": "semantic_inference",
+            "confidence": 0.85,
+            "rationale": "Presence indicates wireload models are used (check failure)",
+            "regex_templates": [
+              {
+                "pattern": "Wireload Model:\\s+(\\S+)",
+                "group": 1,
+                "description": "Detect wireload model usage"
+              }
+            ],
+            "matched_samples": null,
+            "data_type": "str",
+            "required": false
+          }
+        ]
+      },
+      "output_format": {
+        "pass": "INFO01: Library timing models confirmed OR check waived [WAIVER]",
+        "fail": "ERROR01: Library timing models not confirmed and no waiver applied"
+      },
+      "example_config": {
+        "item_id": "IMP-5-0-0-00",
+        "description": "Confirm synthesis is using lib models for timing?",
+        "input_files": [
+          "reports/qor_report.rpt"
+        ],
+        "requirements": {
+          "value": "N/A",
+          "pattern_items": []
+        },
+        "waivers": {
+          "value": 1,
+          "waive_items": [
+            {
+              "name": "global_timing_model_waiver",
+              "reason": "Early development phase"
+            }
+          ]
+        }
+      }
+    }
+  },
+  "requirements": {
+    "value": "N/A",
+    "pattern_items": []
+  },
+  "pattern_items": [],
+  "waivers": {
+    "value": "N/A",
+    "waive_items": []
+  },
+  "input_files": [
+    {
+      "path": "C:\\Users\\wentao\\AAI_local\\AAI\\Main_Work\\ACL\\CHECKLIST\\Tool\\Agent\\test\\IP_project_folder\\reports\\qor.rpt",
+      "exists": true,
+      "size": 5725
+    }
+  ],
+  "file_analysis": {
+    "files_analyzed": 1,
+    "total_lines_sampled": 85,
+    "detected_format": "report",
+    "common_patterns": [],
+    "section_headers": [
+      "Generated by:           Genus(TM) Synthesis Solution 23.14-s090_1",
+      "func_ssgnp_0p675v_m40c_cworst_CCworst_T_cworst_CCworst_T_setup IO_ASYNC_CLOCK     5.000",
+      "PHASE_ALIGN_CLOCK  0.500",
+      "func_ssgnp_0p675v_m40c_cworst_CCworst_T_cworst_CCworst_T_setup cg_enable_group_PHASE_ALIGN_CLOCK      0.005 0.000          0",
+      "Total                                                                                                        -0.0          0",
+      "Leaf Instance Count             1797"
+    ],
+    "sample_lines": [
+      "Generated by:           Genus(TM) Synthesis Solution 23.14-s090_1",
+      "Generated on:           Sep 08 2025  01:47:15 pm",
+      "Module:                 phy_cmn_phase_align_digtop",
+      "Library domain:         tcond_ssgnp_0p675v_m40c_cworst_CCworst_T_cworst_CCworst_T_setup_ideal_virtual",
+      "Domain index:         0",
+      "Technology libraries: tcbn03e_bwp143mh117l3p48cpd_base_elvtssgnp_0p675v_m40c_cworst_CCworst_T_ccs 110",
+      "tcbn03e_bwp143mh117l3p48cpd_base_lvtssgnp_0p675v_m40c_cworst_CCworst_T_ccs 110",
+      "tcbn03e_bwp143mh117l3p48cpd_base_svtssgnp_0p675v_m40c_cworst_CCworst_T_ccs 110",
+      "tcbn03e_bwp143mh117l3p48cpd_base_ulvtssgnp_0p675v_m40c_cworst_CCworst_T_ccs 110",
+      "tcbn03e_bwp143mh169l3p48cpd_base_elvtssgnp_0p675v_m40c_cworst_CCworst_T_ccs 110",
+      "tcbn03e_bwp143mh169l3p48cpd_base_lvtssgnp_0p675v_m40c_cworst_CCworst_T_ccs 110",
+      "tcbn03e_bwp143mh169l3p48cpd_base_svtssgnp_0p675v_m40c_cworst_CCworst_T_ccs 110",
+      "tcbn03e_bwp143mh169l3p48cpd_base_ulvtssgnp_0p675v_m40c_cworst_CCworst_T_ccs 110",
+      "tcbn03e_bwp143mh286l3p48cpd_base_elvtssgnp_0p675v_m40c_cworst_CCworst_T_ccs 110",
+      "tcbn03e_bwp143mh286l3p48cpd_base_lvtssgnp_0p675v_m40c_cworst_CCworst_T_ccs 110",
+      "tcbn03e_bwp143mh286l3p48cpd_base_svtssgnp_0p675v_m40c_cworst_CCworst_T_ccs 110",
+      "tcbn03e_bwp143mh286l3p48cpd_base_ulvtssgnp_0p675v_m40c_cworst_CCworst_T_ccs 110",
+      "tcbn03e_bwp143mh286l3p48cpd_mb_elvtssgnp_0p675v_m40c_cworst_CCworst_T_ccs 110",
+      "tcbn03e_bwp143mh286l3p48cpd_mb_lvtssgnp_0p675v_m40c_cworst_CCworst_T_ccs 110",
+      "tcbn03e_bwp143mh286l3p48cpd_mb_svtssgnp_0p675v_m40c_cworst_CCworst_T_ccs 110"
+    ]
+  },
+  "type_examples": {
+    "type1": {
+      "type_id": "type1",
+      "yaml": "IMP-5-0-0-00:\n  description: Confirm synthesis is using lib models for timing?\n  requirements:\n    pattern_items: []\n    value: 1\n  waivers:\n    value: 0\n    waive_items: []",
+      "behavior": "Parse QoR report for technology library entries with CCS/NLDM indicators. Check for absence of wireload model references. Return PASS if library models confirmed, FAIL otherwise.",
+      "output": "",
+      "use_case": "Verify synthesis QoR report confirms library-based timing models are used (no wireload models)"
+    },
+    "type2": {
+      "type_id": "type2",
+      "yaml": "IMP-5-0-0-00:\n  description: Confirm synthesis is using lib models for timing?\n  requirements:\n    pattern_items:\n    - example_pattern\n    value: 1\n  waivers:\n    value: 0\n    waive_items: []",
+      "behavior": "Extract technology libraries, search for pattern_items (e.g., '*_ccs*', '*_nldm*'), count violations. PASS if violations ≤ requirements.value, FAIL if violations > threshold.",
+      "output": "",
+      "use_case": "Search for specific library model patterns in QoR report and verify violation count meets threshold"
+    },
+    "type3": {
+      "type_id": "type3",
+      "yaml": "IMP-5-0-0-00:\n  description: Confirm synthesis is using lib models for timing?\n  requirements:\n    pattern_items: []\n    value: 0\n  waivers:\n    value: 1\n    waive_items: []",
+      "behavior": "Search for pattern_items in library configurations, match violations against waive_items, classify as waived/unwaived. PASS if unwaived violations ≤ threshold, FAIL otherwise. Tag waived items with [WAIVER].",
+      "output": "",
+      "use_case": "Detect library model violations with waiver support for known exceptions"
+    },
+    "type4": {
+      "type_id": "type4",
+      "yaml": "IMP-5-0-0-00:\n  description: Confirm synthesis is using lib models for timing?\n  requirements:\n    pattern_items: []\n    value: 0\n  waivers:\n    value: 0\n    waive_items: []",
+      "behavior": "Perform boolean check for library timing models. If check fails, apply global waiver based on waive_items. Return PASS with [WAIVER] tag if waived, FAIL if not waived.",
+      "output": "",
+      "use_case": "Boolean library model check with global waiver for early development phases"
+    }
+  },
+  "generated_readme": "# IMP-5-0-0-00: Confirm synthesis is using lib models for timing?\n\n## Overview\n\n**Category**: Checker  \n**Check Type**: Type 1 - Boolean Check (存在性检查)  \n**Files**: 1 input file(s)\n## Check Logic\n\n### Parsing Method\n\nExtract timing model configuration from QoR report using section-based parsing. Identify library-based timing models (CCS/NLDM) via technology library entries and verify absence of wireload model references.\n\n### Key Patterns\n\nNo specific regex patterns - file content is checked as a whole.\n\n### Pass/Fail Criteria\n\nPASS if technology libraries with CCS/NLDM timing models are present AND no wireload model references detected. FAIL if wireload models found OR library model indicators absent. For Type 2/3, apply threshold logic to violation counts. For Type 3/4, apply waiver matching.\n\n## Type Configuration Examples\n\n### Type 1\n\n**YAML Configuration:**\n```yaml\n\n```\n\n**Behavior:** Parse QoR report for technology library entries with CCS/NLDM indicators. Check for absence of wireload model references. Return PASS if library models confirmed, FAIL otherwise.\n\n**Expected Output:**\n```\n\n```\n\n### Type 2\n\n**YAML Configuration:**\n```yaml\n\n```\n\n**Behavior:** Extract technology libraries, search for pattern_items (e.g., '*_ccs*', '*_nldm*'), count violations. PASS if violations ≤ requirements.value, FAIL if violations > threshold.\n\n**Expected Output:**\n```\n\n```\n\n### Type 3\n\n**YAML Configuration:**\n```yaml\n\n```\n\n**Behavior:** Search for pattern_items in library configurations, match violations against waive_items, classify as waived/unwaived. PASS if unwaived violations ≤ threshold, FAIL otherwise. Tag waived items with [WAIVER].\n\n**Expected Output:**\n```\n\n```\n\n### Type 4\n\n**YAML Configuration:**\n```yaml\n\n```\n\n**Behavior:** Perform boolean check for library timing models. If check fails, apply global waiver based on waive_items. Return PASS with [WAIVER] tag if waived, FAIL if not waived.\n\n**Expected Output:**\n```\n\n```\n\n\n## Output Descriptions\n\n### INFO01 (Success)\n\n\n### ERROR01 (Failure)\n\n\n## Testing\n\n### Prerequisites\n```bash\ncd Check_modules/5.0_*\n```\n\n### Run Commands\n\n\n## References\n\n- Configuration: `inputs/items/IMP-5-0-0-00.yaml`\n- Script: `scripts/IMP-5-0-0-00_checker.py`\n- Documentation: `scripts/doc/IMP-5-0-0-00_README.md`",
+  "parse_logic": {
+    "file_type": "report",
+    "parsing_strategy": "section-based with multi-pattern regex extraction",
+    "key_patterns": [],
+    "extraction_fields": [
+      {
+        "field_name": "synthesis_tool_name",
+        "search_pattern": "Generated by:\\s+([^\\n]+)",
+        "data_type": "str",
+        "source_type": "data_verified",
+        "confidence": 1.0,
+        "rationale": "Identifies the synthesis tool used, which determines timing model capabilities",
+        "matched_line": "Generated by:           Genus(TM) Synthesis Solution 23.14-s090_1",
+        "file_format": "QoR_Report"
+      },
+      {
+        "field_name": "synthesis_tool_version",
+        "search_pattern": "Genus\\(TM\\) Synthesis Solution\\s+([\\d._a-z]+)",
+        "data_type": "str",
+        "source_type": "data_verified",
+        "confidence": 1.0,
+        "rationale": "Tool version affects timing model support and configuration options",
+        "matched_line": "Generated by:           Genus(TM) Synthesis Solution 23.14-s090_1",
+        "file_format": "QoR_Report"
+      },
+      {
+        "field_name": "generation_timestamp",
+        "search_pattern": "Generated on:\\s+([^\\n]+)",
+        "data_type": "str",
+        "source_type": "data_verified",
+        "confidence": 1.0,
+        "rationale": "Timestamp for report traceability",
+        "matched_line": "Generated on:           Sep 08 2025  01:47:15 pm",
+        "file_format": "QoR_Report"
+      },
+      {
+        "field_name": "top_module_name",
+        "search_pattern": "Module:\\s+(\\S+)",
+        "data_type": "str",
+        "source_type": "data_verified",
+        "confidence": 1.0,
+        "rationale": "Top-level design module being analyzed",
+        "matched_line": "Module:                 phy_cmn_phase_align_digtop",
+        "file_format": "QoR_Report"
+      },
+      {
+        "field_name": "library_domain_name",
+        "search_pattern": "Library domain:\\s+([^\\n]+)",
+        "data_type": "str",
+        "source_type": "data_verified",
+        "confidence": 1.0,
+        "rationale": "Library domain indicates timing corner and operating conditions used for analysis",
+        "matched_line": "Library domain:         tcond_ssgnp_0p675v_m40c_cworst_CCworst_T_cworst_CCworst_T_setup_ideal_virtual",
+        "file_format": "QoR_Report"
+      },
+      {
+        "field_name": "technology_libraries",
+        "search_pattern": "Technology libraries:\\s+([\\s\\S]+?)(?=\\n\\n|\\Z)",
+        "data_type": "list",
+        "source_type": "data_verified",
+        "confidence": 1.0,
+        "rationale": "List of technology libraries indicates library-based timing models are in use (not wireload models)",
+        "matched_line": "Technology libraries: tcbn03e_bwp143mh117l3p48cpd_base_elvtssgnp_0p675v_m40c_cworst_CCworst_T_ccs 110",
+        "file_format": "QoR_Report"
+      },
+      {
+        "field_name": "timing_model_type",
+        "search_pattern": "Timing Model:\\s+(\\S+)",
+        "data_type": "str",
+        "source_type": "semantic_inference",
+        "confidence": 0.85,
+        "rationale": "Direct indicator of timing model type (lib vs wireload) - expected in QoR reports but not present in sample",
+        "matched_line": null,
+        "file_format": "QoR_Report"
+      },
+      {
+        "field_name": "wireload_model_name",
+        "search_pattern": "Wireload Model:\\s+(\\S+)",
+        "data_type": "str",
+        "source_type": "semantic_inference",
+        "confidence": 0.85,
+        "rationale": "Presence of wireload model name indicates wireload-based timing (failure condition) - expected in QoR reports",
+        "matched_line": null,
+        "file_format": "QoR_Report"
+      },
+      {
+        "field_name": "operating_conditions",
+        "search_pattern": "Operating Conditions:\\s+([^\\n]+)",
+        "data_type": "str",
+        "source_type": "semantic_inference",
+        "confidence": 0.8,
+        "rationale": "Operating conditions section typically accompanies timing model configuration in QoR reports",
+        "matched_line": null,
+        "file_format": "QoR_Report"
+      },
+      {
+        "field_name": "library_ccs_indicator",
+        "search_pattern": "_ccs\\s+\\d+",
+        "data_type": "str",
+        "source_type": "data_verified",
+        "confidence": 1.0,
+        "rationale": "CCS (Composite Current Source) suffix in library names confirms advanced library-based timing models are used",
+        "matched_line": "tcbn03e_bwp143mh117l3p48cpd_base_elvtssgnp_0p675v_m40c_cworst_CCworst_T_ccs 110",
+        "file_format": "QoR_Report"
+      }
+    ],
+    "aggregation_method": "concat",
+    "error_handling": "skip"
+  },
+  "type_execution_specs": [
+    {
+      "type_id": 1,
+      "description": "Boolean check - verify library timing models present, no wireload models",
+      "pass_condition": "library_ccs_indicator found AND wireload_model_name is None",
+      "fail_condition": "wireload_model_name found OR library_ccs_indicator is None",
+      "needs_pattern_search": false,
+      "needs_waiver_logic": false,
+      "output_format": "PASS: Library-based timing models confirmed | FAIL: Wireload models detected or library models not confirmed"
+    },
+    {
+      "type_id": 2,
+      "description": "Value check - search library model patterns, verify violation count ≤ threshold",
+      "pass_condition": "len(found_violations) <= requirements.value",
+      "fail_condition": "len(found_violations) > requirements.value",
+      "needs_pattern_search": true,
+      "needs_waiver_logic": false,
+      "output_format": "PASS: Library model patterns satisfied (violations ≤ threshold) | FAIL: Pattern violations exceed threshold"
+    },
+    {
+      "type_id": 3,
+      "description": "Value check with waiver - classify violations as waived/unwaived, verify unwaived ≤ threshold",
+      "pass_condition": "len(unwaived_violations) <= requirements.value",
+      "fail_condition": "len(unwaived_violations) > requirements.value",
+      "needs_pattern_search": true,
+      "needs_waiver_logic": true,
+      "output_format": "PASS: Unwaived violations ≤ threshold | FAIL: Unwaived violations exceed threshold (with [WAIVER] tags)"
+    },
+    {
+      "type_id": 4,
+      "description": "Boolean check with waiver - verify library models OR apply global waiver",
+      "pass_condition": "library_models_confirmed OR global_waiver_applied",
+      "fail_condition": "NOT library_models_confirmed AND NOT global_waiver_applied",
+      "needs_pattern_search": false,
+      "needs_waiver_logic": true,
+      "output_format": "PASS: Library models confirmed OR check waived [WAIVER] | FAIL: Library models not confirmed and no waiver"
+    }
+  ],
+  "output_info01_format": "",
+  "output_error01_format": "",
+  "test_scenarios": [
+    {
+      "type_id": 1,
+      "scenario": "T1-PASS",
+      "description": "QoR report contains technology libraries with CCS timing models, no wireload references",
+      "input_data": {
+        "qor_report.rpt": "Technology libraries: tcbn03e_bwp143mh117l3p48cpd_base_elvtssgnp_0p675v_m40c_cworst_CCworst_T_ccs 110"
+      },
+      "expected_output": {
+        "result": "PASS",
+        "message": "INFO01: Library-based timing models confirmed in synthesis QoR report",
+        "reason": "Technology libraries with CCS models found, no wireload model references"
+      },
+      "fault_injection": "Remove '_ccs' suffix from library name to simulate missing library timing models"
+    },
+    {
+      "type_id": 1,
+      "scenario": "T1-FAIL",
+      "description": "QoR report shows wireload model usage instead of library models",
+      "input_data": {
+        "qor_report.rpt": "Wireload Model: TSMC16_WireAreaLowkCon\nTiming Model: wireload"
+      },
+      "expected_output": {
+        "result": "FAIL",
+        "message": "ERROR01: Wireload models detected or library timing models not confirmed in QoR report",
+        "reason": "Wireload model 'TSMC16_WireAreaLowkCon' found in timing configuration"
+      },
+      "fault_injection": null
+    },
+    {
+      "type_id": 2,
+      "scenario": "T2-PASS",
+      "description": "Library model pattern violations within acceptable threshold",
+      "input_data": {
+        "qor_report.rpt": "Technology libraries: lib1_ccs 50\nlib2_nldm 30",
+        "pattern_items": [
+          "*_ccs*",
+          "*_nldm*"
+        ],
+        "requirements": {
+          "value": 2
+        }
+      },
+      "expected_output": {
+        "result": "PASS",
+        "message": "INFO01: Library model patterns satisfied in QoR report (violations ≤ threshold)",
+        "reason": "Found 2 library model patterns, within threshold of 2"
+      },
+      "fault_injection": "Add 3rd library without CCS/NLDM suffix to exceed threshold"
+    },
+    {
+      "type_id": 2,
+      "scenario": "T2-FAIL",
+      "description": "Library model pattern violations exceed threshold",
+      "input_data": {
+        "qor_report.rpt": "Technology libraries: lib1_wireload 50\nlib2_wireload 30\nlib3_wireload 20",
+        "pattern_items": [
+          "*_wireload*"
+        ],
+        "requirements": {
+          "value": 2
+        }
+      },
+      "expected_output": {
+        "result": "FAIL",
+        "message": "ERROR01: Library model pattern violations exceed threshold in QoR report",
+        "reason": "Found 3 wireload model violations, exceeds threshold of 2"
+      },
+      "fault_injection": null
+    },
+    {
+      "type_id": 3,
+      "scenario": "T3-PASS",
+      "description": "All library model violations are waived",
+      "input_data": {
+        "qor_report.rpt": "Technology libraries: legacy_lib_wireload 50",
+        "pattern_items": [
+          "*_wireload*"
+        ],
+        "requirements": {
+          "value": 0
+        },
+        "waive_items": [
+          {
+            "name": "legacy_lib_wireload",
+            "reason": "Legacy block exemption"
+          }
+        ]
+      },
+      "expected_output": {
+        "result": "PASS",
+        "message": "INFO01: Library model violations within acceptable range (unwaived ≤ threshold)",
+        "reason": "1 violation found, 1 waived [WAIVER: Legacy block exemption], 0 unwaived (≤ threshold 0)"
+      },
+      "fault_injection": "Add unwaivable violation 'new_lib_wireload' to trigger FAIL"
+    },
+    {
+      "type_id": 3,
+      "scenario": "T3-FAIL",
+      "description": "Unwaived library model violations exceed threshold",
+      "input_data": {
+        "qor_report.rpt": "Technology libraries: lib1_wireload 50\nlib2_wireload 30",
+        "pattern_items": [
+          "*_wireload*"
+        ],
+        "requirements": {
+          "value": 0
+        },
+        "waive_items": [
+          {
+            "name": "lib1_wireload",
+            "reason": "Known issue"
+          }
+        ]
+      },
+      "expected_output": {
+        "result": "FAIL",
+        "message": "ERROR01: Unwaived library model violations exceed threshold",
+        "reason": "2 violations found, 1 waived [WAIVER: Known issue], 1 unwaived (> threshold 0): lib2_wireload"
+      },
+      "fault_injection": null
+    },
+    {
+      "type_id": 4,
+      "scenario": "T4-PASS",
+      "description": "Library model check waived globally",
+      "input_data": {
+        "qor_report.rpt": "Wireload Model: TSMC16_WireAreaLowkCon",
+        "waive_items": [
+          {
+            "name": "global_timing_model_waiver",
+            "reason": "Early development phase"
+          }
+        ]
+      },
+      "expected_output": {
+        "result": "PASS",
+        "message": "INFO01: Library timing models confirmed OR check waived [WAIVER]",
+        "reason": "Check waived: Early development phase"
+      },
+      "fault_injection": "Remove waiver to trigger FAIL"
+    },
+    {
+      "type_id": 4,
+      "scenario": "T4-FAIL",
+      "description": "Library model check fails and no waiver applied",
+      "input_data": {
+        "qor_report.rpt": "Wireload Model: TSMC16_WireAreaLowkCon",
+        "waive_items": []
+      },
+      "expected_output": {
+        "result": "FAIL",
+        "message": "ERROR01: Library timing models not confirmed and no waiver applied",
+        "reason": "Wireload model detected, no library timing models confirmed"
+      },
+      "fault_injection": null
+    }
+  ],
+  "class_constants": {
+    "found_desc": "Library-based timing models confirmed in synthesis",
+    "missing_desc": "Wireload models detected or library timing models not confirmed",
+    "waived_desc": "Library timing model check waived",
+    "found_reason": "Technology libraries with CCS/NLDM timing models found in QoR report",
+    "missing_reason": "Wireload model references found or library model indicators absent in QoR report",
+    "waived_base_reason": "Library timing model violation waived",
+    "extra_reason": "Additional context: {detail}",
+    "unused_waiver_reason": "Waiver defined but no violations found to apply"
+  },
+  "logic_steps": [
+    "Parse QoR report to extract timing model configuration sections (Technology libraries, Wireload Model, Timing Model)",
+    "Search for library-based timing model indicators (CCS/NLDM suffixes in library names)",
+    "Check for wireload model references in timing configuration sections",
+    "For Type 2/3: Search pattern_items in library configurations and count violations",
+    "For Type 3/4: Apply waiver matching logic to classify violations or apply global waiver",
+    "Determine PASS/FAIL based on library model presence, violation counts, and waiver status"
+  ],
+  "skill_reference": {
+    "recommended_item": "IMP-10-0-0-00",
+    "selection_reason": "Similar report parsing pattern for technology library extraction and timing model verification. Both checks analyze synthesis QoR reports to verify configuration compliance.",
+    "match_confidence": "high"
+  },
+  "semantic_intent": {
+    "check_target": "Verify that synthesis timing analysis is using library models (not wireload models)",
+    "involved_formats": [
+      {
+        "name": "QoR_Report",
+        "role": "Direct source containing synthesis timing configuration and model usage information",
+        "expected_sections": [
+          "Timing Model",
+          "Operating Conditions",
+          "Wireload Model",
+          "Library Information",
+          "Design Statistics"
+        ],
+        "criticality": "required",
+        "data_role": "direct_source"
+      }
+    ],
+    "data_flow": "QoR_Report → extract timing model configuration → verify lib model usage",
+    "extraction_chain": "QoR_Report → search for timing model indicators (e.g., 'Timing Model: lib', 'Wireload Model: none/N/A') → verify lib models are active",
+    "success_criteria": "QoR report indicates library-based timing models are used (e.g., 'Timing Model: lib' or absence of wireload model references)",
+    "failure_criteria": "QoR report shows wireload models are being used instead of library models (e.g., 'Wireload Model: <model_name>' or 'Timing Model: wireload')",
+    "format_hints": {
+      "QoR_Report": "Tool-specific synthesis quality-of-results report, typically contains timing model configuration, operating conditions, and design statistics"
+    }
+  },
+  "extraction_fields_v2": [
+    {
+      "field_name": "synthesis_tool_name",
+      "field_value": "",
+      "source_file": "QoR_Report",
+      "source_type": "data_verified",
+      "confidence": 1.0,
+      "location_hint": "",
+      "extraction_method": "Identifies the synthesis tool used, which determines timing model capabilities",
+      "purpose": "Identifies the synthesis tool used, which determines timing model capabilities",
+      "regex_templates": [
+        "Generated by:\\s+([^\\n]+)"
+      ],
+      "matched_samples": [
+        "Generated by:           Genus(TM) Synthesis Solution 23.14-s090_1"
+      ],
+      "standard_reference": null
+    },
+    {
+      "field_name": "synthesis_tool_version",
+      "field_value": "",
+      "source_file": "QoR_Report",
+      "source_type": "data_verified",
+      "confidence": 1.0,
+      "location_hint": "",
+      "extraction_method": "Tool version affects timing model support and configuration options",
+      "purpose": "Tool version affects timing model support and configuration options",
+      "regex_templates": [
+        "Genus\\(TM\\) Synthesis Solution\\s+([\\d._a-z]+)"
+      ],
+      "matched_samples": [
+        "Generated by:           Genus(TM) Synthesis Solution 23.14-s090_1"
+      ],
+      "standard_reference": null
+    },
+    {
+      "field_name": "generation_timestamp",
+      "field_value": "",
+      "source_file": "QoR_Report",
+      "source_type": "data_verified",
+      "confidence": 1.0,
+      "location_hint": "",
+      "extraction_method": "Timestamp for report traceability",
+      "purpose": "Timestamp for report traceability",
+      "regex_templates": [
+        "Generated on:\\s+([^\\n]+)"
+      ],
+      "matched_samples": [
+        "Generated on:           Sep 08 2025  01:47:15 pm"
+      ],
+      "standard_reference": null
+    },
+    {
+      "field_name": "top_module_name",
+      "field_value": "",
+      "source_file": "QoR_Report",
+      "source_type": "data_verified",
+      "confidence": 1.0,
+      "location_hint": "",
+      "extraction_method": "Top-level design module being analyzed",
+      "purpose": "Top-level design module being analyzed",
+      "regex_templates": [
+        "Module:\\s+(\\S+)"
+      ],
+      "matched_samples": [
+        "Module:                 phy_cmn_phase_align_digtop"
+      ],
+      "standard_reference": null
+    },
+    {
+      "field_name": "library_domain_name",
+      "field_value": "",
+      "source_file": "QoR_Report",
+      "source_type": "data_verified",
+      "confidence": 1.0,
+      "location_hint": "",
+      "extraction_method": "Library domain indicates timing corner and operating conditions used for analysis",
+      "purpose": "Library domain indicates timing corner and operating conditions used for analysis",
+      "regex_templates": [
+        "Library domain:\\s+([^\\n]+)"
+      ],
+      "matched_samples": [
+        "Library domain:         tcond_ssgnp_0p675v_m40c_cworst_CCworst_T_cworst_CCworst_T_setup_ideal_virtual"
+      ],
+      "standard_reference": null
+    },
+    {
+      "field_name": "technology_libraries",
+      "field_value": "",
+      "source_file": "QoR_Report",
+      "source_type": "data_verified",
+      "confidence": 1.0,
+      "location_hint": "",
+      "extraction_method": "List of technology libraries indicates library-based timing models are in use (not wireload models)",
+      "purpose": "List of technology libraries indicates library-based timing models are in use (not wireload models)",
+      "regex_templates": [
+        "Technology libraries:\\s+([\\s\\S]+?)(?=\\n\\n|\\Z)"
+      ],
+      "matched_samples": [
+        "Technology libraries: tcbn03e_bwp143mh117l3p48cpd_base_elvtssgnp_0p675v_m40c_cworst_CCworst_T_ccs 110"
+      ],
+      "standard_reference": null
+    },
+    {
+      "field_name": "timing_model_type",
+      "field_value": "",
+      "source_file": "QoR_Report",
+      "source_type": "semantic_inference",
+      "confidence": 0.85,
+      "location_hint": "",
+      "extraction_method": "Direct indicator of timing model type (lib vs wireload) - expected in QoR reports but not present in sample",
+      "purpose": "Direct indicator of timing model type (lib vs wireload) - expected in QoR reports but not present in sample",
+      "regex_templates": [
+        "Timing Model:\\s+(\\S+)"
+      ],
+      "matched_samples": [],
+      "standard_reference": null
+    },
+    {
+      "field_name": "wireload_model_name",
+      "field_value": "",
+      "source_file": "QoR_Report",
+      "source_type": "semantic_inference",
+      "confidence": 0.85,
+      "location_hint": "",
+      "extraction_method": "Presence of wireload model name indicates wireload-based timing (failure condition) - expected in QoR reports",
+      "purpose": "Presence of wireload model name indicates wireload-based timing (failure condition) - expected in QoR reports",
+      "regex_templates": [
+        "Wireload Model:\\s+(\\S+)"
+      ],
+      "matched_samples": [],
+      "standard_reference": null
+    },
+    {
+      "field_name": "operating_conditions",
+      "field_value": "",
+      "source_file": "QoR_Report",
+      "source_type": "semantic_inference",
+      "confidence": 0.8,
+      "location_hint": "",
+      "extraction_method": "Operating conditions section typically accompanies timing model configuration in QoR reports",
+      "purpose": "Operating conditions section typically accompanies timing model configuration in QoR reports",
+      "regex_templates": [
+        "Operating Conditions:\\s+([^\\n]+)"
+      ],
+      "matched_samples": [],
+      "standard_reference": null
+    },
+    {
+      "field_name": "library_ccs_indicator",
+      "field_value": "",
+      "source_file": "QoR_Report",
+      "source_type": "data_verified",
+      "confidence": 1.0,
+      "location_hint": "",
+      "extraction_method": "CCS (Composite Current Source) suffix in library names confirms advanced library-based timing models are used",
+      "purpose": "CCS (Composite Current Source) suffix in library names confirms advanced library-based timing models are used",
+      "regex_templates": [
+        "_ccs\\s+\\d+"
+      ],
+      "matched_samples": [
+        "tcbn03e_bwp143mh117l3p48cpd_base_elvtssgnp_0p675v_m40c_cworst_CCworst_T_ccs 110"
+      ],
+      "standard_reference": null
+    }
+  ],
+  "reflection_result": {
+    "coverage_score": 100.0,
+    "missing_formats": [],
+    "missing_critical": [],
+    "llm_triggered": false,
+    "llm_suggestions": [],
+    "final_confidence": 0.8
+  },
+  "_v5_metadata": {
+    "version": "5.2",
+    "layer_0_raw": {
+      "check_target": "Verify that synthesis timing analysis is using library models (not wireload models)",
+      "involved_formats": [
+        {
+          "name": "QoR_Report",
+          "role": "Direct source containing synthesis timing configuration and model usage information",
+          "expected_sections": [
+            "Timing Model",
+            "Operating Conditions",
+            "Wireload Model",
+            "Library Information",
+            "Design Statistics"
+          ],
+          "criticality": "required",
+          "data_role": "direct_source"
+        }
+      ],
+      "data_flow": "QoR_Report → extract timing model configuration → verify lib model usage",
+      "extraction_chain": "QoR_Report → search for timing model indicators (e.g., 'Timing Model: lib', 'Wireload Model: none/N/A') → verify lib models are active",
+      "success_criteria": "QoR report indicates library-based timing models are used (e.g., 'Timing Model: lib' or absence of wireload model references)",
+      "failure_criteria": "QoR report shows wireload models are being used instead of library models (e.g., 'Wireload Model: <model_name>' or 'Timing Model: wireload')",
+      "format_hints": {
+        "QoR_Report": "Tool-specific synthesis quality-of-results report, typically contains timing model configuration, operating conditions, and design statistics"
+      }
+    },
+    "layer_1_raw": {
+      "extraction_fields": {
+        "QoR_Report": [
+          {
+            "field_name": "synthesis_tool_name",
+            "search_pattern": "Generated by:\\s+([^\\n]+)",
+            "data_type": "str",
+            "source_type": "data_verified",
+            "confidence": 1.0,
+            "rationale": "Identifies the synthesis tool used, which determines timing model capabilities",
+            "matched_line": "Generated by:           Genus(TM) Synthesis Solution 23.14-s090_1"
+          },
+          {
+            "field_name": "synthesis_tool_version",
+            "search_pattern": "Genus\\(TM\\) Synthesis Solution\\s+([\\d._a-z]+)",
+            "data_type": "str",
+            "source_type": "data_verified",
+            "confidence": 1.0,
+            "rationale": "Tool version affects timing model support and configuration options",
+            "matched_line": "Generated by:           Genus(TM) Synthesis Solution 23.14-s090_1"
+          },
+          {
+            "field_name": "generation_timestamp",
+            "search_pattern": "Generated on:\\s+([^\\n]+)",
+            "data_type": "str",
+            "source_type": "data_verified",
+            "confidence": 1.0,
+            "rationale": "Timestamp for report traceability",
+            "matched_line": "Generated on:           Sep 08 2025  01:47:15 pm"
+          },
+          {
+            "field_name": "top_module_name",
+            "search_pattern": "Module:\\s+(\\S+)",
+            "data_type": "str",
+            "source_type": "data_verified",
+            "confidence": 1.0,
+            "rationale": "Top-level design module being analyzed",
+            "matched_line": "Module:                 phy_cmn_phase_align_digtop"
+          },
+          {
+            "field_name": "library_domain_name",
+            "search_pattern": "Library domain:\\s+([^\\n]+)",
+            "data_type": "str",
+            "source_type": "data_verified",
+            "confidence": 1.0,
+            "rationale": "Library domain indicates timing corner and operating conditions used for analysis",
+            "matched_line": "Library domain:         tcond_ssgnp_0p675v_m40c_cworst_CCworst_T_cworst_CCworst_T_setup_ideal_virtual"
+          },
+          {
+            "field_name": "technology_libraries",
+            "search_pattern": "Technology libraries:\\s+([\\s\\S]+?)(?=\\n\\n|\\Z)",
+            "data_type": "list",
+            "source_type": "data_verified",
+            "confidence": 1.0,
+            "rationale": "List of technology libraries indicates library-based timing models are in use (not wireload models)",
+            "matched_line": "Technology libraries: tcbn03e_bwp143mh117l3p48cpd_base_elvtssgnp_0p675v_m40c_cworst_CCworst_T_ccs 110"
+          },
+          {
+            "field_name": "timing_model_type",
+            "search_pattern": "Timing Model:\\s+(\\S+)",
+            "data_type": "str",
+            "source_type": "semantic_inference",
+            "confidence": 0.85,
+            "rationale": "Direct indicator of timing model type (lib vs wireload) - expected in QoR reports but not present in sample",
+            "matched_line": null
+          },
+          {
+            "field_name": "wireload_model_name",
+            "search_pattern": "Wireload Model:\\s+(\\S+)",
+            "data_type": "str",
+            "source_type": "semantic_inference",
+            "confidence": 0.85,
+            "rationale": "Presence of wireload model name indicates wireload-based timing (failure condition) - expected in QoR reports",
+            "matched_line": null
+          },
+          {
+            "field_name": "operating_conditions",
+            "search_pattern": "Operating Conditions:\\s+([^\\n]+)",
+            "data_type": "str",
+            "source_type": "semantic_inference",
+            "confidence": 0.8,
+            "rationale": "Operating conditions section typically accompanies timing model configuration in QoR reports",
+            "matched_line": null
+          },
+          {
+            "field_name": "library_ccs_indicator",
+            "search_pattern": "_ccs\\s+\\d+",
+            "data_type": "str",
+            "source_type": "data_verified",
+            "confidence": 1.0,
+            "rationale": "CCS (Composite Current Source) suffix in library names confirms advanced library-based timing models are used",
+            "matched_line": "tcbn03e_bwp143mh117l3p48cpd_base_elvtssgnp_0p675v_m40c_cworst_CCworst_T_ccs 110"
+          }
+        ]
+      }
+    },
+    "reflection_raw": {
+      "coverage_score": 100.0,
+      "missing_formats": [],
+      "missing_critical": [],
+      "low_confidence_fields": [],
+      "semantic_inference_ratio": 0.3,
+      "total_fields": 10,
+      "llm_triggered": false,
+      "final_confidence": 0.8
+    }
+  },
+  "_notes": {
+    "source": "requirements/waivers/input_files 是原始 YAML 配置",
+    "analysis": "file_analysis 是 Tool 分析结果",
+    "spec": "type_scenarios 必须全部 4 种实现，不受当前配置限制"
+  }
+}

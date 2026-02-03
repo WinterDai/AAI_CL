@@ -1,0 +1,16 @@
+FAIL:IMP-12-0-0-32:Confirm no ERROR message in DFM/FLT log files. (for SEC process, for others fill N/A)
+IMP-12-0-0-32-ERROR01: ERROR messages detected in Pegasus verification logs:
+  Severity: Fail Occurrence: 12
+  - Assertion exception during computation (Worker 2) (Source: Worker 2)
+  - Cell pm26 is referenced, but does not exist. (Source: do_pvsFLTwD.log:line 279)
+  - File system exception during memory reduction (Worker 11) (Source: Worker 11)
+  - Invalid option. (Source: Pegasus_DFM.log:line 562)
+  - Invalid option. (Source: do_pvsFLTwD.log:line 281)
+  - Out of temporary storage disk space, please check -tmp_dirs setting (Worker 11) (Source: Worker 11)
+  - Pegasus exception during compilation (Worker 1) (Source: Worker 1)
+  - Run completed with errors due to worker failures (Source: do_pvsFLTwD.log:line 283)
+  - Terminating run, encountered unrecoverable error on Worker 2 (Source: do_pvsFLTwD.log:line 282)
+  - Terminating run, encountered unrecoverable layer loss (Source: do_pvsFLTwD.log:line 284)
+  - The difference between the numbers of schematic and layout instances (Source: NVN-7090)
+  - missing_reference exception for cell "pm26" in parent cell "pm100" (Worker 1) (Source: Worker 1)
+

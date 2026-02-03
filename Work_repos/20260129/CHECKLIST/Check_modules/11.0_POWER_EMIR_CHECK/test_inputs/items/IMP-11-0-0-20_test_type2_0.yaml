@@ -1,0 +1,12 @@
+description: Confirm wake-up time meet customer's requirement. (For non-PSO, please
+  fill N/A)
+input_files:
+- ${CHECKLIST_ROOT}\IP_project_folder\reports\11.0\Powerup.rpt
+requirements:
+  pattern_items:
+  - '1.0e-07'
+  value: 1
+waivers:
+  value: 0
+  waive_items:
+  - 'Explanation: Wake-up time violations are acceptable for this low-power design'

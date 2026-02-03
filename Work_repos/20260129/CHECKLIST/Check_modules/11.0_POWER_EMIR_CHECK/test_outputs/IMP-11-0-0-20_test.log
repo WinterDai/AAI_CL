@@ -1,0 +1,106 @@
+Test Log: IMP-11-0-0-20
+================================================================================
+
+[Test 1/6] Type 1 (requirements.value=N/A, waivers.value=N/A)
+--------------------------------------------------------------------------------
+Test ID: type1_na
+Status: PASS
+
+Checker Log Output:
+PASS:IMP-11-0-0-20:Confirm wake-up time meet customer's requirement. (For non-PSO, please fill N/A)
+IMP-11-0-0-20-INFO01: Wake-up time validation completed - all power switches activated:
+  Severity: Info Occurrence: 3
+  - Wake-up time: 1.11e-07s
+  - Power switches: 28215/28215 activated
+  - Rush current: 0.427297A
+
+
+================================================================================
+
+[Test 2/6] Type 1 (requirements.value=N/A, waivers.value=0)
+--------------------------------------------------------------------------------
+Test ID: type1_0
+Status: PASS
+
+Checker Log Output:
+PASS:IMP-11-0-0-20:Confirm wake-up time meet customer's requirement. (For non-PSO, please fill N/A)
+IMP-11-0-0-20-INFO01: [WAIVED_INFO]: Waived information:
+  Severity: Info Occurrence: 1
+  - Explanation: Wake-up time check is informational only for early design stages
+IMP-11-0-0-20-INFO02: Wake-up time validation completed - all power switches activated:
+  Severity: Info Occurrence: 3
+  - Wake-up time: 1.11e-07s
+  - Power switches: 28215/28215 activated
+  - Rush current: 0.427297A
+
+
+================================================================================
+
+[Test 3/6] Type 2 (requirements.value>0, waivers.value=N/A)
+--------------------------------------------------------------------------------
+Test ID: type2_na
+Status: ERROR
+
+Checker Log Output:
+FAIL:IMP-11-0-0-20:Confirm wake-up time meet customer's requirement. (For non-PSO, please fill N/A)
+IMP-11-0-0-20-ERROR01: Wake-up time exceeds customer requirement:
+  Severity: Fail Occurrence: 1
+  - Wake-up time: 1.11e-07s exceeds requirement 1.00e-07s by 1.10e-08s
+
+
+================================================================================
+
+[Test 4/6] Type 2 (requirements.value>0, waivers.value=0)
+--------------------------------------------------------------------------------
+Test ID: type2_0
+Status: PASS
+
+Checker Log Output:
+PASS:IMP-11-0-0-20:Confirm wake-up time meet customer's requirement. (For non-PSO, please fill N/A)
+IMP-11-0-0-20-INFO01: [WAIVED_INFO]: Waived information:
+  Severity: Info Occurrence: 1
+  - Explanation: Wake-up time violations are acceptable for this low-power design
+IMP-11-0-0-20-INFO02: [WAIVED_AS_INFO]: Wake-up time exceeds customer requirement:
+  Severity: Info Occurrence: 1
+  - Wake-up time: 1.11e-07s exceeds requirement 1.00e-07s by 1.10e-08s
+
+
+================================================================================
+
+[Test 5/6] Type 3
+--------------------------------------------------------------------------------
+Test ID: type3
+Status: PASS
+
+Checker Log Output:
+PASS:IMP-11-0-0-20:Confirm wake-up time meet customer's requirement. (For non-PSO, please fill N/A)
+IMP-11-0-0-20-WARN01: Unused waivers:
+  Severity: Warn Occurrence: 1
+  - 2.0e-07
+IMP-11-0-0-20-INFO01: Wake-up time requirement waived:
+  Severity: Info Occurrence: 1
+  - Wake-up time: 1.11e-07s exceeds requirement 1.00e-07s by 1.10e-08s
+
+
+================================================================================
+
+[Test 6/6] Type 4
+--------------------------------------------------------------------------------
+Test ID: type4
+Status: PASS
+
+Checker Log Output:
+PASS:IMP-11-0-0-20:Confirm wake-up time meet customer's requirement. (For non-PSO, please fill N/A)
+IMP-11-0-0-20-WARN01: Unused waivers:
+  Severity: Warn Occurrence: 2
+  - Power switches
+  - Wake-up time
+IMP-11-0-0-20-INFO01: Wake-up time validation completed - all power switches activated:
+  Severity: Info Occurrence: 3
+  - Wake-up time: 1.11e-07s
+  - Power switches: 28215/28215 activated
+  - Rush current: 0.427297A
+
+
+================================================================================
+

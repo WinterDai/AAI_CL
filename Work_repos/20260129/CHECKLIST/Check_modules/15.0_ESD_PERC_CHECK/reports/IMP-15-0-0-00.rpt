@@ -1,0 +1,5 @@
+PASS:IMP-15-0-0-00:Confirm whether ESD PERC check is needed.
+Info Occurrence: 3
+1: Info: Explanation: Design type validation is informational for early design stages: Explanation: Design type validation is informational for early design stages[WAIVED_INFO]
+2: Info: *phy_top: Item not found[WAIVED_AS_INFO]
+3: Info: *tv_chip: Item not found[WAIVED_AS_INFO]

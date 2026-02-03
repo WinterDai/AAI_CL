@@ -1,0 +1,4 @@
+PASS:IMP-2-0-0-05:Confirm ANT rule deck was not modified? If it was, explain in comments field.
+Info Occurrence: 2
+1: Info: Explanation: ANT rule deck modification check is informational only for this project phase: Explanation: ANT rule deck modification check is informational only for this project phase[WAIVED_INFO]
+2: Info: PLN5LO_16M_1X1Xb1Xe1Ya1Yb6Y2Yy2R_014_ANT.13_1a.encrypt. In line 24, C:\Users\chenweif\Checker_dev\CHECKLIST\CHECKLIST\IP_project_folder\ruledeck\2.0\PLN5LO_16M_1X1Xb1Xe1Ya1Yb6Y2Yy2R_014_ANT.13_1a.encrypt: Rule deck path successfully extracted from ANT_pvl.log

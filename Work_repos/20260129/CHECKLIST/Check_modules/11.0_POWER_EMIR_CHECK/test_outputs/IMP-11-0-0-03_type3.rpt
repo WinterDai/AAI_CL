@@ -1,0 +1,7 @@
+FAIL:IMP-11-0-0-03:Confirm activity file was used? If not, provide default switching activity values in comments field.
+Fail Occurrence: 2
+1: Fail: 'read_activity_file' finished successfully: Required activity configuration pattern not satisfied - no valid activity setup detected
+2: Fail: 'set_default_switching_activity' finished successfully: Required activity configuration pattern not satisfied - no valid activity setup detected
+Warn Occurrence: 2
+1: Warn: ND1_func_ffgnp_0p825v_125c_cbest_CCbest_T_cworst_CCworst_hold_EM.log: Waiver not matched - no corresponding activity configuration issue found in log: EM analysis uses conservative defaults - activity file not required per design review[WAIVER]
+2: Warn: ND1_test_ffgnp_0p825v_m40c_cbest_CCbest_T_rcbest_CCbest_hold_static.log: Waiver not matched - no corresponding activity configuration issue found in log: Test mode static analysis waived - using default activity acceptable for this corner[WAIVER]

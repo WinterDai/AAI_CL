@@ -1,0 +1,5 @@
+FAIL:IMP-4-0-0-08:Confirm all path exceptions (false paths, multicycle, max delay) have been peer reviewed and approved?
+IMP-4-0-0-08-ERROR01: Configuration error:
+  Severity: Fail Occurrence: 1
+  - input_files is empty in YAML configuration
+

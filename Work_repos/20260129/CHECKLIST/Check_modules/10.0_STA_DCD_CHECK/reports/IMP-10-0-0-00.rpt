@@ -1,0 +1,8 @@
+PASS:IMP-10-0-0-00:Confirm the netlist/spef version is correct.
+Info Occurrence: 6
+1: Info: Netlist Version: Nov 18 2025 15:58:15. In line 3, C:\Users\yuyin\Desktop\CHECKLIST_V3\CHECKLIST\IP_project_folder\dbs\phy_cmn_phase_align_digtop.v.gz: Netlist and SPEF version information found in log and file headers
+2: Info: Netlist: phy_cmn_phase_align_digtop.v.gz. In line 6, C:\Users\yuyin\Desktop\CHECKLIST_V3\CHECKLIST\IP_project_folder\logs\sta_post_syn.log: Netlist and SPEF version information found in log and file headers
+3: Info: Parasitics Mode: No SPEF/RCDB. In line 62, C:\Users\yuyin\Desktop\CHECKLIST_V3\CHECKLIST\IP_project_folder\logs\sta_post_syn.log: Netlist and SPEF version information found in log and file headers
+4: Info: SPEF: Skipped: we are writing post-synthesis SDF files. In line 22, C:\Users\yuyin\Desktop\CHECKLIST_V3\CHECKLIST\IP_project_folder\logs\sta_post_syn.log: Netlist and SPEF version information found in log and file headers
+5: Info: Tool Version: 23.15-s108_1. In line 44, C:\Users\yuyin\Desktop\CHECKLIST_V3\CHECKLIST\IP_project_folder\logs\sta_post_syn.log: Netlist and SPEF version information found in log and file headers
+6: Info: Top Design: phy_cmn_phase_align_digtop. In line 14, C:\Users\yuyin\Desktop\CHECKLIST_V3\CHECKLIST\IP_project_folder\logs\sta_post_syn.log: Netlist and SPEF version information found in log and file headers

@@ -1,0 +1,13 @@
+description: Confirm the design has no power open/short and all instances are physically
+  connected.
+input_files:
+- ${CHECKLIST_ROOT}/IP_project_folder/reports/lvs.rep.cls
+requirements:
+  pattern_items:
+  - MATCH
+  value: 1
+waivers:
+  value: 0
+  waive_items:
+  - 'Explanation: Power connectivity validation is informational during pre-tapeout
+    phase'

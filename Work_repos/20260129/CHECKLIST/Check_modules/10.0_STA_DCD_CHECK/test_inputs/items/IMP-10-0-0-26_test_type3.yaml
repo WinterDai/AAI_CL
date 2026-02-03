@@ -1,0 +1,16 @@
+description: Confirm check_design report has no issue.
+input_files:
+- ${CHECKLIST_ROOT}/IP_project_folder/reports/10.0/check_design_func.rpt
+requirements:
+  pattern_items:
+  - Floating Ports
+  - Annotation to Verilog Netlist
+  - Cells with missing Timing data
+  value: 3
+waivers:
+  value: 2
+  waive_items:
+  - name: Floating Ports
+    reason: Analog power pins connected at top level - waived per analog team
+  - name: Nets with parallel drivers
+    reason: Intentional parallel drivers for analog test bus muxing - design requirement

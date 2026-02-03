@@ -1,0 +1,3 @@
+PASS:IMP-3-0-0-03:List Tempus timing signoff tool version (eg. ssv/231/23.12-s092_1)
+Info Occurrence: 1
+1: Info: ssv/202/20.20.000. In line 33, C:\Users\yuyin\OneDrive - Cadence Design Systems Inc\2025\Checklist\AAI\CHECKLIST_V3\CHECKLIST\IP_project_folder\tcl\2.0\setup_vars.tcl: Tempus timing signoff tool version found in TEMPUS(MODULE_CMD) variable

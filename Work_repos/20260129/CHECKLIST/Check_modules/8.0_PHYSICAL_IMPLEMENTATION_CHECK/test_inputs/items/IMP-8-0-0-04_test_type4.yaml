@@ -1,0 +1,15 @@
+description: Confirm buffers are attached for all ports and are set as fixed.
+input_files:
+- C:\Users\chyao\Desktop\checklist_dev\CHECKLIST\CHECKLIST\IP_project_folder\reports\8.0\IMP-8-0-0-04\IMP-8-0-0-04_case2.rpt
+requirements:
+  pattern_items: []
+  value: N/A
+waivers:
+  value: 2
+  waive_items:
+  - name: test_port
+    reason: Test port uses custom IO cell per design specification - approved by design
+      team
+  - name: debug_clk
+    reason: Debug clock buffer intentionally unfixed for placement optimization -
+      approved for non-critical path

@@ -1,0 +1,11 @@
+description: List Conformal LEC tool version (eg. confrml/241/24.10.100)
+input_files:
+- ${CHECKLIST_ROOT}/IP_project_folder/tcl/2.0/setup_vars.tcl
+requirements:
+  pattern_items: []
+  value: N/A
+waivers:
+  value: 0
+  waive_items:
+  - 'Explanation: This check is informational only - tool version tracking for documentation
+    purposes'

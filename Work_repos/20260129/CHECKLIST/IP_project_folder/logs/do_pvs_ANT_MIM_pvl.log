@@ -1,0 +1,2426 @@
+
+########################################################################
+Get environment info ...
+########################################################################
+ENV VAR: TCL_LIBRARY = /apps/ssg_tools/production/pegasus/232/23.25.008-e831/tools.lnx86/pegasus/bin/64bit/../../../../share/lib/tcltk/08.64/tcl8.6
+ENV VAR: TCLX_LIBRARY = /apps/ssg_tools/production/pegasus/232/23.25.008-e831/tools.lnx86/pegasus/bin/64bit/../../../../share/lib/tclx/08.40
+ENV VAR: TCLLIBPATH = /apps/ssg_tools/production/pegasus/232/23.25.008-e831/tools.lnx86/pegasus/bin/64bit/../../../../share/lib/itcl/3.4.1 /apps/ssg_tools/production/pegasus/232/23.25.008-e831/tools.lnx86/pegasus/bin/64bit/../../../../share/lib/tclxml/3.2 /apps/ssg_tools/production/pegasus/232/23.25.008-e831/tools.lnx86/pegasus/bin/64bit/../../../../share/lib/tcllib/1.18
+ENV VAR: PEGASUS_PVL_LIBRARY = /apps/ssg_tools/production/pegasus/232/23.25.008-e831/tools.lnx86/pegasus/bin/64bit/../../../Pegasus/bin/64bit/etc/pvl/tcl
+ENV VAR: PEGASUS_TVL_LIBRARY = /apps/ssg_tools/production/pegasus/232/23.25.008-e831/tools.lnx86/pegasus/bin/64bit/../../../Pegasus/bin/64bit/etc/preproc/tcl
+ENV VAR: PEGASUS_LVS_DEVICE_DFM_LIBRARY = /apps/ssg_tools/production/pegasus/232/23.25.008-e831/tools.lnx86/pegasus/bin/64bit/../../../Pegasus/bin/64bit/etc/lvs_device_dfm/tcl
+ENV VAR: LSF_ENVDIR = /grid/sfi/farm/nflsfdpc01/conf
+ENV VAR: LSF_SERVERDIR = /grid/sfi/farm/nflsfdpc01/10.1/linux3.10-glibc2.17-x86_64/etc
+ENV VAR: LSB_JOBID = 8554325
+
+
+########################################################################
+Parsing Rule File scr/tv_chip.ANTMIMwD.pvl ...
+########################################################################
+include "/projects/TC73_DDR5_12800_N5P/libs/ruledeck/PEGASUS/ANT/PLN5LO_MIM_16M_014_ANT.13_1a.encrypt"
+ABORT_ON_LAYOUT_ERROR YES;
+LAYOUT_PRIMARY "tv_chip";
+LAYOUT_PATH "dbs/tv_chip.OUTwD.merged.gds.gz";
+LAYOUT_FORMAT GDSII;
+INPUT_SCALE 20000;
+INPUT_DB_SCALE 2000;
+MAGNIFY_IN AUTO;
+DRC_RESULTS_PRECISION 2000;
+MAGNIFY_OUT 0.1;
+MAGNIFY_OUT -density 0.1;
+MAGNIFY_OUT -nar 0.1;
+LAYOUT_FORMAT gdsii;
+[WARN]: LAYOUT_FORMAT at line 39 in file /projects/TC73_DDR5_12800_N5P/libs/ruledeck/PEGASUS/ANT/PLN5LO_MIM_16M_014_ANT.13_1a.encrypt is ignored due to one specified before in LAYOUT_FORMAT.
+RESULTS_DB -drc "DRC_RES.db";
+REPORT_SUMMARY -drc "DRC_ANTMIM.rep";
+KEEP_EMPTY -drc NO;
+CHECK_TEXT -drc -all;
+MAX_RESULTS -drc -all;
+INCR_CONN YES;
+LAYOUT_INCLUDE_BOX_RECORD YES;
+#!encrypt#!8#!WOe_{>6\#!encrypt#!13#!N$:.D1ib4>+B:#!encrypt#!4#!Nf2c#!encrypt#!2#!g
+LAYER_DEF ODi 6000;
+LAYER_MAP 6 -datatype 0 6000;
+LAYER_DEF POi 17000;
+LAYER_MAP 17 -datatype 0 17000;
+LAYER_DEF SRDPO 17007;
+LAYER_MAP 17 -datatype 7 17007;
+LAYER_DEF CPOi 17030;
+LAYER_MAP 17 -datatype 30 17030;
+LAYER_DEF PODE_GATE 20628;
+LAYER_MAP 206 -datatype 28 20628;
+LAYER_DEF PODE_TrGATE 20629;
+LAYER_MAP 206 -datatype 29 20629;
+LAYER_DEF CPODE 20650;
+LAYER_MAP 206 -datatype 150 20650;
+LAYER_DEF DCPODE 20670;
+LAYER_MAP 206 -datatype 170 20670;
+LAYER_DEF PPi 2500;
+LAYER_MAP 25 -datatype 0 2500;
+LAYER_DEF NPi 2600;
+LAYER_MAP 26 -datatype 0 2600;
+LAYER_DEF RH_TN 11706;
+LAYER_MAP 117 -datatype 6 11706;
+LAYER_DEF DNWi 10000;
+LAYER_MAP 1 -datatype 0 10000;
+LAYER_DEF NWi 3000;
+LAYER_MAP 3 -datatype 0 3000;
+COPY NWi -outputlayer NW;
+LAYER_DEF OD12i 1400;
+LAYER_MAP 14 -datatype 0 1400;
+LAYER_DEF OD18i 1600;
+LAYER_MAP 16 -datatype 0 1600;
+LAYER_DEF MDi 82150;
+LAYER_MAP 82 -datatype 150 82150;
+LAYER_DEF SRDMDi 82170;
+LAYER_MAP 82 -datatype 170 82170;
+LAYER_DEF CMDi 82256;
+LAYER_MAP 82 -datatype 250 82256;
+LAYER_DEF SRDCMDi 82276;
+LAYER_MAP 82 -datatype 270 82276;
+LAYER_DEF VDi 17955;
+LAYER_MAP 179 -datatype 150 17955;
+LAYER_DEF VDRi 17750;
+LAYER_MAP 177 -datatype 150 17750;
+LAYER_DEF VGi 17855;
+LAYER_MAP 178 -datatype 150 17855;
+LAYER_DEF VIA0i 50155;
+LAYER_MAP 50 -datatype 150 50155;
+LAYER_DEF M0xdx_META 30150;
+LAYER_MAP 30 -datatype 150 30150;
+LAYER_DEF M0xdx_CAii 30151;
+LAYER_MAP 30 -datatype 151 30151;
+LAYER_DEF M0xdx_CBii 30152;
+LAYER_MAP 30 -datatype 152 30152;
+LAYER_DEF CM0A 43040;
+LAYER_MAP 430 -datatype 140 43040;
+LAYER_DEF CM0B 43045;
+LAYER_MAP 430 -datatype 145 43045;
+NOT M0xdx_CAii CM0A -outputlayer _EPTMPL262145;
+NOT M0xdx_CBii CM0B -outputlayer _EPTMPL262146;
+OR _EPTMPL262145 _EPTMPL262146 -outputlayer M0i;
+COPY M0i -outputlayer M0;
+LAYER_DEF VIA1i 5001;
+LAYER_MAP 51 -datatype 150 5001;
+LAYER_MAP 51 -datatype 200 5001;
+LAYER_MAP 51 -datatype 250 5001;
+LAYER_MAP 51 -datatype 300 5001;
+LAYER_MAP 51 -datatype 350 5001;
+LAYER_MAP 51 -datatype 400 5001;
+LAYER_MAP 51 -datatype 550 5001;
+LAYER_MAP 51 -datatype 600 5001;
+LAYER_MAP 51 -datatype 800 5001;
+LAYER_MAP 51 -datatype 950 5001;
+LAYER_MAP 51 -datatype 970 5001;
+LAYER_MAP 51 -datatype 40 5001;
+LAYER_MAP 51 -datatype 50 5001;
+LAYER_MAP 51 -datatype 60 5001;
+LAYER_MAP 51 -datatype 70 5001;
+LAYER_MAP 51 -datatype 80 5001;
+LAYER_MAP 51 -datatype 90 5001;
+LAYER_DEF VIA2i 5002;
+LAYER_MAP 52 -datatype 150 5002;
+LAYER_MAP 52 -datatype 200 5002;
+LAYER_MAP 52 -datatype 250 5002;
+LAYER_MAP 52 -datatype 300 5002;
+LAYER_MAP 52 -datatype 350 5002;
+LAYER_MAP 52 -datatype 400 5002;
+LAYER_MAP 52 -datatype 550 5002;
+LAYER_MAP 52 -datatype 600 5002;
+LAYER_MAP 52 -datatype 800 5002;
+LAYER_MAP 52 -datatype 950 5002;
+LAYER_MAP 52 -datatype 970 5002;
+LAYER_MAP 52 -datatype 40 5002;
+LAYER_MAP 52 -datatype 50 5002;
+LAYER_MAP 52 -datatype 60 5002;
+LAYER_MAP 52 -datatype 70 5002;
+LAYER_MAP 52 -datatype 80 5002;
+LAYER_MAP 52 -datatype 90 5002;
+LAYER_DEF VIA3i 5003;
+LAYER_MAP 53 -datatype 150 5003;
+LAYER_MAP 53 -datatype 200 5003;
+LAYER_MAP 53 -datatype 250 5003;
+LAYER_MAP 53 -datatype 300 5003;
+LAYER_MAP 53 -datatype 350 5003;
+LAYER_MAP 53 -datatype 400 5003;
+LAYER_MAP 53 -datatype 550 5003;
+LAYER_MAP 53 -datatype 600 5003;
+LAYER_MAP 53 -datatype 800 5003;
+LAYER_MAP 53 -datatype 950 5003;
+LAYER_MAP 53 -datatype 970 5003;
+LAYER_MAP 53 -datatype 40 5003;
+LAYER_MAP 53 -datatype 50 5003;
+LAYER_MAP 53 -datatype 60 5003;
+LAYER_MAP 53 -datatype 70 5003;
+LAYER_MAP 53 -datatype 80 5003;
+LAYER_MAP 53 -datatype 90 5003;
+LAYER_DEF VIA4i 5004;
+LAYER_MAP 54 -datatype 150 5004;
+LAYER_MAP 54 -datatype 200 5004;
+LAYER_MAP 54 -datatype 250 5004;
+LAYER_MAP 54 -datatype 300 5004;
+LAYER_MAP 54 -datatype 350 5004;
+LAYER_MAP 54 -datatype 400 5004;
+LAYER_MAP 54 -datatype 550 5004;
+LAYER_MAP 54 -datatype 600 5004;
+LAYER_MAP 54 -datatype 800 5004;
+LAYER_MAP 54 -datatype 950 5004;
+LAYER_MAP 54 -datatype 970 5004;
+LAYER_MAP 54 -datatype 40 5004;
+LAYER_MAP 54 -datatype 50 5004;
+LAYER_MAP 54 -datatype 60 5004;
+LAYER_MAP 54 -datatype 70 5004;
+LAYER_MAP 54 -datatype 80 5004;
+LAYER_MAP 54 -datatype 90 5004;
+LAYER_DEF VIA5i 5005;
+LAYER_MAP 55 -datatype 150 5005;
+LAYER_MAP 55 -datatype 200 5005;
+LAYER_MAP 55 -datatype 250 5005;
+LAYER_MAP 55 -datatype 300 5005;
+LAYER_MAP 55 -datatype 350 5005;
+LAYER_MAP 55 -datatype 400 5005;
+LAYER_MAP 55 -datatype 550 5005;
+LAYER_MAP 55 -datatype 600 5005;
+LAYER_MAP 55 -datatype 800 5005;
+LAYER_MAP 55 -datatype 950 5005;
+LAYER_MAP 55 -datatype 970 5005;
+LAYER_MAP 55 -datatype 40 5005;
+LAYER_MAP 55 -datatype 50 5005;
+LAYER_MAP 55 -datatype 60 5005;
+LAYER_MAP 55 -datatype 70 5005;
+LAYER_MAP 55 -datatype 80 5005;
+LAYER_MAP 55 -datatype 90 5005;
+LAYER_DEF VIA6i 5006;
+LAYER_MAP 56 -datatype 150 5006;
+LAYER_MAP 56 -datatype 200 5006;
+LAYER_MAP 56 -datatype 250 5006;
+LAYER_MAP 56 -datatype 300 5006;
+LAYER_MAP 56 -datatype 350 5006;
+LAYER_MAP 56 -datatype 400 5006;
+LAYER_MAP 56 -datatype 550 5006;
+LAYER_MAP 56 -datatype 600 5006;
+LAYER_MAP 56 -datatype 800 5006;
+LAYER_MAP 56 -datatype 950 5006;
+LAYER_MAP 56 -datatype 970 5006;
+LAYER_MAP 56 -datatype 40 5006;
+LAYER_MAP 56 -datatype 50 5006;
+LAYER_MAP 56 -datatype 60 5006;
+LAYER_MAP 56 -datatype 70 5006;
+LAYER_MAP 56 -datatype 80 5006;
+LAYER_MAP 56 -datatype 90 5006;
+LAYER_DEF VIA7i 5007;
+LAYER_MAP 57 -datatype 150 5007;
+LAYER_MAP 57 -datatype 200 5007;
+LAYER_MAP 57 -datatype 250 5007;
+LAYER_MAP 57 -datatype 300 5007;
+LAYER_MAP 57 -datatype 350 5007;
+LAYER_MAP 57 -datatype 400 5007;
+LAYER_MAP 57 -datatype 550 5007;
+LAYER_MAP 57 -datatype 600 5007;
+LAYER_MAP 57 -datatype 800 5007;
+LAYER_MAP 57 -datatype 950 5007;
+LAYER_MAP 57 -datatype 970 5007;
+LAYER_MAP 57 -datatype 40 5007;
+LAYER_MAP 57 -datatype 50 5007;
+LAYER_MAP 57 -datatype 60 5007;
+LAYER_MAP 57 -datatype 70 5007;
+LAYER_MAP 57 -datatype 80 5007;
+LAYER_MAP 57 -datatype 90 5007;
+LAYER_DEF VIA8i 5008;
+LAYER_MAP 58 -datatype 150 5008;
+LAYER_MAP 58 -datatype 200 5008;
+LAYER_MAP 58 -datatype 250 5008;
+LAYER_MAP 58 -datatype 300 5008;
+LAYER_MAP 58 -datatype 350 5008;
+LAYER_MAP 58 -datatype 400 5008;
+LAYER_MAP 58 -datatype 550 5008;
+LAYER_MAP 58 -datatype 600 5008;
+LAYER_MAP 58 -datatype 800 5008;
+LAYER_MAP 58 -datatype 950 5008;
+LAYER_MAP 58 -datatype 970 5008;
+LAYER_MAP 58 -datatype 40 5008;
+LAYER_MAP 58 -datatype 50 5008;
+LAYER_MAP 58 -datatype 60 5008;
+LAYER_MAP 58 -datatype 70 5008;
+LAYER_MAP 58 -datatype 80 5008;
+LAYER_MAP 58 -datatype 90 5008;
+LAYER_DEF VIA9i 5009;
+LAYER_MAP 59 -datatype 150 5009;
+LAYER_MAP 59 -datatype 200 5009;
+LAYER_MAP 59 -datatype 250 5009;
+LAYER_MAP 59 -datatype 300 5009;
+LAYER_MAP 59 -datatype 350 5009;
+LAYER_MAP 59 -datatype 400 5009;
+LAYER_MAP 59 -datatype 550 5009;
+LAYER_MAP 59 -datatype 600 5009;
+LAYER_MAP 59 -datatype 800 5009;
+LAYER_MAP 59 -datatype 950 5009;
+LAYER_MAP 59 -datatype 970 5009;
+LAYER_MAP 59 -datatype 40 5009;
+LAYER_MAP 59 -datatype 50 5009;
+LAYER_MAP 59 -datatype 60 5009;
+LAYER_MAP 59 -datatype 70 5009;
+LAYER_MAP 59 -datatype 80 5009;
+LAYER_MAP 59 -datatype 90 5009;
+LAYER_DEF VIA10i 5010;
+LAYER_MAP 60 -datatype 150 5010;
+LAYER_MAP 60 -datatype 200 5010;
+LAYER_MAP 60 -datatype 250 5010;
+LAYER_MAP 60 -datatype 300 5010;
+LAYER_MAP 60 -datatype 350 5010;
+LAYER_MAP 60 -datatype 400 5010;
+LAYER_MAP 60 -datatype 550 5010;
+LAYER_MAP 60 -datatype 600 5010;
+LAYER_MAP 60 -datatype 800 5010;
+LAYER_MAP 60 -datatype 950 5010;
+LAYER_MAP 60 -datatype 970 5010;
+LAYER_MAP 60 -datatype 40 5010;
+LAYER_MAP 60 -datatype 50 5010;
+LAYER_MAP 60 -datatype 60 5010;
+LAYER_MAP 60 -datatype 70 5010;
+LAYER_MAP 60 -datatype 80 5010;
+LAYER_MAP 60 -datatype 90 5010;
+LAYER_DEF VIA11i 5011;
+LAYER_MAP 61 -datatype 150 5011;
+LAYER_MAP 61 -datatype 200 5011;
+LAYER_MAP 61 -datatype 250 5011;
+LAYER_MAP 61 -datatype 300 5011;
+LAYER_MAP 61 -datatype 350 5011;
+LAYER_MAP 61 -datatype 400 5011;
+LAYER_MAP 61 -datatype 550 5011;
+LAYER_MAP 61 -datatype 600 5011;
+LAYER_MAP 61 -datatype 800 5011;
+LAYER_MAP 61 -datatype 950 5011;
+LAYER_MAP 61 -datatype 970 5011;
+LAYER_MAP 61 -datatype 40 5011;
+LAYER_MAP 61 -datatype 50 5011;
+LAYER_MAP 61 -datatype 60 5011;
+LAYER_MAP 61 -datatype 70 5011;
+LAYER_MAP 61 -datatype 80 5011;
+LAYER_MAP 61 -datatype 90 5011;
+LAYER_DEF VIA12i 5012;
+LAYER_MAP 62 -datatype 150 5012;
+LAYER_MAP 62 -datatype 200 5012;
+LAYER_MAP 62 -datatype 250 5012;
+LAYER_MAP 62 -datatype 300 5012;
+LAYER_MAP 62 -datatype 350 5012;
+LAYER_MAP 62 -datatype 400 5012;
+LAYER_MAP 62 -datatype 550 5012;
+LAYER_MAP 62 -datatype 600 5012;
+LAYER_MAP 62 -datatype 800 5012;
+LAYER_MAP 62 -datatype 950 5012;
+LAYER_MAP 62 -datatype 970 5012;
+LAYER_MAP 62 -datatype 40 5012;
+LAYER_MAP 62 -datatype 50 5012;
+LAYER_MAP 62 -datatype 60 5012;
+LAYER_MAP 62 -datatype 70 5012;
+LAYER_MAP 62 -datatype 80 5012;
+LAYER_MAP 62 -datatype 90 5012;
+LAYER_DEF VIA13i 5013;
+LAYER_MAP 63 -datatype 150 5013;
+LAYER_MAP 63 -datatype 200 5013;
+LAYER_MAP 63 -datatype 250 5013;
+LAYER_MAP 63 -datatype 300 5013;
+LAYER_MAP 63 -datatype 350 5013;
+LAYER_MAP 63 -datatype 400 5013;
+LAYER_MAP 63 -datatype 550 5013;
+LAYER_MAP 63 -datatype 600 5013;
+LAYER_MAP 63 -datatype 800 5013;
+LAYER_MAP 63 -datatype 950 5013;
+LAYER_MAP 63 -datatype 970 5013;
+LAYER_MAP 63 -datatype 40 5013;
+LAYER_MAP 63 -datatype 50 5013;
+LAYER_MAP 63 -datatype 60 5013;
+LAYER_MAP 63 -datatype 70 5013;
+LAYER_MAP 63 -datatype 80 5013;
+LAYER_MAP 63 -datatype 90 5013;
+LAYER_DEF VIA14i 5014;
+LAYER_MAP 64 -datatype 150 5014;
+LAYER_MAP 64 -datatype 200 5014;
+LAYER_MAP 64 -datatype 250 5014;
+LAYER_MAP 64 -datatype 300 5014;
+LAYER_MAP 64 -datatype 350 5014;
+LAYER_MAP 64 -datatype 400 5014;
+LAYER_MAP 64 -datatype 550 5014;
+LAYER_MAP 64 -datatype 600 5014;
+LAYER_MAP 64 -datatype 800 5014;
+LAYER_MAP 64 -datatype 950 5014;
+LAYER_MAP 64 -datatype 970 5014;
+LAYER_MAP 64 -datatype 40 5014;
+LAYER_MAP 64 -datatype 50 5014;
+LAYER_MAP 64 -datatype 60 5014;
+LAYER_MAP 64 -datatype 70 5014;
+LAYER_MAP 64 -datatype 80 5014;
+LAYER_MAP 64 -datatype 90 5014;
+LAYER_DEF VIA15i 5015;
+LAYER_MAP 65 -datatype 150 5015;
+LAYER_MAP 65 -datatype 200 5015;
+LAYER_MAP 65 -datatype 250 5015;
+LAYER_MAP 65 -datatype 300 5015;
+LAYER_MAP 65 -datatype 350 5015;
+LAYER_MAP 65 -datatype 400 5015;
+LAYER_MAP 65 -datatype 550 5015;
+LAYER_MAP 65 -datatype 600 5015;
+LAYER_MAP 65 -datatype 800 5015;
+LAYER_MAP 65 -datatype 950 5015;
+LAYER_MAP 65 -datatype 970 5015;
+LAYER_MAP 65 -datatype 40 5015;
+LAYER_MAP 65 -datatype 50 5015;
+LAYER_MAP 65 -datatype 60 5015;
+LAYER_MAP 65 -datatype 70 5015;
+LAYER_MAP 65 -datatype 80 5015;
+LAYER_MAP 65 -datatype 90 5015;
+LAYER_DEF M1xdy_CAii 2821;
+LAYER_MAP 31 -datatype 171 2821;
+LAYER_DEF M1xdy_CBii 2831;
+LAYER_MAP 31 -datatype 172 2831;
+OR M1xdy_CAii M1xdy_CBii -outputlayer M1i;
+COPY M1i -outputlayer M1;
+LAYER_DEF M2i 3302;
+LAYER_MAP 32 -datatype 151 3302;
+LAYER_MAP 32 -datatype 152 3302;
+LAYER_MAP 32 -datatype 171 3302;
+LAYER_MAP 32 -datatype 172 3302;
+LAYER_MAP 32 -datatype 201 3302;
+LAYER_MAP 32 -datatype 202 3302;
+LAYER_MAP 32 -datatype 221 3302;
+LAYER_MAP 32 -datatype 222 3302;
+LAYER_MAP 32 -datatype 251 3302;
+LAYER_MAP 32 -datatype 252 3302;
+LAYER_MAP 32 -datatype 271 3302;
+LAYER_MAP 32 -datatype 272 3302;
+LAYER_MAP 32 -datatype 301 3302;
+LAYER_MAP 32 -datatype 302 3302;
+LAYER_MAP 32 -datatype 321 3302;
+LAYER_MAP 32 -datatype 322 3302;
+LAYER_MAP 32 -datatype 351 3302;
+LAYER_MAP 32 -datatype 352 3302;
+LAYER_MAP 32 -datatype 371 3302;
+LAYER_MAP 32 -datatype 372 3302;
+LAYER_MAP 32 -datatype 401 3302;
+LAYER_MAP 32 -datatype 402 3302;
+LAYER_MAP 32 -datatype 421 3302;
+LAYER_MAP 32 -datatype 422 3302;
+LAYER_MAP 32 -datatype 551 3302;
+LAYER_MAP 32 -datatype 552 3302;
+LAYER_MAP 32 -datatype 571 3302;
+LAYER_MAP 32 -datatype 572 3302;
+LAYER_MAP 32 -datatype 601 3302;
+LAYER_MAP 32 -datatype 602 3302;
+LAYER_MAP 32 -datatype 621 3302;
+LAYER_MAP 32 -datatype 622 3302;
+LAYER_MAP 32 -datatype 800 3302;
+LAYER_MAP 32 -datatype 810 3302;
+LAYER_MAP 32 -datatype 950 3302;
+LAYER_MAP 32 -datatype 960 3302;
+LAYER_MAP 32 -datatype 970 3302;
+LAYER_MAP 32 -datatype 980 3302;
+LAYER_MAP 32 -datatype 40 3302;
+LAYER_MAP 32 -datatype 50 3302;
+LAYER_MAP 32 -datatype 60 3302;
+LAYER_MAP 32 -datatype 70 3302;
+LAYER_MAP 32 -datatype 80 3302;
+LAYER_MAP 32 -datatype 90 3302;
+COPY M2i -outputlayer M2;
+LAYER_DEF M3i 3303;
+LAYER_MAP 33 -datatype 151 3303;
+LAYER_MAP 33 -datatype 152 3303;
+LAYER_MAP 33 -datatype 171 3303;
+LAYER_MAP 33 -datatype 172 3303;
+LAYER_MAP 33 -datatype 201 3303;
+LAYER_MAP 33 -datatype 202 3303;
+LAYER_MAP 33 -datatype 221 3303;
+LAYER_MAP 33 -datatype 222 3303;
+LAYER_MAP 33 -datatype 251 3303;
+LAYER_MAP 33 -datatype 252 3303;
+LAYER_MAP 33 -datatype 271 3303;
+LAYER_MAP 33 -datatype 272 3303;
+LAYER_MAP 33 -datatype 301 3303;
+LAYER_MAP 33 -datatype 302 3303;
+LAYER_MAP 33 -datatype 321 3303;
+LAYER_MAP 33 -datatype 322 3303;
+LAYER_MAP 33 -datatype 351 3303;
+LAYER_MAP 33 -datatype 352 3303;
+LAYER_MAP 33 -datatype 371 3303;
+LAYER_MAP 33 -datatype 372 3303;
+LAYER_MAP 33 -datatype 401 3303;
+LAYER_MAP 33 -datatype 402 3303;
+LAYER_MAP 33 -datatype 421 3303;
+LAYER_MAP 33 -datatype 422 3303;
+LAYER_MAP 33 -datatype 551 3303;
+LAYER_MAP 33 -datatype 552 3303;
+LAYER_MAP 33 -datatype 571 3303;
+LAYER_MAP 33 -datatype 572 3303;
+LAYER_MAP 33 -datatype 601 3303;
+LAYER_MAP 33 -datatype 602 3303;
+LAYER_MAP 33 -datatype 621 3303;
+LAYER_MAP 33 -datatype 622 3303;
+LAYER_MAP 33 -datatype 800 3303;
+LAYER_MAP 33 -datatype 810 3303;
+LAYER_MAP 33 -datatype 950 3303;
+LAYER_MAP 33 -datatype 960 3303;
+LAYER_MAP 33 -datatype 970 3303;
+LAYER_MAP 33 -datatype 980 3303;
+LAYER_MAP 33 -datatype 40 3303;
+LAYER_MAP 33 -datatype 50 3303;
+LAYER_MAP 33 -datatype 60 3303;
+LAYER_MAP 33 -datatype 70 3303;
+LAYER_MAP 33 -datatype 80 3303;
+LAYER_MAP 33 -datatype 90 3303;
+COPY M3i -outputlayer M3;
+LAYER_DEF M4i 3304;
+LAYER_MAP 34 -datatype 151 3304;
+LAYER_MAP 34 -datatype 152 3304;
+LAYER_MAP 34 -datatype 171 3304;
+LAYER_MAP 34 -datatype 172 3304;
+LAYER_MAP 34 -datatype 201 3304;
+LAYER_MAP 34 -datatype 202 3304;
+LAYER_MAP 34 -datatype 221 3304;
+LAYER_MAP 34 -datatype 222 3304;
+LAYER_MAP 34 -datatype 251 3304;
+LAYER_MAP 34 -datatype 252 3304;
+LAYER_MAP 34 -datatype 271 3304;
+LAYER_MAP 34 -datatype 272 3304;
+LAYER_MAP 34 -datatype 301 3304;
+LAYER_MAP 34 -datatype 302 3304;
+LAYER_MAP 34 -datatype 321 3304;
+LAYER_MAP 34 -datatype 322 3304;
+LAYER_MAP 34 -datatype 351 3304;
+LAYER_MAP 34 -datatype 352 3304;
+LAYER_MAP 34 -datatype 371 3304;
+LAYER_MAP 34 -datatype 372 3304;
+LAYER_MAP 34 -datatype 401 3304;
+LAYER_MAP 34 -datatype 402 3304;
+LAYER_MAP 34 -datatype 421 3304;
+LAYER_MAP 34 -datatype 422 3304;
+LAYER_MAP 34 -datatype 551 3304;
+LAYER_MAP 34 -datatype 552 3304;
+LAYER_MAP 34 -datatype 571 3304;
+LAYER_MAP 34 -datatype 572 3304;
+LAYER_MAP 34 -datatype 601 3304;
+LAYER_MAP 34 -datatype 602 3304;
+LAYER_MAP 34 -datatype 621 3304;
+LAYER_MAP 34 -datatype 622 3304;
+LAYER_MAP 34 -datatype 800 3304;
+LAYER_MAP 34 -datatype 810 3304;
+LAYER_MAP 34 -datatype 950 3304;
+LAYER_MAP 34 -datatype 960 3304;
+LAYER_MAP 34 -datatype 970 3304;
+LAYER_MAP 34 -datatype 980 3304;
+LAYER_MAP 34 -datatype 40 3304;
+LAYER_MAP 34 -datatype 50 3304;
+LAYER_MAP 34 -datatype 60 3304;
+LAYER_MAP 34 -datatype 70 3304;
+LAYER_MAP 34 -datatype 80 3304;
+LAYER_MAP 34 -datatype 90 3304;
+COPY M4i -outputlayer M4;
+LAYER_DEF M5i 3305;
+LAYER_MAP 35 -datatype 151 3305;
+LAYER_MAP 35 -datatype 152 3305;
+LAYER_MAP 35 -datatype 171 3305;
+LAYER_MAP 35 -datatype 172 3305;
+LAYER_MAP 35 -datatype 201 3305;
+LAYER_MAP 35 -datatype 202 3305;
+LAYER_MAP 35 -datatype 221 3305;
+LAYER_MAP 35 -datatype 222 3305;
+LAYER_MAP 35 -datatype 251 3305;
+LAYER_MAP 35 -datatype 252 3305;
+LAYER_MAP 35 -datatype 271 3305;
+LAYER_MAP 35 -datatype 272 3305;
+LAYER_MAP 35 -datatype 301 3305;
+LAYER_MAP 35 -datatype 302 3305;
+LAYER_MAP 35 -datatype 321 3305;
+LAYER_MAP 35 -datatype 322 3305;
+LAYER_MAP 35 -datatype 351 3305;
+LAYER_MAP 35 -datatype 352 3305;
+LAYER_MAP 35 -datatype 371 3305;
+LAYER_MAP 35 -datatype 372 3305;
+LAYER_MAP 35 -datatype 401 3305;
+LAYER_MAP 35 -datatype 402 3305;
+LAYER_MAP 35 -datatype 421 3305;
+LAYER_MAP 35 -datatype 422 3305;
+LAYER_MAP 35 -datatype 551 3305;
+LAYER_MAP 35 -datatype 552 3305;
+LAYER_MAP 35 -datatype 571 3305;
+LAYER_MAP 35 -datatype 572 3305;
+LAYER_MAP 35 -datatype 601 3305;
+LAYER_MAP 35 -datatype 602 3305;
+LAYER_MAP 35 -datatype 621 3305;
+LAYER_MAP 35 -datatype 622 3305;
+LAYER_MAP 35 -datatype 800 3305;
+LAYER_MAP 35 -datatype 810 3305;
+LAYER_MAP 35 -datatype 950 3305;
+LAYER_MAP 35 -datatype 960 3305;
+LAYER_MAP 35 -datatype 970 3305;
+LAYER_MAP 35 -datatype 980 3305;
+LAYER_MAP 35 -datatype 40 3305;
+LAYER_MAP 35 -datatype 50 3305;
+LAYER_MAP 35 -datatype 60 3305;
+LAYER_MAP 35 -datatype 70 3305;
+LAYER_MAP 35 -datatype 80 3305;
+LAYER_MAP 35 -datatype 90 3305;
+COPY M5i -outputlayer M5;
+LAYER_DEF M6i 3306;
+LAYER_MAP 36 -datatype 151 3306;
+LAYER_MAP 36 -datatype 152 3306;
+LAYER_MAP 36 -datatype 171 3306;
+LAYER_MAP 36 -datatype 172 3306;
+LAYER_MAP 36 -datatype 201 3306;
+LAYER_MAP 36 -datatype 202 3306;
+LAYER_MAP 36 -datatype 221 3306;
+LAYER_MAP 36 -datatype 222 3306;
+LAYER_MAP 36 -datatype 251 3306;
+LAYER_MAP 36 -datatype 252 3306;
+LAYER_MAP 36 -datatype 271 3306;
+LAYER_MAP 36 -datatype 272 3306;
+LAYER_MAP 36 -datatype 301 3306;
+LAYER_MAP 36 -datatype 302 3306;
+LAYER_MAP 36 -datatype 321 3306;
+LAYER_MAP 36 -datatype 322 3306;
+LAYER_MAP 36 -datatype 351 3306;
+LAYER_MAP 36 -datatype 352 3306;
+LAYER_MAP 36 -datatype 371 3306;
+LAYER_MAP 36 -datatype 372 3306;
+LAYER_MAP 36 -datatype 401 3306;
+LAYER_MAP 36 -datatype 402 3306;
+LAYER_MAP 36 -datatype 421 3306;
+LAYER_MAP 36 -datatype 422 3306;
+LAYER_MAP 36 -datatype 551 3306;
+LAYER_MAP 36 -datatype 552 3306;
+LAYER_MAP 36 -datatype 571 3306;
+LAYER_MAP 36 -datatype 572 3306;
+LAYER_MAP 36 -datatype 601 3306;
+LAYER_MAP 36 -datatype 602 3306;
+LAYER_MAP 36 -datatype 621 3306;
+LAYER_MAP 36 -datatype 622 3306;
+LAYER_MAP 36 -datatype 800 3306;
+LAYER_MAP 36 -datatype 810 3306;
+LAYER_MAP 36 -datatype 950 3306;
+LAYER_MAP 36 -datatype 960 3306;
+LAYER_MAP 36 -datatype 970 3306;
+LAYER_MAP 36 -datatype 980 3306;
+LAYER_MAP 36 -datatype 40 3306;
+LAYER_MAP 36 -datatype 50 3306;
+LAYER_MAP 36 -datatype 60 3306;
+LAYER_MAP 36 -datatype 70 3306;
+LAYER_MAP 36 -datatype 80 3306;
+LAYER_MAP 36 -datatype 90 3306;
+COPY M6i -outputlayer M6;
+LAYER_DEF M7i 3307;
+LAYER_MAP 37 -datatype 151 3307;
+LAYER_MAP 37 -datatype 152 3307;
+LAYER_MAP 37 -datatype 171 3307;
+LAYER_MAP 37 -datatype 172 3307;
+LAYER_MAP 37 -datatype 201 3307;
+LAYER_MAP 37 -datatype 202 3307;
+LAYER_MAP 37 -datatype 221 3307;
+LAYER_MAP 37 -datatype 222 3307;
+LAYER_MAP 37 -datatype 251 3307;
+LAYER_MAP 37 -datatype 252 3307;
+LAYER_MAP 37 -datatype 271 3307;
+LAYER_MAP 37 -datatype 272 3307;
+LAYER_MAP 37 -datatype 301 3307;
+LAYER_MAP 37 -datatype 302 3307;
+LAYER_MAP 37 -datatype 321 3307;
+LAYER_MAP 37 -datatype 322 3307;
+LAYER_MAP 37 -datatype 351 3307;
+LAYER_MAP 37 -datatype 352 3307;
+LAYER_MAP 37 -datatype 371 3307;
+LAYER_MAP 37 -datatype 372 3307;
+LAYER_MAP 37 -datatype 401 3307;
+LAYER_MAP 37 -datatype 402 3307;
+LAYER_MAP 37 -datatype 421 3307;
+LAYER_MAP 37 -datatype 422 3307;
+LAYER_MAP 37 -datatype 551 3307;
+LAYER_MAP 37 -datatype 552 3307;
+LAYER_MAP 37 -datatype 571 3307;
+LAYER_MAP 37 -datatype 572 3307;
+LAYER_MAP 37 -datatype 601 3307;
+LAYER_MAP 37 -datatype 602 3307;
+LAYER_MAP 37 -datatype 621 3307;
+LAYER_MAP 37 -datatype 622 3307;
+LAYER_MAP 37 -datatype 800 3307;
+LAYER_MAP 37 -datatype 810 3307;
+LAYER_MAP 37 -datatype 950 3307;
+LAYER_MAP 37 -datatype 960 3307;
+LAYER_MAP 37 -datatype 970 3307;
+LAYER_MAP 37 -datatype 980 3307;
+LAYER_MAP 37 -datatype 40 3307;
+LAYER_MAP 37 -datatype 50 3307;
+LAYER_MAP 37 -datatype 60 3307;
+LAYER_MAP 37 -datatype 70 3307;
+LAYER_MAP 37 -datatype 80 3307;
+LAYER_MAP 37 -datatype 90 3307;
+COPY M7i -outputlayer M7;
+LAYER_DEF M8i 3308;
+LAYER_MAP 38 -datatype 151 3308;
+LAYER_MAP 38 -datatype 152 3308;
+LAYER_MAP 38 -datatype 171 3308;
+LAYER_MAP 38 -datatype 172 3308;
+LAYER_MAP 38 -datatype 201 3308;
+LAYER_MAP 38 -datatype 202 3308;
+LAYER_MAP 38 -datatype 221 3308;
+LAYER_MAP 38 -datatype 222 3308;
+LAYER_MAP 38 -datatype 251 3308;
+LAYER_MAP 38 -datatype 252 3308;
+LAYER_MAP 38 -datatype 271 3308;
+LAYER_MAP 38 -datatype 272 3308;
+LAYER_MAP 38 -datatype 301 3308;
+LAYER_MAP 38 -datatype 302 3308;
+LAYER_MAP 38 -datatype 321 3308;
+LAYER_MAP 38 -datatype 322 3308;
+LAYER_MAP 38 -datatype 351 3308;
+LAYER_MAP 38 -datatype 352 3308;
+LAYER_MAP 38 -datatype 371 3308;
+LAYER_MAP 38 -datatype 372 3308;
+LAYER_MAP 38 -datatype 401 3308;
+LAYER_MAP 38 -datatype 402 3308;
+LAYER_MAP 38 -datatype 421 3308;
+LAYER_MAP 38 -datatype 422 3308;
+LAYER_MAP 38 -datatype 551 3308;
+LAYER_MAP 38 -datatype 552 3308;
+LAYER_MAP 38 -datatype 571 3308;
+LAYER_MAP 38 -datatype 572 3308;
+LAYER_MAP 38 -datatype 601 3308;
+LAYER_MAP 38 -datatype 602 3308;
+LAYER_MAP 38 -datatype 621 3308;
+LAYER_MAP 38 -datatype 622 3308;
+LAYER_MAP 38 -datatype 800 3308;
+LAYER_MAP 38 -datatype 810 3308;
+LAYER_MAP 38 -datatype 950 3308;
+LAYER_MAP 38 -datatype 960 3308;
+LAYER_MAP 38 -datatype 970 3308;
+LAYER_MAP 38 -datatype 980 3308;
+LAYER_MAP 38 -datatype 40 3308;
+LAYER_MAP 38 -datatype 50 3308;
+LAYER_MAP 38 -datatype 60 3308;
+LAYER_MAP 38 -datatype 70 3308;
+LAYER_MAP 38 -datatype 80 3308;
+LAYER_MAP 38 -datatype 90 3308;
+COPY M8i -outputlayer M8;
+LAYER_DEF M9i 3309;
+LAYER_MAP 39 -datatype 151 3309;
+LAYER_MAP 39 -datatype 152 3309;
+LAYER_MAP 39 -datatype 171 3309;
+LAYER_MAP 39 -datatype 172 3309;
+LAYER_MAP 39 -datatype 201 3309;
+LAYER_MAP 39 -datatype 202 3309;
+LAYER_MAP 39 -datatype 221 3309;
+LAYER_MAP 39 -datatype 222 3309;
+LAYER_MAP 39 -datatype 251 3309;
+LAYER_MAP 39 -datatype 252 3309;
+LAYER_MAP 39 -datatype 271 3309;
+LAYER_MAP 39 -datatype 272 3309;
+LAYER_MAP 39 -datatype 301 3309;
+LAYER_MAP 39 -datatype 302 3309;
+LAYER_MAP 39 -datatype 321 3309;
+LAYER_MAP 39 -datatype 322 3309;
+LAYER_MAP 39 -datatype 351 3309;
+LAYER_MAP 39 -datatype 352 3309;
+LAYER_MAP 39 -datatype 371 3309;
+LAYER_MAP 39 -datatype 372 3309;
+LAYER_MAP 39 -datatype 401 3309;
+LAYER_MAP 39 -datatype 402 3309;
+LAYER_MAP 39 -datatype 421 3309;
+LAYER_MAP 39 -datatype 422 3309;
+LAYER_MAP 39 -datatype 551 3309;
+LAYER_MAP 39 -datatype 552 3309;
+LAYER_MAP 39 -datatype 571 3309;
+LAYER_MAP 39 -datatype 572 3309;
+LAYER_MAP 39 -datatype 601 3309;
+LAYER_MAP 39 -datatype 602 3309;
+LAYER_MAP 39 -datatype 621 3309;
+LAYER_MAP 39 -datatype 622 3309;
+LAYER_MAP 39 -datatype 800 3309;
+LAYER_MAP 39 -datatype 810 3309;
+LAYER_MAP 39 -datatype 950 3309;
+LAYER_MAP 39 -datatype 960 3309;
+LAYER_MAP 39 -datatype 970 3309;
+LAYER_MAP 39 -datatype 980 3309;
+LAYER_MAP 39 -datatype 40 3309;
+LAYER_MAP 39 -datatype 50 3309;
+LAYER_MAP 39 -datatype 60 3309;
+LAYER_MAP 39 -datatype 70 3309;
+LAYER_MAP 39 -datatype 80 3309;
+LAYER_MAP 39 -datatype 90 3309;
+COPY M9i -outputlayer M9;
+LAYER_DEF M10i 3310;
+LAYER_MAP 40 -datatype 151 3310;
+LAYER_MAP 40 -datatype 152 3310;
+LAYER_MAP 40 -datatype 171 3310;
+LAYER_MAP 40 -datatype 172 3310;
+LAYER_MAP 40 -datatype 201 3310;
+LAYER_MAP 40 -datatype 202 3310;
+LAYER_MAP 40 -datatype 221 3310;
+LAYER_MAP 40 -datatype 222 3310;
+LAYER_MAP 40 -datatype 251 3310;
+LAYER_MAP 40 -datatype 252 3310;
+LAYER_MAP 40 -datatype 271 3310;
+LAYER_MAP 40 -datatype 272 3310;
+LAYER_MAP 40 -datatype 301 3310;
+LAYER_MAP 40 -datatype 302 3310;
+LAYER_MAP 40 -datatype 321 3310;
+LAYER_MAP 40 -datatype 322 3310;
+LAYER_MAP 40 -datatype 351 3310;
+LAYER_MAP 40 -datatype 352 3310;
+LAYER_MAP 40 -datatype 371 3310;
+LAYER_MAP 40 -datatype 372 3310;
+LAYER_MAP 40 -datatype 401 3310;
+LAYER_MAP 40 -datatype 402 3310;
+LAYER_MAP 40 -datatype 421 3310;
+LAYER_MAP 40 -datatype 422 3310;
+LAYER_MAP 40 -datatype 551 3310;
+LAYER_MAP 40 -datatype 552 3310;
+LAYER_MAP 40 -datatype 571 3310;
+LAYER_MAP 40 -datatype 572 3310;
+LAYER_MAP 40 -datatype 601 3310;
+LAYER_MAP 40 -datatype 602 3310;
+LAYER_MAP 40 -datatype 621 3310;
+LAYER_MAP 40 -datatype 622 3310;
+LAYER_MAP 40 -datatype 800 3310;
+LAYER_MAP 40 -datatype 810 3310;
+LAYER_MAP 40 -datatype 950 3310;
+LAYER_MAP 40 -datatype 960 3310;
+LAYER_MAP 40 -datatype 970 3310;
+LAYER_MAP 40 -datatype 980 3310;
+LAYER_MAP 40 -datatype 40 3310;
+LAYER_MAP 40 -datatype 50 3310;
+LAYER_MAP 40 -datatype 60 3310;
+LAYER_MAP 40 -datatype 70 3310;
+LAYER_MAP 40 -datatype 80 3310;
+LAYER_MAP 40 -datatype 90 3310;
+COPY M10i -outputlayer M10;
+LAYER_DEF M11i 3311;
+LAYER_MAP 41 -datatype 151 3311;
+LAYER_MAP 41 -datatype 152 3311;
+LAYER_MAP 41 -datatype 171 3311;
+LAYER_MAP 41 -datatype 172 3311;
+LAYER_MAP 41 -datatype 201 3311;
+LAYER_MAP 41 -datatype 202 3311;
+LAYER_MAP 41 -datatype 221 3311;
+LAYER_MAP 41 -datatype 222 3311;
+LAYER_MAP 41 -datatype 251 3311;
+LAYER_MAP 41 -datatype 252 3311;
+LAYER_MAP 41 -datatype 271 3311;
+LAYER_MAP 41 -datatype 272 3311;
+LAYER_MAP 41 -datatype 301 3311;
+LAYER_MAP 41 -datatype 302 3311;
+LAYER_MAP 41 -datatype 321 3311;
+LAYER_MAP 41 -datatype 322 3311;
+LAYER_MAP 41 -datatype 351 3311;
+LAYER_MAP 41 -datatype 352 3311;
+LAYER_MAP 41 -datatype 371 3311;
+LAYER_MAP 41 -datatype 372 3311;
+LAYER_MAP 41 -datatype 401 3311;
+LAYER_MAP 41 -datatype 402 3311;
+LAYER_MAP 41 -datatype 421 3311;
+LAYER_MAP 41 -datatype 422 3311;
+LAYER_MAP 41 -datatype 551 3311;
+LAYER_MAP 41 -datatype 552 3311;
+LAYER_MAP 41 -datatype 571 3311;
+LAYER_MAP 41 -datatype 572 3311;
+LAYER_MAP 41 -datatype 601 3311;
+LAYER_MAP 41 -datatype 602 3311;
+LAYER_MAP 41 -datatype 621 3311;
+LAYER_MAP 41 -datatype 622 3311;
+LAYER_MAP 41 -datatype 800 3311;
+LAYER_MAP 41 -datatype 810 3311;
+LAYER_MAP 41 -datatype 950 3311;
+LAYER_MAP 41 -datatype 960 3311;
+LAYER_MAP 41 -datatype 970 3311;
+LAYER_MAP 41 -datatype 980 3311;
+LAYER_MAP 41 -datatype 40 3311;
+LAYER_MAP 41 -datatype 50 3311;
+LAYER_MAP 41 -datatype 60 3311;
+LAYER_MAP 41 -datatype 70 3311;
+LAYER_MAP 41 -datatype 80 3311;
+LAYER_MAP 41 -datatype 90 3311;
+COPY M11i -outputlayer M11;
+LAYER_DEF M12i 3312;
+LAYER_MAP 42 -datatype 151 3312;
+LAYER_MAP 42 -datatype 152 3312;
+LAYER_MAP 42 -datatype 171 3312;
+LAYER_MAP 42 -datatype 172 3312;
+LAYER_MAP 42 -datatype 201 3312;
+LAYER_MAP 42 -datatype 202 3312;
+LAYER_MAP 42 -datatype 221 3312;
+LAYER_MAP 42 -datatype 222 3312;
+LAYER_MAP 42 -datatype 251 3312;
+LAYER_MAP 42 -datatype 252 3312;
+LAYER_MAP 42 -datatype 271 3312;
+LAYER_MAP 42 -datatype 272 3312;
+LAYER_MAP 42 -datatype 301 3312;
+LAYER_MAP 42 -datatype 302 3312;
+LAYER_MAP 42 -datatype 321 3312;
+LAYER_MAP 42 -datatype 322 3312;
+LAYER_MAP 42 -datatype 351 3312;
+LAYER_MAP 42 -datatype 352 3312;
+LAYER_MAP 42 -datatype 371 3312;
+LAYER_MAP 42 -datatype 372 3312;
+LAYER_MAP 42 -datatype 401 3312;
+LAYER_MAP 42 -datatype 402 3312;
+LAYER_MAP 42 -datatype 421 3312;
+LAYER_MAP 42 -datatype 422 3312;
+LAYER_MAP 42 -datatype 551 3312;
+LAYER_MAP 42 -datatype 552 3312;
+LAYER_MAP 42 -datatype 571 3312;
+LAYER_MAP 42 -datatype 572 3312;
+LAYER_MAP 42 -datatype 601 3312;
+LAYER_MAP 42 -datatype 602 3312;
+LAYER_MAP 42 -datatype 621 3312;
+LAYER_MAP 42 -datatype 622 3312;
+LAYER_MAP 42 -datatype 800 3312;
+LAYER_MAP 42 -datatype 810 3312;
+LAYER_MAP 42 -datatype 950 3312;
+LAYER_MAP 42 -datatype 960 3312;
+LAYER_MAP 42 -datatype 970 3312;
+LAYER_MAP 42 -datatype 980 3312;
+LAYER_MAP 42 -datatype 40 3312;
+LAYER_MAP 42 -datatype 50 3312;
+LAYER_MAP 42 -datatype 60 3312;
+LAYER_MAP 42 -datatype 70 3312;
+LAYER_MAP 42 -datatype 80 3312;
+LAYER_MAP 42 -datatype 90 3312;
+COPY M12i -outputlayer M12;
+LAYER_DEF M13i 3313;
+LAYER_MAP 43 -datatype 151 3313;
+LAYER_MAP 43 -datatype 152 3313;
+LAYER_MAP 43 -datatype 171 3313;
+LAYER_MAP 43 -datatype 172 3313;
+LAYER_MAP 43 -datatype 201 3313;
+LAYER_MAP 43 -datatype 202 3313;
+LAYER_MAP 43 -datatype 221 3313;
+LAYER_MAP 43 -datatype 222 3313;
+LAYER_MAP 43 -datatype 251 3313;
+LAYER_MAP 43 -datatype 252 3313;
+LAYER_MAP 43 -datatype 271 3313;
+LAYER_MAP 43 -datatype 272 3313;
+LAYER_MAP 43 -datatype 301 3313;
+LAYER_MAP 43 -datatype 302 3313;
+LAYER_MAP 43 -datatype 321 3313;
+LAYER_MAP 43 -datatype 322 3313;
+LAYER_MAP 43 -datatype 351 3313;
+LAYER_MAP 43 -datatype 352 3313;
+LAYER_MAP 43 -datatype 371 3313;
+LAYER_MAP 43 -datatype 372 3313;
+LAYER_MAP 43 -datatype 401 3313;
+LAYER_MAP 43 -datatype 402 3313;
+LAYER_MAP 43 -datatype 421 3313;
+LAYER_MAP 43 -datatype 422 3313;
+LAYER_MAP 43 -datatype 551 3313;
+LAYER_MAP 43 -datatype 552 3313;
+LAYER_MAP 43 -datatype 571 3313;
+LAYER_MAP 43 -datatype 572 3313;
+LAYER_MAP 43 -datatype 601 3313;
+LAYER_MAP 43 -datatype 602 3313;
+LAYER_MAP 43 -datatype 621 3313;
+LAYER_MAP 43 -datatype 622 3313;
+LAYER_MAP 43 -datatype 800 3313;
+LAYER_MAP 43 -datatype 810 3313;
+LAYER_MAP 43 -datatype 950 3313;
+LAYER_MAP 43 -datatype 960 3313;
+LAYER_MAP 43 -datatype 970 3313;
+LAYER_MAP 43 -datatype 980 3313;
+LAYER_MAP 43 -datatype 40 3313;
+LAYER_MAP 43 -datatype 50 3313;
+LAYER_MAP 43 -datatype 60 3313;
+LAYER_MAP 43 -datatype 70 3313;
+LAYER_MAP 43 -datatype 80 3313;
+LAYER_MAP 43 -datatype 90 3313;
+COPY M13i -outputlayer M13;
+LAYER_DEF M14i 3314;
+LAYER_MAP 44 -datatype 151 3314;
+LAYER_MAP 44 -datatype 152 3314;
+LAYER_MAP 44 -datatype 171 3314;
+LAYER_MAP 44 -datatype 172 3314;
+LAYER_MAP 44 -datatype 201 3314;
+LAYER_MAP 44 -datatype 202 3314;
+LAYER_MAP 44 -datatype 221 3314;
+LAYER_MAP 44 -datatype 222 3314;
+LAYER_MAP 44 -datatype 251 3314;
+LAYER_MAP 44 -datatype 252 3314;
+LAYER_MAP 44 -datatype 271 3314;
+LAYER_MAP 44 -datatype 272 3314;
+LAYER_MAP 44 -datatype 301 3314;
+LAYER_MAP 44 -datatype 302 3314;
+LAYER_MAP 44 -datatype 321 3314;
+LAYER_MAP 44 -datatype 322 3314;
+LAYER_MAP 44 -datatype 351 3314;
+LAYER_MAP 44 -datatype 352 3314;
+LAYER_MAP 44 -datatype 371 3314;
+LAYER_MAP 44 -datatype 372 3314;
+LAYER_MAP 44 -datatype 401 3314;
+LAYER_MAP 44 -datatype 402 3314;
+LAYER_MAP 44 -datatype 421 3314;
+LAYER_MAP 44 -datatype 422 3314;
+LAYER_MAP 44 -datatype 551 3314;
+LAYER_MAP 44 -datatype 552 3314;
+LAYER_MAP 44 -datatype 571 3314;
+LAYER_MAP 44 -datatype 572 3314;
+LAYER_MAP 44 -datatype 601 3314;
+LAYER_MAP 44 -datatype 602 3314;
+LAYER_MAP 44 -datatype 621 3314;
+LAYER_MAP 44 -datatype 622 3314;
+LAYER_MAP 44 -datatype 800 3314;
+LAYER_MAP 44 -datatype 810 3314;
+LAYER_MAP 44 -datatype 950 3314;
+LAYER_MAP 44 -datatype 960 3314;
+LAYER_MAP 44 -datatype 970 3314;
+LAYER_MAP 44 -datatype 980 3314;
+LAYER_MAP 44 -datatype 40 3314;
+LAYER_MAP 44 -datatype 50 3314;
+LAYER_MAP 44 -datatype 60 3314;
+LAYER_MAP 44 -datatype 70 3314;
+LAYER_MAP 44 -datatype 80 3314;
+LAYER_MAP 44 -datatype 90 3314;
+COPY M14i -outputlayer M14;
+LAYER_DEF M15i 3315;
+LAYER_MAP 45 -datatype 151 3315;
+LAYER_MAP 45 -datatype 152 3315;
+LAYER_MAP 45 -datatype 171 3315;
+LAYER_MAP 45 -datatype 172 3315;
+LAYER_MAP 45 -datatype 201 3315;
+LAYER_MAP 45 -datatype 202 3315;
+LAYER_MAP 45 -datatype 221 3315;
+LAYER_MAP 45 -datatype 222 3315;
+LAYER_MAP 45 -datatype 251 3315;
+LAYER_MAP 45 -datatype 252 3315;
+LAYER_MAP 45 -datatype 271 3315;
+LAYER_MAP 45 -datatype 272 3315;
+LAYER_MAP 45 -datatype 301 3315;
+LAYER_MAP 45 -datatype 302 3315;
+LAYER_MAP 45 -datatype 321 3315;
+LAYER_MAP 45 -datatype 322 3315;
+LAYER_MAP 45 -datatype 351 3315;
+LAYER_MAP 45 -datatype 352 3315;
+LAYER_MAP 45 -datatype 371 3315;
+LAYER_MAP 45 -datatype 372 3315;
+LAYER_MAP 45 -datatype 401 3315;
+LAYER_MAP 45 -datatype 402 3315;
+LAYER_MAP 45 -datatype 421 3315;
+LAYER_MAP 45 -datatype 422 3315;
+LAYER_MAP 45 -datatype 551 3315;
+LAYER_MAP 45 -datatype 552 3315;
+LAYER_MAP 45 -datatype 571 3315;
+LAYER_MAP 45 -datatype 572 3315;
+LAYER_MAP 45 -datatype 601 3315;
+LAYER_MAP 45 -datatype 602 3315;
+LAYER_MAP 45 -datatype 621 3315;
+LAYER_MAP 45 -datatype 622 3315;
+LAYER_MAP 45 -datatype 800 3315;
+LAYER_MAP 45 -datatype 810 3315;
+LAYER_MAP 45 -datatype 950 3315;
+LAYER_MAP 45 -datatype 960 3315;
+LAYER_MAP 45 -datatype 970 3315;
+LAYER_MAP 45 -datatype 980 3315;
+LAYER_MAP 45 -datatype 40 3315;
+LAYER_MAP 45 -datatype 50 3315;
+LAYER_MAP 45 -datatype 60 3315;
+LAYER_MAP 45 -datatype 70 3315;
+LAYER_MAP 45 -datatype 80 3315;
+LAYER_MAP 45 -datatype 90 3315;
+COPY M15i -outputlayer M15;
+LAYER_DEF M16i 3316;
+LAYER_MAP 46 -datatype 151 3316;
+LAYER_MAP 46 -datatype 152 3316;
+LAYER_MAP 46 -datatype 171 3316;
+LAYER_MAP 46 -datatype 172 3316;
+LAYER_MAP 46 -datatype 201 3316;
+LAYER_MAP 46 -datatype 202 3316;
+LAYER_MAP 46 -datatype 221 3316;
+LAYER_MAP 46 -datatype 222 3316;
+LAYER_MAP 46 -datatype 251 3316;
+LAYER_MAP 46 -datatype 252 3316;
+LAYER_MAP 46 -datatype 271 3316;
+LAYER_MAP 46 -datatype 272 3316;
+LAYER_MAP 46 -datatype 301 3316;
+LAYER_MAP 46 -datatype 302 3316;
+LAYER_MAP 46 -datatype 321 3316;
+LAYER_MAP 46 -datatype 322 3316;
+LAYER_MAP 46 -datatype 351 3316;
+LAYER_MAP 46 -datatype 352 3316;
+LAYER_MAP 46 -datatype 371 3316;
+LAYER_MAP 46 -datatype 372 3316;
+LAYER_MAP 46 -datatype 401 3316;
+LAYER_MAP 46 -datatype 402 3316;
+LAYER_MAP 46 -datatype 421 3316;
+LAYER_MAP 46 -datatype 422 3316;
+LAYER_MAP 46 -datatype 551 3316;
+LAYER_MAP 46 -datatype 552 3316;
+LAYER_MAP 46 -datatype 571 3316;
+LAYER_MAP 46 -datatype 572 3316;
+LAYER_MAP 46 -datatype 601 3316;
+LAYER_MAP 46 -datatype 602 3316;
+LAYER_MAP 46 -datatype 621 3316;
+LAYER_MAP 46 -datatype 622 3316;
+LAYER_MAP 46 -datatype 800 3316;
+LAYER_MAP 46 -datatype 810 3316;
+LAYER_MAP 46 -datatype 950 3316;
+LAYER_MAP 46 -datatype 960 3316;
+LAYER_MAP 46 -datatype 970 3316;
+LAYER_MAP 46 -datatype 980 3316;
+LAYER_MAP 46 -datatype 40 3316;
+LAYER_MAP 46 -datatype 50 3316;
+LAYER_MAP 46 -datatype 60 3316;
+LAYER_MAP 46 -datatype 70 3316;
+LAYER_MAP 46 -datatype 80 3316;
+LAYER_MAP 46 -datatype 90 3316;
+COPY M16i -outputlayer M16;
+LAYER_DEF RHDMY0 14800;
+LAYER_MAP 117 -datatype 30 14800;
+LAYER_DEF RHDMY1 14801;
+LAYER_MAP 117 -datatype 31 14801;
+LAYER_DEF RHDMY2 14802;
+LAYER_MAP 117 -datatype 32 14802;
+LAYER_DEF RHDMY3 14803;
+LAYER_MAP 117 -datatype 33 14803;
+LAYER_DEF RHDMY4 14804;
+LAYER_MAP 117 -datatype 34 14804;
+LAYER_DEF RHDMY5 14805;
+LAYER_MAP 117 -datatype 35 14805;
+LAYER_DEF RHDMY6 14806;
+LAYER_MAP 117 -datatype 36 14806;
+LAYER_DEF RHDMY7 14807;
+LAYER_MAP 117 -datatype 37 14807;
+LAYER_DEF RHDMY8 14808;
+LAYER_MAP 117 -datatype 38 14808;
+LAYER_DEF RHDMY9 14809;
+LAYER_MAP 117 -datatype 39 14809;
+LAYER_DEF RHDMY10 14810;
+LAYER_MAP 117 -datatype 40 14810;
+LAYER_DEF RHDMY11 14811;
+LAYER_MAP 117 -datatype 41 14811;
+LAYER_DEF RHDMY12 14812;
+LAYER_MAP 117 -datatype 42 14812;
+LAYER_DEF RHDMY13 14813;
+LAYER_MAP 117 -datatype 43 14813;
+LAYER_DEF RHDMY14 14814;
+LAYER_MAP 117 -datatype 44 14814;
+LAYER_DEF RHDMY15 14815;
+LAYER_MAP 117 -datatype 45 14815;
+LAYER_DEF RHDMY16 14816;
+LAYER_MAP 117 -datatype 46 14816;
+LAYER_DEF APi 7400;
+LAYER_MAP 74 -datatype 0 7400;
+LAYER_DEF RVi 8500;
+LAYER_MAP 85 -datatype 0 8500;
+LAYER_DEF CBi 7600;
+LAYER_MAP 76 -datatype 0 7600;
+LAYER_DEF CBDi 1690;
+LAYER_MAP 169 -datatype 0 1690;
+LAYER_DEF CB2Fi 8600;
+LAYER_MAP 86 -datatype 0 8600;
+LAYER_DEF CB2Wi 8620;
+LAYER_MAP 86 -datatype 20 8620;
+LAYER_DEF CBM 8800;
+LAYER_MAP 88 -datatype 0 8800;
+LAYER_DEF CBM_O 8801;
+LAYER_MAP 88 -datatype 1 8801;
+NOT CBM CHIP -outputlayer CTM;
+NOT CBM_O CHIP -outputlayer CTM_O;
+LAYER_DEF CTMDMY 1480;
+LAYER_MAP 148 -datatype 0 1480;
+LAYER_DEF CTMDMY_0 14830;
+LAYER_MAP 148 -datatype 30 14830;
+LAYER_DEF CTMDMY_1 14831;
+LAYER_MAP 148 -datatype 31 14831;
+LAYER_DEF CTMDMY_2 14832;
+LAYER_MAP 148 -datatype 32 14832;
+LAYER_DEF CTMDMY_3 14833;
+LAYER_MAP 148 -datatype 33 14833;
+LAYER_DEF CTMDMY_4 14834;
+LAYER_MAP 148 -datatype 34 14834;
+LAYER_DEF CTMDMY_5 14835;
+LAYER_MAP 148 -datatype 35 14835;
+LAYER_DEF CTMDMY_6 14836;
+LAYER_MAP 148 -datatype 36 14836;
+LAYER_DEF CTMDMY_7 14837;
+LAYER_MAP 148 -datatype 37 14837;
+LAYER_DEF CTMDMY_8 14838;
+LAYER_MAP 148 -datatype 38 14838;
+LAYER_DEF CTMDMY_9 14839;
+LAYER_MAP 148 -datatype 39 14839;
+LAYER_DEF CTMDMY_10 14840;
+LAYER_MAP 148 -datatype 40 14840;
+LAYER_DEF CTMDMY_11 14841;
+LAYER_MAP 148 -datatype 41 14841;
+LAYER_DEF CTMDMY_12 14842;
+LAYER_MAP 148 -datatype 42 14842;
+LAYER_DEF CTMDMY_13 14843;
+LAYER_MAP 148 -datatype 43 14843;
+LAYER_DEF CTMDMY_14 14844;
+LAYER_MAP 148 -datatype 44 14844;
+LAYER_DEF CTMDMY_15 14845;
+LAYER_MAP 148 -datatype 45 14845;
+LAYER_DEF CTMDMY_16 14846;
+LAYER_MAP 148 -datatype 46 14846;
+LAYER_DEF MOMDMY_0 15530;
+LAYER_MAP 155 -datatype 30 15530;
+LAYER_DEF MOMDMY_1 15531;
+LAYER_MAP 155 -datatype 31 15531;
+LAYER_DEF MOMDMY_2 15532;
+LAYER_MAP 155 -datatype 32 15532;
+LAYER_DEF MOMDMY_3 15533;
+LAYER_MAP 155 -datatype 33 15533;
+LAYER_DEF MOMDMY_4 15534;
+LAYER_MAP 155 -datatype 34 15534;
+LAYER_DEF MOMDMY_5 15535;
+LAYER_MAP 155 -datatype 35 15535;
+LAYER_DEF MOMDMY_6 15536;
+LAYER_MAP 155 -datatype 36 15536;
+LAYER_DEF MOMDMY_7 15537;
+LAYER_MAP 155 -datatype 37 15537;
+LAYER_DEF MOMDMY_8 15538;
+LAYER_MAP 155 -datatype 38 15538;
+LAYER_DEF MOMDMY_9 15539;
+LAYER_MAP 155 -datatype 39 15539;
+LAYER_DEF MOMDMY_10 15540;
+LAYER_MAP 155 -datatype 40 15540;
+LAYER_DEF MOMDMY_11 15541;
+LAYER_MAP 155 -datatype 41 15541;
+LAYER_DEF MOMDMY_12 15542;
+LAYER_MAP 155 -datatype 42 15542;
+LAYER_DEF MOMDMY_13 15543;
+LAYER_MAP 155 -datatype 43 15543;
+LAYER_DEF MOMDMY_14 15544;
+LAYER_MAP 155 -datatype 44 15544;
+LAYER_DEF MOMDMY_15 15545;
+LAYER_MAP 155 -datatype 45 15545;
+LAYER_DEF MOMDMY_16 15546;
+LAYER_MAP 155 -datatype 46 15546;
+LAYER_DEF TPC 26000;
+LAYER_MAP 260 -datatype 0 26000;
+LAYER_DEF TPC_O 26001;
+LAYER_MAP 260 -datatype 1 26001;
+LAYER_DEF TPC_RVDMY 26003;
+LAYER_MAP 260 -datatype 3 26003;
+LAYER_DEF TPCDMY 26004;
+LAYER_MAP 260 -datatype 4 26004;
+LAYER_DEF MPC 26100;
+LAYER_MAP 261 -datatype 0 26100;
+LAYER_DEF MPC_O 26101;
+LAYER_MAP 261 -datatype 1 26101;
+LAYER_DEF MPC_RVDMY 26103;
+LAYER_MAP 261 -datatype 3 26103;
+LAYER_DEF MPCDMY 26104;
+LAYER_MAP 261 -datatype 4 26104;
+LAYER_DEF BPC 26200;
+LAYER_MAP 262 -datatype 0 26200;
+LAYER_DEF BPC_O 26201;
+LAYER_MAP 262 -datatype 1 26201;
+LAYER_DEF BPC_RVDMY 26203;
+LAYER_MAP 262 -datatype 3 26203;
+LAYER_DEF BPCDMY 26204;
+LAYER_MAP 262 -datatype 4 26204;
+LAYER_DEF TPCDMY_AP 14874;
+LAYER_MAP 148 -datatype 74 14874;
+BASE_LAYER ODi POi MDi VGi VDi VDRi M0xdx_CAii M0xdx_CBii VIA0i;
+EXTENT -outputlayer CHIP;
+SIZE CHIP -by 1 -outputlayer BULK;
+NOT BULK NW -outputlayer PWi;
+NOT CHIP BULK -outputlayer EMPTYi;
+AND NPi ODi -outputlayer NPOD;
+AND PPi ODi -outputlayer PPOD;
+NOT NPOD NW -outputlayer NACT;
+AND PPOD NW -outputlayer PACT;
+AND NPOD NW -outputlayer NSTP;
+NOT PPOD NW -outputlayer PSTP;
+OR NACT PACT -outputlayer DACT;
+OR NSTP PSTP -outputlayer DSTP;
+AND ODi POi -outputlayer GATE;
+OR POi SRDPO -outputlayer _EPTMPL262181;
+NOT ODi _EPTMPL262181 -outputlayer SD;
+COPY GATE -outputlayer GATE_VIA;
+COPY OD12i -outputlayer OD2;
+AND GATE OD2 -outputlayer HV_GATE;
+NOT GATE OD2 -outputlayer CORE_GATE;
+COPY HV_GATE -outputlayer IO_GATE;
+NOT CTM CTM_O -outputlayer CTM_F;
+NOT CBM CBM_O -outputlayer CBM_F;
+SELECT -inside CTM_F CTMDMY_15 -outputlayer CTM15;
+SELECT -inside CBM_F CTMDMY_15 -outputlayer CBM15;
+SELECT -inside CTM_F CTMDMY_16 -outputlayer CTM16;
+SELECT -inside CBM_F CTMDMY_16 -outputlayer CBM16;
+NOT TPC TPC_O -outputlayer TPC_F;
+NOT MPC MPC_O -outputlayer MPC_F;
+NOT BPC BPC_O -outputlayer BPC_F;
+SELECT -inside TPC_F TPCDMY_AP -outputlayer TPCi;
+SELECT -inside MPC_F TPCDMY_AP -outputlayer MPCi;
+SELECT -inside BPC_F TPCDMY_AP -outputlayer BPCi;
+NOT POi CPOi -outputlayer POLYc;
+OR POi SRDPO -outputlayer SR_POLY;
+COPY VDi -outputlayer VD;
+COPY VDRi -outputlayer VDR;
+COPY VGi -outputlayer VG;
+NOT MDi CMDi -outputlayer MD;
+OR MDi SRDMDi -outputlayer CrtMD;
+OR CMDi SRDCMDi -outputlayer CrtCMD;
+OR MDi SRDMDi -outputlayer ALL_MD;
+OR CMDi SRDCMDi -outputlayer ALL_CMD;
+COPY VIA0i -outputlayer VIA0;
+SELECT -interact RH_TN RHDMY1 -outputlayer RHTN1;
+SELECT -interact RH_TN RHDMY2 -outputlayer RHTN2;
+SELECT -inside VIA1i RHTN2 -outputlayer V1HiR;
+SELECT -inside -not VIA1i V1HiR -outputlayer VIA1;
+SELECT -interact RH_TN RHDMY3 -outputlayer RHTN3;
+SELECT -inside VIA2i RHTN3 -outputlayer V2HiR;
+SELECT -inside -not VIA2i V2HiR -outputlayer VIA2;
+SELECT -interact RH_TN RHDMY4 -outputlayer RHTN4;
+SELECT -inside VIA3i RHTN4 -outputlayer V3HiR;
+SELECT -inside -not VIA3i V3HiR -outputlayer VIA3;
+SELECT -interact RH_TN RHDMY5 -outputlayer RHTN5;
+SELECT -inside VIA4i RHTN5 -outputlayer V4HiR;
+SELECT -inside -not VIA4i V4HiR -outputlayer VIA4;
+SELECT -interact RH_TN RHDMY6 -outputlayer RHTN6;
+SELECT -inside VIA5i RHTN6 -outputlayer V5HiR;
+SELECT -inside -not VIA5i V5HiR -outputlayer VIA5;
+SELECT -interact RH_TN RHDMY7 -outputlayer RHTN7;
+SELECT -inside VIA6i RHTN7 -outputlayer V6HiR;
+SELECT -inside -not VIA6i V6HiR -outputlayer VIA6;
+SELECT -interact RH_TN RHDMY8 -outputlayer RHTN8;
+SELECT -inside VIA7i RHTN8 -outputlayer V7HiR;
+SELECT -inside -not VIA7i V7HiR -outputlayer VIA7;
+SELECT -interact RH_TN RHDMY9 -outputlayer RHTN9;
+SELECT -inside VIA8i RHTN9 -outputlayer V8HiR;
+SELECT -inside -not VIA8i V8HiR -outputlayer VIA8;
+SELECT -interact RH_TN RHDMY10 -outputlayer RHTN10;
+SELECT -inside VIA9i RHTN10 -outputlayer V9HiR;
+SELECT -inside -not VIA9i V9HiR -outputlayer VIA9;
+SELECT -interact RH_TN RHDMY11 -outputlayer RHTN11;
+SELECT -inside VIA10i RHTN11 -outputlayer V10HiR;
+SELECT -inside -not VIA10i V10HiR -outputlayer VIA10;
+SELECT -interact RH_TN RHDMY12 -outputlayer RHTN12;
+SELECT -inside VIA11i RHTN12 -outputlayer V11HiR;
+SELECT -inside -not VIA11i V11HiR -outputlayer VIA11;
+SELECT -interact RH_TN RHDMY13 -outputlayer RHTN13;
+SELECT -inside VIA12i RHTN13 -outputlayer V12HiR;
+SELECT -inside -not VIA12i V12HiR -outputlayer VIA12;
+SELECT -interact RH_TN RHDMY14 -outputlayer RHTN14;
+SELECT -inside VIA13i RHTN14 -outputlayer V13HiR;
+SELECT -inside -not VIA13i V13HiR -outputlayer VIA13;
+SELECT -interact RH_TN RHDMY15 -outputlayer RHTN15;
+SELECT -inside VIA14i RHTN15 -outputlayer V14HiR;
+SELECT -inside VIA14i CTMDMY_15 -outputlayer V14CAP;
+SELECT -inside V14CAP CBM_F -outputlayer V14CAP_CBM_CTM;
+SELECT -inside -not V14CAP_CBM_CTM CTM_F -outputlayer V14CAP_CBM;
+SELECT -inside V14CAP_CBM_CTM CTM_F -outputlayer V14CAP_CTM;
+OR V14HiR V14CAP_CBM_CTM -outputlayer _EPTMPL262257;
+SELECT -inside -not VIA14i _EPTMPL262257 -outputlayer VIA14;
+SELECT -interact RH_TN RHDMY16 -outputlayer RHTN16;
+SELECT -inside VIA15i RHTN16 -outputlayer V15HiR;
+SELECT -inside VIA15i CTMDMY_16 -outputlayer V15CAP;
+SELECT -inside V15CAP CBM_F -outputlayer V15CAP_CBM_CTM;
+SELECT -inside -not V15CAP_CBM_CTM CTM_F -outputlayer V15CAP_CBM;
+SELECT -inside V15CAP_CBM_CTM CTM_F -outputlayer V15CAP_CTM;
+OR V15HiR V15CAP_CBM_CTM -outputlayer _EPTMPL262265;
+SELECT -inside -not VIA15i _EPTMPL262265 -outputlayer VIA15;
+CONNECT GATE POLYc;
+CONNECT MD SD;
+CONNECT VG POLYc;
+CONNECT VD MD;
+CONNECT VDR MD;
+CONNECT VDR VG;
+CONNECT M0 VG;
+CONNECT M0 VD;
+CONNECT M0 VDR;
+CONNECT VIA0 M0;
+CONNECT M1 VIA0;
+CONNECT VIA1 M1;
+CONNECT M2 RHTN2 -by V1HiR;
+CONNECT M2 M1 -by VIA1;
+CONNECT VIA2 M2;
+CONNECT M3 RHTN3 -by V2HiR;
+CONNECT M3 M2 -by VIA2;
+CONNECT VIA3 M3;
+CONNECT M4 RHTN4 -by V3HiR;
+CONNECT M4 M3 -by VIA3;
+CONNECT VIA4 M4;
+CONNECT M5 RHTN5 -by V4HiR;
+CONNECT M5 M4 -by VIA4;
+CONNECT VIA5 M5;
+CONNECT M6 RHTN6 -by V5HiR;
+CONNECT M6 M5 -by VIA5;
+CONNECT VIA6 M6;
+CONNECT M7 RHTN7 -by V6HiR;
+CONNECT M7 M6 -by VIA6;
+CONNECT VIA7 M7;
+CONNECT M8 RHTN8 -by V7HiR;
+CONNECT M8 M7 -by VIA7;
+CONNECT VIA8 M8;
+CONNECT M9 RHTN9 -by V8HiR;
+CONNECT M9 M8 -by VIA8;
+CONNECT VIA9 M9;
+CONNECT M10 RHTN10 -by V9HiR;
+CONNECT M10 M9 -by VIA9;
+CONNECT VIA10 M10;
+CONNECT M11 RHTN11 -by V10HiR;
+CONNECT M11 M10 -by VIA10;
+CONNECT VIA11 M11;
+CONNECT M12 RHTN12 -by V11HiR;
+CONNECT M12 M11 -by VIA11;
+CONNECT VIA12 M12;
+CONNECT M13 RHTN13 -by V12HiR;
+CONNECT M13 M12 -by VIA12;
+CONNECT VIA13 M13;
+CONNECT M14 RHTN14 -by V13HiR;
+CONNECT M14 M13 -by VIA13;
+CONNECT VIA14 M14;
+CONNECT M15 RHTN15 -by V14HiR;
+CONNECT M15 M14 -by VIA14;
+CONNECT VIA15 M15;
+CONNECT M16 RHTN16 -by V15HiR;
+CONNECT M16 M15 -by VIA15;
+CONNECT RVi M16;
+CONNECT CBi M16;
+CONNECT CBDi M16;
+CONNECT APi M16 -by RVi;
+CONNECT APi M16 -by CBi;
+CONNECT APi M16 -by CBDi;
+CONNECT RVi M16;
+CONNECT RVi BPCi;
+CONNECT RVi MPCi;
+CONNECT RVi TPCi;
+CONNECT APi RVi;
+ANTENNA TPCi SD -gt 0 -outputlayer TPC_W_OD;
+ANTENNA MPCi SD -gt 0 -outputlayer MPC_W_OD;
+ANTENNA BPCi SD -gt 0 -outputlayer BPC_W_OD;
+ANTENNA TPCi GATE -gt 0 -outputlayer TPC_W_GATE;
+ANTENNA MPCi GATE -gt 0 -outputlayer MPC_W_GATE;
+ANTENNA BPCi GATE -gt 0 -outputlayer BPC_W_GATE;
+OR TPC_W_OD TPC_W_GATE -outputlayer _EPTMPL262340;
+NOT TPCi _EPTMPL262340 -outputlayer TPC_W_FLOAT;
+OR MPC_W_OD MPC_W_GATE -outputlayer _EPTMPL262342;
+NOT MPCi _EPTMPL262342 -outputlayer MPC_W_FLOAT;
+OR BPC_W_OD BPC_W_GATE -outputlayer _EPTMPL262344;
+NOT BPCi _EPTMPL262344 -outputlayer BPC_W_FLOAT;
+SELECT -interact MPC_W_FLOAT BPC_W_FLOAT -outputlayer _EPTMPL262346;
+SELECT -interact TPC_W_FLOAT _EPTMPL262346 -outputlayer MIM_FLOATING_ALL_TPC;
+SELECT -interact TPC_W_FLOAT BPC_W_FLOAT -outputlayer _EPTMPL262348;
+SELECT -interact MPC_W_FLOAT _EPTMPL262348 -outputlayer MIM_FLOATING_ALL_MPC;
+SELECT -interact TPC_W_FLOAT MPC_W_FLOAT -outputlayer _EPTMPL262350;
+SELECT -interact BPC_W_FLOAT _EPTMPL262350 -outputlayer MIM_FLOATING_ALL_BPC;
+SELECT -interact MPC_W_OD BPC_W_OD -outputlayer _EPTMPL262352;
+SELECT -interact TPC_W_OD _EPTMPL262352 -outputlayer MIM_CONNECTED_ALL_TPC;
+SELECT -interact TPC_W_OD BPC_W_OD -outputlayer _EPTMPL262354;
+SELECT -interact MPC_W_OD _EPTMPL262354 -outputlayer MIM_CONNECTED_ALL_MPC;
+SELECT -interact TPC_W_OD MPC_W_OD -outputlayer _EPTMPL262356;
+SELECT -interact BPC_W_OD _EPTMPL262356 -outputlayer MIM_CONNECTED_ALL_BPC;
+CONNECT MIM_FLOATING_ALL_TPC TPCi;
+CONNECT MIM_FLOATING_ALL_MPC MPCi;
+CONNECT MIM_FLOATING_ALL_BPC BPCi;
+CONNECT MIM_CONNECTED_ALL_TPC TPCi;
+CONNECT MIM_CONNECTED_ALL_MPC MPCi;
+CONNECT MIM_CONNECTED_ALL_BPC BPCi;
+
+RULE MIM.A.R.1 {
+    CAPTION "Unbalanced structure is not allowed.";
+    OR MIM_FLOATING_ALL_TPC MIM_CONNECTED_ALL_TPC -outputlayer Bal_TPC;
+    OR MIM_FLOATING_ALL_MPC MIM_CONNECTED_ALL_MPC -outputlayer Bal_MPC;
+    OR MIM_FLOATING_ALL_BPC MIM_CONNECTED_ALL_BPC -outputlayer Bal_BPC;
+    NOT TPCi Bal_TPC -outputlayer unBAL_TPC;
+    NOT MPCi Bal_MPC -outputlayer unBAL_MPC;
+    NOT BPCi Bal_BPC -outputlayer unBAL_BPC;
+    ANTENNA unBAL_TPC APi -gt 0 ; // -outputlayer _EPTMPL262370
+    ANTENNA unBAL_MPC APi -gt 0 ; // -outputlayer _EPTMPL262371
+    ANTENNA unBAL_BPC APi -gt 0 ; // -outputlayer _EPTMPL262372
+}
+
+RULE MIM.A.R.6:TPC_BPC {
+    CAPTION "Maximum ratio of the cumulative AP-MD sidewall area to the HD MIM capacitor for balanced structure when TPC, MPC, and BPC are floating. <= 1000 in TPC/BPC node";
+    ANTENNA TPCi APi MIM_FLOATING_ALL_TPC -gt 0 -expr "  !!AREA(APi) * !! AREA(MIM_FLOATING_ALL_TPC)  " -outputlayer TPC_float;
+    ANTENNA MPCi APi MIM_FLOATING_ALL_MPC -gt 0 -expr "  !!AREA(APi) * !! AREA(MIM_FLOATING_ALL_MPC)  " -outputlayer MPC_float;
+    ANTENNA BPCi APi MIM_FLOATING_ALL_BPC -gt 0 -expr "  !!AREA(APi) * !! AREA(MIM_FLOATING_ALL_BPC)  " -outputlayer BPC_float;
+    AND TPC_float MPC_float -outputlayer TPC_AND_MPC_float;
+    AND BPC_float MPC_float -outputlayer BPC_AND_MPC_float;
+    ANTENNA APi TPC_AND_MPC_float BPC_AND_MPC_float -gt 0 -expr "  PERIMETER(APi)*AP_THICKNESS/(AREA(TPC_AND_MPC_float)+AREA(BPC_AND_MPC_float))-1000  " -rdb MIM.A.R.6.TPC_BPC.rep APi TPC_AND_MPC_float BPC_AND_MPC_float -by_layer ; // -outputlayer _EPTMPL262378
+}
+
+RULE MIM.A.R.6:MPC {
+    CAPTION "Maximum ratio of the cumulative AP-MD sidewall area to the HD MIM capacitor for balanced structure when TPC, MPC, and BPC are floating. <= 1000 in MPC node";
+    ANTENNA TPCi APi MIM_FLOATING_ALL_TPC -gt 0 -expr "  !!AREA(APi) * !! AREA(MIM_FLOATING_ALL_TPC)  " -outputlayer TPC_float;
+    ANTENNA MPCi APi MIM_FLOATING_ALL_MPC -gt 0 -expr "  !!AREA(APi) * !! AREA(MIM_FLOATING_ALL_MPC)  " -outputlayer MPC_float;
+    ANTENNA BPCi APi MIM_FLOATING_ALL_BPC -gt 0 -expr "  !!AREA(APi) * !! AREA(MIM_FLOATING_ALL_BPC)  " -outputlayer BPC_float;
+    AND MPC_float TPC_float -outputlayer MPC_AND_TPC_float;
+    AND MPC_float BPC_float -outputlayer MPC_AND_BPC_float;
+    ANTENNA APi MPC_AND_TPC_float MPC_AND_BPC_float -gt 0 -expr "  PERIMETER(APi)*AP_THICKNESS/(AREA(MPC_AND_TPC_float)+AREA(MPC_AND_BPC_float))-1000  " -rdb MIM.A.R.6.MPC.rep APi MPC_AND_TPC_float MPC_AND_BPC_float -by_layer ; // -outputlayer _EPTMPL262384
+}
+
+RULE MIM.A.R.7:TPC_BPC {
+    CAPTION "Maximum ratio of the cumulative AP-MD sidewall area to the TP MIM capacitor for balanced structure when TPC, MPC, and BPC are connected to OD. <= OD area x 8000 + 1000 in TPC/BPC node";
+    ANTENNA TPCi APi MIM_CONNECTED_ALL_TPC -gt 0 -expr "  !!AREA(APi) * !! AREA(MIM_CONNECTED_ALL_TPC)  " -outputlayer TPC_connect;
+    ANTENNA MPCi APi MIM_CONNECTED_ALL_MPC -gt 0 -expr "  !!AREA(APi) * !! AREA(MIM_CONNECTED_ALL_MPC)  " -outputlayer MPC_connect;
+    ANTENNA BPCi APi MIM_CONNECTED_ALL_BPC -gt 0 -expr "  !!AREA(APi) * !! AREA(MIM_CONNECTED_ALL_BPC)  " -outputlayer BPC_connect;
+    AND TPC_connect MPC_connect -outputlayer TPC_AND_MPC_connect;
+    AND BPC_connect MPC_connect -outputlayer BPC_AND_MPC_connect;
+    ANTENNA APi SD TPC_AND_MPC_connect BPC_AND_MPC_connect -gt 0 -expr "  PERIMETER(APi)*AP_THICKNESS/(AREA(TPC_AND_MPC_connect)+AREA(BPC_AND_MPC_connect))-AREA(SD)*8000-1000  " -rdb MIM.A.R.7.TPC_BPC.rep APi SD TPC_AND_MPC_connect BPC_AND_MPC_connect -by_layer ; // -outputlayer _EPTMPL262390
+}
+
+RULE MIM.A.R.7:MPC {
+    CAPTION "Maximum ratio of the cumulative AP-MD sidewall area to the TP MIM capacitor for balanced structure when TPC, MPC, and BPC are connected to OD. <= OD area x 8000 + 1000 in MPC node";
+    ANTENNA TPCi APi MIM_CONNECTED_ALL_TPC -gt 0 -expr "  !!AREA(APi) * !! AREA(MIM_CONNECTED_ALL_TPC)  " -outputlayer TPC_connect;
+    ANTENNA MPCi APi MIM_CONNECTED_ALL_MPC -gt 0 -expr "  !!AREA(APi) * !! AREA(MIM_CONNECTED_ALL_MPC)  " -outputlayer MPC_connect;
+    ANTENNA BPCi APi MIM_CONNECTED_ALL_BPC -gt 0 -expr "  !!AREA(APi) * !! AREA(MIM_CONNECTED_ALL_BPC)  " -outputlayer BPC_connect;
+    AND MPC_connect TPC_connect -outputlayer MPC_AND_TPC_connect;
+    AND MPC_connect BPC_connect -outputlayer MPC_AND_BPC_connect;
+    ANTENNA APi SD MPC_AND_TPC_connect MPC_AND_BPC_connect -gt 0 -expr "  PERIMETER(APi)*AP_THICKNESS/(AREA(MPC_AND_TPC_connect)+AREA(MPC_AND_BPC_connect))-AREA(SD)*8000-1000  " -rdb MIM.A.R.7.MPC.rep APi SD MPC_AND_TPC_connect MPC_AND_BPC_connect -by_layer ; // -outputlayer _EPTMPL262396
+}
+
+RULE MIM.A.R.8:TPC_BPC {
+    CAPTION "Maximum ratio of the cumulative RV area to the TP MIM capacitor for balanced structure when TPC, MPC, and BPC are floating. <= 20 in TPC/BPC node";
+    ANTENNA TPCi RVi MIM_FLOATING_ALL_TPC -gt 0 -expr "  !!AREA(RVi) * !! AREA(MIM_FLOATING_ALL_TPC)  " -outputlayer TPC_float;
+    ANTENNA MPCi RVi MIM_FLOATING_ALL_MPC -gt 0 -expr "  !!AREA(RVi) * !! AREA(MIM_FLOATING_ALL_MPC)  " -outputlayer MPC_float;
+    ANTENNA BPCi RVi MIM_FLOATING_ALL_BPC -gt 0 -expr "  !!AREA(RVi) * !! AREA(MIM_FLOATING_ALL_BPC)  " -outputlayer BPC_float;
+    AND TPC_float MPC_float -outputlayer TPC_AND_MPC_float;
+    AND BPC_float MPC_float -outputlayer BPC_AND_MPC_float;
+    ANTENNA RVi TPC_AND_MPC_float BPC_AND_MPC_float -gt 0 -expr "  AREA(RVi)/(AREA(TPC_AND_MPC_float)+AREA(BPC_AND_MPC_float))-20  " -rdb MIM.A.R.8.TPC_BPC.rep RVi TPC_AND_MPC_float BPC_AND_MPC_float -by_layer ; // -outputlayer _EPTMPL262402
+}
+
+RULE MIM.A.R.8:MPC {
+    CAPTION "Maximum ratio of the cumulative RV area to the TP MIM capacitor for balanced structure when TPC, MPC, and BPC are floating. <= 20 in MPC node";
+    ANTENNA TPCi RVi MIM_FLOATING_ALL_TPC -gt 0 -expr "  !!AREA(RVi) * !! AREA(MIM_FLOATING_ALL_TPC)  " -outputlayer TPC_float;
+    ANTENNA MPCi RVi MIM_FLOATING_ALL_MPC -gt 0 -expr "  !!AREA(RVi) * !! AREA(MIM_FLOATING_ALL_MPC)  " -outputlayer MPC_float;
+    ANTENNA BPCi RVi MIM_FLOATING_ALL_BPC -gt 0 -expr "  !!AREA(RVi) * !! AREA(MIM_FLOATING_ALL_BPC)  " -outputlayer BPC_float;
+    AND MPC_float TPC_float -outputlayer MPC_AND_TPC_float;
+    AND MPC_float BPC_float -outputlayer MPC_AND_BPC_float;
+    ANTENNA RVi MPC_AND_TPC_float MPC_AND_BPC_float -gt 0 -expr "  AREA(RVi)/(AREA(MPC_AND_TPC_float)+AREA(MPC_AND_BPC_float))-20  " -rdb MIM.A.R.8.MPC.rep RVi MPC_AND_TPC_float MPC_AND_BPC_float -by_layer ; // -outputlayer _EPTMPL262408
+}
+
+RULE MIM.A.R.9:TPC_BPC {
+    CAPTION "Maximum ratio of the cumulative RV area to the SHDMIM capacitor for balanced structure when TPC, MPC, and BPC are connected to OD.  <= OD area x 210 + 20 in TPC/BPC node";
+    ANTENNA TPCi RVi MIM_CONNECTED_ALL_TPC -gt 0 -expr "  !!AREA(RVi) * !! AREA(MIM_CONNECTED_ALL_TPC)  " -outputlayer TPC_connect;
+    ANTENNA MPCi RVi MIM_CONNECTED_ALL_MPC -gt 0 -expr "  !!AREA(RVi) * !! AREA(MIM_CONNECTED_ALL_MPC)  " -outputlayer MPC_connect;
+    ANTENNA BPCi RVi MIM_CONNECTED_ALL_BPC -gt 0 -expr "  !!AREA(RVi) * !! AREA(MIM_CONNECTED_ALL_BPC)  " -outputlayer BPC_connect;
+    AND TPC_connect MPC_connect -outputlayer TPC_AND_MPC_connect;
+    AND BPC_connect MPC_connect -outputlayer BPC_AND_MPC_connect;
+    ANTENNA RVi SD TPC_AND_MPC_connect BPC_AND_MPC_connect -gt 0 -expr "  AREA(RVi)/(AREA(TPC_AND_MPC_connect)+AREA(BPC_AND_MPC_connect))-AREA(SD)*210-20  " -rdb MIM.A.R.9.TPC_BPC.rep RVi SD TPC_AND_MPC_connect BPC_AND_MPC_connect -by_layer ; // -outputlayer _EPTMPL262414
+}
+
+RULE MIM.A.R.9:MPC {
+    CAPTION "Maximum ratio of the cumulative RV area to the SHDMIM capacitor for balanced structure when TPC, MPC, and BPC are connected to OD.  <= OD area x 210 + 20 in MPC node";
+    ANTENNA TPCi RVi MIM_CONNECTED_ALL_TPC -gt 0 -expr "  !!AREA(RVi) * !! AREA(MIM_CONNECTED_ALL_TPC)  " -outputlayer TPC_connect;
+    ANTENNA MPCi RVi MIM_CONNECTED_ALL_MPC -gt 0 -expr "  !!AREA(RVi) * !! AREA(MIM_CONNECTED_ALL_MPC)  " -outputlayer MPC_connect;
+    ANTENNA BPCi RVi MIM_CONNECTED_ALL_BPC -gt 0 -expr "  !!AREA(RVi) * !! AREA(MIM_CONNECTED_ALL_BPC)  " -outputlayer BPC_connect;
+    AND MPC_connect TPC_connect -outputlayer MPC_AND_TPC_connect;
+    AND MPC_connect BPC_connect -outputlayer MPC_AND_BPC_connect;
+    ANTENNA RVi SD MPC_AND_TPC_connect MPC_AND_BPC_connect -gt 0 -expr "  AREA(RVi)/(AREA(MPC_AND_TPC_connect)+AREA(MPC_AND_BPC_connect))-AREA(SD)*210-20  " -rdb MIM.A.R.9.MPC.rep RVi SD MPC_AND_TPC_connect MPC_AND_BPC_connect -by_layer ; // -outputlayer _EPTMPL262420
+}
+Operation 'COPY' at line 91 in file /projects/TC73_DDR5_12800_N5P/libs/ruledeck/PEGASUS/ANT/PLN5LO_MIM_16M_014_ANT.13_1a.encrypt is not selected for executing, remove it.
+Operation 'NOT' at line 1170 in file /projects/TC73_DDR5_12800_N5P/libs/ruledeck/PEGASUS/ANT/PLN5LO_MIM_16M_014_ANT.13_1a.encrypt is not selected for executing, remove it.
+Operation 'NOT' at line 1171 in file /projects/TC73_DDR5_12800_N5P/libs/ruledeck/PEGASUS/ANT/PLN5LO_MIM_16M_014_ANT.13_1a.encrypt is not selected for executing, remove it.
+Operation 'EXTENT' at line 1282 in file /projects/TC73_DDR5_12800_N5P/libs/ruledeck/PEGASUS/ANT/PLN5LO_MIM_16M_014_ANT.13_1a.encrypt is not selected for executing, remove it.
+Operation 'SIZE' at line 1283 in file /projects/TC73_DDR5_12800_N5P/libs/ruledeck/PEGASUS/ANT/PLN5LO_MIM_16M_014_ANT.13_1a.encrypt is not selected for executing, remove it.
+Operation 'NOT' at line 1284 in file /projects/TC73_DDR5_12800_N5P/libs/ruledeck/PEGASUS/ANT/PLN5LO_MIM_16M_014_ANT.13_1a.encrypt is not selected for executing, remove it.
+Operation 'NOT' at line 1285 in file /projects/TC73_DDR5_12800_N5P/libs/ruledeck/PEGASUS/ANT/PLN5LO_MIM_16M_014_ANT.13_1a.encrypt is not selected for executing, remove it.
+Operation 'AND' at line 1287 in file /projects/TC73_DDR5_12800_N5P/libs/ruledeck/PEGASUS/ANT/PLN5LO_MIM_16M_014_ANT.13_1a.encrypt is not selected for executing, remove it.
+Operation 'AND' at line 1288 in file /projects/TC73_DDR5_12800_N5P/libs/ruledeck/PEGASUS/ANT/PLN5LO_MIM_16M_014_ANT.13_1a.encrypt is not selected for executing, remove it.
+Operation 'NOT' at line 1289 in file /projects/TC73_DDR5_12800_N5P/libs/ruledeck/PEGASUS/ANT/PLN5LO_MIM_16M_014_ANT.13_1a.encrypt is not selected for executing, remove it.
+Operation 'AND' at line 1290 in file /projects/TC73_DDR5_12800_N5P/libs/ruledeck/PEGASUS/ANT/PLN5LO_MIM_16M_014_ANT.13_1a.encrypt is not selected for executing, remove it.
+Operation 'AND' at line 1291 in file /projects/TC73_DDR5_12800_N5P/libs/ruledeck/PEGASUS/ANT/PLN5LO_MIM_16M_014_ANT.13_1a.encrypt is not selected for executing, remove it.
+Operation 'NOT' at line 1292 in file /projects/TC73_DDR5_12800_N5P/libs/ruledeck/PEGASUS/ANT/PLN5LO_MIM_16M_014_ANT.13_1a.encrypt is not selected for executing, remove it.
+Operation 'OR' at line 1293 in file /projects/TC73_DDR5_12800_N5P/libs/ruledeck/PEGASUS/ANT/PLN5LO_MIM_16M_014_ANT.13_1a.encrypt is not selected for executing, remove it.
+Operation 'OR' at line 1294 in file /projects/TC73_DDR5_12800_N5P/libs/ruledeck/PEGASUS/ANT/PLN5LO_MIM_16M_014_ANT.13_1a.encrypt is not selected for executing, remove it.
+Operation 'COPY' at line 1299 in file /projects/TC73_DDR5_12800_N5P/libs/ruledeck/PEGASUS/ANT/PLN5LO_MIM_16M_014_ANT.13_1a.encrypt is not selected for executing, remove it.
+Operation 'AND' at line 1300 in file /projects/TC73_DDR5_12800_N5P/libs/ruledeck/PEGASUS/ANT/PLN5LO_MIM_16M_014_ANT.13_1a.encrypt is not selected for executing, remove it.
+Operation 'NOT' at line 1302 in file /projects/TC73_DDR5_12800_N5P/libs/ruledeck/PEGASUS/ANT/PLN5LO_MIM_16M_014_ANT.13_1a.encrypt is not selected for executing, remove it.
+Operation 'COPY' at line 1303 in file /projects/TC73_DDR5_12800_N5P/libs/ruledeck/PEGASUS/ANT/PLN5LO_MIM_16M_014_ANT.13_1a.encrypt is not selected for executing, remove it.
+Operation 'NOT' at line 1305 in file /projects/TC73_DDR5_12800_N5P/libs/ruledeck/PEGASUS/ANT/PLN5LO_MIM_16M_014_ANT.13_1a.encrypt is not selected for executing, remove it.
+Operation 'SELECT -inside' at line 1307 in file /projects/TC73_DDR5_12800_N5P/libs/ruledeck/PEGASUS/ANT/PLN5LO_MIM_16M_014_ANT.13_1a.encrypt is not selected for executing, remove it.
+Operation 'SELECT -inside' at line 1308 in file /projects/TC73_DDR5_12800_N5P/libs/ruledeck/PEGASUS/ANT/PLN5LO_MIM_16M_014_ANT.13_1a.encrypt is not selected for executing, remove it.
+Operation 'SELECT -inside' at line 1309 in file /projects/TC73_DDR5_12800_N5P/libs/ruledeck/PEGASUS/ANT/PLN5LO_MIM_16M_014_ANT.13_1a.encrypt is not selected for executing, remove it.
+Operation 'SELECT -inside' at line 1310 in file /projects/TC73_DDR5_12800_N5P/libs/ruledeck/PEGASUS/ANT/PLN5LO_MIM_16M_014_ANT.13_1a.encrypt is not selected for executing, remove it.
+Operation 'OR' at line 1328 in file /projects/TC73_DDR5_12800_N5P/libs/ruledeck/PEGASUS/ANT/PLN5LO_MIM_16M_014_ANT.13_1a.encrypt is not selected for executing, remove it.
+Operation 'OR' at line 1333 in file /projects/TC73_DDR5_12800_N5P/libs/ruledeck/PEGASUS/ANT/PLN5LO_MIM_16M_014_ANT.13_1a.encrypt is not selected for executing, remove it.
+Operation 'OR' at line 1334 in file /projects/TC73_DDR5_12800_N5P/libs/ruledeck/PEGASUS/ANT/PLN5LO_MIM_16M_014_ANT.13_1a.encrypt is not selected for executing, remove it.
+Operation 'OR' at line 1335 in file /projects/TC73_DDR5_12800_N5P/libs/ruledeck/PEGASUS/ANT/PLN5LO_MIM_16M_014_ANT.13_1a.encrypt is not selected for executing, remove it.
+Operation 'OR' at line 1336 in file /projects/TC73_DDR5_12800_N5P/libs/ruledeck/PEGASUS/ANT/PLN5LO_MIM_16M_014_ANT.13_1a.encrypt is not selected for executing, remove it.
+Operation 'SELECT -interact' at line 1339 in file /projects/TC73_DDR5_12800_N5P/libs/ruledeck/PEGASUS/ANT/PLN5LO_MIM_16M_014_ANT.13_1a.encrypt is not selected for executing, remove it.
+Operation 'SELECT -inside' at line 1397 in file /projects/TC73_DDR5_12800_N5P/libs/ruledeck/PEGASUS/ANT/PLN5LO_MIM_16M_014_ANT.13_1a.encrypt is not selected for executing, remove it.
+Operation 'SELECT -inside' at line 1398 in file /projects/TC73_DDR5_12800_N5P/libs/ruledeck/PEGASUS/ANT/PLN5LO_MIM_16M_014_ANT.13_1a.encrypt is not selected for executing, remove it.
+Operation 'SELECT -inside' at line 1405 in file /projects/TC73_DDR5_12800_N5P/libs/ruledeck/PEGASUS/ANT/PLN5LO_MIM_16M_014_ANT.13_1a.encrypt is not selected for executing, remove it.
+Operation 'SELECT -inside' at line 1406 in file /projects/TC73_DDR5_12800_N5P/libs/ruledeck/PEGASUS/ANT/PLN5LO_MIM_16M_014_ANT.13_1a.encrypt is not selected for executing, remove it.
+Operation 'ANTENNA' at line 1656 in file /projects/TC73_DDR5_12800_N5P/libs/ruledeck/PEGASUS/ANT/PLN5LO_MIM_16M_014_ANT.13_1a.encrypt ('MIM.A.R.6:MPC:TPC_float') has been defined at line 1646 in file /projects/TC73_DDR5_12800_N5P/libs/ruledeck/PEGASUS/ANT/PLN5LO_MIM_16M_014_ANT.13_1a.encrypt ('MIM.A.R.6:TPC_BPC:TPC_float'), remove it.
+Operation 'ANTENNA' at line 1656 in file /projects/TC73_DDR5_12800_N5P/libs/ruledeck/PEGASUS/ANT/PLN5LO_MIM_16M_014_ANT.13_1a.encrypt ('MIM.A.R.6:MPC:TPC_float') has been defined at line 1646 in file /projects/TC73_DDR5_12800_N5P/libs/ruledeck/PEGASUS/ANT/PLN5LO_MIM_16M_014_ANT.13_1a.encrypt ('MIM.A.R.6:TPC_BPC:TPC_float'), remove it.
+Operation 'ANTENNA' at line 1657 in file /projects/TC73_DDR5_12800_N5P/libs/ruledeck/PEGASUS/ANT/PLN5LO_MIM_16M_014_ANT.13_1a.encrypt ('MIM.A.R.6:MPC:MPC_float') has been defined at line 1647 in file /projects/TC73_DDR5_12800_N5P/libs/ruledeck/PEGASUS/ANT/PLN5LO_MIM_16M_014_ANT.13_1a.encrypt ('MIM.A.R.6:TPC_BPC:MPC_float'), remove it.
+Operation 'ANTENNA' at line 1657 in file /projects/TC73_DDR5_12800_N5P/libs/ruledeck/PEGASUS/ANT/PLN5LO_MIM_16M_014_ANT.13_1a.encrypt ('MIM.A.R.6:MPC:MPC_float') has been defined at line 1647 in file /projects/TC73_DDR5_12800_N5P/libs/ruledeck/PEGASUS/ANT/PLN5LO_MIM_16M_014_ANT.13_1a.encrypt ('MIM.A.R.6:TPC_BPC:MPC_float'), remove it.
+Operation 'ANTENNA' at line 1658 in file /projects/TC73_DDR5_12800_N5P/libs/ruledeck/PEGASUS/ANT/PLN5LO_MIM_16M_014_ANT.13_1a.encrypt ('MIM.A.R.6:MPC:BPC_float') has been defined at line 1648 in file /projects/TC73_DDR5_12800_N5P/libs/ruledeck/PEGASUS/ANT/PLN5LO_MIM_16M_014_ANT.13_1a.encrypt ('MIM.A.R.6:TPC_BPC:BPC_float'), remove it.
+Operation 'ANTENNA' at line 1658 in file /projects/TC73_DDR5_12800_N5P/libs/ruledeck/PEGASUS/ANT/PLN5LO_MIM_16M_014_ANT.13_1a.encrypt ('MIM.A.R.6:MPC:BPC_float') has been defined at line 1648 in file /projects/TC73_DDR5_12800_N5P/libs/ruledeck/PEGASUS/ANT/PLN5LO_MIM_16M_014_ANT.13_1a.encrypt ('MIM.A.R.6:TPC_BPC:BPC_float'), remove it.
+Operation 'ANTENNA' at line 1678 in file /projects/TC73_DDR5_12800_N5P/libs/ruledeck/PEGASUS/ANT/PLN5LO_MIM_16M_014_ANT.13_1a.encrypt ('MIM.A.R.7:MPC:TPC_connect') has been defined at line 1667 in file /projects/TC73_DDR5_12800_N5P/libs/ruledeck/PEGASUS/ANT/PLN5LO_MIM_16M_014_ANT.13_1a.encrypt ('MIM.A.R.7:TPC_BPC:TPC_connect'), remove it.
+Operation 'ANTENNA' at line 1678 in file /projects/TC73_DDR5_12800_N5P/libs/ruledeck/PEGASUS/ANT/PLN5LO_MIM_16M_014_ANT.13_1a.encrypt ('MIM.A.R.7:MPC:TPC_connect') has been defined at line 1667 in file /projects/TC73_DDR5_12800_N5P/libs/ruledeck/PEGASUS/ANT/PLN5LO_MIM_16M_014_ANT.13_1a.encrypt ('MIM.A.R.7:TPC_BPC:TPC_connect'), remove it.
+Operation 'ANTENNA' at line 1679 in file /projects/TC73_DDR5_12800_N5P/libs/ruledeck/PEGASUS/ANT/PLN5LO_MIM_16M_014_ANT.13_1a.encrypt ('MIM.A.R.7:MPC:MPC_connect') has been defined at line 1668 in file /projects/TC73_DDR5_12800_N5P/libs/ruledeck/PEGASUS/ANT/PLN5LO_MIM_16M_014_ANT.13_1a.encrypt ('MIM.A.R.7:TPC_BPC:MPC_connect'), remove it.
+Operation 'ANTENNA' at line 1679 in file /projects/TC73_DDR5_12800_N5P/libs/ruledeck/PEGASUS/ANT/PLN5LO_MIM_16M_014_ANT.13_1a.encrypt ('MIM.A.R.7:MPC:MPC_connect') has been defined at line 1668 in file /projects/TC73_DDR5_12800_N5P/libs/ruledeck/PEGASUS/ANT/PLN5LO_MIM_16M_014_ANT.13_1a.encrypt ('MIM.A.R.7:TPC_BPC:MPC_connect'), remove it.
+Operation 'ANTENNA' at line 1680 in file /projects/TC73_DDR5_12800_N5P/libs/ruledeck/PEGASUS/ANT/PLN5LO_MIM_16M_014_ANT.13_1a.encrypt ('MIM.A.R.7:MPC:BPC_connect') has been defined at line 1669 in file /projects/TC73_DDR5_12800_N5P/libs/ruledeck/PEGASUS/ANT/PLN5LO_MIM_16M_014_ANT.13_1a.encrypt ('MIM.A.R.7:TPC_BPC:BPC_connect'), remove it.
+Operation 'ANTENNA' at line 1680 in file /projects/TC73_DDR5_12800_N5P/libs/ruledeck/PEGASUS/ANT/PLN5LO_MIM_16M_014_ANT.13_1a.encrypt ('MIM.A.R.7:MPC:BPC_connect') has been defined at line 1669 in file /projects/TC73_DDR5_12800_N5P/libs/ruledeck/PEGASUS/ANT/PLN5LO_MIM_16M_014_ANT.13_1a.encrypt ('MIM.A.R.7:TPC_BPC:BPC_connect'), remove it.
+Operation 'ANTENNA' at line 1699 in file /projects/TC73_DDR5_12800_N5P/libs/ruledeck/PEGASUS/ANT/PLN5LO_MIM_16M_014_ANT.13_1a.encrypt ('MIM.A.R.8:MPC:TPC_float') has been defined at line 1688 in file /projects/TC73_DDR5_12800_N5P/libs/ruledeck/PEGASUS/ANT/PLN5LO_MIM_16M_014_ANT.13_1a.encrypt ('MIM.A.R.8:TPC_BPC:TPC_float'), remove it.
+Operation 'ANTENNA' at line 1699 in file /projects/TC73_DDR5_12800_N5P/libs/ruledeck/PEGASUS/ANT/PLN5LO_MIM_16M_014_ANT.13_1a.encrypt ('MIM.A.R.8:MPC:TPC_float') has been defined at line 1688 in file /projects/TC73_DDR5_12800_N5P/libs/ruledeck/PEGASUS/ANT/PLN5LO_MIM_16M_014_ANT.13_1a.encrypt ('MIM.A.R.8:TPC_BPC:TPC_float'), remove it.
+Operation 'ANTENNA' at line 1700 in file /projects/TC73_DDR5_12800_N5P/libs/ruledeck/PEGASUS/ANT/PLN5LO_MIM_16M_014_ANT.13_1a.encrypt ('MIM.A.R.8:MPC:MPC_float') has been defined at line 1689 in file /projects/TC73_DDR5_12800_N5P/libs/ruledeck/PEGASUS/ANT/PLN5LO_MIM_16M_014_ANT.13_1a.encrypt ('MIM.A.R.8:TPC_BPC:MPC_float'), remove it.
+Operation 'ANTENNA' at line 1700 in file /projects/TC73_DDR5_12800_N5P/libs/ruledeck/PEGASUS/ANT/PLN5LO_MIM_16M_014_ANT.13_1a.encrypt ('MIM.A.R.8:MPC:MPC_float') has been defined at line 1689 in file /projects/TC73_DDR5_12800_N5P/libs/ruledeck/PEGASUS/ANT/PLN5LO_MIM_16M_014_ANT.13_1a.encrypt ('MIM.A.R.8:TPC_BPC:MPC_float'), remove it.
+Operation 'ANTENNA' at line 1701 in file /projects/TC73_DDR5_12800_N5P/libs/ruledeck/PEGASUS/ANT/PLN5LO_MIM_16M_014_ANT.13_1a.encrypt ('MIM.A.R.8:MPC:BPC_float') has been defined at line 1690 in file /projects/TC73_DDR5_12800_N5P/libs/ruledeck/PEGASUS/ANT/PLN5LO_MIM_16M_014_ANT.13_1a.encrypt ('MIM.A.R.8:TPC_BPC:BPC_float'), remove it.
+Operation 'ANTENNA' at line 1701 in file /projects/TC73_DDR5_12800_N5P/libs/ruledeck/PEGASUS/ANT/PLN5LO_MIM_16M_014_ANT.13_1a.encrypt ('MIM.A.R.8:MPC:BPC_float') has been defined at line 1690 in file /projects/TC73_DDR5_12800_N5P/libs/ruledeck/PEGASUS/ANT/PLN5LO_MIM_16M_014_ANT.13_1a.encrypt ('MIM.A.R.8:TPC_BPC:BPC_float'), remove it.
+Operation 'ANTENNA' at line 1722 in file /projects/TC73_DDR5_12800_N5P/libs/ruledeck/PEGASUS/ANT/PLN5LO_MIM_16M_014_ANT.13_1a.encrypt ('MIM.A.R.9:MPC:TPC_connect') has been defined at line 1711 in file /projects/TC73_DDR5_12800_N5P/libs/ruledeck/PEGASUS/ANT/PLN5LO_MIM_16M_014_ANT.13_1a.encrypt ('MIM.A.R.9:TPC_BPC:TPC_connect'), remove it.
+Operation 'ANTENNA' at line 1722 in file /projects/TC73_DDR5_12800_N5P/libs/ruledeck/PEGASUS/ANT/PLN5LO_MIM_16M_014_ANT.13_1a.encrypt ('MIM.A.R.9:MPC:TPC_connect') has been defined at line 1711 in file /projects/TC73_DDR5_12800_N5P/libs/ruledeck/PEGASUS/ANT/PLN5LO_MIM_16M_014_ANT.13_1a.encrypt ('MIM.A.R.9:TPC_BPC:TPC_connect'), remove it.
+Operation 'ANTENNA' at line 1723 in file /projects/TC73_DDR5_12800_N5P/libs/ruledeck/PEGASUS/ANT/PLN5LO_MIM_16M_014_ANT.13_1a.encrypt ('MIM.A.R.9:MPC:MPC_connect') has been defined at line 1712 in file /projects/TC73_DDR5_12800_N5P/libs/ruledeck/PEGASUS/ANT/PLN5LO_MIM_16M_014_ANT.13_1a.encrypt ('MIM.A.R.9:TPC_BPC:MPC_connect'), remove it.
+Operation 'ANTENNA' at line 1723 in file /projects/TC73_DDR5_12800_N5P/libs/ruledeck/PEGASUS/ANT/PLN5LO_MIM_16M_014_ANT.13_1a.encrypt ('MIM.A.R.9:MPC:MPC_connect') has been defined at line 1712 in file /projects/TC73_DDR5_12800_N5P/libs/ruledeck/PEGASUS/ANT/PLN5LO_MIM_16M_014_ANT.13_1a.encrypt ('MIM.A.R.9:TPC_BPC:MPC_connect'), remove it.
+Operation 'ANTENNA' at line 1724 in file /projects/TC73_DDR5_12800_N5P/libs/ruledeck/PEGASUS/ANT/PLN5LO_MIM_16M_014_ANT.13_1a.encrypt ('MIM.A.R.9:MPC:BPC_connect') has been defined at line 1713 in file /projects/TC73_DDR5_12800_N5P/libs/ruledeck/PEGASUS/ANT/PLN5LO_MIM_16M_014_ANT.13_1a.encrypt ('MIM.A.R.9:TPC_BPC:BPC_connect'), remove it.
+Operation 'ANTENNA' at line 1724 in file /projects/TC73_DDR5_12800_N5P/libs/ruledeck/PEGASUS/ANT/PLN5LO_MIM_16M_014_ANT.13_1a.encrypt ('MIM.A.R.9:MPC:BPC_connect') has been defined at line 1713 in file /projects/TC73_DDR5_12800_N5P/libs/ruledeck/PEGASUS/ANT/PLN5LO_MIM_16M_014_ANT.13_1a.encrypt ('MIM.A.R.9:TPC_BPC:BPC_connect'), remove it.
+
+
+operation group: 1/158
+    RHTN15 = SELECT -interact RH_TN RHDMY15
+========================================================================
+
+
+operation group: 2/158
+    V14HiR = SELECT -inside VIA14i RHTN15
+========================================================================
+
+
+operation group: 3/158
+    V14CAP = SELECT -inside VIA14i CTMDMY_15
+========================================================================
+
+
+operation group: 4/158
+    CBM_F = NOT CBM CBM_O
+========================================================================
+
+
+operation group: 5/158
+    V14CAP_CBM_CTM = SELECT -inside V14CAP CBM_F
+========================================================================
+
+
+operation group: 6/158
+    _EPTMPL262257 = OR V14HiR V14CAP_CBM_CTM
+========================================================================
+
+
+operation group: 7/158
+    RHTN16 = SELECT -interact RH_TN RHDMY16
+========================================================================
+
+
+operation group: 8/158
+    V15HiR = SELECT -inside VIA15i RHTN16
+========================================================================
+
+
+operation group: 9/158
+    V15CAP = SELECT -inside VIA15i CTMDMY_16
+========================================================================
+
+
+operation group: 10/158
+    V15CAP_CBM_CTM = SELECT -inside V15CAP CBM_F
+========================================================================
+
+
+operation group: 11/158
+    _EPTMPL262265 = OR V15HiR V15CAP_CBM_CTM
+========================================================================
+
+
+operation group: 12/158
+    GATE = AND ODi POi
+========================================================================
+
+
+operation group: 13/158
+    POLYc = NOT POi CPOi
+========================================================================
+
+
+operation group: 14/158
+    MD = NOT MDi CMDi
+========================================================================
+
+
+operation group: 15/158
+    _EPTMPL262181 = OR POi SRDPO
+========================================================================
+
+
+operation group: 16/158
+    SD = NOT ODi _EPTMPL262181
+========================================================================
+
+
+operation group: 17/158
+    VG = COPY VGi
+========================================================================
+
+
+operation group: 18/158
+    VD = COPY VDi
+========================================================================
+
+
+operation group: 19/158
+    VDR = COPY VDRi
+========================================================================
+
+
+operation group: 20/158
+    _EPTMPL262145 = NOT M0xdx_CAii CM0A
+========================================================================
+
+
+operation group: 21/158
+    _EPTMPL262146 = NOT M0xdx_CBii CM0B
+========================================================================
+
+
+operation group: 22/158
+    M0 = OR _EPTMPL262145 _EPTMPL262146
+========================================================================
+
+
+operation group: 23/158
+    VIA0 = COPY VIA0i
+========================================================================
+
+
+operation group: 24/158
+    M1 = OR M1xdy_CAii M1xdy_CBii
+========================================================================
+
+
+operation group: 25/158
+    RHTN2 = SELECT -interact RH_TN RHDMY2
+========================================================================
+
+
+operation group: 26/158
+    V1HiR = SELECT -inside VIA1i RHTN2
+========================================================================
+
+
+operation group: 27/158
+    VIA1 = SELECT -inside VIA1i V1HiR -not
+========================================================================
+
+
+operation group: 28/158
+    M2 = COPY M2i
+========================================================================
+
+
+operation group: 29/158
+    RHTN3 = SELECT -interact RH_TN RHDMY3
+========================================================================
+
+
+operation group: 30/158
+    V2HiR = SELECT -inside VIA2i RHTN3
+========================================================================
+
+
+operation group: 31/158
+    VIA2 = SELECT -inside VIA2i V2HiR -not
+========================================================================
+
+
+operation group: 32/158
+    M3 = COPY M3i
+========================================================================
+
+
+operation group: 33/158
+    RHTN4 = SELECT -interact RH_TN RHDMY4
+========================================================================
+
+
+operation group: 34/158
+    V3HiR = SELECT -inside VIA3i RHTN4
+========================================================================
+
+
+operation group: 35/158
+    VIA3 = SELECT -inside VIA3i V3HiR -not
+========================================================================
+
+
+operation group: 36/158
+    M4 = COPY M4i
+========================================================================
+
+
+operation group: 37/158
+    RHTN5 = SELECT -interact RH_TN RHDMY5
+========================================================================
+
+
+operation group: 38/158
+    V4HiR = SELECT -inside VIA4i RHTN5
+========================================================================
+
+
+operation group: 39/158
+    VIA4 = SELECT -inside VIA4i V4HiR -not
+========================================================================
+
+
+operation group: 40/158
+    M5 = COPY M5i
+========================================================================
+
+
+operation group: 41/158
+    RHTN6 = SELECT -interact RH_TN RHDMY6
+========================================================================
+
+
+operation group: 42/158
+    V5HiR = SELECT -inside VIA5i RHTN6
+========================================================================
+
+
+operation group: 43/158
+    VIA5 = SELECT -inside VIA5i V5HiR -not
+========================================================================
+
+
+operation group: 44/158
+    M6 = COPY M6i
+========================================================================
+
+
+operation group: 45/158
+    RHTN7 = SELECT -interact RH_TN RHDMY7
+========================================================================
+
+
+operation group: 46/158
+    V6HiR = SELECT -inside VIA6i RHTN7
+========================================================================
+
+
+operation group: 47/158
+    VIA6 = SELECT -inside VIA6i V6HiR -not
+========================================================================
+
+
+operation group: 48/158
+    M7 = COPY M7i
+========================================================================
+
+
+operation group: 49/158
+    RHTN8 = SELECT -interact RH_TN RHDMY8
+========================================================================
+
+
+operation group: 50/158
+    V7HiR = SELECT -inside VIA7i RHTN8
+========================================================================
+
+
+operation group: 51/158
+    VIA7 = SELECT -inside VIA7i V7HiR -not
+========================================================================
+
+
+operation group: 52/158
+    M8 = COPY M8i
+========================================================================
+
+
+operation group: 53/158
+    RHTN9 = SELECT -interact RH_TN RHDMY9
+========================================================================
+
+
+operation group: 54/158
+    V8HiR = SELECT -inside VIA8i RHTN9
+========================================================================
+
+
+operation group: 55/158
+    VIA8 = SELECT -inside VIA8i V8HiR -not
+========================================================================
+
+
+operation group: 56/158
+    M9 = COPY M9i
+========================================================================
+
+
+operation group: 57/158
+    RHTN10 = SELECT -interact RH_TN RHDMY10
+========================================================================
+
+
+operation group: 58/158
+    V9HiR = SELECT -inside VIA9i RHTN10
+========================================================================
+
+
+operation group: 59/158
+    VIA9 = SELECT -inside VIA9i V9HiR -not
+========================================================================
+
+
+operation group: 60/158
+    M10 = COPY M10i
+========================================================================
+
+
+operation group: 61/158
+    RHTN11 = SELECT -interact RH_TN RHDMY11
+========================================================================
+
+
+operation group: 62/158
+    V10HiR = SELECT -inside VIA10i RHTN11
+========================================================================
+
+
+operation group: 63/158
+    VIA10 = SELECT -inside VIA10i V10HiR -not
+========================================================================
+
+
+operation group: 64/158
+    M11 = COPY M11i
+========================================================================
+
+
+operation group: 65/158
+    RHTN12 = SELECT -interact RH_TN RHDMY12
+========================================================================
+
+
+operation group: 66/158
+    V11HiR = SELECT -inside VIA11i RHTN12
+========================================================================
+
+
+operation group: 67/158
+    VIA11 = SELECT -inside VIA11i V11HiR -not
+========================================================================
+
+
+operation group: 68/158
+    M12 = COPY M12i
+========================================================================
+
+
+operation group: 69/158
+    RHTN13 = SELECT -interact RH_TN RHDMY13
+========================================================================
+
+
+operation group: 70/158
+    V12HiR = SELECT -inside VIA12i RHTN13
+========================================================================
+
+
+operation group: 71/158
+    VIA12 = SELECT -inside VIA12i V12HiR -not
+========================================================================
+
+
+operation group: 72/158
+    M13 = COPY M13i
+========================================================================
+
+
+operation group: 73/158
+    RHTN14 = SELECT -interact RH_TN RHDMY14
+========================================================================
+
+
+operation group: 74/158
+    V13HiR = SELECT -inside VIA13i RHTN14
+========================================================================
+
+
+operation group: 75/158
+    VIA13 = SELECT -inside VIA13i V13HiR -not
+========================================================================
+
+
+operation group: 76/158
+    M14 = COPY M14i
+========================================================================
+
+
+operation group: 77/158
+    VIA14 = SELECT -inside VIA14i _EPTMPL262257 -not
+========================================================================
+
+
+operation group: 78/158
+    M15 = COPY M15i
+========================================================================
+
+
+operation group: 79/158
+    VIA15 = SELECT -inside VIA15i _EPTMPL262265 -not
+========================================================================
+
+
+operation group: 80/158
+    M16 = COPY M16i
+========================================================================
+
+
+operation group: 81/158
+    BPC_F = NOT BPC BPC_O
+========================================================================
+
+
+operation group: 82/158
+    BPCi = SELECT -inside BPC_F TPCDMY_AP
+========================================================================
+
+
+operation group: 83/158
+    MPC_F = NOT MPC MPC_O
+========================================================================
+
+
+operation group: 84/158
+    MPCi = SELECT -inside MPC_F TPCDMY_AP
+========================================================================
+
+
+operation group: 85/158
+    TPC_F = NOT TPC TPC_O
+========================================================================
+
+
+operation group: 86/158
+    TPCi = SELECT -inside TPC_F TPCDMY_AP
+========================================================================
+
+
+operation group: 87/158
+    CONNECT GATE POLYc
+    CONNECT MD SD
+    CONNECT VG POLYc
+    CONNECT VD MD
+    CONNECT VDR MD
+    CONNECT VDR VG
+    CONNECT M0 VG
+    CONNECT M0 VD
+    CONNECT M0 VDR
+    CONNECT VIA0 M0
+    CONNECT M1 VIA0
+    CONNECT VIA1 M1
+    CONNECT M2 RHTN2 -by V1HiR
+    CONNECT M2 M1 -by VIA1
+    CONNECT VIA2 M2
+    CONNECT M3 RHTN3 -by V2HiR
+    CONNECT M3 M2 -by VIA2
+    CONNECT VIA3 M3
+    CONNECT M4 RHTN4 -by V3HiR
+    CONNECT M4 M3 -by VIA3
+    CONNECT VIA4 M4
+    CONNECT M5 RHTN5 -by V4HiR
+    CONNECT M5 M4 -by VIA4
+    CONNECT VIA5 M5
+    CONNECT M6 RHTN6 -by V5HiR
+    CONNECT M6 M5 -by VIA5
+    CONNECT VIA6 M6
+    CONNECT M7 RHTN7 -by V6HiR
+    CONNECT M7 M6 -by VIA6
+    CONNECT VIA7 M7
+    CONNECT M8 RHTN8 -by V7HiR
+    CONNECT M8 M7 -by VIA7
+    CONNECT VIA8 M8
+    CONNECT M9 RHTN9 -by V8HiR
+    CONNECT M9 M8 -by VIA8
+    CONNECT VIA9 M9
+    CONNECT M10 RHTN10 -by V9HiR
+    CONNECT M10 M9 -by VIA9
+    CONNECT VIA10 M10
+    CONNECT M11 RHTN11 -by V10HiR
+    CONNECT M11 M10 -by VIA10
+    CONNECT VIA11 M11
+    CONNECT M12 RHTN12 -by V11HiR
+    CONNECT M12 M11 -by VIA11
+    CONNECT VIA12 M12
+    CONNECT M13 RHTN13 -by V12HiR
+    CONNECT M13 M12 -by VIA12
+    CONNECT VIA13 M13
+    CONNECT M14 RHTN14 -by V13HiR
+    CONNECT M14 M13 -by VIA13
+    CONNECT VIA14 M14
+    CONNECT M15 RHTN15 -by V14HiR
+    CONNECT M15 M14 -by VIA14
+    CONNECT VIA15 M15
+    CONNECT M16 RHTN16 -by V15HiR
+    CONNECT M16 M15 -by VIA15
+    CONNECT RVi M16
+    CONNECT CBi M16
+    CONNECT CBDi M16
+    CONNECT APi M16 -by RVi
+    CONNECT APi M16 -by CBi
+    CONNECT APi M16 -by CBDi
+    CONNECT RVi M16
+    CONNECT RVi BPCi
+    CONNECT RVi MPCi
+    CONNECT RVi TPCi
+    CONNECT APi RVi
+========================================================================
+
+
+operation group: 88/158
+    TPC_W_OD = ANTENNA -gt 0 TPCi SD
+========================================================================
+
+
+operation group: 89/158
+    MPC_W_OD = ANTENNA -gt 0 MPCi SD
+========================================================================
+
+
+operation group: 90/158
+    BPC_W_OD = ANTENNA -gt 0 BPCi SD
+========================================================================
+
+
+operation group: 91/158
+    TPC_W_GATE = ANTENNA -gt 0 TPCi GATE
+========================================================================
+
+
+operation group: 92/158
+    MPC_W_GATE = ANTENNA -gt 0 MPCi GATE
+========================================================================
+
+
+operation group: 93/158
+    BPC_W_GATE = ANTENNA -gt 0 BPCi GATE
+========================================================================
+
+
+operation group: 94/158
+    _EPTMPL262340 = OR TPC_W_OD TPC_W_GATE
+========================================================================
+
+
+operation group: 95/158
+    TPC_W_FLOAT = NOT TPCi _EPTMPL262340
+========================================================================
+
+
+operation group: 96/158
+    _EPTMPL262342 = OR MPC_W_OD MPC_W_GATE
+========================================================================
+
+
+operation group: 97/158
+    MPC_W_FLOAT = NOT MPCi _EPTMPL262342
+========================================================================
+
+
+operation group: 98/158
+    _EPTMPL262344 = OR BPC_W_OD BPC_W_GATE
+========================================================================
+
+
+operation group: 99/158
+    BPC_W_FLOAT = NOT BPCi _EPTMPL262344
+========================================================================
+
+
+operation group: 100/158
+    _EPTMPL262346 = SELECT -interact MPC_W_FLOAT BPC_W_FLOAT
+========================================================================
+
+
+operation group: 101/158
+    MIM_FLOATING_ALL_TPC = SELECT -interact TPC_W_FLOAT _EPTMPL262346
+========================================================================
+
+
+operation group: 102/158
+    _EPTMPL262348 = SELECT -interact TPC_W_FLOAT BPC_W_FLOAT
+========================================================================
+
+
+operation group: 103/158
+    MIM_FLOATING_ALL_MPC = SELECT -interact MPC_W_FLOAT _EPTMPL262348
+========================================================================
+
+
+operation group: 104/158
+    _EPTMPL262350 = SELECT -interact TPC_W_FLOAT MPC_W_FLOAT
+========================================================================
+
+
+operation group: 105/158
+    MIM_FLOATING_ALL_BPC = SELECT -interact BPC_W_FLOAT _EPTMPL262350
+========================================================================
+
+
+operation group: 106/158
+    _EPTMPL262352 = SELECT -interact MPC_W_OD BPC_W_OD
+========================================================================
+
+
+operation group: 107/158
+    MIM_CONNECTED_ALL_TPC = SELECT -interact TPC_W_OD _EPTMPL262352
+========================================================================
+
+
+operation group: 108/158
+    _EPTMPL262354 = SELECT -interact TPC_W_OD BPC_W_OD
+========================================================================
+
+
+operation group: 109/158
+    MIM_CONNECTED_ALL_MPC = SELECT -interact MPC_W_OD _EPTMPL262354
+========================================================================
+
+
+operation group: 110/158
+    _EPTMPL262356 = SELECT -interact TPC_W_OD MPC_W_OD
+========================================================================
+
+
+operation group: 111/158
+    MIM_CONNECTED_ALL_BPC = SELECT -interact BPC_W_OD _EPTMPL262356
+========================================================================
+
+
+operation group: 112/158
+    CONNECT MIM_FLOATING_ALL_TPC TPCi
+    CONNECT MIM_FLOATING_ALL_MPC MPCi
+    CONNECT MIM_FLOATING_ALL_BPC BPCi
+    CONNECT MIM_CONNECTED_ALL_TPC TPCi
+    CONNECT MIM_CONNECTED_ALL_MPC MPCi
+    CONNECT MIM_CONNECTED_ALL_BPC BPCi
+========================================================================
+
+
+operation group: 113/158
+    MIM.A.R.1:Bal_TPC = OR MIM_FLOATING_ALL_TPC MIM_CONNECTED_ALL_TPC
+========================================================================
+
+
+operation group: 114/158
+    MIM.A.R.1:Bal_MPC = OR MIM_FLOATING_ALL_MPC MIM_CONNECTED_ALL_MPC
+========================================================================
+
+
+operation group: 115/158
+    MIM.A.R.1:Bal_BPC = OR MIM_FLOATING_ALL_BPC MIM_CONNECTED_ALL_BPC
+========================================================================
+
+
+operation group: 116/158
+    MIM.A.R.1:unBAL_TPC = NOT TPCi MIM.A.R.1:Bal_TPC
+========================================================================
+
+
+operation group: 117/158
+    MIM.A.R.1:unBAL_MPC = NOT MPCi MIM.A.R.1:Bal_MPC
+========================================================================
+
+
+operation group: 118/158
+    MIM.A.R.1:unBAL_BPC = NOT BPCi MIM.A.R.1:Bal_BPC
+========================================================================
+
+
+operation group: 119/158
+    MIM.A.R.1:L262370 = ANTENNA -gt 0 MIM.A.R.1:unBAL_TPC APi
+========================================================================
+
+
+operation group: 120/158
+    MIM.A.R.1:L262371 = ANTENNA -gt 0 MIM.A.R.1:unBAL_MPC APi
+========================================================================
+
+
+operation group: 121/158
+    MIM.A.R.1:L262372 = ANTENNA -gt 0 MIM.A.R.1:unBAL_BPC APi
+========================================================================
+
+
+operation group: 122/158
+    MIM.A.R.6:TPC_BPC:TPC_float = ANTENNA -gt 0 TPCi APi MIM_FLOATING_ALL_TPC -expr "(!(!(area(APi))) * !(!(area(MIM_FLOATING_ALL_TPC))))"
+========================================================================
+
+
+operation group: 123/158
+    MIM.A.R.6:TPC_BPC:MPC_float = ANTENNA -gt 0 MPCi APi MIM_FLOATING_ALL_MPC -expr "(!(!(area(APi))) * !(!(area(MIM_FLOATING_ALL_MPC))))"
+========================================================================
+
+
+operation group: 124/158
+    MIM.A.R.6:TPC_BPC:BPC_float = ANTENNA -gt 0 BPCi APi MIM_FLOATING_ALL_BPC -expr "(!(!(area(APi))) * !(!(area(MIM_FLOATING_ALL_BPC))))"
+========================================================================
+
+
+operation group: 125/158
+    MIM.A.R.6:TPC_BPC:TPC_AND_MPC_float = AND MIM.A.R.6:TPC_BPC:TPC_float MIM.A.R.6:TPC_BPC:MPC_float
+========================================================================
+
+
+operation group: 126/158
+    MIM.A.R.6:TPC_BPC:BPC_AND_MPC_float = AND MIM.A.R.6:TPC_BPC:BPC_float MIM.A.R.6:TPC_BPC:MPC_float
+========================================================================
+
+
+operation group: 127/158
+    MIM.A.R.6:TPC_BPC:L262378 = ANTENNA -gt 0 APi MIM.A.R.6:TPC_BPC:TPC_AND_MPC_float MIM.A.R.6:TPC_BPC:BPC_AND_MPC_float -expr "(((perim(APi) * 2.8) / (area(MIM.A.R.6:TPC_BPC:TPC_AND_MPC_float) + area(MIM.A.R.6:TPC_BPC:BPC_AND_MPC_float))) - 1000)" -rdb MIM.A.R.6.TPC_BPC.rep APi MIM.A.R.6:TPC_BPC:TPC_AND_MPC_float MIM.A.R.6:TPC_BPC:BPC_AND_MPC_float -by_layer
+========================================================================
+
+
+operation group: 128/158
+    MIM.A.R.6:MPC:MPC_AND_TPC_float = AND MIM.A.R.6:TPC_BPC:MPC_float MIM.A.R.6:TPC_BPC:TPC_float
+========================================================================
+
+
+operation group: 129/158
+    MIM.A.R.6:MPC:MPC_AND_BPC_float = AND MIM.A.R.6:TPC_BPC:MPC_float MIM.A.R.6:TPC_BPC:BPC_float
+========================================================================
+
+
+operation group: 130/158
+    MIM.A.R.6:MPC:L262384 = ANTENNA -gt 0 APi MIM.A.R.6:MPC:MPC_AND_TPC_float MIM.A.R.6:MPC:MPC_AND_BPC_float -expr "(((perim(APi) * 2.8) / (area(MIM.A.R.6:MPC:MPC_AND_TPC_float) + area(MIM.A.R.6:MPC:MPC_AND_BPC_float))) - 1000)" -rdb MIM.A.R.6.MPC.rep APi MIM.A.R.6:MPC:MPC_AND_TPC_float MIM.A.R.6:MPC:MPC_AND_BPC_float -by_layer
+========================================================================
+
+
+operation group: 131/158
+    MIM.A.R.7:TPC_BPC:TPC_connect = ANTENNA -gt 0 TPCi APi MIM_CONNECTED_ALL_TPC -expr "(!(!(area(APi))) * !(!(area(MIM_CONNECTED_ALL_TPC))))"
+========================================================================
+
+
+operation group: 132/158
+    MIM.A.R.7:TPC_BPC:MPC_connect = ANTENNA -gt 0 MPCi APi MIM_CONNECTED_ALL_MPC -expr "(!(!(area(APi))) * !(!(area(MIM_CONNECTED_ALL_MPC))))"
+========================================================================
+
+
+operation group: 133/158
+    MIM.A.R.7:TPC_BPC:BPC_connect = ANTENNA -gt 0 BPCi APi MIM_CONNECTED_ALL_BPC -expr "(!(!(area(APi))) * !(!(area(MIM_CONNECTED_ALL_BPC))))"
+========================================================================
+
+
+operation group: 134/158
+    MIM.A.R.7:TPC_BPC:TPC_AND_MPC_connect = AND MIM.A.R.7:TPC_BPC:TPC_connect MIM.A.R.7:TPC_BPC:MPC_connect
+========================================================================
+
+
+operation group: 135/158
+    MIM.A.R.7:TPC_BPC:BPC_AND_MPC_connect = AND MIM.A.R.7:TPC_BPC:BPC_connect MIM.A.R.7:TPC_BPC:MPC_connect
+========================================================================
+
+
+operation group: 136/158
+    MIM.A.R.7:TPC_BPC:L262390 = ANTENNA -gt 0 APi SD MIM.A.R.7:TPC_BPC:TPC_AND_MPC_connect MIM.A.R.7:TPC_BPC:BPC_AND_MPC_connect -expr "((((perim(APi) * 2.8) / (area(MIM.A.R.7:TPC_BPC:TPC_AND_MPC_connect) + area(MIM.A.R.7:TPC_BPC:BPC_AND_MPC_connect))) - (area(SD) * 8000)) - 1000)" -rdb MIM.A.R.7.TPC_BPC.rep APi SD MIM.A.R.7:TPC_BPC:TPC_AND_MPC_connect MIM.A.R.7:TPC_BPC:BPC_AND_MPC_connect -by_layer
+========================================================================
+
+
+operation group: 137/158
+    MIM.A.R.7:MPC:MPC_AND_TPC_connect = AND MIM.A.R.7:TPC_BPC:MPC_connect MIM.A.R.7:TPC_BPC:TPC_connect
+========================================================================
+
+
+operation group: 138/158
+    MIM.A.R.7:MPC:MPC_AND_BPC_connect = AND MIM.A.R.7:TPC_BPC:MPC_connect MIM.A.R.7:TPC_BPC:BPC_connect
+========================================================================
+
+
+operation group: 139/158
+    MIM.A.R.7:MPC:L262396 = ANTENNA -gt 0 APi SD MIM.A.R.7:MPC:MPC_AND_TPC_connect MIM.A.R.7:MPC:MPC_AND_BPC_connect -expr "((((perim(APi) * 2.8) / (area(MIM.A.R.7:MPC:MPC_AND_TPC_connect) + area(MIM.A.R.7:MPC:MPC_AND_BPC_connect))) - (area(SD) * 8000)) - 1000)" -rdb MIM.A.R.7.MPC.rep APi SD MIM.A.R.7:MPC:MPC_AND_TPC_connect MIM.A.R.7:MPC:MPC_AND_BPC_connect -by_layer
+========================================================================
+
+
+operation group: 140/158
+    MIM.A.R.8:TPC_BPC:TPC_float = ANTENNA -gt 0 TPCi RVi MIM_FLOATING_ALL_TPC -expr "(!(!(area(RVi))) * !(!(area(MIM_FLOATING_ALL_TPC))))"
+========================================================================
+
+
+operation group: 141/158
+    MIM.A.R.8:TPC_BPC:MPC_float = ANTENNA -gt 0 MPCi RVi MIM_FLOATING_ALL_MPC -expr "(!(!(area(RVi))) * !(!(area(MIM_FLOATING_ALL_MPC))))"
+========================================================================
+
+
+operation group: 142/158
+    MIM.A.R.8:TPC_BPC:BPC_float = ANTENNA -gt 0 BPCi RVi MIM_FLOATING_ALL_BPC -expr "(!(!(area(RVi))) * !(!(area(MIM_FLOATING_ALL_BPC))))"
+========================================================================
+
+
+operation group: 143/158
+    MIM.A.R.8:TPC_BPC:TPC_AND_MPC_float = AND MIM.A.R.8:TPC_BPC:TPC_float MIM.A.R.8:TPC_BPC:MPC_float
+========================================================================
+
+
+operation group: 144/158
+    MIM.A.R.8:TPC_BPC:BPC_AND_MPC_float = AND MIM.A.R.8:TPC_BPC:BPC_float MIM.A.R.8:TPC_BPC:MPC_float
+========================================================================
+
+
+operation group: 145/158
+    MIM.A.R.8:TPC_BPC:L262402 = ANTENNA -gt 0 RVi MIM.A.R.8:TPC_BPC:TPC_AND_MPC_float MIM.A.R.8:TPC_BPC:BPC_AND_MPC_float -expr "((area(RVi) / (area(MIM.A.R.8:TPC_BPC:TPC_AND_MPC_float) + area(MIM.A.R.8:TPC_BPC:BPC_AND_MPC_float))) - 20)" -rdb MIM.A.R.8.TPC_BPC.rep RVi MIM.A.R.8:TPC_BPC:TPC_AND_MPC_float MIM.A.R.8:TPC_BPC:BPC_AND_MPC_float -by_layer
+========================================================================
+
+
+operation group: 146/158
+    MIM.A.R.8:MPC:MPC_AND_TPC_float = AND MIM.A.R.8:TPC_BPC:MPC_float MIM.A.R.8:TPC_BPC:TPC_float
+========================================================================
+
+
+operation group: 147/158
+    MIM.A.R.8:MPC:MPC_AND_BPC_float = AND MIM.A.R.8:TPC_BPC:MPC_float MIM.A.R.8:TPC_BPC:BPC_float
+========================================================================
+
+
+operation group: 148/158
+    MIM.A.R.8:MPC:L262408 = ANTENNA -gt 0 RVi MIM.A.R.8:MPC:MPC_AND_TPC_float MIM.A.R.8:MPC:MPC_AND_BPC_float -expr "((area(RVi) / (area(MIM.A.R.8:MPC:MPC_AND_TPC_float) + area(MIM.A.R.8:MPC:MPC_AND_BPC_float))) - 20)" -rdb MIM.A.R.8.MPC.rep RVi MIM.A.R.8:MPC:MPC_AND_TPC_float MIM.A.R.8:MPC:MPC_AND_BPC_float -by_layer
+========================================================================
+
+
+operation group: 149/158
+    MIM.A.R.9:TPC_BPC:TPC_connect = ANTENNA -gt 0 TPCi RVi MIM_CONNECTED_ALL_TPC -expr "(!(!(area(RVi))) * !(!(area(MIM_CONNECTED_ALL_TPC))))"
+========================================================================
+
+
+operation group: 150/158
+    MIM.A.R.9:TPC_BPC:MPC_connect = ANTENNA -gt 0 MPCi RVi MIM_CONNECTED_ALL_MPC -expr "(!(!(area(RVi))) * !(!(area(MIM_CONNECTED_ALL_MPC))))"
+========================================================================
+
+
+operation group: 151/158
+    MIM.A.R.9:TPC_BPC:BPC_connect = ANTENNA -gt 0 BPCi RVi MIM_CONNECTED_ALL_BPC -expr "(!(!(area(RVi))) * !(!(area(MIM_CONNECTED_ALL_BPC))))"
+========================================================================
+
+
+operation group: 152/158
+    MIM.A.R.9:TPC_BPC:TPC_AND_MPC_connect = AND MIM.A.R.9:TPC_BPC:TPC_connect MIM.A.R.9:TPC_BPC:MPC_connect
+========================================================================
+
+
+operation group: 153/158
+    MIM.A.R.9:TPC_BPC:BPC_AND_MPC_connect = AND MIM.A.R.9:TPC_BPC:BPC_connect MIM.A.R.9:TPC_BPC:MPC_connect
+========================================================================
+
+
+operation group: 154/158
+    MIM.A.R.9:TPC_BPC:L262414 = ANTENNA -gt 0 RVi SD MIM.A.R.9:TPC_BPC:TPC_AND_MPC_connect MIM.A.R.9:TPC_BPC:BPC_AND_MPC_connect -expr "(((area(RVi) / (area(MIM.A.R.9:TPC_BPC:TPC_AND_MPC_connect) + area(MIM.A.R.9:TPC_BPC:BPC_AND_MPC_connect))) - (area(SD) * 210)) - 20)" -rdb MIM.A.R.9.TPC_BPC.rep RVi SD MIM.A.R.9:TPC_BPC:TPC_AND_MPC_connect MIM.A.R.9:TPC_BPC:BPC_AND_MPC_connect -by_layer
+========================================================================
+
+
+operation group: 155/158
+    MIM.A.R.9:MPC:MPC_AND_TPC_connect = AND MIM.A.R.9:TPC_BPC:MPC_connect MIM.A.R.9:TPC_BPC:TPC_connect
+========================================================================
+
+
+operation group: 156/158
+    MIM.A.R.9:MPC:MPC_AND_BPC_connect = AND MIM.A.R.9:TPC_BPC:MPC_connect MIM.A.R.9:TPC_BPC:BPC_connect
+========================================================================
+
+
+operation group: 157/158
+    MIM.A.R.9:MPC:L262420 = ANTENNA -gt 0 RVi SD MIM.A.R.9:MPC:MPC_AND_TPC_connect MIM.A.R.9:MPC:MPC_AND_BPC_connect -expr "(((area(RVi) / (area(MIM.A.R.9:MPC:MPC_AND_TPC_connect) + area(MIM.A.R.9:MPC:MPC_AND_BPC_connect))) - (area(SD) * 210)) - 20)" -rdb MIM.A.R.9.MPC.rep RVi SD MIM.A.R.9:MPC:MPC_AND_TPC_connect MIM.A.R.9:MPC:MPC_AND_BPC_connect -by_layer
+========================================================================
+
+
+operation group: 158/158
+    _EPTMPL262421 = DISCONNECT
+========================================================================
+Time: cpu=0.26/0.26  real=0.38/0.38  Memory: 0.00/0.00/0.00  peak=0.00
+

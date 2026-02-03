@@ -1,0 +1,9 @@
+FAIL:IMP-12-0-0-32:Confirm no ERROR message in DFM/FLT log files. (for SEC process, for others fill N/A)
+IMP-12-0-0-32-ERROR01: Monitored ERROR patterns detected in verification logs:
+  Severity: Fail Occurrence: 1
+  - Worker.*killed
+IMP-12-0-0-32-INFO01: All monitored ERROR patterns validated (0 errors found):
+  Severity: Info Occurrence: 2
+  - Out of temporary storage disk space, please check -tmp_dirs setting (Worker 11) (Source: Worker 11)
+  - missing_reference exception for cell "pm26" in parent cell "pm100" (Worker 1) (Source: Worker 1)
+

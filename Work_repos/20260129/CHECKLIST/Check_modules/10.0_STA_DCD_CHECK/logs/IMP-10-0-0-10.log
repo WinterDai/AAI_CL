@@ -1,0 +1,12 @@
+FAIL:IMP-10-0-0-10:Confirm check full path group timing reports (in2out/in2reg/reg2out/reg2reg/default/cgdefault).
+IMP-10-0-0-10-ERROR01: Missing reports required to be checked:
+  Severity: Fail Occurrence: 4
+  - in2out
+  - in2reg
+  - reg2out
+  - reg2reg
+IMP-10-0-0-10-INFO01: The missing reports can be waived:
+  Severity: Info Occurrence: 2
+  - cgdefault
+  - default
+

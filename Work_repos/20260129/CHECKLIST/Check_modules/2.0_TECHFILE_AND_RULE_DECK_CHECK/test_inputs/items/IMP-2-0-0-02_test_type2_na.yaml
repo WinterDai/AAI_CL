@@ -1,0 +1,12 @@
+description: 'Confirm latest DRC rule deck(s) was used? List DRC rule deck name in
+  Comments. eg: PLN3ELO_17M_1Xa1Xb1Xc1Xd1Ya1Yb4Y2Yy2Yx2R_014.11_2a.encrypt PLN3ELO_17M_1Xa1Xb1Xc1Xd1Ya1Yb4Y2Yy2Yx2R_054_PATCH.11_2a.encrypt'
+input_files:
+- ${CHECKLIST_ROOT}\IP_project_folder\logs\2.0\DRC_pvl.log
+requirements:
+  pattern_items:
+  - T-N05-CL-DR-014-N1
+  - 014.11_2a
+  value: 2
+waivers:
+  value: N/A
+  waive_items: []

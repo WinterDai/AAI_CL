@@ -1,0 +1,16 @@
+description: Confirm wake-up time meet customer's requirement. (For non-PSO, please
+  fill N/A)
+input_files:
+- ${CHECKLIST_ROOT}\IP_project_folder\reports\11.0\Powerup.rpt
+requirements:
+  pattern_items: []
+  value: N/A
+waivers:
+  value: 2
+  waive_items:
+  - name: Power switches
+    reason: Power switch activation check waived - incomplete simulation acceptable
+      for early verification stage
+  - name: Wake-up time
+    reason: Wake-up time measurement waived - report format differs for legacy tool
+      version

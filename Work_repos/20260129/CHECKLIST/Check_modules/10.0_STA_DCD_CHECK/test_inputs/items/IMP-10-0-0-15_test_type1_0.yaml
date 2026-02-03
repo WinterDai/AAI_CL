@@ -1,0 +1,11 @@
+description: Confirm the double_clock check result is clean.
+input_files:
+- ${CHECKLIST_ROOT}/IP_project_folder/reports/10.0/double_clock_*.rpt
+requirements:
+  pattern_items: []
+  value: N/A
+waivers:
+  value: 0
+  waive_items:
+  - 'Explanation: Double clocking violations are informational only for this design
+    phase'

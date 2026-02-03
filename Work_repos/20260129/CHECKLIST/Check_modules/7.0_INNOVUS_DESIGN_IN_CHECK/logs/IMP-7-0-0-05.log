@@ -1,0 +1,26 @@
+FAIL:IMP-7-0-0-05:Confirm no issue for check_design in Innovus.
+IMP-7-0-0-05-ERROR01: Design rule violations detected in check_design report:
+  Severity: Fail Occurrence: 5
+  - place:CHKPLC-41 (severity: error, count: 1): Design has util %.1f% > 100%, placer cannot proceed. The problem may be caused by density screens (softBlockages and partial blockages) or user-specified cell padding. Please correct this problem first.
+  - place:IMPFP-7006 (severity: error, count: 2): Follow pin (Pin Box:%s) routed over hard macro (%s) should be cut at macro boundary.
+  - place:IMPPP-4419 (severity: error, count: 3): The color of PG wire which is a default width %f wire for net %s in layer %s should have the same color with the track at %f %f.
+  - power_intent:IMPMSMV-8350 (severity: error, count: 1): There are %d missing isolation violation nets and %d missing level shifter violation nets.  Use check_power_domains -nets_missing_iso -nets_missing_shifter to check those LP violations in details.
+  - signoff:IMPESO-450 (severity: error, count: 1): Tempus executable is not part of the PATH environment variable, so tool won't be able to run signoff timing analysis.
+IMP-7-0-0-05-WARN01: Unused waivers:
+  Severity: Warn Occurrence: 1
+  - CHKNETLIST-1
+IMP-7-0-0-05-INFO01: Waived design rule violations:
+  Severity: Info Occurrence: 1
+  - power_intent:IMPMSMV-8623 (severity: error, count: 4): Primary PG term %s of Instance %s is connected to net %s which conflicts with primary power net %s of the domain %s specified in UPF. This can impact the run time and quality of results.
+IMP-7-0-0-05-INFO02: No design rule violations found in check_design report:
+  Severity: Info Occurrence: 9
+  - netlist:CHKNETLIST-1 (severity: warning, count: 5): Hierarchy instance input hpin '%s' is undriven.
+  - netlist:CHKNETLIST-12 (severity: warning, count: 4): Input pin '%s' is constant.
+  - netlist:CHKNETLIST-15 (severity: warning, count: 4): Hierarchy instance input/inout hpin '%s' is multi-driven.
+  - netlist:CHKNETLIST-2 (severity: warning, count: 4): Instance input pin '%s' is undriven.
+  - netlist:CHKNETLIST-3 (severity: warning, count: 2): Output/inout port '%s' is multi-driven.
+  - netlist:CHKNETLIST-5 (severity: warning, count: 53): Input port '%s' is unload.
+  - opt:IMPOPT-7075 (severity: warning, count: 1): Timing data-to-data checks are present and will be disabled during optimization. To enable data-to-data checks during optimization use'set_db opt_enable_data_to_data_checks true'.
+  - signoff:IMPESO-446 (severity: warning, count: 1): There are %d sequential cells marked as Fixed. Tool will only be able to perform swapping on those and no resizing, which will limit timing/power optimization.
+  - timing:CHKTIM-4 (severity: warning, count: 4): Clock pin %s of instance %s has no clock constraint for view name %s.
+

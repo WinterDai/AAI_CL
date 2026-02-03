@@ -1,0 +1,11 @@
+description: List Quantus RC extraction tool version (eg. quantus/231/23.11.000)
+input_files:
+- ${CHECKLIST_ROOT}/IP_project_folder/tcl/2.0/setup_vars.tcl
+requirements:
+  pattern_items:
+  - quantus/231/23.10.000
+  - quantus/231/23.11.000
+  value: 2
+waivers:
+  value: N/A
+  waive_items: []

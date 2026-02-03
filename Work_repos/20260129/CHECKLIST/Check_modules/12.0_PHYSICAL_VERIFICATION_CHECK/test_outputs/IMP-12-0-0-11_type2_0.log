@@ -1,0 +1,10 @@
+PASS:IMP-12-0-0-11:Confirm the DRC check result is clean. (fill the confidence level of not touching floorplan again in comment if fill no, for example, 90%~100%)
+IMP-12-0-0-11-INFO01: [WAIVED_INFO]: Waived information:
+  Severity: Info Occurrence: 1
+  - Explanation: Specific DRC rules are informational only for this design phase
+IMP-12-0-0-11-INFO02: [WAIVED_AS_INFO]: DRC rule violations detected - requirements not satisfied:
+  Severity: Info Occurrence: 3
+  - AN.R.20mg: 290
+  - EFP.VIA13.R.1.1: 41
+  - RH_TN.WARN.1: 256
+

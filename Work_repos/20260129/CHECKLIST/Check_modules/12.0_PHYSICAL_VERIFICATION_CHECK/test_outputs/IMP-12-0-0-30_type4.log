@@ -1,0 +1,85 @@
+FAIL:IMP-12-0-0-30:Confirm DFM check result is clean. (for SEC process, for others fill N/A)
+IMP-12-0-0-30-ERROR01: DFM violations detected in Pegasus report:
+  Severity: Fail Occurrence: 1
+  - DFM rule: PM_M2_C_5 - 1 violations
+IMP-12-0-0-30-WARN01: Unused waivers:
+  Severity: Warn Occurrence: 1
+  - PM_M5_C_2
+IMP-12-0-0-30-INFO01: DFM rule violations waived:
+  Severity: Info Occurrence: 1
+  - DFM rule: PM_M2_C_3 - 579 violations
+IMP-12-0-0-30-INFO02: All DFM rules passed with zero violations:
+  Severity: Info Occurrence: 72
+  - DFM rule: CHIP_AREA_INFO - 0 violations
+  - DFM rule: OUTLINE_count - 0 violations
+  - DFM rule: OVL_D10S9_C_1_Criteria - 0 violations
+  - DFM rule: OVL_D10S9_C_1_SCORE - 0 violations
+  - DFM rule: OVL_D11S10_C_1_Criteria - 0 violations
+  - DFM rule: OVL_D11S10_C_1_SCORE - 0 violations
+  - DFM rule: OVL_D12S11_C_1_Criteria - 0 violations
+  - DFM rule: OVL_D12S11_C_1_SCORE - 0 violations
+  - DFM rule: OVL_D13S12_C_1_Criteria - 0 violations
+  - DFM rule: OVL_D13S12_C_1_SCORE - 0 violations
+  - DFM rule: OVL_D14S13_C_1_Criteria - 0 violations
+  - DFM rule: OVL_D14S13_C_1_SCORE - 0 violations
+  - DFM rule: OVL_D6FD_C_1_Criteria - 0 violations
+  - DFM rule: OVL_D6FD_C_1_SCORE - 0 violations
+  - DFM rule: OVL_D7S6_C_1_Criteria - 0 violations
+  - DFM rule: OVL_D7S6_C_1_SCORE - 0 violations
+  - DFM rule: OVL_D8S7_C_1_Criteria - 0 violations
+  - DFM rule: OVL_D8S7_C_1_SCORE - 0 violations
+  - DFM rule: OVL_D9S8_C_1_Criteria - 0 violations
+  - DFM rule: OVL_D9S8_C_1_SCORE - 0 violations
+  - DFM rule: OVL_F5Q4_C_1_Criteria - 0 violations
+  - DFM rule: OVL_F5Q4_C_1_SCORE - 0 violations
+  - DFM rule: PM_CA_C_1 - 0 violations
+  - DFM rule: PM_CB_CR_C_1 - 0 violations
+  - DFM rule: PM_D10_C_16 - 0 violations
+  - DFM rule: PM_D10_C_17 - 0 violations
+  - DFM rule: PM_D10_C_18 - 0 violations
+  - DFM rule: PM_D10_C_18_copy - 0 violations
+  - DFM rule: PM_D11_C_16 - 0 violations
+  - DFM rule: PM_D11_C_17 - 0 violations
+  - DFM rule: PM_D11_C_18 - 0 violations
+  - DFM rule: PM_D11_C_18_copy - 0 violations
+  - DFM rule: PM_D12_C_16 - 0 violations
+  - DFM rule: PM_D12_C_17 - 0 violations
+  - DFM rule: PM_D12_C_18 - 0 violations
+  - DFM rule: PM_D12_C_18_copy - 0 violations
+  - DFM rule: PM_D6_C_16 - 0 violations
+  - DFM rule: PM_D6_C_17 - 0 violations
+  - DFM rule: PM_D6_C_18 - 0 violations
+  - DFM rule: PM_D6_C_18_copy - 0 violations
+  - DFM rule: PM_D7_C_16 - 0 violations
+  - DFM rule: PM_D7_C_17 - 0 violations
+  - DFM rule: PM_D7_C_18 - 0 violations
+  - DFM rule: PM_D7_C_18_copy - 0 violations
+  - DFM rule: PM_D8_C_16 - 0 violations
+  - DFM rule: PM_D8_C_17 - 0 violations
+  - DFM rule: PM_D8_C_18 - 0 violations
+  - DFM rule: PM_D8_C_18_copy - 0 violations
+  - DFM rule: PM_D9_C_16 - 0 violations
+  - DFM rule: PM_D9_C_17 - 0 violations
+  - DFM rule: PM_D9_C_18 - 0 violations
+  - DFM rule: PM_D9_C_18_copy - 0 violations
+  - DFM rule: PM_F4_C_2 - 0 violations
+  - DFM rule: PM_F5_C_2 - 0 violations
+  - DFM rule: PM_H1_C_1 - 0 violations
+  - DFM rule: PM_H2_C_1 - 0 violations
+  - DFM rule: PM_M1_C_1 - 0 violations
+  - DFM rule: PM_M1_C_2 - 0 violations
+  - DFM rule: PM_M1_C_3 - 0 violations
+  - DFM rule: PM_M1_X1_C_1 - 0 violations
+  - DFM rule: PM_M2_C_1 - 0 violations
+  - DFM rule: PM_M3_C_1 - 0 violations
+  - DFM rule: PM_MF_M3_C_1 - 0 violations
+  - DFM rule: PM_NW_C_1 - 0 violations
+  - DFM rule: PM_PPLUS_C_1 - 0 violations
+  - DFM rule: PM_RX_C_1 - 0 violations
+  - DFM rule: PM_SxFirst_C_1 - 0 violations
+  - DFM rule: PM_V1_C_1 - 0 violations
+  - DFM rule: PM_V1_M1_C_1 - 0 violations
+  - DFM rule: PM_V2_M2_C_1 - 0 violations
+  - DFM rule: cp_PM_M2_C_1_L1 - 0 violations
+  - DFM rule: cp_PM_M3_C_1_L1 - 0 violations
+

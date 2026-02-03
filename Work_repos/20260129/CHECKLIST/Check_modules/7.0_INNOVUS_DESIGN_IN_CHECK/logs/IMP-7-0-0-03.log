@@ -1,0 +1,7 @@
+FAIL:IMP-7-0-0-03:Confirm all Warning messages during read constraints can be waived.
+IMP-7-0-0-03-ERROR01: WARNING messages found during constraint reading:
+  Severity: Fail Occurrence: 3
+  - CHKPLC-18: Preplaced instance <%s> has vertical pin-track mask violation.
+  - IMPMSMV-8630: Power domain (%s) in view (%s) has no user defined operating condition.
+  - TCLCMD-1531: 'set_case_analysis' has been applied on hierarchical pin 'inst_master_delay/inst_cal_dly_macro/inst_cal_delay_line/cal_qtr_delay_sel[2]' (File /projects/yunbao_N6_80bits_EW_PHY_OD_6400/input/latest/innovus_cons/cdn_hs_phy_data_slice.con.edi, Line 501).
+

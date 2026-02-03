@@ -1,0 +1,22 @@
+FAIL:IMP-12-0-0-33:Confirm all Warning message in DFM/FLT log files can be waived. (for SEC process, for others fill N/A)
+IMP-12-0-0-33-ERROR01: WARNING messages detected in Pegasus verification logs:
+  Severity: Fail Occurrence: 10
+  - Cell name parameter "NONE" for inside_cell [-not] operation not located. (Source: Pegasus_DFM.log:line 34)
+  - Results for rule floating.nxwell_float are lost (Source: Pegasus_DFM.log:line 574)
+  - Results for rule floating.nxwell_float are lost (Source: do_pvsFLTwD.log:line 289)
+  - Unattached port label (Source: Pegasus_DFM.log:line 582)
+  - Unattached port label (Source: do_pvsFLTwD.log:line 297)
+  - different labels for net x , it is assigned to "X" (Source: Pegasus_DFM.log:line 581)
+  - different labels for net x , it is assigned to "X" (Source: do_pvsFLTwD.log:line 296)
+  - no LSF resource specified, host use "bsub -W 36000" to start LSF slave. (Source: Pegasus_DFM.log:line 23)
+  - same label "x" for multiple nets, it is assigned to net x (Source: Pegasus_DFM.log:line 580)
+  - same label "x" for multiple nets, it is assigned to net x (Source: do_pvsFLTwD.log:line 295)
+IMP-12-0-0-33-WARN01: Unused waivers:
+  Severity: Warn Occurrence: 1
+  - Worker 11$
+IMP-12-0-0-33-INFO01: WARNING messages waived per verification team approval:
+  Severity: Info Occurrence: 3
+  - Encountered problems with Worker 1, attempting recovery... (Source: Worker 1)
+  - GDR-00003 (Source: GDR-00003)
+  - Worker 1 killed by external signal [9] (Source: Worker 1)
+

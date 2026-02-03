@@ -1,0 +1,5 @@
+FAIL:HBM-IMP-10-2-0-02:Hold uncertainty, OCV parameters Static IR 15mV based deltaV + 10C deltaT
+HBM-IMP-10-2-0-02-ERROR01: Configuration error:
+  Severity: Fail Occurrence: 1
+  - input_files is empty in YAML configuration
+

@@ -1,0 +1,7 @@
+FAIL:IMP-5-0-0-14:Confirm that there are no other violations or errors (max cap, max transition etc)?
+Fail Occurrence: 3
+1: Fail: UDFF_th1/Q. In line 33, C:\Users\yuyin\OneDrive - Cadence Design Systems Inc\2025\Checklist\AAI\CHECKLIST_V3\CHECKLIST\IP_project_folder\reports\design_check_rule.rpt: Max transition violation
+2: Fail: UBUF_fm/Y. In line 37, C:\Users\yuyin\OneDrive - Cadence Design Systems Inc\2025\Checklist\AAI\CHECKLIST_V3\CHECKLIST\IP_project_folder\reports\design_check_rule.rpt: Max transition violation
+3: Fail: UDFF_to/Q. In line 41, C:\Users\yuyin\OneDrive - Cadence Design Systems Inc\2025\Checklist\AAI\CHECKLIST_V3\CHECKLIST\IP_project_folder\reports\design_check_rule.rpt: Max transition violation
+Warn Occurrence: 1
+1: Warn: Max_fanout design rule has no constraints. In line 48, C:\Users\yuyin\OneDrive - Cadence Design Systems Inc\2025\Checklist\AAI\CHECKLIST_V3\CHECKLIST\IP_project_folder\reports\design_check_rule.rpt

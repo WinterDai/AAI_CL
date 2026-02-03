@@ -1,0 +1,3 @@
+PASS:IMP-5-0-0-10:Confirm don't use cell list includes forbidden cells specified in IMP-1-0-0-02?
+Info Occurrence: 1
+1: Info: No forbidden cells configured in IMP-1-0-0-02, check passed

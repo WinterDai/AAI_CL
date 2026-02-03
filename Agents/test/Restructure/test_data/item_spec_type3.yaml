@@ -1,0 +1,14 @@
+check_module: "3.0_TOOL_VERSION"
+item_id: "IMP-3-0-0-00"
+item_desc: "List Innovus implementation tool version (eg. innovus/221/22.11-s119_1)"
+input_files:
+  - "../test_data/setup_vars.tcl"
+requirements:
+  value: 1
+  pattern_items:
+    - "innovus/221/22.11-s119_1"
+waivers:
+  value: 1
+  waive_items:
+    - name: "innovus/221/*"
+      reason: "Test waiver for version pattern"

@@ -1,0 +1,6 @@
+FAIL:IMP-12-0-0-31:Confirm FLT check result is clean. (for SEC process, for others fill N/A)
+IMP-12-0-0-31-ERROR01: FLT check has violations - one or more rules failed:
+  Severity: Fail Occurrence: 2
+  - FLT rule: FLTM.Hx.S.1_H1 - 10 violations
+  - FLT rule: FLTM.Mx.S.1_M1 - 12 violations
+

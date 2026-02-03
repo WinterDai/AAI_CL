@@ -1,0 +1,5 @@
+Cadence Innovus(TM) Implementation System.
+Copyright 2024 Cadence Design Systems, Inc. All rights reserved worldwide.
+
+Version:	v23.15-s106_1, built Wed Jul 16 17:15:29 PDT 2025
+Options:	-batch -stylus -log /projects/sd2002_sf4x_pd/nu_proj/work/xcvr/guoxu_251015/logs/.all_logs/innovus.route.20251028_120127 -execute if {[catch {init_flow  {flow_script {/projects/sd2002_sf4x_pd/nu_proj/work/xcvr/guoxu_251015/prep_flow/flow.yaml /projects/sd2002_sf4x_pd/nu_proj/work/xcvr/guoxu_251015/prep_flow/flowstep_info.tcl} yaml_script {} flow_no_check 0 parent_uuid {} previous_uuid {} top_dir /projects/sd2002_sf4x_pd/nu_proj/work/xcvr/guoxu_251015/flowtool flow_dir . status_file /projects/sd2002_sf4x_pd/nu_proj/work/xcvr/guoxu_251015/flowtool/flow.status.d/innovus.route.20251028_120127 metrics_file

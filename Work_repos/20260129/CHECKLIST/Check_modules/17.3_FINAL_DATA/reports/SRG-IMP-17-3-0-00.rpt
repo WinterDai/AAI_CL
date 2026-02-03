@@ -1,0 +1,3 @@
+FAIL:SRG-IMP-17-3-0-00:Is the Delivery Package contains layer map file
+Fail Occurrence: 1
+1: Fail: input_files is empty in YAML configuration

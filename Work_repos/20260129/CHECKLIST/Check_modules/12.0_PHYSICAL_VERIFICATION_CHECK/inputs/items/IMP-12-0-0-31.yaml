@@ -1,0 +1,14 @@
+description: 'Confirm FLT check result is clean. (for SEC process, for others
+  fill N/A)'
+requirements:
+  value: N/A
+  pattern_items: []
+input_files:
+  - ${CHECKLIST_ROOT}/IP_project_folder/reports/pv/Pegasus_FLT.sum
+waivers:
+  value: 2
+  waive_items:
+  - name: FLTM.Mx.S.1_M1
+    reason: Waived - Known issue in legacy IP block, approved by design team
+  - name: FLTM.Mx.S.2_M2
+    reason: Waived - False positive due to custom metal stack configuration

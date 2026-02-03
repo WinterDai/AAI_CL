@@ -1,0 +1,143 @@
+Test Log: IMP-8-0-0-09
+================================================================================
+
+[Test 1/6] Type 1 (requirements.value=N/A, waivers.value=N/A)
+--------------------------------------------------------------------------------
+Test ID: type1_na
+Status: ERROR
+
+Checker Log Output:
+FAIL:IMP-8-0-0-09:Confirm we take care of the dynamic power optimization in the whole innovs flow(Check the Note)
+IMP-8-0-0-09-ERROR01: Required power optimization settings not found or incorrectly configured:
+  Severity: Fail Occurrence: 1
+  get_default_switching_activity -clip_activity_to_domain_freq {} (expected: true)
+IMP-8-0-0-09-INFO01: All power optimization settings found and correctly configured:
+  Severity: Info Occurrence: 8
+  getDesignMode -powerEffort high
+  getDesignMode -propagateActivity true
+  getNanoRouteMode -route_global_exp_power_driven_effort medium
+  getNanoRouteMode -route_global_with_power_driven true
+  getOptMode -opt_leakage_to_dynamic_ratio 0.2
+  getOptMode -opt_power_effort high
+  getOptMode -opt_route_type_for_power true
+  get_default_switching_activity -input_activity 0.15
+
+
+================================================================================
+
+[Test 2/6] Type 1 (requirements.value=N/A, waivers.value=0)
+--------------------------------------------------------------------------------
+Test ID: type1_0
+Status: PASS
+
+Checker Log Output:
+PASS:IMP-8-0-0-09:Confirm we take care of the dynamic power optimization in the whole innovs flow(Check the Note)
+IMP-8-0-0-09-INFO01: [WAIVED_INFO]: Waived information:
+  Severity: Info Occurrence: 1
+  Explanation: Power optimization configuration check is informational only for early design stages
+IMP-8-0-0-09-INFO02: All power optimization settings found and correctly configured:
+  Severity: Info Occurrence: 8
+  getDesignMode -powerEffort high
+  getDesignMode -propagateActivity true
+  getNanoRouteMode -route_global_exp_power_driven_effort medium
+  getNanoRouteMode -route_global_with_power_driven true
+  getOptMode -opt_leakage_to_dynamic_ratio 0.2
+  getOptMode -opt_power_effort high
+  getOptMode -opt_route_type_for_power true
+  get_default_switching_activity -input_activity 0.15
+IMP-8-0-0-09-INFO03: [WAIVED_AS_INFO]: Required power optimization settings not found or incorrectly configured:
+  Severity: Info Occurrence: 1
+  get_default_switching_activity -clip_activity_to_domain_freq {} (expected: true)
+
+
+================================================================================
+
+[Test 3/6] Type 2 (requirements.value>0, waivers.value=N/A)
+--------------------------------------------------------------------------------
+Test ID: type2_na
+Status: ERROR
+
+Checker Log Output:
+FAIL:IMP-8-0-0-09:Confirm we take care of the dynamic power optimization in the whole innovs flow(Check the Note)
+IMP-8-0-0-09-ERROR01: Required power optimization parameters not satisfied (5/7 correct, 2 missing/incorrect):
+  Severity: Fail Occurrence: 1
+  get_default_switching_activity -clip_activity_to_domain_freq {} (expected: true)
+IMP-8-0-0-09-INFO01: All required power optimization parameters matched expected configuration (7/7):
+  Severity: Info Occurrence: 2
+  getNanoRouteMode -route_global_with_power_driven true
+  get_default_switching_activity -input_activity 0.15
+
+
+================================================================================
+
+[Test 4/6] Type 2 (requirements.value>0, waivers.value=0)
+--------------------------------------------------------------------------------
+Test ID: type2_0
+Status: PASS
+
+Checker Log Output:
+PASS:IMP-8-0-0-09:Confirm we take care of the dynamic power optimization in the whole innovs flow(Check the Note)
+IMP-8-0-0-09-INFO01: [WAIVED_INFO]: Waived information:
+  Severity: Info Occurrence: 1
+  Explanation: Power optimization parameter check is informational during early implementation phases
+IMP-8-0-0-09-INFO02: All required power optimization parameters matched expected configuration (7/7):
+  Severity: Info Occurrence: 2
+  getNanoRouteMode -route_global_with_power_driven true
+  get_default_switching_activity -input_activity 0.15
+IMP-8-0-0-09-INFO03: [WAIVED_AS_INFO]: Required power optimization parameters not satisfied (5/7 correct, 2 missing/incorrect):
+  Severity: Info Occurrence: 1
+  get_default_switching_activity -clip_activity_to_domain_freq {} (expected: true)
+
+
+================================================================================
+
+[Test 5/6] Type 3
+--------------------------------------------------------------------------------
+Test ID: type3
+Status: ERROR
+
+Checker Log Output:
+FAIL:IMP-8-0-0-09:Confirm we take care of the dynamic power optimization in the whole innovs flow(Check the Note)
+IMP-8-0-0-09-ERROR01: Required power optimization parameters not satisfied (5/7 correct, 2 missing/incorrect):
+  Severity: Fail Occurrence: 1
+  get_default_switching_activity -clip_activity_to_domain_freq {} (expected: true)
+IMP-8-0-0-09-WARN01: Unused waivers:
+  Severity: Warn Occurrence: 2
+  getNanoRouteMode -route_global_with_power_driven true
+  getDesignMode -powerEffort high
+IMP-8-0-0-09-INFO01: All required power optimization parameters matched expected configuration (7/7):
+  Severity: Info Occurrence: 2
+  getNanoRouteMode -route_global_with_power_driven true
+  get_default_switching_activity -input_activity 0.15
+
+
+================================================================================
+
+[Test 6/6] Type 4
+--------------------------------------------------------------------------------
+Test ID: type4
+Status: ERROR
+
+Checker Log Output:
+FAIL:IMP-8-0-0-09:Confirm we take care of the dynamic power optimization in the whole innovs flow(Check the Note)
+IMP-8-0-0-09-ERROR01: Required power optimization settings not found or incorrectly configured:
+  Severity: Fail Occurrence: 1
+  get_default_switching_activity -clip_activity_to_domain_freq {} (expected: true)
+IMP-8-0-0-09-WARN01: Unused waivers:
+  Severity: Warn Occurrence: 2
+  getDesignMode -powerEffort high
+  getNanoRouteMode -route_global_with_power_driven true
+IMP-8-0-0-09-INFO01: All power optimization settings found and correctly configured:
+  Severity: Info Occurrence: 8
+  getDesignMode -powerEffort high
+  getDesignMode -propagateActivity true
+  getNanoRouteMode -route_global_exp_power_driven_effort medium
+  getNanoRouteMode -route_global_with_power_driven true
+  getOptMode -opt_leakage_to_dynamic_ratio 0.2
+  getOptMode -opt_power_effort high
+  getOptMode -opt_route_type_for_power true
+  get_default_switching_activity -input_activity 0.15
+
+
+================================================================================
+

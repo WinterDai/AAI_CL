@@ -1,0 +1,29 @@
+is_pass: True
+value: yes
+has_pattern_items: False
+has_waiver_value: True
+
+Details (2 items):
+--------------------------------------------------------------------------------
+
+[1] INFO
+    name: SPEF Reading was skipped
+    line_number: 0
+    file_path: N/A
+    reason: Item not found[WAIVER]
+
+[2] INFO
+    name: Netlist File (found in log, file not accessible)
+    line_number: 17
+    file_path: c:\Users\wentao\AAI_local\AAI\Main_Work\ACL\Latest\CHECKLIST\IP_project_folder\logs\sta_post_syn.log
+    reason: Item found
+
+
+Info Groups (2 groups):
+--------------------------------------------------------------------------------
+
+INFO01: Items waived
+  Items: ['SPEF Reading was skipped']
+
+INFO02: Netlist/SPEF files loaded successfully
+  Items: ['Netlist File (found in log, file not accessible)']

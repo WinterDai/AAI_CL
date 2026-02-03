@@ -1,0 +1,4 @@
+FAIL:IMP-6-0-0-02:Confirm all listed black boxes are intended?
+Fail Occurrence: 2
+1: Fail: SYSTEM: (R) ANTENNA_DX_L_S6P25TR_C54L06. In line 1, C:\Users\yuyin\OneDrive - Cadence Design Systems Inc\2025\Checklist\AAI\CHECKLIST_V3\CHECKLIST\IP_project_folder\reports\post_lec\black_box.rpt: Black box found
+2: Fail: SYSTEM: (G R) xcvr_ana. In line 2, C:\Users\yuyin\OneDrive - Cadence Design Systems Inc\2025\Checklist\AAI\CHECKLIST_V3\CHECKLIST\IP_project_folder\reports\post_lec\black_box.rpt: Black box found

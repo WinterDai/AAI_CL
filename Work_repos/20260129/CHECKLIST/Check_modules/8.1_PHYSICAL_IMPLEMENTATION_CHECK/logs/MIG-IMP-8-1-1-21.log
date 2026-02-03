@@ -1,0 +1,5 @@
+FAIL:MIG-IMP-8-1-1-21:Confirm dfi interface registers are placed close to DFI interface pins and make the DFI interface input/output clock/datapath shortest with minumum skew (If the project is dragonfly DDR5 and controller will use PHY phy_pclk_out, please don't build shortest clock tree for DFI interface register clocks. You can balance DFI interface clock tree with internal clock tree or a little larger than internal clock tree). Build separate clock tree to DFI regsiters. One is for input registers, the other is for output registers. And the input clock tree need to be balanced with output clock tree.(check the Note)
+MIG-IMP-8-1-1-21-ERROR01: Configuration error:
+  Severity: Fail Occurrence: 1
+  - input_files is empty in YAML configuration
+

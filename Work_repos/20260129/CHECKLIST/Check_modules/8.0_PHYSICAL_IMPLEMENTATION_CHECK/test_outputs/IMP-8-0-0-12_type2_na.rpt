@@ -1,0 +1,4 @@
+PASS:IMP-8-0-0-12:Confirm no inputs are tied directly to the power rails (VDD/VSS) by using Tiehigh/Tielow cells(check the Note)
+Info Occurrence: 2
+1: Info: inst_data_path_top/inst_data_byte_macro/cdn_hs_phy_data_asic_pads/data_pad_6/PAD1_HV_IN_XTC: All monitored instance pins validated - no tie cell violations matched
+2: Info: inst_data_path_top/inst_data_byte_macro/cdn_hs_phy_data_asic_pads/data_pad_7/PAD1_HV_IN_XTC: All monitored instance pins validated - no tie cell violations matched

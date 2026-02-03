@@ -1,0 +1,9 @@
+FAIL:IMP-8-0-0-09:Confirm we take care of the dynamic power optimization in the whole innovs flow(Check the Note)
+Fail Occurrence: 1
+1: Fail: get_default_switching_activity -clip_activity_to_domain_freq {} (expected: true). In line 2, C:\Users\chyao\Desktop\checklist_dev\CHECKLIST\CHECKLIST\IP_project_folder\reports\8.0\IMP-8-0-0-09\get_default_switching_activity: Required power optimization parameters not satisfied: some parameters missing, have empty values, or incorrect configuration
+Warn Occurrence: 2
+1: Warn: getDesignMode -powerEffort high: Waiver not matched - no corresponding power optimization configuration issue found: Waived - using medium power effort for initial implementation, will be increased during timing closure[WAIVER]
+2: Warn: getNanoRouteMode -route_global_with_power_driven true: Waiver not matched - no corresponding power optimization configuration issue found: Waived - power-driven routing disabled for this design due to runtime constraints, approved by design team[WAIVER]
+Info Occurrence: 2
+1: Info: getNanoRouteMode -route_global_with_power_driven true. In line 1, C:\Users\chyao\Desktop\checklist_dev\CHECKLIST\CHECKLIST\IP_project_folder\reports\8.0\IMP-8-0-0-09\getNanoRouteMode: All required power optimization parameters matched and validated: switching activity configured, power-driven routing enabled, design power effort set to high, optimizer power settings correct
+2: Info: get_default_switching_activity -input_activity 0.15. In line 1, C:\Users\chyao\Desktop\checklist_dev\CHECKLIST\CHECKLIST\IP_project_folder\reports\8.0\IMP-8-0-0-09\get_default_switching_activity: All required power optimization parameters matched and validated: switching activity configured, power-driven routing enabled, design power effort set to high, optimizer power settings correct

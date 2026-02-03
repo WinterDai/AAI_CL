@@ -1,0 +1,79 @@
+Test Report: IMP-12-0-0-24
+================================================================================
+
+[Test 1/6] Type 1 (requirements.value=N/A, waivers.value=N/A)
+--------------------------------------------------------------------------------
+Test ID: type1_na
+Status: ERROR
+
+Checker Report Output:
+FAIL:IMP-12-0-0-24:Confirm add the chipBoundary layer to check boundary DRC for test chip.
+Fail Occurrence: 1
+1: Fail: Invalid_Geometry_Count_Calibre_C:\Users\jingyu\OneDrive - Cadence Design Systems Inc\Desktop\checklist_dev\AI_2026_V1\CHECKLIST\CHECKLIST\IP_project_folder\reports\pv\Calibre_DRC.rep. In line 851, C:\Users\jingyu\OneDrive - Cadence Design Systems Inc\Desktop\checklist_dev\AI_2026_V1\CHECKLIST\CHECKLIST\IP_project_folder\reports\pv\Calibre_DRC.rep: Chip_Boundary layer not found in DRC report or geometry count ≠ 1
+
+================================================================================
+
+[Test 2/6] Type 1 (requirements.value=N/A, waivers.value=0)
+--------------------------------------------------------------------------------
+Test ID: type1_0
+Status: PASS
+
+Checker Report Output:
+PASS:IMP-12-0-0-24:Confirm add the chipBoundary layer to check boundary DRC for test chip.
+Info Occurrence: 2
+1: Info: Explanation: Chip_Boundary layer check is informational for early design stages: Explanation: Chip_Boundary layer check is informational for early design stages[WAIVED_INFO]
+2: Info: Invalid_Geometry_Count_Calibre_C:\Users\jingyu\OneDrive - Cadence Design Systems Inc\Desktop\checklist_dev\AI_2026_V1\CHECKLIST\CHECKLIST\IP_project_folder\reports\pv\Calibre_DRC.rep. In line 851, C:\Users\jingyu\OneDrive - Cadence Design Systems Inc\Desktop\checklist_dev\AI_2026_V1\CHECKLIST\CHECKLIST\IP_project_folder\reports\pv\Calibre_DRC.rep: Chip_Boundary layer not found in DRC report or geometry count ≠ 1[WAIVED_AS_INFO]
+
+================================================================================
+
+[Test 3/6] Type 2 (requirements.value>0, waivers.value=N/A)
+--------------------------------------------------------------------------------
+Test ID: type2_na
+Status: ERROR
+
+Checker Report Output:
+FAIL:IMP-12-0-0-24:Confirm add the chipBoundary layer to check boundary DRC for test chip.
+Fail Occurrence: 1
+1: Fail: Chip_Boundary. In line 851, C:\Users\jingyu\OneDrive - Cadence Design Systems Inc\Desktop\checklist_dev\AI_2026_V1\CHECKLIST\CHECKLIST\IP_project_folder\reports\pv\Calibre_DRC.rep: Expected Chip_Boundary layer not satisfied or missing from DRC report
+
+================================================================================
+
+[Test 4/6] Type 2 (requirements.value>0, waivers.value=0)
+--------------------------------------------------------------------------------
+Test ID: type2_0
+Status: PASS
+
+Checker Report Output:
+PASS:IMP-12-0-0-24:Confirm add the chipBoundary layer to check boundary DRC for test chip.
+Info Occurrence: 2
+1: Info: Explanation: Chip_Boundary layer check is informational during pre-layout phase: Explanation: Chip_Boundary layer check is informational during pre-layout phase[WAIVED_INFO]
+2: Info: Chip_Boundary. In line 851, C:\Users\jingyu\OneDrive - Cadence Design Systems Inc\Desktop\checklist_dev\AI_2026_V1\CHECKLIST\CHECKLIST\IP_project_folder\reports\pv\Calibre_DRC.rep: Expected Chip_Boundary layer not satisfied or missing from DRC report[WAIVED_AS_INFO]
+
+================================================================================
+
+[Test 5/6] Type 3
+--------------------------------------------------------------------------------
+Test ID: type3
+Status: PASS
+
+Checker Report Output:
+PASS:IMP-12-0-0-24:Confirm add the chipBoundary layer to check boundary DRC for test chip.
+Info Occurrence: 1
+1: Info: Chip_Boundary. In line 851, C:\Users\jingyu\OneDrive - Cadence Design Systems Inc\Desktop\checklist_dev\AI_2026_V1\CHECKLIST\CHECKLIST\IP_project_folder\reports\pv\Calibre_DRC.rep: Chip_Boundary layer check waived per design team approval: Waived - Multiple chip boundaries acceptable for multi-die design[WAIVER]
+
+================================================================================
+
+[Test 6/6] Type 4
+--------------------------------------------------------------------------------
+Test ID: type4
+Status: ERROR
+
+Checker Report Output:
+FAIL:IMP-12-0-0-24:Confirm add the chipBoundary layer to check boundary DRC for test chip.
+Fail Occurrence: 1
+1: Fail: Invalid_Geometry_Count_Calibre_C:\Users\jingyu\OneDrive - Cadence Design Systems Inc\Desktop\checklist_dev\AI_2026_V1\CHECKLIST\CHECKLIST\IP_project_folder\reports\pv\Calibre_DRC.rep. In line 851, C:\Users\jingyu\OneDrive - Cadence Design Systems Inc\Desktop\checklist_dev\AI_2026_V1\CHECKLIST\CHECKLIST\IP_project_folder\reports\pv\Calibre_DRC.rep: Chip_Boundary layer not found in DRC report or geometry count ≠ 1
+Warn Occurrence: 1
+1: Warn: Chip_Boundary: Waiver not matched - Chip_Boundary layer found or no corresponding violation: Waived - Multiple chip boundaries acceptable for multi-die design[WAIVER]
+
+================================================================================
+

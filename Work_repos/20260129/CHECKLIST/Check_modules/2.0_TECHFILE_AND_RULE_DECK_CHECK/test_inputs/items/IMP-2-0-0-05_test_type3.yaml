@@ -1,0 +1,16 @@
+description: Confirm ANT rule deck was not modified? If it was, explain in comments
+  field.
+input_files:
+- ${CHECKLIST_ROOT}\IP_project_folder\logs\2.0\ANT_pvl.log
+requirements:
+  pattern_items:
+  - C:\Users\chenweif\Checker_dev\CHECKLIST\CHECKLIST\IP_project_folder\ruledeck\2.0\origin_ant
+  value: 1
+waivers:
+  value: 2
+  waive_items:
+  - name: PLN5LO_16M_1X1Xb1Xe1Ya1Yb6Y2Yy2R_014_ANT.13_1a.encrypt
+    reason: Approved modification for project-specific antenna rules per design review
+      DR-2024-001
+  - name: PLN5LO_16M_054_PATCH_ANT.13_1a.encrypt
+    reason: Waived - patch file with approved customizations for metal stack optimization

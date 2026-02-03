@@ -1,0 +1,4 @@
+PASS:IMP-15-0-0-03:Confirm there is no issue about ESD PERC check if PERC check is needed.
+Info Occurrence: 2
+1: Info: prec.rep. In line 1, C:\Users\yuyin\OneDrive - Cadence Design Systems Inc\2025\Checklist\AAI\CHECKLIST_V3\CHECKLIST\IP_project_folder\reports\15.0\prec.rep: PERC verification completed successfully
+2: Info: prec_2.rep. In line 1, C:\Users\yuyin\OneDrive - Cadence Design Systems Inc\2025\Checklist\AAI\CHECKLIST_V3\CHECKLIST\IP_project_folder\reports\15.0\prec_2.rep: PERC verification completed successfully

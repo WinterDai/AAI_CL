@@ -1,0 +1,11 @@
+description: Confirm ARC check result is clean. (For BRCM project only, for others
+  fill N/A)
+input_files:
+- ${CHECKLIST_ROOT}/IP_project_folder/reports/pv/Calibre_ARC.rep
+requirements:
+  pattern_items: []
+  value: N/A
+waivers:
+  value: 0
+  waive_items:
+  - 'Explanation: ARC violations are informational only for this BRCM project phase'

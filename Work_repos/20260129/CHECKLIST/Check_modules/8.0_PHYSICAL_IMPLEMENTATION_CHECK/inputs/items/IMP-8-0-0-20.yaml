@@ -1,0 +1,10 @@
+description: 'TODO: Confirm that all the multiflop synchronizer registers are placed
+  close together and their clock pin connected to the same leaf buffer/inverter of
+  the clock tree?'
+requirements:
+  value: N/A
+  pattern_items: []
+input_files: []
+waivers:
+  value: N/A
+  waive_items: []

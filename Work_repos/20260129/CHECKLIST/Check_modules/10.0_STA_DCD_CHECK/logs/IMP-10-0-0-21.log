@@ -1,0 +1,9 @@
+PASS:IMP-10-0-0-21:Confirm all Warning message in the STA log files can be waived.
+IMP-10-0-0-21-INFO01: [WAIVED_INFO]: Waived information:
+  Severity: Info Occurrence: 1
+  - Debug mode - all STA warnings are informational only
+IMP-10-0-0-21-INFO02: [WAIVED_AS_INFO]: STA warnings requiring review:
+  Severity: Info Occurrence: 2
+  - TECHLIB-1320 (Count: 2): The user-defined attribute 'related_spice_node' is not present in any of the 'ccsn_first_stage' grou
+  - TECHLIB-302 (Count: 4064): No function defined for cell '%s'. The c...
+

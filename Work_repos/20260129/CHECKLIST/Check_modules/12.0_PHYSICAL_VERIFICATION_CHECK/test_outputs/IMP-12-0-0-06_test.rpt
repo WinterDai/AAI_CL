@@ -1,0 +1,79 @@
+Test Report: IMP-12-0-0-06
+================================================================================
+
+[Test 1/6] Type 1 (requirements.value=N/A, waivers.value=N/A)
+--------------------------------------------------------------------------------
+Test ID: type1_na
+Status: ERROR
+
+Checker Report Output:
+FAIL:IMP-12-0-0-06:Confirm the MIM related check setting is correct. (Fill N/A if no MIMCAP inserted or no MIM related layers)
+Fail Occurrence: 4
+1: Fail: FHDMIM: Required MIM switches not found in PVL log or sourceme file
+2: Fail: KOZ_HIGH_SUBST_LAYER: Required MIM switches not found in PVL log or sourceme file
+3: Fail: SHDMIM: Required MIM switches not found in PVL log or sourceme file
+4: Fail: SHDMIM_KOZ_AP_SPACE_5UM: Required MIM switches not found in PVL log or sourceme file
+
+================================================================================
+
+[Test 2/6] Type 1 (requirements.value=N/A, waivers.value=0)
+--------------------------------------------------------------------------------
+Test ID: type1_0
+Status: PASS
+
+Checker Report Output:
+PASS:IMP-12-0-0-06:Confirm the MIM related check setting is correct. (Fill N/A if no MIMCAP inserted or no MIM related layers)
+Info Occurrence: 5
+1: Info: Explanation: MIM configuration check is informational only for designs without MIMCAP: Explanation: MIM configuration check is informational only for designs without MIMCAP[WAIVED_INFO]
+2: Info: FHDMIM: Required MIM switches not found in PVL log or sourceme file[WAIVED_AS_INFO]
+3: Info: KOZ_HIGH_SUBST_LAYER: Required MIM switches not found in PVL log or sourceme file[WAIVED_AS_INFO]
+4: Info: SHDMIM: Required MIM switches not found in PVL log or sourceme file[WAIVED_AS_INFO]
+5: Info: SHDMIM_KOZ_AP_SPACE_5UM: Required MIM switches not found in PVL log or sourceme file[WAIVED_AS_INFO]
+
+================================================================================
+
+[Test 3/6] Type 2 (requirements.value>0, waivers.value=N/A)
+--------------------------------------------------------------------------------
+Test ID: type2_na
+Status: ERROR
+
+(No report output)
+
+================================================================================
+
+[Test 4/6] Type 2 (requirements.value>0, waivers.value=0)
+--------------------------------------------------------------------------------
+Test ID: type2_0
+Status: ERROR
+
+(No report output)
+
+================================================================================
+
+[Test 5/6] Type 3 (requirements.value>0, waivers.value>0)
+--------------------------------------------------------------------------------
+Test ID: type3
+Status: ERROR
+
+(No report output)
+
+================================================================================
+
+[Test 6/6] Type 4 (requirements.value=N/A, waivers.value>0)
+--------------------------------------------------------------------------------
+Test ID: type4
+Status: ERROR
+
+Checker Report Output:
+FAIL:IMP-12-0-0-06:Confirm the MIM related check setting is correct. (Fill N/A if no MIMCAP inserted or no MIM related layers)
+Fail Occurrence: 3
+1: Fail: KOZ_HIGH_SUBST_LAYER: Required MIM switches not found in PVL log or sourceme file
+2: Fail: SHDMIM: Required MIM switches not found in PVL log or sourceme file
+3: Fail: SHDMIM_KOZ_AP_SPACE_5UM: Required MIM switches not found in PVL log or sourceme file
+Warn Occurrence: 1
+1: Warn: FHDMIM_KOZ_AP_SPACE_5um_IP: Waiver entry not matched - no corresponding MIM switch mismatch found in actual configuration: Waived - IP-level KOZ spacing not required for this integration per foundry waiver[WAIVER]
+Info Occurrence: 1
+1: Info: FHDMIM: MIM switch configuration mismatch waived per design team approval: Waived - Test chip uses FHDMIM for characterization purposes per design team approval[WAIVER]
+
+================================================================================
+

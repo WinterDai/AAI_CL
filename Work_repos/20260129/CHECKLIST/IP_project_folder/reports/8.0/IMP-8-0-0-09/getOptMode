@@ -1,0 +1,3 @@
+-opt_leakage_to_dynamic_ratio 0.2          # float, default=1, user setting
+-opt_route_type_for_power true             # bool, default=false, user setting, private
+-opt_power_effort high                     # enums={none low high}, default=none, user setting

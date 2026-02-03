@@ -1,0 +1,10 @@
+[2025-12-31T17:19:50.837100] TestCase: TC_04
+Item: IMP-10-0-0-00
+Verdict: CORRECT
+Confidence: HIGH
+
+Expected (Blind): FAIL
+Actual Output: FAIL
+
+Reasoning:
+Type 2 negative: 根据配置推理预期为 FAIL

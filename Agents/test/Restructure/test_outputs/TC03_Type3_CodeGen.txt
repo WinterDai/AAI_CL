@@ -1,0 +1,48 @@
+is_pass: False
+value: 0
+has_pattern_items: True
+has_waiver_value: True
+
+Details (4 items):
+--------------------------------------------------------------------------------
+
+[1] INFO
+    name: Tool:*Quantus*
+    line_number: 0
+    file_path: N/A
+    reason: Item not found[WAIVER]
+
+[2] INFO
+    name: Netlist path: C:\Users\yuyin\Desktop\CHECKLIST\IP_project_folder\dbs\phy_cmn_phase_align_digtop.v.gz: Status: Success (found in log, file not accessible for version check)
+    line_number: 17
+    file_path: c:\Users\wentao\AAI_local\AAI\Main_Work\ACL\Latest\CHECKLIST\IP_project_folder\logs\sta_post_syn.log
+    reason: Item found
+
+[3] FAIL
+    name: SPEF Reading was skipped
+    line_number: 22
+    file_path: c:\Users\wentao\AAI_local\AAI\Main_Work\ACL\Latest\CHECKLIST\IP_project_folder\logs\sta_post_syn.log
+    reason: Unexpected item found
+
+[4] FAIL
+    name: Generated on:*2025*: Required pattern not found
+    line_number: 0
+    file_path: N/A
+    reason: Item not found
+
+
+Info Groups (2 groups):
+--------------------------------------------------------------------------------
+
+INFO01: Items waived
+  Items: ['Tool:*Quantus*']
+
+INFO02: Netlist/SPEF version is correct
+  Items: ['Netlist path: C:\\Users\\yuyin\\Desktop\\CHECKLIST\\IP_project_folder\\dbs\\phy_cmn_phase_align_digtop.v.gz: Status: Success (found in log, file not accessible for version check)']
+
+
+Error Groups (1 groups):
+--------------------------------------------------------------------------------
+
+ERROR01: Design has no spef/netlist file
+  Items: ['SPEF Reading was skipped']

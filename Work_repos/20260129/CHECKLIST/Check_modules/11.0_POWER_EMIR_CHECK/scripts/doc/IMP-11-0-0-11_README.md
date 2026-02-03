@@ -1,0 +1,340 @@
+# IMP-11-0-0-11: Confirm the power number can meet the power target in addendum if addendum has the power spec.
+
+## Overview
+
+**Check ID:** IMP-11-0-0-11  
+**Description:** Confirm the power number can meet the power target in addendum if addendum has the power spec.  
+**Category:** TODO - Add category  
+**Input Files:** TODO - List input files
+
+TODO: Add functional description of the checker
+
+---
+
+## Check Logic
+
+### Input Parsing
+TODO: Describe how to parse input files
+
+**Key Patterns:**
+```python
+# Pattern 1: [Description]
+pattern1 = r'TODO: Add actual regex pattern'
+# Example: "TODO: Add example line from file"
+```
+
+### Detection Logic
+TODO: Describe check logic step by step
+
+---
+
+## Output Descriptions (CRITICAL - Code Generator Uses These!)
+
+This section defines the output strings used by `build_complete_output()` in the checker code.
+**Fill in these values based on the check logic above.**
+
+```python
+# ⚠️ CRITICAL: Reason parameter usage by Type (API-025)
+# ALL Types pass found_reason/missing_reason, but use different constants:
+#   Type 1/4 (Boolean): Use FOUND_REASON_TYPE1_4 (emphasize "found/not found")
+#   Type 2/3 (Pattern): Use FOUND_REASON_TYPE2_3 (emphasize "matched/satisfied")
+
+# Item description for this checker
+item_desc = "Confirm the power number can meet the power target in addendum if addendum has the power spec."
+
+# PASS case descriptions - Split by Type semantics (API-026)
+# Type 1/4: Boolean checks - emphasize "found/not found" (existence)
+found_desc_type1_4 = "TODO: Type 1/4 - e.g., 'Tool version found in configuration'"
+# Type 2/3: Pattern checks - emphasize "matched/satisfied" (pattern validation)
+found_desc_type2_3 = "TODO: Type 2/3 - e.g., 'Required pattern matched (2/2)'"
+
+# PASS reasons - Split by Type semantics (ALL Types need these)
+# Type 1/4: Boolean checks - emphasize "found/not found" (existence)
+found_reason_type1_4 = "TODO: Type 1/4 - e.g., 'Tool version found in configuration'"
+# Type 2/3: Pattern checks - emphasize pattern matching terms (matched|satisfied|validated|compliant|fulfilled)
+found_reason_type2_3 = "TODO: Type 2/3 - e.g., 'Required pattern matched and validated'"
+
+# FAIL case descriptions - Split by Type semantics (API-026)
+# Type 1/4: Boolean checks - emphasize "not found" (absence)
+missing_desc_type1_4 = "TODO: Type 1/4 - e.g., 'Required item not found in setup file'"
+# Type 2/3: Pattern checks - emphasize pattern mismatch
+missing_desc_type2_3 = "TODO: Type 2/3 - e.g., 'Expected pattern not satisfied (1/2 missing)'"
+
+# FAIL reasons - Split by Type semantics (ALL Types need these)
+# Type 1/4: Boolean checks - emphasize "not found" (absence)
+missing_reason_type1_4 = "TODO: Type 1/4 - e.g., 'Required item not found in setup file'"
+# Type 2/3: Pattern checks - emphasize pattern mismatch terms (not satisfied|missing|failed)
+missing_reason_type2_3 = "TODO: Type 2/3 - e.g., 'Expected pattern not satisfied or missing'"
+
+# WAIVED case (Type 3/4) - what message to show for waived items
+waived_base_reason = "TODO: e.g., 'Timing violation waived per design team approval'"
+waived_desc = "TODO: e.g., 'Waived timing violations'"
+
+# UNUSED waivers - what message to show for unused waiver entries
+unused_waiver_reason = "TODO: e.g., 'Waiver not matched - no corresponding violation found'"
+unused_desc = "TODO: e.g., 'Unused waiver entries'"
+```
+
+### INFO01/ERROR01 Display Format
+
+```
+INFO01 (Clean/Pass items):
+  Format: TODO: e.g., "[view_name]: all path groups clean"
+  Example: TODO: e.g., "func_rcss_0p675v_125c: setup=0.123ns, hold=0.045ns"
+
+ERROR01 (Violation/Fail items):
+  Format: TODO: e.g., "[VIOLATION_TYPE]: [details]"
+  Example: TODO: e.g., "TIMING VIOLATION: View=func_rcss, Slack=-0.012ns"
+```
+
+---
+
+## Type 1: Boolean Check
+
+**Configuration (copy to item_data.yaml for testing):**
+```yaml
+IMP-11-0-0-11:
+  description: "Confirm the power number can meet the power target in addendum if addendum has the power spec."
+  requirements:
+    value: N/A
+    pattern_items: []
+  input_files:
+    - TODO: Add input file path
+  waivers:
+    value: N/A
+    waive_items: []
+```
+
+**Check Behavior:**
+Type 1 performs custom boolean checks (file exists? config valid?).
+PASS/FAIL based on checker's own validation logic.
+
+**Sample Output (PASS):**
+```
+Status: PASS
+Reason: [found_reason from Output Descriptions]
+INFO01:
+  - [item in INFO01 format]
+```
+
+**Sample Output (FAIL):**
+```
+Status: FAIL
+Reason: [missing_reason from Output Descriptions]
+ERROR01:
+  - [item in ERROR01 format]
+```
+
+### Type 1 Variant: waivers.value=0 (Forced PASS Mode)
+
+**Configuration:**
+```yaml
+IMP-11-0-0-11:
+  description: "Confirm the power number can meet the power target in addendum if addendum has the power spec."
+  requirements:
+    value: N/A
+    pattern_items: []
+  input_files:
+    - TODO: Add input file path
+  waivers:
+    value: 0  # CRITICAL: value=0 triggers forced PASS mode (NOT waiver logic!)
+    waive_items:  # IMPORTANT: Use PLAIN STRING format (NOT name/reason dict!)
+      - "Explanation: This check is informational only because [reason]"
+      - "Note: Violations are expected in [scenario] and do not require fixes"
+```
+
+**CRITICAL Behavior (waivers.value=0):**
+- NOTE: Type 1 has NO waiver logic. waive=0 is forced PASS mode only
+- IMPORTANT: waive_items uses PLAIN STRINGS (NOT name/reason dict like Type 3/4!)
+- waive_items serves as COMMENT ONLY (no matching/filtering logic)
+- waive_items content printed as INFO with [WAIVED_INFO] tag
+- ALL violations force converted: FAIL→PASS, displayed as INFO with [WAIVED_AS_INFO] tag
+- Check ALWAYS returns PASS (violations shown as INFO for tracking)
+- Used when: Check is informational only, violations expected/acceptable
+
+**Sample Output (PASS with violations):**
+```
+Status: PASS  # Always PASS when waivers.value=0
+Reason: All violations waived as informational
+INFO01 ([WAIVED_INFO] - waive_items as comment):
+  - "TODO: Explain why violations are acceptable for this check"
+INFO02 ([WAIVED_AS_INFO] - violations converted to PASS, shown as INFO):
+  - [violation_item] [WAIVED_AS_INFO]
+```
+
+---
+
+## Type 2: Value Check
+
+**Configuration (copy to item_data.yaml for testing):**
+```yaml
+IMP-11-0-0-11:
+  description: "Confirm the power number can meet the power target in addendum if addendum has the power spec."
+  requirements:
+    value: 0
+    pattern_items:
+      - "TODO: pattern1"
+      - "TODO: pattern2"
+  input_files:
+    - TODO: Add input file path
+  waivers:
+    value: N/A
+    waive_items: []
+```
+
+**Check Behavior:**
+Type 2 searches pattern_items in input files.
+PASS/FAIL depends on check purpose:
+- Violation Check: PASS if found_items empty (no violations)
+- Requirement Check: PASS if missing_items empty (all requirements met)
+
+**Sample Output (PASS):**
+```
+Status: PASS
+Reason: [found_reason]
+INFO01:
+  - [items matching pattern_items]
+```
+
+### Type 2 Variant: waivers.value=0 (Forced PASS Mode)
+
+**Configuration:**
+```yaml
+IMP-11-0-0-11:
+  description: "Confirm the power number can meet the power target in addendum if addendum has the power spec."
+  requirements:
+    value: 0
+    pattern_items:
+      - "TODO: pattern1"
+      - "TODO: pattern2"
+  input_files:
+    - TODO: Add input file path
+  waivers:
+    value: 0  # CRITICAL: value=0 triggers forced PASS mode (NOT waiver logic!)
+    waive_items:  # IMPORTANT: Use PLAIN STRING format (NOT name/reason dict!)
+      - "Explanation: This check is informational only because [reason]"
+      - "Note: Pattern mismatches are expected in [scenario] and do not require fixes"
+```
+
+**CRITICAL Behavior (waivers.value=0):**
+- NOTE: Type 2 has NO waiver logic. waive=0 is forced PASS mode only
+- IMPORTANT: waive_items uses PLAIN STRINGS (NOT name/reason dict like Type 3/4!)
+- waive_items serves as COMMENT ONLY (no matching/filtering logic)
+- waive_items content printed as INFO with [WAIVED_INFO] tag
+- ALL errors/mismatches force converted: ERROR→PASS, displayed as INFO with [WAIVED_AS_INFO] tag
+- Check ALWAYS returns PASS (errors shown as INFO for tracking)
+- Used when: Pattern check is informational, mismatches expected
+
+**Sample Output (PASS with mismatches):**
+```
+Status: PASS  # Always PASS when waivers.value=0
+Reason: All mismatches waived as informational
+INFO01 ([WAIVED_INFO] - waive_items as comment):
+  - "TODO: Explain why mismatches are acceptable"
+INFO02 ([WAIVED_AS_INFO] - errors converted to PASS, shown as INFO):
+  - [mismatch_item] [WAIVED_AS_INFO]
+```
+
+---
+
+## Type 3: Value Check with Waiver Logic
+
+**Configuration (copy to item_data.yaml for testing):**
+```yaml
+IMP-11-0-0-11:
+  description: "Confirm the power number can meet the power target in addendum if addendum has the power spec."
+  requirements:
+    value: 0
+    pattern_items:
+      - "TODO: pattern1"
+  input_files:
+    - TODO: Add input file path
+  waivers:
+    value: 2
+    waive_items:
+      - name: "TODO: item_to_waive_1"
+        reason: "TODO: waiver reason 1"
+      - name: "TODO: item_to_waive_2"
+        reason: "TODO: waiver reason 2"
+```
+
+**Check Behavior:**
+Type 3 = Type 2 + waiver support.
+Same pattern search logic as Type 2, plus waiver classification:
+- Match found_items against waive_items
+- Unwaived items → ERROR (need fix)
+- Waived items → INFO with [WAIVER] tag (approved)
+- Unused waivers → WARN with [WAIVER] tag
+PASS if all found_items (violations) are waived.
+
+**Sample Output (with waived items):**
+```
+Status: PASS
+Reason: All violations waived
+INFO01 (Waived):
+  - [waived_item] [WAIVER]
+WARN01 (Unused Waivers):
+  - [unused_waiver]: [unused_waiver_reason]
+```
+
+---
+
+## Type 4: Boolean Check with Waiver Logic
+
+**Configuration (copy to item_data.yaml for testing):**
+```yaml
+IMP-11-0-0-11:
+  description: "Confirm the power number can meet the power target in addendum if addendum has the power spec."
+  requirements:
+    value: N/A
+    pattern_items: []
+  input_files:
+    - TODO: Add input file path
+  waivers:
+    value: 2
+    waive_items:
+      - name: "TODO: item_to_waive_1"
+        reason: "TODO: waiver reason 1"
+      - name: "TODO: item_to_waive_2"
+        reason: "TODO: waiver reason 2"
+```
+
+**Check Behavior:**
+Type 4 = Type 1 + waiver support.
+Same boolean check as Type 1 (no pattern_items), plus waiver classification:
+- Match violations against waive_items
+- Unwaived violations → ERROR
+- Waived violations → INFO with [WAIVER] tag
+- Unused waivers → WARN with [WAIVER] tag
+PASS if all violations are waived.
+
+**Sample Output:**
+```
+Status: PASS
+Reason: All items waived
+INFO01 (Waived):
+  - [waived_item] [WAIVER]
+```
+
+---
+
+## Testing
+
+### Test Commands
+
+```powershell
+# Create test snapshots for all types
+python common/regression_testing/create_all_snapshots.py --modules 11.0_POWER_EMIR_CHECK --checkers IMP-11-0-0-11 --force
+
+# Run individual tests
+python IMP-11-0-0-11.py
+
+# Type 4
+# TODO: Add test commands
+```
+
+---
+
+## Notes
+
+TODO: Add notes, limitations, known issues, etc.

@@ -1,0 +1,5 @@
+FAIL:MIG-IMP-8-1-0-15:Confirm reorder VDD*GONE connection based on IO sequence unless it's took care by custom layout.
+MIG-IMP-8-1-0-15-ERROR01: Configuration error:
+  Severity: Fail Occurrence: 1
+  - input_files is empty in YAML configuration
+

@@ -1,0 +1,15 @@
+description: 'List BEOL dummy rule deck name. eg: Dummy_BEOL_Pegasus_3nm_E_17M_1Xa1Xb1Xc1Xd1Ya1Yb4Y2Yy2Yx2R_014.11_1a'
+input_files:
+- ${CHECKLIST_ROOT}\IP_project_folder\logs\2.0\BEOL_pvl.log
+requirements:
+  pattern_items: []
+  value: N/A
+waivers:
+  value: 2
+  waive_items:
+  - name: Dummy_BEOL_Pegasus_5nm_014.11_1a.M16
+    reason: Waived - legacy BEOL rule deck version approved for this design per team
+      agreement
+  - name: Dummy_BEOL_Pegasus_5nm_014.12_1a.M16
+    reason: Waived - intermediate version used for compatibility with existing tapeout
+      flow

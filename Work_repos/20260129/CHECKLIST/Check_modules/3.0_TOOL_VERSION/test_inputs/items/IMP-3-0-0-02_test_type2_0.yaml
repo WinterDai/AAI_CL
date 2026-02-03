@@ -1,0 +1,13 @@
+description: List Conformal LEC tool version (eg. confrml/241/24.10.100)
+input_files:
+- ${CHECKLIST_ROOT}/IP_project_folder/tcl/2.0/setup_vars.tcl
+requirements:
+  pattern_items:
+  - confrml/221/22.10.200
+  - confrml/241/24.10.100
+  value: 2
+waivers:
+  value: 0
+  waive_items:
+  - 'Explanation: Tool version check is informational - version mismatches do not
+    block signoff'

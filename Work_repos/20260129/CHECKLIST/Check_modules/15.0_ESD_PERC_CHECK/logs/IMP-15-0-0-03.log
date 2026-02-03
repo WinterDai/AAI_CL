@@ -1,0 +1,6 @@
+PASS:IMP-15-0-0-03:Confirm there is no issue about ESD PERC check if PERC check is needed.
+IMP-15-0-0-03-INFO01: PERC check passed with no failures detected:
+  Severity: Info Occurrence: 2
+  - prec.rep
+  - prec_2.rep
+

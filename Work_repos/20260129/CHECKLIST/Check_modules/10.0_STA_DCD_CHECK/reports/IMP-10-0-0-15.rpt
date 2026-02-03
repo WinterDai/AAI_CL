@@ -1,0 +1,4 @@
+PASS:IMP-10-0-0-15:Confirm the double_clock check result is clean.
+Info Occurrence: 2
+1: Info: at_speed_rcff_0p825v_125c_pcff_cmin_pcff3_hold. In line 5, C:\Users\yuyin\OneDrive - Cadence Design Systems Inc\2025\Checklist\AAI\CHECKLIST_V3\CHECKLIST\IP_project_folder\reports\10.0\double_clock_1.rpt: All timing views are clean - no double clocking violations detected
+2: Info: func_rcff_0p825v_125c_pcff_cmin_pcff3_hold. In line 5, C:\Users\yuyin\OneDrive - Cadence Design Systems Inc\2025\Checklist\AAI\CHECKLIST_V3\CHECKLIST\IP_project_folder\reports\10.0\double_clock_2.rpt: All timing views are clean - no double clocking violations detected

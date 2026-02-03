@@ -1,0 +1,36 @@
+
+Cadence Voltus(TM) IC Power Integrity Solution.
+Copyright 2024 Cadence Design Systems, Inc. All rights reserved worldwide.
+
+Version:	v23.12-s092_1, built Wed Aug 14 10:37:24 PDT 2024
+Options:	-init scr/ffgnp_0p825v_125c_cbest_CCbest_T.LibGen.tcl -log logs/ffgnp_0p825v_125c_cbest_CCbest_T.LibGen.log 
+Date:		Mon Nov 24 11:48:49 2025
+Host:		nfdpcsr046 (x86_64 w/Linux 4.18.0-372.26.1.el8_6.x86_64) (32cores*64cpus*Intel(R) Xeon(R) Platinum 8462Y+ 61440KB)
+OS:		Red Hat Enterprise Linux 8.6 (Ootpa)
+LSF:		Interactive job 5060717 in cluster "nflsfdpc01" and queue "pd" on 4 cpus with -R " select[OSREL==EE70 || OSREL==EE80] span[hosts=1]".
+
+License:
+		[11:48:49.173022] Configured Lic search path (23.02-s005): 5280@noidpclic-lb1:5280@noidpclic02:5280@noidpclic04:5281@noidpclic-lb1:5281@noidpclic02:5281@noidpclic04
+
+		vtsxl	Voltus Power Integrity Solution XL	23.1	checkout succeeded
+		8 CPU jobs allowed with the current license(s). Use set_multi_cpu_usage to set your required CPU count.
+The soft stacksize limit is either up to the hard limit or larger than 0.2% of RAM. No change is needed.
+environment variable TMPDIR is '/tmp/ssv_tmpdir_2165383_9d398ef8-2d9b-431a-a05c-ecfe767751c1_xFroCY'.
+#@ Processing -files option
+Sourcing tcl/tk file 'scr/ffgnp_0p825v_125c_cbest_CCbest_T.LibGen.tcl' ...
+<CMD> read_lib -lef {/process/tsmcN5/data/stdcell/n5/TSMC/PRTF_Innovus_5nm_014_Cad_V13a/PRTF/PRTF_Innovus_5nm_014_Cad_V13a/PR_tech/Cadence/LefHeader/Standard/VHV/PRTF_Innovus_N5_15M_1X1Xb1Xe1Ya1Yb5Y2Yy2Z_UTRDL_M1P34_M2P35_M3P42_M4P42_M5P76_M6P76_M7P76_M8P76_M9P76_M10P76_M11P76_H210_SHDMIM.13a.tlef /process/tsmcN5/data/stdcell/n5gp/CDNS/ts1n05mblvta16384x39m16qwbzhodcp_110c/LEF/ts1n05mblvta16384x39m16qwbzhodcp.lef}
+<CMD> set_advanced_pg_library_mode -decap_frequency 1e9
+<CMD> set_advanced_pg_library_mode -default_frequency 1e9
+<CMD> setenv MODELS_DIR /process/tsmcN5/data/g/PDK/tsmc5g.a.13/models/spectre_v1d2_2p5
+<CMD> setenv TSMCPDK_OS_INSTALL_PATH /process/tsmcN5/data/g/PDK/tsmc5g_plus.a.10/eDesigner
+<CMD> set_pg_library_mode -celltype macros -cell_decap_file /projects/TC70_LPDDR6_N5P/libs/libGen/lijing/scripts/sram/ts1n05mblvta16384x39m16qwbzhodcp_cap_file -ground_pins VSS -power_pins {VDD 0.825 VDDM 0.825} -extraction_tech_file /process/tsmcN5/data/g/QRC/15M1X1Xb1Xe1Ya1Yb5Y2Yy2Z_SHDMIM_UT/fs_v1d2p4a/rcworst/Tech/rcworst_CCworst_T/qrcTechFile -temperature 125 -spice_subckts {/process/tsmcN5/data/g/PEGASUS/LVS/current/source.added /projects/TC70_LPDDR6_N5P/libs/libGen/lijing/scripts/sram/ts1n05mblvta16384x39m16qwbzhodcp.spi} -spice_corners ir_em -spice_models /process/tsmcN5/data/g/PDK/tsmc5g.a.13/models/spectre_v1d2_2p5/ir_em.scs -cell_list_file /projects/TC70_LPDDR6_N5P/libs/libGen/lijing/scripts/all_sram.list -gds_files /process/tsmcN5/data/stdcell/n5gp/CDNS/ts1n05mblvta16384x39m16qwbzhodcp_110c/GDSII/ts1n05mblvta16384x39m16qwbzhodcp.gds -gds_layermap //projects/TC70_LPDDR6_N5P/libs/libGen/lijing/scripts/sram/gds.map -lef_layermap /projects/TC70_LPDDR6_N5P/libs/map/N5_15M_voltus_lefdef.layermap
+<CMD> set_advanced_pg_library_mode -xtc_command_file /projects/TC70_LPDDR6_N5P/libs/libGen/lijing/scripts/sram/xtc.cmd
+<CMD> generate_pg_library -output dbs/ffgnp_0p825v_125c_cbest_CCbest_T
+[11:49:16.155280] Periodic Lic check successful
+[11:49:16.679585] Feature usage summary:
+[11:49:16.679585] Voltus_Power_Integrity_XL
+[11:49:16.679586] Voltus_Power_Integrity_AA
+
+(#112) This command "generate_pg_library -output dbs/ffgnp_0p825v_125c_cbest_CCbest_T" required an extra checkout of license vtsaa.
+Additional license(s) checked out: 1 'Voltus_Power_Integrity_AA' license(s)
+

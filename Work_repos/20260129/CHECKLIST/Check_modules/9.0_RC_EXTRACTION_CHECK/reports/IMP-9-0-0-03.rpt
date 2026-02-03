@@ -1,0 +1,5 @@
+PASS:IMP-9-0-0-03:Confirm no ERROR message in the QRC log files.
+Warn Occurrence: 1
+1: Warn: item1: Waiver defined but no violation matched[WAIVER]
+Info Occurrence: 1
+1: Info: QRC extraction summary: 26 INFO, 14 WARNING, 0 ERROR messages: No ERROR messages found in QRC log files

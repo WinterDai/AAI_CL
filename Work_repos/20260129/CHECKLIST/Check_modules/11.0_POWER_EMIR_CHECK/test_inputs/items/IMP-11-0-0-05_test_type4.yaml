@@ -1,0 +1,11 @@
+description: Confirm generate all the power library with detail view correctly.
+input_files:
+- ${CHECKLIST_ROOT}/IP_project_folder/logs/*LibGen.log
+requirements:
+  pattern_items: []
+  value: N/A
+waivers:
+  value: 1
+  waive_items:
+  - name: item1
+    reason: Test waiver

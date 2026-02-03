@@ -1,0 +1,170 @@
+//File Edited with the following command: /home/sleclerc/perl/calibredrcDeckExtractSourceme.pl CLN5LO_13M_1X1Xb1Xe1Ya1Yb5Y2Z_014.12a.encrypt.enc
+
+// 1) Provide the top cell name and LAYOUT SYSTEM OASIS
+// 2) Review the switches below, especially the BUMP_PITCH
+
+LAYOUT SYSTEM OASIS
+LAYOUT PRIMARY CDN_104V_cdn_hs_phy_data_slice_NS
+
+//========================================
+
+/* SWITCH DEFINITION START */
+//=========================
+#DEFINE RET_NMDPC_EMULATION_ENABLE    // Turn on to enable RET NMDPC EMULATION
+// OPTION FOR DELTA VOLTAGE RULE DEBUGGING
+//=========================
+//#DEFINE DEBUG_VOLTAGE_RULE                        // Turn on to enable delta voltage rule debugging by writing out essential data into "voltage_debug.rdb"
+//#DEFINE DEBUG_VOLTAGE_RULE_WITH_METAL_CONNECTION  // Turn on to further dump metal shapes into "voltage_debug.rdb" for delta voltage rule debugging
+// OPTION FOR CHIP/IP LEVEL 
+//==========================
+//#DEFINE FULL_CHIP           // Turn on for chip level design
+//#DEFINE WITH_SEALRING       // Turn on if sealring is assembled in chip 
+#DEFINE CHECK_LOW_DENSITY   // Turn off to skip local low density and empty space check in cell level before dummy insertion 
+#DEFINE CHECK_HIGH_DENSITY  // Turn off to skip local high density rule checks in cell level
+#DEFINE PT_CHECK            // Turn off to skip *.PT rules
+// OPTION FOR FBEOL
+//=================================
+#DEFINE WITH_POLYIMIDE      // Turn off when process without Polyimide
+//#DEFINE WITH_APRDL          // Turn on if AP_RDL is applied
+//#DEFINE DBOC              // Turn on if the packaging is DBOC
+#DEFINE SHDMIM              // Turn on to check related MIM.AP.* rules
+//#DEFINE FHDMIM              // Turn on to check FHDMIM related rules
+// OPTION FOR CHECKING METHODOLOGY
+//=================================
+//#DEFINE G0_MASK_HINT          // Turn on to randomly assign color for G0 mask hint (just to help layout fixing)
+//#DEFINE USE_IO_VOLTAGE_ON_CORE_TO_IO_NET // Turn on to check all I/O net.
+#DEFINE USE_SD_VOLTAGE_ON_CORE_TO_IO_NET // Turn on to use S/D voltage on net without voltage text/marker and connect to IO & core MOS simultaneously
+//#DEFINE SKIP_CELL_BOUNDARY               // Turn on to skip OD.S.25, PO.EX.3, PO.EX.3.1, PO.EX.3.2, PO.EX.3.3, and PO.EX.3.4 boundary check in cell level.
+//#DEFINE LUP_FILTER		   // Turn on to filter out LUP false error if PWR/GND pad do not connect to NWSTRAP/PWSTRAP 
+#DEFINE DEFINE_IOPAD_BY_IODMY      // Turn off to disable IODMY functionality 
+#DEFINE ALL_AREA_IO		   // Turn on to treat all IO as AAIO for LUP.10/LUP.13/LUP.14 checking
+//#DEFINE DISCONNECT_ALL_RESISTOR  // Turn on to disconnect all resistors between pad and device for Latch-Up rule check.
+//#DEFINE CONNECT_ALL_RESISTOR     // Turn on to connect all resistors between pad and device for Latch-Up rule check.
+#DEFINE DEFINE_PAD_BY_TEXT // Turn on to recognize IO PAD by following text  
+VARIABLE PAD_TEXT  "pad_atb? pad_cal_0 pad_pll_testout? pad_mem_?"       // pin name of PAD
+VARIABLE VDD_TEXT  "VDD?"    // pin name of VDD
+VARIABLE VSS_TEXT  "VSS?"    // pin name of VSS
+VARIABLE PoP_PAD_TEXT  "POP?"       // pin name of Package-on-Package IOPAD
+//#DEFINE CHECK_FLOATING_GATE_BY_TEXT           // Turn on to avoid PO.R.19 false error from empty IP by following text
+//#DEFINE CHECK_FLOATING_GATE_BY_PRIMARY_TEXT   // Turn on to check PO.R.19 in cell level and avoid false error by following primary text
+VARIABLE IP_PIN_TEXT  "?"    // pin name of IP
+//#DEFINE GUIDELINE_ESD_CDM7A // Turn on to check GUIDELINE_ESD_CDM7A rules
+#DEFINE GUIDELINE_ESD_CDM9A // Turn on to check GUIDELINE_ESD_CDM9A rules
+#DEFINE IP_LEVEL_LUP_CHECK // LUP015U, LUP075U, LUP_150U to recognize OD injector checking window for IP level LUP rule check
+#DEFINE LUP_MASK_HINT        // Turn on to output RDB file for LUP OD injector and window of mask hint
+#DEFINE LUP_SANITY_CHECK         // Turn on to check LUP.WARN.5
+#DEFINE ESDLU_IP_TIGHTEN_DENSITY    // Turn on to check LUP2.2/LUP2.3 Tighten rule in IP Level
+//#DEFINE BOOST_VT_OP // Switch "ON" to boost VT operations by using advance multi-patterning feature that is controlled by either "calmpgold" or "calmultipattern + calmpadv"
+//#DEFINE NO_INDICATOR_OF_OFFGRID_DIRECTIONAL  // Turn on to disable indicator of OFFGRID DIRECTIONAL command
+//#DEFINE KOZ_High_subst_layer		// option for flip-chip package substrate layer counts = 15~20
+//#DEFINE SHDMIM_KOZ_AP_SPACE_5um   // Turn on to check related MIM rules
+//#DEFINE SHDMIM_KOZ_AP_SPACE_5um_IP   // Turn on to check related MIM rules
+//#DEFINE FHDMIM_KOZ_AP_SPACE_5um   // Turn on to check related MIM rules
+//#DEFINE FHDMIM_KOZ_AP_SPACE_5um_IP   // Turn on to check related MIM rules
+#DEFINE Multi_VOLTAGE_BIN_WITHIN_CHIP // Turn on for multi voltage bin check
+//#DEFINE SINGLE_VOLTAGE_BIN_WITHIN_CHIP // Turn on for single voltage bin check
+#DEFINE SINGLE_VOLTAGE_BIN_0D96 // Turn on for 0.96 single voltage check
+//#DEFINE SINGLE_VOLTAGE_BIN_1D32 // Turn on for 1.32 single voltage check
+//#DEFINE SINGLE_VOLTAGE_BIN_1D65 // Turn on for 1.65 single voltage check
+//#DEFINE USER_DEFINED_DELTA_VOLTAGE // Turn on to use user define delta voltage
+#DEFINE Flip_Chip // Turn on to check EFP.VIAz, EFP.VIAr, stacked VIAy/VIAyy and other flip-chip related rules
+#DEFINE Flip_Chip_SUB_wi_presolder // option for flip-chip with pre-solder
+#DEFINE Flip_Chip_Thin_Die // Turn on to check VIAy.R.16, VIAy.R.16.1, VIAy.R.16.1.2, VIAy.R.16.2, VIAyy.R.15, VIAyy.R.15.1
+//#DEFINE TSV_RULES // Turn on to check TSV related rules
+//#DEFINE F2F_LOGIC_Tier2 // Turn on to change the check_region definition in AP.W.2.1.v/ AP.DN.8.v/ AP.DN.8.v.IP_TIGHTEN_DENSITY and check AM.R.5.1
+//#DEFINE F2F_LOGIC         // Turn on for F2F die
+//#DEFINE BPVB_on_AP // option for BPVB connect to TM2 or AP
+//#DEFINE BPVT_on_AP // option for BPVT connect to TM2 or AP
+#DEFINE MIM_CHIP // Turn on to check TPCDMY.S.1.a.
+// COD RELATED OPTION
+//====================
+#DEFINE COD_RULE_CHECK            // Turn off to not to check COD rules in cell level
+#DEFINE COD_MASK_HINT          // Turn on to output related COD_H/COD_V patterns for hint (just to help layout fixing)
+//#DEFINE COD_RULE_CHECK_ONLY    // Turn on to only check the COD rules only 
+// OPTION FOR RULE GROUP
+//======================
+#DEFINE FRONT_END           // Turn on to check Front-End rules
+#DEFINE BACK_END            // Turn on to check Back-End rules
+#DEFINE prBoundary_GRID     // Turn on to check prBoundary rules in FEOL cell for global grid alignment after APR tool auto placement
+#DEFINE DVIAxR3_For_NonFlipChip   // DVIAx.R.3 is must for Flip-Chip PAD application and also strongly recommended for Non Flip-Chip PAD
+#DEFINE GUIDELINE_ESD       // Turn on to check ESD protection guidelines
+#DEFINE GUIDELINE_ANALOG    // Turn on to check Analog guidelines
+VARIABLE CellsForRRuleAnalog "*"      // include cell in Analog Guidelines (AN.R.20mg) check (default is empty)
+VARIABLE ExclCellsForRRuleAnalog " "  // exclude cell from Analog and Guidelines (AN.R.20mg) check
+#DEFINE G0_RULE_CHECK             // Turn off to unselect G0 rules
+//#DEFINE G0_RULE_CHECK_ONLY      // Turn on to only select G0 rules
+#DEFINE VOLTAGE_RULE_CHECK        // Turn off to unselect voltage-dependent rules
+//#DEFINE VOLTAGE_RULE_CHECK_ONLY // Turn on to only select voltage-dependent rules
+#DEFINE ESD_LUP_RULE_CHECK        // Turn off to unselect ESD/LUP rules
+//#DEFINE ESD_LUP_RULE_CHECK_ONLY // Turn on to only select ESD/LUP rules
+//#DEFINE DENSITY_RULE_CHECK_ONLY // Turn on to only select denstiy rules
+#DEFINE  SRAM_SANITY_DRC          // Turn off to unselect SRAM sanity rules
+//#DEFINE SRAM_SANITY_DRC_ONLY    // Turn on to only select SRAM sanity rules
+#DEFINE AIO_GDS                 // Turn on to check MIM rules for 2/3-plate MIM AIO GDS
+// OPTION FOR CHIP/IP BOUNDARY
+//============================
+#DEFINE UseprBoundary     // Turn on to specify chip boundary by prBoundary(108;0) layer
+//#DEFINE ChipWindowUsed    // Turn on to specify chip boundary directly by following variables  
+VARIABLE xLB   0.0	    // x-coordinate of left-bottom corner for user defined chip window 
+VARIABLE yLB   0.0  	    // y-coordinate of left-bottom corner for user defined chip window 
+VARIABLE xRT   1000.0	    // x-coordinate of right-top corner for user defined chip window  
+VARIABLE yRT   1000.0	    // y-coordinate of right-top corner for user defined chip window 
+// The following variables are for Mask Field Utilization Check. Please change it if using different value. 
+VARIABLE ScribeLineX    179.76    // Width of scribe_line X (um) for Mask Field Utilization (MFU)
+VARIABLE ScribeLineY    179.76    // Width of scribe_line Y (um) for Mask Field Utilization (MFU)
+// OPTION FOR DENSITY/EMPTY ERROR PREVENTION 
+//==========================================
+//#DEFINE DUMMY_PRE_CHECK            // Turn on to predict density/empty region error before dummy insertion (assume the fill result is perfect)
+//#DEFINE DUMMY_PRE_CHECK_TIGHTEN    // Turn on to predict density/empty region error before dummy insertion (assume the fill result is not perfect) 
+#DEFINE IP_TIGHTEN_DENSITY       // Turn on to tighten local density check in IP/macro/block level 
+#DEFINE IP_TIGHTEN_BOUNDARY      // Turn on to tighten empty space check around IP boundary to avoid empty space error after IP abutment
+// OPTION SETUP OF DFM RULES
+//===============================
+#DEFINE DFM               // Turn on to check DFM rules
+//#DEFINE DFM_ONLY          // Turn on to check DFM rules only
+VARIABLE CellsForRRuleRecommended "*"      // include cell in Recommendations check
+VARIABLE CellsForRRuleGuideline "*"        // include cell in Guidleline check
+VARIABLE ExclCellsForRRuleRecommended " "  // exclude cell from Recommendations check
+VARIABLE ExclCellsForRRuleGuideline " "    // exclude cell from Guidleline check
+// Select by DFM category 
+#DEFINE Recommended        // Turn on to check Recommendations
+#DEFINE Guideline          // Turn on to check Guidelines
+// Select by DFM Grouping
+//#DEFINE First_priority         // Turn on to check DFM rules of first priority group 
+//#DEFINE Manufacturing_concern  // Turn on to check DFM rules of manufacturing-concern group
+//#DEFINE Device_performance      // Turn on to check DFM rules of device performance group
+
+
+LAYOUT ERROR ON INPUT YES
+DRC RESULTS DATABASE "DRC_RES.db"
+//DRC SUMMARY REPORT "DRC.rep"  // HIER
+
+#DEFINE CHECK_FB1ANFBR11_
+#DEFINE CHECK_FB1ANODA11_
+#DEFINE CHECK_FB1ANODA111_
+#DEFINE CHECK_FB1ANODA112_
+#DEFINE CHECK_FB1ANODEN3_
+#DEFINE CHECK_FB1ANODEN31_
+#DEFINE CHECK_FB1ANODEN32_
+#DEFINE CHECK_FB1ANODEN33_
+#DEFINE CHECK_FB1ANODR21_
+#DEFINE CHECK_FB1ANODR211_
+#DEFINE CHECK_FB1ANODR22_
+#DEFINE CHECK_FB1ANODR23_
+#DEFINE CHECK_FB1ANODR232_
+#DEFINE CHECK_FB1ANODR233_
+#DEFINE CHECK_FB1ANODR234_
+#DEFINE CHECK_FB1ANODR24_
+#DEFINE CHECK_FB1ANODR241_
+#DEFINE CHECK_FB1ANODR25_
+#DEFINE CHECK_FB1ANODS21_
+#DEFINE CHECK_FB1ANODS22_
+#DEFINE CHECK_FB1ANODS23_
+#DEFINE CHECK_FB1ANODS24_
+#DEFINE CHECK_FB1ANODS27_
+#DEFINE CHECK_FB1ANPOEN4_
+#DEFINE CHECK_FB1ANPOR404_
+#DEFINE CHECK_FB1ANR3_
+#DEFINE CHECK_FB1ANR4_
+#DEFINE CHECK_FB1ANR5_
+

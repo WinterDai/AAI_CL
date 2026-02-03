@@ -1,0 +1,5 @@
+FAIL:MIG-IMP-8-1-1-00:Please confirm the below items one by one (check the Note)， 1. Confirm VDD/VDDQ/VDDQX additional Dcap value meet the performance requirement. 2. For LPDDR5 and LP5 combo, place RST/CKE pads to VDDQX domain. 3. For CS pad, if CS/CKE swap logic is implemented (only for LP5/4X combo, CS type will be se_txrx), the CS pad should be placed in VDDQ domain. If CS/CKE swap logic is not implemented (LP5 mode,cs type will be se_cs_txrx), the CS pad should be placed in VDDQX domain. 4. ATB pad can be put into VDDQX domain in general for LP5 and LP5 combo case. Please check with AMS team. 5. Please connect the CKE/RST/CS region vddq decap to VDDQX power net. For VDD decap, please add that to VDD_ISO instead of VDD for LPDDR5 project using ddr800 Gen3IO. 6. For LP4X, place CKE/RESET into VDDQX IO domain.
+MIG-IMP-8-1-1-00-ERROR01: Configuration error:
+  Severity: Fail Occurrence: 1
+  - input_files is empty in YAML configuration
+

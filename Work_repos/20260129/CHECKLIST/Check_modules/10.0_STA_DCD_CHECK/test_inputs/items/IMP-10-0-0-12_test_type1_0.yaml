@@ -1,0 +1,11 @@
+description: Confirm the max_transition check result is clean.
+input_files:
+- ${CHECKLIST_ROOT}/IP_project_folder/reports/10.0/maxtran_1.rpt
+- ${CHECKLIST_ROOT}/IP_project_folder/reports/10.0/maxtran_2.rpt
+requirements:
+  pattern_items: []
+  value: N/A
+waivers:
+  value: 0
+  waive_items:
+  - Pre-implementation phase - max_transition violations expected during floorplanning

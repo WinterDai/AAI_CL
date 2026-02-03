@@ -1,0 +1,1241 @@
+
+########################################################################
+Get environment info ...
+########################################################################
+ENV VAR: TCL_LIBRARY = /apps/ssg_tools/production/pegasus/232/23.25.008-e831/share/lib/tcltk/08.64/tcl8.6
+ENV VAR: TCLX_LIBRARY = /apps/ssg_tools/production/pegasus/232/23.25.008-e831/share/lib/tclx/08.40
+ENV VAR: TCLLIBPATH = /apps/ssg_tools/production/pegasus/232/23.25.008-e831/share/lib/itcl/3.4.1 /apps/ssg_tools/production/pegasus/232/23.25.008-e831/share/lib/tclxml/3.2 /apps/ssg_tools/production/pegasus/232/23.25.008-e831/share/lib/tcllib/1.18 /apps/ssg_tools/production/pegasus/232/23.25.008-e831/tools.lnx86/pegasus/bin/64bit/../../../../share/lib/itcl/3.4.1 /apps/ssg_tools/production/pegasus/232/23.25.008-e831/tools.lnx86/pegasus/bin/64bit/../../../../share/lib/tclxml/3.2 /apps/ssg_tools/production/pegasus/232/23.25.008-e831/tools.lnx86/pegasus/bin/64bit/../../../../share/lib/tcllib/1.18
+ENV VAR: PEGASUS_PVL_LIBRARY = /apps/ssg_tools/production/pegasus/232/23.25.008-e831/tools.lnx86/pegasus/bin/64bit/../../../Pegasus/bin/64bit/etc/pvl/tcl
+ENV VAR: PEGASUS_TVL_LIBRARY = /apps/ssg_tools/production/pegasus/232/23.25.008-e831/tools.lnx86/pegasus/bin/64bit/../../../Pegasus/bin/64bit/etc/preproc/tcl
+ENV VAR: PEGASUS_LVS_DEVICE_DFM_LIBRARY = /apps/ssg_tools/production/pegasus/232/23.25.008-e831/tools.lnx86/pegasus/bin/64bit/../../../Pegasus/bin/64bit/etc/lvs_device_dfm/tcl
+ENV VAR: LSF_ENVDIR = /grid/sfi/farm/nflsfdpc01/conf
+ENV VAR: LSF_SERVERDIR = /grid/sfi/farm/nflsfdpc01/10.1/linux3.10-glibc2.17-x86_64/etc
+ENV VAR: LSB_JOBID = 8371952
+
+
+########################################################################
+Parsing Rule File scr/cdn_hs_phy_top.BUMPDRCwD.pvl ...
+########################################################################
+#DEFINE WITH_APRDL
+#DEFINE AP_28K_THICKNESS
+#DEFINE BUMP_PITCH_130um_150um
+#DEFINE DFM
+#DEFINE FULL_CHIP
+include "C:\Users\chenweif\Checker_dev\CHECKLIST\CHECKLIST\IP_project_folder\ruledeck\2.0\PN5_CU_BUMP_030.10_1a"
+ABORT_ON_LAYOUT_ERROR YES;
+LAYOUT_PRIMARY "cdn_hs_phy_top";
+LAYOUT_PATH "dbs/cdn_hs_phy_top.uniquify.gds.gz";
+LAYOUT_FORMAT GDSII;
+variable xLB 0;
+variable yLB 0;
+variable xRT 1000;
+variable yRT 1000;
+variable UBM_DN_4_Average_Density 0.25;
+variable USR_BUMP_PITCH 110;
+variable USR_UBM_WIDTH 70;
+variable USR_PM_WIDTH 30;
+variable USR_CB2_WIDTH 40;
+INPUT_SCALE 20000;
+INPUT_DB_SCALE 2000;
+MAGNIFY_IN AUTO;
+LAYOUT_FORMAT gdsii;
+[WARN]: LAYOUT_FORMAT at line 65 in file /projects/TC73_DDR5_12800_N5P/libs/ruledeck/PEGASUS/BUMP/PN5_CU_BUMP_030.10_1a is ignored due to one specified before in LAYOUT_FORMAT.
+LAYOUT_INCLUDE_BOX_RECORD YES;
+RESULTS_DB -drc "DRC_RES.db";
+REPORT_SUMMARY -drc "DRC_BUMP.rep";
+KEEP_EMPTY -drc NO;
+CHECK_TEXT -drc -all;
+MAX_RESULTS -drc -all;
+FLAG -offgrid YES;
+FLAG -acute YES;
+FLAG -skew YES;
+FLAG -nonsimple YES;
+FLAG -nonsimple_path YES;
+variable TOL 0.5;
+variable GRID 0.0005;
+variable UBM_CENTER_VALUE 0.002;
+variable UBM_P_1 130;
+variable BP_W_4 40;
+variable BP_W_6 80;
+variable PM_W_3 30;
+variable RV_S_5 3;
+variable RV_S_7 5;
+variable AP_EN_2 13;
+variable UBM_S_4R 240;
+variable UBM_EN_1_1 300;
+variable UBM_EN_2R 150;
+variable UBM_EN_1 50;
+variable UBM_DN_3 0.8;
+variable UBM_P_1A 100000000;
+variable UBM_P_1B 225000000;
+variable UBM_P_1C 400000000;
+variable UBM_P_1D 700000000;
+variable UBM_R_5_A 100000000;
+variable UBM_R_10 1.85;
+variable UBM_DN_1_X 0.15;
+LAYER_DEF CBi 7600;
+LAYER_MAP 76 -datatype 0 7600;
+LAYER_DEF CBDi 1690;
+LAYER_MAP 169 -datatype 0 1690;
+LAYER_DEF CB2Fi 8600;
+LAYER_MAP 86 -datatype 0 8600;
+LAYER_DEF CB2Wi 8620;
+LAYER_MAP 86 -datatype 20 8620;
+COPY CB2Fi -outputlayer CB2i;
+LAYER_DEF RVi 8500;
+LAYER_MAP 85 -datatype 0 8500;
+LAYER_DEF APi 7400;
+LAYER_MAP 74 -datatype 0 7400;
+LAYER_DEF PMi 5000;
+LAYER_MAP 5 -datatype 0 5000;
+LAYER_DEF UBMi 1700;
+LAYER_MAP 170 -datatype 0 1700;
+LAYER_DEF LMARK 10900;
+LAYER_MAP 109 -datatype 0 10900;
+LAYER_DEF LOGO 15800;
+LAYER_MAP 158 -datatype 0 15800;
+LAYER_DEF INDDMY 1440;
+LAYER_MAP 144 -datatype 0 1440;
+LAYER_DEF ODi 6000;
+LAYER_MAP 6 -datatype 0 6000;
+LAYER_DEF SEALRING 1620;
+LAYER_MAP 162 -datatype 0 1620;
+LAYER_DEF SEALRING_DB 1621;
+LAYER_MAP 162 -datatype 1 1621;
+LAYER_DEF SEALRING_ALL 1622;
+LAYER_MAP 162 -datatype 2 1622;
+LAYER_DEF Chip_Boundary 10825;
+LAYER_MAP 108 -datatype 250 10825;
+COPY CBi -outputlayer CB;
+COPY CBDi -outputlayer CBD;
+COPY CB2i -outputlayer CB2;
+COPY APi -outputlayer AP;
+COPY RVi -outputlayer RV;
+COPY UBMi -outputlayer UBM;
+COPY PMi -outputlayer PM;
+BASE_LAYER ODi;
+EXTENT -layer CBi -outputlayer CBi_EXTENT;
+EXTENT -layer CBDi -outputlayer CBDi_EXTENT;
+EXTENT -layer CB2Fi -outputlayer CB2Fi_EXTENT;
+EXTENT -layer CB2Wi -outputlayer CB2Wi_EXTENT;
+EXTENT -layer RVi -outputlayer RVi_EXTENT;
+EXTENT -layer APi -outputlayer APi_EXTENT;
+EXTENT -layer PMi -outputlayer PMi_EXTENT;
+EXTENT -layer UBMi -outputlayer UBMi_EXTENT;
+EXTENT -layer LMARK -outputlayer LMARK_EXTENT;
+EXTENT -layer ODi -outputlayer ODi_EXTENT;
+EXTENT -layer Chip_Boundary -outputlayer Chip_Boundary_EXTENT;
+EXTENT_DRAWN CBi CBDi CB2Fi CB2Wi RVi APi PMi UBMi LMARK ODi Chip_Boundary -outputlayer _EPTMPL262163;
+EXTENT -layer _EPTMPL262163 -outputlayer CHIP;
+MERGE CHIP -outputlayer CHIPx;
+BBOX UBM -centers UBM_CENTER_VALUE -outputlayer UBM_CENTER;
+COPY SEALRING_ALL -outputlayer SEALRING_EXCLUDE;
+SELECT -interact CHIP SEALRING_EXCLUDE -outputlayer CHIP_WISR;
+SELECT -interact -not CHIP SEALRING_EXCLUDE -outputlayer CHIP_WOSR;
+HOLES SEALRING_EXCLUDE -outputlayer _EPTMPL262170;
+EXTENT -layer _EPTMPL262170 -outputlayer _EPTMPL262171;
+AND CHIP_WISR _EPTMPL262171 -outputlayer _EPTMPL262172;
+OR _EPTMPL262172 CHIP_WOSR -outputlayer CHIP_EDGE;
+SIZE CHIP -by 1 -outputlayer BULK;
+NOT CHIP BULK -outputlayer EMPTYi;
+SELECT -interact CB2 UBM -outputlayer CB2_UBM;
+SELECT -interact CBD UBM -outputlayer CBD_UBM;
+SELECT -interact PM UBM -outputlayer PM_UBM;
+variable MM2_TO_UM2 1000000;
+
+RULE Area.R.1 {
+    CAPTION "Chip area (Chip_Boundary) on Silicon Dimension (um2) for N5 and N4 layout design (except SEALRING_ALL region) If has violation, please contact tsmc. Please refer to RuleTable 1.2.1 <= 700*1000000";
+    NOT Chip_Boundary SEALRING_ALL -outputlayer _EPTMPL262179;
+    AREA _EPTMPL262179 -gt "700 * 1000 * 1000" ; // -outputlayer _EPTMPL262180
+}
+AREA Chip_Boundary -le "UBM_P_1A" -outputlayer CHIP_A1;
+AREA Chip_Boundary -legt "UBM_P_1A" "UBM_P_1B" -outputlayer CHIP_A2;
+AREA Chip_Boundary -legt "UBM_P_1B" "UBM_P_1C" -outputlayer CHIP_A3;
+AREA Chip_Boundary -legt "UBM_P_1C" "UBM_P_1D" -outputlayer CHIP_A4;
+AREA Chip_Boundary -gt "UBM_P_1D" -outputlayer CHIP_A5;
+SELECT -interact UBM CHIP_A1 -outputlayer UBM_A1;
+SELECT -interact UBM CHIP_A2 -outputlayer UBM_A2;
+SELECT -interact UBM CHIP_A3 -outputlayer UBM_A3;
+SELECT -interact UBM CHIP_A4 -outputlayer UBM_A4;
+SELECT -interact UBM CHIP_A5 -outputlayer UBM_A5;
+variable UBM_S_4R_S "(UBM_P_1 - BP_W_6)";
+
+RULE RR:RE:UBM.S.4 {
+    CAPTION "Maximum space between 2 UBMs (tolerance is 0.1). It is recommended not to have isolated bump, or avoid un-necessarily spare regions <= RuleTable.4.3.1";
+    EXTE UBM -le "UBM_S_4R_S + (UBM_S_4R - UBM_S_4R_S) * 1/4" -abut -lt 90 -output positive1 -outputlayer A_pre;
+    SELECT -with_edge -not UBM A_pre -outputlayer A;
+    EXTE A UBM -le "UBM_S_4R_S + (UBM_S_4R - UBM_S_4R_S) * 2/4" -abut -lt 90 -output positive1 -outputlayer B_pre;
+    SELECT -with_edge -not A B_pre -outputlayer B;
+    EXTE B UBM -le "UBM_S_4R_S + (UBM_S_4R - UBM_S_4R_S) * 4/4 + 0.1" -abut -lt 90 -output positive1 -outputlayer C_pre;
+    SELECT -with_edge -not B C_pre ; // -outputlayer _EPTMPL262196
+}
+
+RULE UBM.EN.1 {
+    CAPTION "Enclosure of UBM by Chip_Boundary (seal ring inner edge) (chip edge) (exclude SEALRING_ALL) (tolerance is 0.1). Please refer to Figure XXX >= RuleTable.4.3.2";
+    SELECT -interact -not UBM SEALRING_EXCLUDE -outputlayer UBM_CHECK;
+    ENC UBM_CHECK Chip_Boundary -lt "(UBM_EN_1-0.1)" -abut -lt 90 -single_point -output region ; // -outputlayer _EPTMPL262198
+}
+
+RULE RR:RE:UBM.EN.2 {
+    CAPTION "Recommended enclosure of UBM by Chip_Boundary (seal ring inner edge) (chip edge) (exclude SEALRING_ALL) (tolerance is 0.1) (Maximum). Please refer to Figure XXX <= RuleTable.4.3.3";
+    SELECT -interact -not UBM SEALRING_EXCLUDE -outputlayer UBM_CHECK;
+    ENC UBM_CHECK Chip_Boundary -le "UBM_EN_2R + 0.1" -abut -lt 90 -single_point -output positive2 -outputlayer A;
+    EDGE_SELECT -coincident_only -inside -not Chip_Boundary A ; // -outputlayer _EPTMPL262201
+}
+
+RULE UBM.DN.1 {
+    CAPTION "Required minimum global UBM density or bump density across full chip according to chip size (Chip_Boundary). Dummy UBM is required if the UBM density is less than the minimum. The dummy pattern should be as uniform as possible over the chip >= RuleTable.4.2.2";
+[WARN] DENSITY: "-pegasusint_format" option will be ignored in batch mode at line 349 in file /projects/TC73_DDR5_12800_N5P/libs/ruledeck/PEGASUS/BUMP/PN5_CU_BUMP_030.10_1a
+    DENSITY UBM -lt UBM_DN_1_X -inside_of layer Chip_Boundary -vipvs_format window -rdb UBM.DN.1.density ; // -outputlayer _EPTMPL262202
+}
+
+RULE UBM.R.1 {
+    CAPTION "1 Shape of UBM / CB2_FC / PM / AP for bump: equilateral polygon with 64 vertexes is required. 2 Only single size bump/UBM is allowed. DRC checks the UBM / CB2_FC / PM /AP by the following conditions: 1 The vertexes of the UBM / CB2_FC / PM / AP polygons: 64. 2 The vertexes of the un-merged circular AP pattern of bump: 64 (DRC use command: INSIDE CELL CIRCLE) - -";
+    SELECT -interact -not CB2_UBM SEALRING_EXCLUDE -outputlayer CB2_CHECK;
+    SELECT -interact -not PM_UBM SEALRING_EXCLUDE -outputlayer PM_CHECK;
+    SELECT -interact -not UBM SEALRING_EXCLUDE -outputlayer UBM_CHECK;
+    INSIDE_CELL APi "*" -circle -outputlayer _EPTMPL262206;
+    SELECT -interact _EPTMPL262206 UBM -outputlayer AP_PAD;
+    VERTEX CB2_CHECK -lt 64 ; // -outputlayer _EPTMPL262208
+    VERTEX PM_CHECK -lt 64 ; // -outputlayer _EPTMPL262209
+    VERTEX UBM_CHECK -lt 64 ; // -outputlayer _EPTMPL262210
+    VERTEX AP_PAD -lt 64 ; // -outputlayer _EPTMPL262211
+    SELECT -interact -not UBM_CHECK AP_PAD ; // -outputlayer _EPTMPL262212
+}
+variable UBMDN3_SIZE 80;
+SIZE UBM -by "UBMDN3_SIZE" -outputlayer UBM_SIZING_V;
+
+RULE UBM.DN.3 {
+    CAPTION "Minimum area ratio, calculated by {UBM sizing + K um} divided by the whole chip area (Chip_Boundary). Only one single polygon is allowed after the {UBM sizing + K um} operation. Please refer to Figure XXX and RuleTable.4.3.5 for K value definition in N5 ~ N4 technologies >= 80%";
+[WARN] DENSITY: "-pegasusint_format" option will be ignored in batch mode at line 382 in file /projects/TC73_DDR5_12800_N5P/libs/ruledeck/PEGASUS/BUMP/PN5_CU_BUMP_030.10_1a
+    DENSITY UBM_SIZING_V -lt UBM_DN_3 -inside_of layer Chip_Boundary -vipvs_format window -rdb UBM.DN.3.density ; // -outputlayer _EPTMPL262214
+    SELECT -interact Chip_Boundary UBM_SIZING_V -gt 1 -outputlayer _EPTMPL262215;
+    SELECT -interact UBM_SIZING_V _EPTMPL262215 ; // -outputlayer _EPTMPL262216
+}
+variable UBM_DN_4L "UBM_DN_4_Average_Density - 0.075";
+variable UBM_DN_4H "UBM_DN_4_Average_Density + 0.075";
+variable UBM_DN_4L_W 1000;
+variable UBM_DN_4L_S 100;
+variable UBM_DN_4L_E UBM_DN_4L_W/4;
+variable UBM_DN_4H_W 1000;
+variable UBM_DN_4H_S 100;
+variable UBM_DN_4H_E UBM_DN_4H_W/4;
+
+RULE UBM.DN.4:Low {
+    CAPTION "Check bump density gradient about checking windows A um x A um (stepping B um) across full chip according to chip sizes (Chip_Boundary) DRC checks the checking windows bump density by the following conditions: 1. Customer needs to input the bump layout average density value in DRC 'variable UBM_DN_4_Average_Density' based on product design. (DRC default value is 0.2) 2. DRC will check the checking windows density between the average density +-7.5% range <= RuleTable.4.2.3";
+    COPY UBM -outputlayer UBM_CHECK;
+    COPY Chip_Boundary -outputlayer CHIP_CHECK;
+    MERGE CHIP_CHECK -outputlayer CHIPx;
+    DENSITY UBM_CHECK CHIP_CHECK -lt UBM_DN_4L -window "UBM_DN_4L_W" -step "UBM_DN_4L_S" -inside_of layer CHIPx -backup -expr "  AREA(UBM_CHECK)/AREA(CHIP_CHECK)  " -outputlayer ERR_WIN;
+    NOT ERR_WIN EMPTYi -outputlayer _EPTMPL262221;
+    WITH_WIDTH _EPTMPL262221 -ge "UBM_DN_4L_E" -outputlayer F;
+[WARN] DENSITY: "-pegasusint_format" option will be ignored in batch mode at line 405 in file /projects/TC73_DDR5_12800_N5P/libs/ruledeck/PEGASUS/BUMP/PN5_CU_BUMP_030.10_1a
+    DENSITY F UBM_CHECK CHIP_CHECK -lt UBM_DN_4L -window "UBM_DN_4L_W" -step "UBM_DN_4L_S" -inside_of layer CHIPx -backup -vipvs_format window -rdb UBM.DN.4:Low.density -expr "  ! AREA(F)+AREA(UBM_CHECK)/AREA(CHIP_CHECK)  " ; // -outputlayer _EPTMPL262223
+}
+
+RULE UBM.DN.4:High {
+    CAPTION "Check bump density gradient about checking windows A um x A um (stepping B um) across full chip according to chip sizes (Chip_Boundary) DRC checks the checking windows bump density by the following conditions: 1. Customer needs to input the bump layout average density value in DRC 'variable UBM_DN_4_Average_Density' based on product design. (DRC default value is 0.2) 2. DRC will check the checking windows density between the average density +-7.5% range <= RuleTable.4.2.3";
+    COPY UBM -outputlayer UBM_CHECK;
+    COPY Chip_Boundary -outputlayer CHIP_CHECK;
+    MERGE CHIP_CHECK -outputlayer CHIPx;
+    DENSITY UBM_CHECK CHIP_CHECK -gt UBM_DN_4H -window "UBM_DN_4H_W" -step "UBM_DN_4H_S" -inside_of layer CHIPx -backup -expr "  AREA(UBM_CHECK)/AREA(CHIP_CHECK)  " -outputlayer ERR_WIN;
+    NOT ERR_WIN EMPTYi -outputlayer _EPTMPL262228;
+    WITH_WIDTH _EPTMPL262228 -ge "UBM_DN_4H_E" -outputlayer F;
+[WARN] DENSITY: "-pegasusint_format" option will be ignored in batch mode at line 416 in file /projects/TC73_DDR5_12800_N5P/libs/ruledeck/PEGASUS/BUMP/PN5_CU_BUMP_030.10_1a
+    DENSITY F UBM_CHECK CHIP_CHECK -gt UBM_DN_4H -window "UBM_DN_4H_W" -step "UBM_DN_4H_S" -inside_of layer CHIPx -backup -vipvs_format window -rdb UBM.DN.4:High.density -expr "  !! AREA(F)*AREA(UBM_CHECK)/AREA(CHIP_CHECK)  " ; // -outputlayer _EPTMPL262230
+}
+
+RULE UBM.R.3:a {
+    CAPTION "Bump structure must contain necessary layers.(AP, CB2_FC, PM, UBM)";
+    SELECT -interact -not UBM AP ; // -outputlayer _EPTMPL262231
+    SELECT -interact -not UBM CB2 ; // -outputlayer _EPTMPL262232
+    SELECT -interact -not UBM PM ; // -outputlayer _EPTMPL262233
+}
+
+RULE UBM.R.3:b {
+    CAPTION "UBM pattern not for bump (for example, seal ring, L target window, Or logo) is forbidden.";
+    AND UBM LMARK ; // -outputlayer _EPTMPL262234
+    AND UBM SEALRING_EXCLUDE ; // -outputlayer _EPTMPL262235
+    AND UBM LOGO ; // -outputlayer _EPTMPL262236
+}
+SELECT -interact AP UBM -outputlayer _EPTMPL262237;
+SELECT -interact -not _EPTMPL262237 RV -outputlayer AP_DUMMYc;
+SELECT -interact UBM AP_DUMMYc -outputlayer DUMMY_UBM;
+NOT UBM DUMMY_UBM -outputlayer REAL_UBM;
+EXTENT -layer UBMi -outputlayer UBM_EXTENT;
+EXTENT -layer UBM -outputlayer UBM_BOUNDARY_BOX;
+
+RULE UBM.R.5 {
+    CAPTION "The following condition must be satisfied at the chip corner. 1 A BER (bump exclusion region) for one-bump area at the chip corner is required for all chip sizes (Chip_Boundary). No bump is allowed in BER. Please refer to Figure XXX 2 At least 2 dummy bumps or redundant Vdd/Vss bumps with a leg length of minimum bump pitch (please refer to RuleTable.4.2.1) for {chip size (Chip_Boundary) > A mm2}, these dummy bumps or redundant Vdd/Vss bumps must be the ones that are nearest to chip corner among all bumps. Please refer to Figure XXX (a) and RuleTable.4.3.4 for A value definition in N5 ~ N4 technologies. DRC checks the chip corner bump by the following conditions: 1 The DRC deck defines a 'UBM bounding box' for the whole chip by forming a smallest rectangle that contains all UBM bump pads. (Figure XXX (a)) 2 At the corner of the 'UBM bounding box', a 'BER check zone' is determined. (The leg dimension of the BER check zone is '1.7 x C'. See Figure XXX (a)) (C: UBM width) and see RuleTable.4.4.1 for UBM width value in N5 ~ N4 technologies. 3 Check whether any 'bump' interacts with the 'BER check zone.' No bump is allowed to interact with BER. 4 Then dummy bump and redundant Vdd/Vss bump check, at the corner of the 'UBM bounding box', a 'dummy / redundant Vdd/Vss bump check zone' is determined. (See Figure XXX (a) for the DRC check zone dimension.) 5 Check how many bumps interact with the 'dummy / redundant Vdd/Vss bump check zone' and check whether they are dummy bumps or redundant Vdd/Vss bumps. Dummy bump definition: 1 With Al RDL: AP-MD of bump pad structure doesn't connect to any RV. Redundant Vdd/Vss definition: a. With Al RDL: AP-MD pass through over 2 bumps and at least one of these bumps is outside 'BER check zone' and 'dummy / redundant Vdd/Vss bump check zone'. b. With Al RDL: AP-MD pass through over 2 bumps and at least one of these bumps is inside 'dummy / redundant Vdd/Vss bump check zone'. c. With Al RDL: AP-MD of redundant Vdd/Vss bump pad structure doesn't connect to any RV inside 'BER check zone' and 'dummy / redundant Vdd/Vss bump check zone'. (Figure XXX (b)) - Figure XXX (a) Figure XXX (b) RuleTable.4.2.1 RuleTable.4.3.4 RuleTable.4.4.1";
+    INTE UBM_EXTENT -lt "1.7*BP_W_6" -abut -eq 90 -intersecting only -output region -outputlayer BER_UBM;
+    SELECT -interact BER_UBM UBM ; // -outputlayer _EPTMPL262244
+    INTE UBM_EXTENT -lt "1.7*BP_W_6 + UBM_P_1" -abut -eq 90 -intersecting only -output region -outputlayer A2_UBM;
+    NOT A2_UBM BER_UBM -outputlayer A3_UBM;
+    AREA Chip_Boundary -gt "UBM_R_5_A" -outputlayer Chip_Boundary_UBM;
+    SELECT -interact A3_UBM Chip_Boundary_UBM -outputlayer X3_UBM;
+    AND UBM A3_UBM -outputlayer _EPTMPL262249;
+    SELECT -interact AP _EPTMPL262249 -outputlayer _EPTMPL262250;
+    SELECT -outside UBM A2_UBM -outputlayer _EPTMPL262251;
+    SELECT -interact _EPTMPL262250 _EPTMPL262251 -outputlayer _EPTMPL262252;
+    AND RV A2_UBM -outputlayer _EPTMPL262253;
+    SELECT -interact -not _EPTMPL262252 _EPTMPL262253 -outputlayer X_UBM;
+    AND UBM A3_UBM -outputlayer _EPTMPL262255;
+    SELECT -interact _EPTMPL262255 X_UBM -outputlayer Z_UBM;
+    SELECT -interact X3_UBM UBM_BOUNDARY_BOX -outputlayer _EPTMPL262257;
+    SELECT -interact -not _EPTMPL262257 DUMMY_UBM -gt 1 -outputlayer _EPTMPL262258;
+    SELECT -interact X3_UBM UBM_BOUNDARY_BOX -outputlayer _EPTMPL262259;
+    SELECT -interact -not _EPTMPL262259 Z_UBM -gt 1 -outputlayer _EPTMPL262260;
+    AND _EPTMPL262258 _EPTMPL262260 ; // -outputlayer _EPTMPL262261
+}
+variable DIM_X1 8*UBM_P_1;
+variable DIM_X2 12*UBM_P_1;
+variable DIM_X3 12*UBM_P_1;
+variable DIM_X4 12*UBM_P_1;
+SELECT -interact UBM_EXTENT CHIP_A1 -outputlayer UBM_EXTENT_X1;
+INTE UBM_EXTENT_X1 -lt "DIM_X1" -abut -eq 90 -intersecting only -output region -outputlayer _EPTMPL262263;
+BBOX _EPTMPL262263 -outputlayer LBR_X1;
+SELECT -interact UBM_EXTENT CHIP_A2 -outputlayer UBM_EXTENT_X2;
+INTE UBM_EXTENT_X2 -lt "DIM_X2" -abut -eq 90 -intersecting only -output region -outputlayer _EPTMPL262266;
+BBOX _EPTMPL262266 -outputlayer LBR_X2;
+SELECT -interact UBM_EXTENT CHIP_A3 -outputlayer UBM_EXTENT_X3;
+INTE UBM_EXTENT_X3 -lt "DIM_X3" -abut -eq 90 -intersecting only -output region -outputlayer _EPTMPL262269;
+BBOX _EPTMPL262269 -outputlayer LBR_X3;
+SELECT -interact UBM_EXTENT CHIP_A4 -outputlayer UBM_EXTENT_X4;
+INTE UBM_EXTENT_X4 -lt "DIM_X4" -abut -eq 90 -intersecting only -output region -outputlayer _EPTMPL262272;
+BBOX _EPTMPL262272 -outputlayer LBR_X4;
+OR LBR_X1 LBR_X2 -outputlayer _EPTMPL262274;
+OR _EPTMPL262274 LBR_X3 -outputlayer _EPTMPL262275;
+OR _EPTMPL262275 LBR_X4 -outputlayer LBR_ALL;
+variable UBM_R_9_SIZE 80;
+AND UBM LBR_ALL -outputlayer _EPTMPL262277;
+SIZE _EPTMPL262277 -by "UBM_R_9_SIZE" -outputlayer UBM_SIZING_LBR;
+variable LBR_DENSITY_1 0.15;
+variable LBR_DENSITY_2 0.15;
+variable LBR_DENSITY_3 0.15;
+variable LBR_DENSITY_4 0.15;
+
+RULE UBM.R.9 {
+    CAPTION "The following conditions must be satisfied at each chip corner. 1 A LBR (local bump region) at each chip corner is determined by chip size (Chip_Boundary) and minimum bump pitch. Please refer to Figure XXX (a) and RuleTable.4.2.4 2 The local UBM density on LBR is required >= 15%. Please refer to RuleTable.4.2.4 3 Isolation bump is not allowed at each chip corner: Only one single polygon is allowed on LBR region after the {(UBM OVERLAP LBR) sizing + K um} operation. Please refer to Figure XXX (b) and RuleTable.4.3.5 for K value definition in N5 ~ N4 technologies. DRC checks the chip corner bump by the following conditions: 1 The DRC deck defines a 'UBM bounding box' for the whole chip by forming a smallest rectangle that contains all UBM bump pads. (Figure XXX (a)) 2 At the corner of the 'UBM bounding box', a 'LBR check zone' is determined according to chip size (Chip_Boundary) and minimum bump pitch. Please refer to RuleTable.4.2.4 3 Require >= 15% local UBM density on LBR according to RuleTable.4.2.4 and the local UBM density is calculated by 'the total UBM area on LBR region' divided by the LBR area. 4 Only one single polygon is allowed on LBR region after the {(UBM OVERLAP LBR) sizing + K um} operation. Please refer to Figure XXX (b) and RuleTable.4.3.5 for K value definition in N5 ~ N4 technologies - Figure XXX (a) Figure XXX (b) RuleTable.4.2.4 RuleTable.4.3.5";
+[WARN] DENSITY: "-pegasusint_format" option will be ignored in batch mode at line 497 in file /projects/TC73_DDR5_12800_N5P/libs/ruledeck/PEGASUS/BUMP/PN5_CU_BUMP_030.10_1a
+    DENSITY UBM -lt LBR_DENSITY_1 -inside_of layer LBR_X1 -vipvs_format window -rdb UBM.R.9.density ; // -outputlayer _EPTMPL262279
+[WARN] DENSITY: "-pegasusint_format" option will be ignored in batch mode at line 498 in file /projects/TC73_DDR5_12800_N5P/libs/ruledeck/PEGASUS/BUMP/PN5_CU_BUMP_030.10_1a
+    DENSITY UBM -lt LBR_DENSITY_2 -inside_of layer LBR_X2 -vipvs_format window -rdb UBM.R.9.density ; // -outputlayer _EPTMPL262280
+[WARN] DENSITY: "-pegasusint_format" option will be ignored in batch mode at line 499 in file /projects/TC73_DDR5_12800_N5P/libs/ruledeck/PEGASUS/BUMP/PN5_CU_BUMP_030.10_1a
+    DENSITY UBM -lt LBR_DENSITY_3 -inside_of layer LBR_X3 -vipvs_format window -rdb UBM.R.9.density ; // -outputlayer _EPTMPL262281
+[WARN] DENSITY: "-pegasusint_format" option will be ignored in batch mode at line 500 in file /projects/TC73_DDR5_12800_N5P/libs/ruledeck/PEGASUS/BUMP/PN5_CU_BUMP_030.10_1a
+    DENSITY UBM -lt LBR_DENSITY_4 -inside_of layer LBR_X4 -vipvs_format window -rdb UBM.R.9.density ; // -outputlayer _EPTMPL262282
+    COPY CHIP_A5 ; // -outputlayer _EPTMPL262283
+    SELECT -interact LBR_ALL UBM_SIZING_LBR -gt 1 -outputlayer _EPTMPL262284;
+    SELECT -interact UBM_SIZING_LBR _EPTMPL262284 ; // -outputlayer _EPTMPL262285
+}
+
+RULE RR:RE:UBM.R.10 {
+    CAPTION "Recommended Maximum aspect ratio of Chip area (Chip_Boundary)(Definition of aspect ratio is the ratio of longer side to shorter side) <= 1.85";
+    RECT_CHK Chip_Boundary -aspect -le "UBM_R_10" -outputlayer A;
+    NOT Chip_Boundary A -outputlayer _EPTMPL262287;
+    MERGE _EPTMPL262287 ; // -outputlayer _EPTMPL262288
+}
+
+RULE UBM.EN.1.1 {
+    CAPTION "Requires enclosure of UBM by Chip_Boundary (seal ring inner edge) (chip edge) (exclude SEALRING_ALL) (tolerance is 0.1) (Maximum). Please refer to Figure XXX <= RuleTable.4.3.3";
+    SELECT -interact -not UBM SEALRING_EXCLUDE -outputlayer UBM_CHECK;
+    ENC UBM_CHECK Chip_Boundary -le "UBM_EN_1_1 + 0.1" -abut -lt 90 -single_point -output positive2 -outputlayer A;
+    EDGE_SELECT -coincident_only -inside -not Chip_Boundary A ; // -outputlayer _EPTMPL262291
+}
+
+RULE BP.W.4 {
+    CAPTION "Width of CB2_FC under UBM area (tolerance 0.5 um is allowed only for DRC check in CB2_FC geometric dimension deformation) = RuleTable.4.4.1";
+    BBOX CB2_UBM -centers GRID -outputlayer CB2_UBM_center;
+    SELECT -inside -not CB2_UBM_center CB2_UBM ; // -outputlayer _EPTMPL262293
+    ENC CB2_UBM_center CB2_UBM -lt "(BP_W_4-TOL)/2" -abut -lt 90 -single_point -output region ; // -outputlayer _EPTMPL262294
+    SELECT -enclose_rect CB2_UBM -width GRID -length BP_W_4+TOL ; // -outputlayer _EPTMPL262295
+}
+
+RULE BP.W.6 {
+    CAPTION "UBM width according to the minimum DRM offering bump pitch in chip (Only single size UBM is allowed. Please refer to UBM.R.1 and tolerance 0.5 um is allowed only for DRC check in UBM geometric dimension deformation) = RuleTable.4.4.1";
+    BBOX UBM -centers GRID -outputlayer UBM_center;
+    SELECT -inside -not UBM_center UBM ; // -outputlayer _EPTMPL262297
+    ENC UBM_center UBM -lt "(BP_W_6-TOL)/2" -abut -lt 90 -single_point -output region ; // -outputlayer _EPTMPL262298
+    SELECT -enclose_rect UBM -width GRID -length BP_W_6+TOL ; // -outputlayer _EPTMPL262299
+}
+SELECT -inside -not CBD SEALRING_ALL -outputlayer CBD_CHECK;
+SELECT -inside -not CB2 SEALRING_ALL -outputlayer CB2_CHECK;
+SELECT -inside -not UBM SEALRING_ALL -outputlayer UBM_CHECK;
+SELECT -inside -not PM SEALRING_ALL -outputlayer PM_CHECK;
+
+RULE BP.R.3 {
+    CAPTION "Offset between the center of CB2_FC and UBM is not allowed (tolerance is 0.1 um). CB2_FC not interact UBM is not allowed [except SEALRING_ALL] Figure XXX";
+    BBOX CB2_CHECK -centers 0.002 -outputlayer A;
+    BBOX UBM_CHECK -centers 0.002 -outputlayer B;
+    SIZE A -by 0.1 -outputlayer _EPTMPL262306;
+    SELECT -interact -not _EPTMPL262306 B ; // -outputlayer _EPTMPL262307
+    SIZE B -by 0.1 -outputlayer _EPTMPL262308;
+    SELECT -interact -not _EPTMPL262308 A ; // -outputlayer _EPTMPL262309
+    SELECT -interact -not CB2_CHECK UBM_CHECK ; // -outputlayer _EPTMPL262310
+}
+
+RULE BP.R.1 {
+    CAPTION "CB2_FC on AP-MD for interconnection is prohibited [except UBM and SEALRING_ALL]";
+    SELECT -interact -not CB2 UBM -outputlayer _EPTMPL262311;
+    SELECT -interact -not _EPTMPL262311 SEALRING_EXCLUDE -outputlayer CB2_CHECK;
+    AND CB2_CHECK AP ; // -outputlayer _EPTMPL262313
+}
+
+RULE BP.R.2 {
+    CAPTION "CBD in chip is not allowed [except SEALRING_ALL] -";
+    NOT CBD SEALRING_EXCLUDE ; // -outputlayer _EPTMPL262314
+}
+
+RULE UBM.P.1 {
+    CAPTION "Minimum bump pitch of whole chip must be within DRM offering bump pitch according to RuleTable.4.2.1 (tolerance is 0.1 um). (This rule is enabled when the option 'FULL_CHIP' is switch on). N5 minimum bump pitch of whole chip must be within DRM offering bump pitch according to RuleTable.4.4.1 (tolerance is 0.1 um). (This rule is enabled when the option 'FULL_CHIP' is switch on). DRC checks the minimum bump pitch by the following conditions: 1. Whole chip minimum bump pitch must be within 110 um <= P < 130 um (This rule is enabled when the option 'BUMP_PITCH_110 um_130 um ' is switch on). 2. Whole chip minimum bump pitch must be within 130 um <= P < 150 um (This rule is enabled when the option 'BUMP_PITCH_130 um_150 um ' is switch on). 3. Whole chip minimum bump pitch must be within 150 um <= P < 180 um (This rule is enabled when the option 'BUMP_PITCH_150 um_180 um ' is switch on) >= RuleTable.4.4.1";
+    EXTE UBM_CENTER -lt "130 - 0.1 - UBM_CENTER_VALUE" -abut -lt 90 -output region ; // -outputlayer _EPTMPL262315
+    EXTE UBM_CENTER -lt "150 + 0.1 - UBM_CENTER_VALUE" -abut -lt 90 -output region -outputlayer A;
+    SELECT -interact -not CHIP A ; // -outputlayer _EPTMPL262317
+}
+
+RULE PM.W.3 {
+    CAPTION "Width of PM under UBM area according to the minimum DRM offering bump pitch in chip (tolerance 0.5 um is allowed only for DRC check in PM geometric dimension deformation) = RuleTable.4.4.1";
+    BBOX PM_UBM -centers GRID -outputlayer PM_UBM_center;
+    SELECT -inside -not PM_UBM_center PM_UBM ; // -outputlayer _EPTMPL262319
+    ENC PM_UBM_center PM_UBM -lt "(PM_W_3-TOL)/2" -abut -lt 90 -single_point -output region ; // -outputlayer _EPTMPL262320
+    SELECT -enclose_rect PM_UBM -width GRID -length PM_W_3+TOL ; // -outputlayer _EPTMPL262321
+}
+
+RULE PM.R.1 {
+    CAPTION "Offset between the center of PM and CB2_FC in bump region is not allowed (tolerance is 0.1 um) Figure XXX";
+    BBOX CB2_UBM -centers 0.002 -outputlayer A;
+    BBOX PM_UBM -centers 0.002 -outputlayer B;
+    SIZE A -by 0.1 -outputlayer _EPTMPL262324;
+    SELECT -interact -not _EPTMPL262324 B ; // -outputlayer _EPTMPL262325
+    SIZE B -by 0.1 -outputlayer _EPTMPL262326;
+    SELECT -interact -not _EPTMPL262326 A ; // -outputlayer _EPTMPL262327
+}
+
+RULE RV.S.5 {
+    CAPTION "Space to UBM (tolerance is 0.1 um) [Overlap is not allowed] >= RuleTable.4.6.1.1";
+    EXTE RV UBM -lt "RV_S_5 - 0.1" -abut -lt 90 -single_point -output region ; // -outputlayer _EPTMPL262328
+    AND RV UBM ; // -outputlayer _EPTMPL262329
+}
+
+RULE RV.S.7 {
+    CAPTION "Space to UBM (tolerance is 0.1 um) [Overlap is not allowed] in the 'BER check zone' and 'dummy / redundant Vdd/Vss bump check zone'. Please refer to Figure XXX >= RuleTable.4.6.1.2";
+    INTE UBM_EXTENT -lt "1.7*BP_W_6 + UBM_P_1" -abut -eq 90 -intersecting only -output region -outputlayer A2;
+    AND UBM A2 -outputlayer UBM_A2;
+    EXTE RV UBM_A2 -lt "RV_S_7 - 0.1" -abut -lt 90 -single_point -output region ; // -outputlayer _EPTMPL262332
+    AND RV UBM_A2 ; // -outputlayer _EPTMPL262333
+}
+
+RULE AP.EN.2 {
+    CAPTION "CB2_FC enclosure by AP (tolerance is 0.1 um) [except SEALRING region] DRC checks the enclosure by the following conditions: a. CB2_FC must interact the un-merged circular AP pattern b. Check CB2_FC enclosure by the un-merged circular AP pattern (DRC use command: INSIDE CELL CIRCLE) = RuleTable.4.6.2.1";
+    INSIDE_CELL APi "*" -circle -outputlayer _EPTMPL262334;
+    SELECT -interact _EPTMPL262334 CB2 -outputlayer AP_PAD;
+    SELECT -interact -not CB2 AP_PAD -outputlayer _EPTMPL262336;
+    SELECT -inside -not _EPTMPL262336 SEALRING_ALL ; // -outputlayer _EPTMPL262337
+    ENC CB2 AP_PAD -lt "(AP_EN_2 - 0.1)" -abut -lt 90 -single_point -output region -outputlayer _EPTMPL262338;
+    SELECT -inside -not _EPTMPL262338 SEALRING_ALL ; // -outputlayer _EPTMPL262339
+    SIZE CB2 -by "AP_EN_2 + 0.1" -outputlayer _EPTMPL262340;
+    NOT AP_PAD _EPTMPL262340 -outputlayer _EPTMPL262341;
+    SELECT -inside -not _EPTMPL262341 SEALRING_ALL ; // -outputlayer _EPTMPL262342
+}
+Operation 'COPY' at line 201 in file /projects/TC73_DDR5_12800_N5P/libs/ruledeck/PEGASUS/BUMP/PN5_CU_BUMP_030.10_1a is not selected for executing, remove it.
+Operation 'EXTENT' at line 211 in file /projects/TC73_DDR5_12800_N5P/libs/ruledeck/PEGASUS/BUMP/PN5_CU_BUMP_030.10_1a is not selected for executing, remove it.
+Operation 'EXTENT' at line 212 in file /projects/TC73_DDR5_12800_N5P/libs/ruledeck/PEGASUS/BUMP/PN5_CU_BUMP_030.10_1a is not selected for executing, remove it.
+Operation 'EXTENT' at line 213 in file /projects/TC73_DDR5_12800_N5P/libs/ruledeck/PEGASUS/BUMP/PN5_CU_BUMP_030.10_1a is not selected for executing, remove it.
+Operation 'EXTENT' at line 214 in file /projects/TC73_DDR5_12800_N5P/libs/ruledeck/PEGASUS/BUMP/PN5_CU_BUMP_030.10_1a is not selected for executing, remove it.
+Operation 'EXTENT' at line 215 in file /projects/TC73_DDR5_12800_N5P/libs/ruledeck/PEGASUS/BUMP/PN5_CU_BUMP_030.10_1a is not selected for executing, remove it.
+Operation 'EXTENT' at line 216 in file /projects/TC73_DDR5_12800_N5P/libs/ruledeck/PEGASUS/BUMP/PN5_CU_BUMP_030.10_1a is not selected for executing, remove it.
+Operation 'EXTENT' at line 217 in file /projects/TC73_DDR5_12800_N5P/libs/ruledeck/PEGASUS/BUMP/PN5_CU_BUMP_030.10_1a is not selected for executing, remove it.
+Operation 'EXTENT' at line 219 in file /projects/TC73_DDR5_12800_N5P/libs/ruledeck/PEGASUS/BUMP/PN5_CU_BUMP_030.10_1a is not selected for executing, remove it.
+Operation 'EXTENT' at line 220 in file /projects/TC73_DDR5_12800_N5P/libs/ruledeck/PEGASUS/BUMP/PN5_CU_BUMP_030.10_1a is not selected for executing, remove it.
+Operation 'EXTENT' at line 221 in file /projects/TC73_DDR5_12800_N5P/libs/ruledeck/PEGASUS/BUMP/PN5_CU_BUMP_030.10_1a is not selected for executing, remove it.
+Operation 'MERGE' at line 234 in file /projects/TC73_DDR5_12800_N5P/libs/ruledeck/PEGASUS/BUMP/PN5_CU_BUMP_030.10_1a is not selected for executing, remove it.
+Operation 'SELECT -interact' at line 240 in file /projects/TC73_DDR5_12800_N5P/libs/ruledeck/PEGASUS/BUMP/PN5_CU_BUMP_030.10_1a is not selected for executing, remove it.
+Operation 'SELECT -interact' at line 241 in file /projects/TC73_DDR5_12800_N5P/libs/ruledeck/PEGASUS/BUMP/PN5_CU_BUMP_030.10_1a is not selected for executing, remove it.
+Operation 'HOLES' at line 242 in file /projects/TC73_DDR5_12800_N5P/libs/ruledeck/PEGASUS/BUMP/PN5_CU_BUMP_030.10_1a is not selected for executing, remove it.
+Operation 'EXTENT' at line 242 in file /projects/TC73_DDR5_12800_N5P/libs/ruledeck/PEGASUS/BUMP/PN5_CU_BUMP_030.10_1a is not selected for executing, remove it.
+Operation 'AND' at line 242 in file /projects/TC73_DDR5_12800_N5P/libs/ruledeck/PEGASUS/BUMP/PN5_CU_BUMP_030.10_1a is not selected for executing, remove it.
+Operation 'OR' at line 242 in file /projects/TC73_DDR5_12800_N5P/libs/ruledeck/PEGASUS/BUMP/PN5_CU_BUMP_030.10_1a is not selected for executing, remove it.
+Operation 'SELECT -interact' at line 248 in file /projects/TC73_DDR5_12800_N5P/libs/ruledeck/PEGASUS/BUMP/PN5_CU_BUMP_030.10_1a is not selected for executing, remove it.
+Operation 'SELECT -interact' at line 310 in file /projects/TC73_DDR5_12800_N5P/libs/ruledeck/PEGASUS/BUMP/PN5_CU_BUMP_030.10_1a is not selected for executing, remove it.
+Operation 'SELECT -interact' at line 311 in file /projects/TC73_DDR5_12800_N5P/libs/ruledeck/PEGASUS/BUMP/PN5_CU_BUMP_030.10_1a is not selected for executing, remove it.
+Operation 'SELECT -interact' at line 312 in file /projects/TC73_DDR5_12800_N5P/libs/ruledeck/PEGASUS/BUMP/PN5_CU_BUMP_030.10_1a is not selected for executing, remove it.
+Operation 'SELECT -interact' at line 313 in file /projects/TC73_DDR5_12800_N5P/libs/ruledeck/PEGASUS/BUMP/PN5_CU_BUMP_030.10_1a is not selected for executing, remove it.
+Operation 'SELECT -interact' at line 314 in file /projects/TC73_DDR5_12800_N5P/libs/ruledeck/PEGASUS/BUMP/PN5_CU_BUMP_030.10_1a is not selected for executing, remove it.
+Operation 'NOT' at line 439 in file /projects/TC73_DDR5_12800_N5P/libs/ruledeck/PEGASUS/BUMP/PN5_CU_BUMP_030.10_1a is not selected for executing, remove it.
+Operation 'SELECT -inside' at line 544 in file /projects/TC73_DDR5_12800_N5P/libs/ruledeck/PEGASUS/BUMP/PN5_CU_BUMP_030.10_1a is not selected for executing, remove it.
+Operation 'SELECT -inside' at line 547 in file /projects/TC73_DDR5_12800_N5P/libs/ruledeck/PEGASUS/BUMP/PN5_CU_BUMP_030.10_1a is not selected for executing, remove it.
+Operation 'COPY' at line 411 in file /projects/TC73_DDR5_12800_N5P/libs/ruledeck/PEGASUS/BUMP/PN5_CU_BUMP_030.10_1a ('UBM.DN.4:High:UBM_CHECK') has been defined at line 400 in file /projects/TC73_DDR5_12800_N5P/libs/ruledeck/PEGASUS/BUMP/PN5_CU_BUMP_030.10_1a ('UBM.DN.4:Low:UBM_CHECK'), remove it.
+Operation 'COPY' at line 411 in file /projects/TC73_DDR5_12800_N5P/libs/ruledeck/PEGASUS/BUMP/PN5_CU_BUMP_030.10_1a ('UBM.DN.4:High:UBM_CHECK') has been defined at line 400 in file /projects/TC73_DDR5_12800_N5P/libs/ruledeck/PEGASUS/BUMP/PN5_CU_BUMP_030.10_1a ('UBM.DN.4:Low:UBM_CHECK'), remove it.
+Operation 'COPY' at line 412 in file /projects/TC73_DDR5_12800_N5P/libs/ruledeck/PEGASUS/BUMP/PN5_CU_BUMP_030.10_1a ('UBM.DN.4:High:CHIP_CHECK') has been defined at line 401 in file /projects/TC73_DDR5_12800_N5P/libs/ruledeck/PEGASUS/BUMP/PN5_CU_BUMP_030.10_1a ('UBM.DN.4:Low:CHIP_CHECK'), remove it.
+Operation 'COPY' at line 412 in file /projects/TC73_DDR5_12800_N5P/libs/ruledeck/PEGASUS/BUMP/PN5_CU_BUMP_030.10_1a ('UBM.DN.4:High:CHIP_CHECK') has been defined at line 401 in file /projects/TC73_DDR5_12800_N5P/libs/ruledeck/PEGASUS/BUMP/PN5_CU_BUMP_030.10_1a ('UBM.DN.4:Low:CHIP_CHECK'), remove it.
+Operation 'MERGE' at line 413 in file /projects/TC73_DDR5_12800_N5P/libs/ruledeck/PEGASUS/BUMP/PN5_CU_BUMP_030.10_1a ('UBM.DN.4:High:CHIPx') has been defined at line 402 in file /projects/TC73_DDR5_12800_N5P/libs/ruledeck/PEGASUS/BUMP/PN5_CU_BUMP_030.10_1a ('UBM.DN.4:Low:CHIPx'), remove it.
+Operation 'MERGE' at line 413 in file /projects/TC73_DDR5_12800_N5P/libs/ruledeck/PEGASUS/BUMP/PN5_CU_BUMP_030.10_1a ('UBM.DN.4:High:CHIPx') has been defined at line 402 in file /projects/TC73_DDR5_12800_N5P/libs/ruledeck/PEGASUS/BUMP/PN5_CU_BUMP_030.10_1a ('UBM.DN.4:Low:CHIPx'), remove it.
+Operation 'SELECT -interact' at line 459 in file /projects/TC73_DDR5_12800_N5P/libs/ruledeck/PEGASUS/BUMP/PN5_CU_BUMP_030.10_1a ('UBM.R.5:_EPTMPL262259') has been defined at line 459 in file /projects/TC73_DDR5_12800_N5P/libs/ruledeck/PEGASUS/BUMP/PN5_CU_BUMP_030.10_1a ('UBM.R.5:_EPTMPL262257'), remove it.
+Operation 'SELECT -interact' at line 459 in file /projects/TC73_DDR5_12800_N5P/libs/ruledeck/PEGASUS/BUMP/PN5_CU_BUMP_030.10_1a ('UBM.R.5:_EPTMPL262259') has been defined at line 459 in file /projects/TC73_DDR5_12800_N5P/libs/ruledeck/PEGASUS/BUMP/PN5_CU_BUMP_030.10_1a ('UBM.R.5:_EPTMPL262257'), remove it.
+
+
+operation group: 1/151
+    Area.R.1:_EPTMPL262179 = NOT Chip_Boundary SEALRING_ALL
+========================================================================
+
+
+operation group: 2/151
+    Area.R.1:L262180 = AREA Area.R.1:_EPTMPL262179 -gt 700000000
+========================================================================
+
+
+operation group: 3/151
+    UBM.R.9:L262283 = AREA Chip_Boundary -gt 700000000
+========================================================================
+
+
+operation group: 4/151
+    UBM = MERGE UBMi
+========================================================================
+
+
+operation group: 5/151
+    RR:RE:UBM.S.4:A_pre = EXTE UBM -le 97.5 -abut lt 90 -output positive1
+========================================================================
+
+
+operation group: 6/151
+    RR:RE:UBM.S.4:A = SELECT -with_edge UBM RR:RE:UBM.S.4:A_pre -not
+========================================================================
+
+
+operation group: 7/151
+    RR:RE:UBM.S.4:B_pre = EXTE RR:RE:UBM.S.4:A UBM -le 145 -abut lt 90 -output positive1
+========================================================================
+
+
+operation group: 8/151
+    RR:RE:UBM.S.4:B = SELECT -with_edge RR:RE:UBM.S.4:A RR:RE:UBM.S.4:B_pre -not
+========================================================================
+
+
+operation group: 9/151
+    RR:RE:UBM.S.4:C_pre = EXTE RR:RE:UBM.S.4:B UBM -le 240.1 -abut lt 90 -output positive1
+========================================================================
+
+
+operation group: 10/151
+    RR:RE:UBM.S.4:L262196 = SELECT -with_edge RR:RE:UBM.S.4:B RR:RE:UBM.S.4:C_pre -not
+========================================================================
+
+
+operation group: 11/151
+    SEALRING_EXCLUDE = COPY SEALRING_ALL
+========================================================================
+
+
+operation group: 12/151
+    UBM.EN.1:UBM_CHECK = SELECT -interact UBM SEALRING_EXCLUDE -not
+========================================================================
+
+
+operation group: 13/151
+    UBM.EN.1:L262198 = ENC UBM.EN.1:UBM_CHECK Chip_Boundary -lt 49.9 -abut lt 90 -single_point -output region
+    RR:RE:UBM.EN.2:A = ENC UBM.EN.1:UBM_CHECK Chip_Boundary -le 150.1 -abut lt 90 -single_point -output positive2
+    UBM.EN.1.1:A = ENC UBM.EN.1:UBM_CHECK Chip_Boundary -le 300.1 -abut lt 90 -single_point -output positive2
+========================================================================
+
+
+operation group: 14/151
+    RR:RE:UBM.EN.2:L262201 = EDGE_SELECT Chip_Boundary RR:RE:UBM.EN.2:A -coincident_only -inside -not
+========================================================================
+
+
+operation group: 15/151
+    UBM.DN.1:L262202 = DENSITY UBM -lt 0.15 -inside_of layer Chip_Boundary -rdb UBM.DN.1.density
+========================================================================
+
+
+operation group: 16/151
+    CB2i = COPY CB2Fi
+========================================================================
+
+
+operation group: 17/151
+    CB2_UBM = SELECT -interact CB2i UBM
+    BP.R.1:_EPTMPL262311 = SELECT -interact CB2i UBM -not
+========================================================================
+
+
+operation group: 18/151
+    UBM.R.1:CB2_CHECK = SELECT -interact CB2_UBM SEALRING_EXCLUDE -not
+========================================================================
+
+
+operation group: 19/151
+    UBM.R.1:L262208 = VERTEX UBM.R.1:CB2_CHECK -lt 64
+========================================================================
+
+
+operation group: 20/151
+    PM = COPY PMi
+========================================================================
+
+
+operation group: 21/151
+    PM_UBM = SELECT -interact PM UBM
+========================================================================
+
+
+operation group: 22/151
+    UBM.R.1:PM_CHECK = SELECT -interact PM_UBM SEALRING_EXCLUDE -not
+========================================================================
+
+
+operation group: 23/151
+    UBM.R.1:L262209 = VERTEX UBM.R.1:PM_CHECK -lt 64
+========================================================================
+
+
+operation group: 24/151
+    UBM.R.1:L262210 = VERTEX UBM.EN.1:UBM_CHECK -lt 64
+========================================================================
+
+
+operation group: 25/151
+    UBM.R.1:_EPTMPL262206 = INSIDE_CELL APi "*" -circle
+========================================================================
+
+
+operation group: 26/151
+    UBM.R.1:AP_PAD = SELECT -interact UBM.R.1:_EPTMPL262206 UBM
+========================================================================
+
+
+operation group: 27/151
+    UBM.R.1:L262211 = VERTEX UBM.R.1:AP_PAD -lt 64
+========================================================================
+
+
+operation group: 28/151
+    UBM.R.1:L262212 = SELECT -interact UBM.EN.1:UBM_CHECK UBM.R.1:AP_PAD -not
+========================================================================
+
+
+operation group: 29/151
+    UBM_SIZING_V = SIZE UBM -by 80
+========================================================================
+
+
+operation group: 30/151
+    UBM.DN.3:L262214 = DENSITY UBM_SIZING_V -lt 0.8 -inside_of layer Chip_Boundary -rdb UBM.DN.3.density
+========================================================================
+
+
+operation group: 31/151
+    UBM.DN.3:_EPTMPL262215 = SELECT -interact Chip_Boundary UBM_SIZING_V -gt 1
+========================================================================
+
+
+operation group: 32/151
+    UBM.DN.3:L262216 = SELECT -interact UBM_SIZING_V UBM.DN.3:_EPTMPL262215
+========================================================================
+
+
+operation group: 33/151
+    UBM.DN.4:Low:UBM_CHECK = COPY UBM
+========================================================================
+
+
+operation group: 34/151
+    UBM.DN.4:Low:CHIP_CHECK = COPY Chip_Boundary
+========================================================================
+
+
+operation group: 35/151
+    UBM.DN.4:Low:CHIPx = MERGE UBM.DN.4:Low:CHIP_CHECK
+========================================================================
+
+
+operation group: 36/151
+    UBM.DN.4:Low:ERR_WIN = DENSITY UBM.DN.4:Low:UBM_CHECK UBM.DN.4:Low:CHIP_CHECK -lt 0.175 -window 1000 1000 -step 100 100 -inside_of layer UBM.DN.4:Low:CHIPx -backup -expr "(area(UBM.DN.4:Low:UBM_CHECK) / area(UBM.DN.4:Low:CHIP_CHECK))"
+    UBM.DN.4:High:ERR_WIN = DENSITY UBM.DN.4:Low:UBM_CHECK UBM.DN.4:Low:CHIP_CHECK -gt 0.325 -window 1000 1000 -step 100 100 -inside_of layer UBM.DN.4:Low:CHIPx -backup -expr "(area(UBM.DN.4:Low:UBM_CHECK) / area(UBM.DN.4:Low:CHIP_CHECK))"
+========================================================================
+
+
+operation group: 37/151
+    _EPTMPL262163 = EXTENT_DRAWN CBi CBDi CB2Fi CB2Wi RVi APi PMi UBMi LMARK ODi Chip_Boundary
+========================================================================
+
+
+operation group: 38/151
+    CHIP = EXTENT _EPTMPL262163
+========================================================================
+
+
+operation group: 39/151
+    BULK = SIZE CHIP -by 1
+========================================================================
+
+
+operation group: 40/151
+    EMPTYi = NOT CHIP BULK
+========================================================================
+
+
+operation group: 41/151
+    UBM.DN.4:Low:_EPTMPL262221 = NOT UBM.DN.4:Low:ERR_WIN EMPTYi
+========================================================================
+
+
+operation group: 42/151
+    UBM.DN.4:Low:F = WITH_WIDTH UBM.DN.4:Low:_EPTMPL262221 -ge 250
+========================================================================
+
+
+operation group: 43/151
+    UBM.DN.4:Low:L262223 = DENSITY UBM.DN.4:Low:F UBM.DN.4:Low:UBM_CHECK UBM.DN.4:Low:CHIP_CHECK -lt 0.175 -window 1000 1000 -step 100 100 -inside_of layer UBM.DN.4:Low:CHIPx -backup -rdb UBM.DN.4:Low.density -expr "(!(area(UBM.DN.4:Low:F)) + (area(UBM.DN.4:Low:UBM_CHECK) / area(UBM.DN.4:Low:CHIP_CHECK)))"
+========================================================================
+
+
+operation group: 44/151
+    UBM.DN.4:High:_EPTMPL262228 = NOT UBM.DN.4:High:ERR_WIN EMPTYi
+========================================================================
+
+
+operation group: 45/151
+    UBM.DN.4:High:F = WITH_WIDTH UBM.DN.4:High:_EPTMPL262228 -ge 250
+========================================================================
+
+
+operation group: 46/151
+    UBM.DN.4:High:L262230 = DENSITY UBM.DN.4:High:F UBM.DN.4:Low:UBM_CHECK UBM.DN.4:Low:CHIP_CHECK -gt 0.325 -window 1000 1000 -step 100 100 -inside_of layer UBM.DN.4:Low:CHIPx -backup -rdb UBM.DN.4:High.density -expr "((!(!(area(UBM.DN.4:High:F))) * area(UBM.DN.4:Low:UBM_CHECK)) / area(UBM.DN.4:Low:CHIP_CHECK))"
+========================================================================
+
+
+operation group: 47/151
+    AP = COPY APi
+========================================================================
+
+
+operation group: 48/151
+    UBM.R.3:a:L262231 = SELECT -interact UBM AP -not
+========================================================================
+
+
+operation group: 49/151
+    UBM.R.3:a:L262232 = SELECT -interact UBM CB2i -not
+========================================================================
+
+
+operation group: 50/151
+    UBM.R.3:a:L262233 = SELECT -interact UBM PM -not
+========================================================================
+
+
+operation group: 51/151
+    UBM.R.3:b:L262234 = AND UBM LMARK
+========================================================================
+
+
+operation group: 52/151
+    UBM.R.3:b:L262235 = AND UBM SEALRING_EXCLUDE
+========================================================================
+
+
+operation group: 53/151
+    UBM.R.3:b:L262236 = AND UBM LOGO
+========================================================================
+
+
+operation group: 54/151
+    UBMi_EXTENT = EXTENT UBMi
+========================================================================
+
+
+operation group: 55/151
+    UBM.R.5:BER_UBM = INTE UBMi_EXTENT -lt 136 -abut eq 90 -intersecting only -output region
+    UBM.R.5:A2_UBM = INTE UBMi_EXTENT -lt 266 -abut eq 90 -intersecting only -output region
+========================================================================
+
+
+operation group: 56/151
+    UBM.R.5:L262244 = SELECT -interact UBM.R.5:BER_UBM UBM
+========================================================================
+
+
+operation group: 57/151
+    UBM.R.5:A3_UBM = NOT UBM.R.5:A2_UBM UBM.R.5:BER_UBM
+========================================================================
+
+
+operation group: 58/151
+    UBM.R.5:Chip_Boundary_UBM = AREA Chip_Boundary -gt 100000000
+========================================================================
+
+
+operation group: 59/151
+    UBM.R.5:X3_UBM = SELECT -interact UBM.R.5:A3_UBM UBM.R.5:Chip_Boundary_UBM
+========================================================================
+
+
+operation group: 60/151
+    UBM_BOUNDARY_BOX = EXTENT UBM
+========================================================================
+
+
+operation group: 61/151
+    UBM.R.5:_EPTMPL262257 = SELECT -interact UBM.R.5:X3_UBM UBM_BOUNDARY_BOX
+========================================================================
+
+
+operation group: 62/151
+    _EPTMPL262237 = SELECT -interact AP UBM
+========================================================================
+
+
+operation group: 63/151
+    RV = COPY RVi
+========================================================================
+
+
+operation group: 64/151
+    AP_DUMMYc = SELECT -interact _EPTMPL262237 RV -not
+========================================================================
+
+
+operation group: 65/151
+    DUMMY_UBM = SELECT -interact UBM AP_DUMMYc
+========================================================================
+
+
+operation group: 66/151
+    UBM.R.5:_EPTMPL262258 = SELECT -interact UBM.R.5:_EPTMPL262257 DUMMY_UBM -gt 1 -not
+========================================================================
+
+
+operation group: 67/151
+    UBM.R.5:_EPTMPL262249 = AND UBM UBM.R.5:A3_UBM
+========================================================================
+
+
+operation group: 68/151
+    UBM.R.5:_EPTMPL262250 = SELECT -interact AP UBM.R.5:_EPTMPL262249
+========================================================================
+
+
+operation group: 69/151
+    UBM.R.5:_EPTMPL262251 = SELECT -outside UBM UBM.R.5:A2_UBM
+========================================================================
+
+
+operation group: 70/151
+    UBM.R.5:_EPTMPL262252 = SELECT -interact UBM.R.5:_EPTMPL262250 UBM.R.5:_EPTMPL262251
+========================================================================
+
+
+operation group: 71/151
+    UBM.R.5:_EPTMPL262253 = AND RV UBM.R.5:A2_UBM
+========================================================================
+
+
+operation group: 72/151
+    UBM.R.5:X_UBM = SELECT -interact UBM.R.5:_EPTMPL262252 UBM.R.5:_EPTMPL262253 -not
+========================================================================
+
+
+operation group: 73/151
+    UBM.R.5:Z_UBM = SELECT -interact UBM.R.5:_EPTMPL262249 UBM.R.5:X_UBM
+========================================================================
+
+
+operation group: 74/151
+    UBM.R.5:_EPTMPL262260 = SELECT -interact UBM.R.5:_EPTMPL262257 UBM.R.5:Z_UBM -gt 1 -not
+========================================================================
+
+
+operation group: 75/151
+    UBM.R.5:L262261 = AND UBM.R.5:_EPTMPL262258 UBM.R.5:_EPTMPL262260
+========================================================================
+
+
+operation group: 76/151
+    CHIP_A1 = AREA Chip_Boundary -le 100000000
+========================================================================
+
+
+operation group: 77/151
+    UBM_EXTENT_X1 = SELECT -interact UBMi_EXTENT CHIP_A1
+========================================================================
+
+
+operation group: 78/151
+    _EPTMPL262263 = INTE UBM_EXTENT_X1 -lt 1040 -abut eq 90 -intersecting only -output region
+========================================================================
+
+
+operation group: 79/151
+    LBR_X1 = BBOX _EPTMPL262263
+========================================================================
+
+
+operation group: 80/151
+    UBM.R.9:L262279 = DENSITY UBM -lt 0.15 -inside_of layer LBR_X1 -rdb UBM.R.9.density
+========================================================================
+
+
+operation group: 81/151
+    CHIP_A2 = AREA Chip_Boundary -legt 100000000 225000000
+========================================================================
+
+
+operation group: 82/151
+    UBM_EXTENT_X2 = SELECT -interact UBMi_EXTENT CHIP_A2
+========================================================================
+
+
+operation group: 83/151
+    _EPTMPL262266 = INTE UBM_EXTENT_X2 -lt 1560 -abut eq 90 -intersecting only -output region
+========================================================================
+
+
+operation group: 84/151
+    LBR_X2 = BBOX _EPTMPL262266
+========================================================================
+
+
+operation group: 85/151
+    UBM.R.9:L262280 = DENSITY UBM -lt 0.15 -inside_of layer LBR_X2 -rdb UBM.R.9.density
+========================================================================
+
+
+operation group: 86/151
+    CHIP_A3 = AREA Chip_Boundary -legt 225000000 400000000
+========================================================================
+
+
+operation group: 87/151
+    UBM_EXTENT_X3 = SELECT -interact UBMi_EXTENT CHIP_A3
+========================================================================
+
+
+operation group: 88/151
+    _EPTMPL262269 = INTE UBM_EXTENT_X3 -lt 1560 -abut eq 90 -intersecting only -output region
+========================================================================
+
+
+operation group: 89/151
+    LBR_X3 = BBOX _EPTMPL262269
+========================================================================
+
+
+operation group: 90/151
+    UBM.R.9:L262281 = DENSITY UBM -lt 0.15 -inside_of layer LBR_X3 -rdb UBM.R.9.density
+========================================================================
+
+
+operation group: 91/151
+    CHIP_A4 = AREA Chip_Boundary -legt 400000000 700000000
+========================================================================
+
+
+operation group: 92/151
+    UBM_EXTENT_X4 = SELECT -interact UBMi_EXTENT CHIP_A4
+========================================================================
+
+
+operation group: 93/151
+    _EPTMPL262272 = INTE UBM_EXTENT_X4 -lt 1560 -abut eq 90 -intersecting only -output region
+========================================================================
+
+
+operation group: 94/151
+    LBR_X4 = BBOX _EPTMPL262272
+========================================================================
+
+
+operation group: 95/151
+    UBM.R.9:L262282 = DENSITY UBM -lt 0.15 -inside_of layer LBR_X4 -rdb UBM.R.9.density
+========================================================================
+
+
+operation group: 96/151
+    LBR_ALL = OR LBR_X1 LBR_X4 LBR_X3 LBR_X2
+========================================================================
+
+
+operation group: 97/151
+    _EPTMPL262277 = AND UBM LBR_ALL
+========================================================================
+
+
+operation group: 98/151
+    UBM_SIZING_LBR = SIZE _EPTMPL262277 -by 80
+========================================================================
+
+
+operation group: 99/151
+    UBM.R.9:_EPTMPL262284 = SELECT -interact LBR_ALL UBM_SIZING_LBR -gt 1
+========================================================================
+
+
+operation group: 100/151
+    UBM.R.9:L262285 = SELECT -interact UBM_SIZING_LBR UBM.R.9:_EPTMPL262284
+========================================================================
+
+
+operation group: 101/151
+    RR:RE:UBM.R.10:A = RECT_CHK Chip_Boundary -aspect le 1.85
+========================================================================
+
+
+operation group: 102/151
+    RR:RE:UBM.R.10:_EPTMPL262287 = NOT Chip_Boundary RR:RE:UBM.R.10:A
+========================================================================
+
+
+operation group: 103/151
+    RR:RE:UBM.R.10:L262288 = MERGE RR:RE:UBM.R.10:_EPTMPL262287
+========================================================================
+
+
+operation group: 104/151
+    UBM.EN.1.1:L262291 = EDGE_SELECT Chip_Boundary UBM.EN.1.1:A -coincident_only -inside -not
+========================================================================
+
+
+operation group: 105/151
+    BP.W.4:CB2_UBM_center = BBOX CB2_UBM -centers 0.0005
+========================================================================
+
+
+operation group: 106/151
+    BP.W.4:L262293 = SELECT -inside BP.W.4:CB2_UBM_center CB2_UBM -not
+========================================================================
+
+
+operation group: 107/151
+    BP.W.4:L262294 = ENC BP.W.4:CB2_UBM_center CB2_UBM -lt 19.75 -abut lt 90 -single_point -output region
+========================================================================
+
+
+operation group: 108/151
+    BP.W.4:L262295 = SELECT -enclose_rect CB2_UBM -width 0.0005 -length 40.5
+========================================================================
+
+
+operation group: 109/151
+    BP.W.6:UBM_center = BBOX UBM -centers 0.0005
+========================================================================
+
+
+operation group: 110/151
+    BP.W.6:L262297 = SELECT -inside BP.W.6:UBM_center UBM -not
+========================================================================
+
+
+operation group: 111/151
+    BP.W.6:L262298 = ENC BP.W.6:UBM_center UBM -lt 39.75 -abut lt 90 -single_point -output region
+========================================================================
+
+
+operation group: 112/151
+    BP.W.6:L262299 = SELECT -enclose_rect UBM -width 0.0005 -length 80.5
+========================================================================
+
+
+operation group: 113/151
+    CB2_CHECK = SELECT -inside CB2i SEALRING_ALL -not
+========================================================================
+
+
+operation group: 114/151
+    BP.R.3:A = BBOX CB2_CHECK -centers 0.002
+========================================================================
+
+
+operation group: 115/151
+    BP.R.3:_EPTMPL262306 = SIZE BP.R.3:A -by 0.1
+========================================================================
+
+
+operation group: 116/151
+    UBM_CHECK = SELECT -inside UBM SEALRING_ALL -not
+========================================================================
+
+
+operation group: 117/151
+    BP.R.3:B = BBOX UBM_CHECK -centers 0.002
+========================================================================
+
+
+operation group: 118/151
+    BP.R.3:L262307 = SELECT -interact BP.R.3:_EPTMPL262306 BP.R.3:B -not
+========================================================================
+
+
+operation group: 119/151
+    BP.R.3:_EPTMPL262308 = SIZE BP.R.3:B -by 0.1
+========================================================================
+
+
+operation group: 120/151
+    BP.R.3:L262309 = SELECT -interact BP.R.3:_EPTMPL262308 BP.R.3:A -not
+========================================================================
+
+
+operation group: 121/151
+    BP.R.3:L262310 = SELECT -interact CB2_CHECK UBM_CHECK -not
+========================================================================
+
+
+operation group: 122/151
+    BP.R.1:CB2_CHECK = SELECT -interact BP.R.1:_EPTMPL262311 SEALRING_EXCLUDE -not
+========================================================================
+
+
+operation group: 123/151
+    BP.R.1:L262313 = AND BP.R.1:CB2_CHECK AP
+========================================================================
+
+
+operation group: 124/151
+    CBD = COPY CBDi
+========================================================================
+
+
+operation group: 125/151
+    BP.R.2:L262314 = NOT CBD SEALRING_EXCLUDE
+========================================================================
+
+
+operation group: 126/151
+    UBM_CENTER = BBOX UBM -centers 0.002
+========================================================================
+
+
+operation group: 127/151
+    UBM.P.1:L262315 = EXTE UBM_CENTER -lt 129.898 -abut lt 90 -output region
+    UBM.P.1:A = EXTE UBM_CENTER -lt 150.098 -abut lt 90 -output region
+========================================================================
+
+
+operation group: 128/151
+    UBM.P.1:L262317 = SELECT -interact CHIP UBM.P.1:A -not
+========================================================================
+
+
+operation group: 129/151
+    PM.W.3:PM_UBM_center = BBOX PM_UBM -centers 0.0005
+========================================================================
+
+
+operation group: 130/151
+    PM.W.3:L262319 = SELECT -inside PM.W.3:PM_UBM_center PM_UBM -not
+========================================================================
+
+
+operation group: 131/151
+    PM.W.3:L262320 = ENC PM.W.3:PM_UBM_center PM_UBM -lt 14.75 -abut lt 90 -single_point -output region
+========================================================================
+
+
+operation group: 132/151
+    PM.W.3:L262321 = SELECT -enclose_rect PM_UBM -width 0.0005 -length 30.5
+========================================================================
+
+
+operation group: 133/151
+    PM.R.1:A = BBOX CB2_UBM -centers 0.002
+========================================================================
+
+
+operation group: 134/151
+    PM.R.1:_EPTMPL262324 = SIZE PM.R.1:A -by 0.1
+========================================================================
+
+
+operation group: 135/151
+    PM.R.1:B = BBOX PM_UBM -centers 0.002
+========================================================================
+
+
+operation group: 136/151
+    PM.R.1:L262325 = SELECT -interact PM.R.1:_EPTMPL262324 PM.R.1:B -not
+========================================================================
+
+
+operation group: 137/151
+    PM.R.1:_EPTMPL262326 = SIZE PM.R.1:B -by 0.1
+========================================================================
+
+
+operation group: 138/151
+    PM.R.1:L262327 = SELECT -interact PM.R.1:_EPTMPL262326 PM.R.1:A -not
+========================================================================
+
+
+operation group: 139/151
+    RV.S.5:L262328 = EXTE RV UBM -lt 2.9 -abut lt 90 -single_point -output region
+========================================================================
+
+
+operation group: 140/151
+    RV.S.5:L262329 = AND RV UBM
+========================================================================
+
+
+operation group: 141/151
+    RV.S.7:UBM_A2 = AND UBM UBM.R.5:A2_UBM
+========================================================================
+
+
+operation group: 142/151
+    RV.S.7:L262332 = EXTE RV RV.S.7:UBM_A2 -lt 4.9 -abut lt 90 -single_point -output region
+========================================================================
+
+
+operation group: 143/151
+    RV.S.7:L262333 = AND RV RV.S.7:UBM_A2
+========================================================================
+
+
+operation group: 144/151
+    AP.EN.2:AP_PAD = SELECT -interact UBM.R.1:_EPTMPL262206 CB2i
+========================================================================
+
+
+operation group: 145/151
+    AP.EN.2:_EPTMPL262336 = SELECT -interact CB2i AP.EN.2:AP_PAD -not
+========================================================================
+
+
+operation group: 146/151
+    AP.EN.2:L262337 = SELECT -inside AP.EN.2:_EPTMPL262336 SEALRING_ALL -not
+========================================================================
+
+
+operation group: 147/151
+    AP.EN.2:_EPTMPL262338 = ENC CB2i AP.EN.2:AP_PAD -lt 12.9 -abut lt 90 -single_point -output region
+========================================================================
+
+
+operation group: 148/151
+    AP.EN.2:L262339 = SELECT -inside AP.EN.2:_EPTMPL262338 SEALRING_ALL -not
+========================================================================
+
+
+operation group: 149/151
+    AP.EN.2:_EPTMPL262340 = SIZE CB2i -by 13.1
+========================================================================
+
+
+operation group: 150/151
+    AP.EN.2:_EPTMPL262341 = NOT AP.EN.2:AP_PAD AP.EN.2:_EPTMPL262340
+========================================================================
+
+
+operation group: 151/151
+    AP.EN.2:L262342 = SELECT -inside AP.EN.2:_EPTMPL262341 SEALRING_ALL -not
+========================================================================
+Completed execution after parsing the rules, as requested by the "-p" flag or "-get_rules" flag 
+
+
+Design rule check finished normally. Sat Dec  6 17:02:39 2025
+
+

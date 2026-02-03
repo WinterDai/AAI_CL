@@ -1,0 +1,55 @@
+[
+  {
+    "stage": "CodeGenContext",
+    "timestamp": 1767411628.566122,
+    "data": {
+      "item_id": "IMP-10-0-0-00",
+      "class_name": "Check_10_0_0_00",
+      "item_desc": "Confirm the netlist/spef version is correct.",
+      "regex_patterns_count": 0,
+      "type_specs_count": 4,
+      "check_module": "IMP",
+      "default_type": 1
+    }
+  },
+  {
+    "stage": "Prompt Info",
+    "timestamp": 1767411628.566122,
+    "data": {
+      "prompt_length": 21085,
+      "has_feedback_section": false,
+      "feedback_attempt": 1,
+      "feedback_errors": 0
+    }
+  },
+  {
+    "stage": "LLM Response (Attempt 1)",
+    "timestamp": 1767411704.8370347,
+    "data": {
+      "parse_method_length": 2421,
+      "execute_type1_length": 503,
+      "execute_type2_length": 568,
+      "execute_type3_length": 1229,
+      "execute_type4_length": 538,
+      "helper_methods_length": 12791
+    }
+  },
+  {
+    "stage": "Validation (Attempt 1)",
+    "timestamp": 1767411704.8624575,
+    "data": {
+      "is_valid": true,
+      "errors_count": 0,
+      "suggestions": []
+    }
+  },
+  {
+    "stage": "Final Code",
+    "timestamp": 1767411704.886028,
+    "data": {
+      "length": 27240,
+      "lines": 670,
+      "formatted": false
+    }
+  }
+]

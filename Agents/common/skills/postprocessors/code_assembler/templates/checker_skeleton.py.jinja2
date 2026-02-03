@@ -1,0 +1,171 @@
+{# 
+    Checker Skeleton Template v2.0 - Golden-Aligned
+    
+    Based on: Golden code analysis (IMP-2-0-0-00.py, IMP-10-0-0-00.py, etc.)
+    
+    Template Variables:
+    - class_name: Python class name (e.g., Check_5_0_0_05)
+    - item_id: Item ID (e.g., IMP-5-0-0-05)
+    - description: Item description
+    - check_module: Check module name
+    - author: Author name
+    - date: Creation date
+    
+    LLM-Generated Code Fragments:
+    - class_constants: FOUND_DESC, MISSING_DESC, etc.
+    - instance_vars: Additional instance variables in __init__
+    - parse_method: _parse_input_files() implementation
+    - execute_type1-4: Type execution implementations
+    - helper_methods: Additional helper methods
+    
+    v2.0 Changes:
+    - Fixed inheritance order: InputFileParserMixin, OutputBuilderMixin, WaiverHandlerMixin, BaseChecker
+    - Added class-level constants section
+    - Aligned entry point with Golden pattern
+#}
+{{ header_comment }}
+
+{{ imports_section }}
+from checker_templates.input_file_parser_template import InputFileParserMixin
+
+
+# MANDATORY: Inherit mixins in correct order (InputFileParserMixin first if used)
+class {{ class_name }}(InputFileParserMixin, OutputBuilderMixin, WaiverHandlerMixin, BaseChecker):
+    """
+    {{ item_id }}: {{ description | truncate(80) }}
+    
+    Checking Types:
+    - Type 1: requirements=N/A, pattern_items [], waivers=N/A/0 → Boolean Check
+    - Type 2: requirements>0, pattern_items [...], waivers=N/A/0 → Value Check
+    - Type 3: requirements>0, pattern_items [...], waivers>0 → Value Check with Waiver Logic
+    - Type 4: requirements=N/A, pattern_items [], waivers>0 → Boolean Check with Waiver Logic
+    
+    Template Library v1.1.0:
+    - Uses InputFileParserMixin for parsing (parse_log_with_patterns, normalize_command)
+    - Uses WaiverHandlerMixin for waiver processing (parse_waive_items, match_waiver_entry)
+    - Uses OutputBuilderMixin for result construction (build_complete_output)
+    """
+    
+    # =========================================================================
+    # UNIFIED DESCRIPTIONS - Class-level constants (LLM-Generated)
+    # =========================================================================
+{% if class_constants %}
+    {{ class_constants | indent(4, first=False) }}
+{% else %}
+    FOUND_DESC = "Item found"
+    MISSING_DESC = "Item not found"
+    WAIVED_DESC = "Item waived"
+    FOUND_REASON = "Found in input file"
+    MISSING_REASON = "Not found in input file"
+    WAIVED_BASE_REASON = "Waived per configuration"
+{% endif %}
+    
+    def __init__(self):
+        """Initialize the checker."""
+        super().__init__(
+            check_module="{{ check_module | default('UNKNOWN') }}",
+            item_id="{{ item_id }}",
+            item_desc="{{ description | truncate(100) }}"
+        )
+        # MANDATORY: Metadata tracking for debug (Golden pattern)
+        # Used by helper methods to track line numbers for DetailItem
+        self._metadata: Dict[str, Dict[str, Any]] = {}
+{% if instance_vars %}
+        # Additional instance variables (LLM-Generated)
+        {{ instance_vars | indent(8, first=False) }}
+{% else %}
+        # Store parsed data
+        self._parsed_items: List[Dict] = []
+{% endif %}
+    
+    # =========================================================================
+    # Main Check Execution (Template - Fixed, v2.1 Golden-Aligned)
+    # =========================================================================
+    
+    def execute_check(self) -> CheckResult:
+        """
+        Execute check with automatic type detection and delegation.
+        
+        v2.1: Aligned with Golden design pattern:
+        1. Parse input files first via _parse_input_files()
+        2. Pass parsed data to _execute_typeN(parsed_data)
+        
+        Returns:
+            CheckResult based on detected checker type
+        """
+        try:
+            if self.root is None:
+                raise RuntimeError("Checker not initialized. Call init_checker() first.")
+            
+            # Parse input files first (Golden pattern)
+            parsed_data = self._parse_input_files()
+            
+            # Detect checker type (use BaseChecker method)
+            checker_type = self.detect_checker_type()
+            
+            # Execute based on type, passing parsed data
+            if checker_type == 1:
+                return self._execute_type1(parsed_data)
+            elif checker_type == 2:
+                return self._execute_type2(parsed_data)
+            elif checker_type == 3:
+                return self._execute_type3(parsed_data)
+            else:  # checker_type == 4
+                return self._execute_type4(parsed_data)
+        except ConfigurationError as e:
+            return e.check_result
+    
+    # =========================================================================
+    # Input Parsing (LLM-Generated)
+    # =========================================================================
+    
+{{ parse_method | indent(4, first=True) }}
+    
+    # =========================================================================
+    # Type 1: Boolean Check (LLM-Generated)
+    # =========================================================================
+    
+{{ execute_type1 | indent(4, first=True) }}
+    
+    # =========================================================================
+    # Type 2: Value Check (LLM-Generated)
+    # =========================================================================
+    
+{{ execute_type2 | indent(4, first=True) }}
+    
+    # =========================================================================
+    # Type 3: Value Check with Waiver Logic (LLM-Generated)
+    # =========================================================================
+    
+{{ execute_type3 | indent(4, first=True) }}
+    
+    # =========================================================================
+    # Type 4: Boolean Check with Waiver Logic (LLM-Generated)
+    # =========================================================================
+    
+{{ execute_type4 | indent(4, first=True) }}
+
+{% if helper_methods %}
+    # =========================================================================
+    # Helper Methods (LLM-Generated)
+    # =========================================================================
+    
+{{ helper_methods | indent(4, first=True) }}
+{% endif %}
+
+
+# ============================================================================
+# Entry Point (Template - Fixed, Golden-Aligned)
+# ============================================================================
+
+def init_checker() -> {{ class_name }}:
+    """Initialize and return the checker instance."""
+    checker = {{ class_name }}()
+    checker.init_checker()
+    return checker
+
+
+if __name__ == '__main__':
+    checker = init_checker()
+    checker.execute_check()
+    checker.write_output()

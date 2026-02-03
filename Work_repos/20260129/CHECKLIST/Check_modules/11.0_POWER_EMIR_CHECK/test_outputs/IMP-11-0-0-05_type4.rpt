@@ -1,0 +1,7 @@
+PASS:IMP-11-0-0-05:Confirm generate all the power library with detail view correctly.
+Warn Occurrence: 1
+1: Warn: item1: Waiver not matched - no corresponding library found: Test waiver[WAIVER]
+Info Occurrence: 3
+1: Info: gpio_ffgnp_0p825v_125c_cbest_CCbest_T. In line 26, C:\dev_workspace\AI-Agent Checklist Automation\CHECKLIST\CHECKLIST\IP_project_folder\logs\gpio_ffgnp_0p825v_125c_cbest_CCbest_T.LibGen.log: GDS file configuration found in log
+2: Info: sram_ffgnp_0p825v_125c_cbest_CCbest_T. In line 26, C:\dev_workspace\AI-Agent Checklist Automation\CHECKLIST\CHECKLIST\IP_project_folder\logs\sram_ffgnp_0p825v_125c_cbest_CCbest_T.LibGen.log: GDS file configuration found in log
+3: Info: tech_ffgnp_0p825v_125c_cbest_CCbest_T: GDS file configuration found in log

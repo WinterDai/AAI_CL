@@ -1,0 +1,9 @@
+description: 'TODO: Confirm the preserve cell list of all modes(Func/DFT/etc) are
+  added to don’t touch list if design have.'
+requirements:
+  value: N/A
+  pattern_items: []
+input_files: []
+waivers:
+  value: N/A
+  waive_items: []

@@ -1,0 +1,9 @@
+PASS:IMP-11-0-0-03:Confirm activity file was used? If not, provide default switching activity values in comments field.
+IMP-11-0-0-03-INFO01: [WAIVED_INFO]: Waived information:
+  Severity: Info Occurrence: 1
+  - Explanation: Activity configuration validation is informational during early power analysis iterations
+IMP-11-0-0-03-INFO02: [WAIVED_AS_INFO]: No activity configuration detected (neither activity file nor defaults):
+  Severity: Info Occurrence: 2
+  - 'read_activity_file' finished successfully
+  - 'set_default_switching_activity' finished successfully
+

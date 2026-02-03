@@ -1,0 +1,5 @@
+PASS:IMP-11-0-0-03:Confirm activity file was used? If not, provide default switching activity values in comments field.
+Info Occurrence: 3
+1: Info: Explanation: Activity configuration validation is informational during early power analysis iterations: Explanation: Activity configuration validation is informational during early power analysis iterations[WAIVED_INFO]
+2: Info: 'read_activity_file' finished successfully: Required activity configuration pattern not satisfied - no valid activity setup detected[WAIVED_AS_INFO]
+3: Info: 'set_default_switching_activity' finished successfully: Required activity configuration pattern not satisfied - no valid activity setup detected[WAIVED_AS_INFO]

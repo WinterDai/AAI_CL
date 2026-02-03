@@ -1,0 +1,3 @@
+-route_global_with_power_driven true      # enums={false true}, default=false, user setting, private
+-route_global_exp_power_driven_effort medium
+                                          # string, default=none, user setting, private

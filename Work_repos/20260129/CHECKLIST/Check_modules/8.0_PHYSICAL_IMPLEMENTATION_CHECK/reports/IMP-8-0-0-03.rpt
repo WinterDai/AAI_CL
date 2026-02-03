@@ -1,0 +1,6 @@
+PASS:IMP-8-0-0-03:Confirm routing blockages are created around the block edges.
+Info Occurrence: 4
+1: Info: Bottom edge. In line 1, C:\Users\yuyin\OneDrive - Cadence Design Systems Inc\2025\Checklist\AAI\CHECKLIST_V3\CHECKLIST\IP_project_folder\reports\8.0\IMP-8-0-0-03.rpt: Required edge blockage patterns matched and validated
+2: Info: Left edge. In line 1, C:\Users\yuyin\OneDrive - Cadence Design Systems Inc\2025\Checklist\AAI\CHECKLIST_V3\CHECKLIST\IP_project_folder\reports\8.0\IMP-8-0-0-03.rpt: Required edge blockage patterns matched and validated
+3: Info: Right edge. In line 1, C:\Users\yuyin\OneDrive - Cadence Design Systems Inc\2025\Checklist\AAI\CHECKLIST_V3\CHECKLIST\IP_project_folder\reports\8.0\IMP-8-0-0-03.rpt: Required edge blockage patterns matched and validated
+4: Info: Top edge. In line 1, C:\Users\yuyin\OneDrive - Cadence Design Systems Inc\2025\Checklist\AAI\CHECKLIST_V3\CHECKLIST\IP_project_folder\reports\8.0\IMP-8-0-0-03.rpt: Required edge blockage patterns matched and validated

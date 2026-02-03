@@ -1,0 +1,5 @@
+FAIL:IMP-17-0-0-00:Confirm data has been copied to final release area? Provide a directory location in the comments field.
+IMP-17-0-0-00-ERROR01: Configuration error:
+  Severity: Fail Occurrence: 1
+  - input_files is empty in YAML configuration
+
