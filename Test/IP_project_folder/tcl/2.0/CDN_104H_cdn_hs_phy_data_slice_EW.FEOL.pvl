@@ -1,7 +1,0 @@
-
-abort_on_layout_error YES
-layout_primary "CDN_104H_cdn_hs_phy_data_slice_EW"
-layout_path "dbs/CDN_104H_cdn_hs_phy_data_slice_EW.OUTwoD.merged.gds.gz"
-layout_format		GDSII
-include "/projects/yunbao_N6_80bits_EW_PHY_OD_6400/libs/ruledeck/Dummy/Dummy_FEOL_Pegasus_6nm_001.11a.slice"
-results_db -drc FEOL.gds -gdsii _FEOL;

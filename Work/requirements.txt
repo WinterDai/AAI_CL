@@ -1,3 +1,0 @@
-# Python dependencies for L0-L6 Framework
-pytest>=7.0.0
-pyyaml>=6.0

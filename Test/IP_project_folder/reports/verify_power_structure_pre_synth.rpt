@@ -1,5 +1,0 @@
-RTL1.2: Variable/signal is assigned by multiple non-blocking assignments
-    Type: Design     Severity: Warning    Occurrence: 1
-    1: phy_mb_eom_pd_ctrl/align_pd_cal_run
-       on line 616 in file '/projects/ucie_t3_pd/FRONT_END/work/yyin/design/trunk_0711/rtl/phy_mb_top/phy_mb_eom_pd_ctrl.sv'
-

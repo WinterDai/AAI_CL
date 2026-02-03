@@ -1,3 +1,0 @@
-"""
-Regression Testing Package
-"""
