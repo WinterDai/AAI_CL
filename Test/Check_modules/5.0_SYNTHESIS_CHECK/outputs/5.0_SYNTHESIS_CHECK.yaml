@@ -1,0 +1,358 @@
+module: 5.0_SYNTHESIS_CHECK
+stage: Initial
+generated_at: 2025-12-18T15:27:18
+check_items: 
+  IMP-5-0-0-00: 
+    executed: true
+    status: pass
+    description: Confirm synthesis is using lib models for timing?
+    infos: 
+      - index: 1
+        detail: tcbn03e_bwp143mh117l3p48cpd_base_elvtssgnp_0p675v_m40c_cworst_CCworst_T_ccs
+        source_line: 7
+        source_file: 'C:\Users\wentao\AAI_local\AAI\Main_Work\ACL\CHECKLIST\CHECKLIST\IP_project_folder\reports\qor.rpt'
+        reason: Library loaded successfully
+      - index: 2
+        detail: tcbn03e_bwp143mh117l3p48cpd_base_lvtssgnp_0p675v_m40c_cworst_CCworst_T_ccs
+        source_line: 8
+        source_file: 'C:\Users\wentao\AAI_local\AAI\Main_Work\ACL\CHECKLIST\CHECKLIST\IP_project_folder\reports\qor.rpt'
+        reason: Library loaded successfully
+      - index: 3
+        detail: tcbn03e_bwp143mh117l3p48cpd_base_svtssgnp_0p675v_m40c_cworst_CCworst_T_ccs
+        source_line: 9
+        source_file: 'C:\Users\wentao\AAI_local\AAI\Main_Work\ACL\CHECKLIST\CHECKLIST\IP_project_folder\reports\qor.rpt'
+        reason: Library loaded successfully
+      - index: 4
+        detail: tcbn03e_bwp143mh117l3p48cpd_base_ulvtssgnp_0p675v_m40c_cworst_CCworst_T_ccs
+        source_line: 10
+        source_file: 'C:\Users\wentao\AAI_local\AAI\Main_Work\ACL\CHECKLIST\CHECKLIST\IP_project_folder\reports\qor.rpt'
+        reason: Library loaded successfully
+      - index: 5
+        detail: tcbn03e_bwp143mh169l3p48cpd_base_elvtssgnp_0p675v_m40c_cworst_CCworst_T_ccs
+        source_line: 11
+        source_file: 'C:\Users\wentao\AAI_local\AAI\Main_Work\ACL\CHECKLIST\CHECKLIST\IP_project_folder\reports\qor.rpt'
+        reason: Library loaded successfully
+      - index: 6
+        detail: tcbn03e_bwp143mh169l3p48cpd_base_lvtssgnp_0p675v_m40c_cworst_CCworst_T_ccs
+        source_line: 12
+        source_file: 'C:\Users\wentao\AAI_local\AAI\Main_Work\ACL\CHECKLIST\CHECKLIST\IP_project_folder\reports\qor.rpt'
+        reason: Library loaded successfully
+      - index: 7
+        detail: tcbn03e_bwp143mh169l3p48cpd_base_svtssgnp_0p675v_m40c_cworst_CCworst_T_ccs
+        source_line: 13
+        source_file: 'C:\Users\wentao\AAI_local\AAI\Main_Work\ACL\CHECKLIST\CHECKLIST\IP_project_folder\reports\qor.rpt'
+        reason: Library loaded successfully
+      - index: 8
+        detail: tcbn03e_bwp143mh169l3p48cpd_base_ulvtssgnp_0p675v_m40c_cworst_CCworst_T_ccs
+        source_line: 14
+        source_file: 'C:\Users\wentao\AAI_local\AAI\Main_Work\ACL\CHECKLIST\CHECKLIST\IP_project_folder\reports\qor.rpt'
+        reason: Library loaded successfully
+      - index: 9
+        detail: tcbn03e_bwp143mh286l3p48cpd_base_elvtssgnp_0p675v_m40c_cworst_CCworst_T_ccs
+        source_line: 15
+        source_file: 'C:\Users\wentao\AAI_local\AAI\Main_Work\ACL\CHECKLIST\CHECKLIST\IP_project_folder\reports\qor.rpt'
+        reason: Library loaded successfully
+      - index: 10
+        detail: tcbn03e_bwp143mh286l3p48cpd_base_lvtssgnp_0p675v_m40c_cworst_CCworst_T_ccs
+        source_line: 16
+        source_file: 'C:\Users\wentao\AAI_local\AAI\Main_Work\ACL\CHECKLIST\CHECKLIST\IP_project_folder\reports\qor.rpt'
+        reason: Library loaded successfully
+      - index: 11
+        detail: tcbn03e_bwp143mh286l3p48cpd_base_svtssgnp_0p675v_m40c_cworst_CCworst_T_ccs
+        source_line: 17
+        source_file: 'C:\Users\wentao\AAI_local\AAI\Main_Work\ACL\CHECKLIST\CHECKLIST\IP_project_folder\reports\qor.rpt'
+        reason: Library loaded successfully
+      - index: 12
+        detail: tcbn03e_bwp143mh286l3p48cpd_base_ulvtssgnp_0p675v_m40c_cworst_CCworst_T_ccs
+        source_line: 18
+        source_file: 'C:\Users\wentao\AAI_local\AAI\Main_Work\ACL\CHECKLIST\CHECKLIST\IP_project_folder\reports\qor.rpt'
+        reason: Library loaded successfully
+      - index: 13
+        detail: tcbn03e_bwp143mh286l3p48cpd_mb_elvtssgnp_0p675v_m40c_cworst_CCworst_T_ccs
+        source_line: 19
+        source_file: 'C:\Users\wentao\AAI_local\AAI\Main_Work\ACL\CHECKLIST\CHECKLIST\IP_project_folder\reports\qor.rpt'
+        reason: Library loaded successfully
+      - index: 14
+        detail: tcbn03e_bwp143mh286l3p48cpd_mb_lvtssgnp_0p675v_m40c_cworst_CCworst_T_ccs
+        source_line: 20
+        source_file: 'C:\Users\wentao\AAI_local\AAI\Main_Work\ACL\CHECKLIST\CHECKLIST\IP_project_folder\reports\qor.rpt'
+        reason: Library loaded successfully
+      - index: 15
+        detail: tcbn03e_bwp143mh286l3p48cpd_mb_svtssgnp_0p675v_m40c_cworst_CCworst_T_ccs
+        source_line: 21
+        source_file: 'C:\Users\wentao\AAI_local\AAI\Main_Work\ACL\CHECKLIST\CHECKLIST\IP_project_folder\reports\qor.rpt'
+        reason: Library loaded successfully
+      - index: 16
+        detail: tcbn03e_bwp143mh286l3p48cpd_mb_ulvtssgnp_0p675v_m40c_cworst_CCworst_T_ccs
+        source_line: 22
+        source_file: 'C:\Users\wentao\AAI_local\AAI\Main_Work\ACL\CHECKLIST\CHECKLIST\IP_project_folder\reports\qor.rpt'
+        reason: Library loaded successfully
+  IMP-5-0-0-01: 
+    executed: true
+    status: fail
+    description: Confirm synthesis is using lef data for PLE optimization?
+    failures: 
+      - index: 1
+        detail: 'C:\Users\wentao\AAI_local\AAI\Main_Work\ACL\CHECKLIST\CHECKLIST\IP_project_folder\logs\genus.syn_generic.log'
+        source_line: N/A
+        source_file: N/A
+        reason: Input file not found or unreadable - check configuration
+  IMP-5-0-0-02: 
+    executed: true
+    status: fail
+    description: Confirm synthesis is using qrc tech file for RC data?
+    failures: 
+      - index: 1
+        detail: 'C:\Users\wentao\AAI_local\AAI\Main_Work\ACL\CHECKLIST\CHECKLIST\IP_project_folder\logs\genus.syn_generic.log'
+        source_line: N/A
+        source_file: N/A
+        reason: Input file not found or unreadable - check configuration
+  IMP-5-0-0-03: 
+    executed: true
+    status: pass
+    description: Confirm target standard cell library corners are correct?
+    infos: 
+      - index: 1
+        detail: ssgnp_0p675v_m40c_cworst_CCworst_T
+        source_line: 5
+        source_file: 'C:\Users\wentao\AAI_local\AAI\Main_Work\ACL\CHECKLIST\CHECKLIST\IP_project_folder\reports\qor.rpt'
+        reason: Library corner is being used
+  IMP-5-0-0-04: 
+    executed: true
+    status: fail
+    description: Confirm Jasper RTL Lint Summary report has no Error?
+    failures: 
+      - index: 1
+        detail: input_files is empty in YAML configuration
+        source_line: N/A
+        source_file: N/A
+        reason: input_files is empty in YAML configuration
+  IMP-5-0-0-05: 
+    executed: true
+    status: fail
+    description: Confirm Unresolved References are none?
+    failures: 
+      - index: 1
+        detail: 'C:\Users\wentao\AAI_local\AAI\Main_Work\ACL\CHECKLIST\CHECKLIST\IP_project_folder\logs\genus.syn_generic.log'
+        source_line: N/A
+        source_file: N/A
+        reason: Input file not found or unreadable - check configuration
+  IMP-5-0-0-06: 
+    executed: true
+    status: fail
+    description: Confirm Empty Modules are none or explained?
+    failures: 
+      - index: 1
+        detail: 'C:\Users\wentao\AAI_local\AAI\Main_Work\ACL\CHECKLIST\CHECKLIST\IP_project_folder\logs\genus.syn_generic.log'
+        source_line: N/A
+        source_file: N/A
+        reason: Input file not found or unreadable - check configuration
+  IMP-5-0-0-07: 
+    executed: true
+    status: fail
+    description: Confirm that there are no other violations or errors (max cap, max transition etc)?
+    failures: 
+      - index: 1
+        detail: 'C:\Users\wentao\AAI_local\AAI\Main_Work\ACL\CHECKLIST\CHECKLIST\IP_project_folder\logs\genus.syn_generic.log'
+        source_line: N/A
+        source_file: N/A
+        reason: Input file not found or unreadable - check configuration
+  IMP-5-0-0-08: 
+    executed: true
+    status: pass
+    description: Confirm Multidriven Report clean?
+    infos: 
+      - index: 1
+        detail: pin:111
+        source_line: 12
+        source_file: 'C:\Users\wentao\AAI_local\AAI\Main_Work\ACL\CHECKLIST\CHECKLIST\IP_project_folder\reports\multidriven.rpt'
+        reason: Multidriven sequential pin
+      - index: 2
+        detail: pin:222
+        source_line: 12
+        source_file: 'C:\Users\wentao\AAI_local\AAI\Main_Work\ACL\CHECKLIST\CHECKLIST\IP_project_folder\reports\multidriven.rpt'
+        reason: Multidriven sequential pin
+      - index: 3
+        detail: hpin:333
+        source_line: 17
+        source_file: 'C:\Users\wentao\AAI_local\AAI\Main_Work\ACL\CHECKLIST\CHECKLIST\IP_project_folder\reports\multidriven.rpt'
+        reason: Multidriven hierarchical pin
+      - index: 4
+        detail: hpin:444
+        source_line: 17
+        source_file: 'C:\Users\wentao\AAI_local\AAI\Main_Work\ACL\CHECKLIST\CHECKLIST\IP_project_folder\reports\multidriven.rpt'
+        reason: Multidriven hierarchical pin
+  IMP-5-0-0-09: 
+    executed: true
+    status: pass
+    description: Confirm Latches Inferred documented?
+    infos: 
+      - index: 1
+        detail: CKLNQD1BWP143M286H3P48CPDLVT
+        source_line: 1
+        source_file: 'C:\Users\wentao\AAI_local\AAI\Main_Work\ACL\CHECKLIST\CHECKLIST\IP_project_folder\reports\latch.rpt'
+        reason: 'Latch cell inferred (count: 4)'
+  IMP-5-0-0-10: 
+    executed: true
+    status: pass
+    description: "Confirm don't use cell list includes forbidden cells specified in IMP-1-0-0-02?"
+    infos: 
+      - index: 1
+        detail: N/A
+        source_line: N/A
+        source_file: N/A
+        reason: No forbidden cells configured in IMP-1-0-0-02, check passed
+  IMP-5-0-0-11: 
+    executed: true
+    status: fail
+    description: Confirm synthesis log has been peer reviewed and all warnings are understood and annotated with an explanation?
+    failures: 
+      - index: 1
+        detail: 'C:\Users\wentao\AAI_local\AAI\Main_Work\ACL\CHECKLIST\CHECKLIST\IP_project_folder\logs\genus.syn_generic.log'
+        source_line: N/A
+        source_file: N/A
+        reason: Input file not found or unreadable - check configuration
+      - index: 2
+        detail: 'C:\Users\wentao\AAI_local\AAI\Main_Work\ACL\CHECKLIST\CHECKLIST\IP_project_folder\logs\genus.syn_opt.log'
+        source_line: N/A
+        source_file: N/A
+        reason: Input file not found or unreadable - check configuration
+  IMP-5-0-0-12: 
+    executed: true
+    status: pass
+    description: Confirm synthesis Quality Of Results (QOR) meets requirements (timing, area, power)?
+    infos: 
+      - index: 1
+        detail: TNS:-0.0
+        source_line: 50
+        source_file: 'C:\Users\wentao\AAI_local\AAI\Main_Work\ACL\CHECKLIST\CHECKLIST\IP_project_folder\reports\qor.rpt'
+        reason: TNS:-0.0
+      - index: 2
+        detail: Area:225.338
+        source_line: 67
+        source_file: 'C:\Users\wentao\AAI_local\AAI\Main_Work\ACL\CHECKLIST\CHECKLIST\IP_project_folder\reports\qor.rpt'
+        reason: Area:225.338
+      - index: 3
+        detail: Power:1297805.093
+        source_line: 73
+        source_file: 'C:\Users\wentao\AAI_local\AAI\Main_Work\ACL\CHECKLIST\CHECKLIST\IP_project_folder\reports\qor.rpt'
+        reason: Power:1297805.093
+  IMP-5-0-0-13: 
+    executed: true
+    status: fail
+    description: Confirm scan is successfully inserted and non-scannable flops have been peer reviewed and waived?
+    failures: 
+      - index: 1
+        detail: fail_dft_rules:ttttt
+        source_line: 4
+        source_file: 'C:\Users\wentao\AAI_local\AAI\Main_Work\ACL\CHECKLIST\CHECKLIST\IP_project_folder\reports\dft_chainRegs.rpt'
+        reason: Registers fail DFT rules
+      - index: 2
+        detail: misc_non_scan:u_accum/genus_inserted_cg_RC_CG_HIER_INST3/RC_CGIC_INST
+        source_line: 11
+        source_file: 'C:\Users\wentao\AAI_local\AAI\Main_Work\ACL\CHECKLIST\CHECKLIST\IP_project_folder\reports\dft_chainRegs.rpt'
+        reason: Registers are misc. non-scan
+      - index: 3
+        detail: misc_non_scan:u_cmn_cpi_sreg_if/genus_inserted_cg_RC_CG_HIER_INST1/RC_CGIC_INST
+        source_line: 11
+        source_file: 'C:\Users\wentao\AAI_local\AAI\Main_Work\ACL\CHECKLIST\CHECKLIST\IP_project_folder\reports\dft_chainRegs.rpt'
+        reason: Registers are misc. non-scan
+      - index: 4
+        detail: misc_non_scan:u_cmn_dpi_sreg_if/genus_inserted_cg_RC_CG_HIER_INST0/RC_CGIC_INST
+        source_line: 11
+        source_file: 'C:\Users\wentao\AAI_local\AAI\Main_Work\ACL\CHECKLIST\CHECKLIST\IP_project_folder\reports\dft_chainRegs.rpt'
+        reason: Registers are misc. non-scan
+      - index: 5
+        detail: misc_non_scan:u_phalign_fsm/u_counter/genus_inserted_cg_RC_CG_HIER_INST2/RC_CGIC_INST
+        source_line: 11
+        source_file: 'C:\Users\wentao\AAI_local\AAI\Main_Work\ACL\CHECKLIST\CHECKLIST\IP_project_folder\reports\dft_chainRegs.rpt'
+        reason: Registers are misc. non-scan
+      - index: 6
+        detail: pass_not_in_chains:aaaaaa
+        source_line: 16
+        source_file: 'C:\Users\wentao\AAI_local\AAI\Main_Work\ACL\CHECKLIST\CHECKLIST\IP_project_folder\reports\dft_chainRegs.rpt'
+        reason: Registers pass dft rule checks but are not a part of scan chains
+      - index: 7
+        detail: pass_not_in_chains:bbbbbb
+        source_line: 16
+        source_file: 'C:\Users\wentao\AAI_local\AAI\Main_Work\ACL\CHECKLIST\CHECKLIST\IP_project_folder\reports\dft_chainRegs.rpt'
+        reason: Registers pass dft rule checks but are not a part of scan chains
+  IMP-5-0-0-14: 
+    executed: true
+    status: fail
+    description: Confirm that there are no other violations or errors (max cap, max transition etc)?
+    failures: 
+      - index: 1
+        detail: UDFF_th1/Q
+        source_line: 33
+        source_file: 'C:\Users\wentao\AAI_local\AAI\Main_Work\ACL\CHECKLIST\CHECKLIST\IP_project_folder\reports\design_check_rule.rpt'
+        reason: Max transition violation
+      - index: 2
+        detail: UBUF_fm/Y
+        source_line: 37
+        source_file: 'C:\Users\wentao\AAI_local\AAI\Main_Work\ACL\CHECKLIST\CHECKLIST\IP_project_folder\reports\design_check_rule.rpt'
+        reason: Max transition violation
+      - index: 3
+        detail: UDFF_to/Q
+        source_line: 41
+        source_file: 'C:\Users\wentao\AAI_local\AAI\Main_Work\ACL\CHECKLIST\CHECKLIST\IP_project_folder\reports\design_check_rule.rpt'
+        reason: Max transition violation
+    warnings: 
+      - index: 1
+        detail: N/A
+        source_line: 48
+        source_file: 'C:\Users\wentao\AAI_local\AAI\Main_Work\ACL\CHECKLIST\CHECKLIST\IP_project_folder\reports\design_check_rule.rpt'
+        reason: Max_fanout design rule has no constraints
+  IMP-5-0-0-15: 
+    executed: true
+    status: pass
+    description: Confirm all DFT checks pass?
+  IMP-5-0-0-16: 
+    executed: true
+    status: pass
+    description: Confirm CPF/UPF file  has passed Conformal LP quality checks against RTL prior to synthesis?
+  IMP-5-0-0-17: 
+    executed: true
+    status: fail
+    description: Confirm CPF/UPF file  has passed Conformal LP quality checks against post DFT insertion synthesis netlist?
+    failures: 
+      - index: 1
+        detail: "Top boundary output port 'scan_out[100]' is undriven"
+        source_line: 7
+        source_file: 'C:\Users\wentao\AAI_local\AAI\Main_Work\ACL\CHECKLIST\CHECKLIST\IP_project_folder\reports\verify_power_structure_post_dft.rpt'
+        reason: Top boundary port with output/inout direction does not have a driver
+      - index: 2
+        detail: "Top boundary output port 'scan_out[101]' is undriven"
+        source_line: 8
+        source_file: 'C:\Users\wentao\AAI_local\AAI\Main_Work\ACL\CHECKLIST\CHECKLIST\IP_project_folder\reports\verify_power_structure_post_dft.rpt'
+        reason: Top boundary port with output/inout direction does not have a driver
+      - index: 3
+        detail: "Top boundary output port 'scan_out[100]' is undriven for test"
+        source_line: 11
+        source_file: 'C:\Users\wentao\AAI_local\AAI\Main_Work\ACL\CHECKLIST\CHECKLIST\IP_project_folder\reports\verify_power_structure_post_dft.rpt'
+        reason: Top boundary port with output/inout direction does not have a driver2
+      - index: 4
+        detail: "Top boundary output port 'scan_out[101]' is undriven for test"
+        source_line: 12
+        source_file: 'C:\Users\wentao\AAI_local\AAI\Main_Work\ACL\CHECKLIST\CHECKLIST\IP_project_folder\reports\verify_power_structure_post_dft.rpt'
+        reason: Top boundary port with output/inout direction does not have a driver2
+  IMP-5-0-0-18: 
+    executed: true
+    status: pass
+    description: Document DFT Stuck-At % meets or exceeds expected value?
+    infos: 
+      - index: 1
+        detail: ATCov%:96.19%
+        source_line: 66
+        source_file: 'C:\Users\wentao\AAI_local\AAI\Main_Work\ACL\CHECKLIST\CHECKLIST\IP_project_folder\logs\log_create_logic_tests_FULLSCAN_cdn_sd2101_i3p765_vm130_6x2ya2yb2yc2yd1ye1ga1gb_atpg_stuckat'
+        reason: 'DFT Stuck-At coverage: 96.19%'
+  IMP-5-0-0-19: 
+    executed: true
+    status: pass
+    description: Document DFT Transition % meets or exceeds expected value?
+    infos: 
+      - index: 1
+        detail: ATCov%:40.6%
+        source_line: 38
+        source_file: 'C:\Users\wentao\AAI_local\AAI\Main_Work\ACL\CHECKLIST\CHECKLIST\IP_project_folder\logs\log_create_logic_delay_tests_FULLSCAN_cdn_sd2101_i3p765_vm130_6x2ya2yb2yc2yd1ye1ga1gb_atpg_dynamic'
+        reason: 'DFT Transition coverage: 40.6%'

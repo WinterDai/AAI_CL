@@ -1,0 +1,39 @@
+Check type : max_transition
+---------------------------
+     ----------------------------------------------------------------------------------------------  
+      Pin Name               Required          Actual            Slack             View              
+     ----------------------------------------------------------------------------------------------  
+     u_pma_top/u_pma_ana_wrapper/u_pma_ana/pma_ana_data_m
+                           0.0000            0.5108            -0.5108           at_speed_rcff_0p825v_125c_pcff_cmin_pcff3_hold
+
+     u_pma_top/u_pma_ana_wrapper/u_pma_ana/pma_ana_data_p
+                           0.0000            0.5108            -0.5108           at_speed_rcff_0p825v_125c_pcff_cmin_pcff3_hold
+
+     atb_1                 0.4000            0.8285            -0.4285           at_speed_rcff_0p825v_125c_pcff_cmin_pcff3_hold
+
+     atb_0                 0.4000            0.8277            -0.4277           at_speed_rcff_0p825v_125c_pcff_cmin_pcff3_hold
+
+     u_pma_top/u_pma_ana_wrapper/u_pma_ana/cmnda_rext
+                                                               0.3500            0.7666            -0.4166           at_speed_rcff_0p825v_125c_pcff_cmin_pcff3_hold
+
+     cmnda_rext            0.4000            0.7666            -0.3666           at_speed_rcff_0p825v_125c_pcff_cmin_pcff3_hold
+
+     u_pma_top/u_pma_ana_wrapper/u_pma_ana/cmnda_ref_clk_int
+                                                                    0.1000            0.4306            -0.3306           at_speed_rcff_0p825v_125c_pcff_cmin_pcff3_hold
+
+     FE_ECO_0828_fix_transC52_cmn_ref_clk_int/clk
+                           0.2050            0.3373            -0.1323           at_speed_rcff_0p825v_125c_pcff_cmin_pcff3_hold
+
+     u_pma_top/u_pma_ana_wrapper/u_pma_ana/rxda_atbsel_onehot[17]
+                           0.3000            0.3418            -0.0418           at_speed_rcff_0p825v_125c_pcff_cmin_pcff3_hold
+
+     cmn_ref_clk_int       0.4000            0.4306            -0.0306           at_speed_rcff_0p825v_125c_pcff_cmin_pcff3_hold
+
+     u_pma_top/u_pma_ana_wrapper/u_pma_ana/rxda_epath_error_threshold[54]
+                           0.3000            0.3094            -0.0094           at_speed_rcff_0p825v_125c_pcff_cmin_pcff3_hold
+
+     u_pma_top/u_pma_ana_wrapper/u_pma_ana/data_se_pd_ctrl
+                           0.0000            0.0023            -0.0023           at_speed_rcff_0p825v_125c_pcff_cmin_pcff3_hold
+
+     u_pma_top/u_pma_ana_wrapper/u_pma_ana/txda_drv_post_emp_start[1]
+                           0.3000            0.3010            -0.0010           at_speed_rcff_0p825v_125c_pcff_cmin_pcff3_hold

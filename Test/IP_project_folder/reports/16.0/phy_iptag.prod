@@ -1,0 +1,20 @@
+### Example DDR IP tag product name input for TSMC IP Tag writer
+### comment start with "#".
+### characters after " " (space) will be ignored
+
+H       // DDR PHY Architecture. Fixed width [1], 1 character descriptive code. Codes: H = HS PHY L = LP PHY U = UT PHY P = Phase PHY (obsolete)
+P       // IP Type. Field Type: Fixed width [1], 1 character descriptive code.  Codes: P = PHY D = Data Slice A = Address Slice C = Address Control Slice M = Address Control Master Slice B = Memory Clock Bit Macro S = Subsystem (Controller & PHY) T = Test Chip I = IO & PLL Only
+C       // IO Type Type/Vendor. IO type are differentiated to reflect differences in supported features and pin interface. Fixed width [1]. 1 character descriptive code. Codes: C = Cadence Design Systems A = Aragio B = Analog Bits T = TSMC S = ST N = None/Not Applicable
+F       // Package Type. Fixed width [1], 1 character descriptive code.  F = flip chip S = flipchip staggered bumps, W = wirebond Q = wirebond staggered pads X = macro does not contain IO bonding structures
+S       // PLL Vendor. Fixed width [1], 1 character descriptive code.  S = Silicon Creations C = Cadence Design Systems N = None/Not Applicable
+C       // PHY Source. Fixed width [1], 1 character descriptive code.  C = Custom F = PHY Factory
+_       // delimiter between phy type and protocol names
+D5D4    // Protocol Code, the DDR protocol(s) supported by the design at the PHY level. Variable width, each protocol listed and separated by "_"  Starting from the highest DDR protocol(s) to the lowest, then followed by highest LPDDR protocol(s). Field Contents: 2 character code with lookup table that will be common for all IP covered by this standard.  Codes: D4 = DDR4, D3 = DDR3, D2 = DDR2, L4 = LPDDR4, L3 = LPDDR3, L2 = LPDDR2
+_       // delimiter between protocol names and process name
+T5G  // Process Name, identifies the foundry and process node. This is a variable width field to accommodate differences between the naming conventions between different foundries.  Because it is a variable width field, a trailing delimiter is needed. Variable width, : n character descriptive code with table to provide clarification. Field Format: NGT, N = Code for foundry name G = Geometry T = Process variant Examples: T28HPM
+$       // IP Tag delimiter between product name and configuration name
+CTIME  //Please don't change this item. Release Date Code, Description: Code that uniquely identifies the design based on the date and time the final gds was released.  Considering that a large number of PHY configurations can be generated from the system, the release date code is used to guarantee each customer delivery has a unique code, within one minute granularity.  Field Type: Fixed width [13] Field Contents: Starts with character C, followed by 12 character date code in YYYYMMDDhhmm format, describing the date and time the design was released. The time is captured in hour and minute in 24 hour format.
+$       // IP Tag delimiter between product name and configuration name
+17M1X1Xb1Xe1Ya1Yb5Y2Yy2Yx2R  //
+End   
+~

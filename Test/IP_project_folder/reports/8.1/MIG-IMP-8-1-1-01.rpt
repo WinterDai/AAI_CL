@@ -1,0 +1,32 @@
+Net: pad_mem_data[47]
+RC Corner: rcworst_CCworst_T_125c
+Total Cap  = 291.239105 ff
+Total Res  = 0.379863 ohms
+Total XCap = 0.000000 ff
+Cap Distribution:
+  Total Ground Cap = 291.239105 ff
+  XCap With Nets:
+Net: pad_mem_data[46]
+RC Corner: rcworst_CCworst_T_125c
+Total Cap  = 235.482056 ff
+Total Res  = 0.238066 ohms
+Total XCap = 0.000000 ff
+Cap Distribution:
+  Total Ground Cap = 235.482056 ff
+  XCap With Nets:
+Net: pad_mem_data[57]
+RC Corner: rcworst_CCworst_T_125c
+Total Cap  = 234.223434 ff
+Total Res  = 0.234149 ohms
+Total XCap = 0.000000 ff
+Cap Distribution:
+  Total Ground Cap = 234.223434 ff
+  XCap With Nets:
+Net: pad_mem_data[56]
+RC Corner: rcworst_CCworst_T_125c
+Total Cap  = 313.009827 ff
+Total Res  = 0.381849 ohms
+Total XCap = 0.000000 ff
+Cap Distribution:
+  Total Ground Cap = 313.009827 ff
+  XCap With Nets:

@@ -1,0 +1,93 @@
+
+// Command: set_mapping_method -sensitive
+0
+// Command: set_verification_information ./lec_map_to_final_run/write_lec_generate_label.1_phy_cmn_phase_align_digtop_synv_db
+// Note: Verification information ./lec_map_to_final_run/write_lec_generate_label.1_phy_cmn_phase_align_digtop_synv_db does not exist. New directory created.
+// Verification information is set to /projects/ucie_t3_pd/FRONT_END/work/yyin/NU/work/phy_cmn_phase_align_digtop/yuyin_test_run_5/data/syn_opt.lec.20250908_133930/./lec_map_to_final_run/write_lec_generate_label.1_phy_cmn_phase_align_digtop_synv_db.
+0
+// Command: set lec_version_required "19.10203"
+19.10203
+// Command: if {$lec_version < $lec_version_required} {
+//              puts "Support for reading compressed implementation information files"
+//              puts "was added in LEC version 19.10-d203."
+//              error "A more recent version must be used or the compression must be disabled."
+//          }
+// Command: set_parallel_option -threads 1,4 -norelease_license -tmpdir ./lec_map_to_final_run
+// Number of threads is set to 1,4.
+0
+// Command: set_compare_options -threads 1,4
+Set computing threads of compare to 1,4.
+0
+// Command: dofile pre_read.tcl
+0
+// Command: set_lowpower_option -native_1801
+
+
+// Command: puts "Dofile includes automatically generated DFT constraints. Carefully review the constraints"
+Dofile includes automatically generated DFT constraints. Carefully review the constraints
+// Command: puts "to ensure that functional logic is not excluded from verification."
+to ensure that functional logic is not excluded from verification.
+// Command: puts "Use 'write_do_lec -no_dft' to comment out DFT constraints."
+Use 'write_do_lec -no_dft' to comment out DFT constraints.
+// Command: add_pin_constraints 0 {cmnda_scanmode} -golden
+0
+// Command: add_pin_constraints 0 {cmnda_scanen} -golden
+0
+// Command: add_pin_constraints 0 {cmnda_scanen_cg} -golden
+0
+// Command: add_ignored_outputs {test_so1} -golden
+// Warning: 'test_so1' is not a primary output in module 'phy_cmn_phase_align_digtop' in Golden
+// Warning: No ignored pin is added in Golden
+
+// Parsing file /projects/sd2002_sf4x_pd/FRONT_END/coryd/tag/macros/sf4x/nldm/cmn_ana.sspg_0p675v_m40c.lib ...
+// Parsing file /projects/sd2002_sf4x_pd/FRONT_END/coryd/tag/macros/sf4x/nldm/cmn_ana.sspg_0p675v_m40c_2.lib ...
+// Parsing file /projects/sd2002_sf4x_pd/FRONT_END/coryd/tag/macros/sf4x/nldm/xcvr_ana.sspg_0p675v_m40c.lib ...
+// Parsing file /projects/sd2002_sf4x_pd/FRONT_END/coryd/tag/macros/sf4x/nldm/xcvr_ana.sspg_0p675v_m40c_2.lib ...
+// Warning: (RTL9.17) Cell doesn't have any output pins or all output pins are undriven (blackboxed) (occurrence:210)
+// Warning: (RTL9.21) Liberty cell with interface_timing attribute set to true was not an empty cell (occurrence:2)
+// Note: (RTL9.26) Liberty pin with internal_node use default input_map (occurrence:504)
+// Note: (HRC1.2) Module/entity is not translated (blackboxed) (occurrence:1)
+// Note: (LIB_LINT_034) Nominal conditions of macro cell are extracted for domains which can work with single nominal voltage (occurrence:2)
+// Warning: (LIB_LINT_068) PG_PIN direction is changed to "input", which is compatible with the defined PG_TYPE. (occurrence:1)
+// Warning: (LIB_LINT_121) Data pin of cell has antenna_diode_related_power_pins attribute or antenna_diode_related_ground_pins attribute, but also has related_power_pin or related_ground_pin (occurrence:6)
+
+// Command: report_black_box
+1111
+2222
+// Command: report_modules
+Golden:
+   phy_cmn_phase_align_digtop 
+      cdnsdru_accumulator_dyn_v0_phalign_mod_17_8h00 
+         CDN_DP_add_unsigned_434 
+         genus_inserted_cg_RC_CG_MOD_3 
+      cdnsdru_cdrlf_ll_eye_plot_ctrl_v1_128_4
+
+
+
+// Command: report_compare_data -class nonequivalent -class abort -class notcompared
+0 Non-equivalent point(s) reported
+0 Abort point(s) reported
+0 Not-compared point(s) reported
+0 compared point(s) reported
+================================================================================
+Compared points      PO     DFF       Total   
+--------------------------------------------------------------------------------
+Equivalent           289    400       689     
+================================================================================
+0
+// Command: report_verification -verbose
+================================================================================
+                            Verification Report
+--------------------------------------------------------------------------------
+Category                                                                  Count
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+6. Compare Results:                                                        PASS
+     Number of EQ compare points:                              689
+     Number of NON-EQ compare points:                          0
+     Number of Aborted compare points:                         0
+     Number of Uncompared compare points :                     0
+================================================================================
+pass
+// Command: report_statistics

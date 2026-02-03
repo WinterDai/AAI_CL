@@ -1,0 +1,69 @@
+SPEF files for RC Corner pcss_cmax_pcss3_m40c:
+Top-level spef file './inputs/spef/cdn_sd2101_i3p765_vm130_6x2ya2yb2yc2yd1ye1ga1gb_pcss3_m40c.spef.gz'.
+Start spef parsing (MEM=9105.92).
+The SPEF file, './inputs/spef/cdn_sd2101_i3p765_vm130_6x2ya2yb2yc2yd1ye1ga1gb_pcss3_m40c.spef.gz', has encountered the error/warning message(s) during its reading.
+**WARN: (SPEF-1169):	Invalid value of the parameter '$LAYER' in extended syntax found in D_NET that starts on line 321133. The SPEF parser will ignore it.
+**WARN: (SPEF-1169):	Invalid value of the parameter '$LAYER' in extended syntax found in D_NET that starts on line 676113. The SPEF parser will ignore it.
+**WARN: (SPEF-1169):	Invalid value of the parameter '$LAYER' in extended syntax found in D_NET that starts on line 676113. The SPEF parser will ignore it.
+**WARN: (SPEF-1169):	Invalid value of the parameter '$LAYER' in extended syntax found in D_NET that starts on line 942871. The SPEF parser will ignore it.
+**WARN: (SPEF-1169):	Invalid value of the parameter '$LAYER' in extended syntax found in D_NET that starts on line 1203235. The SPEF parser will ignore it.
+**WARN: (SPEF-1169):	Invalid value of the parameter '$LAYER' in extended syntax found in D_NET that starts on line 1433082. The SPEF parser will ignore it.
+**WARN: (SPEF-1169):	Invalid value of the parameter '$LAYER' in extended syntax found in D_NET that starts on line 1706026. The SPEF parser will ignore it.
+**WARN: (SPEF-1169):	Invalid value of the parameter '$LAYER' in extended syntax found in D_NET that starts on line 1984258. The SPEF parser will ignore it.
+**WARN: (SPEF-1169):	Invalid value of the parameter '$LAYER' in extended syntax found in D_NET that starts on line 2075068. The SPEF parser will ignore it.
+**WARN: (SPEF-1169):	Invalid value of the parameter '$LAYER' in extended syntax found in D_NET that starts on line 2213981. The SPEF parser will ignore it.
+**WARN: (SPEF-1169):	Invalid value of the parameter '$LAYER' in extended syntax found in D_NET that starts on line 2325381. The SPEF parser will ignore it.
+**WARN: (SPEF-1169):	Invalid value of the parameter '$LAYER' in extended syntax found in D_NET that starts on line 2460873. The SPEF parser will ignore it.
+**WARN: (SPEF-1169):	Invalid value of the parameter '$LAYER' in extended syntax found in D_NET that starts on line 3721916. The SPEF parser will ignore it.
+**WARN: (SPEF-1169):	Invalid value of the parameter '$LAYER' in extended syntax found in D_NET that starts on line 4185758. The SPEF parser will ignore it.
+**WARN: (SPEF-1169):	Invalid value of the parameter '$LAYER' in extended syntax found in D_NET that starts on line 4234921. The SPEF parser will ignore it.
+**WARN: (SPEF-1169):	Invalid value of the parameter '$LAYER' in extended syntax found in D_NET that starts on line 4340578. The SPEF parser will ignore it.
+SPEF file ./inputs/spef/cdn_sd2101_i3p765_vm130_6x2ya2yb2yc2yd1ye1ga1gb_pcss3_m40c.spef.gz.
+Number of Resistors     : 1275998
+Number of Ground Caps   : 1252977
+Number of Coupling Caps : 680338
+Number of VIA Resistors : 573381
+	statistical model annotated with exact area match : 573381
+	statistical model annotated with area snapped     : 0
+
+End spef parsing (MEM=9114.92 CPU=0:00:48.7 REAL=0:00:06.0).
+1506 nets are missing in SPEF file. The names of these nets are saved in ./pcss_cmax_pcss3_m40c.missing_nets.rpt.
+report_annotated_parasitics -list_not_annotated -list_real_net -list_broken_net
+<CMD> report_annotated_parasitics -list_not_annotated -list_real_net -list_broken_net
+####################################################################
+# report_annotated_parasitics: Tue Jun 10 14:16:39 2025
+#   view: func_rcss_0p675v_m40c_pcss_cmax_pcss3_setup
+#   -list_not_annotated
+#   -list_real_net
+#   -list_broken_net
+####################################################################
+#
+# list syntax: type: net_name [nrCap Cap nrXCap XCap nrRes Res]
+# unit: pF, Ohm
+
+# List of total 2 not-annotated dummy net (floating):
+Not-annotated dummy net (floating): [u_pcs_top/u_phy_pcs_reg_ctrl/u_pcs_cdb_reg/UNCONNECTED_HIER_Z314] [ 0 0 0 0 0 0 ]
+Not-annotated dummy net (floating): [u_pcs_top/u_phy_pcs_reg_ctrl/u_pcs_cdb_reg/UNCONNECTED_HIER_Z313] [ 0 0 0 0 0 0 ]
+
+# Summary of Annotated Parasitics:
++------------------------------------------------------------------------------+
+|    Net Type         |    Count   |   Annotated (%)     | Not Annotated (%)   |
++---------------------+------------+---------------------+---------------------+
+| total               |     109259 |      69583 63.69%   |      39676 36.31%   |
++---------------------+------------+---------------------+---------------------+
+| assign (*)          |         21 |          0  0.00%   |         21 100.00%   |
+| 0-term:floating (*) |      38149 |          0  0.00%   |      38149 100.00%   |
+| 1-term:no load      |       1517 |         11  0.73%   |       1506 99.27%   |
+| real net (complete) |      69572 |      69572 100.00%   |          0  0.00%   |
+| real net (broken)   |          0 |          0  0.00%   |          0  0.00%   |
+| zero capacitance net|          0 |          0  0.00%   |          0  0.00%   |
++------------------------------------------------------------------------------+
+Note for Net Types marked "(*)":  Such nets are never timed, but reported here for informational purpose.
+
++-----------------------------------------------------------------+
+| Annotated |    Res (MOhm)   |    Cap (pF)     |    XCap (pF)    |
++-----------+-----------------+-----------------+-----------------+
+| Count     |       1275998   |       1252977   |        680338   |
+| Value     |       54.0873   |      134.1312   |       34.5496   |
++-----------------------------------------------------------------+
+<CMD> set_multi_cpu_usage -localCpu 8 -threadInfo 2

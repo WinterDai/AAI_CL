@@ -1,0 +1,13 @@
+description: Confirm check full path group timing reports (in2out/in2reg/reg2out/reg2reg/default/cgdefault).
+requirements:
+  value: N/A
+  pattern_items: []
+input_files:
+- ${CHECKLIST_ROOT}/IP_project_folder/logs/sta_post_syn.log
+waivers:
+  value: 2
+  waive_items:
+  - name: cgdefault
+    reason: Design has no clock gating cells - cgdefault not applicable
+  - name: default
+    reason: Default path group not used in this design

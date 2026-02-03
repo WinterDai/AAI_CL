@@ -1,0 +1,21 @@
+================================================================================
+Golden:
+--------------------------------------------------------------------------------
+Unmapped points   DFF       Total   
+--------------------------------------------------------------------------------
+Not-mapped       2       2     
+================================================================================
+Revised:
+--------------------------------------------------------------------------------
+Unmapped points   DFF    DLAT      Total   
+--------------------------------------------------------------------------------
+Not-mapped       1     1         2      
+================================================================================
+Unmapped point (not-mapped: xxxx):
+  (G)   625   DFF  /u_cmn_func/u_bg_cal_ctrl_apb_icfg/u_bin_cal_apb/u_bin_cal_apb_cdb_regs/cal_iter_tmr_reg_reg[15]
+Unmapped point (not-mapped: xxxx):
+  (G)   627   DFF  /u_cmn_func/u_bg_cal_ctrl_apb_icfg/u_bin_cal_apb/u_bin_cal_apb_cdb_regs/cal_iter_tmr_reg_reg[14]
+Unmapped point (not-mapped: xxxx):
+  (R)   628   DFF  /u_cmn_func/u_bg_cal_ctrl_apb_icfg/u_bin_cal_apb/u_bin_cal_apb_cdb_regs/cal_iter_tmr_reg_reg[13]
+Unmapped point (not-mapped: xxxx):
+  (R)   629   DLAT /u_cmn_pll0_ctrl/u_pll_ctrl_sm_v3_top/pllsm_clk_gate_en_reg/U$2

@@ -1,0 +1,11 @@
+﻿description: Confirm the netlist/spef version is correct.
+requirements:
+  value: 1
+  pattern_items:
+  - Generated on:*2025*
+input_files:
+- ${CHECKLIST_ROOT}/IP_project_folder/logs/sta_post_syn.log
+waivers:
+  value: 0
+  waive_items:
+  - Current stage is synthesis, SPEF check is not applicable.

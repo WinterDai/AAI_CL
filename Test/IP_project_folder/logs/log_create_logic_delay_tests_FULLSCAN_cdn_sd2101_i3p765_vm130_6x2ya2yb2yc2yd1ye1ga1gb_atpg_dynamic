@@ -1,0 +1,52 @@
+Starting Command: create_logic_delay_tests 
+
+INFO (TDA-005): Command Line Invocation: 
+            create_logic_delay_tests -clockconstraints ./clockconstraints.txt -ignoremeasures ./ignoremeasure.txt -testmode FULLSCAN -experiment cdn_sd2101_i3p765_vm130_6x2ya2yb2yc2yd1ye1ga1gb_atpg_dynamic -workdir /projects/sd2101_i3_pd/FRONT_END/work/mydai/rdf_delivery_to_Intel_VM_eFV.3/rdf/blocks/cdn_sd2101_i3p765_vm130_6x2ya2yb2yc2yd1ye1ga1gb/synth/data_/FULLSCAN -stdout summary  [end TDA_005]
+
+INFO (TDA-014): Cadence(R) Modus(TM) DFT Software Solution, Version 23.12-s005_1, built Aug 15 2024 (linux26_64) [end TDA_014]
+
+INFO (TDA-015): Log File: /projects/sd2101_i3_pd/FRONT_END/work/mydai/rdf_delivery_to_Intel_VM_eFV.3/rdf/blocks/cdn_sd2101_i3p765_vm130_6x2ya2yb2yc2yd1ye1ga1gb/synth/data_/FULLSCAN/testresults/logs/log_create_logic_delay_tests_FULLSCAN_cdn_sd2101_i3p765_vm130_6x2ya2yb2yc2yd1ye1ga1gb_atpg_dynamic_102825151414-758742000 [end TDA_015]
+
+INFO (TDA-007): Job Information:
+            Date Started: Tuesday Oct 28 15:14:14 2025  IST
+            Host machine is nfdpcsr151, x86_64 running Linux 4.18.0-372.26.1.el8_6.x86_64.
+            This job is process number 620790.
+[end TDA_007]
+
+INFO (TDA-009): Options/Values information.
+            (options marked with '*' have program generated values,
+             options marked with '+' were specified to default.)
+
+            -WORKDIR /projects/sd2101_i3_pd/FRONT_END/work/mydai/rdf_delivery_to_Intel_VM_eFV.3/rdf/blocks/cdn_sd2101_i3p765_vm130_6x2ya2yb2yc2yd1ye1ga1gb/synth/data_/FULLSCAN
+            -TESTMODE FULLSCAN
+            -EXPERIMENT cdn_sd2101_i3p765_vm130_6x2ya2yb2yc2yd1ye1ga1gb_atpg_dynamic
+
+            -LOGFILE /projects/sd2101_i3_pd/FRONT_END/work/mydai/rdf_delivery_to_Intel_VM_eFV.3/rdf/blocks/cdn_sd2101_i3p765_vm130_6x2ya2yb2yc2yd1ye1ga1gb/synth/data_/FULLSCAN/testresults/logs/log_create_logic_delay_tests_FULLSCAN_cdn_sd2101_i3p765_vm130_6x2ya2yb2yc2yd1ye1ga1gb_atpg_dynamic_102825151414-758742000
+            -STDOUT summary
+            -clockconstraints ./clockconstraints.txt
+            -ignoremeasures ./ignoremeasure.txt
+[end TDA_009]
+
+-------------------------------------------------------------------------------
+*                      Message Summary                                        *
+-------------------------------------------------------------------------------
+ Count  Number             First Instance of Message Text
+------- ------             ------------------------------
+
+  INFO Messages...
+    186 INFO (TDA-220):   --- Tests ---   Faults     ---- ATCov ----   -- Faults --   - Elapsed Time -   
+      5 INFO (TDA-221):   1425    1210          0    49.56%   40.60%       140052           09:10.89     
+      1 INFO (TFW-117): Modus checked out a modus_atpg license.   
+      1 INFO (TFW-119): Modus checked in a modus_atpg license.   
+      1 INFO (TPU-960): Ignore Measure file: './ignoremeasure.txt' opened successfully    
+      2 INFO (TPU-961): Ignoring measure at 'eDP'    
+      1 INFO (TPU-963): 0 latches and 2 POs will be ignored for measurement and fault detection.    
+      4 INFO (TTC-110): Starting Scan Test generation                                                    
+      6 INFO (TTU-031): 2 ignored scan bits have been read in from ./ignoremeasure.txt.   
+
+  WARNING Messages...
+      1 WARNING (TTC-018): verify_test_structures issued Warning messages related to Stored Pattern tests.  Poor test coverage may result.   
+
+ For a detailed explanation of a message and a suggested user response execute 'msgHelp <message id>'.  For example: msgHelp TDA-009
+
+-------------------------------------------------------------------------------

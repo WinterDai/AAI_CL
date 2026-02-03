@@ -1,0 +1,583 @@
+---
+
+# Hierarchical Checker Architecture 10.2: The Verified Implementation Master (FINAL LOCKED)
+
+**Status**: **DEPLOYMENT READY**. Use this document for coding, testing, and QA.
+**Scope**: This **10.2** is the single source of truth and includes all locked constraints from 7.0–10.1 plus 10.2 audit fixes.
+**Rule**: This spec must not contain “or / optional / if you want” branches.
+**Note (Locked Override)**: This spec is **stricter than** `/mnt/data/global_rules.md` in specific areas (e.g., `value` type, wildcard matching uses `fnmatchcase`, alternatives trimming/empty handling). When conflict exists, **this 10.2 spec wins**.
+
+---
+
+## 1. Atomic Contracts (Layer 2: LLM Plugin)
+
+All LLM-generated code MUST implement these Pure Functions. **No IO allowed.**
+**PR5**: Atoms MUST NOT filter based on requirements/waivers patterns.
+
+### Atom A: `extract_context`
+
+* **PR5 (No Filtering)**: Extract all candidate items; do NOT consult patterns.
+* **PR2 (Indirect Reference)**: May emit `parsed_fields["indirect_reference"]` as `str` or `List[str]`.
+* **Value Type Hard Lock**: `value` MUST be `str`. Non-string extractions MUST be cast to `str` inside Atom A.
+
+```python
+from typing import List, Dict, Any
+ParsedItem = Dict[str, Any]
+
+def extract_context(text: str, source_file: str) -> List[ParsedItem]:
+    """
+    Input: Full file text + absolute source path (metadata only).
+    Output: List[ParsedItem].
+
+    Mandatory keys per item:
+      - 'value': str  (MUST be str; cast inside Atom)
+      - 'source_file': str
+      - 'line_number': int | None  (1-based index)
+      - 'matched_content': str
+      - 'parsed_fields': dict (MUST exist; default {} if empty)
+
+    Special key inside parsed_fields:
+      - 'indirect_reference': str | List[str]
+        (Framework normalizes & performs recursion; Atom MUST NOT open files)
+
+    Constraints:
+      1) Pure function: NO open(), NO gzip, NO path resolution.
+      2) PR5: NO filtering by expected patterns.
+    """
+    pass
+```
+
+### Atom B: `validate_logic`
+
+* **None Handling (Locked)**: `parsed_fields=None` MUST be treated as `{}` internally (no exceptions).
+* **Hard Precedence (Locked)**: Alternatives > Regex > Wildcard > Default.
+* **Alternatives Split Semantics (Locked)**:
+
+  * Separator is `'|'` (hard separator)
+  * `alt.strip()` applies to each segment
+  * Empty segments ignored (`"a||b"` ≡ `"a|b"`, `"|a||"` matches `"a"`)
+  * **NO escaping** (`\|` is two chars `\` and `|`)
+  * Inside alternatives, regex/wildcard chars are **literal**
+* **Wildcard (Locked)**: MUST use `fnmatch.fnmatchcase` (case-sensitive, OS-independent).
+* **Regex Error (Locked)**: On `re.error`, return `is_match=False` and `reason` MUST start with `"Invalid Regex:"`.
+* **Regex Mode Invalid Value (Locked)**: If `regex_mode` not in `{"search","match"}`, treat as `"search"` and MUST NOT raise.
+* **Default Match Invalid Value (Locked)**: If `default_match` not in `{"contains","exact"}`, treat as `"contains"` and MUST NOT raise.
+* **Case Sensitivity (Locked)**: All branches (`contains`, `exact`, `alternatives`, `wildcard`, `regex`) are case-sensitive. No implicit lower/upper conversion.
+
+```python
+from typing import Dict, Optional, Any
+MatchResult = Dict[str, Any]
+
+def validate_logic(
+    text: str, pattern: str, parsed_fields: Optional[Dict] = None,
+    default_match: str = "contains", regex_mode: str = "search"
+) -> MatchResult:
+    """
+    Output: MatchResult {'is_match': bool, 'reason': str, 'kind': str}
+    kind MUST be one of:
+      'alternatives'|'regex'|'wildcard'|'exact'|'contains'
+
+    HARD PRECEDENCE RULES:
+      1) Alternatives ('|'):
+         - Split by '|', strip, ignore empty.
+         - Apply 'contains' to each segment (ANY hit => match).
+         - NO escaping; regex/wildcard chars treated as literal inside alternatives.
+         - kind='alternatives'
+      2) Regex (startswith 'regex:'):
+         - If regex_mode invalid -> treat as 'search'
+         - Use re.search or re.match depending on regex_mode ('search'|'match').
+         - Catch re.error => is_match=False, reason="Invalid Regex: ...", kind='regex'
+      3) Wildcard ('*' or '?'):
+         - Use fnmatch.fnmatchcase (case sensitive).
+         - kind='wildcard'
+      4) Default:
+         - If default_match invalid -> treat as 'contains'
+         - If default_match='contains': substring check (pattern in text).
+         - If default_match='exact': full string equality (pattern == text).
+         - kind='contains' or 'exact'
+    """
+    pass
+```
+
+### Atom C: `check_existence`
+
+Used by Type 1 / Type 4 runners.
+Must return evidence for ResultAssembler to populate outputs.
+
+```python
+from typing import List, Dict, Any
+
+def check_existence(items: List[Dict]) -> Dict:
+    """
+    Output: {'is_match': bool, 'reason': str, 'evidence': List[ParsedItem]}
+    Evidence items MUST satisfy ParsedItem schema (same mandatory keys as Atom A).
+    """
+    pass
+```
+
+---
+
+## 2. Framework Specification (Fixed Python Code)
+
+### Layer 0: Orchestrator
+
+**Runtime Dispatch (Locked)**: `TYPE_RUNNERS = {1:..., 2:..., 3:..., 4:...}`.
+
+#### Config Normalization & Validation (Locked)
+
+Framework MUST normalize `req.value` and `waiver.value` before type decision:
+
+* **N/A Definition (Locked)**: missing key OR null OR (string after strip equals `"N/A"`). Numeric `0` is **NOT** N/A.
+* If value is a string numeric (e.g., `"0"`, `"2"`), Framework MUST parse to integer.
+* **Valid domain (Locked)**:
+
+  * `req.value` MUST be either N/A or an integer **>= 1**.
+  * `waiver.value` MUST be either N/A or an integer **>= 0**.
+* If outside domain, Framework MUST raise a **ConfigError** and MUST NOT dispatch any runner.
+
+#### Type Decider (Locked Mapping)
+
+After normalization:
+
+* `req.value = N/A`, `waiver.value = N/A` → **Type 1**
+* `req.value >= 1`, `waiver.value = N/A` → **Type 2**
+* `req.value >= 1`, `waiver.value >= 0` → **Type 3**
+* `req.value = N/A`, `waiver.value >= 0` → **Type 4**
+
+#### Internal Result State (Locked)
+
+Framework internal result state MUST always initialize list keys (empty lists by default), regardless of Type:
+
+`found_items`, `missing_items`, `extra_items`, `waived`, `unused_waivers`.
+
+Output Controller applies CR5 filtering only at final output.
+
+Integration MUST traverse all Types via Gate 3 test matrix.
+
+---
+
+### Layer 1: IO Engine (Locked)
+
+* Handles `open`, `gzip`, encoding fallback, absolute path normalization.
+* Supplies `text` to Atom A; Atoms never see file I/O.
+* Indirect Reference Resolution: Resolve relative paths against current file directory, normalize to absolute.
+
+---
+
+### Layer 2: Parsing Orchestration (Locked)
+
+#### Indirect Reference Normalization
+
+* If `parsed_fields["indirect_reference"]` is `str` → convert to `List[str]`
+* If `List[str]` → use as is
+
+Each indirect reference path MUST be resolved to absolute path using IO Engine rules.
+
+#### Recursion Guard
+
+* `max_depth = 5`
+* `visited_paths = set()` loop detection: revisiting a path MUST skip recursion (no infinite loop).
+
+#### Traversal Order (Locked)
+
+* Root files follow `input_files` list order (insertion order)
+* Indirect refs follow DFS discovery order
+
+#### Stable Sort Order (Locked) for `ParsedItems_All`
+
+`ParsedItems_All` MUST be sorted stably by:
+
+1. File Order: insertion + DFS recursion discovery order
+2. Line Order: ascending `line_number` (`None` treated as +∞, last)
+3. Extraction Order: preserve Atom A list order for same file & same line
+
+#### searched_files Source (Locked)
+
+`searched_files` MUST include all **successfully read** absolute paths in parsing traversal (root + indirect refs), then be **deduplicated and sorted alphabetically**.
+
+---
+
+### Layer 3: Check Assembler (Locked)
+
+#### Type 2 / Type 3 (Pattern Check Path)
+
+Consumption Strategy (Locked): **First Unconsumed Match**
+
+* For each requirement pattern (in order), scan `ParsedItems_All` (stable order)
+* First item that matches AND is not consumed → consume it, append to `found_items`, break inner loop
+* If no match found → produce one `missing_item` for that pattern
+
+**Policy Injection (Locked)**: Requirements matching MUST call Atom B with:
+
+* `default_match="contains"`, `regex_mode="search"`
+
+**Atom B Call Form (Locked)**:
+Framework MUST call Atom B exactly as:
+
+`validate_logic(text=item['value'], pattern=str(req_pattern), parsed_fields=item['parsed_fields'], default_match="contains", regex_mode="search")`.
+
+**Output Schema Enforcer (2.4.2 + Locked Extensions)**:
+
+* `found_items`: each item MUST contain full ParsedItem fields + `description`
+* `missing_items` MUST contain:
+
+  * `description`
+  * `expected` = `str(req_pattern)`
+  * `searched_files` = (abs paths, dedup + alpha sorted)
+  * `line_number = None`
+  * Ghost Fields (Locked):
+
+    * `source_file = ""`
+    * `matched_content = ""`
+    * `parsed_fields = {}`
+* `extra_items`: all unconsumed ParsedItems + `description`
+
+**Status Rule (Locked)**:
+
+* Type 2: `status = PASS` iff `missing_items` and `extra_items` are both empty; else `FAIL`.
+* Type 3: this rule is evaluated **after selective waiver MOVE**, and is **overridden to PASS** in global waiver mode (`waiver.value=0`).
+
+#### Type 1 / Type 4 (Existence Path)
+
+Framework MUST call Atom C on `ParsedItems_All` and map outputs deterministically:
+
+* If `AtomC.is_match=True`:
+
+  * `found_items = evidence` (each evidence item augmented with `description`)
+  * `missing_items = []`
+  * `status = PASS`
+* If `AtomC.is_match=False` (Locked — no optional branch):
+
+  * `found_items = []`
+  * `missing_items` MUST contain **exactly 1** ghost record:
+
+    * `description` (from item.yaml item description)
+    * `expected` MUST be exactly `"Existence check failed"`
+    * `searched_files` (abs paths, dedup + sorted)
+    * `line_number = None`
+    * Ghost Fields:
+
+      * `source_file = ""`
+      * `matched_content = ""`
+      * `parsed_fields = {}`
+  * `status = FAIL` (may be changed by waiver engine rules in Type 4)
+
+---
+
+## 3. Waiver Engine (Locked)
+
+### Global Waiver (`waiver.value = 0`) — Locked
+
+* **Invariant (Persistence)**: Violations remain in `missing_items` / `extra_items` (do NOT remove).
+* **Allowed Mutation Only (Locked, overwrite semantics)**:
+
+  * Set `severity = "INFO"`
+  * Set `tag = "[WAIVED_AS_INFO]"`
+* **Forbidden Mutation**: MUST NOT delete/rename existing keys.
+
+**Comment Injection to `waived` (Locked)**:
+For each string in `waivers.waive_items` (normalized to list and cast to str), append:
+
+`{'waiver_pattern': str(item_str), 'waiver_reason': "Global Waiver", 'tag': "[WAIVED_INFO]"}`
+
+**Global Status (Locked)**: Force `status = "PASS"`.
+
+**unused_waivers (Locked)**:
+In global mode, `unused_waivers` MUST be `[]` (Types that output this key).
+
+### Selective Waiver (`waiver.value > 0`) — Locked
+
+**Policy Injection (Locked)**: Framework MUST call Atom B with:
+
+* `default_match="exact"`, `regex_mode="match"`.
+
+**Target Set (Locked)**:
+
+* Type 4: `missing_items` only
+* Type 3: `missing_items` then `extra_items`
+
+**Violation Iteration Order (Locked)**:
+Iterate violations in order: `missing_items` list order first, then `extra_items` list order.
+
+**Violation Text Source (Locked)**:
+`violation_text = v.get("expected") or v.get("value") or v.get("description") or ""`
+Framework MUST cast `violation_text = str(violation_text)` before matching.
+
+**Atom B Call Form (Locked)**:
+Selective waiver matching MUST call:
+
+`validate_logic(text=violation_text, pattern=str(waive_pattern), parsed_fields=None, default_match="exact", regex_mode="match")`.
+
+**N-to-M Matching (Locked)**:
+
+* One waive pattern may match multiple violations.
+* Track match count per pattern.
+* `unused_waivers` contains only patterns with zero matches, preserving waive_items order:
+  `{'pattern': str(waive_pattern), 'reason': "Not matched"}`
+
+**Conflict Determinism (Locked)**:
+
+* For each violation, evaluate `waive_items` in order.
+* First matched pattern wins.
+* A violation MUST be moved at most once.
+
+**Invariant (Removal) + Order Stability (Locked)**:
+
+* Matched violations MUST be **MOVED** out of `missing_items`/`extra_items` into `waived`.
+* Remaining `missing_items` and `extra_items` MUST preserve original order.
+* `waived` MUST preserve the violation iteration order (missing then extra) and within each, original list order.
+
+**Waived Output Schema (2.4.3, Locked overwrite tag semantics)**:
+Each waived item = original violation fields +:
+
+* `waiver_pattern` (matched pattern string)
+* `waiver_reason` (default `"N/A"`)
+* set `tag = "[WAIVER]"`
+
+**Type 4 status after selective waiver (Locked)**:
+
+* After MOVE, `status = PASS` iff `missing_items` is empty; else `FAIL`.
+
+---
+
+## 4. Output Controller (CR5 Strict Keys, Locked)
+
+Must filter keys to exact set by Type ID; keys must exist even if empty lists:
+
+* Type 1: `status`, `found_items`, `missing_items`
+* Type 2: `status`, `found_items`, `missing_items`, `extra_items`
+* Type 3: `status`, `found_items`, `missing_items`, `extra_items`, `waived`, `unused_waivers`
+* Type 4: `status`, `found_items`, `missing_items`, `waived`, `unused_waivers`
+
+---
+
+## 5. Sandbox Gatekeepers (QA Layer, Locked)
+
+Generated code MUST pass ALL tests before Runtime integration.
+
+### Gate 1: Atomic Integrity (Signature + Schema + Value Type)
+
+**Signature Check (Locked)**:
+
+* Atom A/B/C functions MUST exist with exact names.
+* Atom B MUST accept `default_match` and `regex_mode` parameters.
+
+**Schema Check (Locked)**:
+Every ParsedItem from Atom A MUST contain keys:
+`{'value','source_file','line_number','matched_content','parsed_fields'}` with types:
+
+* `value`: str
+* `source_file`: str
+* `matched_content`: str
+* `parsed_fields`: dict
+* `line_number`: int or None
+
+**Value Type Safety (Locked)**:
+
+* Assert `isinstance(item['value'], str)` for every ParsedItem
+* Failure message MUST include: `"ParsedItem['value'] must be str"`
+
+### Gate 2: Matcher Robustness & Precedence (Atom B)
+
+Required test vectors (all MUST pass, no exceptions):
+
+1. None-Safety
+   `validate_logic("abc","a", parsed_fields=None)` → no exception
+
+2. Empty Alternatives
+   `validate_logic("abc","|a||")` → `is_match=True`, `kind="alternatives"`
+
+3. Bad Regex
+   `validate_logic("abc","regex:[", regex_mode="search")` → `is_match=False`, `kind="regex"`, reason startswith `"Invalid Regex:"`
+
+4. Literal Alternatives
+   `validate_logic("regex:^a", "regex:^a|zzz")` → match (contains literal)
+   `validate_logic("abc", "regex:^a|zzz")` → no match
+
+5. Wildcard Priority
+   `validate_logic("abc","a*c")` → wildcard branch (`kind="wildcard"`)
+
+6. Default Strategy Policy
+   `validate_logic("abc","b", default_match="contains")` → match (`kind="contains"`)
+   `validate_logic("abc","b", default_match="exact")` → no match (`kind="exact"`)
+
+7. regex_mode Invalid Value
+   `validate_logic("abc","regex:^a", regex_mode="BAD")` → MUST NOT raise; behavior equals `regex_mode="search"`
+
+### Gate 3: Integration Schema (CR5 + Waiver Logic + Sorting) — Locked Test Matrix
+
+Gate 3 MUST run the pipeline with the following **6 configurations** (minimum locked set):
+
+1. Type 1: `req=N/A`, `waiver=N/A`
+2. Type 2: `req=1`, `waiver=N/A`
+3. Type 3 (Global): `req=1`, `waiver=0`
+4. Type 3 (Selective): `req=1`, `waiver=1`
+5. Type 4 (Global): `req=N/A`, `waiver=0`
+6. Type 4 (Selective): `req=N/A`, `waiver=1`
+
+For each run, assert:
+
+* **Exact key set per Type** (CR5)
+* **missing_items schema**:
+
+  * `searched_files` is a sorted list of absolute paths (dedup + alpha sort)
+  * Ghost fields exist where required: `source_file=""`, `matched_content=""`, `parsed_fields={}`
+* **Parsing recursion (PR2)**:
+
+  * Mock Atom A returns `parsed_fields={"indirect_reference":"file2"}`
+  * Verify Framework loads `file2` and merges `ParsedItems_All`
+* **Stable sorting**:
+
+  * Verify final `ParsedItems_All` respects File>Line(None last)>Extraction order
+* **Global waiver mode** (runs 3 and 5):
+
+  * `missing_items`/`extra_items` carry `severity="INFO"` and `tag="[WAIVED_AS_INFO]"`
+  * `waived` contains comment records with `tag="[WAIVED_INFO]"` and `waiver_reason="Global Waiver"`
+  * `unused_waivers == []` for types that output it
+* **Selective waiver mode** (runs 4 and 6):
+
+  * Any item moved to `waived` MUST NOT remain in `missing_items`/`extra_items`
+  * `unused_waivers` MUST contain only patterns with zero matches, preserving waive_items order
+
+---
+
+
+
+graph TD
+    %% Define Styles
+    classDef framework fill:#e1f5fe,stroke:#01579b,stroke-width:2px;
+    classDef plugin fill:#fff9c4,stroke:#fbc02d,stroke-width:2px,stroke-dasharray: 5 5;
+    classDef qa fill:#ffebee,stroke:#c62828,stroke-width:2px;
+    classDef data fill:#f3e5f5,stroke:#4a148c,stroke-width:1px;
+
+    subgraph Layer0_Orchestrator [Layer 0: Orchestrator]
+        Config[item.yaml] --> Dispatcher{Type Decider}
+    end
+
+    subgraph Layer1_IO [Layer 1: IO Engine]
+        IO[File Reader & Path Resolver]
+    end
+
+    subgraph Layer2_Parsing [Layer 2: Parsing Orchestration]
+        PE[Parsing Engine]
+        Sort[Stable Sort: File>Line>Extraction]
+        Recurse[Recursion Guard: Max Depth 5]
+    end
+
+    subgraph Layer2_Plugin [Layer 2: LLM Plugin Atoms]
+        AtomA(Atom A: extract_context<br/>Value=str)
+        AtomB(Atom B: validate_logic<br/>Precedence: Alt>Regex>Wildcard)
+        AtomC(Atom C: check_existence)
+    end
+
+    subgraph Layer3_Check [Layer 3: Check Assembler]
+        CA[Check Logic]
+        Strat[Strategy: First Unconsumed Match]
+        Ghost[Add Ghost Fields]
+    end
+
+    subgraph Layer4_Waiver [Layer 4: Waiver Engine]
+        WE{Waiver Value?}
+        Global[Global Mode: value=0]
+        Select[Selective Mode: value>0]
+    end
+
+    subgraph Layer5_Output [Layer 5: Output Controller]
+        OC[CR5 Strict Key Filtering]
+    end
+
+    %% Data Flow
+    Dispatcher -->|Type 1-4| IO
+    IO -->|Text| AtomA
+    AtomA -->|ParsedItems| PE
+    PE --> Recurse -->|Indirect Ref| IO
+    PE --> Sort -->|ParsedItems_All| CA
+
+    %% Check Logic Flow
+    CA -->|Type 2/3 Requirements| AtomB
+    CA -->|Type 1/4 Existence| AtomC
+    
+    %% Policy Injection Arrows
+    CA -- "Policy: contains / search" --> AtomB
+    
+    %% Waiver Flow
+    CA -->|Violations| WE
+    WE -- "0" --> Global
+    WE -- ">0" --> Select
+    
+    Select -- "Policy: exact / match" --> AtomB
+    AtomB -->|Match?| Select
+    
+    Global -->|Mutated Items| OC
+    Select -->|Moved Items| OC
+    
+    %% Styling
+    class Dispatcher,IO,PE,Sort,Recurse,CA,Strat,Ghost,WE,Global,Select,OC framework;
+    class AtomA,AtomB,AtomC plugin;
+
+
+
+----
+
+
+flowchart TD
+    Start([Violations Input]) --> Decision{waivers.value?}
+    
+    %% Global Waiver Path
+    subgraph Global_Mode [Global Waiver (value=0)]
+        direction TB
+        G1[Target: missing_items + extra_items]
+        G2[Action: MUTATE]
+        G3[Set severity='INFO']
+        G4[Add tag='WAIVED_AS_INFO']
+        G5[Inject Comments to 'waived']
+        G6[Force Status = PASS]
+        
+        G1 --> G2 --> G3 --> G4 --> G5 --> G6
+    end
+    
+    %% Selective Waiver Path
+    subgraph Selective_Mode [Selective Waiver (value>0)]
+        direction TB
+        S1[Target: missing + extra]
+        S2[Load Waive Patterns]
+        Loop[Loop: For each Violation]
+        
+        subgraph Matching [N-to-M Matching]
+            M1{Match vs Patterns?}
+            Policy[Policy: exact / match]
+            AtomB[[Call Atom B]]
+        end
+        
+        Move[Action: MOVE]
+        S_Waived[Add to 'waived' list]
+        S_Keep[Keep in missing/extra]
+        CheckUnused{Pattern used?}
+        WARN[unused_waivers]
+        
+        S1 --> S2 --> Loop
+        Loop --> M1
+        Policy -.-> AtomB
+        M1 -- Input Text --> AtomB
+        AtomB -- is_match? --> Result{Result}
+        
+        Result -- Yes --> Move --> S_Waived
+        Result -- No --> S_Keep
+        
+        S_Waived --> CheckUnused
+        S_Keep --> CheckUnused
+        CheckUnused -- Count=0 --> WARN
+    end
+    
+    Decision -- "0" --> G1
+    Decision -- "> 0" --> S1
+    
+    G6 --> Output([Final Output])
+    WARN --> Output
+    
+    %% Styling
+    classDef mutation fill:#ffecb3,stroke:#ff6f00,stroke-width:2px;
+    classDef movement fill:#c8e6c9,stroke:#2e7d32,stroke-width:2px;
+    
+    class G1,G2,G3,G4,G5,G6 mutation;
+    class S1,S2,Move,S_Waived,S_Keep movement;

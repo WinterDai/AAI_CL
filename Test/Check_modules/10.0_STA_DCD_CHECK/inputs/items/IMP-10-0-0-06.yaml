@@ -1,0 +1,11 @@
+description: Confirm the SI setting is correct.
+requirements:
+  value: N/A
+  pattern_items: []
+input_files:
+- ${CHECKLIST_ROOT}/IP_project_folder/logs/sta_post_syn.log
+waivers:
+  value: 2
+  waive_items:
+  - SI configuration note 1
+  - SI configuration note 2

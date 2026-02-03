@@ -1,0 +1,12 @@
+Group0:
+    PinName: inst_data_path_top/inst_data_byte_macro/WR_CLK_GEN_0__inst_wr_slice_clk_gen/inst_wr_bit_clk_gen/inst_rst_n_clk4x_sync/inst_hic_dff_out/hic_dnt_sync_reg1/D ; cellPT: {522.88 464.8}
+    PinName: inst_data_path_top/inst_data_byte_macro/WR_CLK_GEN_0__inst_wr_slice_clk_gen/inst_wr_bit_clk_gen/inst_rst_n_clk4x_sync/inst_hic_dff_out/hic_dnt_sync_reg0/Q ; cellPT: {523.328 465.15}
+Group1:
+    PinName: inst_data_path_top/inst_data_byte_macro/WR_CLK_GEN_0__inst_wr_slice_clk_gen/inst_wr_bit_clk_gen/inst_rst_n_clk4x_sync/inst_hic_dff_out/hic_dnt_sync_reg2/D ; cellPT: {521.728 467.2}
+    PinName: inst_data_path_top/inst_data_byte_macro/WR_CLK_GEN_0__inst_wr_slice_clk_gen/inst_wr_bit_clk_gen/inst_rst_n_clk4x_sync/inst_hic_dff_out/hic_dnt_sync_reg1/Q ; cellPT: {522.624 464.55}
+Group2:
+    PinName: inst_data_path_top/inst_data_byte_macro/WR_CLK_GEN_0__inst_wr_slice_clk_gen/inst_wr_bit_clk_gen/inst_rst_n_clk4x_sync/inst_hic_mux2/hic_dnt_mux2/I0 ; cellPT: {521.472 467.48}
+    PinName: inst_data_path_top/inst_data_byte_macro/WR_CLK_GEN_0__inst_wr_slice_clk_gen/inst_wr_bit_clk_gen/inst_rst_n_clk4x_sync/inst_hic_dff_out/hic_dnt_sync_reg2/Q ; cellPT: {521.984 466.95}
+Group3:
+    PinName: inst_data_path_top/inst_data_byte_macro/WR_CLK_GEN_0__inst_wr_slice_clk_gen/inst_wr_bit_clk_gen/inst_rst_n_ctlr_clk4x_sync/inst_hic_dff_out/hic_dnt_sync_reg1/D ; cellPT: {526.592 464.8}
+    PinName: inst_data_path_top/inst_data_byte_macro/WR_CLK_GEN_0__inst_wr_slice_clk_gen/inst_wr_bit_clk_gen/inst_rst_n_ctlr_clk4x_sync/inst_hic_dff_out/hic_dnt_sync_reg0/Q ; cellPT: {526.4 463.95}/

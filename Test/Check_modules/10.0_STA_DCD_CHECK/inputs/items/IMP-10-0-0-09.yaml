@@ -1,0 +1,14 @@
+description: Confirm no SPEF annotation issue in STA.
+requirements:
+  value: 2
+  pattern_items:
+  - func_rcss_0p675v_m40c_pcss_cmax_pcss3_setup
+  - func_rcss_0p675v_125c_pcss_cmax_pcff3_setup
+input_files:
+- ${CHECKLIST_ROOT}/IP_project_folder/logs/sta_post_route.log
+- ${CHECKLIST_ROOT}/IP_project_folder/logs/func_rcss_0p675v_125c_pcss_cmax_pcff3_setup_sta_post_route.log
+waivers:
+  value: 0
+  waive_items:
+  - I have confirmed that the SPEF annotation issue is acceptable for this implementation
+    phase.

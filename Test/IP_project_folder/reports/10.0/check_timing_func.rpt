@@ -1,0 +1,41 @@
+    -------------------------------------------------------------------------------  
+                                 TIMING CHECK SUMMARY                                
+    -------------------------------------------------------------------------------  
+     Warning                            Warning Description              Number of   
+                                                                         Warnings    
+    -------------------------------------------------------------------------------  
+    clock_expected           Clock not found where clock is expected    2
+    ideal_clock_waveform     Clock waveform is ideal                    3
+    no_drive                 No drive assertion                         2
+    uncons_endpoint          Unconstrained signal arriving at end point 2
+    -------------------------------------------------------------------------------
+    ------------------------------------------------------------------------  
+                              TIMING CHECK DETAIL                             
+    ------------------------------------------------------------------------  
+     Pin                                         Warning               View   
+    ------------------------------------------------------------------------  
+    u_pma_top/u_xcvr_ra/u_pwr_isl_ctrl_sm_icfg_xcal/u_scan_mux_state_sandh/u_scan_mux_synth/u_scan_mux_synth/clk1
+                                     Clock not found where clock is expected
+                                                                      func_rcff_0p825v_125c_pcff_cmin_pcff3_hold
+    u_pma_top/u_xcvr_ra/u_pwr_isl_ctrl_sm_icfg_xcal/u_scan_mux_state_sandh/u_scan_mux_synth/u_scan_mux_synth/clk2
+                                     Clock not found where clock is expected
+                                                                      func_rcff_0p825v_125c_pcff_cmin_pcff3_hold
+    u_pcs_top/u_phy_pcs_reg_ctrl/u_eusb_phy_reg/Count_temp_reg_1/si
+                                     Unconstrained signal arriving at end point
+                                                                      func_rcff_0p825v_125c_pcff_cmin_pcff3_hold
+    u_pcs_top/u_phy_pcs_reg_ctrl/u_eusb_phy_reg/Count_temp_reg_1/ssb
+                                     Unconstrained signal arriving at end point
+                                                                      func_rcff_0p825v_125c_pcff_cmin_pcff3_hold
+    tx_bscan_ext_clockdr             No drive assertion               func_rcff_0p825v_125c_pcff_cmin_pcff3_hold
+    tx_bscan_ext_updatedr            No drive assertion               func_rcff_0p825v_125c_pcff_cmin_pcff3_hold
+    phy_scanout[80]                  Unconstrained signal arriving at end point
+                                                                      func_rcff_0p825v_125c_pcff_cmin_pcff3_hold
+    -----------------------------------------------------------------  
+                        TIMING CHECK IDEAL CLOCKS                      
+    -----------------------------------------------------------------  
+     Clock Waveform                   View                             
+    -----------------------------------------------------------------  
+    PHY_IO_RESET                     func_rcff_0p825v_125c_pcff_cmin_pcff3_hold
+    PHY_IO_ASYNC                     func_rcff_0p825v_125c_pcff_cmin_pcff3_hold
+    PHY_IO_CLK_VIRTUAL_300M          func_rcff_0p825v_125c_pcff_cmin_pcff3_hold
+    -----------------------------------------------------------------                                                                                                                                        

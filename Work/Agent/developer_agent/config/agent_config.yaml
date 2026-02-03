@@ -1,0 +1,60 @@
+# agent_config.yaml - Developer Agent Runtime Configuration
+# Based on Agent_Development_Spec.md v1.1
+
+# === 路径配置 ===
+paths:
+  search_root: "../../../Test/IP_project_folder/logs"    # 日志文件搜索根目录
+  item_specs_dir: "../../../Test/Check_modules/10.0_STA_DCD_CHECK/inputs/items"  # ItemSpec 文件目录
+  cache_dir: "../../../Test/Codegen/cache"               # 缓存存储目录
+  output_dir: "../../../Test/Codegen/output"             # 生成代码输出目录
+
+# === LLM 模型配置 (使用 JEDAI) ===
+# 可用模型 (model字段):
+#   - claude-sonnet-4-5     : Claude Sonnet 4.5 (推荐, 默认)
+#   - claude-opus-4         : Claude Opus 4
+#   - claude-opus-4-1       : Claude Opus 4.1
+#   - claude-3-7-sonnet     : Claude 3.7 Sonnet
+#   - azure-gpt-4o          : Azure GPT-4o
+#   - azure-gpt-5           : Azure GPT-5
+#   - gemini-2-5-pro        : Gemini 2.5 Pro
+#   - deepseek-r1-0528-maas : DeepSeek R1
+
+llm:
+  # Agent A (Parsing Expert) 模型配置
+  agent_a:
+    provider: "jedai"                         # jedai | openai | anthropic | azure
+    model: "claude-sonnet-4-5"                # Claude Sonnet 4.5 (默认推荐)
+    temperature: 0.2                          # 低温度保证代码稳定性
+    max_tokens: 4096
+  
+  # Agent B (Logic Expert) 模型配置
+  agent_b:
+    provider: "jedai"
+    model: "claude-sonnet-4-5"                # Claude Sonnet 4.5 (默认推荐)
+    temperature: 0.1                          # 更低温度，逻辑代码需要确定性
+    max_tokens: 4096
+  
+  # Reflect Node 模型配置
+  reflect:
+    provider: "jedai"
+    model: "claude-sonnet-4-5"                # Claude Sonnet 4.5 (默认推荐)
+    temperature: 0.1
+    max_tokens: 2048
+
+# === 缓存配置 ===
+cache:
+  retention_policy: "hourly"                  # 按小时保存检查点
+  max_checkpoints_per_hour: 10                # 每小时最多保留检查点数
+  cleanup_on_success: false                   # 成功后是否清理历史检查点
+  
+# === 执行控制 ===
+execution:
+  max_iterations: 3                           # 最大重试次数
+  timeout_per_stage: 300                      # 每阶段超时(秒)
+  enable_streaming: true                      # 是否启用流式输出
+
+# === 日志配置 ===
+logging:
+  level: "INFO"                               # DEBUG | INFO | WARNING | ERROR
+  log_file: "./logs/agent.log"
+  log_llm_calls: true                         # 是否记录 LLM 调用详情

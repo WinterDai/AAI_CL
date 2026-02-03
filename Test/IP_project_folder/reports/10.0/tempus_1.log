@@ -1,0 +1,55 @@
+Cadence Tempus(TM) Timing Solution.
+Copyright 2022 Cadence Design Systems, Inc. All rights reserved worldwide.
+
+Version:	v22.15-e082_1, built Wed Feb 7 15:01:50 PST 2024
+Options:	-execute set MAX_PATHS 50000;set MAX_PATHS_REG2REG 500000;set NWORST 5;set MAX_SLACK 0.01;set module_name cdn_sd2101_i3p765_vm130_6x2ya2yb2yc2yd1ye1ga1gb; set mode scan_shift; set view rcss_0p675v_125c_pcss_cmax_prcs3_hold -nowin -overwrite -init ./scr/do_tempus_rcss_0p675v_125c_pcss_cmax_prcs3_hold.tcl -log ./logs/cdn_sd2101_i3p765_vm130_6x2ya2yb2yc2yd1ye1ga1gb_do_tempusscan_shift_rcss_0p675v_125c_pcss_cmax_prcs3_hold.log 
+Date:		Wed Sep 10 13:39:47 2025
+Host:		nfdpcil023 (x86_64 w/Linux 3.10.0-1160.2.2.el7.x86_64) (24cores*48cpus*Intel(R) Xeon(R) Gold 6342 CPU @ 2.80GHz 36864KB)
+OS:		Red Hat Enterprise Linux Workstation 7.9 (Maipo)
+LSF:		Job 1772262 in cluster "nflsfdpc01" and queue "pd" on 1 cpu with -R "rusage[mem=40960]".
+
+License:
+		[13:39:47.039390] Configured Lic search path (22.01-s003): 5280@noidpclic-lb1:5280@noidpclic02:5280@noidpclic04:5281@noidpclic-lb1:5281@noidpclic02:5281@noidpclic04
+
+		tpsxl	Tempus Timing Signoff Solution XL	22.1	checkout succeeded
+		16 CPU jobs allowed with the current license(s). Use set_multi_cpu_usage to set your required CPU count.
+
+***************************************************************************************
+WARNING: R&D BUILD - use only as directed by your Cadence support team.
+INFO:    The prefix [DEV] has been added to the prompt as a reminder of that situation.
+***************************************************************************************
+
+The soft stacksize limit is either up to the hard limit or larger than 0.2% of RAM. No change is needed.
+environment variable TMPDIR is '/tmp/ssv_tmpdir_31909_oYedFZ'.
+#@ Processing -files option
+Sourcing tcl/tk file './scr/do_tempus_rcss_0p675v_125c_pcss_cmax_prcs3_hold.tcl' ...
+<CMD> set_multi_cpu_usage -localCpu 8 -threadInfo 2
+INFO:   tempusVersionMain = 22.15
+
+<CMD> define_proc_arguments segment_hold_timing -info {Report the hold the endpoint} -define_args {{-to "To pin" "to" string required}  {-delay_type "delay_type" "delay_type" string optional}  {-no_details "Supress details" "" boolean optional}}
+<CMD> define_proc_arguments segment_setup_timing -info {Report the setup the endpoint} -define_args {{-to "To pin" "to" string required}  {-delay_type "delay_type" "delay_type" string optional}  {-no_details "Supress details" "" boolean optional}}
+<CMD> define_proc_arguments segment_to_timing -info {Report timing for a path segment} -define_args {{-to "To pin" "to" string required}  {-delay_type "delay_type" "delay_type" string optional}  {-no_details "Supress details" "" boolean optional}}
+e is required for Tempus if SPICE correlation of ROP glitch needs to be performed. The missing attribute does not affect SI delay or glitch analysis. (File /process/intl3/data/stdcell/p765/INTL/lib765_g1i_210h_50pp_seq_hvt_pdk090-r3v0p0-fv/lib/lib765_g1i_210h_50pp_seq_hvt_rcss_0p675v_125c_pcss_cmax_ccslnt.lib.gz, Line 20)
+Reading   timing library /process/intl3/data/stdcell/p765/INTL/lib765_g1i_210h_50pp_seq_lvt_pdk090-r3v0p0-fv/lib/lib765_g1i_210h_50pp_seq_lvt_rcss_0p675v_125c_pcss_cmax_ccslnt.lib.gz.
+Read 705 cells in library lib765_g1i_210h_50pp_seq_lvt_rcss_0p675v_125c_pcss_cmax_ccslnt.
+**WARN: (TECHLIB-1320):	The user-defined attribute 'related_spice_node' is not present in any of the 'ccsn_first_stage' group. This attribute is required for Tempus if SPICE correlation of ROP glitch needs to be performed. The missing attribute does not affect SI delay or glitch analysis. (File /process/intl3/data/stdcell/p765/INTL/lib765_g1i_210h_50pp_seq_lvt_pdk090-r3v0p0-fv/lib/lib765_g1i_210h_50pp_seq_lvt_rcss_0p675v_125c_pcss_cmax_ccslnt.lib.gz, Line 20)
+Reading   timing library /process/intl3/data/stdcell/p765/INTL/lib765_g1i_210h_50pp_seq_svt_pdk090-r3v0p0-fv/lib/lib765_g1i_210h_50pp_seq_svt_rcss_0p675v_125c_pcss_cmax_ccslnt.lib.gz.
+Read 531 cells in library lib765_g1i_210h_50pp_seq_svt_rcss_0p675v_125c_pcss_cmax_ccslnt.
+**WARN: (TECHLIB-1320):	The user-defined attribute 'related_spice_node' is not present in any of the 'ccsn_first_stage' group. This attribute is required for Tempus if SPICE correlation of ROP glitch needs to be performed. The missing attribute does not affect SI delay or glitch analysis. (File /process/intl3/data/stdcell/p765/INTL/lib765_g1i_210h_50pp_seq_svt_pdk090-r3v0p0-fv/lib/lib765_g1i_210h_50pp_seq_svt_rcss_0p675v_125c_pcss_cmax_ccslnt.lib.gz, Line 20)
+
+User filename 'view.log' was modified as unique path 'reports/func_ffgnp_0p825v_125c_cbest_CCbest_T_rcbest_CCbest_hold/view.log' for Distributed MMMC run.
+User filename 'view.logv' was modified as unique path 'reports/func_ffgnp_0p825v_125c_cbest_CCbest_T_rcbest_CCbest_hold/view.logv' for Distributed MMMC run.
+EDP: Close channel handler 29 when receive message in connection server side
+
+*** Summary of all messages that are not suppressed in this session:
+Severity  ID               Count  Summary                                  
+WARNING   IMPDBTCL-321         1  The attribute '%s' still works but will ...
+WARNING   IMPCTE-104          64  The constraint mode of this inactive vie...
+WARNING   IMPUDM-33            2  Global variable "%s" is obsolete and wil...
+WARNING   TA-976               1  Path groups asserted by the group_path/s...
+WARNING   TCLCMD-1142          3  Virtual clock '%s' is being created with...
+WARNING   TCLCMD-1681          5  The software has performed a full/partia...
+WARNING   TECHLIB-302       2032  No function defined for cell '%s'. The c...
+WARNING   TECHLIB-1398        10  The '%s' waveform specified in cell '%s'...
+WARNING   TECHLIB-1435       226  The dc_current values are not monotonica...
+*** Message Summary: 2344 warning(s), 0 error(s)
